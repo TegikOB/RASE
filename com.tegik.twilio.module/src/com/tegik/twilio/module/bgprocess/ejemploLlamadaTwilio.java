@@ -63,7 +63,7 @@ public class ejemploLlamadaTwilio extends DalBaseProcess {
         // Make the call
         Call call = callFactory.create(callParams);
         // Print the call SID (a 32 digit hex like CA123..)
-        log4j.info(call.getSid());
+        //log4j.info(call.getSid());
 	}
 	catch (TwilioRestException e) {
 	    log4j.info(e.getErrorMessage());
