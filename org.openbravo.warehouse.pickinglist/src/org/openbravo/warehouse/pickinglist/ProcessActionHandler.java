@@ -71,6 +71,7 @@ public class ProcessActionHandler extends BaseActionHandler {
       } catch (Exception e2) {
         log.error(e.getMessage(), e2);
         // do nothing, give up
+	// Comentario de carlos
       }
     }
     return jsonRequest;

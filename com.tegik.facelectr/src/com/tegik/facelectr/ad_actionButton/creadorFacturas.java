@@ -105,7 +105,7 @@ public final class creadorFacturas {
     while (!Character.isDigit(factura.getDocumentNo().charAt(i)))
       i++;
 
-    // log.info("Numero de caracteres de la factura // " + factura.getDocumentNo().length());
+    log.info("Numero de caracteres de la factura // " + factura.getDocumentNo().length());
     // log.info("Caracter donde se encontró el primer número // " + i);
     // log.info("Esto es lo que debería tener la serie // " + factura.getDocumentNo().substring(0,
     // i));
