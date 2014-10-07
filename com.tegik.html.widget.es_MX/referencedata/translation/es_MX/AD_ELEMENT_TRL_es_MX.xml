@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="9A0E1494784DB22CE040007F010037E7" trl="Y">
+    <value column="Name" original="Height">Altura</value>
+    <value column="PrintName" original="Height">Altura</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0E1494784EB22CE040007F010037E7" trl="Y">
+    <value column="Name" original="Widget Title">Título del Widget</value>
+    <value column="PrintName" original="Widget Title">Título del Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0E1494784FB22CE040007F010037E7" trl="Y">
+    <value column="Name" original="Height">Altura</value>
+    <value column="PrintName" original="Height">Altura</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0E14947850B22CE040007F010037E7" trl="Y">
+    <value column="Name" original="HTML Code">Código HTML</value>
+    <value column="PrintName" original="HTML Code">Código HTML</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0E14947851B22CE040007F010037E7" trl="Y">
+    <value column="Name" original="Widget Title">Título del Widget</value>
+    <value column="PrintName" original="Widget Title">Título del Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0E14947852B22CE040007F010037E7" trl="Y">
+    <value column="Name" original="HTML Code">Código HTML</value>
+    <value column="PrintName" original="HTML Code">Código HTML</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

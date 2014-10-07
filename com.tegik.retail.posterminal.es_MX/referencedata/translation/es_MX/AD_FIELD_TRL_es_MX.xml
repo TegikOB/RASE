@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELD" version="">
+  <row id="06EFA280DC5E49D29CF0F2E93B124181" trl="Y">
+    <value column="Name" original="Supervisor">Supervisor</value>
+    <value column="Description" original="Supervisor that granted this approval">Supervisor que concede esta aprobación</value>
+    <value column="Help" original="Supervisor that granted this approval">Supervisor que concede esta aprobación</value>
+  </row>
+  <row id="4550451CDF874EB098E99F5D6716F4D9" trl="Y">
+    <value column="Name" original="Document Type">Tipo de documento</value>
+    <value column="Description" original="Document type for sales orders">Tipo de documento para pedido</value>
+    <value column="Help" original="Document type used for regular sales orders generated in back end from POS tickets.&#10;Document Types determine document sequence and processing rules.">Tipo de documento utilizado para las órdenes de venta habituales que se 
+generan en parte trasera de entradas de punto de venta. Tipos de documento 
+determina la secuencia y procesamiento de documentos reglas.</value>
+  </row>
+  <row id="648BD4984D854B8EBB049FCCC77FC5F5" trl="Y">
+    <value column="Name" original="Cash Up Event">Evento de Efectivo</value>
+    <value column="Description" original="Cash Up Event">Evento de Efectivo</value>
+    <value column="Help" original="Event triggered by Cash Up process in case the are founds transfer. This event defines the financial account the founds are transferred to.">Evento desencadenado por proceso en efectivo En caso de que la transferencia 
+son encontrados. Este evento define la cuenta financiera encontró lo que 
+buscaba se transfieren.</value>
+  </row>
+  <row id="DF1087E6BE4148A3AF237F986ECAFD69" trl="Y">
+    <value column="Name" original="Amount to Keep">Monto a mantener</value>
+    <value column="Description" original="Amount to keep">Monto a mantener</value>
+    <value column="Help" original="When keeping fixed amount is allowed, this is the amount that will be kept in current financial account after cash up process.">Cuando se permite mantener cantidad fija, ésta es la cantidad que se 
+mantendrá en la cuenta financiera actual tras un proceso efectivo de hasta.</value>
+  </row>
+</compiereTrl>

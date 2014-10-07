@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELD" version="">
+  <row id="0D7D1CCBA5E54A66A433D37759D2C074" trl="Y">
+    <value column="Name" original="Handler">Encargado</value>
+    <value column="Description" original="Java or Javascript that handles the process execution">Java o Javascript que maneja el proceso de ejecución</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

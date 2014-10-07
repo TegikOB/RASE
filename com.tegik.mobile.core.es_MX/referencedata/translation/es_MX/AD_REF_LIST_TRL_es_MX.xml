@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="4078D58BE5B742FEB80D0DE790635F0E" trl="Y">
+    <value column="Name" original="Mobile Session">Sesion Movil</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="80AB4F4D0FBE4352BF331C2F4467F819" trl="N">
+    <value column="Name" original="Mobile Log Client Console Level">Mobile Log Client Console Level</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="936B26CEEC53407181A22157AC7D3C61" trl="N">
+    <value column="Name" original="Mobile Log Client Activate Log">Mobile Log Client Activate Log</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="BC3E4A82988F44DCBB0CB4665407584B" trl="Y">
+    <value column="Name" original="Mobile Core">Nuecleo Movil</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D1216CE8C9304BF798620B334E2A8E69" trl="Y">
+    <value column="Name" original="Mobile Change Profile">Cambiar el Perfil Movil</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

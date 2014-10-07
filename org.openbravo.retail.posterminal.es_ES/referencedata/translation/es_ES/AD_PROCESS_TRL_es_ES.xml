@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_PROCESS" version="">
+  <row id="6E03EABD3B4E4E71897B6B826D522157" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Up Report">Informe del cierre de caja</value>
+    <value column="Description" isTrl="Y" original="CashUpReport">Informe del cierre de caja</value>
+    <value column="Help" isTrl="Y" original="CashUpReport">Informe del cierre de caja</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRAD_QUERY_COLUMN">
+    <function name="TRLMX_TRAD_QUERY_COLUMN" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+v_tradMod VARCHAR(60);
+
+BEGIN
+
+
+SELECT COUNT(OBCQL_QUERY_COLUMN_ID) 
+  FROM OBCQL_QUERY_COLUMN_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM OBCQL_QUERY_COLUMN c
+  INNER JOIN OBCQL_WIDGET_QUERY w ON w.OBCQL_WIDGET_QUERY_ID = c.OBCQL_WIDGET_QUERY_ID
+  INNER JOIN OBKMO_WIDGET_CLASS wc ON w.OBKMO_WIDGET_CLASS_ID = wc.OBKMO_WIDGET_CLASS_ID)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+--toma la traduccion de mexico
+SELECT * FROM OBCQL_QUERY_COLUMN_TRL t 
+  WHERE V_Record.OBCQL_QUERY_COLUMN_ID = t.OBCQL_QUERY_COLUMN_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+  
+--toma la traduccion de españa
+  SELECT * FROM OBCQL_QUERY_COLUMN_TRL t
+  WHERE V_Record.OBCQL_QUERY_COLUMN_ID = t.OBCQL_QUERY_COLUMN_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+
+   SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+	
+
+--si no existe la traduccion inserta 
+IF(v_TradMex.AD_Language IS NULL  AND v_tradMod <> 'es_MX')THEN
+
+
+DBMS_OUTPUT.PUT_LINE( 'Inserto la palabra '||  V_TradEsp.name);
+
+INSERT INTO temporal (Original, Traduccion) VALUES (V_Record.name,V_TradEsp.name );
+INSERT INTO  OBCQL_QUERY_COLUMN_TRL (
+  OBCQL_QUERY_COLUMN_trl_id ,
+  OBCQL_QUERY_COLUMN_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  name , 
+ -- description ,
+  help , 
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.OBCQL_QUERY_COLUMN_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.name , 
+  V_TradEsp.description ,
+  V_TradEsp.help , 
+  V_TradEsp.istranslated);
+
+END IF; 
+
+--si es igual al texto original inserta la traduccion tomando como referencia españa
+ IF (v_TradMex.name = V_Record.name AND v_tradMod <> 'es_MX' ) THEN 
+
+  DBMS_OUTPUT.PUT_LINE( 'Actualizo la palabra '||  V_TradEsp.name); 
+
+  UPDATE OBCQL_QUERY_COLUMN_TRL 
+  SET name =V_TradEsp.name
+  WHERE OBCQL_QUERY_COLUMN_TRL_ID= v_TradMex.OBCQL_QUERY_COLUMN_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRAD_QUERY_COLUMN
+]]></body>
+    </function>
+  </database>

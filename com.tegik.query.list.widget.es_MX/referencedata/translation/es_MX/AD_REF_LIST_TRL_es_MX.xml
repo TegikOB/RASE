@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="16C78705881A455B81A3B1E5426BAF06" trl="Y">
+    <value column="Name" original="Widget view">Vista de Widget</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="188AADD3D82441D4A82795B6961B76AA" trl="Y">
+    <value column="Name" original="Exported file">Fichero exportado</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="60CEA80ACF524079958E678F19F529EB" trl="Y">
+    <value column="Name" original="Average">Media</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="6670A5161B774186A59380680CE9E2C6" trl="Y">
+    <value column="Name" original="Sum">Suma</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="C63CDC1E9D844FF7A4E5B26E5EF17E9C" trl="Y">
+    <value column="Name" original="Count">Cantidad</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="FA809E5CC1DA40F294CE39C01EB4B44F" trl="Y">
+    <value column="Name" original="Maximized view">Vista Maximizada</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

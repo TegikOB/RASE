@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Region id="06CCC8893CC64478AB56D64D14C24645" identifier="Quintana Roo">
+    <id>06CCC8893CC64478AB56D64D14C24645</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:40:56.435Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:19:41.998Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Quintana Roo</name>
+    <description>QUINTANA ROO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>QR</searchKey>
+  </Region>
+  <Region id="1CF27F887493459FB3E0080B146D9E64" identifier="Chihuahua">
+    <id>1CF27F887493459FB3E0080B146D9E64</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:34:38.590Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:16:10.784Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Chihuahua</name>
+    <description>CHIHUHUA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>CH</searchKey>
+  </Region>
+  <Region id="1E8AA38EC25A4D5F8BFB225C96068996" identifier="Aguascalientes">
+    <id>1E8AA38EC25A4D5F8BFB225C96068996</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:31:02.528Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:15:15.529Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Aguascalientes</name>
+    <description>AGUASCALIENTES</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>AS</searchKey>
+  </Region>
+  <Region id="22455865CB6041C9BB5C3F9C10549D27" identifier="Morelos">
+    <id>22455865CB6041C9BB5C3F9C10549D27</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:38:46.621Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:18:31.311Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Morelos</name>
+    <description>MORELOS</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>MS</searchKey>
+  </Region>
+  <Region id="269031037F544113B83481A38B534FCE" identifier="Zacatecas">
+    <id>269031037F544113B83481A38B534FCE</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:43:43.291Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:40.859Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Zacatecas</name>
+    <description>ZACATECAS</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>ZS</searchKey>
+  </Region>
+  <Region id="2745613A5121498E90E8769ECD865807" identifier="Oaxaca">
+    <id>2745613A5121498E90E8769ECD865807</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:39:53.412Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:18:58.427Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Oaxaca</name>
+    <description>OAXACA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>OC</searchKey>
+  </Region>
+  <Region id="41E5B0A071F745FEAF6CE3EA4AB6B53F" identifier="Nuevo León">
+    <id>41E5B0A071F745FEAF6CE3EA4AB6B53F</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:39:34.951Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:18:46.464Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Nuevo León</name>
+    <description>NUEVO LEON</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>NL</searchKey>
+  </Region>
+  <Region id="4D8BE9C8CE1F4D6286124BA6291EE462" identifier="San Luis Potosi">
+    <id>4D8BE9C8CE1F4D6286124BA6291EE462</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:41:30.123Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:19:49.446Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>San Luis Potosi</name>
+    <description>SAN LUIS POTOSI</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>SP</searchKey>
+  </Region>
+  <Region id="4FFCB4D29E4C498EB8D504F459F7D286" identifier="Campeche">
+    <id>4FFCB4D29E4C498EB8D504F459F7D286</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:32:47.650Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:15:54.407Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Campeche</name>
+    <description>CAMPECHE</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>CC</searchKey>
+  </Region>
+  <Region id="53ED29DA913444C89BA4BFD7E2F20367" identifier="Tlaxcala">
+    <id>53ED29DA913444C89BA4BFD7E2F20367</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:42:56.443Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:22.145Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Tlaxcala</name>
+    <description>TLAXCALA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>TL</searchKey>
+  </Region>
+  <Region id="61CAD183810A46BBBD99A00E09A002AD" identifier="Distrito Federal">
+    <id>61CAD183810A46BBBD99A00E09A002AD</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:35:13.390Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:09.889Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Distrito Federal</name>
+    <description>DISTRITO FEDERAL</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>DF</searchKey>
+  </Region>
+  <Region id="6DA4C20E555C4CBAB3A2FEF3CB274A32" identifier="Guerrero">
+    <id>6DA4C20E555C4CBAB3A2FEF3CB274A32</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:36:14.400Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:34.588Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Guerrero</name>
+    <description>GUERRERO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>GR</searchKey>
+  </Region>
+  <Region id="72E2D438367E4F32B07F04EC682345A2" identifier="Sinaloa">
+    <id>72E2D438367E4F32B07F04EC682345A2</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:41:50.753Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:19:53.219Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sinaloa</name>
+    <description>SINALOA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>SL</searchKey>
+  </Region>
+  <Region id="77792897F2A9446FB934F1153758EDC9" identifier="México">
+    <id>77792897F2A9446FB934F1153758EDC9</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:37:59.843Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:50.574Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>México</name>
+    <description>MEXICO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>MC</searchKey>
+  </Region>
+  <Region id="7E7898CAE52D498FBCF0A720AC70B671" identifier="Tabasco">
+    <id>7E7898CAE52D498FBCF0A720AC70B671</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:42:19.712Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:02.909Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Tabasco</name>
+    <description>TABASCO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>TC</searchKey>
+  </Region>
+  <Region id="81D0F52BCBA24812B565E7E6A2092AC3" identifier="Colima">
+    <id>81D0F52BCBA24812B565E7E6A2092AC3</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:33:42.634Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:16:21.396Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Colima</name>
+    <description>COLIMA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>CM</searchKey>
+  </Region>
+  <Region id="87984F5E0EF2470790104C922600CD8C" identifier="Hidalgo">
+    <id>87984F5E0EF2470790104C922600CD8C</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:37:11.363Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:39.118Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Hidalgo</name>
+    <description>HIDALGO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>HG</searchKey>
+  </Region>
+  <Region id="87FFC74E20F443DDBF2659DD4937E3E2" identifier="Yucatán">
+    <id>87FFC74E20F443DDBF2659DD4937E3E2</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:43:28.156Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:33.14Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Yucatán</name>
+    <description>YUCATAN</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>YN</searchKey>
+  </Region>
+  <Region id="8887ECE08CD2451686DE23281FDEDF88" identifier="Nayarit">
+    <id>8887ECE08CD2451686DE23281FDEDF88</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:39:11.463Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:18:37.874Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Nayarit</name>
+    <description>NAYARIT</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>NT</searchKey>
+  </Region>
+  <Region id="8F302AABE88047FFB19D34960729BF84" identifier="Guanajuato">
+    <id>8F302AABE88047FFB19D34960729BF84</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:35:54.400Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:30.129Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Guanajuato</name>
+    <description>GUANAJUATO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>GT</searchKey>
+  </Region>
+  <Region id="927F8D17F90C47DB95D3206D96569780" identifier="Sonora">
+    <id>927F8D17F90C47DB95D3206D96569780</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:45:48.418Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:16.256Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Sonora</name>
+    <description>SONORA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>SR</searchKey>
+  </Region>
+  <Region id="9B01AB63B4BD405183376C8DE3EB737E" identifier="Coahuila">
+    <id>9B01AB63B4BD405183376C8DE3EB737E</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:33:11.356Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:16:17.703Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Coahuila</name>
+    <description>COAHUILA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>CL</searchKey>
+  </Region>
+  <Region id="9EC7A9A67BDD4AAB9B3DEEA191C49DE3" identifier="Tamaulipas">
+    <id>9EC7A9A67BDD4AAB9B3DEEA191C49DE3</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:42:41.355Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:09.742Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Tamaulipas</name>
+    <description>TAMAULIPAS</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>TA</searchKey>
+  </Region>
+  <Region id="A6A3AA78DDDE41CEBB7FFACD79B77974" identifier="Veracruz">
+    <id>A6A3AA78DDDE41CEBB7FFACD79B77974</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:43:13.227Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:20:27.79Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Veracruz</name>
+    <description>VERACRUZ</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>VZ</searchKey>
+  </Region>
+  <Region id="A72E71979789417BA32C1B0A35A750EF" identifier="Baja California">
+    <id>A72E71979789417BA32C1B0A35A750EF</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:31:39.702Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:15:29.651Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Baja California</name>
+    <description>BAJA CALIFORNIA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>BC</searchKey>
+  </Region>
+  <Region id="BE0D43806D734F92908B86358EE2E649" identifier="Puebla">
+    <id>BE0D43806D734F92908B86358EE2E649</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:40:18.113Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:19:07.177Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Puebla</name>
+    <description>PUEBLA</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>PL</searchKey>
+  </Region>
+  <Region id="BF00CAE49CA440DFBCC0813FCA8669AA" identifier="Querétaro">
+    <id>BF00CAE49CA440DFBCC0813FCA8669AA</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:40:38.204Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:19:16.243Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Querétaro</name>
+    <description>QUERETARO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>QT</searchKey>
+  </Region>
+  <Region id="C12096F5B7A54183810140BD13DB7498" identifier="Nuevo Leon">
+    <id>C12096F5B7A54183810140BD13DB7498</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-24T16:02:54.499Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-24T16:03:13.958Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Nuevo Leon</name>
+    <description>Un estado muy industrial</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>NL</searchKey>
+  </Region>
+  <Region id="C7E1AF4B61B64F928432DE261FA80EB4" identifier="Durango">
+    <id>C7E1AF4B61B64F928432DE261FA80EB4</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:35:34.509Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:14.615Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Durango</name>
+    <description>DURANGO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>DG</searchKey>
+  </Region>
+  <Region id="D93A557DA43D425C8E15B36290CF66B9" identifier="Jalisco">
+    <id>D93A557DA43D425C8E15B36290CF66B9</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:37:38.196Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:17:44.163Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Jalisco</name>
+    <description>JALISCO</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>JC</searchKey>
+  </Region>
+  <Region id="DAD0225138CA45C29A3FC4D9FEB42D91" identifier="Chiapas">
+    <id>DAD0225138CA45C29A3FC4D9FEB42D91</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:34:20.174Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:15:59.670Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Chiapas</name>
+    <description>CHIAPAS</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>CS</searchKey>
+  </Region>
+  <Region id="F59615CFBB054C3DA22E55BB44AE66D9" identifier="Michoacán">
+    <id>F59615CFBB054C3DA22E55BB44AE66D9</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:38:24.51Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:18:27.507Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Michoacán</name>
+    <description>MICHOACAN</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>MN</searchKey>
+  </Region>
+  <Region id="FBD50EA23067461FBC3CF5C316160435" identifier="Baja California Sur">
+    <id>FBD50EA23067461FBC3CF5C316160435</id>
+    <active>true</active>
+    <creationDate transient="true">2013-07-01T16:32:15.237Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-07-02T13:15:46.675Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Baja California Sur</name>
+    <description>BAJA CALIFORNIA SUR</description>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <default>false</default>
+    <searchKey>BS</searchKey>
+  </Region>
+  <Country id="247" identifier="Mexico">
+    <id>247</id>
+    <active>true</active>
+    <creationDate transient="true">2012-07-20T01:07:24.805Z</creationDate>
+    <createdBy transient="true" id="0" entity-name="ADUser" identifier="System"/>
+    <updated transient="true">2013-07-01T16:26:53.788Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Mexico</name>
+    <description>Mexico</description>
+    <iSOCountryCode>MX</iSOCountryCode>
+    <hasRegions>true</hasRegions>
+    <regionName>Estado</regionName>
+    <phoneNoFormat>Y</phoneNoFormat>
+    <addressPrintFormat>@C@,  @P@</addressPrintFormat>
+    <postalCodeFormat xsi:nil="true"/>
+    <additionalPostalCode>false</additionalPostalCode>
+    <additionalPostalFormat xsi:nil="true"/>
+    <default>false</default>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <currency id="130" entity-name="Currency" identifier="MXN"/>
+    <iBANLength xsi:nil="true"/>
+    <iBANCode xsi:nil="true"/>
+    <decimalseparator xsi:nil="true"/>
+    <groupingseparator xsi:nil="true"/>
+    <numericmask xsi:nil="true"/>
+    <dateformat xsi:nil="true"/>
+    <datetimeformat xsi:nil="true"/>
+  </Country>
+</ob:Openbravo>

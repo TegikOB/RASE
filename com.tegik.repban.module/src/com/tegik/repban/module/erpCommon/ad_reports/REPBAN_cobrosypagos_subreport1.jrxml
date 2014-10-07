@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="agentes_subreport1" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="5.559917313492239"/>
+	<property name="ireport.x" value="3353"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="user_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_user_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["'" + $P{user_id}+"'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bpartner_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_bpartner_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{bpartner_id}.equals("") ? " ": "AND b.c_bpartner_id='" + $P{bpartner_id}+"'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_CLIENT" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="from" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse("2008-01-01")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_from" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{from}.equals("") ? " " : " AND COALESCE(date(p.paymentdate),'2008-01-01' )>= date('" + $P{from} + "')"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="to" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse("2099-01-01")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_to" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{to}.equals("") ? " " : " AND COALESCE(date(p.paymentdate),'2099-01-01' ) <= date('" + $P{to} + "')"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="inibalance" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "0.00")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="banco_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_banco_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{banco_id}.equals("") ? " ": "AND fa.fin_financial_account_id='" + $P{banco_id}+"'"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT p.documentno AS documentno,
+ CASE WHEN p.isreceipt='Y' AND psd.amount>0.00 THEN psd.amount
+      WHEN p.isreceipt='N' AND psd.amount<0.00 THEN psd.amount*-1
+ ELSE 0.00
+ END AS depositamt,
+  CASE WHEN p.isreceipt='N' AND psd.amount>0.00 THEN psd.amount
+       WHEN p.isreceipt='Y' AND psd.amount<0.00 THEN psd.amount*-1
+ ELSE 0.00
+ END AS paymentamt,
+COALESCE(i.documentno,'No Definido') AS description,
+ COALESCE(bp.name,'No Definido') AS bpartner, p.paymentdate AS date,
+ p.referenceno,
+ pm.name metodo_pago
+   FROM fin_payment p
+   inner join  Fin_Paymentmethod pm on p.Fin_Paymentmethod_id = pm.Fin_Paymentmethod_id
+LEFT JOIN c_bpartner bp ON p.c_bpartner_id=bp.c_bpartner_id
+   LEFT JOIN fin_financial_account fa ON p.fin_financial_account_id = fa.fin_financial_account_id, fin_payment_detail pd
+   JOIN fin_payment_scheduledetail psd ON pd.fin_payment_detail_id = psd.fin_payment_detail_id
+   LEFT JOIN fin_payment_schedule psi ON psd.fin_payment_schedule_invoice = psi.fin_payment_schedule_id
+   LEFT JOIN c_invoice i ON psi.c_invoice_id = i.c_invoice_id
+   LEFT JOIN c_glitem gli ON pd.c_glitem_id = gli.c_glitem_id
+
+  WHERE p.fin_payment_id = pd.fin_payment_id $P!{aux_from} $P!{aux_to}
+AND p.fin_payment_id IN (
+  SELECT fin_payment_id FROM aprm_finacc_transaction_v
+  )
+ $P!{aux_banco_id}
+ORDER BY p.paymentdate, p.created]]>
+	</queryString>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="depositamt" class="java.math.BigDecimal"/>
+	<field name="paymentamt" class="java.math.BigDecimal"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="bpartner" class="java.lang.String"/>
+	<field name="date" class="java.sql.Timestamp"/>
+	<field name="referenceno" class="java.lang.String"/>
+	<field name="metodo_pago" class="java.lang.String"/>
+	<variable name="Saldo" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[new BigDecimal($V{Saldo}.doubleValue() + $F{depositamt}.doubleValue() - $F{paymentamt}.doubleValue())]]></variableExpression>
+		<initialValueExpression><![CDATA[$P{inibalance}]]></initialValueExpression>
+	</variable>
+	<variable name="guardaSuma" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$V{Saldo}]]></variableExpression>
+		<initialValueExpression><![CDATA[$P{inibalance}]]></initialValueExpression>
+	</variable>
+	<variable name="sumabono" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{depositamt}]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<variable name="sumcargo" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{paymentamt}]]></variableExpression>
+	</variable>
+	<variable name="sumac" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[new BigDecimal( $P{inibalance}.doubleValue() + $V{sumabono}.doubleValue() - $V{sumcargo}.doubleValue()  )]]></variableExpression>
+	</variable>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="22" width="802" height="2" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="2" y="2" width="72" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="171" y="2" width="85" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="256" y="2" width="89" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="577" y="2" width="70" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="647" y="2" width="70" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="717" y="2" width="85" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="74" y="2" width="97" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tercero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="446" y="2" width="131" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Metodo de pago ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="345" y="2" width="101" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Referencia]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="18" forecolor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="74" y="0" width="97" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bpartner}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="2" y="0" width="72" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+					<reportElement style="Detail" positionType="Float" x="171" y="0" width="85" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[$F{date}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="256" y="0" width="89" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+					<reportElement style="Detail" positionType="Float" x="647" y="0" width="70" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{paymentamt}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+					<reportElement style="Detail" positionType="Float" x="577" y="0" width="70" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{depositamt}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+					<reportElement style="Detail" positionType="Float" x="717" y="0" width="85" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{Saldo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="345" y="0" width="101" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{referenceno}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="446" y="0" width="131" height="18"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{metodo_pago}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<summary>
+		<band height="25">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="2" width="802" height="2" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+			<textField pattern="$ #,##0.00">
+				<reportElement x="577" y="5" width="70" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sumabono}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,##0.00">
+				<reportElement x="647" y="5" width="70" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sumcargo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,##0.00">
+				<reportElement x="717" y="5" width="85" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sumac}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="468" y="5" width="109" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Totales del banco]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

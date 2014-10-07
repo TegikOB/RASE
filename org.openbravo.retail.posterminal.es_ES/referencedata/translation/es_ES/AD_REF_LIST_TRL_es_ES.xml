@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REF_LIST" version="">
+  <row id="043B9CA543D8481D852EC96C0E46B747" trl="N">
+    <value column="Name" isTrl="Y" original="Confirm return dialog">Confirmar dialogo de retorno</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="100EB6B59DAB49DC9994B8D41124A579" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action void layaway">Acción TPV Web para cancelar el artículo reservado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="17C09B4292F348ADAD162FE6DF0B2ECD" trl="N">
+    <value column="Name" isTrl="Y" original="Confirm payment dialog">Confirmar diálogo de pago</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="17EE67AD7A2D4741A53E4340F5329D4C" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS Use Modal instead of dropdown in Sales Reprentative">TPV Web usa desplegable en lugar de Modal en Rep. Ventas</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1C47151F141F4DD1AF1A18E85F15F4A4" trl="N">
+    <value column="Name" isTrl="Y" original="Business partner">Tercero</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2306F5CAB63A4150B89C1931EFAA7BB1" trl="N">
+    <value column="Name" isTrl="Y" original="Not imported due to errors">No importado debido a errores</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2CA7BAB67A38404A8E72556527E8C914" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS window Point of Sale">Ventana del TPV web, Punto de venta </value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2D5507B656C647A3A9EA131D0E9E9785" trl="N">
+    <value column="Name" isTrl="N" original="Scan">Scan</value>
+    <value column="Description" isTrl="Y" original="Scan tab">Pestaña explorar</value>
+  </row>
+  <row id="38BBDAA851F8442F824E80451D217E5B" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Receipt properties">Acción TPV web propiedades del pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="4CE4785B44FE4274A6256B948A345767" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Print receipt">Acción TPV web Imprimir pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="55D40DCFE3FE49C39AAB6E0607094A6C" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS window Cash Management">Ventana TPV Web, Gestión de caja</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="56E9EAA1759B416C86AA801E363AA5A8" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS Session">Sesión TPV</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6E2B450BFCC94F6E9228DFBD7A67F005" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS Back Office">Back Office TPV Web</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="7F5090BE8BBE47ADBA645E0E4B6B01B3" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS window Cash Up">Ventana TPV Web, Cierre de caja</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="898DA3A00DD64A45A8478F78249EF521" trl="N">
+    <value column="Name" isTrl="N" original="Browse">Browse</value>
+    <value column="Description" isTrl="Y" original="Browse tab">Pestaña Navegador</value>
+  </row>
+  <row id="9963B3AAB6B24511B2C4BB65ED571CF6" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Credit Sales ">Acción TPV web ventas a crédito </value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9A000A73E266414D857CAED9FFCD724E" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Print cash up">Acción TPV web imprimir cierre de caja</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9AFB5C15D64B426992C10D23585A411F" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action reject quotation">Acción TPV web rechazar presupuesto</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="9ED6892B8C8F4507A9F0C53648566E9A" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">TPV</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AAA9F81A601C4BD09955AA2CF5B66B82" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Print cash management">Acción TPV web imprimir gestión de caja</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="AC340E3F059542B6A207D3329644A5DB" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Change price">pedido.CambiarPrecio</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="BFE70DE60D1F49A89265E01A5083FCDB" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS payment Cash">pago.efectivo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C7AEA9FED5F842FBAFAA303F7CE11404" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS Search Paid Receipts">TPV Web, Buscar pedidos pagados</value>
+    <value column="Description" isTrl="Y" original="Web POS Search Paid Receipts">TPV Web, Buscar pedidos pagados</value>
+  </row>
+  <row id="C90AEFC4F3E0474BB2DABA68484FC58F" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Apply discount">pedido.descuento</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C90D0A44373041B99ECFCF1437E8DE2B" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS Sales Representative in Receipt properties window">Representante de Ventas en la ventana Propiedades del Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="CE0B6F39F4C74D0E864D77D7D827D573" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS Search Layaways">Buscar artículos reservados TPV Web</value>
+    <value column="Description" isTrl="Y" original="Web POS Search Layaways">Buscar artículos reservados TPV Web</value>
+  </row>
+  <row id="D225C0A7CC4C482695D955CBE039C3E9" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS payment Voucher">pago.cheque</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D52DAD3CB2834FA4940C7C1C8403C56A" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Invoice receipt">Acción TPV web facturar pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D56514BAA9CD492D8EEA8B01956AEA60" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS payment Card">pago.tarjeta</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D7E5D22E0D33475C95E2AB7A54ED4BE1" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action reactivate quotation">Acción TPV web reactivar presupuesto</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="D7E6CD2A8FC248C5B83551715D5D3670" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Return receipt">Acción TPV web devolver pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DBE1607D49324DDAB132CDE9C9BC5769" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS payment Empty">TPV Web pago vacio</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DC7DFA0A33DC4D0A961B3B02494A9135" trl="N">
+    <value column="Name" isTrl="Y" original="Imported correctly">Importado correctamente</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E040AF7F52904DDB874D5ECF516E3C3C" trl="N">
+    <value column="Name" isTrl="Y" original="Failed">Fallo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E35C5C7370AA45CC99FD66633E73D34D" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Edit customers">Acción TPV web editar clientes</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E53EE08A990E4ED99FEB794FF1F4E94C" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action layaway the receipt">Acción TPV Web, reserva este pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E88F2F3FE4FB4A449F29694A4282912C" trl="N">
+    <value column="Name" isTrl="N" original="Web POS action create sales order from quotation">Web POS action create sales order from quotation</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E99D946D06DB4600BC2CAF9B9389BF9D" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action create new quotation">Acción TPV web crear nuevo presupuesto</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F0583BBD061544CE864C58A2EEE3BA9D" trl="N">
+    <value column="Name" isTrl="Y" original="Sent">Enviado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="F361E0B95E0F42A6A9C18A81F96D0868" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action Advanced Discounts">Acción TPV web descuento avanzado</value>
+    <value column="Description" isTrl="Y" original="This property allows the user to apply different discounts to each line of the ticket">Esta propiedad permite al usuario aplicar diferentes descuentos a cada linea del pedido</value>
+  </row>
+  <row id="F6A388F9B07F4F8BACF468704E14ABF6" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS action show quotations">Acción TPV web mostrar presupuestos</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="FE0B6537E02D427E80B47D8D277485CC" trl="N">
+    <value column="Name" isTrl="Y" original="Order">Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

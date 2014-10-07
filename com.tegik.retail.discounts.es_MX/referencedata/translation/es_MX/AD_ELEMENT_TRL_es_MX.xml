@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="0DADFA126143467BA8BE213BBA446760" trl="Y">
+    <value column="Name" original="Currency">Moneda</value>
+    <value column="PrintName" original="Currency">Moneda</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Currency the price is defined in">Moneda el precio se define en</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="0EB6055D9CD44469B42A2289F4B2F84C" trl="Y">
+    <value column="Name" original="Distribute Between Lines">Distribuir entre las lineas</value>
+    <value column="PrintName" original="Distribute Between Lines">Distribuir entre las lineas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="This flag affects on how the discount is computed internally but doesn't have any effect in the Web POS UI.&#10;When a discount is distributed, the discounted amount, even shown for a concrete line, is not only computed in this one but distributed between all the lines in the ticket.">Este indicador de cómo afecta el descuento se calcula internamente, pero no 
+tiene ningún efecto en la Web UI POS. Cuando se distribuye un descuento, el 
+monto descontado, aunque se muestra para una línea concreta, no sólo se 
+computará en ésta sino que se distribuye entre todas las líneas en el 
+billete.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="162B4476450046B2ABD49BA536814066" trl="Y">
+    <value column="Name" original="Gift Product">Producto regalo</value>
+    <value column="PrintName" original="Gift Product">Producto regalo</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="This flag applies to &quot;Buy X and get Y as Gift&quot; discount type.&#10;In order to be possible to apply the promotion, it is required to include in the ticket all products defined in the list of products. Those products set as gift will be completely discounted from the price.">Este indicador se aplica a "Compre X y consiga Y como regalo" tipo de 
+descuento. Con el fin de ser posible aplicar la promoción, se requiere 
+incluir en el billete de todos los productos definidos en la lista de 
+productos. Aquellos productos que figuran como regalo serán completamente 
+descontados del precio.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="302474B973F640BD9D96448C22F82D8B" trl="Y">
+    <value column="Name" original="Percentage Discount">Descuento de porcentaje</value>
+    <value column="PrintName" original="Percentage Discount">Descuento de porcentaje</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Percentage to be discounted from base price.">Porcentaje a descontar del precio base.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="51C745009FE5486AA13804A28FE9936B" trl="Y">
+    <value column="Name" original="Y Units">Unidades Y</value>
+    <value column="PrintName" original="Y Units">Unidades Y</value>
+    <value column="Description" original="Y Units">Y unidades</value>
+    <value column="Help" original="Once &quot;X Units&quot; have been reached, Y represents how many of them need to be payed. For example being X 3 and Y 2, having 3 units, only 2 will be requested to be payed.">Una vez que se han alcanzado "X Unidades", Y representa la forma en que 
+muchos de ellos tienen que ser pagado. Por ejemplo siendo X e Y 3 2, con 3 
+unidades, sólo 2 se solicitará que ser pagado.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="5DEEEC308E8B487CAC1BA7D17EB592EE" trl="Y">
+    <value column="Name" original="Discount Subtype">Subtipo descuento</value>
+    <value column="PrintName" original="Discount Subtype">Subtipo descuento</value>
+    <value column="Description" original="Discount Subtype">Subtipo de descuento</value>
+    <value column="Help" original="Defines which lines are affected by the discount or promotion:&#10;*'''Cheapest''': All the discount is applied to the cheapest product.&#10;*'''Average''': Discount is distributed among all products calculating the average price of all of them and applying it based on the actual amount of each of them.&#10;">Define qué líneas se ven afectados por el descuento o promoción: *'' ''' más 
+barato': Todo el descuento se aplica al producto más baratos *'' 
+'Media''',. Descuento se distribuye entre todos los productos que calculen 
+el precio medio de todos ellos y su aplicación basada en la cantidad real de 
+cada uno de ellos.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="727FA650183D400089A99860B7902CAE" trl="Y">
+    <value column="Name" original="Quantity">Cantidad</value>
+    <value column="PrintName" original="Quantity">Cantidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="This field applies to &quot;Buy X and get Y as Gift&quot; discount type.&#10;In order to be possible to apply the promotion, it is required to include in the ticket all products defined in the list of products with the quantities defined by this field.">Este campo se aplica a "Compre X y consiga Y como regalo" descuento type.In 
+fin de ser posible aplicar la promoción, es necesario incluir en el billete 
+de todos los productos definidos en la lista de los productos con las 
+cantidades definidas por este campo.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="79099B4E8E5D4EE386408700B74D4DC5" trl="N">
+    <value column="Name" original="Obdisc_Offer_Role_ID"/>
+    <value column="PrintName" original="Obdisc_Offer_Role_ID">Obdisc_Offer_Role_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="7C454273A17E484EB1202410560D7A08" trl="Y">
+    <value column="Name" original="X Units">Unidades X</value>
+    <value column="PrintName" original="X Units">Unidades X</value>
+    <value column="Description" original="X Units">X unidaes</value>
+    <value column="Help" original="Number of units that are required to be included in order to be possible to apply the discount. Once this number is reached, the discount can be applied, so it is possible to pay Y units instead of X.">Número de unidades que se requieren para ser incluidos con el fin de ser 
+posible aplicar el descuento. Una vez que se alcanza este número, el 
+descuento puede ser aplicado, por lo que es posible pagar unidades Y en 
+lugar de X.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8B81F0E3401B4104BAD211697DCD041C" trl="Y">
+    <value column="Name" original="Discount/Promotion Price">Precio de descuento/promocion</value>
+    <value column="PrintName" original="Combo Price">Precio del combo</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Total price applied to the combination of all products participating in the Discount or Promotion.">Precio total aplicada a la combinación de todos los productos que participan 
+en el descuento o promoción.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8F504FE4CF084C8CBC2C1421610B1B0C" trl="Y">
+    <value column="Name" original="Approval Required">Requere aprobación</value>
+    <value column="PrintName" original="Approval Required">Requiere Aprobación</value>
+    <value column="Description" original="Discount requires approval from a supervisor to be applied">Descuento requiere la aprobación de un supervisor para ser aplicado</value>
+    <value column="Help" original="When a discretionary discount that requires approval is applied in POS and the ticket is about to be closed, approval from a supervisor user/role will be requested before allowing to continue.">Cuando se aplica un descuento discrecional que requiere la aprobación de 
+punto de venta y la compra de entradas está a punto de cerrarse, la 
+aprobación de un supervisor de usuario / rol será solicitada antes de 
+permitir que continúe.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="B08BBBEBB3314670884F8AB53781379A" trl="Y">
+    <value column="Name" original="Included Roles">Incluir roles</value>
+    <value column="PrintName" original="Included Roles">Incluir roles</value>
+    <value column="Description" original="Role Selection Mode"/>
+    <value column="Help" original="Role Selection Mode is the way Roles will be selected for discretionary discounts applied in POS.">Modo de clases, es la forma Clases serán seleccionados para descuentos 
+discrecionales aplicadas en POS.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="E7767EB374444AE18FA65E1311A24EE3" trl="Y">
+    <value column="Name" original="Percentage">Porcentaje</value>
+    <value column="PrintName" original="Percentage">Porcentaje</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Indicates the discount percentage to apply if the total of the receipt is reached.">Indica el porcentaje de descuento a aplicar si se alcanza el total del 
+recibo.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="EC054F78131F4093826EBFDF6A918B6F" trl="Y">
+    <value column="Name" original="Gift Quantity">Cantidad de regalo</value>
+    <value column="PrintName" original="Gift Quantity">antidad de regalo</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="This field applies to &quot;Buy X and get Y as Gift&quot; discount type.&#10;Using this field the gift units can be defined&#10;In order to be possible to apply the promotion, it is required to include in the ticket all products defined in the list of products with the quantities defined by this field.">Este campo se aplica a "Compre X y consiga Y como regalo" tipo de descuento. 
+El uso de este campo de las unidades de regalo se pueden definir el fin de 
+ser posible aplicar la promoción, es necesario incluir en el billete de 
+todos los productos definidos en la lista de los productos con las 
+cantidades definidas </value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="ECADFEFA2C494E458C10C3EE1C9CD12A" trl="N">
+    <value column="Name" original="EM_Obdisc_Addpack">EM_Obdisc_Addpack</value>
+    <value column="PrintName" original="EM_Obdisc_Addpack">EM_Obdisc_Addpack</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

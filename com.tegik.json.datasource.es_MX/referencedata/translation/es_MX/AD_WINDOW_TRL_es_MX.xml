@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="67AD3A287B7F4577A1534C8430E9DB2E" trl="Y">
+    <value column="Name" original="Datasource">Fuente de datos</value>
+    <value column="Description" original="Maintain datasources which are used to provide data to the user interface">Mantiene fuentes de datos que se utilizan para proporcionar datos al interfaz de usuario</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

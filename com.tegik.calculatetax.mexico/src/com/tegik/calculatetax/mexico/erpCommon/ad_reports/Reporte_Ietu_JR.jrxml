@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte_Ietu" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT cr.name,
+       cr.description AS descripcion,
+       cr.datei,
+       cr.datef,
+       cr.ingreso,
+       cr.deduccion,
+       cr.impuesto,
+       cr.tasa,
+       cr.ietu,
+       cr.credictofs,
+       cr.credictoa,
+       cr.credictofi,
+       cr.retenidoisr,
+       cr.pagasprovietu,
+       cr.cargoietu
+FROM contmx_reporteietu cr
+WHERE contmx_reporteietu_id = $P{DOCUMENT_ID}]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="datei" class="java.sql.Timestamp"/>
+	<field name="datef" class="java.sql.Timestamp"/>
+	<field name="ingreso" class="java.math.BigDecimal"/>
+	<field name="deduccion" class="java.math.BigDecimal"/>
+	<field name="impuesto" class="java.math.BigDecimal"/>
+	<field name="tasa" class="java.math.BigDecimal"/>
+	<field name="ietu" class="java.math.BigDecimal"/>
+	<field name="credictofs" class="java.math.BigDecimal"/>
+	<field name="credictoa" class="java.math.BigDecimal"/>
+	<field name="credictofi" class="java.math.BigDecimal"/>
+	<field name="retenidoisr" class="java.math.BigDecimal"/>
+	<field name="pagasprovietu" class="java.math.BigDecimal"/>
+	<field name="cargoietu" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="246" splitType="Stretch">
+			<staticText>
+				<reportElement x="252" y="0" width="360" height="43" forecolor="#00447B"/>
+				<textElement textAlignment="Center">
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[Reporte de IETU]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="651" y="85" width="144" height="15" forecolor="#063167"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="0" y="104" width="53" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="6" y="175" width="97" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="6" y="122" width="97" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha inicial:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="6" y="140" width="97" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha final:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="6" y="193" width="97" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="212" y="150" width="81" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deduccion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="170" y="193" width="81" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[impuesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="290" y="193" width="81" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tasa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="410" y="193" width="81" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ietu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="612" y="140" width="120" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[credictofs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="612" y="158" width="120" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[credictoa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="612" y="176" width="120" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[credictofi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="382" y="211" width="120" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[retenidoisr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="502" y="211" width="120" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pagasprovietu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="622" y="211" width="120" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cargoietu]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="797" height="2" forecolor="#00447B" backcolor="#00447B"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="23" width="797" height="2" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="797" height="18" forecolor="#000000"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="53" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{descripcion}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="106" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{datei}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="159" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{datef}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="212" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ingreso}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="265" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{deduccion}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="318" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{impuesto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="371" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{tasa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="424" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ietu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="477" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{credictofs}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="530" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{credictoa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="583" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{credictofi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="636" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{retenidoisr}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="689" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{pagasprovietu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="742" y="0" width="53" height="18"/>
+					<textElement>
+						<font fontName="SansSerif" size="12"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{cargoietu}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<elementGroup/>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="170" height="37" forecolor="#00447B" backcolor="#00447B"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="74" y="7" width="62" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<elementGroup/>
+				<textField>
+					<reportElement style="Column header" x="0" y="7" width="74" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Página "+$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

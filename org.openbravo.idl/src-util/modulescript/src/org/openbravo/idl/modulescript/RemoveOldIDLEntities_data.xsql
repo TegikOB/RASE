@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ ************************************************************************************
+ * Copyright (C) 2011 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************
+-->
+<SqlClass name="RemoveOldIDLEntitiesData" package="org.openbravo.idl.modulescript">
+  <SqlClassComment></SqlClassComment>
+  <SqlMethod name="select" type="preparedStatement" return="multiple">
+    <SqlMethodComment></SqlMethodComment>
+    <Sql>
+      <![CDATA[
+        SELECT AD_CLIENT_ID, '' as SPECIFIC_ID
+        FROM AD_CLIENT
+        WHERE AD_CLIENT_ID <> '0'
+      ]]>
+    </Sql>
+  </SqlMethod>
+  <SqlMethod name="removeEntities" type="preparedStatement" return="rowcount">
+    <SqlMethodComment>FF80818124241FE0012424493CA5003A -Bank Account
+FF80818124241FE0012424493CA70044 - Open Payable
+FF80818124241FE0012424493CA7005A - Open Receivable</SqlMethodComment>
+    <Sql><![CDATA[
+       DELETE FROM IDL_ENTITIES
+       WHERE IDL_ENTITIES_ID IN (
+                                  SELECT SPECIFIC_ID
+                                  FROM AD_REF_DATA_LOADED
+                                  WHERE AD_MODULE_ID='509767E831EA4B39B4839A4EC4A28628'
+                                  AND AD_TABLE_ID='237AE8134C5D4150ACCF039616BEF91F'
+                                  AND AD_CLIENT_ID = ?
+                                  AND GENERIC_ID IN ('FF80818124241FE0012424493CA5003A', 'FF80818124241FE0012424493CA70044',
+                                                     'FF80818124241FE0012424493CA7005A')
+                                )
+    ]]></Sql>
+    <Parameter name="adClientId"/>
+  </SqlMethod>
+  <SqlMethod name="deleteRefDataLoaded" type="preparedStatement" return="rowcount">
+    <SqlMethodComment></SqlMethodComment>
+    <Sql><![CDATA[
+       DELETE FROM AD_REF_DATA_LOADED
+       WHERE AD_MODULE_ID='509767E831EA4B39B4839A4EC4A28628'
+             AND AD_TABLE_ID='237AE8134C5D4150ACCF039616BEF91F'
+             AND AD_CLIENT_ID = ?
+             AND GENERIC_ID IN ('FF80818124241FE0012424493CA5003A', 'FF80818124241FE0012424493CA70044',
+                                'FF80818124241FE0012424493CA7005A')
+      ]]>
+    </Sql>
+    <Parameter name="adClientId"/>
+  </SqlMethod>
+  <SqlMethod name="totalImported" type="preparedStatement" return="multiple">
+    <SqlMethodComment></SqlMethodComment>
+    <Sql><![CDATA[
+       SELECT SPECIFIC_ID
+       FROM AD_REF_DATA_LOADED
+       WHERE AD_MODULE_ID='509767E831EA4B39B4839A4EC4A28628'
+             AND AD_TABLE_ID='237AE8134C5D4150ACCF039616BEF91F'
+             AND AD_CLIENT_ID = ?
+             AND GENERIC_ID IN ('FF80818124241FE0012424493CA5003A', 'FF80818124241FE0012424493CA70044',
+                                'FF80818124241FE0012424493CA7005A')
+      ]]>
+    </Sql>
+    <Parameter name="adClientId"/>
+  </SqlMethod>
+</SqlClass>

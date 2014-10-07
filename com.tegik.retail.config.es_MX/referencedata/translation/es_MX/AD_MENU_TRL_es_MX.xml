@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="FAAC9C4F42F94E2BBE429D68CE4D84F4" trl="Y">
+    <value column="Name" original="Assortment">Lista de productos</value>
+    <value column="Description" original="Definition of the assortment and its products">Definición de surtido y sus productos.</value>
+  </row>
+</compiereTrl>

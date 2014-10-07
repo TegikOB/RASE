@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_BUSCARID">
+    <function name="TEGIDL_BUSCARID" type="VARCHAR">
+      <parameter name="valor" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="columnafk" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="tablafk" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="cliente_origen" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="cliente_destino" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="foraneaid" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_buscar VARCHAR;
+BEGIN
+
+v_buscar= 'SELECT  o.'|| valor || ' ,'  ||
+		'(SELECT COUNT(' || valor ||')'|| 
+			' FROM ' || tablafk ||  
+				' WHERE ' || valor ||'=d.'|| valor || 
+				' AND (ad_client_id='''||cliente_destino ||''' OR  AD_CLIENT_ID= ''0'')),'|| 
+		'd.'||valor || ', d.'||columnafk ||
+			' FROM '|| tablafk ||  ' AS o'||
+			' INNER JOIN '|| tablafk || ' AS d ON d.'||valor || '=o.' || valor||
+				' WHERE (o.AD_CLIENT_ID='''|| cliente_origen || ''''||
+				' OR o.AD_CLIENT_ID=''0'')'|| 
+				' AND  o.' ||columnafk ||'='''||foraneaid ||''''||
+				' AND ( d.AD_CLIENT_ID='''||cliente_destino||''''||
+				' OR d.AD_CLIENT_ID=''0'')'||
+					'GROUP BY o.'||valor|| ', d.' ||valor || ', d.'||columnafk|| ';'; 
+
+
+
+RETURN v_buscar;
+END TEGIDL_BUSCARID
+]]></body>
+    </function>
+  </database>

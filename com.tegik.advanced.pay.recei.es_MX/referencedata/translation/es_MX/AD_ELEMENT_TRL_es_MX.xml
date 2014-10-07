@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="093017D15DE649259C329641ADC41321" trl="N">
+    <value column="Name" original="FIN_Finacc_Transaction_Acct_ID">FIN_Finacc_Transaction_Acct_ID</value>
+    <value column="PrintName" original="FIN_Finacc_Transaction_Acct_ID">FIN_Finacc_Transaction_Acct_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="0C2BDD53D9E74911BDBC350CE610389D" trl="Y">
+    <value column="Name" original="Invoiced Amount">Importe facturado</value>
+    <value column="PrintName" original="Invoiced Amount">Importe facturado</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="0CF797887AC9494F9C250A6B6EB5D60D" trl="Y">
+    <value column="Name" original="Writeoff">Descuento</value>
+    <value column="PrintName" original="Writeoff">Descuento</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="256AB5C3D6144B2C9884CF0FA4D81911" trl="Y">
+    <value column="Name" original="Payment Date">Fecha</value>
+    <value column="PrintName" original="Payment Date">Fecha</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="36C60E53F1274EDA827ED5146A2B13D1" trl="Y">
+    <value column="Name" original="Process Proposal">Procesar Propuesta</value>
+    <value column="PrintName" original="Process Proposal">Procesar Propuesta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="4636FFBE88B64C9C990F76457F0D521E" trl="N">
+    <value column="Name" original="EM_APRM_Process">EM_APRM_Process</value>
+    <value column="PrintName" original="EM_APRM_Process">EM_APRM_Process</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="4AC57284C5C745EB9087C105222EDF02" trl="N">
+    <value column="Name" original="APRM_Rec_Detail_V_ID">APRM_Rec_Detail_V_ID</value>
+    <value column="PrintName" original="APRM_Rec_Detail_V_ID">APRM_Rec_Detail_V_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="519F3CD67106443CBF25694F1BB6E92B" trl="Y">
+    <value column="Name" original="Match Reference">Asociar referencia</value>
+    <value column="PrintName" original="Match Reference">Asociar referencia</value>
+    <value column="Description" original="Algorithm tries to match reference">El algoritmo trata de hacer coincidir la referencia</value>
+    <value column="Help" original="The algorithm will try to match using reference.">El algoritmo trata de hacer coincidir la referencia.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="56CC0941477A4250AD07527AE15FAC61" trl="Y">
+    <value column="Name" original="Payment">Pago</value>
+    <value column="PrintName" original="Payment">Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="583D70554DDA45BD8C80C0AF11C64FC5" trl="Y">
+    <value column="Name" original="Invoice Document No.">Nº documento</value>
+    <value column="PrintName" original="Invoice_Documentno">Invoice_Documentno</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="5D3526B2FC0F4BB2BE7FE13C5E9C009A" trl="Y">
+    <value column="Name" original="Difference">Diferencia</value>
+    <value column="PrintName" original="Difference">diferencia</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="6037A140C2664B6991BFD4EC7561A662" trl="N">
+    <value column="Name" original="Aprm_Finacc_Trx_Full_Acct_V_ID">Aprm_Finacc_Trx_Full_Acct_V_ID</value>
+    <value column="PrintName" original="Aprm_Finacc_Trx_Full_Acct_V_ID">Aprm_Finacc_Trx_Full_Acct_V_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="64B01B6184B84599B2B073BC7971EA19" trl="Y">
+    <value column="Name" original="Order Document No.">Nº documento</value>
+    <value column="PrintName" original="Order_Documentno">Order_Documentno</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="720C4FC08FBD43419FF7EACABECA6AE3" trl="Y">
+    <value column="Name" original="reconciliationId">Conciliación</value>
+    <value column="PrintName" original="reconciliationId">Conciliación</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="77E12B7AAB9F45BF9D3263E5967A696A" trl="Y">
+    <value column="Name" original="language">lenguaje</value>
+    <value column="PrintName" original="language">lenguaje</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="78A3787B4823C096E040007F0101250E" trl="Y">
+    <value column="Name" original="Add Payment">Añadir Cobro</value>
+    <value column="PrintName" original="Add Payment">Añadir Pago</value>
+    <value column="Description" original="Add Payment button.">Botón para añadir un cobro.</value>
+    <value column="Help" original="Launches a process to add a payment to the selected invoice.">Lanza un proceso para añadir un pago a la factura seleccionada.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original="Add Payment">Añadir pago</value>
+    <value column="PO_PrintName" original="Add Payment">Añadir pago</value>
+  </row>
+  <row id="7DC34559B412B45BE040007F0100784A" trl="Y">
+    <value column="Name" original="Process Payment">Procesar Pago</value>
+    <value column="PrintName" original="Process Payment">Procesar Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="7DC34559B413B45BE040007F0100784A" trl="Y">
+    <value column="Name" original="Reconcile Payment">Reconciliar Pago</value>
+    <value column="PrintName" original="Reconcile Payment">Reconciliar Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="7FCAAFE989BEA375E040007F01007F0A" trl="Y">
+    <value column="Name" original="EM_Aprm_Add_Scheduledpayments">Añadir Detalles de Pago</value>
+    <value column="PrintName" original="EM_Aprm_Add_Scheduledpayments">Añadir Detalles de Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4045B19C9E040007F01003778" trl="Y">
+    <value column="Name" original="Unreconciled Bank Statement Lines Amount">Importe de partidas no reconciliadas</value>
+    <value column="PrintName" original="Unreconciled Bank Statement Lines Amount">Importe de partidas no reconciliadas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4045C19C9E040007F01003778" trl="Y">
+    <value column="Name" original="Unreconciled Bank Statement Lines">Nº partidas no reconciliadas</value>
+    <value column="PrintName" original="Unreconciled Bank Statement Lines">Nº partidas no reconciliadas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4045D19C9E040007F01003778" trl="Y">
+    <value column="Name" original="Outstanding Deposits">Depósitos Pendientes</value>
+    <value column="PrintName" original="Outstanding Deposits">Depósitos Pendientes</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4045E19C9E040007F01003778" trl="Y">
+    <value column="Name" original="Reconciled Items">Nº partidas reconciliadas</value>
+    <value column="PrintName" original="Reconciled Items">Nº partidas reconciliadas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4045F19C9E040007F01003778" trl="Y">
+    <value column="Name" original="Reconciled Items Amount">Importe de Partidas reconciliadas</value>
+    <value column="PrintName" original="Reconciled Items Amount">Importe de Partidas reconciliadas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4046119C9E040007F01003778" trl="Y">
+    <value column="Name" original="Outstanding Payments Amount">Importe de Reintegros Pendientes</value>
+    <value column="PrintName" original="Outstanding Payments Amount">Importe de Reintegros Pendientes</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4046219C9E040007F01003778" trl="Y">
+    <value column="Name" original="Outstanding Deposit Amount">Importe de Depósitos Pendientes</value>
+    <value column="PrintName" original="Outstanding Deposit Amount">Importe de Depósitos Pendientes</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="82EFB8E4046319C9E040007F01003778" trl="Y">
+    <value column="Name" original="Outstanding Payments">Reintegros Pendientes</value>
+    <value column="PrintName" original="Outstanding Payments">Reintegros Pendientes</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8337CDFBF2904C07AB7F9D69E1536663" trl="Y">
+    <value column="Name" original="Select Expected Payments">Seleccionar pagos</value>
+    <value column="PrintName" original="Select Expected Payments">Seleccionar pagos</value>
+    <value column="Description" original="Select Expected Payments">Seleccionar pagos</value>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8448D8212AA95824E040007F01001A1B" trl="Y">
+    <value column="Name" original="Forced_Table_ID">Forced_Table_ID</value>
+    <value column="PrintName" original="Forced_Table_ID">Forced_Table_ID</value>
+    <value column="Description" original="Hidden column to set the source table id in views.">Columna oculta para almacenar el identificador de la tabla origen de una 
+vista.</value>
+    <value column="Help" original="Hidden column to set the source table id in views. It is needed when creating a tab from a view which will trigger accounting. In that case the original AD_Table_ID is loaded through Forced_Table_ID.">Columna oculta para almacenar el identificador de la tabla origen de una vista. Es necesaria al crear una pestaña relacionada con una vista que disparará procesos contables. El identificador se carga a través de Forced_Table_ID.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="844A9DAD72227690E040007F01003A28" trl="N">
+    <value column="Name" original="Aprm_Reconciliation_V">Aprm_Reconciliation_V</value>
+    <value column="PrintName" original="Aprm_Reconciliation_V">Aprm_Reconciliation_V</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="87AA1068F10742CAE040007F010011D5" trl="Y">
+    <value column="Name" original="Execute Payment">Ejecutar Pago</value>
+    <value column="PrintName" original="Execute Payment">Ejecutar Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8B4372E6182C902CE040007F01000EB9" trl="N">
+    <value column="Name" original="EM_APRM_Processinvoice">EM_APRM_Processinvoice</value>
+    <value column="PrintName" original="EM_APRM_Processinvoice">EM_APRM_Processinvoice</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8BBA8342ED3C20FFE040007F01002E9B" trl="N">
+    <value column="Name" original="Aprm_Pending_Paymentinvoice_ID">Aprm_Pending_Paymentinvoice_ID</value>
+    <value column="PrintName" original="Aprm_Pending_Paymentinvoice_ID">Aprm_Pending_Paymentinvoice_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="91DD92021CFA438DBBF2ABAFCB2089C5" trl="Y">
+    <value column="Name" original="Modify">Modificar</value>
+    <value column="PrintName" original="Modify">Modificar</value>
+    <value column="Description" original="Modify existing transaction once created">Modificar transacción existente.</value>
+    <value column="Help" original="Process to modify transactions GL Item type once they have been created">Proceso para modificar transacciones existentes del tipo concepto contable</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A0417A0E924ACA28E040007F01003C18" trl="Y">
+    <value column="Name" original="Delete">Eliminar</value>
+    <value column="PrintName" original="Delete">Eliminar</value>
+    <value column="Description" original="Delete button">Botón de borrado</value>
+    <value column="Help" original="Delete button">Botón de borrado</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A0417A0E924BCA28E040007F01003C18" trl="N">
+    <value column="Name" original="EM_APRM_MatchTransactions">EM_APRM_MatchTransactions</value>
+    <value column="PrintName" original="EM_APRM_MatchTransactions">EM_APRM_MatchTransactions</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A0417A0E924CCA28E040007F01003C18" trl="Y">
+    <value column="Name" original="EM_APRM_AddTransactions">EM_APRM_MatchTransactions</value>
+    <value column="PrintName" original="EM_APRM_AddTransactions">EM_APRM_AddTransactions</value>
+    <value column="Description" original="Add Transaction From Financial Account">Añadir Transacción desde la Cuenta Financiera</value>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A0417A0E924DCA28E040007F01003C18" trl="Y">
+    <value column="Name" original="EM_APRM_ImportBankFile">EM_APRM_ImportBankFile</value>
+    <value column="PrintName" original="EM_APRM_ImportBankFile">EM_APRM_ImportBankFile</value>
+    <value column="Description" original="ImportBankFile">Importar Extracto Bancario</value>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A0417A0E924ECA28E040007F01003C18" trl="N">
+    <value column="Name" original="EM_APRM_Reconcile">EM_APRM_Reconcile</value>
+    <value column="PrintName" original="EM_APRM_Reconcile">EM_APRM_Reconcile</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A28B183E6A9B34C0E040007F010067F9" trl="N">
+    <value column="Name" original="EM_APRM_Process Bank Statement">EM_APRM_Process Bank Statement</value>
+    <value column="PrintName" original="EM_APRM_Process Bank Statement">EM_APRM_Process Bank Statement</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A2966FBA8749447F88BEEC89117C6915" trl="Y">
+    <value column="Name" original="Match BP Name">Asociar nombre del tercero</value>
+    <value column="PrintName" original="Match BP Name">Asociar nombre del tercero</value>
+    <value column="Description" original="Algorithm tries to mach business partner name">El algoritmo trata de hacer coincidir el nombre del tercero</value>
+    <value column="Help" original="The algorithm will try to match using busines partner name.">El algoritmo trata de hacer coincidir el nombre del tercero.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A37C6F84AA423F50E040007F01006E35" trl="Y">
+    <value column="Name" original="Financial Account Transaction">Transacción Cuenta Financiera</value>
+    <value column="PrintName" original="Financial Account Transaction">Transacción Cuenta Financiera</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A37C6F84AA433F50E040007F01006E35" trl="Y">
+    <value column="Name" original="Cleared">Conciliado</value>
+    <value column="PrintName" original="Cleared">Conciliado</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A37C6F84AA443F50E040007F01006E35" trl="Y">
+    <value column="Name" original="Reconciled">Reconciliado</value>
+    <value column="PrintName" original="Reconciled">Reconciliado</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A37C6F84AA453F50E040007F01006E35" trl="N">
+    <value column="Name" original="Delete_Btn">Delete_Btn</value>
+    <value column="PrintName" original="Delete_Btn">Delete_Btn</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A37C6F84AA463F50E040007F01006E35" trl="Y">
+    <value column="Name" original="Payment No.">Pago/Cobro</value>
+    <value column="PrintName" original="Payment No.">Pago/Cobro</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="AEA679FCC17546268C951135AB611F57" trl="N">
+    <value column="Name" original="Aprm_Payment_Prop_Pick_Edit_ID">Aprm_Payment_Prop_Pick_Edit_ID</value>
+    <value column="PrintName" original="Aprm_Payment_Prop_Pick_Edit_ID">Aprm_Payment_Prop_Pick_Edit_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="AF073DA2C96EFA0CE040A8C09166378E" trl="Y">
+    <value column="Name" original="Modify Payment Plan">Modificar Plan de Cobros</value>
+    <value column="PrintName" original="Modify Payment Plan">Modificar Plan de Cobros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+    <value column="PO_PrintName" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+  </row>
+  <row id="B0FA9EF3D10E46FF9D402AB44056363B" trl="Y">
+    <value column="Name" original="Print Summary">Imprimir Resumen</value>
+    <value column="PrintName" original="Print Summary">Imprimir Resumen</value>
+    <value column="Description" original="Print Summary reconciliation report">Imprimir informe de reconciliación resumido</value>
+    <value column="Help" original="Print Summary reconciliation report">Imprimir informe de reconciliación resumido</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="B40C938A247779EFE040A8C0916618AE" trl="N">
+    <value column="Name" original="buttonList">buttonList</value>
+    <value column="PrintName" original="buttonList">buttonList</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C09E18A3FCFEC058E040007F010024F4" trl="Y">
+    <value column="Name" original="Reverse Payment">Revertir pago</value>
+    <value column="PrintName" original="Reverse Payment">Revertir pago</value>
+    <value column="Description" original="Create an opposite payment which reverts selected.">Crear un pago contrario que revierte el pago seleccionado.</value>
+    <value column="Help" original="Create an opposite payment which reverts selected.">Crear un pago contrario que revierte el pago seleccionado.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C5BB574D9652494086707528FF8175D6" trl="Y">
+    <value column="Name" original="Select Expected Payments">Elegir y editar lineas propuesta de pago</value>
+    <value column="PrintName" original="Select Expected Payments">Elegir y editar lineas propuesta de pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C8E8009C6BF5427EA930515F217F768E" trl="Y">
+    <value column="Name" original="Process Reconciliation">Reconciliación del Proceso</value>
+    <value column="PrintName" original="Process Reconciliation">Procesar Reconciliación</value>
+    <value column="Description" original="Process Reconciliation Document">Procesar Documento de Reconciliación</value>
+    <value column="Help" original="Used to process and reactivate reconciliation documents">Se utiliza para procesar y reactivar documentos de reconciliación</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D2AC3F75FCDC4BC187A1F492C46D68D1" trl="Y">
+    <value column="Name" original="Purchase Invoice's Reference for Payment Description">Referencia de la factura para la descripción del pago</value>
+    <value column="PrintName" original="Purchase Invoice's Reference for Payment Description">Referencia de la factura para la descripción del pago</value>
+    <value column="Description" original="Purchase Invoice's Reference to be automatically included into the Payment &#10;Description.">Referencia a la factura que se incluirá automáticamente en la Descripción 
+del Pago</value>
+    <value column="Help" original="Purchase Invoice's reference to be automatically included into the payment description. Possible values are:&#10;- Invoice document number (default).&#10;- Supplier reference, which is defined in the invoice's header.">Referencia de la factura que se incluirá automáticamente en la descripción del pago. Los valores posibles son:- Número de documento de factura (por defecto)- Referencia del proveedor, que se define en la cabecera de la factura</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="DB85AA94D6DF4D7CB29CE7999B15F9C7" trl="Y">
+    <value column="Name" original="Print Detailed">Impresión Detallada</value>
+    <value column="PrintName" original="Print Detailed">Impresión Detallada</value>
+    <value column="Description" original="Print Detailed reconciliation report">Imprimir informe de reconciliación detallado</value>
+    <value column="Help" original="Print Detailed reconciliation report">Imprimir informe de reconciliación detallado</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="DE92C5C14E9647D5B4E71F0C8E89E984" trl="Y">
+    <value column="Name" original="Match Transaction Date">Asociar fecha de transacción</value>
+    <value column="PrintName" original="Match Transaction Date">Asociar fecha de transacción</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="The algorithm will try to match using transaction date.">El altoritmo trata de hacer coincidir la fecha de transacción.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="EDB9CF491555465382F828F48291A0C0" trl="Y">
+    <value column="Name" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+    <value column="PrintName" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+    <value column="PO_PrintName" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+  </row>
+  <row id="FC780C136EFA4D98B2435A9448FA44AD" trl="Y">
+    <value column="Name" original=""/>
+    <value column="PrintName" original=""/>
+    <value column="Description" original="Process Reconciliation Document">Procesar Documento de Reconciliación</value>
+    <value column="Help" original="Used to process and reactivate reconciliation documents">Se utiliza para procesar y reactivar documentos de reconciliación</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

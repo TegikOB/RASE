@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_CALCULO_IMP_ISR">
+    <function name="CONTMX_CALCULO_IMP_ISR" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- variables that will contain the parameters deriving from the AD_PInstance table
+ v_tipo VARCHAR(32);
+  v_diaInicio DATE; -- dua de inicio
+  v_diaFinal DATE; --dia final
+  Cur_Parameter RECORD; -- cursor variable to loop through all parameters
+  v_User VARCHAR2(32);
+  v_Record_ID VARCHAR2(32);
+  v_Client VARCHAR2(32);
+  v_ResultStr VARCHAR(2000):=''; -- will contain text describing the stage the stored procedure is in
+  v_Message VARCHAR(60000):=''; -- will contain the final message to be logged
+  v_Cursor RECORD;
+  v_org_id VARCHAR(32);
+  v_reporte_id VARCHAR(32);
+  
+  --variables que se obtiene en el proceso
+  v_seqno NUMBER:=0;
+  v_coeficiente NUMBER:=0;
+  v_ingreso NUMBER:=0;
+  v_egreso NUMBER:=0;
+  v_provisional NUMERIC=0;
+  v_porisr NUMERIC=0;
+  v_costoVenta NUMERIC=0;
+  v_costo NUMBER =0;
+  v_inventory VARCHAR(32);
+  v_Consumption  VARCHAR(32);
+  v_inout VARCHAR(32);
+  BEGIN
+
+ 
+    -- Obtenemos los parametros
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID,
+        i.AD_Client_ID, p.ParameterName, p.P_String, p.P_Number, p.P_Date
+        FROM AD_PInstance i
+          LEFT JOIN AD_PInstance_Para p
+             ON i.AD_PInstance_ID=p.AD_PInstance_ID
+               WHERE i.AD_PInstance_ID=p_PInstance_ID
+                ORDER BY p.SeqNo)
+    LOOP
+      v_User:=Cur_Parameter.AD_User_ID;
+      v_Client:=Cur_Parameter.AD_Client_ID;
+      v_Record_ID:=Cur_Parameter.Record_ID; -- save the m_productprice primary key
+      IF (Cur_Parameter.ParameterName='dia_inicio') THEN
+        v_diaInicio:=Cur_Parameter.P_Date;
+      END IF;
+      IF (Cur_Parameter.ParameterName='dia_final') THEN
+        v_diaFinal:=Cur_Parameter.P_Date;
+      END IF;
+       IF (Cur_Parameter.ParameterName='tipo') THEN
+        v_tipo:=Cur_Parameter.P_String;
+      END IF;
+       IF (UPPER(Cur_Parameter.ParameterName)=UPPER('ad_org_id')) THEN
+        v_org_id:=Cur_Parameter.P_String;
+      END IF;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE( 'Record_ID = ' || v_Record_ID) ;
+ 
+  BEGIN --BODY
+ --enumaramos el informe 
+ SELECT COUNT(contmx_isr_id) 
+	FROM contmx_isr
+	INTO v_seqno;
+
+--obtenemos el coeficiente de ISR
+SELECT COALESCE(em_contmx_isr ,0)
+	FROM ad_client 
+		WHERE ad_client_id=v_Client
+	INTO v_coeficiente;
+
+
+
+SELECT COALESCE(em_contmx_porcentajeisr ,0)
+	FROM ad_client 
+		WHERE ad_client_id=v_Client
+	INTO v_porisr;
+
+--insertamos los encabezados del calculo	
+  v_reporte_id =get_uuid();
+INSERT INTO contmx_isr(contmx_isr_id, ad_client_id, ad_org_id, isactive, createdby, updatedby, 
+  name, tipo, datei, datef, c_currency_id, fechacreacion, seq,
+  facturain ,facturaeg, utilidadbruta, perdidafiscal, base,porisr, totalimpuesto, pagoprovis, coefi)
+	VALUES (v_reporte_id, v_Client, v_org_id, 'Y', v_User, v_User,  
+	'ISR',v_tipo, v_diaInicio, v_diaFinal, '130' ,now() ,'ISR' || (10000+v_seqno),
+	0,0,0 ,0,0,v_porisr,0,0,v_coeficiente); 
+
+
+/************************
+--ciclo para obtener todas las factura(Cliente)
+**************************/
+  FOR v_Cursor IN (SELECT  inv.c_invoice_id AS factura_id,
+			inv.dateinvoiced AS fecha_factura,
+			pd.m_product_id AS product_id,
+			C_CURRENCY_CONVERT_PRECISION((il.qtyinvoiced*il.priceactual)  , inv.C_CURRENCY_ID ,'130' ,inv.dateinvoiced ,'S',v_Client ,inv.ad_org_id,'A') AS precioProducto,
+			il.linenetamt, inv.ad_org_id
+				FROM  c_invoice AS inv 
+				INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+				INNER JOIN  m_product AS pd ON pd.m_product_id = il.m_product_id
+					WHERE inv.issotrx='Y' 
+					AND inv.docstatus = 'CO'
+					AND v_diaInicio <= inv.dateinvoiced
+					AND v_diaFinal >= inv.dateinvoiced
+					AND (v_org_id = inv.ad_org_id OR v_org_id='0')
+					AND inv.AD_Client_ID = v_Client) 
+  LOOP
+--sumamos el acumulado de cada ingreso del producto
+  v_ingreso=v_ingreso +v_Cursor.precioProducto;
+  
+--insetar una linea de ingreso de la factura
+INSERT INTO contmx_isr_des( contmx_isr_des_id, contmx_isr_id, ad_client_id, ad_org_id, isactive, createdby, updatedby,
+  name, fechaf , tipo, c_invoice_id , m_product_id , total, irs)
+  VALUES(get_uuid(), v_reporte_id, v_Client, v_Cursor.ad_org_id,  'Y', v_User, v_User,
+  'Ingreso', v_Cursor.fecha_factura, 'ingreso', v_Cursor.factura_id , v_Cursor.product_id, round(v_Cursor.precioProducto,2),round(v_Cursor.precioProducto,2));
+  
+END LOOP;
+
+
+
+/************************************************
+ciclo para sacar todos los ingresos de concepto contables
+**************************************************/
+
+
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+			fp.paymentdate AS fecha_cobro,  
+			fp.fin_payment_id, fp.ad_org_id,
+			gl.c_glitem_id 
+				FROM FIN_PAYMENT AS fp
+				INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+				INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+					WHERE fp.status IN ('RDNC', 'RPR') 
+					AND gl.em_contmx_ingresoisr='Y'
+					AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= fp.paymentdate
+					AND v_diaFinal >=fp.paymentdate
+					AND fp.AD_Client_ID = v_Client)
+	
+LOOP 
+--sumamos el acumulado de cada ingreso del producto
+  v_ingreso=v_ingreso +v_Cursor.amount;
+
+--insertamos los pagos provisionales
+INSERT INTO contmx_isr_des(contmx_isr_des_id ,contmx_isr_id ,ad_client_id,ad_org_id, isactive,createdby,updatedby,
+  fin_payment_id, fechac, tipo, c_glitem_id, total, irs)
+  VALUES(get_uuid(), v_reporte_id, v_Client, v_Cursor.ad_org_id,  'Y', v_User, v_User,
+  v_Cursor.fin_payment_id, v_Cursor.fecha_cobro, 'ingreso' , v_Cursor.c_glitem_id, v_Cursor.amount,  v_Cursor.amount);
+
+END LOOP;
+
+--actualizamos el encabezado
+UPDATE contmx_isr SET facturain=round(v_ingreso,2) WHERE contmx_isr_id=v_reporte_id;
+
+
+
+
+/*********************************************************
+ciclo para sacar todos los productos de factura(Proveedor)
+**********************************************************/
+
+
+  FOR v_Cursor IN (SELECT  inv.c_invoice_id AS factura_id,
+			inv.dateinvoiced AS fecha_factura,
+			pd.m_product_id AS product_id,
+			C_CURRENCY_CONVERT_PRECISION((il.qtyinvoiced*il.priceactual)  , inv.C_CURRENCY_ID ,'130' ,inv.dateinvoiced ,'S',v_Client ,inv.ad_org_id,'A') AS precioProducto,
+			il.linenetamt, inv.ad_org_id
+				FROM  c_invoice AS inv 
+				INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+				INNER JOIN  m_product AS pd ON pd.m_product_id = il.m_product_id
+					WHERE inv.issotrx='N' 
+					AND inv.docstatus = 'CO'
+					AND pd.em_contmx_deducirisr='Y'
+					AND pd.isSold='N' AND pd.isStocked = 'N'
+					AND v_diaInicio <= inv.dateinvoiced
+					AND v_diaFinal >=inv.dateinvoiced
+					AND (v_org_id = inv.ad_org_id OR v_org_id='0')
+					AND inv.AD_Client_ID = v_Client ) 
+                                                 
+  LOOP
+
+--sumamos el acumulado de cada egreso del producto
+  v_egreso=v_egreso +v_Cursor.precioProducto;
+  
+--insertar una linea de egreso de la factura
+INSERT INTO contmx_isr_des( contmx_isr_des_id, contmx_isr_id, ad_client_id, ad_org_id, isactive, createdby, updatedby,
+  name, fechaf , tipo, c_invoice_id , m_product_id , total, irs)
+  VALUES(get_uuid(), v_reporte_id, v_Client, v_Cursor.ad_org_id,  'Y', v_User, v_User,
+  'Egreso', v_Cursor.fecha_factura, 'egreso', v_Cursor.factura_id , v_Cursor.product_id, round(v_Cursor.precioProducto,2),round(v_Cursor.precioProducto,2));
+   END LOOP; 
+
+
+
+/*********************************************************
+ciclo para sacar todos los productos de factura(Proveedor)
+desde FACTURA FINANCIERA
+**********************************************************/
+
+
+  FOR v_Cursor IN (SELECT  inv.c_invoice_id AS factura_id,
+			inv.dateinvoiced AS fecha_factura,
+			cu.c_glitem_id AS account,
+			C_CURRENCY_CONVERT_PRECISION((il.qtyinvoiced*il.priceactual)  , inv.C_CURRENCY_ID ,'130' ,inv.dateinvoiced ,'S',v_Client ,inv.ad_org_id,'A') AS precioAccount,
+			il.linenetamt, inv.ad_org_id
+				FROM  c_invoice AS inv 
+				INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+				INNER JOIN  c_glitem as cu ON il.account_id = cu.c_glitem_id
+					WHERE inv.issotrx='N' 
+					AND inv.docstatus = 'CO'
+					AND v_diaInicio <= inv.dateinvoiced
+					AND v_diaFinal >=inv.dateinvoiced
+					AND (v_org_id = inv.ad_org_id OR v_org_id='0')
+					AND inv.AD_Client_ID = v_Client ) 
+                                                 
+  LOOP
+
+--sumamos el acumulado de cada egreso del producto
+  v_egreso=v_egreso +v_Cursor.precioAccount;
+  
+--insertar una linea de egreso de la factura
+INSERT INTO contmx_isr_des( contmx_isr_des_id, contmx_isr_id, ad_client_id, ad_org_id, isactive, createdby, updatedby,
+  name, fechaf , tipo, c_invoice_id , c_glitem_id , total, irs)
+  VALUES(get_uuid(), v_reporte_id, v_Client, v_Cursor.ad_org_id,  'Y', v_User, v_User,
+  'Egreso', v_Cursor.fecha_factura, 'egreso', v_Cursor.factura_id , v_Cursor.account, round(v_Cursor.precioAccount,2),round(v_Cursor.precioAccount,2));
+   END LOOP; 
+
+
+/***********************************************************
+ ciclo para sacar todos los egresos de concepto contables
+************************************************************/
+
+
+
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+			fp.paymentdate AS fecha_cobro,  
+			fp.fin_payment_id, fp.ad_org_id,
+			gl.c_glitem_id 
+				FROM FIN_PAYMENT AS fp
+				INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+				INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+					WHERE fp.status IN ('PWNC', 'PPM') 
+					AND gl.em_contmx_egresoisr='Y'
+					AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= fp.paymentdate
+					AND v_diaFinal >=fp.paymentdate
+					AND fp.AD_Client_ID = v_Client)
+	
+LOOP 
+
+--sumamos el acumulado de cada ingreso del producto
+  v_egreso=v_egreso +v_Cursor.amount;
+
+--insertamos los pagos provisionales
+INSERT INTO contmx_isr_des(contmx_isr_des_id ,contmx_isr_id ,ad_client_id,ad_org_id, isactive,createdby,updatedby,
+  fin_payment_id, fechac, tipo, c_glitem_id, total, irs)
+  VALUES(get_uuid(), v_reporte_id, v_Client, v_Cursor.ad_org_id,  'Y', v_User, v_User,
+  v_Cursor.fin_payment_id, v_Cursor.fecha_cobro, 'egreso' , v_Cursor.c_glitem_id, round(v_Cursor.amount,2),  round(v_Cursor.amount,2));
+
+END LOOP;
+
+
+--actualizamos el encabezado
+UPDATE contmx_isr SET facturaeg=round(v_egreso,2) WHERE contmx_isr_id=v_reporte_id;
+
+ /************************************************
+ciclo para sacar todos los pagos provisionales
+****************************************************/
+
+
+IF(v_tipo='A')THEN
+	FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+			fp.paymentdate AS fecha_cobro,  
+			fp.fin_payment_id, fp.ad_org_id,
+			gl.c_glitem_id 
+				FROM FIN_PAYMENT AS fp
+				INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+				INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+					WHERE fp.status IN ('PWNC', 'PPM') 
+					AND gl.em_contmx_isisr='Y'
+					AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= fp.paymentdate
+					AND v_diaFinal >=fp.paymentdate
+					AND fp.AD_Client_ID = v_Client)
+	
+	LOOP 
+	--sumamos los pagos provisionales de ISR
+	v_provisional=v_provisional+ v_Cursor.amount;
+
+	--insertamos los pagos provisionales
+	INSERT INTO contmx_isr_des(contmx_isr_des_id ,contmx_isr_id ,ad_client_id,ad_org_id, isactive,createdby,updatedby,
+	fin_payment_id, fechac, tipo, c_glitem_id, total, irs)
+	VALUES(get_uuid(), v_reporte_id, v_Client, v_Cursor.ad_org_id,  'Y', v_User, v_User,
+	v_Cursor.fin_payment_id, v_Cursor.fecha_cobro, 'provisional' , v_Cursor.c_glitem_id, v_Cursor.amount,  v_Cursor.amount);
+
+	END LOOP;
+	UPDATE contmx_isr SET  pagoprovis=round(v_provisional,2)  WHERE contmx_isr_id=v_reporte_id;
+
+	/*
+	 CALCULAMOS EL COSTO DE VENTA
+	*/
+	
+	
+--Customer Shipment  and Internal Consumption
+
+	FOR v_Cursor IN (SELECT tr.m_transaction_id, tr.movementdate AS fecha_ajuste,
+				tr.m_product_id, tr.movementqty ,
+				tr.movementtype,
+				tr.M_Internal_ConsumptionLine_ID,
+				tr.m_inoutline_id 				
+				FROM M_TRANSACTION tr
+					WHERE tr.movementtype IN ('C-', 'D-' )
+					AND (v_org_id = tr.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= tr.movementdate
+					AND v_diaFinal >=tr.movementdate
+					AND tr.AD_Client_ID = v_Client) 
+	LOOP
+	
+	SELECT CONTMX_COSTO_PRODUCTO(v_Cursor.M_Product_ID, v_Cursor.fecha_ajuste ) INTO v_costo;
+
+	--sumar todos las ajustes de inventario
+	v_CostoVenta = v_CostoVenta + (v_costo*v_Cursor.movementqty * -1);
+
+	--Consumption
+	SELECT M_Internal_Consumption_ID 
+	FROM M_Internal_ConsumptionLine
+		WHERE M_Internal_ConsumptionLine_ID = v_Cursor.M_Internal_ConsumptionLine_ID 	
+		  INTO v_Consumption;
+
+	--inout
+	SELECT M_inout_ID 
+	  FROM M_InoutLine
+	  WHERE M_InoutLine_ID = v_Cursor.M_InoutLine_ID 	
+	  INTO v_inout;
+
+
+	INSERT INTO CONTMX_COSTOVENTA(contmx_costoventa_id, ad_client_id,isactive,createdby,updatedby ,
+	m_transaction_id, m_product_id,
+	cantidad, ad_org_id ,contmx_isr_id,
+	tipo, M_Inout_ID, precio,
+	total, ultimafechaactualizada , 
+	 M_Internal_Consumption_ID)
+	VALUES (get_uuid() ,v_Client, 'Y', v_User,  v_User,
+	v_Cursor.m_transaction_id, v_Cursor.m_product_id,
+	v_Cursor.movementqty * -1 , v_org_id, v_reporte_id,  
+	v_Cursor.movementtype, v_inout, round(v_costo,2),
+	round(v_costo*v_Cursor.movementqty *-1, 2) , v_Cursor.fecha_ajuste, 
+	v_Consumption ) ;
+	
+	END LOOP;
+
+
+
+	
+--Inventory out
+
+	FOR v_Cursor IN (SELECT tr.m_transaction_id, tr.movementdate AS fecha_ajuste,
+				tr.m_product_id, tr.movementqty, tr.movementtype, 
+				tr.m_inventoryline_id
+				FROM M_TRANSACTION tr
+					WHERE tr.movementtype IN ('I+')
+					AND (v_org_id = tr.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= tr.movementdate
+					AND v_diaFinal >=tr.movementdate
+					AND tr.AD_Client_ID = v_Client) 
+	LOOP
+	
+	SELECT CONTMX_COSTO_PRODUCTO(v_Cursor.M_Product_ID, v_Cursor.fecha_ajuste ) INTO v_costo;
+	
+	--sumar todoas las ajustes de inventario
+	IF(v_Cursor.movementqty < 0)THEN
+	
+	--selecionar el inventory_id
+	SELECT M_Inventory_ID FROM M_Inventoryline 
+		WHERE m_inventoryline_id = v_Cursor.m_inventoryline_id
+		  INTO v_inventory; 
+	
+		v_CostoVenta = v_CostoVenta + (v_costo * v_Cursor.movementqty * -1) ;
+
+		INSERT INTO CONTMX_COSTOVENTA(contmx_costoventa_id, ad_client_id,isactive,createdby,updatedby ,
+		m_transaction_iD, m_product_id,
+		cantidad, ad_org_id ,contmx_isr_id,
+		tipo, precio,
+		total, ultimafechaactualizada, 
+		m_inventory_id) 
+		VALUES (get_uuid() ,v_Client, 'Y', v_User,  v_User,
+		v_Cursor.m_transaction_id , v_Cursor.m_product_id,
+		v_Cursor.movementqty * -1 , v_org_id, v_reporte_id,  
+		'I-' , round(v_costo,2) ,
+		round(v_costo*v_Cursor.movementqty * -1 ,2), v_Cursor.fecha_ajuste, 
+		v_inventory  ) ;
+	END IF;
+	END LOOP;
+
+	
+	UPDATE contmx_isr SET  costoVenta=v_CostoVenta  WHERE contmx_isr_id=v_reporte_id;
+	UPDATE contmx_isr SET facturaeg=v_egreso WHERE contmx_isr_id=v_reporte_id;
+	END IF;
+
+
+ 
+    -- Successfully finish the process by updating AD_PInstance, setting the 
+    -- IsProcessing, ErrorMsg and Result
+    DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message) ;
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 1, v_Message) ;
+    RETURN;
+  END; -- BODY
+ 
+
+ EXCEPTION
+ WHEN OTHERS THEN
+   v_ResultStr:= '@ERROR=' || SQLERRM;
+   DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+   AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr) ;
+   RETURN;
+END CONTMX_CALCULO_IMP_ISR
+]]></body>
+    </function>
+  </database>

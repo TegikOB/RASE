@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="0424D6B4F7FF46A6A4B4960F410144B6" trl="Y">
+    <value column="Name" original="Template">Plantilla</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Maintaining templates for user interface components">Mantiene plantillas para componentes de interfaz de usuario</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Templates are used to convert server side components into client side representations, to javascript. In its basic form the template reads data from the database and processes this data to create a javascript string which is sent to the server. A template is called by the Openbravo client framework when a request for a component is received. ">Las plantillas se usan para convertir los componentes del lado del servidor 
+en representaciones del lado del cliente, para JavaScript. En su forma 
+básica la plantilla lee los datos de la base de datos y procesa estos datos 
+para crear una cadena de JavaScript que se envía al servidor. Una plantilla 
+es llamado por el marco de cliente de Openbravo cuando se recibe una 
+solicitud de un componente.</value>
+  </row>
+  <row id="33550B504F454C518E487AF4BC81376F" trl="Y">
+    <value column="Name" original="Mask Reference">Referencia de máscara</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="9BC8881FA26C4609BEC7571F55CA053C" trl="Y">
+    <value column="Name" original="User Interface Definition ">Definición de Interfaz de Usuario </value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Defines user interface specific properties ">Define propiedades de interfaz de usuario específicas </value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Defines user interface specific properties on type level.">Define propiedades específicas de la interfaz de usuario en el nivel de tipo</value>
+  </row>
+  <row id="9CEA7BCAB01844EEBA8D254796B9BCA3" trl="Y">
+    <value column="Name" original="Template Dependency">Dependencia de plantilla</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Defines dependencies between the templates">Define dependencias entre plantillas</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

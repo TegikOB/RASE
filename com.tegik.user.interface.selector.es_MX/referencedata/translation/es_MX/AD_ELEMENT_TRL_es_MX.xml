@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="115E1E4A48294BE880525B71474ECEF9" trl="Y">
+    <value column="Name" original="Sortable">Permitir ordenar</value>
+    <value column="PrintName" original="Sortable">Permitir ordenar</value>
+    <value column="Description" original="Allow sorting by this field in the popup grid.">Permitir ordenar por este campo en el grid del popup.</value>
+    <value column="Help" original="Allow sorting by this field in the popup grid.">Permitir ordenar por este campo en el grid del popup.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="14118749B4354DCAB332F4A29D585699" trl="Y">
+    <value column="Name" original="Default Expression">Expresión por defecto</value>
+    <value column="PrintName" original="Default Expression">Expresión por defecto</value>
+    <value column="Description" original="Defines a expression used to filter the property">Define una expresion por defecto usada para filtrar esta propiedad</value>
+    <value column="Help" original="Defines a JavaScript expression that will be evaluated in the server side and used as default value for the property. You can use any type of variable but it must match the property type, examples:&#10;true - the property associated is boolean&#10;&quot;Hello&quot; - the propery associated is string&#10;5.3 - the property associated is numeric&#10;You can also access the Openbravo API through the OB object and do some more complex expressions, e.g.&#10;OB.getSession().getAttribute(&quot;SESSIONVAR&quot;);&#10;This will retrieve the session variable SESSIONVAR and use it as default value for the selector field">Define una expresion Javascript que será evaluada en el servidor y usada como un valor por defecto para la propiedad. Cualquier tipo de variable puede usarse, pero su tipo debe corresponder con el tipo de la propiedad. Ejemplos:
+true - la propiedad asociada es booleana
+"Hola" - la propiedad asociada es una cadena de texto
+5.3 - la propiedad asociada es un número
+También se puede accceder a la API de Openbravo a través del objeto OB y construir expresiones más complejas, como por ejemplo:
+OB.getSession().getAttribute("SESSIONVAR");
+Esta expresión obtendrá el valor de la variable de sesión SESSIONVAR y lo utilizará como valor por defecto para el campo del selector</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="20B322C49F2B4A5EBEDA5BA73CE97623" trl="Y">
+    <value column="Name" original="Selector Out Field">Campo de Salida de Selector</value>
+    <value column="PrintName" original="Selector Out Field">Campo de Salida de Selector</value>
+    <value column="Description" original="Identifies the 'out field' from which get a value on a row selection">Identifica el "campo de salida" del cual se puede obtener un valor en una selección de registro </value>
+    <value column="Help" original="The new selector can define a field as 'Out Field'. If a column from a tab is using a selector with an out field it will get listed. A field from the tab can receive the value of an Selector Out Field when the user picks a record in the selector. This fields establishes the connection between a selector out field and a field in the tab.">El nuevo selector pede definir un campo como "campo de salida". Si una columna de una solapa está usando un selector con un campo de salida el valor del campo se mostrará. Un campo de la solapa puee recibir el valor de un campo de salida cuando el usuario escoge un registro en el selector. Este campo establece la conexión entre el campo de salida en el selector y el campo en la solapa.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="4BB494AABEA44BB4A383D4814FD72041" trl="Y">
+    <value column="Name" original="Property">Propiedad</value>
+    <value column="PrintName" original="Property">Propiedad</value>
+    <value column="Description" original="Path/name of the property to show in the selector">Ruta/nombre de la propiedad mostrada en el selector</value>
+    <value column="Help" original="Path/name of the property to show in the selector">Ruta/nombre de la propiedad mostrada en el selector</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="4DD095DE15384EB1A4B9DCFDE6BA4853" trl="Y">
+    <value column="Name" original="Filter Expression">Expresión de Filtro</value>
+    <value column="PrintName" original="Filter Expression">Expresión de Filtro</value>
+    <value column="Description" original="Defines a JavaScript expression that returns a HQL where clause">Define una expresion Javascript que devuelve una cláusula HQL 'where'</value>
+    <value column="Help" original="Defines a JavaScript expression evaluated on the server that returns a HQL where clause string and will be appended in the where clause. HQL where clause is static defined where clause. The filter expression can use JavaScript to access the Openbravo API evaluate on the fly and return a HQL dynamically. Note: This expression expression must always return a string value, e.g. &quot;e.customer = true&quot;">Define una expresión Javascript evaluada en el servidor que devuelve una cláusula HQL 'where' y que será añadida a la cláusula 'where'. Una cláusula HQL 'where' es una cláusula 'where' definida de forma estática. La expresion de filtrado puede usar Javascript para acceder a la API Openbravo, que será evaluada en tiempo de ejecucion y que devolverá una cláusula HQL generada dinámicamente. NOta: esta expresión debe retornar siempre una cadena de texto (por ejemplo: "e.customer = true")</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="61493F0A941F4256900765CF36989AC7" trl="N">
+    <value column="Name" original="Obuisel_Selector_Field_Trl_ID">Obuisel_Selector_Field_Trl_ID</value>
+    <value column="PrintName" original="Obuisel_Selector_Field_Trl_ID">Obuisel_Selector_Field_Trl_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="713B5A55B3DD4A17A9ECC6095DFCCD4F" trl="Y">
+    <value column="Name" original="Value Field">Campo de Valor</value>
+    <value column="PrintName" original="Value Field">Campo de Valor</value>
+    <value column="Description" original="The value of this field will be set in the foreign key column. ">El valor de este campo se colocará en la columna clave extranjera </value>
+    <value column="Help" original="The value of this field will be set in the foreign key column. Normally this field does not need to be set. If not set then the id of the referenced entity is used.">El valor de este campo se colocará en la columna clave extranjera. Normalmente este campo no necesita tener valor. Si no tiene valor, entonces se utilizará el identificador de la entidad referenciada.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="779CE92421BF4EF5B29997CAF66FEABF" trl="Y">
+    <value column="Name" original="Show in grid">Mostrar en grid</value>
+    <value column="PrintName" original="Showingrid">Mostrar en grid</value>
+    <value column="Description" original="Defines if the field is shown in the popup grid.">Define si el campo se muestra en el grid del popup.</value>
+    <value column="Help" original="Defines if the field is shown in the popup grid.">Define si el campo se muestra en el grid del popup.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="7E3AF59AB6BB471DA2D0835926F92C07" trl="Y">
+    <value column="Name" original="Sorting of columns in a grid">Orden de las columnas en el grid</value>
+    <value column="PrintName" original="Column Sorting ">Orden de las columnas </value>
+    <value column="Description" original="Defines the sorting of columns in a grid">Define el orden de las columnas en el grid</value>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A4B096709FEB876E040007F01007259" trl="Y">
+    <value column="Name" original="HQL">HQL</value>
+    <value column="PrintName" original="HQL">HQL</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="HQL Query code to populate selector's grid.&#10;Retrieved columns must have an alias defined, this alias is used to identify the returned value with a selector field. It is mandatory to set the &quot;@additional_filters@&quot; String on the main where clause. It is forbidden to include an Order by clause in the HQL, the order is defined on the Selector fields.">Código de la consulta HQL para rellenar el grid del selector.
+Las columnas obtenidas deben tener un alias definido. Este alias se usa para identificar los valores devueltos con un campo del selector. Es obligatorio especificar el parámetro "@additional_filters@" en la cláusula where principal. No se permite incluír una cláusula Order by en la sentencia HQL, el orden se define en los campos del selector</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A4B09670A04B876E040007F01007259" trl="Y">
+    <value column="Name" original="Entity Alias">Alias de Entidad</value>
+    <value column="PrintName" original="Entity Alias">Alias de Entidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="In case that the the selector's table has an alias in the HQL it is mandatory to set it on this field. This alias is used to add some mandatory filters on the Where clause replacing the @additional_filters@ string. Some examples of added filters are: client, organization and active flag.">En caso de que la tabla del selector tenga un alias en la consulta HQL es obligatorio definirlo en el campo. Este alias se utiliza para añadir algunos filtros obligatorios en la cláusula where reemplazando el parámetro @additional_filters@. Algunos ejemplos de filtros añadidos son: entidad, organización y activo</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A597DDF9955E963E040007F01002F75" trl="Y">
+    <value column="Name" original="Custom Query">Consulta Customizada</value>
+    <value column="PrintName" original="Custom Query">Consulta Customizada</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Indicates that a custom query is used to fill out the selector's grid.">Indica que una consulta customizada se utiliza para rellenar el grid del selector.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A5A29111528107DE040007F01002F6B" trl="Y">
+    <value column="Name" original="Display Column Alias">Alias de Columna Mostrado</value>
+    <value column="PrintName" original="Display Column Alias">Alias de Columna Mostrado</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Alias of the HQL query column to be shown">Alias de una columna de la consulta HQL que se mostrará</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A5A29111529107DE040007F01002F6B" trl="Y">
+    <value column="Name" original="Clause Left Part">Parte Izquierda de la Cláusula</value>
+    <value column="PrintName" original="Clause Left Part">Parte Izquierda de la Cláusula</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Left part of a clause to be used on the where or order by clauses of the HQL.">Parte izquierda de la cláusula que se utilizará en las cláusulas where u orderby de la consulta HQL.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9D05F0BD3CA6AAECE040007F0100087A" trl="Y">
+    <value column="Name" original="Show In Picklist">Mostrar en la Lista</value>
+    <value column="PrintName" original="Show In Picklist">Mostrar en la Lista</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Sets additional fields to appear on the selectors pick list.">Especifica campos adicionales que serán mostrados en la lista.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="B843BE7E4A984128AA589685C313E709" trl="Y">
+    <value column="Name" original="Search in suggestion box">Usado en el cuadro de sugerencias</value>
+    <value column="PrintName" original="Searchinsuggestionbox">Usado en el cuadro de sugerencias</value>
+    <value column="Description" original="Defines if the field is used to search when retrieving values in the suggestion box.">Define si el campo se usa para buscar informacion cuando se muestran valores en el cuadro de sugerencias.</value>
+    <value column="Help" original="Defines if the field is used to search when retrieving values in the suggestion box.">Define si el campo se usa para buscar informacion cuando se muestran valores en el cuadro de sugerencias.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="BC75AC54601F4C17B6B5DDC7C8F18FDC" trl="Y">
+    <value column="Name" original="Popup Text Match Style">Estilo de Emparejamiento de Texto en Popup</value>
+    <value column="PrintName" original="Popup Text Match Style">Estilo de Emparejamiento de Texto en Popup</value>
+    <value column="Description" original="Defines the text matching logic used in the filters in the popup grid.">Define la lógica de emparejamiento de texto usada en los filtros del grid del popup</value>
+    <value column="Help" original="Defines the text matching logic used in the filters in the popup grid.">Define la lógica de emparejamiento de texto usada en los filtros del grid del popup.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C4B7AF76B82145BC9439ADF6855CBE7E" trl="Y">
+    <value column="Name" original="Selector Field">Campo de Selector</value>
+    <value column="PrintName" original="Selector Field">Campo de Selector</value>
+    <value column="Description" original="Unique identifying key for the selector field record.">Clave de identificación del selector.</value>
+    <value column="Help" original="Unique identifying key for the selector field record.">Clave de identificación del selector.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C549CDBBFA994C9F952CB205EBFE5302" trl="N">
+    <value column="Name" original="Obuisel_Selector_Trl_ID">Obuisel_Selector_Trl_ID</value>
+    <value column="PrintName" original="Obuisel_Selector_Trl_ID">Obuisel_Selector_Trl_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="CE0AB5DC107A4D288DE5E83015641750" trl="Y">
+    <value column="Name" original="Filterable">Filtrable</value>
+    <value column="PrintName" original="Filterable">Filtrable</value>
+    <value column="Description" original="Allow filtering on this field.">Permitir filtrado en este campo.</value>
+    <value column="Help" original="Make it possible to filter in the grid using this field.">Permitir filtrar en el grid usando este campo.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="CEF66D7F6D124261B706973417D761CD" trl="Y">
+    <value column="Name" original="Out Field">Campo de salida</value>
+    <value column="PrintName" original="Out Field">Campo de salida</value>
+    <value column="Description" original="The value of this field should be returned to the opener window">El valor de este campo será enviado a la ventana que ha abierto el selector</value>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D71D9890834E4D4183B4A2872A5107A2" trl="Y">
+    <value column="Name" original="Selector">Selector</value>
+    <value column="PrintName" original="Selector">Selector</value>
+    <value column="Description" original="The unique identifying key for the selector.">Clave de identificación del selector.</value>
+    <value column="Help" original="The unique identifying key for the selector.">Clave de identificación del selector.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="E4FCED1CB10743E8A6BD994F27F939F1" trl="Y">
+    <value column="Name" original="Display Field">Campo Mostrado</value>
+    <value column="PrintName" original="Display Field">Campo Mostrado</value>
+    <value column="Description" original="The value of this field will be displayed in the selector text input box.">El valor de este campo será mostrado en el cuadro de entrada del selector.</value>
+    <value column="Help" original="The value of this field will be displayed in the selector text input box.">El valor de este campo será mostrado en el cuadro de entrada del selector.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="E54D4B7821C44A6A9BD20D5B464B30E4" trl="Y">
+    <value column="Name" original="Suggestion Text Match Style">Estilo de Emparejamiento en Sugerencia</value>
+    <value column="PrintName" original="Suggestion Text Match Style">Estilo de Emparejamiento en Sugerencia</value>
+    <value column="Description" original="Defines the text matching logic used in the suggestion box.">Define la lógica de emparejamiento de texto usada en el cuadro de sugerencia.</value>
+    <value column="Help" original="Defines the text matching logic used in the suggestion box.">Define la lógica de emparejamiento de texto usada en el cuadro de sugerencia.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="FE81758CDCFA4B329F7F1BB8C99E45C3" trl="Y">
+    <value column="Name" original=""/>
+    <value column="PrintName" original=""/>
+    <value column="Description" original="The HQL where clause is added to the query to retrieve the data which is returned by the datasource.">La cláusula HQL 'where' se añade a la consulta para obtener la informacion que la fuente de datos devuelve.</value>
+    <value column="Help" original="The HQL where clause is added to the query to retrieve the data which is returned by the datasource. When refering to properties of the entity shown in the selector then use the prefix e. For example if the selector shows Products then refering to product category works like this: e.productCategory.name='Ceramics'.">La cláusula HQL 'where' se añade a la consulta para obtener la informacion que devuelve la fuente de datos. Para hacer referencia a propiedades de la entidad mostrada en el selector se debe usar el prefijo e. Por ejemplo, si el selector muestra productos, se debe utilizar la siguiente sintaxis para hacer referencia a la categoría de producto: e.productCategory.name='Ceramics'.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

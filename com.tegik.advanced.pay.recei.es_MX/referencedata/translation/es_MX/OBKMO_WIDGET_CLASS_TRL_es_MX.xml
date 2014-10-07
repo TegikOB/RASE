@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="FF80808133186ADD01331B3A932C000D" trl="Y">
+    <value column="Title" original="Reconciliation Details">Detalles de Reconciliación</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

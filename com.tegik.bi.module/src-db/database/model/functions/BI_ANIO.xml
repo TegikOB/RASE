@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION BI_ANIO">
+    <function name="BI_ANIO" type="NULL">
+      <parameter name="anio" type="CLOB" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="fecha" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[BEGIN
+BEGIN --BODY
+
+SELECT anio_ INTO anio FROM (SELECT 
+
+       ((date_part('YEAR', fecha)))::TEXT AS anio_
+           ) A;
+
+
+RETURN;
+END;
+
+EXCEPTION
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('@Error=' || SQLERRM);
+RETURN;
+END BI_ANIO
+]]></body>
+    </function>
+  </database>

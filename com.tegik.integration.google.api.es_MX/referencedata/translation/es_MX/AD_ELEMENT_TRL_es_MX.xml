@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="582E87EC64394CAF9D5DE3415B5A011B" trl="N">
+    <value column="Name" original="Obseig_Defaults_ID">Obseig_Defaults_ID</value>
+    <value column="PrintName" original="Obseig_Defaults_ID">Obseig_Defaults_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="E83520E8DFED4721BD2F8417EFEC3C07" trl="Y">
+    <value column="Name" original=""/>
+    <value column="PrintName" original=""/>
+    <value column="Description" original="Defines if a newly created user is active by default">Define si un usuario nuevo está activo por defecto</value>
+    <value column="Help" original="If the Google Account used to login in Openbravo doesn't have an user associated, a new user is created. A default role is defined for this user. This flag defines if the newly created user should be active by default or not.">Si la cuenta Google utilizada para hacer login en Openbravo no tiene un usuario asociado, un nuevo usuario se creará, y se definirá un rol por defecto para este usuario. Este campo indica si el usuario nuevo debería estar activo por defecto, o no.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

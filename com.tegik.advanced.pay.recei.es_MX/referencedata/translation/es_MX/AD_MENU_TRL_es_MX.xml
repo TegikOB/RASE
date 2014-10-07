@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="125E6EAD650841F69E2601C78F558AA1" trl="Y">
+    <value column="Name" original="Payment Proposal">Propuesta de Pago</value>
+    <value column="Description" original="Generates a payment proposal for a selected payment method based on a criteria.">Genera una propuesta de pago para un efecto basado en su método de pago.</value>
+  </row>
+  <row id="57DA6BAE74334B5B81A0AD05256C1B34" trl="Y">
+    <value column="Name" original="Doubtful Debt Run">Procesado del dudoso cobro</value>
+    <value column="Description" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Las deudas de dudoso cobro son aquellas que tienen probabilidad de no ser cobradas.</value>
+  </row>
+  <row id="5FEA7B2F449D47D8A18769049D07034B" trl="Y">
+    <value column="Name" original="Doubtful Debt">Cobro dudoso</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="652E78DE779542D59B27179FE6E59C38" trl="Y">
+    <value column="Name" original="Sales Invoice Payment Plan">Plan de pago de facturas de venta</value>
+    <value column="Description" original="Displays all Invoice Payment Plans for sales transactions which are not fully paid">Muestra toso los palnes de pago de facturas de transacciones de venta que no estan totalmente pagadas</value>
+  </row>
+  <row id="65C70CA5BB3A4F67B6B456C90F907917" trl="Y">
+    <value column="Name" original="Financial Account">Cuenta financiera</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="7C26B79DD2BF4F4AADCF088653740597" trl="Y">
+    <value column="Name" original="Purchase Invoice Payment Plan">Plan de pago de facturas de compra</value>
+    <value column="Description" original="Displays all Invoice Payment Plans for purchase transactions which are not fully paid">Muestra todos los planes de pago de factura de transacciones de compra que no estan totalmente pagadas</value>
+  </row>
+  <row id="907A7542754F42B0AD2A84FC902A82F8" trl="Y">
+    <value column="Name" original="Payment Execution">Ejecución de pago</value>
+    <value column="Description" original="This window allows payment execution management for payments in status &quot;awaiting execution&quot;.">Esta ventana permite la gestión de la ejecución de pago para los pagos en el 
+estado "en espera de la ejecución."</value>
+  </row>
+  <row id="91FCED01924C4BCE82A06CD2D894E971" trl="Y">
+    <value column="Name" original="Doubtful Debt Method">Método de dudoso cobro</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="9CE1B49B25274C2E98455FC7E4C7C64A" trl="Y">
+    <value column="Name" original="Bank File Format">Formato Fichero Banco</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="AA975B010CF8469DA84922534FB4AE6C" trl="Y">
+    <value column="Name" original="Payment Method">Método de pago</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="C3BEE7BF3F5B44C3A24D24E3DC4870EC" trl="Y">
+    <value column="Name" original="Payment Out">Pago</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D0022AAFF0F44BBCA96AA7D007E65C7D" trl="Y">
+    <value column="Name" original="Payment Run">Histórico Ejecución de Pagos</value>
+    <value column="Description" original="This window shows all the group of payments executed together.">Esta ventana muestra todo el grupo de pagos que se han ejecutado a la vez.</value>
+  </row>
+  <row id="D40E8011F68B4E7DAF28F310455DF7C9" trl="Y">
+    <value column="Name" original="Matching Algorithm">Algoritmo de Reconciliación</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="DB84EB9507F34D9B802DDA0B1041B602" trl="Y">
+    <value column="Name" original="Payment In">Cobros</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="DECF65B1A8CA4B7093E7A9DAB8AFBF26" trl="Y">
+    <value column="Name" original="Execution Process">Proceso de Ejecución</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

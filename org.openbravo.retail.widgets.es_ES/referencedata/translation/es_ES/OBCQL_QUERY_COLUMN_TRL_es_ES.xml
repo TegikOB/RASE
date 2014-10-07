@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="OBCQL_QUERY_COLUMN" version="">
+  <row id="00BFF9D13851494DB7914EC8C9A672E9" trl="N">
+    <value column="Name" isTrl="Y" original="Discount %">% Descuento</value>
+  </row>
+  <row id="040A1E40E78D485B9E4960B424E52A75" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin">Margen bruto</value>
+  </row>
+  <row id="0E15845AEB5F4D13A0879BF76B337D27" trl="N">
+    <value column="Name" isTrl="Y" original="Month">Mes</value>
+  </row>
+  <row id="0F8AE9BE7DF94380B57FD274C56F8888" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="102D9113387C48C9990539971B23D649" trl="N">
+    <value column="Name" isTrl="Y" original="Discount %">% Descuento</value>
+  </row>
+  <row id="1440348BE6524E20A70CA2E3D0F825CF" trl="N">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+  </row>
+  <row id="16207FA6776147F8BBBE6B5E7C2A10AD" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="1A30E85972A04558BD56712304EA25AA" trl="N">
+    <value column="Name" isTrl="Y" original="Total Sales">Ventas totales</value>
+  </row>
+  <row id="201FF49DBBD94CF6BB19A69A733E2BC2" trl="N">
+    <value column="Name" isTrl="Y" original="POS">TPV</value>
+  </row>
+  <row id="2F24ADA5073140FDA7473B0BBCE14F4B" trl="N">
+    <value column="Name" isTrl="Y" original="Total Discount">Desuento Total</value>
+  </row>
+  <row id="306FA9A03825438389B901F9D1380503" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin">Margen bruto</value>
+  </row>
+  <row id="3277ABCA45A741F6A7032C91A483029E" trl="N">
+    <value column="Name" isTrl="Y" original="Total Cost">Coste total</value>
+  </row>
+  <row id="37FB71AA1572400E83172B4E029ECA40" trl="N">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+  </row>
+  <row id="3CE449F31A1E4C42B4470C9D33F98D07" trl="N">
+    <value column="Name" isTrl="Y" original="Identifier">Identificador</value>
+  </row>
+  <row id="41EF7518A3C042909C9C4B90E32C88E1" trl="N">
+    <value column="Name" isTrl="N" original="Markup">Markup</value>
+  </row>
+  <row id="43D94F9AED30462E97EA2159C5699D7B" trl="N">
+    <value column="Name" isTrl="Y" original="Total Sales">Ventas totales</value>
+  </row>
+  <row id="460B1292EEBC4A1FBF9D606754927168" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="472FA6711E3C470CB74B298C27DCAA44" trl="N">
+    <value column="Name" isTrl="Y" original="Contact Last Name">Apellido del contacto</value>
+  </row>
+  <row id="49A02B7EFE9F487E97E923BFE57094AB" trl="N">
+    <value column="Name" isTrl="Y" original="Total Cost">Coste total</value>
+  </row>
+  <row id="4AED0FAA2D774BEFAFED6BB1AA6B3553" trl="N">
+    <value column="Name" isTrl="Y" original="Customer Name">Nombre del cliente</value>
+  </row>
+  <row id="4CF69AE06E1741C3BD93554C3CEE78D1" trl="N">
+    <value column="Name" isTrl="Y" original="Discount %">% Descuento</value>
+  </row>
+  <row id="4E6582B9C6D942DDBC74D6D381B2BFA8" trl="N">
+    <value column="Name" isTrl="Y" original="Total Cost">Coste total</value>
+  </row>
+  <row id="55CF89EB25C2490F8435C8155CCA2730" trl="N">
+    <value column="Name" isTrl="Y" original="Total Cost">Coste total</value>
+  </row>
+  <row id="5BF077DC16554AB4A9570E5AA3ED7C4F" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+  </row>
+  <row id="60945CBA625746DCBA34380CE7C8BC02" trl="N">
+    <value column="Name" isTrl="Y" original="Total Sales">Ventas totales</value>
+  </row>
+  <row id="6615ACF775304116BAEB1AC1A7C63652" trl="N">
+    <value column="Name" isTrl="N" original="Markup">Markup</value>
+  </row>
+  <row id="69E6974386A94EBE9412B634330CCD77" trl="N">
+    <value column="Name" isTrl="Y" original="Transactions">Transacciones</value>
+  </row>
+  <row id="6E58CA6DF4B74E03BC5BD0D922E91085" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin">Margen bruto</value>
+  </row>
+  <row id="71CF9294293A45EF9481939DB85E173D" trl="N">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+  </row>
+  <row id="73F117E1C4A74C189C7205A26A837CAE" trl="N">
+    <value column="Name" isTrl="Y" original="Discount %">% Descuento</value>
+  </row>
+  <row id="74E442CB470C429B9C1CD934E79AE046" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin">Margen bruto</value>
+  </row>
+  <row id="7639D1BB68184228A595B8F6C67B75A4" trl="N">
+    <value column="Name" isTrl="Y" original="Total Discount">Descuento total</value>
+  </row>
+  <row id="772E51880384429E8C8D1FED0B9EFE70" trl="N">
+    <value column="Name" isTrl="Y" original="POS">TPV</value>
+  </row>
+  <row id="7933D52C32FD45B392C6A6923A3C0238" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+  </row>
+  <row id="7AEC84DD50D144B8B7517FFF58FE2307" trl="N">
+    <value column="Name" isTrl="N" original="Fax">Fax</value>
+  </row>
+  <row id="80E6B8427AA24E5A964624EEEEF74289" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin %">% Margen bruto</value>
+  </row>
+  <row id="852D8F44E3B94D5999B5E302E16F1F7F" trl="N">
+    <value column="Name" isTrl="Y" original="Family">Familia</value>
+  </row>
+  <row id="8717ACE3887A4C55B85A8227711109C8" trl="N">
+    <value column="Name" isTrl="Y" original="Store">tienda</value>
+  </row>
+  <row id="87A3580A24664E4CA5DFB9210BC0A506" trl="N">
+    <value column="Name" isTrl="Y" original="Mail">Correo</value>
+  </row>
+  <row id="8A9C19D20C364225AB46B1BCF4CE21B6" trl="N">
+    <value column="Name" isTrl="Y" original="Customer">Cliente</value>
+  </row>
+  <row id="8B2CCFBDB0AB4E5F85F09F2B6C23FCF2" trl="N">
+    <value column="Name" isTrl="Y" original="Total Sales">Ventas totales</value>
+  </row>
+  <row id="8BDAD58DB25B4F0090B4EF9CC94F9971" trl="N">
+    <value column="Name" isTrl="Y" original="Phone">Teléfono</value>
+  </row>
+  <row id="8CE1F68C5B6E47F0A5A19787019F918B" trl="N">
+    <value column="Name" isTrl="Y" original="Total Discount">Descuento total</value>
+  </row>
+  <row id="8F5784A21C284163BD32BD7064D33E33" trl="N">
+    <value column="Name" isTrl="Y" original="Total Sales">Ventas totales</value>
+  </row>
+  <row id="90CF5D1E50D24AB8A2CE7D8CA21308BB" trl="N">
+    <value column="Name" isTrl="Y" original="Total Discount">Descuento total</value>
+  </row>
+  <row id="90E6DFBE41FA4DFFB5F74D2D956A4268" trl="N">
+    <value column="Name" isTrl="Y" original="Salesman">Vendedor</value>
+  </row>
+  <row id="912D938BD76843DCBE306B9FF690E71A" trl="N">
+    <value column="Name" isTrl="Y" original="Family">Familia</value>
+  </row>
+  <row id="9154E2B18DC145F58002A0B9F527E771" trl="N">
+    <value column="Name" isTrl="Y" original="Total Sales">Ventas totales</value>
+  </row>
+  <row id="9CADF85717AD4D0686DF33147DFE5E4C" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+  </row>
+  <row id="9F793D5932054E45BF2574D4E4F05C61" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+  </row>
+  <row id="A1A23E100D2740F59177A3FD6D48B440" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="A50AD311058045A092AC3CC6A8A6CDAF" trl="N">
+    <value column="Name" isTrl="Y" original="Contact First Name">Nombre del contact</value>
+  </row>
+  <row id="A7281A82811B493DA21CCC9D95A3AE9D" trl="N">
+    <value column="Name" isTrl="N" original="Markup">Markup</value>
+  </row>
+  <row id="A8DF47BB92E74BD1940C5A43AC33C318" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin %">% Margen bruto</value>
+  </row>
+  <row id="A9FC4BDC07BB487895517DEA70CC115F" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="AAC9A5150E7643C497AE85AA99985CD9" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="AF6D3E22F5B24D34BE7B9CC93121BE36" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin">Margen bruto</value>
+  </row>
+  <row id="B375515DDE5D46E19F3C56E750157095" trl="N">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+  </row>
+  <row id="B4479ED0019244D2A3DC94BD0783B4C2" trl="N">
+    <value column="Name" isTrl="Y" original="Alternative Phone">Teléfono alternativo</value>
+  </row>
+  <row id="B4CB3FE8C7CE46729FDB90347CE0A695" trl="N">
+    <value column="Name" isTrl="Y" original="Discount %">% Descuento</value>
+  </row>
+  <row id="C48E660699AB4436883814101D838E7A" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tiendo</value>
+  </row>
+  <row id="C7BCF1A941644A759463567A3C219828" trl="N">
+    <value column="Name" isTrl="Y" original="Total Discount">Descuento total</value>
+  </row>
+  <row id="CEEF17BD38AE444FAED547056C061986" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin %">% Margen bruto</value>
+  </row>
+  <row id="D2D3208D4B514B589B40EFE882A6F34A" trl="N">
+    <value column="Name" isTrl="Y" original="Discount %">% Descuento</value>
+  </row>
+  <row id="D546B4A9E6BC44D2A6BEA3FEBB1F9E12" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin %">% Margen bruto</value>
+  </row>
+  <row id="D9A2AECABEF64D38AF91AB533C74D0B8" trl="N">
+    <value column="Name" isTrl="Y" original="Total Discount">Descuento total</value>
+  </row>
+  <row id="DA0FC484ED2947CABF2C4613901BB7EB" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+  </row>
+  <row id="DA75694411FE4C32B383530A3AA11F4E" trl="N">
+    <value column="Name" isTrl="Y" original="Year">Año</value>
+  </row>
+  <row id="E0620250660148D3B09F5C5E22A6EB96" trl="N">
+    <value column="Name" isTrl="N" original="Gross Margin %">Gross Margin %</value>
+  </row>
+  <row id="E20323EEAEDC4C3E9D581461997516AA" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin %">% Margen bruto</value>
+  </row>
+  <row id="E93753E179474649BA3E11AAF9C6AF3D" trl="N">
+    <value column="Name" isTrl="Y" original="Total Cost">Coste total</value>
+  </row>
+  <row id="F7C29C9CFA4C4C229314394D39B62588" trl="N">
+    <value column="Name" isTrl="Y" original="Total Cost">Coste total</value>
+  </row>
+  <row id="FA5AE79453E84BD39E06C2C938058423" trl="N">
+    <value column="Name" isTrl="N" original="Markup">Markup</value>
+  </row>
+  <row id="FBF127F1FD424C4784919F2A6D54245F" trl="N">
+    <value column="Name" isTrl="Y" original="Gross Margin">Margen bruto</value>
+  </row>
+  <row id="FFB43AA1E0874EE298AEFBA90A6727C9" trl="N">
+    <value column="Name" isTrl="N" original="Markup">Markup</value>
+  </row>
+</compiereTrl>

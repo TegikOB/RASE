@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION BI_ANIO_ANTERIOR">
+    <function name="BI_ANIO_ANTERIOR" type="NULL">
+      <parameter name="anioanterior" type="CLOB" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="fecha" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[BEGIN
+BEGIN --BODY
+
+SELECT anio_anterior INTO anioanterior FROM (SELECT 
+
+       ((date_part('YEAR', fecha)) -1) AS anio_anterior
+           ) A;
+
+
+RETURN;
+END;
+
+EXCEPTION
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('@Error=' || SQLERRM);
+RETURN;
+END BI_ANIO_ANTERIOR
+]]></body>
+    </function>
+  </database>

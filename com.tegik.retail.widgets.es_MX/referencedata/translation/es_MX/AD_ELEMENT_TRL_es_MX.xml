@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="09E577BF26A24F659BAD7C8979EBCDE2" trl="Y">
+    <value column="Name" original="dateto">Dateto</value>
+    <value column="PrintName" original="Date To">Desde</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="2BF43FD8E12C4E16AAC5BA445837CEFF" trl="Y">
+    <value column="Name" original="organizationList">Lista de Organizaciones</value>
+    <value column="PrintName" original="organizationList">Lista de Organizaciones</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="2E0DDEA22597444083FD050EBE8688C8" trl="Y">
+    <value column="Name" original="Store Name">Nombre tienda</value>
+    <value column="PrintName" original="Store Name">Nombre tienda</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="448FED4E60C348F688F54C4A6DFD896D" trl="Y">
+    <value column="Name" original="Client2">Cliente 2</value>
+    <value column="PrintName" original="Client">Cliente</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="619FD6580B0E4F21AE534499E344B851" trl="Y">
+    <value column="Name" original="Month">Mes</value>
+    <value column="PrintName" original="Month">Mes</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="693B2C5CBDF644CA99A99787875A2F28" trl="Y">
+    <value column="Name" original="datefrom">Desde</value>
+    <value column="PrintName" original="Date From">hasta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="81725FCC7CC24516B90872B701E3DE4F" trl="Y">
+    <value column="Name" original="Product Name">Nombre de producto</value>
+    <value column="PrintName" original="Product Name">Nombre de producto</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

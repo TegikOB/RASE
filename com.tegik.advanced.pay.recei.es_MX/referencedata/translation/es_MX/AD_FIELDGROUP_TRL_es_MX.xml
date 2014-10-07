@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELDGROUP" version="">
+  <row id="8C3C34F7EFD04E11A3105EB74BC9999E" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de pago</value>
+  </row>
+  <row id="ED0E74721EA74F36A471345649162E9A" trl="Y">
+    <value column="Name" original="Settings">Configuraciones</value>
+  </row>
+  <row id="F5CFE042E5F4469CA69E62A20BCF63FA" trl="Y">
+    <value column="Name" original="Invoice">Factura</value>
+  </row>
+</compiereTrl>

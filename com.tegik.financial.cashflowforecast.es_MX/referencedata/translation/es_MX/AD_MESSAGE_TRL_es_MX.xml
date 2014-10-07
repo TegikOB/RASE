@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="FF808081320617D60132061B3A290011" trl="Y">
+    <value column="MsgText" original="Income">Rédito</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF808081320617D60132061B7836001A" trl="Y">
+    <value column="MsgText" original="Payment">Pago</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

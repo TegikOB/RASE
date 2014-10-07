@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CER_CALCULAR_MONTO_ORG">
+    <function name="CER_CALCULAR_MONTO_ORG" type="NULL">
+      <parameter name="p_cer_cuenta" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="fecha_in" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="fecha_fin" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_org_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="monto" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_iselem VARCHAR(1);
+v_elem_id VARCHAR(32);
+v_cuenta VARCHAR(32);
+v_monto NUMBER;
+v_acum NUMBER;
+v_negativo VARCHAR(1);
+cur_cuentas RECORD;
+
+BEGIN
+SELECT iselemento
+FROM cer_cuenta INTO v_iselem
+WHERE cer_cuenta_id = p_cer_cuenta LIMIT 1;
+
+SELECT isnegativo 
+FROM cer_cuenta INTO v_negativo
+WHERE cer_cuenta_id = p_cer_cuenta LIMIT 1;
+
+v_acum:=0;
+v_monto:=0;
+
+IF(v_iselem = 'N') THEN 
+
+	SELECT c_elementvalue_id 
+	FROM cer_cuenta INTO v_elem_id
+	WHERE cer_cuenta_id = p_cer_cuenta LIMIT 1;
+
+	SELECT 
+	COALESCE(SUM(
+		CASE  c_elementvalue.accountsign
+			when 'C' THEN fact_acct.amtacctcr + (fact_acct.amtacctdr * -1)
+			when 'D' THEN (fact_acct.amtacctcr* -1) + fact_acct.amtacctdr
+		END),0) AS mon
+	FROM fact_acct INTO v_monto
+	INNER JOIN c_elementvalue on c_elementvalue.c_elementvalue_id = fact_acct.account_id
+	WHERE fact_acct.account_id = v_elem_id
+	AND fact_acct.ad_org_id = p_org_id
+	AND fact_acct.dateacct::DATE BETWEEN fecha_in AND fecha_fin LIMIT 1;
+	
+	IF (v_negativo = 'Y') THEN
+			v_monto := v_monto * -1;
+	END IF;
+
+	monto:= v_monto;
+
+ELSE
+
+	SELECT elemento_id 
+	FROM cer_cuenta INTO v_elem_id
+	WHERE cer_cuenta_id = p_cer_cuenta LIMIT 1;
+
+	FOR cur_cuentas IN (
+		SELECT cer_cuenta_id
+		FROM cer_cuenta
+		WHERE cer_elemento_id = v_elem_id)
+		LOOP
+			v_monto := cer_calcular_monto_org(cur_cuentas.cer_cuenta_id,fecha_in,fecha_fin,p_org_id);
+			v_acum := v_monto + v_acum;
+		END LOOP;
+
+	IF (v_negativo = 'Y') THEN
+			v_acum := v_acum * -1;
+	END IF;
+
+	monto:=v_acum;
+END IF;
+
+RETURN;
+
+EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE(SQLERRM);
+  RAISE;
+END CER_CALCULAR_MONTO_ORG
+]]></body>
+    </function>
+  </database>

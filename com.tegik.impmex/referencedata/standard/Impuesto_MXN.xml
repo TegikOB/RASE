@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FinancialMgmtTaxRate id="01666DC53361449892C7550ABF63DF51" identifier="FLETES (IVA-RETENCION) - HONORARIOS">
+    <id>01666DC53361449892C7550ABF63DF51</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.800Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.800Z</updated>
+    <name>FLETES (IVA-RETENCION)</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>true</summaryLevel>
+    <rate>0</rate>
+    <parentTaxRate xsi:nil="true"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="21D70C75E02A43DE9001595C00DD764E" identifier="IVA 16% HONORARIOS - HONORARIOS">
+    <id>21D70C75E02A43DE9001595C00DD764E</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.839Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.839Z</updated>
+    <name>IVA 16% HONORARIOS</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>16</rate>
+    <parentTaxRate id="9EBA5BAC02BC40229E4B8D7A04CA2BF8" entity-name="FinancialMgmtTaxRate" identifier="HONORARIOS ( IVA 16% + RET ISR + RET IVA ) - HONORARIOS"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>P</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="325F7664D1AA4CC1A7AE64CD43C9DC0B" identifier="GASOLINA (IEPS + IVA) - GASOLINA (IEPS + IVA)">
+    <id>325F7664D1AA4CC1A7AE64CD43C9DC0B</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.792Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.792Z</updated>
+    <name>GASOLINA (IEPS + IVA)</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>true</summaryLevel>
+    <rate>0</rate>
+    <parentTaxRate xsi:nil="true"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="51987273D3734313ACF561A5735EBB9F" entity-name="FinancialMgmtTaxCategory" identifier="GASOLINA (IEPS + IVA)"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="514AE126E423471983E3C9713AD3EAA8" identifier="EXENTO - EXENTO">
+    <id>514AE126E423471983E3C9713AD3EAA8</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.858Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.858Z</updated>
+    <name>EXENTO</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>0</rate>
+    <parentTaxRate xsi:nil="true"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="AF96B5EED9D74E49BA08961DF9F027FC" entity-name="FinancialMgmtTaxCategory" identifier="EXENTO"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>99999</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>true</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="60ECDF97FDCA46C9B80CA6C4B4041192" identifier="IEPS 5.02% - GASOLINA (IEPS + IVA)">
+    <id>60ECDF97FDCA46C9B80CA6C4B4041192</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.807Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.807Z</updated>
+    <name>IEPS 5.02%</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>5.02</rate>
+    <parentTaxRate id="325F7664D1AA4CC1A7AE64CD43C9DC0B" entity-name="FinancialMgmtTaxRate" identifier="GASOLINA (IEPS + IVA) - GASOLINA (IEPS + IVA)"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="51987273D3734313ACF561A5735EBB9F" entity-name="FinancialMgmtTaxCategory" identifier="GASOLINA (IEPS + IVA)"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="77858EAFEB6441D1951B3C4D9F75EF8D" identifier="IVA 16% - IVA 16%">
+    <id>77858EAFEB6441D1951B3C4D9F75EF8D</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.852Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-27T15:05:47.270Z</updated>
+    <name>IVA 16%</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>16</rate>
+    <parentTaxRate xsi:nil="true"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="8E85B371792340A2A93A63CA2E0C4740" entity-name="FinancialMgmtTaxCategory" identifier="IVA 16%"/>
+    <default>true</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>30</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="9630A98AEB8A461293A1036FE04B3162" identifier="IVA 16% ( GASOLINA ) - GASOLINA (IEPS + IVA)">
+    <id>9630A98AEB8A461293A1036FE04B3162</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.799Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-27T15:05:19.972Z</updated>
+    <name>IVA 16% ( GASOLINA )</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>16</rate>
+    <parentTaxRate id="325F7664D1AA4CC1A7AE64CD43C9DC0B" entity-name="FinancialMgmtTaxRate" identifier="GASOLINA (IEPS + IVA) - GASOLINA (IEPS + IVA)"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="51987273D3734313ACF561A5735EBB9F" entity-name="FinancialMgmtTaxCategory" identifier="GASOLINA (IEPS + IVA)"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="9EBA5BAC02BC40229E4B8D7A04CA2BF8" identifier="HONORARIOS ( IVA 16% + RET ISR + RET IVA ) - HONORARIOS">
+    <id>9EBA5BAC02BC40229E4B8D7A04CA2BF8</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.835Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.835Z</updated>
+    <name>HONORARIOS ( IVA 16% + RET ISR + RET IVA )</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>true</summaryLevel>
+    <rate>0</rate>
+    <parentTaxRate xsi:nil="true"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>P</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="AACBDAF432D1450FB2F7E3FE7C7B7EDD" identifier="IVA PARA RETENCIÓN - HONORARIOS">
+    <id>AACBDAF432D1450FB2F7E3FE7C7B7EDD</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.838Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.838Z</updated>
+    <name>IVA PARA RETENCIÓN</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>16</rate>
+    <parentTaxRate id="01666DC53361449892C7550ABF63DF51" entity-name="FinancialMgmtTaxRate" identifier="FLETES (IVA-RETENCION) - HONORARIOS"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>true</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="E9F9FB01F8024A9FA6EDC95928D5CAF2" identifier="RETENCION DEL IVA - HONORARIOS">
+    <id>E9F9FB01F8024A9FA6EDC95928D5CAF2</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.839Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.839Z</updated>
+    <name>RETENCION DEL IVA</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>-66.67</rate>
+    <parentTaxRate id="9EBA5BAC02BC40229E4B8D7A04CA2BF8" entity-name="FinancialMgmtTaxRate" identifier="HONORARIOS ( IVA 16% + RET ISR + RET IVA ) - HONORARIOS"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>P</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>true</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>true</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>TAX</baseAmount>
+    <taxBase id="21D70C75E02A43DE9001595C00DD764E" entity-name="FinancialMgmtTaxRate" identifier="IVA 16% HONORARIOS - HONORARIOS"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="EA762B33A45243A0A033AA376A7F50AD" identifier="IVA 11% - IVA 11%">
+    <id>EA762B33A45243A0A033AA376A7F50AD</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.845Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-21T13:12:39.196Z</updated>
+    <name>IVA 11%</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>11</rate>
+    <parentTaxRate xsi:nil="true"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="ED9DC6A8AC3D4573BF834C2F2BD512CB" entity-name="FinancialMgmtTaxCategory" identifier="IVA 11%"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>30</lineNo>
+    <withholdingTax>false</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="EF96B5B7DF0944DBAEA5A0CBD7A8A8C9" identifier="RETENCIÓN 4% - HONORARIOS">
+    <id>EF96B5B7DF0944DBAEA5A0CBD7A8A8C9</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.805Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.805Z</updated>
+    <name>RETENCIÓN 4%</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>-4</rate>
+    <parentTaxRate id="01666DC53361449892C7550ABF63DF51" entity-name="FinancialMgmtTaxRate" identifier="FLETES (IVA-RETENCION) - HONORARIOS"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>B</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>true</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxRate id="F25652305A844EE68AC3648B1EF949B7" identifier="RETENCIÓN ISR - HONORARIOS">
+    <id>F25652305A844EE68AC3648B1EF949B7</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.836Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.836Z</updated>
+    <name>RETENCIÓN ISR</name>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+    <validFromDate>2010-01-01T00:00:00.0Z</validFromDate>
+    <summaryLevel>false</summaryLevel>
+    <rate>-10</rate>
+    <parentTaxRate id="9EBA5BAC02BC40229E4B8D7A04CA2BF8" entity-name="FinancialMgmtTaxRate" identifier="HONORARIOS ( IVA 16% + RET ISR + RET IVA ) - HONORARIOS"/>
+    <country id="247" entity-name="Country" identifier="Mexico"/>
+    <region xsi:nil="true"/>
+    <destinationCountry id="247" entity-name="Country" identifier="Mexico"/>
+    <destinationRegion xsi:nil="true"/>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <default>false</default>
+    <taxExempt>false</taxExempt>
+    <salesPurchaseType>P</salesPurchaseType>
+    <cascade>false</cascade>
+    <businessPartnerTaxCategory xsi:nil="true"/>
+    <lineNo>10</lineNo>
+    <withholdingTax>true</withholdingTax>
+    <notTaxable>false</notTaxable>
+    <deductableRate xsi:nil="true"/>
+    <originalRate xsi:nil="true"/>
+    <notTaxdeductable>false</notTaxdeductable>
+    <istaxdeductable>false</istaxdeductable>
+    <noVAT>false</noVAT>
+    <baseAmount>LNA</baseAmount>
+    <taxBase xsi:nil="true"/>
+    <docTaxAmount>D</docTaxAmount>
+    <isCashVAT>false</isCashVAT>
+  </FinancialMgmtTaxRate>
+  <FinancialMgmtTaxTrl id="061DDCC7F34C4714885E0949EC9DE5BC" identifier="EXENTO - EXENTO">
+    <id>061DDCC7F34C4714885E0949EC9DE5BC</id>
+    <tax id="514AE126E423471983E3C9713AD3EAA8" entity-name="FinancialMgmtTaxRate" identifier="EXENTO - EXENTO"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.858Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.858Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>EXENTO</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="17C149577AFB445A995DBCB3FBAC60E9" identifier="IVA 16% - IVA 16%">
+    <id>17C149577AFB445A995DBCB3FBAC60E9</id>
+    <tax id="77858EAFEB6441D1951B3C4D9F75EF8D" entity-name="FinancialMgmtTaxRate" identifier="IVA 16% - IVA 16%"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.857Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-21T13:12:32.0Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>IVA 16%</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="22698773AAB843248E2B1EF5E4E29792" identifier="FLETES (IVA-RETENCION) - HONORARIOS">
+    <id>22698773AAB843248E2B1EF5E4E29792</id>
+    <tax id="01666DC53361449892C7550ABF63DF51" entity-name="FinancialMgmtTaxRate" identifier="FLETES (IVA-RETENCION) - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.852Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.852Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>FLETES (IVA-RETENCION)</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="28BA5E789D184112AE02DB1365640C6C" identifier="IVA 11% - IVA 11%">
+    <id>28BA5E789D184112AE02DB1365640C6C</id>
+    <tax id="EA762B33A45243A0A033AA376A7F50AD" entity-name="FinancialMgmtTaxRate" identifier="IVA 11% - IVA 11%"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.851Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-21T13:12:39.0Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>IVA 11%</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="28C2EEB630E345F6ACC5C494A412DEC1" identifier="IVA 16% HONORARIOS - HONORARIOS">
+    <id>28C2EEB630E345F6ACC5C494A412DEC1</id>
+    <tax id="21D70C75E02A43DE9001595C00DD764E" entity-name="FinancialMgmtTaxRate" identifier="IVA 16% HONORARIOS - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.845Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.845Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>IVA 16% HONORARIOS</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="489025D93E90448D83FB59597C83132B" identifier="RETENCION DEL IVA - HONORARIOS">
+    <id>489025D93E90448D83FB59597C83132B</id>
+    <tax id="E9F9FB01F8024A9FA6EDC95928D5CAF2" entity-name="FinancialMgmtTaxRate" identifier="RETENCION DEL IVA - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.844Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.844Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>RETENCION DEL IVA</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="6AC3477DFA9A4F40B4B73C0572E7A439" identifier="IVA PARA RETENCIÓN - HONORARIOS">
+    <id>6AC3477DFA9A4F40B4B73C0572E7A439</id>
+    <tax id="AACBDAF432D1450FB2F7E3FE7C7B7EDD" entity-name="FinancialMgmtTaxRate" identifier="IVA PARA RETENCIÓN - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.838Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.838Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>IVA PARA RETENCIÓN</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="7CB695A1D02B4A6487EC5C35BDE85016" identifier="HONORARIOS ( IVA 16% + RET ISR + RET IVA ) - HONORARIOS">
+    <id>7CB695A1D02B4A6487EC5C35BDE85016</id>
+    <tax id="9EBA5BAC02BC40229E4B8D7A04CA2BF8" entity-name="FinancialMgmtTaxRate" identifier="HONORARIOS ( IVA 16% + RET ISR + RET IVA ) - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.837Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.837Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>HONORARIOS ( IVA 16% + RET ISR + RET IVA )</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="89B34AA36ECE406B9A9CCBC35235C422" identifier="GASOLINA (IEPS + IVA) - GASOLINA (IEPS + IVA)">
+    <id>89B34AA36ECE406B9A9CCBC35235C422</id>
+    <tax id="325F7664D1AA4CC1A7AE64CD43C9DC0B" entity-name="FinancialMgmtTaxRate" identifier="GASOLINA (IEPS + IVA) - GASOLINA (IEPS + IVA)"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.837Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.837Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>GASOLINA (IEPS + IVA)</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="90483FA399D1480CBF8B14D64AD2EA70" identifier="RETENCIÓN ISR - HONORARIOS">
+    <id>90483FA399D1480CBF8B14D64AD2EA70</id>
+    <tax id="F25652305A844EE68AC3648B1EF949B7" entity-name="FinancialMgmtTaxRate" identifier="RETENCIÓN ISR - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.836Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.836Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>RETENCIÓN ISR</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="C7A6D3389E344CB7940D9519162DFC67" identifier="IEPS 5.02% - GASOLINA (IEPS + IVA)">
+    <id>C7A6D3389E344CB7940D9519162DFC67</id>
+    <tax id="60ECDF97FDCA46C9B80CA6C4B4041192" entity-name="FinancialMgmtTaxRate" identifier="IEPS 5.02% - GASOLINA (IEPS + IVA)"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.810Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.810Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>IEPS 5.02%</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="F113386DDFE343B9869E77484872AA43" identifier="RETENCIÓN 4% - HONORARIOS">
+    <id>F113386DDFE343B9869E77484872AA43</id>
+    <tax id="EF96B5B7DF0944DBAEA5A0CBD7A8A8C9" entity-name="FinancialMgmtTaxRate" identifier="RETENCIÓN 4% - HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.806Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.806Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>RETENCIÓN 4%</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxTrl id="F96971A189694F068B375C2107F1B0C7" identifier="IVA 16% ( GASOLINA ) - GASOLINA (IEPS + IVA)">
+    <id>F96971A189694F068B375C2107F1B0C7</id>
+    <tax id="9630A98AEB8A461293A1036FE04B3162" entity-name="FinancialMgmtTaxRate" identifier="IVA 16% ( GASOLINA ) - GASOLINA (IEPS + IVA)"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.800Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.800Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <translation>false</translation>
+    <name>IVA 16% ( GASOLINA )</name>
+    <description xsi:nil="true"/>
+    <taxSearchKey xsi:nil="true"/>
+  </FinancialMgmtTaxTrl>
+  <FinancialMgmtTaxCategoryTrl id="00E989CA318348EAAD45F7B448F5A51D" identifier="EXENTO">
+    <id>00E989CA318348EAAD45F7B448F5A51D</id>
+    <taxCategory id="AF96B5EED9D74E49BA08961DF9F027FC" entity-name="FinancialMgmtTaxCategory" identifier="EXENTO"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.792Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.792Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>EXENTO</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="03B88696821D425B87B94E5912CB6932" identifier="EXENTO">
+    <id>03B88696821D425B87B94E5912CB6932</id>
+    <taxCategory id="AF96B5EED9D74E49BA08961DF9F027FC" entity-name="FinancialMgmtTaxCategory" identifier="EXENTO"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.791Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.791Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>EXENTO</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="0AD36B33EF794951ACB338A16AEEB7DF" identifier="IVA 11%">
+    <id>0AD36B33EF794951ACB338A16AEEB7DF</id>
+    <taxCategory id="ED9DC6A8AC3D4573BF834C2F2BD512CB" entity-name="FinancialMgmtTaxCategory" identifier="IVA 11%"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.786Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.786Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 11%</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="123E7FBFC4244B5E8A0BFCB5FE813DAD" identifier="HONORARIOS">
+    <id>123E7FBFC4244B5E8A0BFCB5FE813DAD</id>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.785Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.785Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>HONORARIOS</name>
+    <description>HONORARIOS</description>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="1E34845BD8E441AFBFF70357027C0757" identifier="IVA 16%">
+    <id>1E34845BD8E441AFBFF70357027C0757</id>
+    <taxCategory id="8E85B371792340A2A93A63CA2E0C4740" entity-name="FinancialMgmtTaxCategory" identifier="IVA 16%"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.784Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.784Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 16%</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="4703284E2F4A40D4A4C75C5667994A45" identifier="GASOLINA (IEPS + IVA)">
+    <id>4703284E2F4A40D4A4C75C5667994A45</id>
+    <taxCategory id="51987273D3734313ACF561A5735EBB9F" entity-name="FinancialMgmtTaxCategory" identifier="GASOLINA (IEPS + IVA)"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.781Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.781Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>GASOLINA (IEPS + IVA)</name>
+    <description>GASOLINA (IEPS + IVA)</description>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="5ED30A8F4ACC44439049D6D5FB209426" identifier="GASOLINA (IEPS + IVA)">
+    <id>5ED30A8F4ACC44439049D6D5FB209426</id>
+    <taxCategory id="51987273D3734313ACF561A5735EBB9F" entity-name="FinancialMgmtTaxCategory" identifier="GASOLINA (IEPS + IVA)"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.777Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.777Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>GASOLINA (IEPS + IVA)</name>
+    <description>GASOLINA (IEPS + IVA)</description>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="8B2FFFFB2743408EA779FB762817CA52" identifier="HONORARIOS">
+    <id>8B2FFFFB2743408EA779FB762817CA52</id>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.777Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.777Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>HONORARIOS</name>
+    <description>HONORARIOS</description>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="90B70AB007774337A1278F980EBA5CA5" identifier="IVA 16%">
+    <id>90B70AB007774337A1278F980EBA5CA5</id>
+    <taxCategory id="8E85B371792340A2A93A63CA2E0C4740" entity-name="FinancialMgmtTaxCategory" identifier="IVA 16%"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.776Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.776Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 16%</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="9A757012F1C44C609FB72583DB2A09C0" identifier="IVA 16%">
+    <id>9A757012F1C44C609FB72583DB2A09C0</id>
+    <taxCategory id="8E85B371792340A2A93A63CA2E0C4740" entity-name="FinancialMgmtTaxCategory" identifier="IVA 16%"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.764Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.764Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 16%</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="A93F190738AC4D308BD5CA06AA77A9AE" identifier="EXENTO">
+    <id>A93F190738AC4D308BD5CA06AA77A9AE</id>
+    <taxCategory id="AF96B5EED9D74E49BA08961DF9F027FC" entity-name="FinancialMgmtTaxCategory" identifier="EXENTO"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.764Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.764Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>EXENTO</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="AE45F802FC8B49E5A526E4DEEC129A8C" identifier="IVA 11%">
+    <id>AE45F802FC8B49E5A526E4DEEC129A8C</id>
+    <taxCategory id="ED9DC6A8AC3D4573BF834C2F2BD512CB" entity-name="FinancialMgmtTaxCategory" identifier="IVA 11%"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.763Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.763Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 11%</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="CF3939A2771F4C58856AA9F9E2A1A28D" identifier="HONORARIOS">
+    <id>CF3939A2771F4C58856AA9F9E2A1A28D</id>
+    <taxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" entity-name="FinancialMgmtTaxCategory" identifier="HONORARIOS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.763Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.763Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>HONORARIOS</name>
+    <description>HONORARIOS</description>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="D2076A17615242EC8052D4E956EC5B32" identifier="GASOLINA (IEPS + IVA)">
+    <id>D2076A17615242EC8052D4E956EC5B32</id>
+    <taxCategory id="51987273D3734313ACF561A5735EBB9F" entity-name="FinancialMgmtTaxCategory" identifier="GASOLINA (IEPS + IVA)"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.762Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.762Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>GASOLINA (IEPS + IVA)</name>
+    <description>GASOLINA (IEPS + IVA)</description>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategoryTrl id="DBF9B75E55A445BCBDBE84910D15AB3F" identifier="IVA 11%">
+    <id>DBF9B75E55A445BCBDBE84910D15AB3F</id>
+    <taxCategory id="ED9DC6A8AC3D4573BF834C2F2BD512CB" entity-name="FinancialMgmtTaxCategory" identifier="IVA 11%"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.762Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.762Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 11%</name>
+    <description xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtTaxCategoryTrl>
+  <FinancialMgmtTaxCategory id="51987273D3734313ACF561A5735EBB9F" identifier="GASOLINA (IEPS + IVA)">
+    <id>51987273D3734313ACF561A5735EBB9F</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.761Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.761Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>GASOLINA (IEPS + IVA)</name>
+    <description>GASOLINA (IEPS + IVA)</description>
+    <default>false</default>
+  </FinancialMgmtTaxCategory>
+  <FinancialMgmtTaxCategory id="8E85B371792340A2A93A63CA2E0C4740" identifier="IVA 16%">
+    <id>8E85B371792340A2A93A63CA2E0C4740</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.761Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.761Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 16%</name>
+    <description xsi:nil="true"/>
+    <default>true</default>
+  </FinancialMgmtTaxCategory>
+  <FinancialMgmtTaxCategory id="AF96B5EED9D74E49BA08961DF9F027FC" identifier="EXENTO">
+    <id>AF96B5EED9D74E49BA08961DF9F027FC</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.760Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.760Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>EXENTO</name>
+    <description xsi:nil="true"/>
+    <default>false</default>
+  </FinancialMgmtTaxCategory>
+  <FinancialMgmtTaxCategory id="D2DEB0EF117B4304BEF800F33D528AB4" identifier="HONORARIOS">
+    <id>D2DEB0EF117B4304BEF800F33D528AB4</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.760Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.760Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>HONORARIOS</name>
+    <description>HONORARIOS</description>
+    <default>false</default>
+  </FinancialMgmtTaxCategory>
+  <FinancialMgmtTaxCategory id="ED9DC6A8AC3D4573BF834C2F2BD512CB" identifier="IVA 11%">
+    <id>ED9DC6A8AC3D4573BF834C2F2BD512CB</id>
+    <active>true</active>
+    <creationDate transient="true">2013-05-13T17:43:01.759Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2013-05-13T17:43:01.759Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>IVA 11%</name>
+    <description xsi:nil="true"/>
+    <default>false</default>
+  </FinancialMgmtTaxCategory>
+</ob:Openbravo>

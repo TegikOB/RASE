@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MODULE" version="">
+  <row id="391979C3E1A44A9D814B3F9756FC57F4" trl="N">
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="License" original="Licensed under the Openbravo Public License Version 1.1.&#10;You may obtain a copy of the License at http://www.openbravo.com/legal/license.html or in the legal folder of the Openbravo ERP core distribution."/>
+    <value column="Updateinfo" original=""/>
+  </row>
+</compiereTrl>

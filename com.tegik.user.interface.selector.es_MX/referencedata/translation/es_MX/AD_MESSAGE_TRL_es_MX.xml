@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="01F44524A679441EAFCDC32895CEE2D6" trl="Y">
+    <value column="MsgText" original="The datasource or the table must be set in the selector.">Debe especificarse la fuente de datos o la tabla.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9C9E42A57AEB40CEA1491B96A7DE9744" trl="Y">
+    <value column="MsgText" original="Only one selector can be defined per reference.">Solo un selector puede definirse por cada referencia.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B4F199766B944D0F8E1081F5540735E8" trl="Y">
+    <value column="MsgText" original="The data source field or the property must be set. One of these two fields will be visible and must be set.">Debe especificarse el campo de la fuente de datos. Uno de los dos campos será visible y debe ser especificado.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F50EB79285854BA5A44874163F32E1F7" trl="Y">
+    <value column="MsgText" original="The datasource or table field may not be changed if selector fields are present. First remove all selector fields before changing the table or datasource in the selector.">El campo de la fuente de datos o de la tabla no puede ser cambiado si hay campos definidos para el selector. Todos los campos del selector deben ser eliminados antes de poder cambiar la tabla o la fuente de datos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

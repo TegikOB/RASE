@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELDGROUP" version="">
+  <row id="3DEAB5154DC742F884DEF1EA937F7288" trl="Y">
+    <value column="Name" original="Position">Posición</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE AD_PROCESS_REQUEST">
+    <table name="AD_PROCESS_REQUEST" primaryKey="AD_PROCESS_REQUEST_KEY">
+      <column name="EM_OBUZOHO_IMPORT_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <check name="EM_OBUZOHO_REQ_CHK"><![CDATA[((AD_PROCESS_ID) <> 'FF8081812E0979D5012E097EC9900017') OR (((AD_PROCESS_ID) = 'FF8081812E0979D5012E097EC9900017') AND (EM_OBUZOHO_IMPORT_ID IS NOT NULL))]]></check>
+    </table>
+  </database>

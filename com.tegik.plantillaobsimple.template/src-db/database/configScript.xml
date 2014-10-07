@@ -1,0 +1,1579 @@
+<?xml version="1.0"?>
+  <vector>
+    <versionInfo version="3.0.21811"/>
+    <removeCheckChange tableName="OBWPL_PICKINGLIST" checkName="OBWPL_PL_PROCESS_CANCEL_CHK">
+      <check name="OBWPL_PL_PROCESS_CANCEL_CHK"><![CDATA[PROCESS_CANCEL IN ('Y', 'N')]]></check>
+    </removeCheckChange>
+    <removeCheckChange tableName="OBWPL_PICKINGLIST" checkName="OBWPL_PL_PROCESS_PROCESS_CHK">
+      <check name="OBWPL_PL_PROCESS_PROCESS_CHK"><![CDATA[PROCESS_PROCESS IN ('Y', 'N')]]></check>
+    </removeCheckChange>
+    <removeCheckChange tableName="OBWPL_PICKINGLIST" checkName="OBWPL_PL_PROCESS_VALIDATE_CHK">
+      <check name="OBWPL_PL_PROCESS_VALIDATE_CHK"><![CDATA[PROCESS_VALIDATE IN ('Y', 'N')]]></check>
+    </removeCheckChange>
+    <columnDataChange tablename="AD_PROCESS" columnname="ISACTIVE" pkRow="800088">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_PROCESS" columnname="ISACTIVE" pkRow="800174">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_PROCESS" columnname="HELP" pkRow="1004400004">
+      <oldValue/>
+      <newValue><![CDATA[@basedesign@/com/tegik/jar/reports/erpCommon/ad_actionButton/RptRequisicion.jrxml
+@basedesign@/com/tegik/jar/reports/erpCommon/ad_actionButton/RptM_Requisition.jrxml
+@basedesign@/org/openbravo/erpReports/RptM_Requisition.jrxml]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_PROCESS" columnname="JRNAME" pkRow="1004400004">
+      <oldValue><![CDATA[@basedesign@/org/openbravo/erpReports/RptM_Requisition.jrxml]]></oldValue>
+      <newValue><![CDATA[@basedesign@/com/tegik/jar/reports/erpCommon/ad_actionButton/RptM_Requisition.jrxml]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_PROCESS" columnname="ISEXTERNALSERVICE" pkRow="1004400004">
+      <oldValue/>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="106">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="111">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="117">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="120">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="133">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="151">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="190">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="192">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="217">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="228">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="234">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="257">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="264">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="278">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="292">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="315">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="316">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="345">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="346">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="356">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="381">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="394">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800008">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800015">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800020">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800024">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800031">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800039">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800040">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800043">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800060">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800067">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800069">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800074">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800089">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800096">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800101">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800190">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800191">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800194">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800197">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800198">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800202">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800203">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800206">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800224">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800226">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800227">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800229">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800259">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800260">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800261">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800265">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800266">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800267">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800279">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800285">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800289">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="800290">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1000500000">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1002100000">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1002100003">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1002100004">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1002100006">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1004400000">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="1AC604AA78444D47BDA43F53DC050912">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="20C210B5BE7846819385A70F23F5118C">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="3942B34C83C74EFF8A9CC51AC3B003D3">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="7C26B79DD2BF4F4AADCF088653740597">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="8521FBEB13094CE1B80F1F9326C847E8">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="907A7542754F42B0AD2A84FC902A82F8">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="9CE1B49B25274C2E98455FC7E4C7C64A">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="BC399BACA2F34B968C54555D79ED66A7">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="C14426B2503546788BE2BAEBA2BE81DC">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="D0022AAFF0F44BBCA96AA7D007E65C7D">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="D40E8011F68B4E7DAF28F310455DF7C9">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MENU" columnname="ISACTIVE" pkRow="DECF65B1A8CA4B7093E7A9DAB8AFBF26">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="2231">
+      <oldValue><![CDATA[@Processed@='Y']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @Processed@=@Processed@]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="READONLYLOGIC" pkRow="3842">
+      <oldValue><![CDATA[@Processed@='Y']]></oldValue>
+      <newValue><![CDATA[@Processed@='Y' | @Processed@=@Processed@]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISMANDATORY" pkRow="7891269C83D9655DE040007F010155CE">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_COLUMN" columnname="ISMANDATORY" pkRow="828EE0AE802C5FA1E040007F010067C7">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_MODULE" columnname="UPDATEINFO" pkRow="0">
+      <oldValue><![CDATA[http://wiki.openbravo.com/wiki/Release_Notes/3.0MP31.4]]></oldValue>
+      <newValue><![CDATA[http://wiki.openbravo.com/wiki/Release_Notes/3.0MP21.1]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="226">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="235">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="239">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="513">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="800000">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="800075">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="AD_PROCESS_ID" pkRow="800249">
+      <oldValue><![CDATA[1004400004]]></oldValue>
+      <newValue><![CDATA[20468A1A9E0B4F3095CAFC5CFDB6AC5F]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="1005100000">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TAB" columnname="ISACTIVE" pkRow="7580F9AE37704571BB0D3935252CAC5A">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="1067">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1067">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="1104">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1104">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1319">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="SEQNO" pkRow="1319">
+      <oldValue><![CDATA[450]]></oldValue>
+      <newValue><![CDATA[135]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1320">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="SEQNO" pkRow="1320">
+      <oldValue><![CDATA[460]]></oldValue>
+      <newValue><![CDATA[137]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1569">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2107">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2107">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2108">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2108">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2133">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2133">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2160">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2160">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2164">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2164">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2187">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2187">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="2196">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2196">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2727">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="SHOWINRELATION" pkRow="2727">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="2765">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="3081">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3081">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="3117">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3117">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="3404">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3404">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="3405">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3405">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3432">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="3522">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3522">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="3672">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3672">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3746">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3782">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="DISPLAYLENGTH" pkRow="3782">
+      <oldValue><![CDATA[10]]></oldValue>
+      <newValue><![CDATA[120]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISREADONLY" pkRow="3782">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="SHOWINRELATION" pkRow="3782">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISFIRSTFOCUSEDFIELD" pkRow="3782">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISSHOWNINSTATUSBAR" pkRow="3782">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISREADONLY" pkRow="3791">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="7365">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="7365">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800001">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800002">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800003">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800004">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800005">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800006">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800023">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800024">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800025">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800026">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800027">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800028">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800150">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800151">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800157">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800158">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800809">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800809">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800827">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800827">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800831">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800831">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800836">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800836">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800841">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800841">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800843">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800843">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800844">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800844">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800847">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800847">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800855">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800855">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800858">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800858">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800863">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800863">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800890">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800890">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800891">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800891">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800892">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800892">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800894">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800894">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800895">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800895">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800898">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800898">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800901">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800901">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800902">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800902">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800903">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800903">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800910">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800910">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800911">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800911">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800912">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800912">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800913">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800913">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800915">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800915">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800916">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800916">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800917">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800917">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="800926">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800940">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800941">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="800955">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801071">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801102">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801102">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801103">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801103">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801104">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801104">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801308">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801308">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801310">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801310">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801312">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801312">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801316">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801316">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801317">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801317">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="801318">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801318">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801431">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801446">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="801452">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="802534">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="802534">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="802707">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="802707">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="802708">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="802708">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="802709">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="802709">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803292">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803292">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803293">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803293">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803305">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803393">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803393">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803556">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803556">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803557">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803557">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803558">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803558">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803559">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803559">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803560">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803560">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="803566">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="803566">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="1002100238">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1002100238">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="1002100239">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="1002100239">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="0916FE8D15FB480FA097670967A881B9">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="0916FE8D15FB480FA097670967A881B9">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="119FCD6CC06F43E6BE4DA88BC1368A4D">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="33482A496734474F970AD0CA02C1C695">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="33482A496734474F970AD0CA02C1C695">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="3D0F213439C848F2990DC82AB370878A">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="58DEB15AC19842A9AE2D92B136A040E2">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="58DEB15AC19842A9AE2D92B136A040E2">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="648159616A434BA4A03CB34A2EEB2455">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="648159616A434BA4A03CB34A2EEB2455">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="66CA2F2A25D84227A8A2C19A308E1F43">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="66CA2F2A25D84227A8A2C19A308E1F43">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="674E0470AD104D238EE08F7C11264E57">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="674E0470AD104D238EE08F7C11264E57">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="7D67679A64CE40F382DB52C750B3031A">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="7D67679A64CE40F382DB52C750B3031A">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160E3472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160E3472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160E4472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160E4472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160E5472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160E5472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160E8472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160E8472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160E9472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160E9472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160EA472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160EA472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160ED472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160ED472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160EE472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160EE472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="82F2E8A160F1472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="82F2E8A160F1472CE040007F01005324">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="830698140BE24AC3E040007F01000289">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="830698140BE24AC3E040007F01000289">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="8CF8F448556E43CE9CB65E63959891E9">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="8CF8F448556E43CE9CB65E63959891E9">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="AE96C5FEA3B44D3DBC9B724FF82EA848">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="AE96C5FEA3B44D3DBC9B724FF82EA848">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="C3D8F75BFDE52032E040007F01003642">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="C3D8F75BFDE52032E040007F01003642">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="CB9E2FD2CC1FDE61E040007F010001E1">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="CB9E2FD2CC1FDE61E040007F010001E1">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="CB9E32CCC775256DE040007F010001D6">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="CB9E32CCC775256DE040007F010001D6">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISACTIVE" pkRow="D62155602ABA49F69FF81B0CA89D13A7">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="D62155602ABA49F69FF81B0CA89D13A7">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_FIELD" columnname="ISDISPLAYED" pkRow="D8331030A5484B888A53D071054CDF2A">
+      <oldValue><![CDATA[Y]]></oldValue>
+      <newValue><![CDATA[N]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="3FD746883F8840E1BED768193D141802">
+      <oldValue><![CDATA[140]]></oldValue>
+      <newValue><![CDATA[150]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A21E4D84E040007F01005FEC">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[40]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2224D84E040007F01005FEC">
+      <oldValue><![CDATA[10]]></oldValue>
+      <newValue><![CDATA[20]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A23D4D84E040007F01005FEC">
+      <oldValue><![CDATA[50]]></oldValue>
+      <newValue><![CDATA[60]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A23E4D84E040007F01005FEC">
+      <oldValue><![CDATA[40]]></oldValue>
+      <newValue><![CDATA[50]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A23F4D84E040007F01005FEC">
+      <oldValue><![CDATA[70]]></oldValue>
+      <newValue><![CDATA[80]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="PARENT_ID" pkRow="52118BF1A2564D84E040007F01005FEC">
+      <oldValue><![CDATA[278]]></oldValue>
+      <newValue><![CDATA[0]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2564D84E040007F01005FEC">
+      <oldValue><![CDATA[10]]></oldValue>
+      <newValue><![CDATA[190]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2714D84E040007F01005FEC">
+      <oldValue><![CDATA[80]]></oldValue>
+      <newValue><![CDATA[90]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A28A4D84E040007F01005FEC">
+      <oldValue><![CDATA[150]]></oldValue>
+      <newValue><![CDATA[140]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2A54D84E040007F01005FEC">
+      <oldValue><![CDATA[160]]></oldValue>
+      <newValue><![CDATA[150]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2B34D84E040007F01005FEC">
+      <oldValue><![CDATA[50]]></oldValue>
+      <newValue><![CDATA[60]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2B44D84E040007F01005FEC">
+      <oldValue><![CDATA[40]]></oldValue>
+      <newValue><![CDATA[50]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2B84D84E040007F01005FEC">
+      <oldValue><![CDATA[10]]></oldValue>
+      <newValue><![CDATA[20]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2B94D84E040007F01005FEC">
+      <oldValue><![CDATA[20]]></oldValue>
+      <newValue><![CDATA[30]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2BF4D84E040007F01005FEC">
+      <oldValue><![CDATA[20]]></oldValue>
+      <newValue><![CDATA[30]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2C24D84E040007F01005FEC">
+      <oldValue><![CDATA[70]]></oldValue>
+      <newValue><![CDATA[90]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2C34D84E040007F01005FEC">
+      <oldValue><![CDATA[50]]></oldValue>
+      <newValue><![CDATA[70]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2CD4D84E040007F01005FEC">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[40]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2EB4D84E040007F01005FEC">
+      <oldValue><![CDATA[90]]></oldValue>
+      <newValue><![CDATA[100]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2EC4D84E040007F01005FEC">
+      <oldValue><![CDATA[90]]></oldValue>
+      <newValue><![CDATA[110]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2F04D84E040007F01005FEC">
+      <oldValue><![CDATA[40]]></oldValue>
+      <newValue><![CDATA[60]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A2F64D84E040007F01005FEC">
+      <oldValue><![CDATA[60]]></oldValue>
+      <newValue><![CDATA[70]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A31B4D84E040007F01005FEC">
+      <oldValue><![CDATA[110]]></oldValue>
+      <newValue><![CDATA[120]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A31C4D84E040007F01005FEC">
+      <oldValue><![CDATA[120]]></oldValue>
+      <newValue><![CDATA[130]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A32B4D84E040007F01005FEC">
+      <oldValue><![CDATA[120]]></oldValue>
+      <newValue><![CDATA[110]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3384D84E040007F01005FEC">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[50]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3404D84E040007F01005FEC">
+      <oldValue><![CDATA[10]]></oldValue>
+      <newValue><![CDATA[20]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="PARENT_ID" pkRow="52118BF1A3464D84E040007F01005FEC">
+      <oldValue><![CDATA[800254]]></oldValue>
+      <newValue><![CDATA[280]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3464D84E040007F01005FEC">
+      <oldValue><![CDATA[80]]></oldValue>
+      <newValue><![CDATA[10]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3474D84E040007F01005FEC">
+      <oldValue><![CDATA[130]]></oldValue>
+      <newValue><![CDATA[120]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3504D84E040007F01005FEC">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[40]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3514D84E040007F01005FEC">
+      <oldValue><![CDATA[40]]></oldValue>
+      <newValue><![CDATA[50]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3524D84E040007F01005FEC">
+      <oldValue><![CDATA[50]]></oldValue>
+      <newValue><![CDATA[60]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="PARENT_ID" pkRow="52118BF1A35C4D84E040007F01005FEC">
+      <oldValue><![CDATA[278]]></oldValue>
+      <newValue><![CDATA[0]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A35C4D84E040007F01005FEC">
+      <oldValue><![CDATA[20]]></oldValue>
+      <newValue><![CDATA[200]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A35E4D84E040007F01005FEC">
+      <oldValue><![CDATA[10]]></oldValue>
+      <newValue><![CDATA[20]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3754D84E040007F01005FEC">
+      <oldValue><![CDATA[80]]></oldValue>
+      <newValue><![CDATA[100]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3774D84E040007F01005FEC">
+      <oldValue><![CDATA[140]]></oldValue>
+      <newValue><![CDATA[130]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3784D84E040007F01005FEC">
+      <oldValue><![CDATA[190]]></oldValue>
+      <newValue><![CDATA[210]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3E24D84E040007F01005FEC">
+      <oldValue><![CDATA[20]]></oldValue>
+      <newValue><![CDATA[30]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3E34D84E040007F01005FEC">
+      <oldValue><![CDATA[30]]></oldValue>
+      <newValue><![CDATA[40]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A3E84D84E040007F01005FEC">
+      <oldValue><![CDATA[60]]></oldValue>
+      <newValue><![CDATA[80]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A5CB4D84E040007F01005FEC">
+      <oldValue><![CDATA[150]]></oldValue>
+      <newValue><![CDATA[160]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="52118BF1A5CC4D84E040007F01005FEC">
+      <oldValue><![CDATA[20]]></oldValue>
+      <newValue><![CDATA[30]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="80C68CDB5E77494C95DDBBDC8805713F">
+      <oldValue><![CDATA[110]]></oldValue>
+      <newValue><![CDATA[120]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="831DD90FBAF44F79B1124959BCAC5A46">
+      <oldValue><![CDATA[100]]></oldValue>
+      <newValue><![CDATA[110]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="ACB30FD4F8454E2E80FE239623BF7D75">
+      <oldValue><![CDATA[50]]></oldValue>
+      <newValue><![CDATA[150]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="AF4248C29A225927E040007F01004FF2">
+      <oldValue><![CDATA[40]]></oldValue>
+      <newValue><![CDATA[140]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="PARENT_ID" pkRow="B168E54212B7498FA049DF8FAD75C282">
+      <oldValue><![CDATA[800253]]></oldValue>
+      <newValue><![CDATA[800077]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="B168E54212B7498FA049DF8FAD75C282">
+      <oldValue><![CDATA[50]]></oldValue>
+      <newValue><![CDATA[10]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_TREENODE" columnname="SEQNO" pkRow="F9BE4668C1364632994640749A50B33B">
+      <oldValue><![CDATA[130]]></oldValue>
+      <newValue><![CDATA[140]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_WINDOW" columnname="ISACTIVE" pkRow="191">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_WINDOW" columnname="ISACTIVE" pkRow="800013">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="AD_WINDOW" columnname="ISACTIVE" pkRow="800014">
+      <oldValue><![CDATA[N]]></oldValue>
+      <newValue><![CDATA[Y]]></newValue>
+    </columnDataChange>
+    <columnDataChange tablename="OBCQL_WIDGET_QUERY" columnname="HQL" pkRow="21B7021F131A4C1F907319981CE1AE88">
+      <oldValue><![CDATA[select org.name as store, org.id as orgid, u.id as salesmanid, u.name as salesmanname, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol))/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)-tc.cost),2) as grossmargin,
+round((sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)-tc.cost)/sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join sol.salesOrder as o
+left join o.salesRepresentative as u
+left join p.productCategory as pc
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.creationDate>to_date(:datefrom,'YYYY-MM-DD')
+and o.creationDate<to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id, u.name, u.id
+order by totalsales desc, quantity desc, org.name, u.name]]></oldValue>
+      <newValue><![CDATA[select org.name as store, org.id as orgid, u.id as salesmanid, u.name as salesmanname, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.orderedQuantity*sol.grossUnitPrice),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.orderedQuantity*sol.grossUnitPrice)/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.orderedQuantity*sol.grossUnitPrice-tc.cost),2) as grossmargin,
+round((sum(sol.orderedQuantity*sol.grossUnitPrice-tc.cost)/sum(sol.orderedQuantity*sol.grossUnitPrice))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join sol.salesOrder as o
+left join o.salesRepresentative as u
+left join p.productCategory as pc
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.orderDate>=to_date(:datefrom,'YYYY-MM-DD')
+and o.orderDate<=to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id, u.name, u.id
+order by totalsales desc, quantity desc, org.name, u.name]]></newValue>
+    </columnDataChange>
+  </vector>

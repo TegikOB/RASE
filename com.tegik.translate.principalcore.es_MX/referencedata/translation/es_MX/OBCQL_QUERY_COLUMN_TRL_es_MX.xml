@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="OBCQL_QUERY_COLUMN" version="">
+  <row id="084D1B44C2D84B9B8002AE1F9E31EFE2" trl="Y">
+    <value column="Name" isTrl="Y" original="Quotation Status">Estado del presupuesto</value>
+  </row>
+  <row id="E7E073905AFE411BB623DF50CA4178F7" trl="N">
+    <value column="Name" isTrl="N" original="Total">Total</value>
+  </row>
+  <row id="FDAAA090DEAF43D08305CEE670B08A42" trl="N">
+    <value column="Name" isTrl="Y" original="Percentage">Porcentaje</value>
+  </row>
+</compiereTrl>

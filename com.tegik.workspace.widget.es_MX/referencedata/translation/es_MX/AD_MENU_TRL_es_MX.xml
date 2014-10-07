@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="06256C037E704AFAB11ACA3413B9C509" trl="Y">
+    <value column="Name" original="Workspace">Espacio de Trabajo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="08EEA66E75424372AF1BDF84DD230050" trl="Y">
+    <value column="Name" original="Widget Instance">Instancia de Widget</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E2AACAB433C644A3858891306EEDA2D3" trl="Y">
+    <value column="Name" original="Widget">Widget</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

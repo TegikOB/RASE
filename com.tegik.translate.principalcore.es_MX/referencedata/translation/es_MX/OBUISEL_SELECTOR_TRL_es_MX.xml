@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="OBUISEL_SELECTOR" version="">
+  <row id="00A9109E64DD404CA95719D20A9BBBF0" trl="Y">
+    <value column="Name" isTrl="Y" original="Products">Productos</value>
+    <value column="Description" isTrl="N" original="This selector shows all the available products">This selector shows all the available products</value>
+    <value column="Help" isTrl="Y" original="This selector shows all the available products">Este selector muestra todos los productos disponibles</value>
+  </row>
+  <row id="06A43991412642449E511F495C408EC8" trl="N">
+    <value column="Name" isTrl="N" original="AD_User Selector">AD_User Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0E1E9236E2FE471FB946F8DA2803C537" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Selector">Relación de pagos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1E14C66616444E0DA8D5C5321EC9F61B" trl="Y">
+    <value column="Name" isTrl="Y" original="Product UOM Selector">Selector de Unidad de Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1F051395F1CC4A40ADFE5C440EBCAA7F" trl="Y">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1F1889DC41AD41D596A046091B4EFA81" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Selector">Selector de Factura</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="24F05C2E771340A8A726C06D0FB402B5" trl="N">
+    <value column="Name" isTrl="N" original="AD_User no combo">AD_User no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="26FA611719154B5E808140E04BD58AB0" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Customers no combo">AD_User no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2E64F551C7C4470C80C29DBA24B34A5F" trl="Y">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3E9E206575F94F579BAE65C1C929E3E0" trl="Y">
+    <value column="Name" isTrl="Y" original="Tab Access Selector">Selector acceso de tab </value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3F43145FED1B4EC08A4797BFCB4F1C6D" trl="Y">
+    <value column="Name" isTrl="Y" original="Portal Role Selector">Selector Papel Portal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB5307F1000C" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner not filtered by default by customer/vendor">Tercero que no filtra por defecto por cliente/proveedor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="45825E189BCB47B497709849EBF61AA7" trl="Y">
+    <value column="Name" isTrl="Y" original="Orderline selector">Selector Linea de Orden</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4C8BC3E8E56441F4B8C98C684A0C9212" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Complete">Producto Completo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5E026139F74D4FD5AC4FA23189A03C92" trl="N">
+    <value column="Name" isTrl="N" original="DatasourceSelectorForTables">DatasourceSelectorForTables</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="632F319DE1564495B3B5D710127DA6DC" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation">Reservacion</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="720AAD2B1552455582E5D15103F59923" trl="Y">
+    <value column="Name" isTrl="Y" original="Element Selector">Selector de Elemento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7809A075DD5C40A598FA80D7BEE70BCE" trl="Y">
+    <value column="Name" isTrl="Y" original="Storage Bin Selector"> Selector de Posicion</value>
+    <value column="Description" isTrl="Y" original="Storage Bin Selector">Selector de Posicion</value>
+    <value column="Help" isTrl="Y" original="Storage Bin Selector">Selector de Posicion</value>
+  </row>
+  <row id="814758DD755642E9BF38BD2E5AD713EC" trl="Y">
+    <value column="Name" isTrl="Y" original="User Dimension 1">Dimensión de usuario 1</value>
+    <value column="Description" isTrl="N" original="User Dimension 1">User Dimension 1</value>
+    <value column="Help" isTrl="Y" original="User Dimension 1">Dimensión de usuario 1</value>
+  </row>
+  <row id="862F54CB1B074513BD791C6789F4AA42" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner with contact and location">Tercero con contacto y dirección</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9F883550D23F4DB18B3FD9DE9E03999B" trl="Y">
+    <value column="Name" isTrl="Y" original="Physical Inventory line selector">Selector de línea del inventario físico</value>
+    <value column="Description" isTrl="N" original="Physical Inventory line selector">Physical Inventory line selector</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A085BAFF89C74D7696A877C697DF350F" trl="Y">
+    <value column="Name" isTrl="Y" original="Valid Combination">Válido Combinación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A35B6EC33A2243018915908AEB1B3F5E" trl="Y">
+    <value column="Name" isTrl="Y" original="Project">Proyecto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A48B1462EE7F4C109F06564E0B4677A8" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Multiple">Productos Multiples</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B2D8976FFFDB45428C3A9F0CDA7AD5C0" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation Stock Selector">selector de reservas de stock </value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B5623B386AB5435391EF7C58521282FD" trl="N">
+    <value column="Name" isTrl="N" original="C_OrderLine no combo">C_OrderLine no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B748F356A65641D4974E5C349A16FB27" trl="N">
+    <value column="Name" isTrl="N" original="Org_no_org_access">Org_no_org_access</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B8321631F57E463EB617289E936BAF3A" trl="Y">
+    <value column="Name" isTrl="Y" original="Cost Center Selector">Costo Selector Center</value>
+    <value column="Description" isTrl="N" original="Cost Center Selector">Cost Center Selector</value>
+    <value column="Help" isTrl="Y" original="Cost Center Selector">Costo Selector Center</value>
+  </row>
+  <row id="BD1DA40E134A42B9889B529302A96871" trl="Y">
+    <value column="Name" isTrl="Y" original="User Dimension 2">Dimensión de usuario 2</value>
+    <value column="Description" isTrl="N" original="User Dimension 2">User Dimension 2</value>
+    <value column="Help" isTrl="Y" original="User Dimension 2">Dimensión de usuario 2</value>
+  </row>
+  <row id="BE6ACDD8B76E4BA994E7127F112FDFAC" trl="Y">
+    <value column="Name" isTrl="Y" original="Element Value">Valor de Elemento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D47A3616483E46C18A09794B9B276B37" trl="Y">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D4F428CFB0FD42A6998BF377BA4212AB" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation Selector">Selector reservacion</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DD09F01271C948EBA7A134A15E1DAAD6" trl="N">
+    <value column="Name" isTrl="N" original="C_BPartner Vendors no combo">C_BPartner Vendors no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DE0239D3891D434E889A48916A7CAF88" trl="N">
+    <value column="Name" isTrl="N" original="M_InOutLine no combo">M_InOutLine no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DE9CFEFB6F49404995BE8B0FBF3F7F9E" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Schedule">Calendario de Pagos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DF21B651CB604FA9A709D7108FA51177" trl="N">
+    <value column="Name" isTrl="N" original="AD_Process_Request">AD_Process_Request</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E65052A724B3451CA643A0CC355CEA40" trl="Y">
+    <value column="Name" isTrl="Y" original="Asset Selector">Selector de Activos</value>
+    <value column="Description" isTrl="N" original="Asset Selector">Asset Selector</value>
+    <value column="Help" isTrl="N" original="Asset Selector">Asset Selector</value>
+  </row>
+  <row id="EB3C41F0973A4EDA91E475833792A6D4" trl="Y">
+    <value column="Name" isTrl="Y" original="ProductSimple">Producto Simple</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EBFFA9D8B4FE4F9F8E591D0AB79D8343" trl="N">
+    <value column="Name" isTrl="N" original="C_Order Purchase no combo">C_Order Purchase no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F042B1A69D9D47F88643BD39818D1991" trl="N">
+    <value column="Name" isTrl="N" original="M_Offer no combo">M_Offer no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F132874BE0954A9B8C1301BE20704730" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner with contact and location">Socio de negocios con el contacto y la ubicación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F42A1DD1B941461EB3B9AD07A534D91E" trl="Y">
+    <value column="Name" isTrl="Y" original="On hand warehouse">El almacén en mano</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FA5BC3AD909645C3BCF9384AE635009A" trl="N">
+    <value column="Name" isTrl="N" original="Account Element Value">Account Element Value</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

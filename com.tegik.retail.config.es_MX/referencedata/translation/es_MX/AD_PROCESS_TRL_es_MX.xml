@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_PROCESS" version="">
+  <row id="608163463C454454A152260DB63FEB9B" trl="Y">
+    <value column="Name" original="Charts Zoho">Tablas Zoho</value>
+    <value column="Description" original="Displays a zoho chart">Mostrar las tablas Zoho.</value>
+    <value column="Help" original="Displays a zoho chart">Mostrar la tablas Zoho.</value>
+  </row>
+</compiereTrl>

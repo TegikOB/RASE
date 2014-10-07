@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TEXTINTERFACES" version="">
+  <row id="02AAEE46AC52441E84CC3D86CDABEC7C" trl="Y">
+    <value column="Text" original="Due Date To:">Fecha vencimiento hasta:</value>
+  </row>
+  <row id="02F7B62B809A4C7994C6661D4150A410" trl="Y">
+    <value column="Text" original="PlannedDSO">Días vto</value>
+  </row>
+  <row id="044881ABF38E44E1BFE3D28F6992587F" trl="Y">
+    <value column="Text" original="Amount From:">Importe desde:</value>
+  </row>
+  <row id="07E1DCCF2C364609B69C788D366688C7" trl="Y">
+    <value column="Text" original="Conversion Date:">Fecha de Conversión:</value>
+  </row>
+  <row id="0C17541538FA430595E29E3F31DDC072" trl="Y">
+    <value column="Text" original="Document Date To">Fecha de Documento Hasta</value>
+  </row>
+  <row id="0EBE2A7946CE44ABB1095D1176187E6B" trl="N">
+    <value column="Text" original="APRM_FATS_BPARTNER">APRM_FATS_BPARTNER</value>
+  </row>
+  <row id="0F3DBFADCE4F42279BA1E29291982E43" trl="Y">
+    <value column="Text" original="Financial Account">Cuenta Financiera</value>
+  </row>
+  <row id="17234C998EAE47188F5E34F1ECF345C3" trl="Y">
+    <value column="Text" original="Include Sub-Organization">Incluir Sub-Organización</value>
+  </row>
+  <row id="1A49AE948278471FB82B2CB790B56489" trl="Y">
+    <value column="Text" original="Sales Person">Comercial</value>
+  </row>
+  <row id="1A6B43E1EAE848338EF1D0D3903E3EBA" trl="Y">
+    <value column="Text" original="Payment Type:">Tipo de transacción:</value>
+  </row>
+  <row id="1BCFC8ED0B9943FEB4823370495875A3" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="213ED8A057F3406F8746746DA762E2F3" trl="Y">
+    <value column="Text" original="Sales Person">Comercial</value>
+  </row>
+  <row id="23597E0AA4A841E19A8C046894A0EB4E" trl="Y">
+    <value column="Text" original="Due Date From">Fecha vencimiento desde</value>
+  </row>
+  <row id="287D509836E44802A71F49C9648B3312" trl="Y">
+    <value column="Text" original="Document Date From">Fecha de Documento Desde</value>
+  </row>
+  <row id="28AB1D831E5B413F8CB7065AC7F6C767" trl="Y">
+    <value column="Text" original="Expected Date From:">Fecha inicio esperada:</value>
+  </row>
+  <row id="2C6A426EC54343B4ADC17BAEE9689D1E" trl="Y">
+    <value column="Text" original="Grouping Criteria:">Criterio de agrupación:</value>
+  </row>
+  <row id="2CB33EC1A0FD45B4939AC5E91DD4D123" trl="Y">
+    <value column="Text" original="Include Sub-Organization:">Incluir Sub-Organización:</value>
+  </row>
+  <row id="2E1CF9F4C3E94DDF8267520EAE434F8C" trl="N">
+    <value column="Text" original="INS_CURRENCY">INS_CURRENCY</value>
+  </row>
+  <row id="2FAD31FCFE354886A1DCF184253A833A" trl="Y">
+    <value column="Text" original="Empty Business Partner">Sin Tercero</value>
+  </row>
+  <row id="30969F03CBFC4DE7BCFBC71FA5D34EDA" trl="Y">
+    <value column="Text" original="Base Currency">Moneda conversión</value>
+  </row>
+  <row id="317C753E17344F57A2A1C06DF6D8B8C0" trl="Y">
+    <value column="Text" original="Base Amount">Importe al cambio</value>
+  </row>
+  <row id="3485F342455549D2AEFDDA5C64E65845" trl="Y">
+    <value column="Text" original="PlannedDSO">Días vto</value>
+  </row>
+  <row id="349607F655AB4EF1A366DC3211CA284A" trl="Y">
+    <value column="Text" original="Trans. Amount">Importe</value>
+  </row>
+  <row id="363CCEC87C164F369A52298905B5624D" trl="Y">
+    <value column="Text" original="Expected Date To">Fecha fin esperada</value>
+  </row>
+  <row id="3650BF4F6BA8473796C8070005DD5C8C" trl="Y">
+    <value column="Text" original="Project:">Proyecto:</value>
+  </row>
+  <row id="380C02FB287545AF86F9F982E5EADD8F" trl="Y">
+    <value column="Text" original="Overdue">Retraso vto</value>
+  </row>
+  <row id="38EFF62DBAC04FA2A6D78CF45C53F670" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="3926449F68AD44B59D5244FC7C5419EF" trl="Y">
+    <value column="Text" original="CurrentDSO">DSO</value>
+  </row>
+  <row id="393EFE8078AF4B3299DBACBF533128F8" trl="Y">
+    <value column="Text" original="Base Currency">Moneda conversión</value>
+  </row>
+  <row id="3DA0864710A34D3EAE1B35CEB4EA63D6" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="43C8186236514013ADE1E5C8DB7A043B" trl="Y">
+    <value column="Text" original="Conversion date">Fecha de Conversión</value>
+  </row>
+  <row id="4721249AEDFF435C893526F191DCFAF6" trl="Y">
+    <value column="Text" original="Include empty Business Partner">Incluir registros sin Tercero</value>
+  </row>
+  <row id="47D05363EA0A431E94988745BA473BD1" trl="Y">
+    <value column="Text" original="Overdue">Retraso vto</value>
+  </row>
+  <row id="4A2C074C97E74A55858699F7AC03BBE7" trl="N">
+    <value column="Text" original="Balance:">Balance:</value>
+  </row>
+  <row id="4AE673493AE240E5A19DB52BA3FECA21" trl="N">
+    <value column="Text" original="FINPR_BPartner_Category">FINPR_BPartner_Category</value>
+  </row>
+  <row id="4B2C2262F89E45D1945A4DDC2A941571" trl="Y">
+    <value column="Text" original="Due Date To">Fecha vencimiento hasta</value>
+  </row>
+  <row id="55A3D8825B094737B9E1479A50AE73B1" trl="Y">
+    <value column="Text" original="Status:">Estado:</value>
+  </row>
+  <row id="60C048466A5646679B61AAC6240A697A" trl="Y">
+    <value column="Text" original="Expected Date To:">Fecha fin esperada:</value>
+  </row>
+  <row id="64984571E7EE46B590D617CAB3D28598" trl="Y">
+    <value column="Text" original="Payment Date To:">Fecha de Pago/Cobro Hasta:</value>
+  </row>
+  <row id="64F1EDBA15314054B3A147A4262B95FE" trl="Y">
+    <value column="Text" original="Document Date From:">Fecha de Documento Desde:</value>
+  </row>
+  <row id="66531E5447774162A53CD03AAEE01C17" trl="Y">
+    <value column="Text" original="Business Partner Category">Grupo de terceros</value>
+  </row>
+  <row id="76253D7F006044C3883F7E7B963F9E1D" trl="Y">
+    <value column="Text" original="Convert to currency:">Moneda de conversión:</value>
+  </row>
+  <row id="7659A6A8A88F4A578E3DD686F2D1FE65" trl="Y">
+    <value column="Text" original="Trans. Currency">Moneda Trans.</value>
+  </row>
+  <row id="7C6A82A324CD477F82B8E89EF51D7563" trl="Y">
+    <value column="Text" original="PAYMENT REPORT">INFORME DE PAGOS Y COBROS</value>
+  </row>
+  <row id="7F5AB117CCB640BAB9142318F124DDCD" trl="Y">
+    <value column="Text" original="Only empty Business Partner">Sólo registros sin Tercero</value>
+  </row>
+  <row id="7FF75B077A6D4C2CA4752A0F82AD7B39" trl="Y">
+    <value column="Text" original="Due Date From:">Fecha vencimiento desde:</value>
+  </row>
+  <row id="7FFF499FA6DE45D8A60427A22D91165E" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="81DD7CAF25BE4F17BF5F04B43BB076E0" trl="N">
+    <value column="Text" original="ACCS_ACCOUNT_ID_D">ACCS_ACCOUNT_ID_D</value>
+  </row>
+  <row id="8747F91C31704FD0A9EC0C35237158BE" trl="Y">
+    <value column="Text" original="Invoice Date">Fecha de Factura</value>
+  </row>
+  <row id="8A613E8D2A304FEF9545C2852FC06EF0" trl="Y">
+    <value column="Text" original="Document Date To:">Fecha de Documento Hasta:</value>
+  </row>
+  <row id="8B947CC936E44FBCBCE62F4E02A01C63" trl="Y">
+    <value column="Text" original="Payment Report">Informe de pagos y cobros</value>
+  </row>
+  <row id="8DFAF1EEAAE24EE094C0BF142C0BE56A" trl="Y">
+    <value column="Text" original="Payment Date">Fecha de Pago/Cobro</value>
+  </row>
+  <row id="937AA8C7B9DA4ACF92B9A1ACA7719A65" trl="Y">
+    <value column="Text" original="Amount To:">Importe Hasta:</value>
+  </row>
+  <row id="956DE8D037514B20A7303E122AAD2713" trl="Y">
+    <value column="Text" original="Due Date">Fecha vencimiento</value>
+  </row>
+  <row id="977F3730B74146ADBB48FCD85218F034" trl="Y">
+    <value column="Text" original="CurrentDSO">DSO</value>
+  </row>
+  <row id="9896DFF27CCF4AB2A278019CE671DCAC" trl="Y">
+    <value column="Text" original="Payment Method">Método de pago</value>
+  </row>
+  <row id="98F7D068B04548A4B9D8EBEF837C3A96" trl="Y">
+    <value column="Text" original="Financial Account:">Cuenta Financiera:</value>
+  </row>
+  <row id="99EA5838DCBE4CECAB864CC3D50B54AD" trl="Y">
+    <value column="Text" original="Due Date">Fecha vencimiento</value>
+  </row>
+  <row id="9A42E119872F46FDA71FC4FF28C9653E" trl="Y">
+    <value column="Text" original="Grouping Criteria">Criterio de agrupación</value>
+  </row>
+  <row id="9BEBF44EF99C4B228D71CFC101710095" trl="Y">
+    <value column="Text" original="Base Amount">Importe al cambio</value>
+  </row>
+  <row id="A062D2FD534B478CBBDD8BFE94834193" trl="Y">
+    <value column="Text" original="Payment Date From">Fecha de Pago/Cobro Desde</value>
+  </row>
+  <row id="A178474701304374BF37B9FFBB6B8E38" trl="Y">
+    <value column="Text" original="Base Currency">Moneda conversión</value>
+  </row>
+  <row id="A1CC0391770548668172514B0F7D0DDD" trl="Y">
+    <value column="Text" original="Base Amount">Importe al cambio</value>
+  </row>
+  <row id="AC44B03FF40047059E663CEB9CF49A5A" trl="Y">
+    <value column="Text" original="Transactional Currency">Moneda Transaccional</value>
+  </row>
+  <row id="AF049D5097F14A79E040007F010149FB" trl="Y">
+    <value column="Text" original="Include Payments Using Credit">Incluir Pagos/Cobros Usando Crédito</value>
+  </row>
+  <row id="AF2D1591711675E8E040007F0101337D" trl="Y">
+    <value column="Text" original="Payment Description">Descripción del Pago/Cobro</value>
+  </row>
+  <row id="AF2E12144150C776E040007F01013C23" trl="Y">
+    <value column="Text" original="Include Payments Using Credit:">Incluir Pagos/Cobros Usando Crédito:</value>
+  </row>
+  <row id="AFAA1DE81243FDE8E040007F010159B7" trl="Y">
+    <value column="Text" original="* Invoice paid using a credit payment">* Factura pagada/cobrada usando crédito</value>
+  </row>
+  <row id="AFB970D388478761E040007F01012C25" trl="Y">
+    <value column="Text" original="** Several invoices have been paid using the same credit payment">** Se han pagado/cobrado varias facturas con el mismo pago/cobro usando crédito</value>
+  </row>
+  <row id="AFBBE094BB53D031E040007F01013B9F" trl="Y">
+    <value column="Text" original="* Invoice paid using a credit payment">* Factura pagada/cobrada usando crédito</value>
+  </row>
+  <row id="AFBBE094BB55D031E040007F01013B9F" trl="Y">
+    <value column="Text" original="** Several invoices have been paid using the same credit payment">** Se han pagado/cobrado varias facturas con el mismo pago/cobro usando crédito</value>
+  </row>
+  <row id="AFBBE094BB57D031E040007F01013B9F" trl="Y">
+    <value column="Text" original="* Invoice paid using a credit payment">* Factura pagada/cobrada usando crédito</value>
+  </row>
+  <row id="AFBBE094BB59D031E040007F01013B9F" trl="Y">
+    <value column="Text" original="** Several invoices have been paid using the same credit payment">** Se han pagado/cobrado varias facturas con el mismo pago/cobro usando crédito</value>
+  </row>
+  <row id="B973837A2C334DC49973CEE4179F43B7" trl="Y">
+    <value column="Text" original="Business Partner Category">Grupo de terceros</value>
+  </row>
+  <row id="B9CF74E3592E4EF684332D8BD3F34AE2" trl="Y">
+    <value column="Text" original="Financial Account">Cuenta financiera</value>
+  </row>
+  <row id="BA44533ED06A4B73BCE144691D928626" trl="Y">
+    <value column="Text" original="PlannedDSO">Días vto</value>
+  </row>
+  <row id="BA58631F88A74CB1859804387A7AE6B2" trl="Y">
+    <value column="Text" original="Transactional Amount">Importe Transaccional</value>
+  </row>
+  <row id="BEB5223AF030406F8680D17D143C3935" trl="Y">
+    <value column="Text" original="Payment Method">Método de Pago</value>
+  </row>
+  <row id="BF61E0FF53934902B0CC763EEC48B42B" trl="Y">
+    <value column="Text" original="Convert to Currency">Moneda de conversión</value>
+  </row>
+  <row id="C31FF83C82AB49C7AC446FD28B431B3C" trl="Y">
+    <value column="Text" original="Transactional Currency">Moneda Transaccional</value>
+  </row>
+  <row id="C764993E67B846B4B72165EB26D04BC9" trl="Y">
+    <value column="Text" original="CurrentDSO">DSO</value>
+  </row>
+  <row id="C851638940504AF69C111133B4FC53FF" trl="Y">
+    <value column="Text" original="Overdue:">Retraso vto:</value>
+  </row>
+  <row id="C90AC1FF0A6E4D949A89BA6B79B440C1" trl="Y">
+    <value column="Text" original="Invoice Date">Fecha de Factura</value>
+  </row>
+  <row id="CF7B2971E5954D8C8A0EE48A8479B3B7" trl="Y">
+    <value column="Text" original="Ordering Criteria">Criterio de ordenación</value>
+  </row>
+  <row id="D331A2D41B8840838C4708C92DC5E435" trl="Y">
+    <value column="Text" original="Sub Total (Status):">Sub Total (Estado):</value>
+  </row>
+  <row id="D3B9E8172CB74CA98A74A6B119612106" trl="Y">
+    <value column="Text" original="Payment Date From:">Fecha de Pago/Cobro Desde:</value>
+  </row>
+  <row id="D3DA75B510A54CEDAD7813134FA06BB7" trl="Y">
+    <value column="Text" original="Balance: ">Balance:</value>
+  </row>
+  <row id="D79B532849AC43F09FB38375FB9CBBA2" trl="Y">
+    <value column="Text" original="Payment Date To">Fecha de Pago/Cobro Hasta</value>
+  </row>
+  <row id="DAFB4AF969704E6A8587DD2F9ED525AD" trl="Y">
+    <value column="Text" original="Sales Person">Comercial</value>
+  </row>
+  <row id="DB56CD45A93B44B39BC59C39F082D2DA" trl="Y">
+    <value column="Text" original="Sub Total (Status)">Sub Total (Estado)</value>
+  </row>
+  <row id="DB68D6BCFE6F482D84785C502FCEEAD2" trl="Y">
+    <value column="Text" original="Payment Method:">Método de Pago:</value>
+  </row>
+  <row id="DBBC9E99CD634EC8844BD0AE0E98ED3A" trl="Y">
+    <value column="Text" original="Payment Type">Tipo de transacción</value>
+  </row>
+  <row id="DCE88B13B4A540658783D3CF5E773C4B" trl="Y">
+    <value column="Text" original="Currency:">Moneda:</value>
+  </row>
+  <row id="DEE5ED85F85742E0B8F4F000946A3B19" trl="Y">
+    <value column="Text" original="Ordering Criteria:">Criterio de ordenación:</value>
+  </row>
+  <row id="DF2CC16AD5894BA7B620A962C4632C27" trl="Y">
+    <value column="Text" original="Exclude empty Business Partner">Excluir registros sin Tercero</value>
+  </row>
+  <row id="E460023C097749C5892A9CE255BD6FEB" trl="Y">
+    <value column="Text" original="Payment Report">Informe de pagos y cobros</value>
+  </row>
+  <row id="E748B33C558747D39E79783EC4788B20" trl="Y">
+    <value column="Text" original="Business Partner Category:">Grupo de terceros:</value>
+  </row>
+  <row id="E8821FAD1F0548E191F19C25EA803222" trl="Y">
+    <value column="Text" original="Deposit/Withdraw Date">Fecha Deposito/Reintegro</value>
+  </row>
+  <row id="EA4AB68461A14FEDBB4CA15CAB168555" trl="Y">
+    <value column="Text" original="Expected Date From">Fecha inicio esperada</value>
+  </row>
+  <row id="F3ED5198D0DA4B25ABADE68A48905575" trl="Y">
+    <value column="Text" original="Overdue">Retraso vto</value>
+  </row>
+  <row id="F6F187E77E9C451DAE6B8DD2B1733757" trl="Y">
+    <value column="Text" original="Transactional Amount">Importe Transaccional</value>
+  </row>
+  <row id="F931748E59634FB1BA40BCF5FA01EFCC" trl="Y">
+    <value column="Text" original="Invoice Date">Fecha de Factura</value>
+  </row>
+</compiereTrl>

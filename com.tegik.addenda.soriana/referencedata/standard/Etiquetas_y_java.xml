@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ADN_Addenda id="7380D5995AB646559EAB267A57CB4B47" identifier="Addenda Soriana Pie de Camion">
+    <id>7380D5995AB646559EAB267A57CB4B47</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-03T16:36:56.513Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-03T16:37:07.173Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <commercialName>Addenda Soriana Pie de Camion</commercialName>
+    <javaclass>com.tegik.addenda.soriana.piedecamion.GenerarAddenda</javaclass>
+  </ADN_Addenda>
+  <adn_etiquetas id="1CB9C889ACA644458261F01ACD96DBA4" identifier="Remision.descuentos">
+    <id>1CB9C889ACA644458261F01ACD96DBA4</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:30:58.597Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:31:19.862Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>descuentos</etiqueta>
+    <commercialName>Remision.descuentos</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="28F8C6C98BB1491D879BE9C1B7443382" identifier="Remision.cumpleReqFiscales">
+    <id>28F8C6C98BB1491D879BE9C1B7443382</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:29:14.84Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:29:14.84Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>cumpleReqFiscales</etiqueta>
+    <commercialName>Remision.cumpleReqFiscales</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="36AD545B1FC246678B555A464301E1FE" identifier="Tienda.numero">
+    <id>36AD545B1FC246678B555A464301E1FE</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:25:22.785Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:25:22.785Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Tienda</encabezado>
+    <etiqueta>numero</etiqueta>
+    <commercialName>Tienda.numero</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="50EBF932AC5B4A648A48DF43AADF3736" identifier="Remision.cantidadPedidos">
+    <id>50EBF932AC5B4A648A48DF43AADF3736</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:32:35.132Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:32:43.212Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>cantidadPedidos</etiqueta>
+    <commercialName>Remision.cantidadPedidos</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="70D3F3F18085410181E964C4279708C9" identifier="Pedido.cantidadArticulos">
+    <id>70D3F3F18085410181E964C4279708C9</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:36:45.381Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:36:45.381Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Pedido</encabezado>
+    <etiqueta>cantidadArticulos</etiqueta>
+    <commercialName>Pedido.cantidadArticulos</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="7942C16C4B87406CA847218107DCC341" identifier="Pedido.folioPedido">
+    <id>7942C16C4B87406CA847218107DCC341</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:35:20.10Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:35:23.658Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Pedido</encabezado>
+    <etiqueta>folioPedido</etiqueta>
+    <commercialName>Pedido.folioPedido</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="7C666A251B0F439F851B6DD35D7C4B2D" identifier="Remision.tipoBulto">
+    <id>7C666A251B0F439F851B6DD35D7C4B2D</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:27:04.455Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:27:04.455Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>tipoBulto</etiqueta>
+    <commercialName>Remision.tipoBulto</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="853FAE2C80BF43BBBA0D2FC4B98F1E1A" identifier="Proveedor.numero">
+    <id>853FAE2C80BF43BBBA0D2FC4B98F1E1A</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:22:39.711Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:22:39.711Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Proveedor</encabezado>
+    <etiqueta>numero</etiqueta>
+    <commercialName>Proveedor.numero</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="944FEC288BE640BFA4F5E6C715194FAC" identifier="Remision.ieps">
+    <id>944FEC288BE640BFA4F5E6C715194FAC</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:31:10.228Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:31:13.577Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>ieps</etiqueta>
+    <commercialName>Remision.ieps</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="9546AD81B3D6402D85DC3A21036A9571" identifier="Remision.remision">
+    <id>9546AD81B3D6402D85DC3A21036A9571</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:23:36.713Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:23:36.713Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>remision</etiqueta>
+    <commercialName>Remision.remision</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="A45394B65B4D4FF099ADB455637DB69E" identifier="Remision.fechaEntregaMercancia">
+    <id>A45394B65B4D4FF099ADB455637DB69E</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:33:10.234Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:33:10.234Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>fechaEntregaMercancia</etiqueta>
+    <commercialName>Remision.fechaEntregaMercancia</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="A5E71E351D4D430085C0CCD8AC0ECC0A" identifier="Remision.tipoMoneda">
+    <id>A5E71E351D4D430085C0CCD8AC0ECC0A</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:25:49.93Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:25:49.93Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>tipoMoneda</etiqueta>
+    <commercialName>Remision.tipoMoneda</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="CE518331FD5F4250A9215D894E0A343F" identifier="Remision.fechaRemision">
+    <id>CE518331FD5F4250A9215D894E0A343F</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:24:23.499Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:24:54.922Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>fechaRemision</etiqueta>
+    <commercialName>Remision.fechaRemision</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="DA7AEE3014AE49DE954F547C614DAB53" identifier="Remision.cantidadBultos">
+    <id>DA7AEE3014AE49DE954F547C614DAB53</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:30:41.426Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:31:25.531Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>cantidadBultos</etiqueta>
+    <commercialName>Remision.cantidadBultos</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="DC8818B9D892417AA3F634DC58EC9569" identifier="Remision.entregaMercancia">
+    <id>DC8818B9D892417AA3F634DC58EC9569</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:27:40.151Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:27:40.151Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>entregaMercancia</etiqueta>
+    <commercialName>Remision.entregaMercancia</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="E1ECDCE9D616434784441956EBA364B5" identifier="Remision.consecutivo">
+    <id>E1ECDCE9D616434784441956EBA364B5</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:24:03.450Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:24:03.450Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>consecutivo</etiqueta>
+    <commercialName>Remision.consecutivo</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="EF279BC2920E40018A55F1159AD58F82" identifier="Remision.otrosImpuestos">
+    <id>EF279BC2920E40018A55F1159AD58F82</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:32:07.85Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:35:39.234Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>otrosImpuestos</etiqueta>
+    <commercialName>Remision.otrosImpuestos</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+  <adn_etiquetas id="FD58A8ABF105475883307A82DD82AC41" identifier="Remision.cita">
+    <id>FD58A8ABF105475883307A82DD82AC41</id>
+    <active>true</active>
+    <creationDate transient="true">2014-07-04T15:33:34.327Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-07-04T15:33:46.673Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <encabezado>Remision</encabezado>
+    <etiqueta>cita</etiqueta>
+    <commercialName>Remision.cita</commercialName>
+    <aDNAddenda id="7380D5995AB646559EAB267A57CB4B47" entity-name="ADN_Addenda" identifier="Addenda Soriana Pie de Camion"/>
+  </adn_etiquetas>
+</ob:Openbravo>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<!--15D5054951C64E519D2D19EB8C3C40AE--><OBCQL_WIDGET_QUERY>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[15D5054951C64E519D2D19EB8C3C40AE]]></OBCQL_WIDGET_QUERY_ID>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[DB506A35BCF24980AED43596A9435BEA]]></OBKMO_WIDGET_CLASS_ID>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <HQL><![CDATA[select posapp.name as pos, org.name as store,posapp.id as posid, org.id as orgid, p.name as product, p.id as prodid,pc.name as family, pc.id as prodcatid, count(o.id) as numtransac, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as grossmargin,
+round((sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)-tc.cost)/sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join p.productCategory as pc
+left join sol.salesOrder as o
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.creationDate>to_date(:datefrom,'YYYY-MM-DD')
+and o.creationDate<to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by posapp.name,org.name,posapp.id, org.id,p.name, p.id,pc.name, pc.id
+order by totalsales desc, quantity desc, posapp.name, p.name, pc.name]]></HQL>
+<!--15D5054951C64E519D2D19EB8C3C40AE-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--15D5054951C64E519D2D19EB8C3C40AE--></OBCQL_WIDGET_QUERY>
+
+<!--21B7021F131A4C1F907319981CE1AE88--><OBCQL_WIDGET_QUERY>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[21B7021F131A4C1F907319981CE1AE88]]></OBCQL_WIDGET_QUERY_ID>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[927E935EAD54494E808C9D6AED12DAF6]]></OBKMO_WIDGET_CLASS_ID>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <HQL><![CDATA[select org.name as store, org.id as orgid, u.id as salesmanid, u.name as salesmanname, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.orderedQuantity*sol.grossUnitPrice),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.orderedQuantity*sol.grossUnitPrice)/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.orderedQuantity*sol.grossUnitPrice-tc.cost),2) as grossmargin,
+round((sum(sol.orderedQuantity*sol.grossUnitPrice-tc.cost)/sum(sol.orderedQuantity*sol.grossUnitPrice))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join sol.salesOrder as o
+left join o.salesRepresentative as u
+left join p.productCategory as pc
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.orderDate>=to_date(:datefrom,'YYYY-MM-DD')
+and o.orderDate<=to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id, u.name, u.id
+order by totalsales desc, quantity desc, org.name, u.name]]></HQL>
+<!--21B7021F131A4C1F907319981CE1AE88-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--21B7021F131A4C1F907319981CE1AE88--></OBCQL_WIDGET_QUERY>
+
+<!--2D3930A72F404E50B78B959E350BB997--><OBCQL_WIDGET_QUERY>
+<!--2D3930A72F404E50B78B959E350BB997-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[2D3930A72F404E50B78B959E350BB997]]></OBCQL_WIDGET_QUERY_ID>
+<!--2D3930A72F404E50B78B959E350BB997-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--2D3930A72F404E50B78B959E350BB997-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--2D3930A72F404E50B78B959E350BB997-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--2D3930A72F404E50B78B959E350BB997-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[424AA912CE69414091B776C7628DEB4B]]></OBKMO_WIDGET_CLASS_ID>
+<!--2D3930A72F404E50B78B959E350BB997-->  <HQL><![CDATA[select bp.id as bpid , bp.name as bpname,bp.searchKey  as bpsearchkey,us.email  as email,us.phone as phone, us.alternativePhone as alternativePhone,us.fax as fax,us.firstName as firstName, us.lastName as lastName
+from BusinessPartner bp, ADUser us
+where bp.client.id=:client
+and bp.organization.id IN (:organizationList)
+and bp.id=us.businessPartner.id
+and bp.customer='Y'
+and @optional_filters@
+order by us.firstName,us.lastName]]></HQL>
+<!--2D3930A72F404E50B78B959E350BB997-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--2D3930A72F404E50B78B959E350BB997--></OBCQL_WIDGET_QUERY>
+
+<!--7C06229C45044E3282B53A624B317AE3--><OBCQL_WIDGET_QUERY>
+<!--7C06229C45044E3282B53A624B317AE3-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[7C06229C45044E3282B53A624B317AE3]]></OBCQL_WIDGET_QUERY_ID>
+<!--7C06229C45044E3282B53A624B317AE3-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--7C06229C45044E3282B53A624B317AE3-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--7C06229C45044E3282B53A624B317AE3-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--7C06229C45044E3282B53A624B317AE3-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[B8EBD50E091E4697AFD2900831A634CE]]></OBKMO_WIDGET_CLASS_ID>
+<!--7C06229C45044E3282B53A624B317AE3-->  <HQL><![CDATA[select org.name as store, org.id as orgid, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol))/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)-tc.cost),2) as grossmargin,
+round((sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)-tc.cost)/sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.salesOrder as o
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and to_date(to_char(o.creationDate, 'YYYY-MM-DD'), 'YYYY-MM-DD')>=to_date(:datefrom,'YYYY-MM-DD')
+and to_date(to_char(o.creationDate, 'YYYY-MM-DD'), 'YYYY-MM-DD')<=to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id
+order by totalsales desc, quantity desc, org.name]]></HQL>
+<!--7C06229C45044E3282B53A624B317AE3-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--7C06229C45044E3282B53A624B317AE3--></OBCQL_WIDGET_QUERY>
+
+<!--8020F940DFEC41629CA7534EF08F880D--><OBCQL_WIDGET_QUERY>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[8020F940DFEC41629CA7534EF08F880D]]></OBCQL_WIDGET_QUERY_ID>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[31E93D579AAF479E9F364D7AD701599E]]></OBKMO_WIDGET_CLASS_ID>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <HQL><![CDATA[select org.name as store, org.id as orgid, bp.id as cusid, bp.name as cusname, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol))/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)- tc.cost),2) as grossmargin,
+round((sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)- tc.cost)/sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join sol.salesOrder as o
+left join o.businessPartner as bp
+left join p.productCategory as pc
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.creationDate>to_date(:datefrom,'YYYY-MM-DD')
+and o.creationDate<to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id, bp.name, bp.id
+order by totalsales desc, quantity desc, org.name, bp.name]]></HQL>
+<!--8020F940DFEC41629CA7534EF08F880D-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--8020F940DFEC41629CA7534EF08F880D--></OBCQL_WIDGET_QUERY>
+
+<!--A1111F20165D4C9E925AF4DDF4F42900--><OBCQL_WIDGET_QUERY>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[A1111F20165D4C9E925AF4DDF4F42900]]></OBCQL_WIDGET_QUERY_ID>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[134CADAC10DD41039D33FDB1F9512CBB]]></OBKMO_WIDGET_CLASS_ID>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <HQL><![CDATA[select org.name as store, org.id as orgid, p.id as prodid, p.name as prodname, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol))/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)- tc.cost),2) as grossmargin,
+round((sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)- tc.cost)/sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join sol.salesOrder as o
+left join p.productCategory as pc
+left join o.obposApplications as posapp
+left join o.organization as org
+where o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.creationDate>to_date(:datefrom,'YYYY-MM-DD')
+and o.creationDate<to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id, p.name, p.id
+order by totalsales desc, quantity desc, org.name, p.name]]></HQL>
+<!--A1111F20165D4C9E925AF4DDF4F42900-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--A1111F20165D4C9E925AF4DDF4F42900--></OBCQL_WIDGET_QUERY>
+
+<!--C43F89CE54D940A0B5FF742340A8CD5A--><OBCQL_WIDGET_QUERY>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[C43F89CE54D940A0B5FF742340A8CD5A]]></OBCQL_WIDGET_QUERY_ID>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[0DCA6AF8BA8C48B0A499211B5F58E9B5]]></OBKMO_WIDGET_CLASS_ID>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <HQL><![CDATA[select org.name as store, org.id as orgid, pc.id as familyid, pc.name as family, 
+sum(sol.orderedQuantity) as quantity, 
+round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) as totaldiscount,
+case when round(sum(sol.orderedQuantity*(sol.grossListPrice-sol.grossUnitPrice)),2) = 0 then 0 else
+( case when sum(sol.grossListPrice) = 0 then 100 else round((sum(sol.grossListPrice-sol.grossUnitPrice)/sum(sol.grossListPrice))*100,2) end ) end as totaldiscpercentage,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)),2) as totalsales,
+round(sum(tc.cost),2) as totalcost,
+case when round(sum(tc.cost),2)>0 then round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol))/(sum(tc.cost)),2) else NULL end as markup,
+round(sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)- tc.cost),2) as grossmargin,
+round((sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)- tc.cost)/sum(sol.lineNetAmount + (select sum(taxAmount) from OrderLineTax olt where olt.salesOrderLine = sol)))*100,2) as grossmarginpercentage
+from TransactionCost as tc
+join tc.inventoryTransaction as t
+right join t.goodsShipmentLine as iol
+left join iol.salesOrderLine as sol
+left join sol.product as p
+left join sol.salesOrder as o
+left join p.productCategory as pc
+left join o.obposApplications as posapp
+left join o.organization as org
+where posapp.client.id=:client
+and posapp.organization.id IN (:organizationList)
+and o.salesTransaction = 'Y'
+and o.documentStatus = 'CO'
+and o.creationDate>to_date(:datefrom,'YYYY-MM-DD')
+and o.creationDate<to_date(:dateto,'YYYY-MM-DD')
+and @optional_filters@
+group by org.name, org.id, pc.name, pc.id
+order by totalsales desc, quantity desc, org.name, pc.name]]></HQL>
+<!--C43F89CE54D940A0B5FF742340A8CD5A-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--C43F89CE54D940A0B5FF742340A8CD5A--></OBCQL_WIDGET_QUERY>
+
+<!--CB5DF45E92CF4A46BCFA78C175021605--><OBCQL_WIDGET_QUERY>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <OBCQL_WIDGET_QUERY_ID><![CDATA[CB5DF45E92CF4A46BCFA78C175021605]]></OBCQL_WIDGET_QUERY_ID>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <AD_CLIENT_ID><![CDATA[0]]></AD_CLIENT_ID>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <AD_ORG_ID><![CDATA[0]]></AD_ORG_ID>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <ISACTIVE><![CDATA[Y]]></ISACTIVE>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <OBKMO_WIDGET_CLASS_ID><![CDATA[F080F51DF91E4504B0EA34EEB2E7977C]]></OBKMO_WIDGET_CLASS_ID>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <HQL><![CDATA[select pos.name as posname,org.name as store, org.id as orgid,pos.id as posid, prod.name as prodname,prod.id as prodid, to_char(ord.creationDate, 'YYYY') as year,to_char(ord.creationDate, 'MM') as month, sum(ordl.orderedQuantity) as quantity
+from Order ord,OrderLine ordl,Product prod,OBPOS_Applications pos, Organization org
+where pos.client.id=:client
+and pos.organization.id IN (:organizationList)
+and pos.id = ord.obposApplications
+and ord.organization=org.id
+and ordl.salesOrder=ord.id
+and prod.id=ordl.product
+and ord.salesTransaction='Y'
+and ord.documentStatus='CO'
+and @optional_filters@
+group by pos.name, org.name,pos.id, org.id,prod.name,prod.id,to_char(ord.creationDate, 'YYYY'),to_char(ord.creationDate, 'MM')
+order by to_char(ord.creationDate, 'YYYY'),to_char(ord.creationDate, 'MM')]]></HQL>
+<!--CB5DF45E92CF4A46BCFA78C175021605-->  <TYPE><![CDATA[HQL]]></TYPE>
+<!--CB5DF45E92CF4A46BCFA78C175021605--></OBCQL_WIDGET_QUERY>
+
+</data>

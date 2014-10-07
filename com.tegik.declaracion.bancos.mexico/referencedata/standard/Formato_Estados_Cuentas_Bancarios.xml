@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BanMex_Configuracion id="B2CDF1FD2112432990F851C6FAC986F6" identifier="Banamex">
+    <id>B2CDF1FD2112432990F851C6FAC986F6</id>
+    <active>true</active>
+    <creationDate transient="true">2014-03-05T15:26:01.605Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-11T09:53:45.142Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <classname xsi:nil="true"/>
+    <banco>Banamex</banco>
+    <separador>,</separador>
+    <inicioFila>18</inicioFila>
+  </BanMex_Configuracion>
+  <BanMex_Columnas id="0F4021A93BC8422C805BA86855DC819B" identifier="1 - description">
+    <id>0F4021A93BC8422C805BA86855DC819B</id>
+    <banmexConfiguracion id="B2CDF1FD2112432990F851C6FAC986F6" entity-name="BanMex_Configuracion" identifier="Banamex"/>
+    <active>true</active>
+    <creationDate transient="true">2014-03-13T12:21:29.84Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-18T12:57:38.149Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <dato>java.lang.String</dato>
+    <formatoDate xsi:nil="true"/>
+    <corresponde>description</corresponde>
+    <columna>1</columna>
+    <subfijo>RFS:</subfijo>
+    <prefijo xsi:nil="true"/>
+    <buscar>true</buscar>
+    <cantidad>0</cantidad>
+    <esignorar>false</esignorar>
+  </BanMex_Columnas>
+  <BanMex_Columnas id="B7616F31333141E1A74374E4A396520C" identifier="3 - dramount">
+    <id>B7616F31333141E1A74374E4A396520C</id>
+    <banmexConfiguracion id="B2CDF1FD2112432990F851C6FAC986F6" entity-name="BanMex_Configuracion" identifier="Banamex"/>
+    <active>true</active>
+    <creationDate transient="true">2014-03-06T16:09:48.606Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-20T09:20:17.468Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <dato>java.math.BigDecimal</dato>
+    <formatoDate xsi:nil="true"/>
+    <corresponde>dramount</corresponde>
+    <columna>3</columna>
+    <subfijo xsi:nil="true"/>
+    <prefijo xsi:nil="true"/>
+    <buscar>false</buscar>
+    <cantidad>0</cantidad>
+    <esignorar xsi:nil="true"/>
+  </BanMex_Columnas>
+  <BanMex_Columnas id="D142406BD41640BA957B1B477ACE4F44" identifier="2 - cramount">
+    <id>D142406BD41640BA957B1B477ACE4F44</id>
+    <banmexConfiguracion id="B2CDF1FD2112432990F851C6FAC986F6" entity-name="BanMex_Configuracion" identifier="Banamex"/>
+    <active>true</active>
+    <creationDate transient="true">2014-03-06T16:09:29.706Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-20T09:20:11.397Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <dato>java.math.BigDecimal</dato>
+    <formatoDate xsi:nil="true"/>
+    <corresponde>cramount</corresponde>
+    <columna>2</columna>
+    <subfijo xsi:nil="true"/>
+    <prefijo xsi:nil="true"/>
+    <buscar>false</buscar>
+    <cantidad>0</cantidad>
+    <esignorar xsi:nil="true"/>
+  </BanMex_Columnas>
+  <BanMex_Columnas id="D57F5D854A544DC1893A71ABAC8A9249" identifier="0 - transactionDate">
+    <id>D57F5D854A544DC1893A71ABAC8A9249</id>
+    <banmexConfiguracion id="B2CDF1FD2112432990F851C6FAC986F6" entity-name="BanMex_Configuracion" identifier="Banamex"/>
+    <active>true</active>
+    <creationDate transient="true">2014-03-06T16:08:53.176Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-06T16:08:53.176Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <dato>java.util.Date</dato>
+    <formatoDate>DD/MM/AAAA</formatoDate>
+    <corresponde>transactionDate</corresponde>
+    <columna>0</columna>
+    <subfijo xsi:nil="true"/>
+    <prefijo xsi:nil="true"/>
+    <buscar>false</buscar>
+    <cantidad>0</cantidad>
+    <esignorar xsi:nil="true"/>
+  </BanMex_Columnas>
+  <FinancialMgmtBankFileFormat id="D069B8AE8A7E4BC69D082C1DE10314EF" identifier="Formatos Estado de Cuenta">
+    <id>D069B8AE8A7E4BC69D082C1DE10314EF</id>
+    <creationDate transient="true">2014-03-05T16:34:42.104Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-03-12T12:22:35.168Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <active>true</active>
+    <name>Formatos Estado de Cuenta</name>
+    <description xsi:nil="true"/>
+    <javaClassName>com.tegik.declaracion.bancos.mexico.DeclaracionBancosCsv</javaClassName>
+  </FinancialMgmtBankFileFormat>
+</ob:Openbravo>

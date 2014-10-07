@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_ASIGNA_BPLOC">
+    <function name="TEGIDL_ASIGNA_BPLOC" type="NULL">
+      <parameter name="p_location_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_bp_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+  v_existegl VARCHAR2(32);
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+regreso:='';
+
+
+--------------------------
+--Create------------------
+--------------------------
+
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM c_bpartner
+      WHERE isactive='Y' AND c_bpartner_id=p_bp_id
+      )
+    LOOP
+
+	INSERT INTO c_bpartner_location(
+            c_bpartner_location_id, 
+            ad_client_id, 
+            ad_org_id, 
+            isactive, 
+            createdby,
+            updatedby, 
+            "name", 
+            isbillto, 
+            isshipto, 
+            ispayfrom, 
+            isremitto, 
+            c_bpartner_id, 
+            c_location_id, 
+            istaxlocation)
+	VALUES ( GET_UUID(),--c_bpartner_location_id, 
+            Cur_Parameter.ad_client_id, 
+            '0',--ad_org_id, 
+            'Y',--isactive, 
+            '100',--createdby,
+            '100',--updatedby, 
+            'Generica',--"name", 
+            'Y',--isbillto, 
+            'Y',--isshipto, 
+            'Y',--ispayfrom, 
+            'Y',--isremitto, 
+            Cur_Parameter.c_bpartner_id, 
+            p_location_id,--c_location_id, 
+            'Y'--istaxlocation, 
+            );
+
+	 
+    END LOOP; 
+
+--------------------------
+--END Create--------------
+--------------------------
+
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_ASIGNA_BPLOC
+]]></body>
+    </function>
+  </database>

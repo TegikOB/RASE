@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ *************************************************************************
+ * The contents of this file are subject to the Openbravo  Public  License
+ * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+ * Version 1.1  with a permitted attribution clause; you may not  use this
+ * file except in compliance with the License. You  may  obtain  a copy of
+ * the License at http://www.openbravo.com/legal/license.html 
+ * Software distributed under the License  is  distributed  on  an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific  language  governing  rights  and  limitations
+ * under the License. 
+ * The Original Code is Openbravo ERP. 
+ * The Initial Developer of the Original Code is Openbravo SLU 
+ * All portions are Copyright (C) 2012 Openbravo SLU 
+ * All Rights Reserved. 
+ * Contributor(s):  ______________________________________.
+ ************************************************************************
+-->
+
+<REPORT>
+  <template file="AgingInquiry.html"></template>
+
+  <PARAMETER id="paramCSS" name="theme" attribute="href" replace="Default"/>
+  <PARAMETER id="paramDirectory" name="directory" default=""/>
+  <PARAMETER id="paramLanguage" name="paramLanguage" default=""/>
+  <PARAMETER id="fieldCalendar" name="calendar" attribute="src" replace="es" default="en"/>
+  <PARAMETER id="tdleftTabs" name="leftTabs" default=""/>
+  <PARAMETER id="tdtopButtons" name="navigationBar" default=""/>
+  <PARAMETER id="paramToolBar" name="toolbar" default=""/>
+  <PARAMETER id="paramParentTabContainer" name="parentTabContainer" default=" "/>
+  <PARAMETER id="paramMainTabContainer" name="mainTabContainer" default=" "/>
+  <PARAMETER id="paramChildTabContainer" name="childTabContainer" default=" "/>
+  <PARAMETER id="messageBoxID" name="messageType" attribute="class" replace="yy" default="HIDDEN"/>
+  <PARAMETER id="messageBoxIDTitle" name="messageTitle" default=""/>
+  <PARAMETER id="messageBoxIDMessage" name="messageMessage" default=""/>
+  
+  <PARAMETER id="inpTabTitle" name="tabTitle" attribute="value" />
+  <PARAMETER id="inpTabTitleDetails" name="tabTitleDetails" attribute="value" />
+  <PARAMETER id="inpCurrentDate" name="currentDate" attribute="value"/>
+  <PARAMETER id="inpCurrentDate" name="currentDateDisplayFormat" attribute="displayformat" replace="xx"/>
+  <PARAMETER id="inpCurrentDate" name="currentDateSaveFormat" attribute="saveformat" replace="yy"/>
+  
+  <PARAMETER id="paramColumn1" name="column1" attribute="value" format="integerEdition"/>
+  <PARAMETER id="paramColumn2greater" name="column2greater" attribute="value" format="integerEdition"/>
+  <PARAMETER id="paramColumn2" name="column2" attribute="value" format="integerEdition"/>
+  <PARAMETER id="paramColumn3greater" name="column3greater" attribute="value" format="integerEdition"/>
+  <PARAMETER id="paramColumn3" name="column3" attribute="value" format="integerEdition"/>
+  <PARAMETER id="paramColumn4greater" name="column4greater" attribute="value" format="integerEdition"/>
+  <PARAMETER id="paramColumn4" name="column4" attribute="value" format="integerEdition"/>
+  
+  <PARAMETER id="inpDetails" name="details" boolean="checked" withId="inpDetails" default="N"/>
+  <PARAMETER id="inpDoubtful" name="doubtful" boolean="checked" withId="inpDoubtful" default="N"/>
+  
+  <PARAMETER id="paramAD_ORG_Id" name="paramAD_ORG_Id" attribute="value"/>
+  <SUBREPORT id="reportAD_ORGID" name="reportAD_ORGID" report="org/openbravo/erpCommon/reference/List">
+    <ARGUMENT name="parameterListSelected" withId="paramAD_ORG_Id"/>
+  </SUBREPORT>
+  
+  <SUBREPORT id="inpBPartnerId_IN" name="inpBPartnerId_IN" report="org/openbravo/erpCommon/reference/List">
+    <ARGUMENT name="parameterListSelected"/>
+  </SUBREPORT>
+  <PARAMETER id="fieldClientsSelect" name="clients" boolean="checked" withId="paramCheckClient"/>
+  
+  <PARAMETER id="paramC_ACCTSCHEMA_ID" name="paramAD_FINACC_Id" attribute="value"/>
+
+</REPORT>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="0CC268ED2E8D4B0397A0DCBBFA2237DE" trl="Y">
+    <value column="Name" original="FIN_BankStatementLine Payment Type">FIN_BankStatementLine Tipo de Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="15CCD38B5F534E03BB3C344BCD1FBB1E" trl="N">
+    <value column="Name" original="APRM_StandardButtonList">APRM_StandardButtonList</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="1A6C5E0A5868417786ECCF3C02B17D65" trl="Y">
+    <value column="Name" original="GL Item selector">Selector de Conceptos Contables</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="414E5DD3A1304C7781FB856A6872F428" trl="N">
+    <value column="Name" original="AD_Table">AD_Table</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="56DEFF37A33F46D1AC918C97C4447EAF" trl="Y">
+    <value column="Name" original="Business Partner selector">Selector de Terceros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="5C5A20E0E7234DD58B5E95E0F06615A4" trl="N">
+    <value column="Name" original="FIN_Finacc_Transaction">FIN_Finacc_Transaction</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="5E77652CBFEB4F03A3A0629642D024BD" trl="N">
+    <value column="Name" original="FIN_Payment">FIN_Payment</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="6932F568D27E47DB861809AD66C15A01" trl="Y">
+    <value column="Name" original="Modify Payment In Plan">Modificar Plan de Cobros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="798239EB069F41A9BA8EE040C63DDBBC" trl="Y">
+    <value column="Name" original="Doubtful Debt Process actions">Acciones del proceso de dudoso cobro</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="79FDE7805FC84C2BB251EE57E96C0AEE" trl="Y">
+    <value column="Name" original="FIN_Process Proposal Window Reference">FIN_Process Referencia de la Ventana Propuesta de Pagos</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B8C833E4F0A44A2DA5FC7606F3CD9439" trl="Y">
+    <value column="Name" original="Modify Payment Out Plan">Modificar Plan de Pagos</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="C1B4345A1F8841C2B1ADD403CA733D75" trl="Y">
+    <value column="Name" original="Transaction Type AddTransaction">Tipo Transacción Agregar Transacción</value>
+    <value column="Description" original="List of options for transaction type in Add Transaction popup">Lista de opciones para tipos de transacción en el popup añadir transacción</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="DB71FC312327430EAEACF42918405BF9" trl="Y">
+    <value column="Name" original="Transactions link">Enlace a transacciones</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E1C0B1C7D7C84E85903409A39A53E855" trl="N">
+    <value column="Name" original="FIN_Payment no combo">FIN_Payment no combo</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E91B038ABF4F4A2280264C4A475852A4" trl="N">
+    <value column="Name" original="APR_buttonList">APR_buttonList</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="EC75B6F5A9504DB6B3F3356EA85F15EE" trl="N">
+    <value column="Name" original="FIN_BankStatement Process Actions">FIN_BankStatement Process Actions</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="F15C13A199A748F1B0B00E985A64C036" trl="Y">
+    <value column="Name" original="FIN_Payable payment on create action">FIN_Payable acciones a la hora de crear un pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="F903F726B41A49D3860243101CEEBA25" trl="Y">
+    <value column="Name" original="FIN_Receivable payment on create action">FIN_Receivable acciones a la hora de crear un pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FB9C3B9C927A4AE5A554B952D67FAFED" trl="Y">
+    <value column="Name" original="Payment Proposal Pick and Edit Lines">Elegir y editar lineas propuesta de pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF8080812E443491012E443C053A001A" trl="Y">
+    <value column="Name" original="APRM_Reconciliation process actions">Acciones del proceso APRM_Reconciliation</value>
+    <value column="Description" original="Reconciliation process actions">Acciones del proceso de reconciliación</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF80808133186ADD01331B465E32002D" trl="Y">
+    <value column="Name" original="Reconciliation Detail Widget">Widget de Detalle de Reconciliación</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312414380131241C5A41001F" trl="Y">
+    <value column="Name" original="Payment description">Descripción del pago</value>
+    <value column="Description" original="List with the possible values to include in payment description related to an invoice ">Lista de valores posibles que se incluirán en la descripción del pago relacionado con una factura </value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D846CC40032" trl="Y">
+    <value column="Name" original="Activity selector">Selector de Actividad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D8C837E003C" trl="Y">
+    <value column="Name" original="Campaign selector">Selector de Campaña</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D8E60800051" trl="Y">
+    <value column="Name" original="Sales region selector">Selector de Región de venta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D8FA681005A" trl="Y">
+    <value column="Name" original="Project Selector">Selector de Proyecto</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ************************************************************************************
+ * Copyright (C) 2013 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************
+-->
+
+<output>
+  <ticket>
+    <line>
+        <image>ticket-image.png</image>
+    </line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_CashUpRpt_Title')) %></text>
+    </line>
+    <line></line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblStore') + ': ' + OB.POS.modelterminal.get('terminal').organization$_identifier) %></text>
+    </line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTerminal') + ': ' + OB.POS.modelterminal.get('terminal')._identifier) %></text>
+    </line>
+        <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblUser') + ': ' + OB.POS.modelterminal.get('context').user._identifier) %></text>
+    </line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTime') + ': ' + OB.I18N.formatDate(cashup.report.get('time')) + ' - ' + OB.I18N.formatHour(cashup.report.get('time'))) %></text>
+    </line>   
+    <line>
+    </line>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblNetSales')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(cashup.report.get('netSales')) %></text>
+    </line>
+    <%
+    _.each(cashup.report.get('salesTaxes'),function(tax){
+    %>
+    <line>
+      <text align ="left" length="25"><%= OB.UTIL.encodeXMLComponent(tax.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(tax.get('amount')) %></text>
+    </line>
+    <%
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblGrossSales')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.report.get('grossSales')) %></text>
+    </line>
+    <line>
+    </line>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblNetReturns')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(cashup.report.get('netReturns')) %></text>
+    </line>
+    <%
+    _.each(cashup.report.get('returnsTaxes'), function(tax){
+    %>
+    <line>
+      <text align ="left" length="25"><%= OB.UTIL.encodeXMLComponent(tax.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(tax.get('amount')) %></text>
+    </line>
+    <%
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblGrossReturns')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.report.get('grossReturns')) %></text>
+    </line>
+    <line>
+    </line>
+     <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalRetailTrans')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.report.get('totalRetailTransactions')) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.report.get('startings'), function(starting){
+    %>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(starting.get('description')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(OB.DEC.mul(starting.get('amount'), starting.get('rate'))) %></text>
+    </line>
+    <%
+    });
+    %>
+     <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalStarting')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.report.get('totalStartings')) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.report.get('drops'), function(drop){
+    if(drop.get('amount') !== drop.get('origAmount')){
+    %>
+    <line>
+      <text align ="left" length="10"><%=OB.UTIL.encodeXMLComponent(drop.get('description')) %></text>
+      <text align ="right" length="17"><%= '('+OB.I18N.formatCurrency(drop.get('amount'))+' '+drop.get('isocode')+')' %></text>
+      <text align ="right" length="12"><%= OB.I18N.formatCurrency(drop.get('origAmount')) %></text>
+    </line>
+    <%
+    }else{
+    %>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(drop.get('description')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(drop.get('amount')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalWithdrawals')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.report.get('totalDrops')) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.report.get('deposits'), function(deposit){
+    if(deposit.get('amount') !== deposit.get('origAmount')){
+    %>
+    <line>
+      <text align ="left" length="10"><%=OB.UTIL.encodeXMLComponent(deposit.get('description')) %></text>
+      <text align ="right" length="17"><%= '('+OB.I18N.formatCurrency(deposit.get('amount'))+' '+deposit.get('isocode')+')' %></text>
+      <text align ="right" length="12"><%= OB.I18N.formatCurrency(deposit.get('origAmount')) %></text>
+    </line>
+    <%
+    }else{
+     %>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(deposit.get('description')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(deposit.get('amount')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalDeposits')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.report.get('totalDeposits')) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.summary.expectedSummary, function(payment){
+    if(payment.get('foreignExpected') && payment.get('foreignExpected')!==payment.get('value')){
+    %>
+    <line>
+      <text align ="left" length="18"><%=OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="11"><%= '('+OB.I18N.formatCurrency(payment.get('foreignExpected'))+' '+payment.get('isocode')+')' %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }else{
+     %>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalExpected')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.summary.totalExpected) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.summary.countedSummary, function(payment){
+   if(payment.get('foreignCounted') && payment.get('foreignCounted')!==payment.get('value')){
+    %>
+    <line>
+      <text align ="left" length="18"><%=OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="11"><%= '('+OB.I18N.formatCurrency(payment.get('foreignCounted'))+' '+payment.get('isocode')+')' %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }else{
+     %>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalCounted')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.summary.totalCounted) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.summary.differenceSummary, function(payment){
+   if(payment.get('foreignDifference') && payment.get('foreignDifference')!==payment.get('value')){
+    %>
+    <line>
+      <text align ="left" length="18"><%=OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="11"><%= '('+OB.I18N.formatCurrency(payment.get('foreignDifference'))+' '+payment.get('isocode')+')' %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }else{
+     %>
+    <line>
+      <text align ="left" length="25"><%=OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalDifference')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.summary.totalDifference) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.summary.qtyToKeepSummary, function(payment) {
+   if (payment.get('second') && payment.get('second') !== payment.get('value')) {
+    %>
+    <line>
+      <text align ="left" length="18"><%= OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="11"><%= '(' + OB.I18N.formatCurrency(payment.get('second')) + ' ' + payment.get('isocode') + ')' %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }else{
+     %>
+    <line>
+      <text align ="left" length="25"><%= OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalQtyToKeep')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.summary.totalQtyToKeep) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    _.each(cashup.summary.qtyToDepoSummary, function(payment) {
+   if (payment.get('second') && payment.get('second') !== payment.get('value')) {
+    %>
+    <line>
+      <text align ="left" length="18"><%= OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="11"><%= '(' + OB.I18N.formatCurrency(payment.get('second')) + ' ' + payment.get('isocode') + ')' %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }else{
+     %>
+    <line>
+      <text align ="left" length="25"><%= OB.UTIL.encodeXMLComponent(payment.get('name')) %></text>
+      <text align ="right" length="14"><%= OB.I18N.formatCurrency(payment.get('value')) %></text>
+    </line>
+    <%
+    }
+    });
+    %>
+    <line>
+      <text align ="left" length="25" bold="true"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotalQtyToDepo')) %></text>
+      <text align ="right" length="14" bold="true"><%= OB.I18N.formatCurrency(cashup.summary.totalQtyToDepo) %></text>
+    </line>
+    <line>
+    </line>
+  </ticket>
+</output>

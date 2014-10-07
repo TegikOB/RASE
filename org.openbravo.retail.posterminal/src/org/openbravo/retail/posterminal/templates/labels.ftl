@@ -1,0 +1,1 @@
+{"labels": ${data.labelsObj},"format": ${data.format}}

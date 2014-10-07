@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="62980B3E5545466D91CA8B2AC352AF72" trl="Y">
+    <value column="Name" original="Datasource">Fuente de datos</value>
+    <value column="Description" original="Datasource component">Componente de fuente de datos</value>
+  </row>
+  <row id="FF80808130DA75580130DAA2E8C5001B" trl="Y">
+    <value column="Name" original="CSV Field Separator">Separador de Campos en fichero CSV</value>
+    <value column="Description" original="This property allows the user to set the character which will be used as field separator on generated CSV files. If it's not set, the comma will be used">Esta propiedad permite al usuario especificar el caracter que se utilizará como separador de campos en ficheros CSV</value>
+  </row>
+  <row id="FF80808130DA75580130DAA53316001E" trl="Y">
+    <value column="Name" original="CSV Decimal Separator">Separador Decimal en fichero CSV</value>
+    <value column="Description" original="This property allows the user to set the decimal separator that will be used on the generated CSV files. If it is not set, the decimal separator defined in the Format.xml file will be used">Esta propiedad permite al usuario especificar el separador decimal que se utilizará en los ficheros CSV</value>
+  </row>
+  <row id="FF80808130E1116E0130E14EB4E90016" trl="Y">
+    <value column="Name" original="CSV Text Encoding">Codificación de los ficheros CSV</value>
+    <value column="Description" original="This property allows the user to configure the Text Encoding of the generated CSV files. Valid values are for example 'iso-8859-1', or 'UTF-8'">Esta propiedad permite al usuario configurar el tipo de codificacion de los ficheros CSV generados. Valores válidos son, por ejemplo, 'iso-8859-1', y 'UTF-8'</value>
+  </row>
+</compiereTrl>

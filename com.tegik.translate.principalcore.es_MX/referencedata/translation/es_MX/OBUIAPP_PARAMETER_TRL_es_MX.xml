@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="OBUIAPP_PARAMETER" version="">
+  <row id="C09B482527EC4D93B3E41CE7F37F3F57" trl="N">
+    <value column="Name" isTrl="N" original="Portal Role">Portal Role</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBUISEL_SELECTOR" version="">
+  <row id="6643B422022B41698FEFD6C7FAD7AC4B" trl="Y">
+    <value column="Name" original="Transactions link">Enlace a transacciones</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="9FAD469CE4414A25974CF45C0AD22D35" trl="Y">
+    <value column="Name" original="GL Item selector">Selector de Conceptos Contables</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="A021037EAFFA49D299E4B6886E6A811C" trl="N">
+    <value column="Name" original="FIN_Payment no combo">FIN_Payment no combo</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="A98899B1C75A4F4EBD3414F1B654EFAB" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D8C1EC40036" trl="Y">
+    <value column="Name" original="Activity selector">Selector de Actividad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D8DCCD50045" trl="Y">
+    <value column="Name" original="Campaign selector">Selector de Campaña</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D8EE5430054" trl="Y">
+    <value column="Name" original="Sales region selector">Selector de Región de venta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181312D569C01312D90408D005D" trl="Y">
+    <value column="Name" original="Project Selector">Selector de Proyecto</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

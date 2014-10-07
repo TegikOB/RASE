@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="0C69276CA4E9442182ECCD55E9C73BF9" trl="Y">
+    <value column="Name" original="Local Warehouse">Almacén local</value>
+    <value column="PrintName" original="Local Warehouse">Almacén local</value>
+    <value column="Description" original="The warehouse inserted by default in the documents when it is synchronized with the erp.">El almacén inserta por defecto en los documentos cuando está sincronizado 
+con el ERP.</value>
+    <value column="Help" original="The warehouse inserted by default in the documents when it is synchronized with the erp.">El almacén inserta por defecto en los documentos cuando está sincronizado 
+con el ERP.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="22AB49A4267B46519A7ED01C18BC6767" trl="Y">
+    <value column="Name" original="Default organization for BPs">Organización por defecto para los terceros</value>
+    <value column="PrintName" original="EM_Obretco_Ad_Org_ID">EM_Obretco_Ad_Org_ID</value>
+    <value column="Description" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="Help" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="2DF58A0B4F1F4D02A1C8AE6F19EB9953" trl="Y">
+    <value column="Name" original="Default invoice term for BPs">Tipo de facturación por defecto para los terceros</value>
+    <value column="PrintName" original="EM_Obretco_C_Bp_Invoicerules">EM_Obretco_C_Bp_Invoicerules</value>
+    <value column="Description" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="Help" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="30FD76B2A1DB48BAA8FF69947FA96487" trl="N">
+    <value column="Name" original="Obretco_Prol_Product_ID"/>
+    <value column="PrintName" original="Obretco_Prol_Product_ID">Obretco_Prol_Product_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="35BA414211714467A091BB719C7C0466" trl="Y">
+    <value column="Name" original="Event Type">Tipo de evento</value>
+    <value column="PrintName" original="Event Type">Tipo de evento</value>
+    <value column="Description" original="Event Type">Tipo de Evento</value>
+    <value column="Help" original="Sets which of the 3 possible types the event is:&#10;*Close. This event is triggered by Cash Up process in case the payment type allows automatic movement of founds. It is used to determine the destination financial account for these movements.&#10;*In. Used by Cash Management process for deposits. When a deposit is done, the list of available In events for that payment type is shown to select one of them. Financial account in the event is used as origin account, this is, the amount will be taken from this account and deposited in the terminal's account.&#10;*Out. Used by Cash Management process for withdrawals. When a withdrawals is done, the list of available Out events for that payment type is shown to select one of them. Financial account in the event is used as destination account, this is, the amount will be taken from terminal's account and deposited on this account."/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="5945D6551DB34E88BB10C3E051D4CD86" trl="Y">
+    <value column="Name" original="Default payment term for BPs">Plazos de pago por defecto para los terceros</value>
+    <value column="PrintName" original="EM_Obretco_C_Paymentterm_ID"/>
+    <value column="Description" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="Help" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="6C44D00D14264AA4BC0380C48C9980DC" trl="Y">
+    <value column="Name" original="Default payment method for BPs">Método de pago por defecto para los terceros</value>
+    <value column="PrintName" original="EM_Obretco_Fin_Paymntmthd_ID"/>
+    <value column="Description" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="Help" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="8DE5963A8C4C42D881FE155384B7D5E0" trl="Y">
+    <value column="Name" original="Assortment">Lista de productos</value>
+    <value column="PrintName" original="Assortment">Lista de productos</value>
+    <value column="Description" original="It is a product list that it is used to define the products that are sold in the organization group or store.">Se trata de una lista de productos que se utiliza para definir los productos 
+que se venden en el grupo de organización o tienda.</value>
+    <value column="Help" original="It is a product list that it is used to define the products that are sold in the organization group or store.">Se trata de una lista de productos que se utiliza para definir los productos 
+que se venden en el grupo de organización o tienda.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="97D4DECF17BB4BD78C2CCFB5997E10BD" trl="Y">
+    <value column="Name" original="Anonymous Customer">Cliente Anónimo</value>
+    <value column="PrintName" original="Anonymous Customer">Cliente Anónimo</value>
+    <value column="Description" original="The business partner inserted by default in the documents when it is synchronized with the erp."/>
+    <value column="Help" original="The business partner inserted by default in the documents when it is synchronized with the erp.">El Tercero introducido por defecto en los documentos cuando está 
+sincronizado con el ERP.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="A6BF15A0B5C74D8E9E39C1DAC87BA550" trl="Y">
+    <value column="Name" original="Anonymous Customer Location">Dirección del Cliente Anónimo</value>
+    <value column="PrintName" original="Anonymous Customer Location">Dirección del Cliente Anónimo</value>
+    <value column="Description" original="The business partner location inserted by default in the documents when it is synchronized with the erp.">La direccion de tercero se inserta por defecto en los documentos cuando está 
+sincronizado con el ERP.</value>
+    <value column="Help" original="The business partner location inserted by default in the documents when it is synchronized with the erp.">El Tercero introducido por defecto en los documentos cuando está 
+sincronizado con el ERP.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="AC1CE80A38A745238052AE3AE5591267" trl="Y">
+    <value column="Name" original="Show BP Category selector for BPs edition">Muestra el selector de categoria al editar un tercero</value>
+    <value column="PrintName" original="Show BP Category selector for BPs edition">Muestra el selector de categoria al editar un tercero</value>
+    <value column="Description" original="Set the visibility of Business partner category selector when business partners are creted / edited from web pos.">Ajuste la visibilidad del selector de categoría de interlocutores de 
+negocios cuando los socios de negocios están creted / editar en pos web.</value>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="AFD0E96D45374668951AACD553A0CAFD" trl="Y">
+    <value column="Name" original="Retail Organization Type">Tipo de Organización Minorista</value>
+    <value column="PrintName" original="Retail Organization Type">Tipo de Organización Minorista</value>
+    <value column="Description" original="Retail Organization Type. It could be group or store">Tipo de Organización Retail. Podría ser el grupo o tienda</value>
+    <value column="Help" original="Retail Organization Type. It could be group or store">Tipo de Organización Retail. Podría ser el grupo o tienda</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C6568A19B3B848748CB299FBB36E8480" trl="Y">
+    <value column="Name" original="Cash Management Close Event">Evento de Cierre de Caja</value>
+    <value column="PrintName" original="Cash Management Close Event">Evento de Cierre de Caja</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="C6AE092D0B7F453D854CDBD58E2312FA" trl="Y">
+    <value column="Name" original="Bestseller">Más vendido</value>
+    <value column="PrintName" original="Best seller">Más vendido</value>
+    <value column="Description" original="This fields adds this product to the best sellers category of Web POS">En este campo se añade este producto a la categoría de mejor vendidos del 
+POS Web</value>
+    <value column="Help" original="This fields adds this product to the best sellers category of Web POS">En este campo se añade este producto a la categoría de mejor vendidos del 
+POS Web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="CB9582FF901846EBA2E919D35BD924AD" trl="Y">
+    <value column="Name" original="Include All Products">Incluir Todos los Productos</value>
+    <value column="PrintName" original="Include All Products">Incluir Todos los Productos</value>
+    <value column="Description" original="Include all products in the assortment">Incluya todos los productos en el surtido</value>
+    <value column="Help" original="Include all products in the assortment"/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="CD6320BFCD8D48CDAB5F04054178B6E8" trl="Y">
+    <value column="Name" original="Default BP Category for BPs">Tercero por defecto para la categoria de terceros</value>
+    <value column="PrintName" original="EM_Obretco_C_Bp_Group_ID">EM_Obretco_C_Bp_Group_ID</value>
+    <value column="Description" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="Help" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="ED0F9A8ED60F4C319CC2F4A27EB768DB" trl="N">
+    <value column="Name" original="Obretco_Productlist_ID"/>
+    <value column="PrintName" original="Obretco_Productlist_ID">Obretco_Productlist_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="F8D47053F48A49928D4C2B55550CBDA6" trl="Y">
+    <value column="Name" original="Show Tax ID for BPs edition">Muestra el ID del impuesto para la edición de terceros</value>
+    <value column="PrintName" original="EM_Obretco_Showtaxid">EM_Obretco_Showtaxid</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="F91DC31E1943412E804D40CFF00DB432" trl="Y">
+    <value column="Name" original="Default country for BPs">País por defecto para los terceros</value>
+    <value column="PrintName" original=""/>
+    <value column="Description" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="Help" original="Default value for this field when a business partner is created using web POS">El valor predeterminado para este campo cuando se crea un socio de negocios 
+utilizando POS web</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRAD_WIDGET_CLASS">
+    <function name="TRLMX_TRAD_WIDGET_CLASS" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+v_tradMod VARCHAR(60);
+
+BEGIN
+
+
+SELECT COUNT(OBKMO_WIDGET_CLASS_MENU_ID) 
+  FROM OBKMO_WIDGET_CLASS_MENU_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM OBKMO_WIDGET_CLASS_MENU m
+INNER JOIN OBKMO_WIDGET_CLASS c ON m.OBKMO_WIDGET_CLASS_ID= c.OBKMO_WIDGET_CLASS_ID
+)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+--toma la traduccion de mexico
+SELECT * FROM OBKMO_WIDGET_CLASS_MENU_TRL t 
+  WHERE V_Record.OBKMO_WIDGET_CLASS_MENU_ID = t.OBKMO_WIDGET_CLASS_MENU_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+
+--toma la traduccion de españa
+  SELECT * FROM OBKMO_WIDGET_CLASS_MENU_TRL t
+  WHERE V_Record.OBKMO_WIDGET_CLASS_MENU_ID = t.OBKMO_WIDGET_CLASS_MENU_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+
+SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+ 
+--inserta la palabra
+IF(v_TradMex.AD_Language IS NULL AND v_tradMod <> 'es_MX')THEN
+
+
+DBMS_OUTPUT.PUT_LINE( 'Inserta la palabra '|| V_TradEsp.title);
+
+INSERT INTO  OBKMO_WIDGET_CLASS_MENU_TRL (
+  OBKMO_WIDGET_CLASS_MENU_trl_id ,
+  OBKMO_WIDGET_CLASS_MENU_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  name , 
+  description ,
+  help , 
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.OBKMO_WIDGET_CLASS_MENU_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.title ,  
+  V_TradEsp.istranslated);
+
+END IF; 
+
+--si la palabra esta a la original actualiza la palabra
+ IF (v_TradMex.title = V_Record.title AND v_tradMod <> 'es_MX' ) THEN 
+
+   
+DBMS_OUTPUT.PUT_LINE( 'Actualiza la palabra '||v_TradMex.title ||' a '  || V_TradEsp.title);
+  UPDATE OBKMO_WIDGET_CLASS_MENU_TRL 
+  SET name =V_TradEsp.title
+  WHERE OBKMO_WIDGET_CLASS_MENU_TRL_ID= v_TradMex.OBKMO_WIDGET_CLASS_MENU_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRAD_WIDGET_CLASS
+]]></body>
+    </function>
+  </database>

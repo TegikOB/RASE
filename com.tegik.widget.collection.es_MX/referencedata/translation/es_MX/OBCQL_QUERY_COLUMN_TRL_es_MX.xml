@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBCQL_QUERY_COLUMN" version="">
+  <row id="00786482F5BC4FB2BB3E205C1DB6D9FE" trl="Y">
+    <value column="Name" original="Warehouse">Almacén</value>
+  </row>
+  <row id="28F920CD36E14AFBB2025802363E8B02" trl="Y">
+    <value column="Name" original="Qty">Cantidad</value>
+  </row>
+  <row id="39ECC838BD604F49BA07220A64D855A3" trl="Y">
+    <value column="Name" original="Quantity">Cantidad</value>
+  </row>
+  <row id="3A8324D4520B42B08DDED26BD05F98B5" trl="Y">
+    <value column="Name" original="Date">Fecha</value>
+  </row>
+  <row id="7D6F8F4432754AB5872B925CF2BD1E37" trl="Y">
+    <value column="Name" original="Organization">Organización</value>
+  </row>
+  <row id="8106A2118FF44331B98E04E3F6F022DE" trl="Y">
+    <value column="Name" original="Product Attribute">Atributo del producto</value>
+  </row>
+  <row id="824EC1769E0D45F8AB4C94DEAE2B5691" trl="Y">
+    <value column="Name" original="Product Name">Nombre Producto</value>
+  </row>
+  <row id="896F28AC4D454104A7B763ED8C279794" trl="Y">
+    <value column="Name" original="Time Sheet">Hoja de Asistencia</value>
+  </row>
+  <row id="97F2CA4B8CC64E64817EADAE7A837BF1" trl="Y">
+    <value column="Name" original="Quantity On Hand">Cantidad disponible</value>
+  </row>
+  <row id="A7F9DA78BB164108B69479709BEE41A3" trl="Y">
+    <value column="Name" original="Processed">Procesado</value>
+  </row>
+  <row id="ACAA48835B0E4A8D9AC6FCF73AD148C3" trl="Y">
+    <value column="Name" original="Product Category">Categoria del Producto</value>
+  </row>
+  <row id="AD5A79DBC85846EBAA6F881DA264A0CD" trl="Y">
+    <value column="Name" original="Description">Descripción</value>
+  </row>
+  <row id="C0F16834F10D4790BF1DFF33F8EA08CC" trl="Y">
+    <value column="Name" original="UOM">Unidad</value>
+  </row>
+  <row id="D3C5848B4225429A90B63B888EA5E1C6" trl="Y">
+    <value column="Name" original="Product">Producto</value>
+  </row>
+  <row id="F4028CFC1E6C405FB02AF3F922A98CF4" trl="Y">
+    <value column="Name" original="Product">Producto</value>
+  </row>
+  <row id="F80128948ADD4FDFBAC82BF7EBF0FEFD" trl="Y">
+    <value column="Name" original="UOM">Unidad</value>
+  </row>
+</compiereTrl>

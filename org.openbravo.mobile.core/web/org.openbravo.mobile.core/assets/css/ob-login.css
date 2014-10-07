@@ -1,0 +1,182 @@
+/*
+ ************************************************************************************
+ * Copyright (C) 2012-2013 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************
+ */
+
+/* Styles for login window */
+
+div.login-header-row {
+  height: 90px;
+}
+
+div.login-header-company {
+  width: 230px;
+  height: 80px;
+  float: left;
+  background-repeat:  no-repeat;
+  background-position: 0px 12px;
+}
+
+div.login-header-caption {
+  height: 50px;
+  float: left;
+  color: white;
+  padding-top: 25px;
+  padding-right: 40px;
+}
+
+div.login-header-ob {
+  width: 200px;
+  height: 50px;
+  float: right;
+  background-image: url('././../img/OBLogo-small.png');
+  background-repeat:  no-repeat;
+  background-position-y: 20px;
+  background-position-y: 20px;
+  background-position-x: right;
+  text-align: right;
+  padding-top: 25px;
+  padding-right: 40px;
+  color: white;
+}
+
+div.login-user-container {
+  height: 475px;
+  overflow: auto;
+}
+
+div.login-user-button {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-image: url('./../img/anonymous-icon.png');
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+  margin: 0px 7px 7px 0px;
+  cursor: pointer;
+}
+
+div.login-user-button-bottom {
+  width: 100px;
+  height: 18px;
+  background-color: white;
+  opacity: 1;
+  margin: 82px 0px 0px 0px;
+  overflow: hidden;
+}
+
+div.login-user-button-bottom-icon {
+  float: left;
+  width: 20px;
+  height: 18px;
+  color: transparent;
+  background-image: url('./../img/iconOfflineUser.png');
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+
+div.login-user-button-bottom-text {
+  float: left;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1px 0px 0px 0px;
+  width: 78px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+div.login-inputs-container {
+  background-color: #6CB33F;
+  min-width: 210px;
+  height: 220px;
+}
+
+.login-inputs-browser-compatible {
+  padding: 15px;
+}
+
+div.login-status-info {
+  text-align: right;
+  font-size: 16px;
+  color: white;
+}
+
+.input-login {
+  height: 30px;
+  background-color: white;
+  padding: 4px;
+  margin-top: 10px;
+  color: #555;
+  border: 1px solid #CCC;
+  width: calc(100% - 10px);
+  max-width: 230px;
+}
+div.login-inputs-screenlocked {
+	text-align: right;
+   font-size: 16px;
+   color: white;
+padding: 0px 0px 0px 20px;
+}
+
+div.login-inputs-userpassword {
+  padding: 0px 0px 0px 20px;
+}
+
+.login-inputs-username {
+  height: 25px;
+}
+
+.login-inputs-password {
+  height: 25px;
+}
+.login-inputs-loginbutton {
+  text-align: center; margin: 5px 0 -10px 0;
+}
+
+a.login-inputs-button {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 9px 20px 12px 20px;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 20%;
+  float: left;
+  background-color: white;
+  color: #72B446;
+}
+
+div.login-clock {
+  float: right;
+  padding: 30px 0px 0px 0px;
+  text-align: center;
+  color: white;
+}
+
+
+div.login-browsernotsupported-title,
+div.login-browsernotsupported-content {
+  text-align: left;
+  color: white;
+  padding: 20px 0px 0px 20px;
+}
+div.login-browsernotsupported-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+div.login-browsernotsupported-content {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+div.login-browsernotsupported-clock {
+  margin: 108px 0px 0px 20px;
+  text-align: center;
+  color: white;
+}

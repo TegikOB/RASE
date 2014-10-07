@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="2B858E00A3064E16B8CC5BE267FE55C2" trl="Y">
+    <value column="Name" original="Parameter Values">Valores de Parámetro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="2BA5C4E002C94D54B4CB2992CC47245E" trl="Y">
+    <value column="Name" original="Parameter">Parametro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="4526BAAEC10A4B25A89B66792EF86D31" trl="Y">
+    <value column="Name" original="List">Lista</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="64DE7AC24BC745239662A56A0E8FA8A7" trl="Y">
+    <value column="Name" original="Widget Translation">Traducción de Widget</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="70D3C99A3C1144B0A7EAAF0A42EAFE31" trl="Y">
+    <value column="Name" original="Widget Class Access">Permiso de la Clase de Widget</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab lists and/or allows to add the widget classes to which a role will have access to.">This tab lists and/or allows to add the widget classes to which a role will have access to.</value>
+  </row>
+  <row id="8223D8C9D8244DE1A7B49D5E0861BC6B" trl="Y">
+    <value column="Name" original="Widget Access">Permiso de Widget</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="9083A717190E48F0970115C3F739FBF7" trl="Y">
+    <value column="Name" original="Widget Menu Items">Items de Menú de Widget</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Definition of the menu items on the widget">Definición de los items de menú en el widget</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The selector class can define items and actions to be shown after the default widget actions (menu options)">The selector class can define items and actions to be shown after the default widget actions (menu options)</value>
+  </row>
+  <row id="92F00CC55A4840B18B4D868978587B5E" trl="Y">
+    <value column="Name" original="Widget Menu Item Translation">Traducción del Item de Menú de Widget</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B013F445508A41D5908F48575C9CE045" trl="Y">
+    <value column="Name" original="Instance">Instancia</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="C603DA260A2F444E927B73F28C766D74" trl="Y">
+    <value column="Name" original="URL">URL</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="CD7AAE5C65D043ED8A8B790811EAEFA1" trl="Y">
+    <value column="Name" original="Parameter Translation">Traducción de Parámetro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="EA867498578C4E98A4935A53A3A5F6AE" trl="Y">
+    <value column="Name" original="Widget Class">Clase de Widget</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF808181314242630131426D95280008" trl="Y">
+    <value column="Name" original="Widget in Form">Widget en Formulario</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Define and maintain Widget in Form definitions which allow to place workspace widgets into a generated window">Define y mantiene las definiciones de Widgets en Formularios, que permiten colocar widgets del Espacio de Trabajo en el formulario de una ventana generada.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

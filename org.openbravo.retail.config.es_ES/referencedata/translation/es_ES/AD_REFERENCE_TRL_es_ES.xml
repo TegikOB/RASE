@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REFERENCE" version="">
+  <row id="96C5DDD6CD54434BAD17D416CD239346" trl="N">
+    <value column="Name" isTrl="Y" original="Event type">Tipo de evento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9A08EFAF91EE4BA3BD3E1D7544CEA56B" trl="N">
+    <value column="Name" isTrl="Y" original="RetailOrgType">Tipo de Organización Minorista</value>
+    <value column="Description" isTrl="Y" original="Retail organization type">Tipo de Organización Minorista</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B0EAEFDB4D5046C3BAB792160CB0D127" trl="N">
+    <value column="Name" isTrl="N" original="Sale Product Complete">Producto en venta completo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B6C0F97E6722441187E79E94C9A2F00F" trl="N">
+    <value column="Name" isTrl="N" original="c_bp group">c_bp group</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E838B0E7A9CE48C692AB2FAA39D5E4C9" trl="N">
+    <value column="Name" isTrl="N" original="OBRETCO_ProductList">OBRETCO_ProductList</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

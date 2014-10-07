@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_MENU" version="">
+  <row id="0B00ADD7EC2A4EA79E4C952DB36FD980" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="Description" isTrl="Y" original="Defines Terminal Properties">Define las propiedades del terminal</value>
+  </row>
+  <row id="896AC285FD8F4C25A869689D4A98DD8E" trl="N">
+    <value column="Name" isTrl="Y" original="Point of Sale">Punto de venta</value>
+    <value column="Description" isTrl="Y" original="Point of Sale configuration settings">Configuración del punto de venta</value>
+  </row>
+  <row id="97603A8F68CA4AFFB33A1DEF9AF0D88E" trl="N">
+    <value column="Name" isTrl="Y" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="Description" isTrl="Y" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+  </row>
+  <row id="FF8081813363FD710133640958F8001D" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">Terminal Punto de Venta</value>
+    <value column="Description" isTrl="Y" original="POS Terminal">Terminal Punto de Venta</value>
+  </row>
+</compiereTrl>

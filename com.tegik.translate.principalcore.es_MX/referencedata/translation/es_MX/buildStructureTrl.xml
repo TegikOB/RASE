@@ -1,0 +1,17 @@
+<?xml version='1.0' ?>
+  <BuildTranslation>
+    <language>es_MX</language>
+    <mainStepTranslations>
+      <mainStepTranslation code="RB11" originalName="Initial Build Validation" translatedName="Initial Build Validation" translatedErrorMessage="Your system contains some data inconsistencies that must be resolved before applying this maintenance pack.
+The version you are installing introduces stronger consistency checking and that validation failed. The system hasn&apos;t been modified and it is still stable. You may continue using it in its current configuration. However, you must address the problems described in the validation messages below (either by uninstalling the affected modules, or by resolving the problems the validation found), before you can restart the installation process.">
+        <stepTranslations/>
+      </mainStepTranslation>
+      <mainStepTranslation code="RB20" originalName="Build" translatedName="Build" translatedSuccessMessage="The build was successful" translatedWarningMessage="There were warnings on the build. The application will run, but you should check them to see if there were important. Go to &lt;a href=&quot;http://wiki.openbravo.com/wiki/Update_Tips&quot; target=&quot;_blank&quot; class=&quot;MessageBox_TextLink&quot;&gt; this link&lt;/a&gt; for more information. &lt;b&gt;You must now restart the application container&lt;/b&gt; to see the changes." translatedErrorMessage="An error has occurred in the build. For a list of actions to take, go to &lt;a href=&quot;http://wiki.openbravo.com/wiki/Update_Tips&quot; target=&quot;_blank&quot; class=&quot;MessageBox_TextLink&quot;&gt;this link&lt;/a&gt;">
+        <stepTranslations>
+          <stepTranslation code="RB12" originalName="Database update" translatedName="Database update"/>
+          <stepTranslation code="RB31" originalName="Reference data" translatedName="Reference data"/>
+          <stepTranslation code="RB43" originalName="Compilation" translatedName="Compilation"/>
+        </stepTranslations>
+      </mainStepTranslation>
+    </mainStepTranslations>
+  </BuildTranslation>

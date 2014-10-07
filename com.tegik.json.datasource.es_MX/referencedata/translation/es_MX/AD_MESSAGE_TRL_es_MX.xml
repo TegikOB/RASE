@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="E7DFBB17F3104D5EA18467453C976C7A" trl="Y">
+    <value column="MsgText" original="Table or class must be set for a datasource.">Es preciso especificar la tabla o clase para una fuente de datos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

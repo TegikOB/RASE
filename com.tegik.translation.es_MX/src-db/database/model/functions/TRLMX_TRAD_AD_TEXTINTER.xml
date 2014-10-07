@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRAD_AD_TEXTINTER">
+    <function name="TRLMX_TRAD_AD_TEXTINTER" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+v_tradMod VARCHAR(60);
+
+BEGIN
+
+
+SELECT COUNT(AD_TEXTINTERFACES_ID) 
+  FROM AD_TEXTINTERFACES_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM AD_TEXTINTERFACES)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+--toma la traduccion de mexico
+SELECT * FROM AD_TEXTINTERFACES_TRL t 
+  WHERE V_Record.AD_TEXTINTERFACES_ID = t.AD_TEXTINTERFACES_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+  
+--toma la traduccion de España
+  SELECT * FROM AD_TEXTINTERFACES_TRL t
+  WHERE V_Record.AD_TEXTINTERFACES_ID = t.AD_TEXTINTERFACES_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+   
+   SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+ 
+--si la traduccion de mexico es vacio inserta
+IF(v_TradMex.AD_Language IS NULL AND v_tradMod <> 'es_MX' )THEN
+
+
+DBMS_OUTPUT.PUT_LINE( 'Inserto una palabra  ' || V_TradEsp.text);
+INSERT INTO  AD_TEXTINTERFACES_TRL (
+  AD_TEXTINTERFACES_trl_id ,
+  AD_TEXTINTERFACES_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  text , 
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.AD_TEXTINTERFACES_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.text , 
+  V_TradEsp.istranslated);
+
+END IF; 
+
+
+--si esta igual a la de ingles o la original, la coloca a la de españa
+ IF (v_TradMex.text = V_Record.text AND v_tradMod <> 'es_MX' ) THEN 
+
+   
+
+  UPDATE AD_TEXTINTERFACES_TRL 
+  SET text =V_TradEsp.text
+  WHERE AD_TEXTINTERFACES_TRL_ID= v_TradMex.AD_TEXTINTERFACES_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRAD_AD_TEXTINTER
+]]></body>
+    </function>
+  </database>

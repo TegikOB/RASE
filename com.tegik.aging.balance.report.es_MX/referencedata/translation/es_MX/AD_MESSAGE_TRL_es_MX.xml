@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="10A9180DF8404DE8AADE87D62AD8D321" trl="Y">
+    <value column="MsgText" original="Receivables Aging Schedule">Informe de saldos a cobrar por antigüedad</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6CC478903B6A4A358A787E38FA82B918" trl="Y">
+    <value column="MsgText" original="Payables Aging Schedule">Informe de saldos a pagar por antigüedad</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="928EB0B49A2445E1B024AA4AA19624FF" trl="Y">
+    <value column="MsgText" original="Payables Aging Schedule Details">Detalles de Informe de saldos a pagar por antigüedad</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

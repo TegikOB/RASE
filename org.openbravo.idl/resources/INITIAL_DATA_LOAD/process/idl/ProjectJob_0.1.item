@@ -1,0 +1,2066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="executeInsert" prompt="executeInsert?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="numLinesOk" prompt="numLinesOk?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="numLinesRejected" prompt="numLinesRejected?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="validationFailCause" prompt="validationFailCause?" promptNeeded="false" type="id_String" value="null"/>
+  </context>
+  <parameters>
+    <elementParameter field="DIRECTORY" name="COMP_DEFAULT_FILE_DIR" value="/home/gorkaion/src/TOS-All-r29781-V3.1.4/workspace" contextMode="false"/>
+    <elementParameter field="CHECK" name="displaySubjobs" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="AUTHOR" value="gorkaion.damian@openbravo.com" contextMode="false"/>
+    <elementParameter field="TEXT" name="STATUS" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="NAME" value="ProjectJob" contextMode="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.1" contextMode="false"/>
+    <elementParameter field="TEXT" name="PURPOSE" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="DESCRIPTION" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="32" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none" contextMode="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false" contextMode="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" contextMode="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" contextMode="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;/home/openbravo/TOS/workspace/in.csv&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="ojdbc14-10g.jar" contextMode="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PASS_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" contextMode="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/home/gorkaion/src/TOS-All-r29781-V3.1.4/workspace/.metadata&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tDBOutput" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ojdbc14-10g.jar" contextMode="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" contextMode="false"/>
+  </parameters>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" contextMode="false"/>
+    <elementParameter field="CHECK" name="START" value="true" contextMode="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.getProperty(&quot;filename&quot;)" contextMode="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="HEADER" value="1" contextMode="false"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0" contextMode="false"/>
+    <elementParameter field="TEXT" name="LIMIT" value="" contextMode="false"/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false" contextMode="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" contextMode="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_1hFF4K2HEd6Ztbc_bL01NQ - metadata" contextMode="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false" contextMode="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false" contextMode="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10" contextMode="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT" contextMode="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectType"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectStatus"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Processed"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StartDate"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateFinish"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateContract"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Responsible"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BPLocation"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="User"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PaymentMethod"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Commitment"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CommitCeiling"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CommitedAmt"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CommitedQty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ServRevenue"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpExpenses"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ServSerCost"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ServOutCost"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ServCost"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpReinvoicing"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ServMargin"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ExpMargin"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SalesRepresentative"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Warehouse"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="POReference"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Summary"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false" contextMode="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" contextMode="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" contextMode="false"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Read CSV" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_11" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="org.openbravo.idl.proc.IdlService service = org.openbravo.idl.proc.IdlIntService.getInstance().getService(&quot;Project&quot;);&#xA;org.openbravo.idl.proc.Validator validator = service.getValidator(&quot;Project&quot;);&#xA;&#xA;output_row.flag = &quot;0&quot;;&#xA;output_row.whyError = &quot;&quot;;&#xA;&#xA;output_row.Organization = validator.checkTransactionalOrganization(input_row.Organization);&#xA;output_row.Searchkey = validator.checkNotNull(validator.checkString(input_row.Searchkey, 40), &quot;SearchKey&quot;);&#xA;output_row.Name = validator.checkNotNull(validator.checkString(input_row.Name, 60), &quot;Name&quot;);&#xA;output_row.Description = validator.checkString(input_row.Description, 255);&#xA;output_row.Summary = validator.checkBoolean(input_row.Summary);&#xA;output_row.User = validator.checkString(input_row.User, 60);&#xA;output_row.BusinessPartner = validator.checkString(input_row.BusinessPartner, 60);&#xA;output_row.BPLocation = validator.checkString(input_row.BPLocation, 60);&#xA;output_row.POReference = validator.checkString(input_row.POReference, 20);&#xA;output_row.PaymentTerm = validator.checkString(input_row.PaymentTerm, 60);&#xA;output_row.Commitment = validator.checkBoolean(input_row.Commitment);&#xA;output_row.CommitedAmt = validator.checkBigDecimal(input_row.CommitedAmt);&#xA;output_row.DateContract = validator.checkDate(input_row.DateContract);&#xA;output_row.DateFinish = validator.checkDate(input_row.DateFinish);&#xA;output_row.Processed = validator.checkNotNull(validator.checkBoolean(input_row.Processed));&#xA;output_row.SalesRepresentative = validator.checkString(input_row.SalesRepresentative, 60);&#xA;output_row.ProjectType = validator.checkString(input_row.ProjectType, 60);&#xA;output_row.CommitedQty = validator.checkBigDecimal(input_row.CommitedQty);&#xA;output_row.CommitCeiling = validator.checkBoolean(input_row.CommitCeiling);&#xA;output_row.Warehouse = validator.checkString(input_row.Warehouse, 60);&#xA;output_row.ProjectStatus = validator.checkNotNull(validator.checkString(input_row.ProjectStatus, 60));&#xA;output_row.PriceList = validator.checkString(input_row.PriceList, 60);&#xA;output_row.ExpExpenses = validator.checkBigDecimal(input_row.ExpExpenses);&#xA;output_row.ExpMargin = validator.checkBigDecimal(input_row.ExpMargin);&#xA;output_row.ExpReinvoicing = validator.checkBigDecimal(input_row.ExpReinvoicing);&#xA;output_row.Responsible = validator.checkString(input_row.Responsible, 60);&#xA;output_row.ServCost = validator.checkBigDecimal(input_row.ServCost);&#xA;output_row.ServMargin = validator.checkBigDecimal(input_row.ServMargin);&#xA;output_row.ServRevenue = validator.checkBigDecimal(input_row.ServRevenue);&#xA;output_row.StartDate = validator.checkDate(input_row.StartDate);&#xA;output_row.ServSerCost = validator.checkBigDecimal(input_row.ServSerCost);&#xA;output_row.ServOutCost = validator.checkBigDecimal(input_row.ServOutCost);&#xA;output_row.PaymentMethod = validator.checkString(input_row.PaymentMethod, 60);&#xA;&#xA;output_row.flag = validator.getErrorCode();&#xA;output_row.whyError = validator.getErrorMessage();&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Default value and validation" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_11">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_11" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;" contextMode="false"/>
+    <elementParameter field="TABLE" name="CONDITIONS" contextMode="false">
+      <elementValue elementRef="INPUT_COLUMN" value="flag"/>
+      <elementValue elementRef="FUNCTION" value="$source == null? false : $source.toLowerCase().compareTo($target) $operator 0"/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Check FLAG" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tFilterRow_11">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="0">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_16" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="service.logRecordError(&#xA;&#x9;input_row.whyError,&#xA;&#x9;input_row.Organization,&#xA;&#x9;input_row.Searchkey,&#xA;&#x9;input_row.Name,&#xA;&#x9;input_row.Description,&#xA;&#x9;input_row.Summary,&#xA;&#x9;input_row.User,&#xA;&#x9;input_row.BusinessPartner,&#xA;&#x9;input_row.BPLocation,&#xA;&#x9;input_row.POReference,&#xA;&#x9;input_row.PaymentTerm,&#xA;&#x9;input_row.Commitment,&#xA;&#x9;input_row.CommitedAmt,&#xA;&#x9;input_row.DateContract,&#xA;&#x9;input_row.DateFinish,&#xA;&#x9;input_row.Processed,&#xA;&#x9;input_row.SalesRepresentative,&#xA;&#x9;input_row.ProjectType,&#xA;&#x9;input_row.CommitedQty,&#xA;&#x9;input_row.CommitCeiling,&#xA;&#x9;input_row.Warehouse,&#xA;&#x9;input_row.ProjectStatus,&#xA;&#x9;input_row.PriceList,&#xA;&#x9;input_row.ExpExpenses,&#xA;&#x9;input_row.ExpMargin,&#xA;&#x9;input_row.ExpReinvoicing,&#xA;&#x9;input_row.Responsible,&#xA;&#x9;input_row.ServCost,&#xA;&#x9;input_row.ServMargin,&#xA;&#x9;input_row.ServRevenue,&#xA;&#x9;input_row.StartDate,&#xA;&#x9;input_row.ServSerCost,&#xA;&#x9;input_row.ServOutCost,&#xA;&#x9;input_row.PaymentMethod);" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Log error" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_16">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="            row2.flag = &quot;0&quot;;&#xA;            row2.whyError = &quot;&quot;;&#xA;&#xA;            row2.Organization = row1.Organization;&#xA;&#xA;            row2.Searchkey = row1.Searchkey;&#xA;            row2.Name = row1.Name;&#xA;            row2.Description = row1.Description;&#xA;            row2.Summary = row1.Summary;&#xA;&#xA;            row2.User = row1.User;&#xA;            if (row1.User != null) {&#xA;              User objUser = service.findDALInstance(false, User.class, new Value(&#xA;                  User.PROPERTY_NAME, row1.User));&#xA;              if (objUser == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.User + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.BusinessPartner = row1.BusinessPartner;&#xA;            if (row1.BusinessPartner != null) {&#xA;              BusinessPartner objBP = service.findDALInstance(false, BusinessPartner.class,&#xA;                  new Value(BusinessPartner.PROPERTY_NAME, row1.BusinessPartner));&#xA;              if (objBP == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;)&#xA;                    + row1.BusinessPartner + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.BPLocation = row1.BPLocation;&#xA;            if (row1.BPLocation != null) {&#xA;              Location objBP = service.findDALInstance(false, Location.class,&#xA;                  new Value(Location.PROPERTY_NAME, row1.BPLocation));&#xA;              if (objBP == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;)&#xA;                    + row1.BPLocation + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.POReference = row1.POReference;&#xA;&#xA;            row2.PaymentTerm = row1.PaymentTerm;&#xA;            if (row1.PaymentTerm != null) {&#xA;              PaymentTerm objPaymentTerm = service.findDALInstance(false, PaymentTerm.class,&#xA;                  new Value(PaymentTerm.PROPERTY_NAME, row1.PaymentTerm));&#xA;              if (objPaymentTerm == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.PaymentTerm&#xA;                    + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.Commitment = row1.Commitment;&#xA;            row2.CommitedAmt = row1.CommitedAmt;&#xA;            row2.DateContract = row1.DateContract;&#xA;            row2.DateFinish = row1.DateFinish;&#xA;            row2.Processed = row1.Processed;&#xA;&#xA;            row2.SalesRepresentative = row1.SalesRepresentative;&#xA;            if (row1.SalesRepresentative != null) {&#xA;              User objUser = service.findDALInstance(false, User.class, new Value(&#xA;                  User.PROPERTY_NAME, row1.SalesRepresentative));&#xA;              if (objUser == null || objUser.getBusinessPartner() == null&#xA;                  || !objUser.getBusinessPartner().isSalesRepresentative()) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.SalesRepresentative + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.ProjectType = row1.ProjectType;&#xA;            if (row1.ProjectType != null) {&#xA;              ProjectType objProjectType = service.findDALInstance(false, ProjectType.class,&#xA;                  new Value(ProjectType.PROPERTY_NAME, row1.ProjectType));&#xA;              if (objProjectType == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.ProjectType&#xA;                    + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.CommitedQty = row1.CommitedQty;&#xA;            row2.CommitCeiling = row1.CommitCeiling;&#xA;&#xA;            row2.Warehouse = row1.Warehouse;&#xA;            if (row1.Warehouse != null) {&#xA;              Warehouse objWarehouse = service.findDALInstance(false, Warehouse.class, new Value(&#xA;                  Warehouse.PROPERTY_NAME, row1.Warehouse));&#xA;              if (objWarehouse == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.Warehouse&#xA;                    + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.ProjectStatus = row1.ProjectStatus;&#xA;            if (row1.ProjectStatus != null &amp;&amp; service.getReferenceValue(&quot;ProjectStatus&quot;, row1.ProjectStatus) == null) {&#xA;              row2.flag = &quot;-1&quot;;&#xA;              row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.ProjectStatus + &quot;\n&quot;;&#xA;            }&#xA;&#xA;            row2.PriceList = row1.PriceList;&#xA;            if (row1.PriceList != null) {&#xA;              PriceList objPriceList = service.findDALInstance(false, PriceList.class, new Value(&#xA;                  PriceList.PROPERTY_NAME, row1.PriceList));&#xA;              if (objPriceList == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.PriceList&#xA;                    + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.ExpExpenses = row1.ExpExpenses;&#xA;            row2.ExpMargin = row1.ExpMargin;&#xA;            row2.ExpReinvoicing = row1.ExpReinvoicing;&#xA;&#xA;            row2.Responsible = row1.Responsible;&#xA;            if (row1.Responsible != null) {&#xA;              BusinessPartner objBP = service.findDALInstance(false, BusinessPartner.class,&#xA;                  new Value(BusinessPartner.PROPERTY_NAME, row1.Responsible), new Value(&#xA;                      BusinessPartner.PROPERTY_EMPLOYEE, true));&#xA;              if (objBP == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + row1.Responsible&#xA;                    + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;&#xA;            row2.ServCost = row1.ServCost;&#xA;            row2.ServMargin = row1.ServMargin;&#xA;            row2.ServRevenue = row1.ServRevenue;&#xA;            row2.StartDate = row1.StartDate;&#xA;            row2.ServSerCost = row1.ServSerCost;&#xA;            row2.ServOutCost = row1.ServOutCost;&#xA;&#xA;            row2.PaymentMethod = row1.PaymentMethod;&#xA;            if (row1.PaymentMethod != null) {&#xA;              FIN_PaymentMethod objPaymentMethod = service.findDALInstance(false,&#xA;                  FIN_PaymentMethod.class, new Value(FIN_PaymentMethod.PROPERTY_NAME, row1.PaymentMethod));&#xA;              if (objPaymentMethod == null) {&#xA;                row2.flag = &quot;-1&quot;;&#xA;                row2.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;)&#xA;                    + row1.PaymentMethod + &quot;\n&quot;;&#xA;              }&#xA;            }&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.openbravo.idl.proc.Value;&#xA;import org.openbravo.model.ad.access.User;&#xA;import org.openbravo.model.common.businesspartner.BusinessPartner;&#xA;import org.openbravo.model.common.businesspartner.Location;&#xA;import org.openbravo.model.common.enterprise.Organization;&#xA;import org.openbravo.model.common.enterprise.Warehouse;&#xA;import org.openbravo.model.financialmgmt.payment.FIN_PaymentMethod;&#xA;import org.openbravo.model.financialmgmt.payment.PaymentTerm;&#xA;import org.openbravo.model.pricing.pricelist.PriceList;&#xA;import org.openbravo.model.project.ProjectType;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Check references" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_10" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;" contextMode="false"/>
+    <elementParameter field="TABLE" name="CONDITIONS" contextMode="false">
+      <elementValue elementRef="INPUT_COLUMN" value="flag"/>
+      <elementValue elementRef="FUNCTION" value="$source == null? false : $source.toLowerCase().compareTo($target) $operator 0"/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Check FLAG" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tFilterRow_10">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_9" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="service.logRecordError(&#xA;&#x9;input_row.whyError,&#xA;&#x9;input_row.Organization,&#xA;&#x9;input_row.Searchkey,&#xA;&#x9;input_row.Name,&#xA;&#x9;input_row.Description,&#xA;&#x9;input_row.Summary,&#xA;&#x9;input_row.User,&#xA;&#x9;input_row.BusinessPartner,&#xA;&#x9;input_row.BPLocation,&#xA;&#x9;input_row.POReference,&#xA;&#x9;input_row.PaymentTerm,&#xA;&#x9;input_row.Commitment,&#xA;&#x9;input_row.CommitedAmt,&#xA;&#x9;input_row.DateContract,&#xA;&#x9;input_row.DateFinish,&#xA;&#x9;input_row.Processed,&#xA;&#x9;input_row.SalesRepresentative,&#xA;&#x9;input_row.ProjectType,&#xA;&#x9;input_row.CommitedQty,&#xA;&#x9;input_row.CommitCeiling,&#xA;&#x9;input_row.Warehouse,&#xA;&#x9;input_row.ProjectStatus,&#xA;&#x9;input_row.PriceList,&#xA;&#x9;input_row.ExpExpenses,&#xA;&#x9;input_row.ExpMargin,&#xA;&#x9;input_row.ExpReinvoicing,&#xA;&#x9;input_row.Responsible,&#xA;&#x9;input_row.ServCost,&#xA;&#x9;input_row.ServMargin,&#xA;&#x9;input_row.ServRevenue,&#xA;&#x9;input_row.StartDate,&#xA;&#x9;input_row.ServSerCost,&#xA;&#x9;input_row.ServOutCost,&#xA;&#x9;input_row.PaymentMethod);" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Log error" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_9">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_18" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;service.finishRecordProcess(&#xA;&#x9;input_row.Organization,&#xA;&#x9;input_row.Searchkey,&#xA;&#x9;input_row.Name,&#xA;&#x9;input_row.ProjectType,&#xA;&#x9;input_row.ProjectStatus,&#xA;&#x9;input_row.Processed,&#xA;&#x9;input_row.StartDate,&#xA;&#x9;input_row.DateFinish,&#xA;&#x9;input_row.DateContract,&#xA;&#x9;input_row.Responsible,&#xA;&#x9;input_row.BusinessPartner,&#xA;&#x9;input_row.BPLocation,&#xA;&#x9;input_row.User,&#xA;&#x9;input_row.PaymentMethod,&#xA;&#x9;input_row.PaymentTerm,&#xA;&#x9;input_row.Commitment,&#xA;&#x9;input_row.CommitCeiling,&#xA;&#x9;input_row.CommitedAmt,&#xA;&#x9;input_row.CommitedQty,&#xA;&#x9;input_row.ServRevenue,&#xA;&#x9;input_row.ExpExpenses,&#xA;&#x9;input_row.ServSerCost,&#xA;&#x9;input_row.ServOutCost,&#xA;&#x9;input_row.ServCost,&#xA;&#x9;input_row.ExpReinvoicing,&#xA;&#x9;input_row.ServMargin,&#xA;&#x9;input_row.ExpMargin,&#xA;&#x9;input_row.SalesRepresentative,&#xA;&#x9;input_row.Warehouse,&#xA;&#x9;input_row.PriceList,&#xA;&#x9;input_row.POReference,&#xA;&#x9;input_row.Summary,&#xA;&#x9;input_row.Description);" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Finish" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_18">
+      <column comment="" key="false" length="40" name="Organization" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="40" name="Searchkey" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Name" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="5" name="Summary" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="User" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="BPLocation" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="20" name="POReference" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentTerm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Commitment" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedAmt" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateContract" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="DateFinish" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="Processed" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="SalesRepresentative" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectType" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="CommitedQty" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="CommitCeiling" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Warehouse" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="ProjectStatus" nullable="false" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PriceList" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpExpenses" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ExpReinvoicing" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Responsible" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServMargin" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServRevenue" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="10" name="StartDate" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServSerCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="15" name="ServOutCost" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="PaymentMethod" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tJavaRow_11">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerPaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soTaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoicesTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowIban"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerFinancialAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowGeneric"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoiceSchedule"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFinancialAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PayFromAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoiceToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RemitToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShipToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="User"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Summary"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Commitment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceListVersion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PlannedAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PlannedQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POReference"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BPLocation"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateContract"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PlannedMarginAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CommitedAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Warehouse"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BillTo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServSerCost"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServMargin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CommitCeiling"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpExpenses"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpReinvoicing"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CommitedQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Responsible"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoiceToProject"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoicedAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServCost"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoicedQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpMargin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateFinish"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Processed"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DocumentCopies"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectBalanceAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServOutCost"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tJavaRow_11" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_11" target="tFilterRow_11">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerFinancialAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFinancialAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerPaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row1" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_11" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShipToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PayFromAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoiceToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RemitToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowGeneric"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowIban"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="poBankAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soTaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soBankAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoiceSchedule"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoicesTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="REJECT" label="row23" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFilterRow_11" target="tJavaRow_16">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tFilterRow_10">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShipToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PayFromAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoiceToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RemitToAddress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowGeneric"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowIban"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="poBankAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soTaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soBankAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoiceSchedule"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoicesTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerFinancialAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFinancialAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CustomerPaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Commitment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="User"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Warehouse"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BillTo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServSerCost"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PlannedAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServMargin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpExpenses"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PlannedQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CommitCeiling"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpReinvoicing"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CommitedQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POReference"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BPLocation"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServRevenue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServOutCost"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Responsible"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoiceToProject"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceListVersion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoicedAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentMethod"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ServCost"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Summary"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ExpMargin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InvoicedQty"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateFinish"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateContract"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Processed"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DocumentCopies"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PlannedMarginAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CommitedAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectBalanceAmt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row3" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_10" target="tJavaRow_18">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowGeneric"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ShowIban"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="poBankAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soTaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soBankAccount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoiceSchedule"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="soInvoicesTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="REJECT" label="row19" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFilterRow_10" target="tJavaRow_9">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Searchkey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxExempt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ReferenceNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Category"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Language"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Adderss1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Address2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="City"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Region"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Fax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactUser"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Firstname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Lastname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactDescription"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactPhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactAlternativePhone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ContactFax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Vendor"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PaymentTerm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ConsumptionDays"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POFormOfPayment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="POPaymentTerms"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PurchasePriceList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TaxCategory"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Employee"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsSalesRepresentative"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" contextMode="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240" contextMode="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250" contextMode="false"/>
+  </subjob>
+</talendfile:ProcessType>

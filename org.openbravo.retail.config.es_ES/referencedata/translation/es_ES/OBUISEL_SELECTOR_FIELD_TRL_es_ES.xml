@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="OBUISEL_SELECTOR_FIELD" version="">
+  <row id="0456380DFAF6405498A44B04FE6046DF" trl="N">
+    <value column="Name" isTrl="N" original="Quantity Order in draft transactions">Cantidad del pedido en las transacciones borrador</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="33B6086F30CA46F8BC9B82FB6C906CB3" trl="N">
+    <value column="Name" isTrl="N" original="Order UOM">Unidad del pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="71BD4CC666594EDFA744E257DE6990DD" trl="N">
+    <value column="Name" isTrl="N" original="On Hand Quantity order">Cantidad del pedido disponible</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

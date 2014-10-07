@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REF_LIST" version="">
+  <row id="761F353D0F364D99B5A1905D443BFDD2" trl="N">
+    <value column="Name" isTrl="N" original="Apply Average Price">Aplicar precio medio</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="E0CB23747D784441BBC07377735025B2" trl="N">
+    <value column="Name" isTrl="N" original="Apply to Lowest Price">Aplicar precio más bajo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

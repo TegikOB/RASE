@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRADUCCIRMENU">
+    <function name="TRLMX_TRADUCCIRMENU" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+BEGIN
+
+
+SELECT COUNT(AD_MENU_ID) 
+  FROM AD_MENU_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM AD_MENU)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+SELECT * FROM AD_MENU_TRL t 
+  WHERE V_Record.AD_MENU_ID = t.AD_MENU_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+  
+  SELECT * FROM AD_MENU_TRL t
+  WHERE V_Record.AD_MENU_ID = t.AD_MENU_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+ 
+IF(v_TradMex.AD_Language IS NULL )THEN
+
+
+INSERT INTO temporal (Original, Traduccion) VALUES (V_Record.name,V_TradEsp.name );
+INSERT INTO  AD_MENU_TRL (
+  ad_MENU_trl_id ,
+  ad_MENU_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  name , 
+  description ,
+  help , 
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.AD_MENU_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.name , 
+  V_TradEsp.description ,
+  V_TradEsp.help , 
+  V_TradEsp.istranslated);
+
+END IF; 
+
+
+ IF (v_TradMex.name = V_Record.name ) THEN 
+
+   
+
+  UPDATE AD_MENU_TRL 
+  SET name =V_TradEsp.name, description = V_TradEsp.description 
+  WHERE AD_MENU_TRL_ID= v_TradMex.AD_MENU_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRADUCCIRMENU
+]]></body>
+    </function>
+  </database>

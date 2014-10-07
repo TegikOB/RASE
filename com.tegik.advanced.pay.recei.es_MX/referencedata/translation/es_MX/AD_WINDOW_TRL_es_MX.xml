@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="4A35B1C57B4243F4A1E42D882C8DDA3D" trl="Y">
+    <value column="Name" original="Doubtful Debt">Dudoso cobro</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="681E982F747A48A6AF328A236A067559" trl="Y">
+    <value column="Name" original="Doubtful Debt Run">Procesado del dudoso cobro</value>
+    <value column="Description" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Las deudas de dudoso cobro son aquellas que tienen probabilidad de no ser cobradas.</value>
+    <value column="Help" original="The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.">The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.</value>
+  </row>
+  <row id="6EFB8443A1C64F3D926CE42A0E40631C" trl="Y">
+    <value column="Name" original="Purchase Invoice Payment Plan">Plan de pago de facturas de compra</value>
+    <value column="Description" original="Displays all Invoice Payment Plans for purchase transactions which are not fully paid">Muestra todos los planes de pago de factura de transacciones de compra que no estan totalmente pagadas</value>
+    <value column="Help" original="The purchase invoice payment plan window displays all the purchase invoice payment plans which are not fully paid. ">The purchase invoice payment plan window displays all the purchase invoice payment plans which are not fully paid. </value>
+  </row>
+  <row id="C57DED2495184380AFBAAA3CA720C3DA" trl="Y">
+    <value column="Name" original="Modify Payment In Plan">Modificar Plan de Cobros</value>
+    <value column="Description" original="Modify Payment Plan">Modificar Plan de Pagos</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="C5D0C6D541254921B9848A9A1362EE68" trl="Y">
+    <value column="Name" original="Payment Proposal Pick and Edit Lines">Elegir y editar lineas propuesta de pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="D636C2D5C8B94735A2C532267C4E68B0" trl="Y">
+    <value column="Name" original="Doubtful Debts Pick and Edit">Elegir y editar dudoso cobro</value>
+    <value column="Description" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Las deudas de dudoso cobro son aquellas que tienen probabilidad de no ser cobradas.</value>
+    <value column="Help" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.</value>
+  </row>
+  <row id="EB6621E5513F41449E77D68C58C3C409" trl="Y">
+    <value column="Name" original="Doubtful Debt Method">Método de dudoso cobro</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="EDBED920F400435DA5E7CB625301DCBE" trl="Y">
+    <value column="Name" original="Modify Payment Out Plan">Modificar Plan de Pagos</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FC6A51DF5F32451987C0C84D7B338B94" trl="Y">
+    <value column="Name" original="Sales Invoice Payment Plan">Plan de pago de facturas de venta</value>
+    <value column="Description" original="Displays all Invoice Payment Plans for sales transactions which are not fully paid">Muestra toso los palnes de pago de facturas de transacciones de venta que no estan totalmente pagadas</value>
+    <value column="Help" original="The sales invoice payment plan window displays all the sales invoice payment plans which are not fully paid. ">The sales invoice payment plan window displays all the sales invoice payment plans which are not fully paid. </value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="1AC7885279E44C4F976267C28270E1F9" trl="Y">
+    <value column="Name" original="Text Filter Behavior (Window/Tab/Field)">Comportamiento Filtro de texto (Ventana / Tab / Campo)</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="892231CFE03848758D74B0209B801C14" trl="Y">
+    <value column="Name" original="Yes/No/Default">\n
+Sí / No / Por Defecto</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="BCDF0DC3ECD14B07AC54287DCB1276D2" trl="Y">
+    <value column="Name" original="Text Filter Behavior (System)">Comportamiento del filtro del texto (Sistema)</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="D6193AA7FAB6429C8F34249FBF5A5F50" trl="Y">
+    <value column="Name" original="OBUIAPP_ViewImplementation">Implementacion de Vista</value>
+    <value column="Description" original="OBUIAPP_ViewImplementation">Implementacion de Vista</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF8081813201F2DE013201F5628C0003" trl="Y">
+    <value column="Name" original="Personalization Type">Tipo de Personalización</value>
+    <value column="Description" original="The type of the personalization record">El tipo de registro de personalización</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF80818132D8F0F30132D9BC395D0038" trl="Y">
+    <value column="Name" original="Window Reference">Referencia de la Ventana</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF80818132F94B500132F9575619000A" trl="Y">
+    <value column="Name" original="Button List">Lista de Botones</value>
+    <value column="Description" original="Defines the list of actions/buttons to be displayed in the form">Define la lista de acciones/botones que se mostrarán en el formulario</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF8081813310CEAE0133116AA792014D" trl="Y">
+    <value column="Name" original=""/>
+    <value column="Description" original="Process Definition">Definición del Proceso</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TEXTINTERFACES" version="">
+  <row id="00C1D80774D4470F86E1FD91FA0678A2" trl="Y">
+    <value column="Text" original="Hide transactions after statement date">Ocultar transacciones posteriores a la fecha del extracto</value>
+  </row>
+  <row id="00C32E24B51F464FBFF3CFE1AFC2D83C" trl="Y">
+    <value column="Text" original="Received From">Cobrado de</value>
+  </row>
+  <row id="04AE1A356C744C4B9ED883267C718F64" trl="Y">
+    <value column="Text" original="Show payments out for alternative payment methods">Mostrar transacciones con métodos de pago alternativos</value>
+  </row>
+  <row id="053D4ECDDD664B65AF752FDF72B459F0" trl="Y">
+    <value column="Text" original="Details">Detalles</value>
+  </row>
+  <row id="0AF70B48638D440491E23FE689DD39F6" trl="Y">
+    <value column="Text" original="Paid Out">Pagar</value>
+  </row>
+  <row id="0BD831808D07409F8A8C3B79FBA07BB4" trl="Y">
+    <value column="Text" original="Transaction Date From">Transacción desde fecha</value>
+  </row>
+  <row id="0C64F60F4016488B8734B3D9ECAA4518" trl="Y">
+    <value column="Text" original="Customer Balance">Balance del Cliente</value>
+  </row>
+  <row id="0E2A728824A24A2995EC050F8096BAD0" trl="Y">
+    <value column="Text" original="Action regarding document">Acción a tomar con el documento</value>
+  </row>
+  <row id="0F6DD423E58F4AF3B19EE1C69E58280F" trl="Y">
+    <value column="Text" original="1st Dimension">Dimensión 1</value>
+  </row>
+  <row id="1053F842DA714DA499EAB367A22D82DD" trl="Y">
+    <value column="Text" original="Deposit To">Depositar en</value>
+  </row>
+  <row id="12BDD82D35184D1DB9F97C4EA5D5A45B" trl="Y">
+    <value column="Text" original="Select expected payments that you want to put into payment proposal">Seleccionar los pagos a incluir en la propuesta de pago</value>
+  </row>
+  <row id="15A3F36895F54DD2986C2A0E3790CBB0" trl="Y">
+    <value column="Text" original="Ending Balance">Balance Final</value>
+  </row>
+  <row id="16527BFEFA3F4A8381DB9554880F479E" trl="Y">
+    <value column="Text" original="AddPayment">Añadir Pago</value>
+  </row>
+  <row id="1969CE6E77CA43A38A7E72B3E230FD3D" trl="N">
+    <value column="Text" original="zz">zz</value>
+  </row>
+  <row id="1A4798B61AAB47EDAF171E66D5BB63EA" trl="Y">
+    <value column="Text" original="Available Credit">Crédito Disponible</value>
+  </row>
+  <row id="1DF86E4E61524E848A4263A847CA1D22" trl="Y">
+    <value column="Text" original="Actual Converted">Importe real al cambio</value>
+  </row>
+  <row id="20780A9A54D1483D89458E1C6C6C0D19" trl="Y">
+    <value column="Text" original="Hide cleared">Ocultar conciliados</value>
+  </row>
+  <row id="2166D682A6024E839AD674C2E9624C37" trl="Y">
+    <value column="Text" original="Payment In/Out Ref.">Referencia Cobro/Pago</value>
+  </row>
+  <row id="21790613236647CC80CC771B889EE538" trl="Y">
+    <value column="Text" original="Select additional purchase invoices or purchase orders that you want to add to this payment">Seleccione otras facturas y/o pedidos de compra que desee añadir al pago</value>
+  </row>
+  <row id="2285489CD37B46EEB218C777400BBCBA" trl="Y">
+    <value column="Text" original="Post">Contabilizar</value>
+  </row>
+  <row id="271D3D8520934D1E90A34CBDD2BF4C9C" trl="Y">
+    <value column="Text" original="Expected Date From">Fecha inicio esperada</value>
+  </row>
+  <row id="2758F01B4C674307B43AAEC51D7B1503" trl="Y">
+    <value column="Text" original="Outstanding Amount">Importe Pendiente</value>
+  </row>
+  <row id="291442B05D53432092711698F88EBED3" trl="Y">
+    <value column="Text" original="Details">Detalles</value>
+  </row>
+  <row id="2E40C3D7C5D7472A9B7F1470E91F8FCD" trl="Y">
+    <value column="Text" original="Orders and Invoices">Pedidos y Facturas</value>
+  </row>
+  <row id="2EBAB587F596466BA79CE3C24D56CD95" trl="Y">
+    <value column="Text" original="Payment">Importe</value>
+  </row>
+  <row id="30792515FA284DA5819B18ADF368B0DC" trl="Y">
+    <value column="Text" original="Select additional sales invoices or sales orders that you want to add to this payment">Seleccione otras facturas y/o pedidos de venta que desee añadir al cobro</value>
+  </row>
+  <row id="30C34492F97740948AF9660773B58EF3" trl="Y">
+    <value column="Text" original="Purchase Order No.">Nº Pedido compra</value>
+  </row>
+  <row id="30E50BD12DB1498B817E07734F7A6D9C" trl="Y">
+    <value column="Text" original="Deposits and payments">Ingresos y pagos</value>
+  </row>
+  <row id="354E5EF7FCD142078572A472031A4F8D" trl="Y">
+    <value column="Text" original="Transaction Type">Tipo de Transacción</value>
+  </row>
+  <row id="35E14F2E362847059E2D433F33E930FF" trl="Y">
+    <value column="Text" original="Show transactions for alternative financial account">Mostrar transacciones de otras cuentas financieras</value>
+  </row>
+  <row id="361C7BAF7DFE4D90B8A2B671B4548B34" trl="Y">
+    <value column="Text" original="Expected Converted">Importe a liquidar al cambio</value>
+  </row>
+  <row id="37B32EEA0B6C4342B63602C168810F8B" trl="Y">
+    <value column="Text" original="(this is the result of the last reconciliation)">(este es el resultado de la última reconciliación)</value>
+  </row>
+  <row id="37E1FD8CD50B4835B9D0C3679B7C447F" trl="Y">
+    <value column="Text" original="Clear all">Todo listo</value>
+  </row>
+  <row id="37F61B2C4BBA44CD9E841C89E89A15DE" trl="Y">
+    <value column="Text" original="items to match">objetos a asociar</value>
+  </row>
+  <row id="3AE410B1911847BDBFA99B086E0F0F9C" trl="Y">
+    <value column="Text" original="Add Payment In">Añadir Cobro</value>
+  </row>
+  <row id="3E235DF7E8044CBAAA9B24330FEE18BF" trl="Y">
+    <value column="Text" original="Payment In/Out">Cobro/Pago</value>
+  </row>
+  <row id="3E2658BC7DB84BA5927989BB52FD1BF0" trl="Y">
+    <value column="Text" original="Payment Execution">Ejecución de Pago</value>
+  </row>
+  <row id="3ED793E7D0FE4C098FE79C589C292B6E" trl="Y">
+    <value column="Text" original="Write off the difference (Above limit)">Cancelar la diferencia (Sobrepasando el límite)</value>
+  </row>
+  <row id="3F26CEA4A0D9445EBC5B92785185D207" trl="Y">
+    <value column="Text" original="Last Reconciliation">Última reconciliación</value>
+  </row>
+  <row id="3F7C110A81104B1DAA08541B5A412D4D" trl="Y">
+    <value column="Text" original="Select additional sales invoices, sales orders or gl items that you want to add to this payment">Seleccione otras facturas, pedidos de venta o conceptos contables que desee añadir al cobro</value>
+  </row>
+  <row id="402D4E49EF164CA2A04FB054DA6E0C2D" trl="Y">
+    <value column="Text" original="Available Credit">Crédito Disponible</value>
+  </row>
+  <row id="425922FFC1FB48DA954876F78E8166EC" trl="Y">
+    <value column="Text" original="Transaction Date">Fecha transacción</value>
+  </row>
+  <row id="427B1EDA8D2448BEABBDF3C7CB54D293" trl="Y">
+    <value column="Text" original="Bussines Partner">Tercero</value>
+  </row>
+  <row id="42A335FF9920466AABA5D24E22C4CE85" trl="Y">
+    <value column="Text" original="Exchange Rate">Tipo de cambio</value>
+  </row>
+  <row id="42D825B3AF15493BA1ACD859E190CE8D" trl="Y">
+    <value column="Text" original="Transaction Date To">Transacción hasta fecha</value>
+  </row>
+  <row id="43D5104886C345889044DB56D90CA018" trl="Y">
+    <value column="Text" original="1st Dimension">Dimensión 1</value>
+  </row>
+  <row id="43DFC2838E21415198EC21A0BAB398C2" trl="Y">
+    <value column="Text" original="Hide Reconciled Transactions">Ocultar Transacciones Reconciliadas</value>
+  </row>
+  <row id="450FE9ED9B1D4932BE3757A76F6A9A52" trl="Y">
+    <value column="Text" original="Reconcile">Reconciliar</value>
+  </row>
+  <row id="4558B6C604E14615BF3DEADB585759DB" trl="Y">
+    <value column="Text" original="Primary Filter">Filtro primario</value>
+  </row>
+  <row id="484BD487D11C43D194DC141355466F64" trl="Y">
+    <value column="Text" original="Statement Date">Fecha del Extracto</value>
+  </row>
+  <row id="4921BB79D5B4482286E9EDA4283D6A3F" trl="Y">
+    <value column="Text" original="Available Credit">Crédito Disponible</value>
+  </row>
+  <row id="4AC782E2EB4D4CBEA7E3FB93626C195A" trl="Y">
+    <value column="Text" original="AddTransaction">Añadir transacción</value>
+  </row>
+  <row id="4D520EE7612540089C5572934EC3C11F" trl="Y">
+    <value column="Text" original="Cleared">Conciliado</value>
+  </row>
+  <row id="4E68CD319FF945578CCF11CF38E0C58C" trl="Y">
+    <value column="Text" original="Add Transaction">Añadir Transacción</value>
+  </row>
+  <row id="4F3BB58595AA4968BC70A08B60AF3BD9" trl="Y">
+    <value column="Text" original="Match Type">Tipo de relación</value>
+  </row>
+  <row id="549D43D3510845D1965ACD2697B007FA" trl="Y">
+    <value column="Text" original="Cleared">Conciliado</value>
+  </row>
+  <row id="55C25FEEFC8E443F908854E36E9F74DB" trl="Y">
+    <value column="Text" original="Orders and Invoices">Pedidos y Facturas</value>
+  </row>
+  <row id="56AAE175522A4972923EFA921DA73BFA" trl="Y">
+    <value column="Text" original="Financial Account">Cuenta financiera</value>
+  </row>
+  <row id="57288859DEFC454F9F499AF45F42B7AB" trl="Y">
+    <value column="Text" original="Payment Date">Fecha</value>
+  </row>
+  <row id="573CBDB3274146178B5432861CDDC159" trl="Y">
+    <value column="Text" original="Received In">Cobrar</value>
+  </row>
+  <row id="5B53F2467C2A43FEB0A480C4B0813FCA" trl="Y">
+    <value column="Text" original="Use Available Credit">Utilizar Crédito Disponible</value>
+  </row>
+  <row id="61655846581A4E85A62483FFD1550C0B" trl="Y">
+    <value column="Text" original="Difference to clear">Diferencia a reconciliar</value>
+  </row>
+  <row id="6233C9B1703E402E90E46301737F37D7" trl="Y">
+    <value column="Text" original="Payment Proposal:">Propuesta de Pago:</value>
+  </row>
+  <row id="62BA1CFBB74F40A8A7FABBE150773580" trl="Y">
+    <value column="Text" original="This process will generate payments">Este proceso generará pagos</value>
+  </row>
+  <row id="641543349D994F628A62AFD96339F701" trl="Y">
+    <value column="Text" original="Add Payment In">Añadir Cobro</value>
+  </row>
+  <row id="642A1A00F883467C95A69612A6F73C90" trl="Y">
+    <value column="Text" original="Expected Payment Out">Importe a pagar</value>
+  </row>
+  <row id="665A5D16B1CC42A09307F8321C489D60" trl="Y">
+    <value column="Text" original="2nd Dimension">Dimensión 2</value>
+  </row>
+  <row id="667D14BAF0EA47AB8E81C911C4059D02" trl="Y">
+    <value column="Text" original="Reconciliation Report Summary">Informe de reconciliación resumido</value>
+  </row>
+  <row id="67711D5EF7E94630BACE0DD8020EEAE1" trl="Y">
+    <value column="Text" original="Import Bank File">Importar Documento Bancario</value>
+  </row>
+  <row id="68B66E57BCC34CF78BD7F00532438FEC" trl="Y">
+    <value column="Text" original="Process Payment">Procesar Pago</value>
+  </row>
+  <row id="69A861AEDD63408B9FDD5CE6044FE5CC" trl="Y">
+    <value column="Text" original="Actual Converted">Importe real al cambio</value>
+  </row>
+  <row id="6C15F01D681E41F5A44037DF48EC7926" trl="Y">
+    <value column="Text" original="Payment In">Cobro</value>
+  </row>
+  <row id="6C237ED5003847B998E92860AD1AFC18" trl="Y">
+    <value column="Text" original="Ending Date">Fecha hasta</value>
+  </row>
+  <row id="6C2460B2EAB9490CB68FB828F9290EC6" trl="Y">
+    <value column="Text" original="Expected Converted">Importe a liquidar al cambio</value>
+  </row>
+  <row id="6C947133458C40569B6C5F4FCB0AC46A" trl="Y">
+    <value column="Text" original="Payment Document No.">Nº de documento</value>
+  </row>
+  <row id="6DD60FD81F5B4D17A5101D7BFED7E910" trl="Y">
+    <value column="Text" original="Reconciliation">Reconciliación</value>
+  </row>
+  <row id="6E9827D58923455D95EFD3D3A7288BC9" trl="Y">
+    <value column="Text" original="Payment Method:">Método de Pago:</value>
+  </row>
+  <row id="6F2ADD8B5E31420E8E0424DED914BF81" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="6F49E71B58104D7DBC666A2C6D27ED55" trl="Y">
+    <value column="Text" original="Received From">Cobrado de</value>
+  </row>
+  <row id="6FA59F20F1FE456C96EF35A22793F455" trl="Y">
+    <value column="Text" original="Import Bank Statement">Importar Extracto Bancario</value>
+  </row>
+  <row id="704B0588F8E64A3FB6F627E802709985" trl="Y">
+    <value column="Text" original="2nd Dimension">Dimensión 2</value>
+  </row>
+  <row id="70BDF609561E4BB984D845BFCEB39D0B" trl="Y">
+    <value column="Text" original="DataGrid">Grid de Datos</value>
+  </row>
+  <row id="745D4AD864BB431BB56352040E0E9C84" trl="Y">
+    <value column="Text" original="Sales Invoice No.">Nº Factura venta</value>
+  </row>
+  <row id="753CC44B776D4A55901CAD9D92D458AE" trl="Y">
+    <value column="Text" original="Write off the difference (Above limit)">Cancelar la diferencia (Sobrepasando el límite)</value>
+  </row>
+  <row id="756D726BEF3D402985AAD12657C5898D" trl="Y">
+    <value column="Text" original="To Be Paid To">Pagar a</value>
+  </row>
+  <row id="7601EFADC7EF492690486A590C273047" trl="Y">
+    <value column="Text" original="Sales Order No.">Nº Pedido Venta</value>
+  </row>
+  <row id="763DCC72FEAD49B69ABA8C7EEE35AB4B" trl="Y">
+    <value column="Text" original="Current Balance">Balance Actual</value>
+  </row>
+  <row id="791A5A770CBA456E9CB8BC43B2495935" trl="Y">
+    <value column="Text" original="Add Payment Out">Añadir pago</value>
+  </row>
+  <row id="7A0C71B074C448E5B92563BF3C639436" trl="Y">
+    <value column="Text" original="Undo">Deshacer</value>
+  </row>
+  <row id="7A2F80682E4D44568B2BDF1F7D41E935" trl="Y">
+    <value column="Text" original="Purchase Order No.">Nº Pedido compra</value>
+  </row>
+  <row id="7C3060E9EA374A109F56D9C6BAA6F127" trl="Y">
+    <value column="Text" original="Add Transaction">Añadir Transacción</value>
+  </row>
+  <row id="7DC28544FC1245BCACE69BFA4499008C" trl="Y">
+    <value column="Text" original="Orders and Invoices">Pedidos y Facturas</value>
+  </row>
+  <row id="7ED6FC64149858B3E040007F01007327" trl="Y">
+    <value column="Text" original="There is a difference of">Hay una diferencia de</value>
+  </row>
+  <row id="7ED6FC64149958B3E040007F01007327" trl="Y">
+    <value column="Text" original="Leave this as an underpayment">Dejar pago incompleto</value>
+  </row>
+  <row id="7ED6FC64149A58B3E040007F01007327" trl="Y">
+    <value column="Text" original="Write off the difference">Cancelar la diferencia</value>
+  </row>
+  <row id="7FCABF4ECC1B5B45E040007F010006FB" trl="Y">
+    <value column="Text" original="Invoiced Amount">Importe Facturado</value>
+  </row>
+  <row id="7FCABF4ECC1D5B45E040007F010006FB" trl="Y">
+    <value column="Text" original="Expected Amount">Importe a liquidar</value>
+  </row>
+  <row id="7FCABF4ECC1F5B45E040007F010006FB" trl="Y">
+    <value column="Text" original="Outstanding Amount">Importe pendiente</value>
+  </row>
+  <row id="7FCABF4ECC215B45E040007F010006FB" trl="Y">
+    <value column="Text" original="There is a difference of">Hay una diferencia de</value>
+  </row>
+  <row id="7FCABF4ECC235B45E040007F010006FB" trl="Y">
+    <value column="Text" original="Leave this as an underpayment">Dejar pago incompleto</value>
+  </row>
+  <row id="7FCABF4ECC275B45E040007F010006FB" trl="Y">
+    <value column="Text" original="Refund amount to customer">Devolver importe al cliente</value>
+  </row>
+  <row id="7FCABF4ECC295B45E040007F010006FB" trl="Y">
+    <value column="Text" original="Write off the difference">Cancelar la diferencia</value>
+  </row>
+  <row id="7FCB00F62CEB934EE040007F010075A1" trl="Y">
+    <value column="Text" original="Leave the credit to be used later">Dejar crédito para usar más tarde</value>
+  </row>
+  <row id="7FCB00F62CED934EE040007F010075A1" trl="Y">
+    <value column="Text" original="Refund amount to customer">Devolver importe al cliente</value>
+  </row>
+  <row id="7FCB8195C2DB955EE040007F01002DC4" trl="Y">
+    <value column="Text" original="Process Payment">Procesar Pago</value>
+  </row>
+  <row id="7FCB8195C2DD955EE040007F01002DC4" trl="Y">
+    <value column="Text" original="Action regarding document">Acción a tomar con el documento</value>
+  </row>
+  <row id="80E60157078BADBBE040007F01005FAE" trl="Y">
+    <value column="Text" original="There is a difference of">Hay una diferencia de</value>
+  </row>
+  <row id="80E60157078DADBBE040007F01005FAE" trl="Y">
+    <value column="Text" original="Leave this as an underpayment">Dejar pago incompleto</value>
+  </row>
+  <row id="80E60157078FADBBE040007F01005FAE" trl="Y">
+    <value column="Text" original="Leave the credit to be used later">Dejar crédito para usar más tarde</value>
+  </row>
+  <row id="80E601570791ADBBE040007F01005FAE" trl="Y">
+    <value column="Text" original="Refund amount to customer">Devolver importe al cliente</value>
+  </row>
+  <row id="80E601570793ADBBE040007F01005FAE" trl="Y">
+    <value column="Text" original="Write off the difference">Cancelar la diferencia</value>
+  </row>
+  <row id="810D27F98F765E44E040007F01007F1D" trl="Y">
+    <value column="Text" original="Invoiced Amt">Importe Facturado</value>
+  </row>
+  <row id="810D27F98F785E44E040007F01007F1D" trl="Y">
+    <value column="Text" original="Expected Amt">Importe a liquidar</value>
+  </row>
+  <row id="810D27F98F7A5E44E040007F01007F1D" trl="Y">
+    <value column="Text" original="Outs. Amt">Importe Pendiente</value>
+  </row>
+  <row id="810D27F98F7C5E44E040007F01007F1D" trl="Y">
+    <value column="Text" original="Difference">Diferencia</value>
+  </row>
+  <row id="810D27F98F7E5E44E040007F01007F1D" trl="Y">
+    <value column="Text" original="Orders">Pedidos</value>
+  </row>
+  <row id="810D27F98F805E44E040007F01007F1D" trl="Y">
+    <value column="Text" original="Invoices">Facturas</value>
+  </row>
+  <row id="810FC8FB3581BDD3E040007F01006D3C" trl="Y">
+    <value column="Text" original="Orders">Pedidos</value>
+  </row>
+  <row id="810FC8FB3583BDD3E040007F01006D3C" trl="Y">
+    <value column="Text" original="Invoices">Facturas</value>
+  </row>
+  <row id="81DE447254A44ACCB40899FD8E65FDAF" trl="Y">
+    <value column="Text" original="Exchange Rate">Tipo de cambio</value>
+  </row>
+  <row id="824388E12E2E4FBEBD3E12CBAD6E97F7" trl="Y">
+    <value column="Text" original="Use Available Credit">Utilizar Crédito Disponible</value>
+  </row>
+  <row id="830FA1141953448A9C61821616C9421E" trl="Y">
+    <value column="Text" original="Sales Order No.">Nº Pedido venta</value>
+  </row>
+  <row id="833BFA5F74CC4EFC8642DFEA58B3A22C" trl="Y">
+    <value column="Text" original="Leave this amount to be used later">Diferencia a utilizar posteriormente</value>
+  </row>
+  <row id="8378DF86635543E4BA0B172C0AA53A6C" trl="Y">
+    <value column="Text" original="Payment Out">Pago</value>
+  </row>
+  <row id="8410F4A3878C872EE040007F010014BF" trl="Y">
+    <value column="Text" original="Bank File">Documento Bancario</value>
+  </row>
+  <row id="8410F4A3878E872EE040007F010014BF" trl="Y">
+    <value column="Text" original="File Format">Formato de Documento</value>
+  </row>
+  <row id="8410F4EF23F651ADE040007F0100150D" trl="Y">
+    <value column="Text" original="Total Outstanding Deposits">Total depósitos pendientes</value>
+  </row>
+  <row id="8410F4EF23FE51ADE040007F0100150D" trl="Y">
+    <value column="Text" original="Total Outstanding Payments">Total de Reintegros Pendientes</value>
+  </row>
+  <row id="84148404EF5F406CAF4066482D532044" trl="Y">
+    <value column="Text" original="Loading...">Cargando...</value>
+  </row>
+  <row id="847A0A37B7084A7F8D7A5C872E63EC48" trl="Y">
+    <value column="Text" original="2nd Dimension">Dimensión 2</value>
+  </row>
+  <row id="84AD152C2958082CE040007F01006D2B" trl="Y">
+    <value column="Text" original="GL Items">Conceptos Contables</value>
+  </row>
+  <row id="84AD152C295E082CE040007F01006D2B" trl="Y">
+    <value column="Text" original="GL Item">Conceptos Contables</value>
+  </row>
+  <row id="84BDB2C8B79EC1B2E040007F010007BA" trl="Y">
+    <value column="Text" original="Remove">Eliminar</value>
+  </row>
+  <row id="84E5765176159880E040007F010023A7" trl="Y">
+    <value column="Text" original="DataGrid">Grid de datos</value>
+  </row>
+  <row id="84E5765176179880E040007F010023A7" trl="Y">
+    <value column="Text" original="Loading...">Cargando...</value>
+  </row>
+  <row id="8537C26052CF136FE040007F0100228F" trl="Y">
+    <value column="Text" original="Match using imported Bank Statement Lines">Coincidencia en las Líneas de Extractos Bancarios importadas</value>
+  </row>
+  <row id="8549502AAE1A4052E040007F0101680D" trl="Y">
+    <value column="Text" original="Imported Bank Statement Lines">Líneas de Extractos Bancarios importadas</value>
+  </row>
+  <row id="8549502AAE1E4052E040007F0101680D" trl="Y">
+    <value column="Text" original="Transactions in Openbravo">Transacciones en Openbravo</value>
+  </row>
+  <row id="8549502AAE204052E040007F0101680D" trl="Y">
+    <value column="Text" original="Sender">Remitente</value>
+  </row>
+  <row id="8549502AAE224052E040007F0101680D" trl="Y">
+    <value column="Text" original="Match">Coincidencia</value>
+  </row>
+  <row id="855CF9A849804FA78F7126D544003B73" trl="Y">
+    <value column="Text" original="Cost Center">Centro de costos</value>
+  </row>
+  <row id="85718201D5AFB0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Process Payment">Procesar Pago</value>
+  </row>
+  <row id="85718201D5B1B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Action regarding document">Acción a tomar con el documento</value>
+  </row>
+  <row id="85718201D5BDB0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Payment Method">Recibido de</value>
+  </row>
+  <row id="85718201D5D1B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Orders">Pedidos</value>
+  </row>
+  <row id="85718201D5D3B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Invoices">Facturas</value>
+  </row>
+  <row id="85718201D5D7B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Purchase Order No.">Nº Pedido compra</value>
+  </row>
+  <row id="85718201D5D9B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Sales Order No.">Núm. de Pedido de Venta</value>
+  </row>
+  <row id="85718201D5DDB0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Sales Invoice No.">Nº Factura venta</value>
+  </row>
+  <row id="85718201D5E1B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Invoiced Amount">Importe Facturado</value>
+  </row>
+  <row id="85718201D5E3B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Expected Amount">Importe a liquidar</value>
+  </row>
+  <row id="85718201D5E5B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Outstanding Amount">Importe Pendiente</value>
+  </row>
+  <row id="85718201D5E7B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="There is a difference of">Hay una diferencia de</value>
+  </row>
+  <row id="85718201D5E9B0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Leave this as an underpayment">Dejar pago incompleto</value>
+  </row>
+  <row id="85718201D5EBB0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Leave the credit to be used later">Dejar crédito para usar más tarde</value>
+  </row>
+  <row id="85718201D5EDB0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Refund amount to customer">Devolver importe al cliente</value>
+  </row>
+  <row id="85718201D5EFB0ADE040007F01006455" trl="Y">
+    <value column="Text" original="Write off the difference">Cancelar la diferencia</value>
+  </row>
+  <row id="85AE903D1D3372B0E040007F01002083" trl="Y">
+    <value column="Text" original="Document Type">Tipo de Documento</value>
+  </row>
+  <row id="85C47520D200C9EAE040007F01002002" trl="Y">
+    <value column="Text" original="Received In">Cobrar</value>
+  </row>
+  <row id="85C47520D202C9EAE040007F01002002" trl="Y">
+    <value column="Text" original="Paid Out">Pagar</value>
+  </row>
+  <row id="86F5B2C8D8E01BE5E040007F01004DA9" trl="Y">
+    <value column="Text" original="Payment Method">Método de Pago</value>
+  </row>
+  <row id="880F17892844E2DDE040007F0100404D" trl="Y">
+    <value column="Text" original="Execute Payments">Ejecutar Pagos</value>
+  </row>
+  <row id="880F17892846E2DDE040007F0100404D" trl="Y">
+    <value column="Text" original="Execute">Ejecutar</value>
+  </row>
+  <row id="89A928B6FF534D9C93E1FA20D744C009" trl="Y">
+    <value column="Text" original="Exchange Rate">Tipo de cambio</value>
+  </row>
+  <row id="89D923B8E1FE4F1E9BE8F7783881C81A" trl="N">
+    <value column="Text" original="zz">zz</value>
+  </row>
+  <row id="8A63AFFF170841A093E1D677F11A8F06" trl="Y">
+    <value column="Text" original="Process Proposal">Procesar Propuesta</value>
+  </row>
+  <row id="8D99A51A37534657B4315658A504DD1A" trl="Y">
+    <value column="Text" original="Actual Payment">Importe </value>
+  </row>
+  <row id="8DBA8F9BC68D445ABD1E80E8BDE20A30" trl="Y">
+    <value column="Text" original="Expected Date From">Fecha inicio esperada</value>
+  </row>
+  <row id="8F869C21DCF14031BC01CCD9D158190E" trl="Y">
+    <value column="Text" original="for">para</value>
+  </row>
+  <row id="91709F28D5A5483782CBF452932312C9" trl="Y">
+    <value column="Text" original="Paid out">Pagar</value>
+  </row>
+  <row id="9307B5C71D749CACE040007F01000F27" trl="Y">
+    <value column="Text" original="Purchase Invoice No.">Nº Factura compra</value>
+  </row>
+  <row id="9307B5C71D779CACE040007F01000F27" trl="Y">
+    <value column="Text" original="Purchase Invoice No.">Nº Factura compra</value>
+  </row>
+  <row id="9307B5C71D7A9CACE040007F01000F27" trl="Y">
+    <value column="Text" original="Purchase Invoice No.">Nº Factura compra</value>
+  </row>
+  <row id="93391616B4324B12B2E99B919FEADA6E" trl="Y">
+    <value column="Text" original="Expected Payment">Importe esperado</value>
+  </row>
+  <row id="9370255AD32E4EED889DEFDCBBD48646" trl="Y">
+    <value column="Text" original="Action">Acción</value>
+  </row>
+  <row id="939B749BB60DA1D5E040007F01003065" trl="Y">
+    <value column="Text" original="Reference No.">Nº Referencia</value>
+  </row>
+  <row id="939C24C99DB9FC2BE040007F010036B2" trl="Y">
+    <value column="Text" original="Reference No.">Nº Referencia</value>
+  </row>
+  <row id="941752B6DDB7231BE040007F0100437B" trl="Y">
+    <value column="Text" original="Payment Method">Método de Pago</value>
+  </row>
+  <row id="949AA49A4D7C6BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Account Balance In Openbravo">Saldo de la cuenta financiera</value>
+  </row>
+  <row id="949AA49A4D7F6BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Adjusted Account Balance in Openbravo">Saldo de la cuenta financiera ajustado</value>
+  </row>
+  <row id="949AA49A4D826BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Balance per Bank Statement">Balance final del extracto bancario</value>
+  </row>
+  <row id="949AA49A4D856BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Plus Outstanding Payments">Reintegros pendientes de conciliar</value>
+  </row>
+  <row id="949AA49A4D886BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Less Outstanding Deposits">Depósitos pendientes de conciliar</value>
+  </row>
+  <row id="949AA49A4D8B6BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Plus Un-reconciled Bank Statement Lines">Más Líneas de Extracto Pendientes de Reconciliar</value>
+  </row>
+  <row id="949AA49A4D8E6BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Reconciliation Report">Informe de reconciliación</value>
+  </row>
+  <row id="949AA49A4D976BEAE040007F0100565C" trl="Y">
+    <value column="Text" original="Total Un-reconciled Bank Statement Lines">Total de Líneas de Extracto Pendientes de Reconciliar</value>
+  </row>
+  <row id="95638A97B31045FCE040007F01000E19" trl="Y">
+    <value column="Text" original="Reconcile">Reconciliar</value>
+  </row>
+  <row id="972DE4AEBFD54C43B8042F289015F5FF" trl="Y">
+    <value column="Text" original="Beginning Balance">Balance Inicial</value>
+  </row>
+  <row id="981774F92A97472A8A1FC51CA5B22837" trl="Y">
+    <value column="Text" original="Take From">Pagar desde</value>
+  </row>
+  <row id="98463D76F0A641C18DA68B25C1C6277E" trl="Y">
+    <value column="Text" original="Match Using Imported Bank Statement">Ajustar Usando Extracto Bancario Importado</value>
+  </row>
+  <row id="9945CD4943104B7A925652DEA7BD7C10" trl="Y">
+    <value column="Text" original="Show payments for alternative payment methods">Mostrar transacciones con métodos alternativos</value>
+  </row>
+  <row id="9B8EE95FED0F4B8EAD0E501CB33BA29B" trl="Y">
+    <value column="Text" original="Transaction Type">Tipo de Transacción</value>
+  </row>
+  <row id="9C14EE536A664AEEB16CCB3FF177A121" trl="Y">
+    <value column="Text" original="Hide Transactions after statement date">Ocultar Transacciones posteriores a la fecha del Extracto</value>
+  </row>
+  <row id="9CC12000833D45619574EA9E81649882" trl="Y">
+    <value column="Text" original="Last Reconciliation Balance">Balance de la Última Reconciliación</value>
+  </row>
+  <row id="9DDB317C14194483B1B6D7A7E0B46C87" trl="Y">
+    <value column="Text" original="Invoice Currency">Moneda de factura</value>
+  </row>
+  <row id="9F4572C44CCA4FF2B4270B084382D60E" trl="Y">
+    <value column="Text" original="Due Date:">Fecha vencimiento:</value>
+  </row>
+  <row id="A16BAF6A6B0B4A8F9D8BBFA4695E310C" trl="Y">
+    <value column="Text" original="Add Payment In/Out">Añadir Cobro/Pago</value>
+  </row>
+  <row id="A16D40CBB17E473799C90DD16E9EC7F0" trl="Y">
+    <value column="Text" original="Received in">Cobrar</value>
+  </row>
+  <row id="A2E3CEC67D004E7C9BADAB2FD4719E8F" trl="Y">
+    <value column="Text" original="Reconcile">Reconciliar</value>
+  </row>
+  <row id="A3F4C1BAFC824039B78C5FC3006AB93C" trl="Y">
+    <value column="Text" original="Payment Document No.">Nº de documento</value>
+  </row>
+  <row id="A437061218404865BF781A13704403AB" trl="Y">
+    <value column="Text" original="Matched Document">Documento Contabilizado</value>
+  </row>
+  <row id="A4ACF6F90F7C42F9AA0B58DECDAB61B9" trl="Y">
+    <value column="Text" original="Select additional purchase invoices, purchase orders or gl items that you want to add to this payment">Seleccione otras facturas, pedidos de compra o conceptos contables que desee añadir al pago</value>
+  </row>
+  <row id="A4F91D28E3AB4C0EA9ACCA40899141C3" trl="Y">
+    <value column="Text" original="Invoiced Amount">Importe Facturado</value>
+  </row>
+  <row id="A5CB9563E5BE40DB8C637BB02E3BB0C9" trl="Y">
+    <value column="Text" original="1st Dimension">Dimensión 1</value>
+  </row>
+  <row id="A8C9A7A0B28D4C94B22CD692E33136CC" trl="Y">
+    <value column="Text" original="Currently cleared">Actualmente conciliado</value>
+  </row>
+  <row id="A8F5EE29EF37BBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="GL Items">Conceptos contables</value>
+  </row>
+  <row id="A8F5EE29EF3ABBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="GL Item">Concepto contable</value>
+  </row>
+  <row id="A8F5EE29EF3DBBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="Received In">Cobrado</value>
+  </row>
+  <row id="A8F5EE29EF40BBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="Paid Out">Pagado</value>
+  </row>
+  <row id="A8F5EE29EF43BBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="Amount on Invoices and/or Orders">Importe en Facturas y/o Pedidos</value>
+  </row>
+  <row id="A8F5EE29EF46BBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="Amount on GL Items">Importe en Conceptos contables</value>
+  </row>
+  <row id="A8F5EE29EF49BBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="Amount on Invoices and/or Orders">Importe en Facturas y/o Pedidos</value>
+  </row>
+  <row id="A8F5EE29EF4CBBCAE040007F01002D53" trl="Y">
+    <value column="Text" original="Amount on GL Items">Importe en Conceptos contables</value>
+  </row>
+  <row id="AAE3622DC9124C86B629E0B30D580767" trl="Y">
+    <value column="Text" original="Date To">Hasta Fecha</value>
+  </row>
+  <row id="AC02A8EF9F4F4FF6A8011C70A0F8553C" trl="Y">
+    <value column="Text" original="Show">Mostrar</value>
+  </row>
+  <row id="AD4B47A653568779E040007F010055A7" trl="Y">
+    <value column="Text" original="Accounting Dimensions">Dimensiones Contables</value>
+  </row>
+  <row id="AD4B47A653588779E040007F010055A7" trl="Y">
+    <value column="Text" original="Accounting Dimensions">Dimensiones Contables</value>
+  </row>
+  <row id="ADD85DC6B32E4CB5B0D548409B0FD1C8" trl="Y">
+    <value column="Text" original="Expected Date From">Fecha inicio esperada</value>
+  </row>
+  <row id="B3E7E0DFDE1D42B29FD5FF8622E83E67" trl="Y">
+    <value column="Text" original="Select sales orders, invoices or GL Items that you want to match to this payment in">Seleccione pedidos, facturas o conceptos contables que quiera incluir en este cobro</value>
+  </row>
+  <row id="B57AE91319104419920078B0FDAE9C16" trl="Y">
+    <value column="Text" original="Customer Balance">Balance del Cliente</value>
+  </row>
+  <row id="B5F98BCEA84247B0A26185B72012C28F" trl="Y">
+    <value column="Text" original="Expected Date To">Fecha fin esperada</value>
+  </row>
+  <row id="B86C9C60E1D64BF98E5A2FE0851F3693" trl="Y">
+    <value column="Text" original="Received In">Cobrar</value>
+  </row>
+  <row id="B8A21C4101304EDEABC1F47BBCC149F8" trl="Y">
+    <value column="Text" original="Expected Amount">Importe a liquidar</value>
+  </row>
+  <row id="BB74934772394B239FAF47DD103D224B" trl="Y">
+    <value column="Text" original="Payment Date">Fecha</value>
+  </row>
+  <row id="BDFCEFEFA4E846F192E4C1EC6A5D5541" trl="Y">
+    <value column="Text" original="Deposit To">Depositar en</value>
+  </row>
+  <row id="BE73A5F0775447398C2ECD4C30CE7155" trl="Y">
+    <value column="Text" original="Select Expected Payments">Seleccionar pagos</value>
+  </row>
+  <row id="BE77AFEC6C9942F6B9467E8E4F4A95FD" trl="Y">
+    <value column="Text" original="Actual Payment">Importe </value>
+  </row>
+  <row id="BE924775AF967C78E040007F010017BF" trl="Y">
+    <value column="Text" original="To Be Paid To">Pagar a </value>
+  </row>
+  <row id="BE924775AF997C78E040007F010017BF" trl="Y">
+    <value column="Text" original="Received From">Cobrado de</value>
+  </row>
+  <row id="BE924775AF9C7C78E040007F010017BF" trl="Y">
+    <value column="Text" original="Actual Payment Out">Importe a pagar</value>
+  </row>
+  <row id="BE924775AF9F7C78E040007F010017BF" trl="Y">
+    <value column="Text" original="Actual Payment In">Importe cobrado</value>
+  </row>
+  <row id="BF1A576214F74016BB85037D201AB974" trl="Y">
+    <value column="Text" original="Match using imported Bank Statement">Ajustar usando Extracto Bancario importado</value>
+  </row>
+  <row id="C04A88B519E54C889AF9FD99BE174EB9" trl="N">
+    <value column="Text" original="zz">zz</value>
+  </row>
+  <row id="C07D2414185144D39ECAFF2F9901A93F" trl="Y">
+    <value column="Text" original="Out of range">Fuera de rango</value>
+  </row>
+  <row id="C0CF683DDC1B46AD91012C5B5B4BAE89" trl="Y">
+    <value column="Text" original="Payment Method">Método de Pago</value>
+  </row>
+  <row id="C2A63BAD18D247A7B182E47EED538C68" trl="Y">
+    <value column="Text" original="Cost Center">Centro de costos</value>
+  </row>
+  <row id="C30DED63010C4E8EB54E25E5881A8226" trl="Y">
+    <value column="Text" original="Payment Method">Método de Pago</value>
+  </row>
+  <row id="C4EA608BF6D74372AD2AE657608309C3" trl="Y">
+    <value column="Text" original="Date From">Desde Fecha</value>
+  </row>
+  <row id="C581FECAC63D446C8ED58F477CC68E8E" trl="Y">
+    <value column="Text" original="Transaction Date">Fecha de la Transacción</value>
+  </row>
+  <row id="C5A2DB9406E744C1868B56B0DF82C3F6" trl="Y">
+    <value column="Text" original="Add Payment In">Añadir Cobro</value>
+  </row>
+  <row id="C80B5C1D721F49C0983C231729C550F8" trl="Y">
+    <value column="Text" original="Expected Payment">Importe esperado</value>
+  </row>
+  <row id="C9066DBDF11048B99E4FC46E4D890D30" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="CA4B60EB983146229DBD2AFC9135E6D1" trl="Y">
+    <value column="Text" original="Accounting Dimensions">Dimensiones Contables</value>
+  </row>
+  <row id="CB1E94F8B2914BEF88FF72433F962F5A" trl="Y">
+    <value column="Text" original="G/L Item">Concepto Contable</value>
+  </row>
+  <row id="CBDEB0ED5BAF4E0B8267A4DECC8CC7D9" trl="Y">
+    <value column="Text" original="Cost Center">Centro de costos</value>
+  </row>
+  <row id="CE2DB3A92796496FB681075E787506CE" trl="Y">
+    <value column="Text" original="Out of range">Fuera de rango</value>
+  </row>
+  <row id="CEAC243124A8410485A1C7A3760C74B8" trl="Y">
+    <value column="Text" original="per">por</value>
+  </row>
+  <row id="CF8D743F746F49759CDF771C6E73A909" trl="Y">
+    <value column="Text" original="Difference">Diferencia</value>
+  </row>
+  <row id="D03B11F2C6684ADCBC9709CBDC853CEE" trl="Y">
+    <value column="Text" original="Paid Out">Pagar</value>
+  </row>
+  <row id="D0BCD60A817244F991C7D75EA93DC0B4" trl="Y">
+    <value column="Text" original="Add Payment Out">Añadir pago</value>
+  </row>
+  <row id="D2238E00427F496CB8D5A0F24935D4DB" trl="Y">
+    <value column="Text" original="Expected Payment In">Importe a cobrar</value>
+  </row>
+  <row id="D516788B09FF4747BECF206430E96AA4" trl="Y">
+    <value column="Text" original="Transaction Type">Tipo de Transacción</value>
+  </row>
+  <row id="D6040F60AF4B4F6AAA7896D4D47270AB" trl="Y">
+    <value column="Text" original="Transaction Type">Tipo de Transacción</value>
+  </row>
+  <row id="D6D719F69DB34F29B7AD9D4FB9C0339B" trl="Y">
+    <value column="Text" original="To Be Paid To">Pagar a</value>
+  </row>
+  <row id="D6E2DE50C7AC438E8E9A9FFF1C6EAAA7" trl="Y">
+    <value column="Text" original="Show payments in for alternative payment methods">Mostrar transacciones con métodos de cobro alternativos</value>
+  </row>
+  <row id="D8162326FAE4410C879DA6D1908AC844" trl="Y">
+    <value column="Text" original="Expected Date To">Fecha fin esperada</value>
+  </row>
+  <row id="D8B42F3BC554476C8FF5C79AE2445CED" trl="Y">
+    <value column="Text" original="Bus. Partner">Tercero</value>
+  </row>
+  <row id="DB2B268442884A5F8673F04A433EBC11" trl="Y">
+    <value column="Text" original="Add Payment Out">Añadir pago</value>
+  </row>
+  <row id="DB98F20D5C2B4F3F9D5A01B27F9E4946" trl="Y">
+    <value column="Text" original="Actual Converted">Importe real al cambio</value>
+  </row>
+  <row id="DC8B2BB3C55B4BF7B5782F006EB37106" trl="Y">
+    <value column="Text" original="Expected Converted">Importe a liquidar al cambio</value>
+  </row>
+  <row id="E07CD3A9CA7C4002A2F99C88B02C7F9C" trl="Y">
+    <value column="Text" original="Doubtful Debt Amount">Importe de dudoso cobro</value>
+  </row>
+  <row id="E1FBF4E787254F35B07338C68284B972" trl="Y">
+    <value column="Text" original="Item you have marked as cleared">Registro marcado como conciliado</value>
+  </row>
+  <row id="E33F2FB86A664FED9B3D8A14CF82A56D" trl="Y">
+    <value column="Text" original="Transactions">Transacciones</value>
+  </row>
+  <row id="E35AB8E889F8495696C2B5D2A17D0262" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="E3AE130FA2E4446CA8528541965DCAE0" trl="Y">
+    <value column="Text" original="Out of range">Fuera de rango</value>
+  </row>
+  <row id="E3DF286F9FA84EE59668C8969B997B1C" trl="N">
+    <value column="Text" original="zz">zz</value>
+  </row>
+  <row id="E560EAAEF81847219CD2BE12D33EBBD1" trl="Y">
+    <value column="Text" original="Sales Invoice No.">Nº Factura venta</value>
+  </row>
+  <row id="E84EA396A8AA4C3AA377D14BFEAD5264" trl="Y">
+    <value column="Text" original="Select purchase orders, invoices or GL Items that you want to match to this payment out">Seleccione pedidos, facturas o conceptos contables que quiera incluir en este pago</value>
+  </row>
+  <row id="EA12496A49A3424D9C5EE0CDBEF173C3" trl="Y">
+    <value column="Text" original="Take From">Pagar desde</value>
+  </row>
+  <row id="EE51A4BA4CA74D8BB746938BCE15EE4D" trl="Y">
+    <value column="Text" original="Expected Date">Fecha esperada</value>
+  </row>
+  <row id="F1ED4310FFD94BFF9BA48E2229F8E2E3" trl="Y">
+    <value column="Text" original="Use Available Credit">Utilizar Crédito Disponible</value>
+  </row>
+  <row id="F5A1427C39234E78B7CD365FE8B129D2" trl="Y">
+    <value column="Text" original="Expected Date To">Fecha fin esperada</value>
+  </row>
+  <row id="FAF4546366E64BEFB9B6E0A8B424F129" trl="Y">
+    <value column="Text" original="Financial Account">Cuenta Financiera</value>
+  </row>
+  <row id="FB48D184BC6848D5A76D7E61FE1CB820" trl="Y">
+    <value column="Text" original="(this is what the statement says)">(esto es lo que pone en el extracto bancario)</value>
+  </row>
+  <row id="FE926BB57B7C496CB4859FC079AFA1BA" trl="Y">
+    <value column="Text" original="Write off the difference (Above limit)">Cancelar la diferencia (Sobrepasando el límite)</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION BANMEX_FINDBPARTNER">
+    <function name="BANMEX_FINDBPARTNER" type="VARCHAR">
+      <parameter name="p_name" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[BEGIN
+  BEGIN --BODY
+
+   
+    RETURN 'null';
+
+    
+  END; --BODY
+END BANMEX_FINDBPARTNER
+]]></body>
+    </function>
+  </database>

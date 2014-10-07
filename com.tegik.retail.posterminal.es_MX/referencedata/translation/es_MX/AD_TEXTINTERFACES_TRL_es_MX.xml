@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TEXTINTERFACES" version="">
+  <row id="2BBAB937E0764391807D9F26E393D70E" trl="Y">
+    <value column="Text" original="SALE">Venta</value>
+  </row>
+</compiereTrl>

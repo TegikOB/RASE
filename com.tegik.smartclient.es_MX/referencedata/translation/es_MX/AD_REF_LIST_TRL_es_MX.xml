@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="C496AA30066F4A948DFDB2CC8DD96F8B" trl="Y">
+    <value column="Name" original="Smartclient Component">Componente Smartclient</value>
+    <value column="Description" original="Smartclient component type">Tipo de componente Smartclient</value>
+  </row>
+</compiereTrl>

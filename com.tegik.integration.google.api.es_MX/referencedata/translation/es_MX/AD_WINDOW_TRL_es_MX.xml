@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="FF8080813161A3D301316208017A0011" trl="Y">
+    <value column="Name" original="Google Integration Preferences">Preferencias de Integración con Google</value>
+    <value column="Description" original="Setup preferences for integration with Google APIs">Configuración de las Preferencias de la Integración con las APIs de Google</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

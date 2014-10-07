@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="45B9E9D6BF264556A1B164B11E52653F" trl="Y">
+    <value column="Name" original="Widget Instance">Instancia de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="58658C3460FE4CF3B545C3AB10A79AE3" trl="Y">
+    <value column="Name" original="Widget Superclass">Superclase de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="716D04974DCE4559821C8D60D4FA84A1" trl="Y">
+    <value column="Name" original="OBKMO_Country Table ">Tabla OBKMO_Country </value>
+    <value column="Description" original="Test for edit parameters">Test para editar parámetros</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B0BA46A241B543CF80B4046F080FA9DE" trl="Y">
+    <value column="Name" original="Widget Class">Clase del Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="CB6C648A6CAB4F749CB25EB1EBC4BAB5" trl="Y">
+    <value column="Name" original="List Widget Type">Lista de tipos de widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF8080813123BF670131241C2BB30012" trl="Y">
+    <value column="Name" original="OBKMO_Widget in Form Reference">Referencia OBKMO_Widget en el Formulario</value>
+    <value column="Description" original="The base Widget in Form reference">La referencia base para añadir Widgets a formularios</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,2344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="AD_REFERENCE" version="">
+  <row id="00037F8CF0644AF7A1987E7BF6DF68A4" trl="Y">
+    <value column="Name" isTrl="Y" original="Element Value Selector">Selector Elemento valor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="001BC3A319184B40ACB36A3C9B994904" trl="Y">
+    <value column="Name" isTrl="Y" original="Receive Payment Action">Acción de cobro</value>
+    <value column="Description" isTrl="Y" original="This reference used in Receive Payment ">Esta referencia se usa en Cobros.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="005073F7D540413B98E1D2E245CBC039" trl="N">
+    <value column="Name" isTrl="N" original="AD_User Selector">AD_User Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="01303128416E4CFC92E3A71D793F6EFF" trl="Y">
+    <value column="Name" isTrl="Y" original="Manage Reservation Pick and Edit">Gestión de elegir y editar de reservas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="01F377BC3C0743E7868F81C20D062AA8" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment_Schedule invoice">FIN_Payment_Schedule invoice</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0537E1156A064FDE8EF0CFBC97577E5F" trl="Y">
+    <value column="Name" isTrl="Y" original="Storage Bin Selector">Selector de Posicion</value>
+    <value column="Description" isTrl="Y" original="Storage Bin Selector">Selector de Posicion</value>
+    <value column="Help" isTrl="Y" original="Selector for a storage bin">Selector para un compartimiento de almacenamiento</value>
+  </row>
+  <row id="085E99751D2045AA9D4FA23F4B765B21" trl="Y">
+    <value column="Name" isTrl="Y" original="New Financial Flows Accounts">Cuentas del Nuevo Flujo Financiero</value>
+    <value column="Description" isTrl="Y" original="New Financial Flows Accounts">Cuentas de los nuevos flujos financieros</value>
+    <value column="Help" isTrl="Y" original="Different accounts that can be used in new financial flows as part of Payment method - Financial account configuration">Diferentes cuentas que se pueden usar en los nuevos flujos financieros como parte de los métodos de Pago - Configuración de cuentas financieras</value>
+  </row>
+  <row id="08622CB965B844CFBD2A337BEDB70EFD" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Heartbeat - Type of beat">AD_Heartbeat - Tipo de pulso</value>
+    <value column="Description" isTrl="Y" original="Types of beats">Tipos de pulso</value>
+    <value column="Help" isTrl="Y" original="Types of beats: When enabling, disabling the process, a scheduled beat, or unknown (old beats)">Tipos de pulsación: Al habilitar, deshabilitar el proceso, una pulsación programada, o desconocida (pulsaciones antiguas)</value>
+  </row>
+  <row id="0B1E56A8135D43D39C55452EDC1C9200" trl="Y">
+    <value column="Name" isTrl="Y" original="Product filtered by Product Category">Producto filtrado por categoría de producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0E0D1661E18E4E05A118785A7CF146B8" trl="Y">
+    <value column="Name" isTrl="Y" original="User Dimension 1 Selector">Selector de dimensión de usuario 1</value>
+    <value column="Description" isTrl="Y" original="User Dimension 1 Selector">Selector de dimensión de usuario 1</value>
+    <value column="Help" isTrl="Y" original="User Dimension 1 Selector">Dimensión del usuario 1 Selector</value>
+  </row>
+  <row id="1" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Reference Data Types">Tipos de datos AD_Reference</value>
+    <value column="Description" isTrl="Y" original="Data Type selection">Selección de tipo de dato</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="10" trl="Y">
+    <value column="Name" isTrl="Y" original="String">Cadena</value>
+    <value column="Description" isTrl="Y" original="Character String">Cadena de caracteres</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="100" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Validation Rules Parent">Reglas padre AD_Validation</value>
+    <value column="Description" isTrl="Y" original="Validation rule Parent selection">Selección de la regla padre de validación</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000300000" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_AlertRule Type">Tipo de AD_AlertRule</value>
+    <value column="Description" isTrl="Y" original="Alert Rule Type">Tipo de regla de alerta</value>
+    <value column="Help" isTrl="Y" original="Type of an Alert Rule. Data driven (check for a valid SQL clause) or External (do not check the SQL clause).">Tipo de regla de alerta. Basadas en datos (comprueba una sentencia SQL válida) o exterior (no comprueba la sentencia SQL).</value>
+  </row>
+  <row id="1000300001" trl="Y">
+    <value column="Name" isTrl="Y" original="Number of Employees">Número de empleados</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000300002" trl="Y">
+    <value column="Name" isTrl="Y" original="Countries">Países</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000300003" trl="Y">
+    <value column="Name" isTrl="Y" original="Type of Business">Tipo de empresa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000500000" trl="Y">
+    <value column="Name" isTrl="N" original="M_Product_Org - ABC">M_Product_Org - ABC</value>
+    <value column="Description" isTrl="Y" original="ABC classification according to a Pareto distribution">Clasificación ABC según la distribución de Pareto</value>
+    <value column="Help" isTrl="Y" original="ABC classification according to a Pareto distribution">Clasificación ABC según la distribución de Pareto</value>
+  </row>
+  <row id="1002100000" trl="Y">
+    <value column="Name" isTrl="Y" original="ReportTypeGeneralLedger">Informe tipo Libro Mayor</value>
+    <value column="Description" isTrl="Y" original="Report Type General Ledger">Informe tipo Libro Mayor</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1004400000" trl="Y">
+    <value column="Name" isTrl="Y" original="Requisition status">Estado de necesidad de material</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="List of the possible statuses of a requisition:&#10;-O: Open&#10;-P: Planned&#10;-C: Closed&#10;-D: Cancelled">Lista de posibles estados de una necesidad de material: -O: Abierta-P:Planificada-C:Cerrada-D:Cancelada</value>
+  </row>
+  <row id="1004400001" trl="Y">
+    <value column="Name" isTrl="Y" original="Requisition lock cause">Causa de bloqueo de necesidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1004400002" trl="Y">
+    <value column="Name" isTrl="Y" original="External Services">Servicios externos</value>
+    <value column="Description" isTrl="Y" original="List of available external services">Lista de servicios externos disponibles</value>
+    <value column="Help" isTrl="Y" original="List of available external services">Lista de servicios externos disponibles</value>
+  </row>
+  <row id="1005900000" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Processed_Status_Expenses">Todos los estados procesado de gastos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="101" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Validation Rule Types">Tipos de regla AD_Validation</value>
+    <value column="Description" isTrl="Y" original="Validation Rule Type list">Lista de los tipos de regla de validación</value>
+    <value column="Help" isTrl="Y" original="e.g. S - SQL">ejemplo: S - SQL</value>
+  </row>
+  <row id="101787D75B4E4D7280C75D9802FE5FB6" trl="Y">
+    <value column="Name" isTrl="Y" original="Product UOM Selector">Selector Unidad del Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="102" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Message">AD_Message</value>
+    <value column="Description" isTrl="Y" original="Message selection">Selección de mensaje</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="103" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Message Type">Tipo AD_Message</value>
+    <value column="Description" isTrl="Y" original="Message Type list">Lista de tipos de mensajes</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="104" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Menu Action">Acción AD_Menu</value>
+    <value column="Description" isTrl="Y" original="Menu Action list">Lista de acciones de menú</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="105" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Menu Parent">Padre AD_Menu</value>
+    <value column="Description" isTrl="Y" original="Menu Parent selection">Selección de menú padre</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="106" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Language">AD_Language</value>
+    <value column="Description" isTrl="Y" original="Language selection">Selección de idioma</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="108" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Window Types">Tipos AD_Window</value>
+    <value column="Description" isTrl="Y" original="Window Type list">Lista de tipos de ventana</value>
+    <value column="Help" isTrl="Y" original="e.g. M = Multi/Single (one uppercase character)">ejemplo: M = Multiple/Único (un carácter en mayúscula)</value>
+  </row>
+  <row id="10DF247CCCB346FE931028AA98E569F0" trl="N">
+    <value column="Name" isTrl="N" original="AD_User no combo">AD_User no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="11" trl="Y">
+    <value column="Name" isTrl="Y" original="Integer">Entero</value>
+    <value column="Description" isTrl="Y" original="10 Digit numeric">Número entero de 10 dígitos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="110" trl="Y">
+    <value column="Name" isTrl="N" original="AD_User">AD_User</value>
+    <value column="Description" isTrl="Y" original="User selection">Selección de usuario</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="111" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Conversion_Rate Types">Tipos C_Conversion_Rate</value>
+    <value column="Description" isTrl="Y" original="Conversion Rate Type list">Lista de tipos de conversión de tasas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="112" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Currency">Moneda C_Conversion_Rate</value>
+    <value column="Description" isTrl="Y" original="Currencies of C_Currency table">Moneda C_Conversion_Rate</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="113" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Org Parent">Padre AD_Org</value>
+    <value column="Description" isTrl="Y" original="Organization Parent selection">Selección de organización padre</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="114" trl="Y">
+    <value column="Name" isTrl="N" original="C_UOM">C_UOM</value>
+    <value column="Description" isTrl="Y" original="Unit of Measure selection">Selección de unidades</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="115" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Period Type">Tipo C_Period</value>
+    <value column="Description" isTrl="Y" original="Period Type list">Lista de tipo de periodo</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="116" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Element Type">Tipo C_Element</value>
+    <value column="Description" isTrl="Y" original="Account Element Types">Tipos de elementos contables</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="117" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue AccountType">Tipo de cuenta C_ElementValue</value>
+    <value column="Description" isTrl="Y" original="Account Type list">Lista de tipos de cuenta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="118" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue Account Sign">Signo de la cuenta C_ElementValue</value>
+    <value column="Description" isTrl="Y" original="Account Sign list">Lista de signos de cuentas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="12" trl="Y">
+    <value column="Name" isTrl="Y" original="Amount">Importe</value>
+    <value column="Description" isTrl="Y" original="Number with 4 decimals">Número con 4 decimales</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="120" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_TreeType Type">Tipo AD_TreeType</value>
+    <value column="Description" isTrl="Y" original="Tree Type list">Lista de tipos de árbol</value>
+    <value column="Help" isTrl="Y" original="Determines which element to use as the base for the information">Determina qué elemento emplear como base para la información</value>
+  </row>
+  <row id="121" trl="Y">
+    <value column="Name" isTrl="Y" original="X12DE98 Entity Identifier Code">Código de identificación de la entidad X12DE98</value>
+    <value column="Description" isTrl="Y" original="X12DE98 Entity Identifier Code list">Lista de códigos de identificación de entidades X12DE98</value>
+    <value column="Help" isTrl="Y" original="Identify organizational entity physical location property or individual list">Identifica la propiedad de la ubicación física de la entidad de una organización o una lista individual</value>
+  </row>
+  <row id="122" trl="Y">
+    <value column="Name" isTrl="Y" original="C_AcctSchema Costing Method">Método de costos C_AcctSchema</value>
+    <value column="Description" isTrl="Y" original="Costing Method list">Lista de métodos de costo</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="123" trl="Y">
+    <value column="Name" isTrl="Y" original="C_AcctSchema GAAP">GAAP C_AcctSchema</value>
+    <value column="Description" isTrl="Y" original="General Accepted Accounting Principle list">Lista de Principios de Contabilidad Generalmente Aceptados</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="124" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Parent">Padre C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Business Partner Parent selection">Selección de padre del tercero</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="125" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Posting Type">Tipos All_Posting</value>
+    <value column="Description" isTrl="Y" original="Posting Type (Actual Budget etc.) list">Lista de tipos de contabilización (real, presupuestado, etc.)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="126" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Table Replication Type">Tipo de replicación AD_Table</value>
+    <value column="Description" isTrl="Y" original="Replication Type">Tipo de replicación</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="128" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Sequence for Documents">AD_Sequence para documentos</value>
+    <value column="Description" isTrl="Y" original="Sequence for Document selection">Secuencia para selección de documentos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="129" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Client">AD_Client</value>
+    <value column="Description" isTrl="Y" original="Client selection">Selección de cliente</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="13" trl="Y">
+    <value column="Name" isTrl="N" original="ID">ID</value>
+    <value column="Description" isTrl="Y" original="10 Digit Identifier">Identificador de 10 dígitos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="130" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Org (Trx)">AD_Org (Trx)</value>
+    <value column="Description" isTrl="Y" original="Organization selection, no summary, no 0">Selección de organización, sin resumen ni 0</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="131" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Document Status">Estado All_Document</value>
+    <value column="Description" isTrl="Y" original="Document Status list">lista de Estados de Documento</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="132" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue (Accounts)">C_ElementValue (Cuentas)</value>
+    <value column="Description" isTrl="Y" original="Account selection">Selección de cuenta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="133" trl="Y">
+    <value column="Name" isTrl="N" original="C_Location">C_Location</value>
+    <value column="Description" isTrl="Y" original="Location selection">Selección de ubicación</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="134" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Accounts - User1">C_Accounts - Usuario 1</value>
+    <value column="Description" isTrl="Y" original="User1 selection">Selección de Usuario 1</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="135" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Document Action">Acción All_Document</value>
+    <value column="Description" isTrl="Y" original="Document action list">Lista de acciones del documento</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="136" trl="Y">
+    <value column="Name" isTrl="N" original="C_AcctSchema">C_AcctSchema</value>
+    <value column="Description" isTrl="Y" original="Accounting Schema selection">Selección del esquema contable</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="137" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Accounts - User2">C_Accounts - Usuario 2</value>
+    <value column="Description" isTrl="Y" original="User2 selection">Selección del Usuario 2</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="138" trl="Y">
+    <value column="Name" isTrl="N" original="C_BPartner">C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Business Partner selection (no Summary)">Selección del tercero (sin resumen)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="14" trl="Y">
+    <value column="Name" isTrl="Y" original="Text">Texto</value>
+    <value column="Description" isTrl="Y" original="Character String up to 2000 characters">Cadena de caracteres de más de 2000 caracteres</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="140" trl="Y">
+    <value column="Name" isTrl="N" original="C_Product">C_Product</value>
+    <value column="Description" isTrl="Y" original="Product selection">Selección de producto</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="141" trl="Y">
+    <value column="Name" isTrl="N" original="C_Project">C_Project</value>
+    <value column="Description" isTrl="Y" original="Project selection">Selección de proyecto</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="142" trl="Y">
+    <value column="Name" isTrl="N" original="C_Activity">C_Activity</value>
+    <value column="Description" isTrl="Y" original="Activity selection">Selección de actividad</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="143" trl="Y">
+    <value column="Name" isTrl="N" original="C_Campaign">C_Campaign</value>
+    <value column="Description" isTrl="Y" original="Campaign selection">Selección de campaña</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="144" trl="Y">
+    <value column="Name" isTrl="N" original="C_Sales Region">C_Sales Region</value>
+    <value column="Description" isTrl="Y" original="Sales Region selection">Selección de región de venta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="145" trl="Y">
+    <value column="Name" isTrl="N" original="C_Element">C_Element</value>
+    <value column="Description" isTrl="Y" original="Element selection">Selección de elemento</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="148" trl="Y">
+    <value column="Name" isTrl="Y" original="C_DocType SubTypeSO">Subtipo pedido de venta C_DocType</value>
+    <value column="Description" isTrl="Y" original="Order Types list">Lista de tipos de pedidos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="149" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Payment CreditCard Type">Tipo de tarjeta de crédito C_Payment</value>
+    <value column="Description" isTrl="Y" original="C_Payment Credit Card Type list">Lista de tipos de tarjeta de crédito C_Payment</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="14A9BE1555CF4616BDC2E0C8E5EB6542" trl="N">
+    <value column="Name" isTrl="N" original="AD_Process_Request">AD_Process_Request</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="15" trl="Y">
+    <value column="Name" isTrl="Y" original="Date">Fecha</value>
+    <value column="Description" isTrl="Y" original="Date mm/dd/yyyy">Fecha mm/dd/yyyy</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="150" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Order InvoiceRule">Regla de factura C_Order</value>
+    <value column="Description" isTrl="Y" original="Invoicing Rules list">Lista de reglas de facturación</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="151" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Order DeliveryRule">Regla de entrega C_Order</value>
+    <value column="Description" isTrl="Y" original="Delivery Rules list">Lista de reglas de entrega</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="152" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Order DeliveryViaRule">Regla de vía de entrega C_Order</value>
+    <value column="Description" isTrl="Y" original="Delivery via Rule list">Lista de reglas de vía de entrega</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="153" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Order FreightCostRule">Regla de costos de portes C_Order</value>
+    <value column="Description" isTrl="Y" original="Freight cost Rule list">Lista de reglas de costos de portes</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="154" trl="Y">
+    <value column="Name" isTrl="N" original="All_PriorityRule">All_PriorityRule</value>
+    <value column="Description" isTrl="Y" original="Priority scale list">Lista de importancia de prioridades</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="155" trl="Y">
+    <value column="Name" isTrl="Y" original="M_DiscountPriceList RoundingRule">Regla de redondeo M_DiscountPriceList</value>
+    <value column="Description" isTrl="Y" original="Price Rounding Rule list">Lista de reglas de redondeos de precios</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="156" trl="Y">
+    <value column="Name" isTrl="N" original="C_Country">C_Country</value>
+    <value column="Description" isTrl="Y" original="Country selection">Selección de país</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="157" trl="Y">
+    <value column="Name" isTrl="N" original="C_Region">C_Region</value>
+    <value column="Description" isTrl="Y" original="Region selection">Selección de región</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="158" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Tax Parent is NULL">C_Tax</value>
+    <value column="Description" isTrl="Y" original="Tax selection where parent is NULL">Selección de impuesto</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="159" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Location">Ubicación C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Locations of a Business Partner">Ubicaciones de un tercero</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="16" trl="Y">
+    <value column="Name" isTrl="Y" original="DateTime">Fecha y Hora</value>
+    <value column="Description" isTrl="Y" original="Date with time">Fecha con hora</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="161" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product Parent">Padre M_Product</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="162" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product (no summary)">M_Product (sin resumen)</value>
+    <value column="Description" isTrl="Y" original="Product selection, no summary">Selección de producto, sin resumen</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="163" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product Category">Categoría M_Product</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="166" trl="Y">
+    <value column="Name" isTrl="Y" original="M_PriceListForSale">M_PriceList</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="167" trl="Y">
+    <value column="Name" isTrl="Y" original="Weekdays">Días de la semana</value>
+    <value column="Description" isTrl="Y" original="List of days">Lista de días</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="168" trl="Y">
+    <value column="Name" isTrl="Y" original="C_InvoiceSchedule InvoiceFrequency">Frecuencia de facturación C_InvoiceSchedule</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="169" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Project Parent">Padre C_Project</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="16EC6DF4A59747749FDF256B7FBBB058" trl="Y">
+    <value column="Name" isTrl="Y" original="Password (decryptable)">Contraseña (desencriptable)</value>
+    <value column="Description" isTrl="Y" original="A password which is shown with * in the UI and stored in a way so that the cleartext value can be recovered.">Una contraseña que se muestra con * en la Interfaz de Usuario y que se almacena de tal forma que su valor se pueda recuperar.</value>
+    <value column="Help" isTrl="Y" original="The value of the password is encrypted when being saved, however in a way that the cleartext password (as entered) can be recovered. Example use-case is to store a password which needs to be passed later as cleartext to some external service (i.e. a email server password)">El valor de la contraseña se encripta al ser guardado de tal forma que su contenido se puede recuperar posteriormente. Una utilidad puede ser, por ejemplo, la de pasar la contraseña como texto plano (sin encriptar) a un servicio externo (como a un servidor de correo electrónico)</value>
+  </row>
+  <row id="17" trl="Y">
+    <value column="Name" isTrl="Y" original="List">Lista</value>
+    <value column="Description" isTrl="Y" original="Reference List">Referencia de tipo Lista</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="170" trl="Y">
+    <value column="Name" isTrl="N" original="C_DocType">C_DocType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="171" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product (stocked)">M_Product (en stock)</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="172" trl="Y">
+    <value column="Name" isTrl="Y" original="C_DocType SO">Pedido de venta C_DocType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1722C8B5D1BC4B349332167C3E3A4561" trl="Y">
+    <value column="Name" isTrl="Y" original="Database Object Type">Tipo de Objeto de Base de Datos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="173" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Customers">Clientes C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Customer selection">Selección de cliente</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="175" trl="Y">
+    <value column="Name" isTrl="N" original="C_ValidCombination">C_ValidCombination</value>
+    <value column="Description" isTrl="Y" original="Valid Account combinations">Combinaciones contables válidas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="176" trl="Y">
+    <value column="Name" isTrl="Y" original="C_PeriodControl Action">Acción C_PeriodControl</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="177" trl="Y">
+    <value column="Name" isTrl="Y" original="C_PeriodControl Status">Estado C_PeriodControl</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="178" trl="Y">
+    <value column="Name" isTrl="Y" original="GL_Budget Status">Estado GL_Budget</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="179" trl="Y">
+    <value column="Name" isTrl="Y" original="C_SalesRegion Parent">Padre C_SalesRegion</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="18" trl="Y">
+    <value column="Name" isTrl="Y" original="Table">Tabla</value>
+    <value column="Description" isTrl="Y" original="Table List">Referencia de tipo Tabla</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="180" trl="Y">
+    <value column="Name" isTrl="N" original="All_ErrorType">All_ErrorType</value>
+    <value column="Description" isTrl="Y" original="List of type of errors">Lista de tipos de errores</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="180774E575694F81B753B3DD46316E0E" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Internal_Consumption_Line">M_Internal_Consumptionline</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="181" trl="Y">
+    <value column="Name" isTrl="Y" original="C_AcctSchema ElementType">Tipo de elemento C_AcctSchema</value>
+    <value column="Description" isTrl="Y" original="Element Types for Accounting Elements">Tipos de elementos para elementos contables</value>
+    <value column="Help" isTrl="Y" original="Hardcoded Element Types">Tipos de elementos programados a mano</value>
+  </row>
+  <row id="182" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue (all)">C_ElementValue (todos)</value>
+    <value column="Description" isTrl="Y" original="Element Values">Valores de elementos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="183" trl="Y">
+    <value column="Name" isTrl="N" original="C_DocType DocBaseType">C_DocType DocBaseType</value>
+    <value column="Description" isTrl="Y" original="Base Document Types">Tipos de documentos base</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="184" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Tree">AD_Tree</value>
+    <value column="Description" isTrl="Y" original="Tree selection">Selección de árbol</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1850A5390D97470EBB35A3A5F43AB533" trl="Y">
+    <value column="Name" isTrl="Y" original="User Dimension 2 Selector">Selector de dimensión de usuario 2</value>
+    <value column="Description" isTrl="Y" original="User Dimension 2 Selector">Selector de dimensión de usuario 2</value>
+    <value column="Help" isTrl="Y" original="User Dimension 2 Selector">Dimensión del usuario 2 Selector</value>
+  </row>
+  <row id="1852D69AB3FD453F8F031813501B26F0" trl="Y">
+    <value column="Name" isTrl="Y" original="Create_Reservation list">M_Internal_Consumptionline</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="187" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner SalesRep">Representante de ventas C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Business Partners who are Sales Reps">Terceros que son representantes de ventas</value>
+    <value column="Help" isTrl="Y" original="SalesRep_ID is synonym of AD_User_ID">SalesRep_ID es sinónimo de AD_User_ID</value>
+  </row>
+  <row id="188" trl="Y">
+    <value column="Name" isTrl="Y" original="M_PriceList Version">Versión M_PriceList</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="189" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Transaction Movement Type">Tipo de movimiento M_Transaction</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="19" trl="Y">
+    <value column="Name" isTrl="N" original="TableDir">TableDir</value>
+    <value column="Description" isTrl="Y" original="Direct Table Access">Acceso directo a tabla</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="190" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_User SalesRep">Representante de ventas AD_User</value>
+    <value column="Description" isTrl="Y" original="Sales Representative">Representante de ventas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="191" trl="Y">
+    <value column="Name" isTrl="N" original="M_Locator">M_Locator</value>
+    <value column="Description" isTrl="Y" original="Warehouse Locator">Hueco de almacén</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="192" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Vendors">Proveedores C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Vendor selection">Selección de proveedor</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="193" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BankAccount for Credit Card">C_BankAccount para tarjeta de crédito</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="194" trl="Y">
+    <value column="Name" isTrl="N" original="M_DiscountPriceList Base">M_DiscountPriceList Base</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="195" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Payment Rule">Regla All_Payment</value>
+    <value column="Description" isTrl="Y" original="In &amp; Out Payment Options">Opciones de cobro y pago</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="196" trl="Y">
+    <value column="Name" isTrl="Y" original="C_RevenueRecognition Frequency">Frecuencia C_RevenueRecognition</value>
+    <value column="Description" isTrl="Y" original="Frequency of Revenue Recognition">Frecuencia del reconocimiento de ingresos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="197" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Warehouse of Client">M_Warehouse de la entidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="198" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Inventory ReportType">Tipo de informe M_Inventory</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="199" trl="Y">
+    <value column="Name" isTrl="Y" original="M_PriceList_Version for Client">M_PriceList_Version para la entidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1CC9902786384893A551465428468C2A" trl="N">
+    <value column="Name" isTrl="N" original="C_Settlement">C_Settlement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1DBAAD6ABF2E4FE7A4654DDE387B89C9" trl="N">
+    <value column="Name" isTrl="N" original="TableBasedTableSelector">TableBasedTableSelector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1F603F334B704F53928B8DB908611657" trl="Y">
+    <value column="Name" isTrl="N" original="M_Product">M_Product</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Basic M_Product reference with no filters applied.">Básica M_Product referencia sin filtros aplicados.</value>
+  </row>
+  <row id="1FAD22496E6F468DBC46CA23FE204B41" trl="N">
+    <value column="Name" isTrl="N" original="FIN_PaymentSchedule">FIN_PaymentSchedule</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Reference Validation Types">Tipos de validación AD_Reference</value>
+    <value column="Description" isTrl="Y" original="Reference Validation Type list">Lista de tipo de validación de referencia</value>
+    <value column="Help" isTrl="Y" original="e.g. I - Independent">ejemplo: I - Independiente</value>
+  </row>
+  <row id="20" trl="Y">
+    <value column="Name" isTrl="Y" original="YesNo">Sí/No</value>
+    <value column="Description" isTrl="Y" original="CheckBox">Opción</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="200" trl="Y">
+    <value column="Name" isTrl="N" original="C_Charge">C_Charge</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="201" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BP_EDI EDI Type">Tipo EDI C_BP_EDI</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="202" trl="Y">
+    <value column="Name" isTrl="Y" original="M_EDI Status">Estado M_EDI</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="203" trl="Y">
+    <value column="Name" isTrl="N" original="M_EDI Trx Type">M_EDI Trx Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="204" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Find AndOr">AD_Find AndOr</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="205" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Find Operation">Operación AD_Find</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="206" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Table Posting">Contabilización AD_Table</value>
+    <value column="Description" isTrl="Y" original="Posting Tables">Tablas a contabilizar</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="207" trl="Y">
+    <value column="Name" isTrl="Y" original="GL Category Type">Tipo de categoría de Libro Mayor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="208" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_ImpFormat Type">Tipo AD_ImpFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="21" trl="Y">
+    <value column="Name" isTrl="Y" original="Location">Dirección Postal</value>
+    <value column="Description" isTrl="Y" original="Location/Address">Dirección Postal</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="210" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_ImpFormat_Row Type">Tipo AD_ImpFormat_Row</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="211" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product BOM (stocked)">M_Product LDM (en stock)</value>
+    <value column="Description" isTrl="Y" original="Products that are BOMs and stocked">Productos que son LDM y están en stock</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="212" trl="Y">
+    <value column="Name" isTrl="Y" original="M_InventoryCount QtyRange">Rango Cantidad M_InventoryCount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="213" trl="Y">
+    <value column="Name" isTrl="N" original="C_Payment AVS">C_Payment AVS</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="214" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Payment Tender Type">Tipo de oferta C_Payment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="215" trl="Y">
+    <value column="Name" isTrl="N" original="C_Payment Trx Type">C_Payment Trx Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="216" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Bank Account Type">Tipo de cuenta C_Bank</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="217" trl="Y">
+    <value column="Name" isTrl="N" original="C_Cash Trx Type">C_Cash Trx Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="21A4E92C455C432FACDC0C45372454F5" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Daily Option">Proceso Diario</value>
+    <value column="Description" isTrl="Y" original="Convenience for specifying weekend, weekday or specific days.">Útil para especificar fines de semana, días de la semana o días en concreto.</value>
+    <value column="Help" isTrl="Y" original="Convenience for specifying weekend, weekday or specific days.">Útil para especificar fines de semana, días de la semana o días en concreto.</value>
+  </row>
+  <row id="22" trl="Y">
+    <value column="Name" isTrl="Y" original="Number">Número</value>
+    <value column="Description" isTrl="Y" original="Float Number">Número de coma flotante</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="223" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Vendors Active">Activos de proveedores C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Vendor selection">Selección de proveedor</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="224" trl="Y">
+    <value column="Name" isTrl="N" original="C_Commission DocBasis">C_Commission DocBasis</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="224C53E343404771A44494C2AD51DAF3" trl="N">
+    <value column="Name" isTrl="N" original="M_InOutLine no combo">M_InOutLine no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="225" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Commission Frequency">Frecuencia C_Commission</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="226" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Role User Level">Nivel de usuario AD_Role</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="227" trl="Y">
+    <value column="Name" isTrl="N" original="C_PaymentTerm">C_PaymentTerm</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="228" trl="Y">
+    <value column="Name" isTrl="N" original="PA_Goal">PA_Goal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="229" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Achievement Parent">Padre PA_Achievement</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="22F546D49D3A48E1B2B4F50446A8DE58" trl="Y">
+    <value column="Name" isTrl="N" original="C_DocType_Trx">C_DocType_Trx</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="23" trl="Y">
+    <value column="Name" isTrl="Y" original="Binary">Binario</value>
+    <value column="Description" isTrl="Y" original="Binary Data">Dato binario</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="230" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Goal Parent">Padre PA_Goal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="231" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Measure Type">Tipo PA_Measure</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="232" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Vendor or SalesRep">Proveedor o representante de ventas C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Vendor or SalesRep selection">Selección de proveedor o representante de ventas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="233" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Period (Open)">C_Period (Abierto)</value>
+    <value column="Description" isTrl="Y" original="Periods Sorted by Date">Periodos ordenados por fecha</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="234" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Posted Status">Estado All_Posted</value>
+    <value column="Description" isTrl="Y" original="Post">Contabilizar</value>
+    <value column="Help" isTrl="Y" original="Post">Contabilizar</value>
+  </row>
+  <row id="235" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Report AmountType">Tipo de importe PA_Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="236" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Report CalculationType">Tipo de cálculo PA_Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="237" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Report ColumnType">Tipo de columna PA_Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="238" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Report CurrencyType">Tipo de moneda PA_Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="239" trl="Y">
+    <value column="Name" isTrl="N" original="PA_ReportColumn">PA_ReportColumn</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="24" trl="Y">
+    <value column="Name" isTrl="Y" original="Time">Hora</value>
+    <value column="Description" isTrl="Y" original="Time">Hora</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="240" trl="Y">
+    <value column="Name" isTrl="N" original="PA_ReportLine">PA_ReportLine</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="241" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_Report LineType">Tipo de línea PA_Report</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="242" trl="Y">
+    <value column="Name" isTrl="Y" original="PA_ReportLine Parent">Padre PA_ReportLine</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="243" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Color Type">Tipo AD_Color</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="244" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Column Key ColumnNames">Calve nombres de columnas AD_Column</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="245" trl="Y">
+    <value column="Name" isTrl="Y" original="All_Entity Type">Tipo All_Entity</value>
+    <value column="Description" isTrl="Y" original="Entity Type (Dictionary, ..)">Tipo de entidad (Diccionario, ...)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="246" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Discount CumulativeLevel">Nivel acumulado M_Discount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="247" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Discount Type">Tipo M_Discount</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="248" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Color StartPoint">Punto de inicio AD_Color</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="249" trl="Y">
+    <value column="Name" isTrl="N" original="M_DiscountSchema">M_DiscountSchema</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="25" trl="Y">
+    <value column="Name" isTrl="Y" original="Account">Cuenta</value>
+    <value column="Description" isTrl="Y" original="Account Element">Elemento de cuenta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="250" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product_Costing Source">Origen M_Product_Costing</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="251" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Column Name">Nombre AD_Column</value>
+    <value column="Description" isTrl="Y" original="Column selection">Selección de columna</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="252" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Employee">Empleado C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Business Partners who are Employee">Terceros que son empleados</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="253" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Print Field Alignment">Alineado de campo AD_Print</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="254" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Print Line Alignment">Alineado de línea AD_Print</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="25400A74C902418B815D70EFDCD29153" trl="N">
+    <value column="Name" isTrl="N" original="C_BPartner Vendors no combo">C_BPartner Vendors no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="255" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Print Format Type">Tipo de formato AD_Print</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="256" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Print Area">Área AD_Print</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="257" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Column Integer">Entero AD_Column</value>
+    <value column="Description" isTrl="Y" original="Integer Type only (Name)">Tipo de entero solo (Nombre)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="258" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Column YesNo">Sí/No AD_Column</value>
+    <value column="Description" isTrl="Y" original="Columns YesNo (Name)">Columnas Sí/No (Nombre)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="259" trl="Y">
+    <value column="Name" isTrl="N" original="AD_PrintFormat">AD_PrintFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="26" trl="Y">
+    <value column="Name" isTrl="Y" original="RowID">IDFila</value>
+    <value column="Description" isTrl="Y" original="Row ID Data Type">Tipo de dato del ID de la fila</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="261" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_PrintFormat Invoice">Factura AD_PrintFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="262" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_PrintFormat Order">Pedido AD_PrintFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="263" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_PrintFormat Shipment">Remisión AD_PrintFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="263693E51C7847BF90C897ADB830E2BB" trl="Y">
+    <value column="Name" isTrl="Y" original="On hand warehouse">El almacén de la mano</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="264" trl="Y">
+    <value column="Name" isTrl="N" original="AD_PrintFormatItem">AD_PrintFormatItem</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="265" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Print Graph Type">Tipo de gráfico AD_Print</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="266" trl="Y">
+    <value column="Name" isTrl="N" original="AD_PrintColor">AD_PrintColor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="267" trl="Y">
+    <value column="Name" isTrl="N" original="AD_PrintFont">AD_PrintFont</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="268" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_PrintFormat Check">Comprobación AD_PrintFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="269" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_PrintFormat Not TableBased">No basado en tabla AD_PrintFormat</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="27" trl="Y">
+    <value column="Name" isTrl="N" original="Color">Color</value>
+    <value column="Description" isTrl="Y" original="Color element">Color del elemento</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="270" trl="Y">
+    <value column="Name" isTrl="N" original="M_Product_ProductType">M_Product_ProductType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="271" trl="Y">
+    <value column="Name" isTrl="N" original="C_OrderLine">C_OrderLine</value>
+    <value column="Description" isTrl="Y" original="Order Line">Línea de pedido</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="273" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue (Parents)">C_ElementValue (Padres)</value>
+    <value column="Description" isTrl="Y" original="Account selection">Selección de cuenta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="275" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Period (all)">C_Period (todos)</value>
+    <value column="Description" isTrl="Y" original="Periods Sorted by Date">Periodos ordenados por fecha</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="276" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Org (all)">AD_Org (todos)</value>
+    <value column="Description" isTrl="Y" original="Organization selection">Selección de organización</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="277" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Employee w Address">Empleado con dirección C_BPartner</value>
+    <value column="Description" isTrl="Y" original="Business Partners who are Employee and have addresses">Terceros que son empleados y tienen dirección</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="278" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Tab">AD_Tab</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="279" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Product BOM Type">Tipo LDM M_Product</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="279F05C514AB40868B83484C11DD4A01" trl="Y">
+    <value column="Name" isTrl="Y" original="Decimal Separator">Separador decimal</value>
+    <value column="Description" isTrl="Y" original="Decimal separator values">Valores de separadores decimales</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="27A729423DEE4023B8B799377CB19D11" trl="Y">
+    <value column="Name" isTrl="N" original="C_poc_doctype_template HeaderMargin">C_poc_doctype_template HeaderMargin</value>
+    <value column="Description" isTrl="Y" original="List indicating types of space">Lista que indica los tipos de espacio</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="28" trl="Y">
+    <value column="Name" isTrl="Y" original="Button">Botón</value>
+    <value column="Description" isTrl="Y" original="Command Button - starts a process">Botón de comando - inicia un proceso</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="280" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Print Label Line Type">Tipo de línea de etiqueta AD_Print</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="282" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Recurring Type">Tipo C_Recurring</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="283" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Recurring Frequency">Frecuencia C_Recurring</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="284" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Window">AD_Window</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="285" trl="Y">
+    <value column="Name" isTrl="Y" original="K_Entry Related">Relacionado K_Entry</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="286" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_User - Internal">AD_User - Interno</value>
+    <value column="Description" isTrl="Y" original="Employee or SalesRep">Empleado o representante de ventas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="287" trl="Y">
+    <value column="Name" isTrl="N" original="C_Tax SPPOType">C_Tax SPPOType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="288" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ProjectType Category">C_ProjectType Categoría</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="289" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner SOCreditStatus">C_BPartner Estado del Crédito</value>
+    <value column="Description" isTrl="Y" original="Sales Credit Status">Lista de estados de Créditos de Ventas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="28D6F0121E844F56937AE51C247133C7" trl="Y">
+    <value column="Name" isTrl="Y" original="Create PO LInes Pick and Execute">Crear líneas de PO Pick and Execute</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="29" trl="Y">
+    <value column="Name" isTrl="Y" original="Quantity">Cantidad</value>
+    <value column="Description" isTrl="Y" original="Quantity data type">Tipo de dato cantidad</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="290" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Order Purchase">C_Order Compras</value>
+    <value column="Description" isTrl="Y" original="Purchase orders">Pedidos de Compra</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="295DC3D3A3D14DFB84739181DDE941A2" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment_Proposal process actions">FIN_Payment_Proposal process actions</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2969F07308CB43ECBCDAE151C12F03E0" trl="Y">
+    <value column="Name" isTrl="Y" original="All base amount">Todo el importe base</value>
+    <value column="Description" isTrl="Y" original="All amounts available to be taken as tax base amount for tax calculation.">Todos los importes disponibles para tener en cuenta como base para el cálculo de impuestos.</value>
+    <value column="Help" isTrl="Y" original="All amounts available to be taken as tax base amount for tax calculation.">Todos los importes disponibles a tener en cuenta para como base para el cálculo de impuestos.</value>
+  </row>
+  <row id="2F18FEBF939D4F6DA5D5AEED73AE11D0" trl="Y">
+    <value column="Name" isTrl="Y" original="Orderline selector">Selector de lineas de Orden</value>
+    <value column="Description" isTrl="Y" original="Orderline selector">\n
+selector de línea de pedido</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2F57E5B5EBF44E0A9D45492DECBD3CC1" trl="Y">
+    <value column="Name" isTrl="Y" original="C_GLItem Ordered by Organization">C_GLItem Ordenado por Organizacion</value>
+    <value column="Description" isTrl="Y" original="It is a general ledger item.">Es un elemento del libro mayor.</value>
+    <value column="Help" isTrl="Y" original="It is a general ledger item.">Es un elemento de mayor general.</value>
+  </row>
+  <row id="2FE25E4AF395479EB8BAB0539A829C28" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM Volume">Unidad de volumen</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Column ColumnName">Nombre de columna AD_Column</value>
+    <value column="Description" isTrl="Y" original="Column selection">Selección de columna</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="30" trl="Y">
+    <value column="Name" isTrl="Y" original="Search">Búsqueda</value>
+    <value column="Description" isTrl="Y" original="Search Field">Campo de búsqueda</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="31" trl="Y">
+    <value column="Name" isTrl="Y" original="Locator">Hueco Almacén</value>
+    <value column="Description" isTrl="Y" original="Warehouse Locator Data type">Tipo de dato hueco de almacén</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="32" trl="Y">
+    <value column="Name" isTrl="Y" original="Image">Imagen</value>
+    <value column="Description" isTrl="Y" original="Binary Image Data">Datos binarios de imagen</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="33" trl="Y">
+    <value column="Name" isTrl="Y" original="Assignment">Tarea</value>
+    <value column="Description" isTrl="Y" original="Resource Assignment">Asignación de tarea</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="34" trl="Y">
+    <value column="Name" isTrl="Y" original="Memo">Memorándum</value>
+    <value column="Description" isTrl="Y" original="Large Text - Character String up to 2000 characters">Texto largo - Cadena de caracteres de más de 2000 caracteres</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="35" trl="Y">
+    <value column="Name" isTrl="N" original="PAttribute">PAttribute</value>
+    <value column="Description" isTrl="Y" original="Product Attribute">Atributo del producto</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="368E5F32B443454093D14D4E0AD44E13" trl="Y">
+    <value column="Name" isTrl="Y" original="OBPSLicenseEdition">LicenciasOBPS</value>
+    <value column="Description" isTrl="Y" original="Editions of OBPS Licenses">Ediciones de Licencias OBPS</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="36972531DA994BB38ECB91993058282F" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment process actions">FIN_Payment process actions</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="37D0712A65774E2EBFA1EBA45CCB51A4" trl="Y">
+    <value column="Name" isTrl="Y" original="RM Shipment Pick Edit Lines">Elegir/Editar líneas de albarán de devolución de material</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="39A7A2B909B541E280A59075CE49E585" trl="Y">
+    <value column="Name" isTrl="Y" original="FIN Execution Process Parameter input type">Parámetro de entrada del proceso de ejecución financiera</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="List of Input Types allowed for Execution Process Parameters">Lista de Tipos de Entrada permitidos para los Parámetros del Proceso de Ejecución</value>
+  </row>
+  <row id="3AE2B2C5C5F640EC83A5E77B0484C316" trl="Y">
+    <value column="Name" isTrl="Y" original="User2">Usuario 2</value>
+    <value column="Description" isTrl="Y" original="Refers the user dimension 2 table">Referencia la tabla de dimensión de usuario 2</value>
+    <value column="Help" isTrl="Y" original="Refers the user dimension 2 table">Hace referencia la tabla de dimensiones de usuario 2</value>
+  </row>
+  <row id="3DDC9BFFE43342C4826EC65E97D40586" trl="Y">
+    <value column="Name" isTrl="Y" original="Tab Level">Nivel solapa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3F854F4DC7284CE4857A5EA941BE032C" trl="Y">
+    <value column="Name" isTrl="Y" original="Module type">Tipo de Módulo</value>
+    <value column="Description" isTrl="Y" original="Type of module (module, package or template)">Tipo de módulo (módulo, paquete o plantilla)</value>
+    <value column="Help" isTrl="Y" original="Defines the type of modules, a module can be a &quot;module&quot; which contains data and sources, a &quot;package&quot; which contains other modules or a &quot;template&quot; which contains other modules and a configuration script.">Define el tipo de módulo, un módulo puede ser un "módulo" que contiene datos y fuentes, un "paquete" que contiente otros módulos o una "plantilla" que contiene otros módulos y un script de configuración.</value>
+  </row>
+  <row id="4" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Reference Subreferences">Valores AD_Reference</value>
+    <value column="Description" isTrl="Y" original="Subreference">Selección de referencia (lista y tabla)</value>
+    <value column="Help" isTrl="Y" original="(not DataType and Independent)">(no es un tipo de dato ni independiente)</value>
+  </row>
+  <row id="401065C7CE134B019476EFAA057635FF" trl="N">
+    <value column="Name" isTrl="N" original="DatasourceSelectorForTables">DatasourceSelectorForTables</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB5226C90008" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner not filtered by default by customer/vendor">Tercero que no filtra por defecto por cliente/proveedor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="40B84CF78FC9435790887846CCDAE875" trl="Y">
+    <value column="Name" isTrl="Y" original="Add Transaction Document Type">Añadir Transacción de tipo de documento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="439F775E24BF48EDA51A7AE2535F0DCE" trl="Y">
+    <value column="Name" isTrl="N" original="DateTime_To (Date)">DateTime_To (Date)</value>
+    <value column="Description" isTrl="Y" original="Date Time Field To Date">Campo fecha y hora hasta fecha</value>
+    <value column="Help" isTrl="Y" original="It has the value of the next day of the selected date at 00:00:00">Tiene el valor del día siguiente de la fecha seleccionada a las 00:00:00</value>
+  </row>
+  <row id="440DDA64A43F4799AAFF48BC86DC8F78" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation Actions">Acciones de reservas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="444F3B4F45544B9CA45E4035D49C1176" trl="Y">
+    <value column="Name" isTrl="Y" original="Asset Selector">Selector de activos</value>
+    <value column="Description" isTrl="Y" original="Asset Selector">Selector de activos</value>
+    <value column="Help" isTrl="Y" original="Asset Selector">Selector de Activos</value>
+  </row>
+  <row id="4452E6997DD14363AB4387B06939871A" trl="Y">
+    <value column="Name" isTrl="Y" original="CommercialTier">NivelComercial</value>
+    <value column="Description" isTrl="Y" original="Tiers for commercial modules">Niveles para los módulos comerciales</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="467CA50808444F9890E23536FDE10405" trl="Y">
+    <value column="Name" isTrl="Y" original="Portal Role Selector">Selector Papel Portal</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="47209D76F3EE4B6D84222C5BDF170AA2" trl="Y">
+    <value column="Name" isTrl="Y" original="Yes/No search box">Search box Sí/No</value>
+    <value column="Description" isTrl="Y" original="Used for search box values yes/no and empty (for any)">Usado por search box sí/no y vacíos (para cualquiera)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="482FE0CA9E0F438BBE576E612111BF31" trl="Y">
+    <value column="Name" isTrl="Y" original="Physical Inventory line selector">Selector de línea del inventario físico</value>
+    <value column="Description" isTrl="Y" original="Physical Inventory line selector">Selector de línea del inventario físico</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="487AE3E73E8542538CDC4A9EED5F6434" trl="Y">
+    <value column="Name" isTrl="N" original="DateTime_From (Date)">DateTime_From (Date)</value>
+    <value column="Description" isTrl="Y" original="Date Time Field From Date">Campo fecha y hora desde fecha</value>
+    <value column="Help" isTrl="Y" original="It has the value of the current selected date at 00:00:00">Tiene el valor de la fecha actual seleccionado a las 00:00:00</value>
+  </row>
+  <row id="4AA6C3BE9D3B4D84A3B80489505A23E5" trl="Y">
+    <value column="Name" isTrl="Y" original="Image BLOB">Imagen BLOB</value>
+    <value column="Description" isTrl="Y" original="Contains a link to a BLOB image in AD_Image table">Contiene un enlace a una imagen BLOB en la tabla AD_Image</value>
+    <value column="Help" isTrl="Y" original="Contains a link to a BLOB image in AD_Image table, this reference replaces the old Image reference">Contiene un enlace a una imagen BLOB en la tabla AD_Image. Esta referencia reemplaza la vieja referencia de Imagen</value>
+  </row>
+  <row id="4BEF5D0691664A939E8710FA9EB0BAF5" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Selector">Selector de pagos</value>
+    <value column="Description" isTrl="Y" original="Payment Selector">Selector de pagos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4C36DC179A5F40DC80B3F3798E121152" trl="Y">
+    <value column="Name" isTrl="Y" original="Audit Actions">Acciones de auditoría</value>
+    <value column="Description" isTrl="Y" original="List of actions for audit trail">Lista de acciones para el histórico de auditoría</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4EFC9773F30B4ACE97D225BD13CFF8CB" trl="Y">
+    <value column="Name" isTrl="N" original="FinAcc Trx Type">FinAcc Trx Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4FA73FBEF8CE4A54926DDD317E385486" trl="Y">
+    <value column="Name" isTrl="Y" original="Valid Combination Selector">Selector de combinaciones contables</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4FE370EC4A194C0EA1AE50D91B8CCD1B" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Multiple Selector for Add Product">Producto Selector múltiple para Agregar Producto</value>
+    <value column="Description" isTrl="Y" original="Multiple selector to be used in the Add Products process definition">Selector múltiple para ser utilizada en la definición del proceso Añada los 
+productos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Table Access Levels">Niveles de acceso AD_Table</value>
+    <value column="Description" isTrl="Y" original="Table Access and Sharing Level list">Lista de accesos a tablas y nivel de compartición</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="531F166E5A7C437F9438A94AD8DDF212" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner With Location And User">Tercero con domicilio y usuario</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="54AC2749F26440F3AEA33378858569E4" trl="N">
+    <value column="Name" isTrl="N" original="M_InoutLine">M_InoutLine</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="556C6580590E4D53AEE10AD0CC2EFC77" trl="Y">
+    <value column="Name" isTrl="Y" original="FIN Payment Run status">Estado del proceso de Ejecución de Pagos financieros</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="55BB57CFEF7E4EA0B3F429E4A55586D8" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Process UIPattern">Patrón Interfaz de Usuario AD_Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="575BCB88A4694C27BC013DE9C73E6FE7" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment status">FIN_Payment status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5921E65E7BFA4134B98CCDA388CC0559" trl="Y">
+    <value column="Name" isTrl="Y" original="OBUISEL Account Element Value ">Valor de la Cuenta</value>
+    <value column="Description" isTrl="Y" original="Account Element Value">Cuenta Elemento Valor</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="595E4FB3F743477BA5A670452556C3DF" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment_Schedule_v order">FIN_Payment_Schedule_v order</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5AD08D5DF85549E0BCC0DEBDE4C0D340" trl="Y">
+    <value column="Name" isTrl="Y" original="Use Attribute Set Value As">Usar Valor del conjunto de atributos</value>
+    <value column="Description" isTrl="Y" original="A distinct Attribute Set Value characteristic.">Una característica del valor de conjunto de atributos distintiva.</value>
+    <value column="Help" isTrl="Y" original="Permits the user to define different types of Attribute Set Values, depending on their usage.">Permite definir diferentes tipos de conjunto de atributos, dependiendo de su uso.</value>
+  </row>
+  <row id="5B988E35236D404B8210801472E363CE" trl="Y">
+    <value column="Name" isTrl="N" original="LevelPricingAlgorithms">LevelPricingAlgorithms</value>
+    <value column="Description" isTrl="Y" original="This table stores algorithms installed in the system to work with level pricing">Esta tabla almacena algoritmos instalados en el sistema para trabajar con 
+precios de nivel</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5BBEA02A7BCE441A81BC546DF034162E" trl="Y">
+    <value column="Name" isTrl="Y" original="All document tax amount calculation criteria">Criterio de cálculo de impuestos de todo el documento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5D4B2983E0254AA1B60A82A7B92DB67D" trl="Y">
+    <value column="Name" isTrl="Y" original="License Type">Tipo de Licencia</value>
+    <value column="Description" isTrl="Y" original="Type of license">Tipo de licencia</value>
+    <value column="Help" isTrl="Y" original="Includes a list of all the possible license to distribute modules.">Incluye una lista de todas las posibles licencias para distribuir módulos</value>
+  </row>
+  <row id="5E6828AAA48A4DC8A29C550AD84406DA" trl="Y">
+    <value column="Name" isTrl="Y" original="User1">Usuario 1</value>
+    <value column="Description" isTrl="Y" original="Refers the user dimension 1 table">Referencia la tabla de dimensión de usuario 1</value>
+    <value column="Help" isTrl="Y" original="Refers the user dimension 1 table">Hace referencia la tabla de dimensiones de usuario 1</value>
+  </row>
+  <row id="5E77652CBFEB4F03A3A0629642D024DD" trl="N">
+    <value column="Name" isTrl="N" original="FIN_Payment">FIN_Payment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="60E231391A7348DDA7171E780F62EF99" trl="Y">
+    <value column="Name" isTrl="N" original="InstancePurpose">InstancePurpose</value>
+    <value column="Description" isTrl="Y" original="Purpose for the instance">Propósito de la instancia</value>
+    <value column="Help" isTrl="Y" original="Determines which is the purpose for an Openbravo ERP instance">Determina el propósito de la instancia de Openbravo ERP</value>
+  </row>
+  <row id="64522A2F925244F282036B827E8FA3D0" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Selector">Selector de Factura</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="65447418FD4D428CA025AC9AF26ADA21" trl="Y">
+    <value column="Name" isTrl="Y" original="PeriodNo">Periodo</value>
+    <value column="Description" isTrl="Y" original="Periods for the selected year">Periodos del año seleccionado</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="657B89EF105149F2B011CF8F5034FF92" trl="Y">
+    <value column="Name" isTrl="Y" original="M_Internal_Consumption actions">M_Internal_Consumption accones</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="665CE68BB382425BB43057256767B5DE" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Frequency">Frecuencia del Proceso</value>
+    <value column="Description" isTrl="Y" original="Frequency by which a Process trigger is executed.">Frecuencia con la que se ejecutará el disparador del Proceso.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6669508E338F4A10BA3E0D241D133E62" trl="Y">
+    <value column="Name" isTrl="Y" original="Default Period Options">Opciones del periodo por defecto</value>
+    <value column="Description" isTrl="Y" original="Contains values for different calculation of default period in a deferred revenue/expense plan.">Contiene valores para diferentes cálculos del periodo por defecto en un plan de ingresos/gastos periodificado.</value>
+    <value column="Help" isTrl="Y" original="Select the option for calculation of default period in a deferred revenue/expense plan.">Seleccione la opción para el cálculo del período predeterminado en un plan 
+de ingresos / gastos diferidos.</value>
+  </row>
+  <row id="66E310A87A844A51B8BAD2884E996CD6" trl="Y">
+    <value column="Name" isTrl="N" original="C_GLItem">C_GLItem</value>
+    <value column="Description" isTrl="Y" original="It is a general ledger item.">Es un elemento del libro mayor.</value>
+    <value column="Help" isTrl="Y" original="It is a general ledger item.">Es un elemento del libro mayor.</value>
+  </row>
+  <row id="66F2DCC800A34F94923444C29478E70A" trl="Y">
+    <value column="Name" isTrl="Y" original="FIN_Payment Reverse Actions">FIN_Payment revertir acciones</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6BBBF18412CE4454B7C2F45E5FC1F6A3" trl="Y">
+    <value column="Name" isTrl="Y" original="Tab Access Selector">Selector Acceso a Tab</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6C11958E975D4DF8A38E7F4A119A3077" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Month Option">Proceso Mensual</value>
+    <value column="Description" isTrl="Y" original="The first, second, third, fourth specified day in a month.">El primer, segundo, tercero, cuarto día especificado en un mes.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7039147A5B49457DA3D13F807EC8E01F" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Finish">Finalización del Proceso</value>
+    <value column="Description" isTrl="Y" original="How  a Process trigger will finish">Cómo terminará el disparador del Proceso</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="70608617261A474EBAD0E8D56345FC68" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation Stock Selector">Reserva de la Selector</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="712D9821BE8246AC95E6C16D8BEEBE5E" trl="N">
+    <value column="Name" isTrl="N" original="ProductSimple">ProductSimple</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="725CD8C6882C40AFB4D1C27B1AEF8BB4" trl="Y">
+    <value column="Name" isTrl="Y" original="Module status">Estado del Módulo</value>
+    <value column="Description" isTrl="Y" original="Status for modules">Estado de los módulos</value>
+    <value column="Help" isTrl="Y" original="Status for modules">Estado para los módulos</value>
+  </row>
+  <row id="73625A8F22EF4CD7808603156BA606D7" trl="Y">
+    <value column="Name" isTrl="Y" original="Accruals and Deferrals Plan Types">Tipos de plan de periodificación de ingresos y cobros</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="746C95F41182419C921254B6CB4D8F8A" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation Selector">Selector Reserva</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="772B5918358B443A83F82F81A9A4BFB6" trl="N">
+    <value column="Name" isTrl="N" original="C_Commission BasisAmt">C_Commission BasisAmt</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7957E48BE5074984A4EB79D646A7ABAB" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Definition UIPattern">Patrón de interfaz de la definición del proceso</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7A335E6DA5774F89972F6903C9A142AA" trl="Y">
+    <value column="Name" isTrl="Y" original="Condition of the goods">Estado del Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7A55F24E10FD467EA8436DFE32D2C368" trl="Y">
+    <value column="Name" isTrl="Y" original="Price List Type">Tipo de Lista de precios</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7CD9193198B94EF5B174D0F8512B0857" trl="Y">
+    <value column="Name" isTrl="Y" original="Module Action">Acción del Módulo</value>
+    <value column="Description" isTrl="Y" original="List of actions for logging modules">Lista de acciones para los módulos de autenticación</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7DB6D4792CDC4ED297C70A4F4282A52E" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Status">Estado del Proceso</value>
+    <value column="Description" isTrl="Y" original="The status for a process - Scheduled, Processing, Error, Success, Misfired">El estado de un proceso - Programado, Procesando, Error, Éxito.</value>
+    <value column="Help" isTrl="Y" original="The status for a process - Scheduled, Processing, Error, Success, Misfired">El estado de un proceso - Programado, Procesando, Error, Éxito.</value>
+  </row>
+  <row id="800000" trl="Y">
+    <value column="Name" isTrl="N" original="M_Product_UOM">M_Product_UOM</value>
+    <value column="Description" isTrl="Y" original="UOM order">Unidad de Pedido de Producto</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800001" trl="Y">
+    <value column="Name" isTrl="N" original="C_Tax_Parent">C_Tax_Parent</value>
+    <value column="Description" isTrl="Y" original="Taxes with IsSummary=Y">Impuestos con IsSummary=Y</value>
+    <value column="Help" isTrl="Y" original="Parent Taxes">Impuestos padre</value>
+  </row>
+  <row id="800002" trl="Y">
+    <value column="Name" isTrl="Y" original="ProjectStatus">SituaciónObra</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800003" trl="Y">
+    <value column="Name" isTrl="Y" original="Projectphase">FaseObra</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800004" trl="Y">
+    <value column="Name" isTrl="Y" original="Projectkind">TipoObra</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800005" trl="Y">
+    <value column="Name" isTrl="Y" original="PublicPrivate">TipoIniciativa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800007" trl="Y">
+    <value column="Name" isTrl="Y" original="Print Format Invoice">Formato impresión facturas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800008" trl="Y">
+    <value column="Name" isTrl="Y" original="Price">Precio</value>
+    <value column="Description" isTrl="Y" original="Price">Precio</value>
+    <value column="Help" isTrl="Y" original="Price">Precio</value>
+  </row>
+  <row id="800009" trl="Y">
+    <value column="Name" isTrl="Y" original="Product_Template_Type">Tipo de plantilla</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800010" trl="Y">
+    <value column="Name" isTrl="Y" original="Settlement type">Tipo liquidación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800011" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Complete">Producto Almacén</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800012" trl="Y">
+    <value column="Name" isTrl="Y" original="Type maintenance">Tipo mantenimiento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800014" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue show value conditions">Valor a Aplicar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800015" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ElementValue level">Cuenta Mayor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800016" trl="Y">
+    <value column="Name" isTrl="Y" original="Schedule_Periodicity">Periodicidad de la agenda</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800017" trl="Y">
+    <value column="Name" isTrl="Y" original="Storage Payment Rule">Forma de pago almacén</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800018" trl="Y">
+    <value column="Name" isTrl="Y" original="DocumentDocTypeCopy">Tipo de copia</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800019" trl="Y">
+    <value column="Name" isTrl="Y" original="General Quantity">Cantidad general</value>
+    <value column="Description" isTrl="Y" original="General Quantity">Cantidad general</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800020" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoicingmode">Modo facturación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800021" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoicingtype">Tipo facturación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800022" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Table Posting TRL">Contabilizando AD_Table TRL</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800023" trl="Y">
+    <value column="Name" isTrl="Y" original="Bankingrule">Norma bancaria</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800024" trl="Y">
+    <value column="Name" isTrl="N" original="All_Processed_Status">All_Processed_Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800025" trl="Y">
+    <value column="Name" isTrl="Y" original="Cost Type">Tipo de Costo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800026" trl="Y">
+    <value column="Name" isTrl="Y" original="Scheduled invoice grouping">Agrupación en facturas periódicas</value>
+    <value column="Description" isTrl="Y" original="For scheduled invoicing, break into different invoices if the related values are different">Para la facturación periódica, romper en distintas facturas cuando los valores relacionados sean distintos.</value>
+    <value column="Help" isTrl="Y" original="For scheduled invoicing, break into different invoices if the related values are different. The value is used as a binary code with 15 digits:&#10;1.-Order organization (AD_Org_ID)&#10;2.-Order (C_Order_ID)&#10;3.-Shipment (M_InOut_ID)&#10;4.-Invoice location (BillTo_ID)&#10;5.-Ship location (C_BPartner_Location_ID)&#10;6.-Sales representative (SalesRep_ID)&#10;7.-Payment rule (PaymentRule)&#10;8.-Payment term (C_PaymentTerm_ID)&#10;9.-Currency (C_Currency_ID)&#10;10.-Campaign (C_Campaign_ID)&#10;11.-Project (C_Project_ID)&#10;12.-Activity (C_Activity_ID)&#10;13.-Transaction organization (AD_OrgTrx_ID)&#10;14.-User defined 1 (User1)&#10;15.-User defined 2 (User2)&#10;&#10;For example, if you want to create different invoices for each ship location for a customer, use the value &quot;By ship location&quot; (000010000000000)">El código es usado como un número binario de 15 dígitos:||1.-Organización del pedido (AD_Org_ID)||2.-Pedido (C_Order_ID)||3.-Remisión (M_InOut_ID)||4.-Dirección de factura (BillTo_ID)||5.-Dirección de envío (C_BPartner_Location_ID)||6.-Comercial (SalesRep_</value>
+  </row>
+  <row id="800027" trl="Y">
+    <value column="Name" isTrl="Y" original="Quarter">Trimestre</value>
+    <value column="Description" isTrl="Y" original="Quarter o trimester year">Año trimestral o cuatrimestral</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800028" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Form">AD_Form</value>
+    <value column="Description" isTrl="Y" original="List of all forms">Listado de todos los formularios</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800029" trl="Y">
+    <value column="Name" isTrl="Y" original="Offers">Ofertas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800030" trl="Y">
+    <value column="Name" isTrl="Y" original="IsManager">Es Gerente</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800031" trl="Y">
+    <value column="Name" isTrl="N" original="M_PriceListForPurchase">M_PriceListForPurchase</value>
+    <value column="Description" isTrl="Y" original="Purchase order price lists.">Listas de Precios de Pedidos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800032" trl="Y">
+    <value column="Name" isTrl="N" original="MA_CostCenter">MA_CostCenter</value>
+    <value column="Description" isTrl="Y" original="Cost Centers">Centros de Costo</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800033" trl="Y">
+    <value column="Name" isTrl="Y" original="Maintenance type">Tipo mantenimiento</value>
+    <value column="Description" isTrl="Y" original="Maintenance type">Tipo mantenimiento</value>
+    <value column="Help" isTrl="Y" original="Maintenance type">Tipo mantenimiento</value>
+  </row>
+  <row id="800034" trl="Y">
+    <value column="Name" isTrl="Y" original="Production Type">Tipo Producción</value>
+    <value column="Description" isTrl="Y" original="Production type list">Lista de tipos de producción</value>
+    <value column="Help" isTrl="Y" original="Production types">tipos de Producción</value>
+  </row>
+  <row id="800035" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BPartner Worker">C_BPartner Operario</value>
+    <value column="Description" isTrl="Y" original="Partners with isWorker=Y">Terceros con isWorker=Y</value>
+    <value column="Help" isTrl="Y" original="Partners that are Workers">Terceros que son operarios</value>
+  </row>
+  <row id="800037" trl="Y">
+    <value column="Name" isTrl="Y" original="WorkRequirementType">Tipo de Parte Fabricación</value>
+    <value column="Description" isTrl="Y" original="Work Requirement type list">Lista de tipos de Órdenes de Fabricación</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800038" trl="Y">
+    <value column="Name" isTrl="Y" original="Shift">Turno</value>
+    <value column="Description" isTrl="Y" original="Work shift list">Lista de turnos de trabajo</value>
+    <value column="Help" isTrl="Y" original="Work shift">Turnos de trabajo</value>
+  </row>
+  <row id="800039" trl="Y">
+    <value column="Name" isTrl="Y" original="Value Type">Tipo de Valor</value>
+    <value column="Description" isTrl="Y" original="Value type list">Lista de tipos de valores</value>
+    <value column="Help" isTrl="Y" original="Indicates the value type that it's going to be entered">Indica el tipo de valor que se va a introducir</value>
+  </row>
+  <row id="800040" trl="Y">
+    <value column="Name" isTrl="Y" original="Amortization type">Tipo de amortización</value>
+    <value column="Description" isTrl="Y" original="It shows the different types of amortization.">Muestra los distintos tipos de amortización</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800041" trl="Y">
+    <value column="Name" isTrl="Y" original="Amortization schedule">Calendario amortización</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800042" trl="Y">
+    <value column="Name" isTrl="Y" original="Create/recalculate amortization">Crear/recalcular plan de amortización</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800046" trl="Y">
+    <value column="Name" isTrl="Y" original="C_BankAccount">C_BankAccount_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800057" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner">Tercero</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800058" trl="Y">
+    <value column="Name" isTrl="Y" original="Debt/Payment">Efecto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800059" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice">Factura</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800060" trl="Y">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800061" trl="Y">
+    <value column="Name" isTrl="Y" original="Project">Proyecto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800062" trl="Y">
+    <value column="Name" isTrl="Y" original="Order">Pedido venta</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800063" trl="Y">
+    <value column="Name" isTrl="Y" original="Order Line">Línea de pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800064" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipment/Receipt Line">Línea de remisión</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800065" trl="Y">
+    <value column="Name" isTrl="Y" original="Maintenance Periodicity">Periodicidad de Mantenimiento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800066" trl="Y">
+    <value column="Name" isTrl="Y" original="Parameter type (In/Out)">Tipo de parámetro (In/out)</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800067" trl="Y">
+    <value column="Name" isTrl="Y" original="RappelType">Tipo de rappel</value>
+    <value column="Description" isTrl="Y" original="Types of rappels">Tipos de rappel</value>
+    <value column="Help" isTrl="Y" original="Types of rappels">Tipos de rappel</value>
+  </row>
+  <row id="800068" trl="Y">
+    <value column="Name" isTrl="N" original="AmortizationCalcType">AmortizationCalcType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800069" trl="Y">
+    <value column="Name" isTrl="Y" original="Budget_Type">Tipo Presupuesto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800070" trl="Y">
+    <value column="Name" isTrl="Y" original="C_DP_Management_Status">DP_Management_Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800071" trl="Y">
+    <value column="Name" isTrl="Y" original="Freight_Unit">Unidad de porte</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800072" trl="Y">
+    <value column="Name" isTrl="Y" original="Freight round">Redondeo de portes</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800073" trl="Y">
+    <value column="Name" isTrl="N" original="C_Debt_Payment">C_Debt_Payment</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800074" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting period">Periodo</value>
+    <value column="Description" isTrl="Y" original="Accounting model period">Periodos de los modelos contables</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800075" trl="Y">
+    <value column="Name" isTrl="Y" original="C_ExternalPOS_State">ExternalPOS_Estado</value>
+    <value column="Description" isTrl="Y" original="State of one order">Estado de un pedido</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800076" trl="Y">
+    <value column="Name" isTrl="Y" original="C_Remittance no canceled or returned">C_Remittance ni cancelado ni devuelto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800078" trl="Y">
+    <value column="Name" isTrl="Y" original="Order status">Status pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800081" trl="Y">
+    <value column="Name" isTrl="N" original="AT_TestType">AT_TestType</value>
+    <value column="Description" isTrl="Y" original="It defines the category of the test. It can be individual, module or application.">Define la categoría del test. Puede ser individual, modular o de aplicación.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800082" trl="Y">
+    <value column="Name" isTrl="N" original="AD_Language_Using">AD_Language_Using</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800083" trl="Y">
+    <value column="Name" isTrl="Y" original="Argument Type">Tipo de argumento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800084" trl="Y">
+    <value column="Name" isTrl="Y" original="Arguments">Argumentos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800085" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting report type">Tipo informe contable</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800086" trl="Y">
+    <value column="Name" isTrl="Y" original="DimensionalFilterPurchase">DimensionalFilter</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800087" trl="Y">
+    <value column="Name" isTrl="Y" original="DimensionalFilterSale">Filtro dimensional de ventas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800088" trl="Y">
+    <value column="Name" isTrl="Y" original="Cost Uom">Costo Unidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800089" trl="Y">
+    <value column="Name" isTrl="Y" original="Cost type">Tipo de costo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800090" trl="Y">
+    <value column="Name" isTrl="N" original="C_BP_TaxCategory">C_BP_TaxCategory</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800092" trl="Y">
+    <value column="Name" isTrl="Y" original="Locator search">Buscador de huecos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800093" trl="Y">
+    <value column="Name" isTrl="Y" original="Responsible employee">Empleado responsable</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800095" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipment/Receipt">Remisión</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800096" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Line">Línea de factura</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800097" trl="Y">
+    <value column="Name" isTrl="Y" original="Class format type">Clase formato</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800098" trl="Y">
+    <value column="Name" isTrl="Y" original="In/out transaction types for planning">Tipos de las transacciones de entrada/salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800099" trl="Y">
+    <value column="Name" isTrl="Y" original="Quantity type">Tipo de tamaño de lote</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800100" trl="Y">
+    <value column="Name" isTrl="N" original="MRP_ProductionLine">MRP_ProductionLine</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800101" trl="Y">
+    <value column="Name" isTrl="Y" original="Link">Enlace</value>
+    <value column="Description" isTrl="Y" original="Link">Enlace</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800102" trl="Y">
+    <value column="Name" isTrl="Y" original="Skin list">Lista de skins</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800103" trl="Y">
+    <value column="Name" isTrl="Y" original="Development Status">Estado del desarrollo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800104" trl="Y">
+    <value column="Name" isTrl="Y" original="Output format">Formato de salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800105" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Role">AD_Rol</value>
+    <value column="Description" isTrl="Y" original="User Role">User Rol</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800106" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Language system">Idioma del sistema</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8238E1DF040B4641877766194CD1EF33" trl="N">
+    <value column="Name" isTrl="N" original="M_Offer no combo">M_Offer no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="83AD04A0C49E4801BF276B690265A3D1" trl="Y">
+    <value column="Name" isTrl="Y" original="RM Receipt Pick Edit Lines">Elegir/Editar líneas de recibo de devolución de material</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="84BD487714B04B838A8D562A30E8792C" trl="Y">
+    <value column="Name" isTrl="Y" original="Products">Productos</value>
+    <value column="Description" isTrl="Y" original="Generic Product Selector">Selector genérico de producto</value>
+    <value column="Help" isTrl="Y" original="This selector shows all the available products">Este selector muestra todos los productos disponibles</value>
+  </row>
+  <row id="84ECA724EF074F679DFD69556C6DAF21" trl="Y">
+    <value column="Name" isTrl="Y" original="Generic Product">Producto Generico</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="84F9333A9141482C8AAC5B9779CDD512" trl="N">
+    <value column="Name" isTrl="N" original="m_ch_value order by seqno">m_ch_value order by seqno</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="86086D70DDBC42B09E2BEB51D25C159F" trl="Y">
+    <value column="Name" isTrl="Y" original="Session Login Status">Estado de la sesión de Login</value>
+    <value column="Description" isTrl="Y" original="Session Login Status">Estado de la sesión de Login</value>
+    <value column="Help" isTrl="Y" original="Status of the session login.">Estado de la sesión de Login.</value>
+  </row>
+  <row id="865D46B9A1C148D1A119F2F0F7F55589" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_System System Status">Estado del Sistema AD_System</value>
+    <value column="Description" isTrl="Y" original="The status of the system (the last executed phase of the rebuild process)">El estado del sistema (la última fase ejecutada del proceso de recompilación)</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="89A08501440B470CA3E9E5F399F32D31" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Payment Plan">Plan de pago de Factura</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8A9921F241B344F3AD99B6F59173F788" trl="Y">
+    <value column="Name" isTrl="Y" original="Audit Process type">Tipo de proceso de auditoría</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8BA0A3775CE14CE69989B6C09982FB2E" trl="Y">
+    <value column="Name" isTrl="Y" original="Dependency Enforcement">Dependencia obligada</value>
+    <value column="Description" isTrl="Y" original="Types of enforcements for dependencies">Tipos de dependencias forzadas</value>
+    <value column="Help" isTrl="Y" original="Types of enforcements for dependencies">Tipos de dependencias forzadas</value>
+  </row>
+  <row id="8CEE50DD83244E51AF4949827A04FC52" trl="Y">
+    <value column="Name" isTrl="Y" original="FIN Payment Run Payment result">Resultado del pago del proceso de ejecución de pagos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="List of allowed results of a payment after an Payment Run. ">Lista de resultados permitidos para un pago después de una Ejecución de Pagos. </value>
+  </row>
+  <row id="8DC520C5887F4F20822DF61609E1A4C6" trl="Y">
+    <value column="Name" isTrl="Y" original="Open reservations of product">Reservas abiertas de producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8FAA2F7B2F67456780B3551099E13917" trl="Y">
+    <value column="Name" isTrl="Y" original="Manage Prereservation Pick and Edit">Gestión de elegir y editar de reservas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9413570F6240406385FB633C7A9CC283" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM Length">Unidad de longitud</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="956E8F5C98A345AFBCCDD12E49A9074D" trl="Y">
+    <value column="Name" isTrl="Y" original="FIN Execution Process Parameter type">FIN tipo de Parámetro del Proceso de Ejecución</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="List of allowed Execution Process Parameters types">Lista de tipos de Parámetros del Proceso de Ejecución permitidos</value>
+  </row>
+  <row id="9750460836504FF9ADD6A60DD871EA00" trl="N">
+    <value column="Name" isTrl="N" original="C_Commission BasisStatus">C_Commission BasisStatus</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="99EC3A7013654794BB52975DAA3B80E6" trl="N">
+    <value column="Name" isTrl="N" original="M_Inventory">M_Inventory</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9FFC72525D7E49069272B22293F7D163" trl="Y">
+    <value column="Name" isTrl="N" original="Org_no_role_orgaccess">Org_no_role_orgaccess</value>
+    <value column="Description" isTrl="Y" original="All organizations of the client even the ones not defined in ad_role_orgaccess only for manual roles.">Todas las organizaciones del cliente incluso las no definidas en ad_role_orgaccess solo para roles manuales.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A19872A5A16149ECAD01E5E37CC0843A" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment_Schedule order">FIN_Payment_Schedule order</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A253A91D78324DC4A1661E96B390D888" trl="N">
+    <value column="Name" isTrl="N" original="C_OrderLine no combo">C_OrderLine no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A26BA480E2014707B47257024C3CBFF7" trl="Y">
+    <value column="Name" isTrl="Y" original="Property Configuration">Configuración de Propiedades</value>
+    <value column="Description" isTrl="Y" original="Defines Properties that can be configured by other modules">Define propiedades que pueden ser configuradas por otros módulos</value>
+    <value column="Help" isTrl="Y" original="Defines Properties that can be configured by other modules">Define propiedades que pueden ser configuradas por otros módulos</value>
+  </row>
+  <row id="A575717E83C24F7392511B7CC18B9D3C" trl="N">
+    <value column="Name" isTrl="N" original="M_Internal_Consumption Status">M_Internal_Consumption Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A6BDFA712FF948CE903C4C463E832FC1" trl="Y">
+    <value column="Name" isTrl="Y" original="Financial account type">Tipo de cuenta financiera</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A85EA9A581DB42DCA5576FAFCD08A1B7" trl="Y">
+    <value column="Name" isTrl="Y" original="Account Element Value">Valor de la Cuenta</value>
+    <value column="Description" isTrl="Y" original="Account Element Value">Valor de la Cuenta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AADA51C554014A2DA108BA393706AD1D" trl="Y">
+    <value column="Name" isTrl="Y" original="Doubtful Debt Pick and Edit Reference">Referencia de elegir y editar de dudoso cobro</value>
+    <value column="Description" isTrl="Y" original="Doubtful Debt Pick and Edit Reference">Referencia de elegir y editar de dudoso cobro</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="ABD8815EDEDB412C820FB94532952721" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Timing Option">Opción de Programación del Proceso</value>
+    <value column="Description" isTrl="Y" original="Timing option used to schedule a process.">Opción de programación usada para el proceso.</value>
+    <value column="Help" isTrl="Y" original="Timing option used to schedule a process.">Opción de programación usada para el proceso.</value>
+  </row>
+  <row id="AD93286C917A4A74BE5898FD0158100A" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Heartbeat - Status">AD_Heartbeat status</value>
+    <value column="Description" isTrl="Y" original="Heartbeat status">Estado del Heartbeat</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AE201981DDC0467FB59F64CA978C749F" trl="Y">
+    <value column="Name" isTrl="Y" original="Data Origin Type">Tipo de datos de origen</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AFA80A98B3C6469EA15ECB8A0011A79F" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM Time">Unidad de Tiempo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B7E66794F4BA46C3ADB2CBD013252AA6" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Pay_Exec_Process">FIN_Pay_Exec_Process</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Links to an Execution Process">Enlaces al Proceso de Ejecución</value>
+  </row>
+  <row id="B88DB8C2B8C441DF8DCF3CF3C8565201" trl="Y">
+    <value column="Name" isTrl="Y" original="OBPSLicenseStatus">EstadoLicenciaOBPS</value>
+    <value column="Description" isTrl="Y" original="List of possible status of a Professional Subscription License">Lista de posibles estados de una Licencia de una Suscripción Profesional</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BCABCED4983A4ECB814A6D142593ACEA" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Matching Type">FIN_Matching Type</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C01DEDDA9B35427786058CB649FB972F" trl="Y">
+    <value column="Name" isTrl="Y" original="Order Payment Plan">Plan de pago de Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C123B7BF5B2C438D84D2E509734776B5" trl="Y">
+    <value column="Name" isTrl="Y" original="Bank Account Format">Formato de cuenta bancaria</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C3531F85C14B4515AB7259F0D338050D" trl="Y">
+    <value column="Name" isTrl="Y" original="Write off type">Tipo de cancelación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C3C19DE8AB3B42E78748E20D986FBBC9" trl="N">
+    <value column="Name" isTrl="N" original="SO_Res_Status">SO_Res_Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C3ED971A900A414B8A0A937B442374E1" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM Weight">Unidad de peso</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C5C21C28B39E4683A91779F16C112E40" trl="Y">
+    <value column="Name" isTrl="Y" original="Password (not decryptable)">Contraseña (no desencriptable)</value>
+    <value column="Description" isTrl="Y" original="A password which is shown with * in the UI; the cleartext value cannot be recovered as only a hashed value is stored">Una contraseña que se muestra con * en la Interfaz de Usuario y que se almacena de tal forma que su valor no se pueda recuperar.</value>
+    <value column="Help" isTrl="Y" original="Fro this type of passwords only a hashed value is stored in the database. It is possible to verify if the same value was entered (to implement a password check), however it is not possible to recover the cleartext value again.">Para este tipo de contraseña sólo se almacena su valor hash en base de datos. Es posible verificar si el mismo valor se ha introducido (para implementar un validador de contraseña), sin embargo no es posible recuperar el valor descifrado posteriormente.</value>
+  </row>
+  <row id="C632F1CFF5A1453EB28BDF44A70478F8" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Characteristics">Caracteristicas del Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C9252925E607456A9BE935B3B8F1BC9F" trl="Y">
+    <value column="Name" isTrl="Y" original="ManageVariants Pick and Execute">Administrar Variantes Pick and Execute</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CBF00FA9F3744F1A86025AD16F2AF86A" trl="Y">
+    <value column="Name" isTrl="Y" original="End Year Close Actions">Cierre del ejercicio Acciones</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CBFE484519794465B6BED250F7FB26AF" trl="Y">
+    <value column="Name" isTrl="Y" original="End Year Close Status">Fin Año Close Estado</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CE467008C64E436C979B3CAB4EFF2BC2" trl="N">
+    <value column="Name" isTrl="N" original="FinancialMgmtAccountingRpt Consider Zero Condition">FinancialMgmtAccountingRpt Consider Zero Condition</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D15C950D445D408E8CC8135E530C246B" trl="Y">
+    <value column="Name" isTrl="Y" original="Tab UI Pattern">Patrón de interfaz de solapa</value>
+    <value column="Description" isTrl="Y" original="Tab UI Pattern">Patrón de interfaz de la solapa</value>
+    <value column="Help" isTrl="Y" original="Tab UI Pattern defines the UI pattern the tab will implement">Define el patrón de interfaz de solapa que se implementará</value>
+  </row>
+  <row id="D2D4CC1F12434BB69733166A9423F2C6" trl="Y">
+    <value column="Name" isTrl="N" original="C_Incoterms">C_Incoterms</value>
+    <value column="Description" isTrl="N" original="C_Incoterms">C_Incoterms</value>
+    <value column="Help" isTrl="N" original="C_Incoterms">C_Incoterms</value>
+  </row>
+  <row id="D61E6D984E214F99B10DE56395ED692B" trl="Y">
+    <value column="Name" isTrl="Y" original="Element Selector">Selector Elemento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D65D16C78404437AAB008E8040715D2F" trl="Y">
+    <value column="Name" isTrl="Y" original="All Products Simple Selector">Todos los productos Selector simple</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Simple selector that shows all products, including those checked as Generic.">Selector simple que muestra todos los productos, incluidos los controlados 
+como genérico.</value>
+  </row>
+  <row id="D6C4E62C3EB040989001DA16B3925DC8" trl="Y">
+    <value column="Name" isTrl="Y" original="Smtp Connection Security">Seguridad de conexión smtp</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Different types of smtp connection security">Los diferentes tipos de seguridad de conexión smtp</value>
+  </row>
+  <row id="DBCF65339D0F4403822A8A7928533D6B" trl="N">
+    <value column="Name" isTrl="N" original="FACT_FactAcctType">FACT_FactAcctType</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DE2C18CCE5D540519E606CBC1A4B336D" trl="Y">
+    <value column="Name" isTrl="Y" original="SRM Order Pick / Edit Lines">Elegir / editar líneas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DE78D015D6AD4F9E8DB9A120C6227FF7" trl="Y">
+    <value column="Name" isTrl="Y" original="Modules">Módulos</value>
+    <value column="Description" isTrl="Y" original="Modules">Módulos</value>
+    <value column="Help" isTrl="Y" original="Modules">Módulos</value>
+  </row>
+  <row id="DEE6B917B36D4648B2DA729FC2872CF4" trl="Y">
+    <value column="Name" isTrl="Y" original="Cost Center Selector">Selector de centro de costos</value>
+    <value column="Description" isTrl="Y" original="Cost Center Selector">Selector de centro de costos</value>
+    <value column="Help" isTrl="Y" original="Cost Center Selector">Costo Selector Center</value>
+  </row>
+  <row id="DF1CEA94B3564A33AFDB37C07E1CE353" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Financial_Account">FIN_Financial_Account</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DF7938526F074F33A9C8A7ED74EA315A" trl="Y">
+    <value column="Name" isTrl="Y" original="Model Object Type">Tipo de Objeto del Modelo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DF812D5784884A83A0D0E3E711819BF5" trl="Y">
+    <value column="Name" isTrl="Y" original="Custom Query Type">Tipo de Consulta Personalizada</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E8E9B9F9FBDE4E679EC69611D2CCE1E3" trl="N">
+    <value column="Name" isTrl="N" original="M_Transaction Status">M_Transaction Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E943EF6DC4524209BD5933661EC0BDDC" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_Payment_Schedule_V invoice">FIN_Payment_Schedule_V invoice</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EE8B072E19034D0FB34CA1CEB3583620" trl="Y">
+    <value column="Name" isTrl="Y" original="Reservation Status">Estado de las reservas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EED0EF97D4A7421687F3B365D009E7A6" trl="Y">
+    <value column="Name" isTrl="N" original="FIN_PaymentMethod">FIN_PaymentMethod</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F19E4A390AAB4A02B3D3CC944F091598" trl="Y">
+    <value column="Name" isTrl="Y" original="OPSLicenseType">TipoLicenciaOPS</value>
+    <value column="Description" isTrl="Y" original="Type of license for OPS">Tipo de licencia para OPS</value>
+    <value column="Help" isTrl="Y" original="Type of license for OPS">Tipo de licencia para OPS</value>
+  </row>
+  <row id="F1FD1E6C7E0C49C2A4D2D790E670033E" trl="Y">
+    <value column="Name" isTrl="Y" original="FIN Payment Run source">Fuente del proceso de Ejecución de Pagos financieros</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="List of sources of a Payment Run">Lista de fuentes de una Ejecución de Pagos</value>
+  </row>
+  <row id="F3455CBD6B69470396BE1FF35EC8CEDA" trl="Y">
+    <value column="Name" isTrl="N" original="C_Tax">C_Tax</value>
+    <value column="Description" isTrl="Y" original="Tax selection">Selección de impuesto</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F4175D3FED5949AAAA9C04A281E60866" trl="Y">
+    <value column="Name" isTrl="Y" original="AD_Column date column">Columna fecha de AD_Column</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F6A9745024274BD48686CAC8A063AA3E" trl="N">
+    <value column="Name" isTrl="N" original="C_Period Status">C_Period Status</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F8BC73C4041E4164834499FF4D6388F1" trl="N">
+    <value column="Name" isTrl="N" original="m_ch_subset of characteristic">m_ch_subset of characteristic</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F909D710BC084C92BC740A4FD498C99D" trl="Y">
+    <value column="Name" isTrl="Y" original="Report Type">Tipo de Informe</value>
+    <value column="Description" isTrl="Y" original="Type of general accounting report">Tipo de Informe General Contabilidad</value>
+    <value column="Help" isTrl="Y" original="Type of general accounting report">Tipo de Informe General de Contabilidad</value>
+  </row>
+  <row id="F9D2F974C7004FC690CE146C815B939C" trl="N">
+    <value column="Name" isTrl="N" original="C_Order Purchase no combo">C_Order Purchase no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FBC599C796664DD49AD002C61DAFF813" trl="Y">
+    <value column="Name" isTrl="N" original="C_DocType DocBaseType Dimensions configuration">C_DocType DocBaseType Dimensions configuration</value>
+    <value column="Description" isTrl="Y" original="Base Document Types supporting dimensions configuration">Tipos de documento base que soportan configuración de dimensiones</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FC3E8E2652184032A86BE0F760A97B90" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM Types">Tipos de Unidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FC98D43996374909B1AAC0197BBE95BA" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Execution Type">Tipo de Ejecución de Pago</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Allowed Execution Types for Payments.">Tipos de Ejecución permitidos para Pagos.</value>
+  </row>
+  <row id="FF8080812EC85BDE012EC8B2DB30001E" trl="Y">
+    <value column="Name" isTrl="Y" original="Alert status">Estado de la Alerta</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Possible statuses of alerts">Estados posibles de una alerta</value>
+  </row>
+  <row id="FF80818130217A350130218D802B0011" trl="Y">
+    <value column="Name" isTrl="N" original="Order_Document Status">Order_Document Status</value>
+    <value column="Description" isTrl="Y" original="Order Status list">Lista de Estados de un Pedido</value>
+    <value column="Help" isTrl="Y" original="List of all the possible status for a Purchase/Sales Order.&#10;The list is similar to the All_Document Status but just renaming Completed by Booked">Lista de todos los estados posibles de un Pedido de Compra/Venta. La lista es igual a All_Document Status pero renombrando Completado por Registrado</value>
+  </row>
+  <row id="FF80818130217A35013021A672400035" trl="Y">
+    <value column="Name" isTrl="N" original="Order_Document Action">Order_Document Action</value>
+    <value column="Description" isTrl="Y" original="Order action list">Lista de acciones de un Pedido</value>
+    <value column="Help" isTrl="Y" original="Actions related to Purchase/Sales orders">Acciones relacionadas con pedidos de Compra/Venta</value>
+  </row>
+  <row id="FF808181321576F301321587CBB4004A" trl="Y">
+    <value column="Name" isTrl="Y" original="M_AttributeUse To">Para M_AttributeUse</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF808181322476640132249E3417002F" trl="Y">
+    <value column="Name" isTrl="Y" original="Special Product Attributes">Atributos especiales de producto</value>
+    <value column="Description" isTrl="Y" original="List of special product attributes (Lot, Serial Number and Expiration Date)">Lista de los atributos especiales de producto (lote, número de serie y fecha de caducidad)</value>
+    <value column="Help" isTrl="Y" original="List of special product attributes (Lot, Serial Number and Expiration Date)">Lista de los atributos de producto especial (Lot, número de serie y fecha de 
+caducidad)</value>
+  </row>
+  <row id="FF808181329203980132921324270015" trl="Y">
+    <value column="Name" isTrl="Y" original="MA_SequenceProductFrom">De MA_SequenceProduct</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF80818132DB35640132DB37A9D40006" trl="Y">
+    <value column="Name" isTrl="Y" original="Image Sizes Value Action">Acción del tamaño imagen</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Action to be performed with the provided width and height">Action to be performed with the provided width and height</value>
+  </row>
+  <row id="FF9658201F8B4BE780BE00AAA9499ED5" trl="N">
+    <value column="Name" isTrl="N" original="C_BPartner Customers no combo">C_BPartner Customers no combo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_FIELD" version="">
+  <row id="4550451CDF874EB098E99F5D6716F4D9" trl="N">
+    <value column="Name" isTrl="Y" original="Document Type">Tipo de documento</value>
+    <value column="Description" isTrl="Y" original="Document type for sales orders">Valor que define la estructura de secuencias y procesos utilizada para gestionar este documento.</value>
+    <value column="Help" isTrl="Y" original="Document type used for regular sales orders generated in back end from POS tickets.&#10;&#10;Document Types determine document sequence and processing rules.">Determina la secuencia y reglas del documento.</value>
+  </row>
+  <row id="648BD4984D854B8EBB049FCCC77FC5F5" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Up Event">Evento de cierre de caja</value>
+    <value column="Description" isTrl="Y" original="Cash Up Event">Evento de cierre de caja</value>
+    <value column="Help" isTrl="Y" original="Event triggered by Cash Up process in case the are founds transfer. This event defines the financial account the founds are transferred to.">Evento lanzado por el proceso de cierre de caja en caso de que se permitan movimientos entre cuentas. Este evento define la cuenta financiera a la que se transferirá el dinero.</value>
+  </row>
+  <row id="DF1087E6BE4148A3AF237F986ECAFD69" trl="N">
+    <value column="Name" isTrl="Y" original="Amount to Keep">Importe a mantener</value>
+    <value column="Description" isTrl="Y" original="Amount to keep">Importe a mantener</value>
+    <value column="Help" isTrl="Y" original="When keeping fixed amount is allowed, this is the amount that will be kept in current financial account after cash up process.">Cuando se mantiene un importe fijo, esta es la cantidad que se dejará en la cuenta financiera del TPV después del cierre de caja.</value>
+  </row>
+  <row id="FF80818132F37D6A0132F3823AA30015" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+    <value column="Description" isTrl="Y" original="Store">Tienda</value>
+    <value column="Help" isTrl="Y" original="Store (Organization) the POS terminal is in.">Tienda (Organización) en la que está el TPV.</value>
+  </row>
+</compiereTrl>

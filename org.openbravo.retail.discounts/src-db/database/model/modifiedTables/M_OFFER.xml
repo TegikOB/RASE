@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_OFFER">
+    <table name="M_OFFER" primaryKey="M_OFFER_KEY">
+      <column name="EM_OBDISC_X" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_Y" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_SUBTYPE" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_DISTRIBUTE" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <column name="EM_OBDISC_PRICE" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_C_CURRENCY_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_UPC" primaryKey="false" required="false" type="VARCHAR" size="30" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_IMAGE" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_AMT" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_PERCENTAGE" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBDISC_ROLE_SELECTION" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default><![CDATA[Y]]></default>
+        <onCreateDefault><![CDATA['Y']]></onCreateDefault>
+      </column>
+      <column name="EM_OBDISC_APPROVAL_REQUIRED" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <foreign-key foreignTable="C_CURRENCY" name="EM_OBDISC_CURRENCY">
+        <reference local="EM_OBDISC_C_CURRENCY_ID" foreign="C_CURRENCY_ID"/>
+      </foreign-key>
+      <foreign-key foreignTable="AD_IMAGE" name="EM_OBDISC_IMAGE">
+        <reference local="EM_OBDISC_IMAGE" foreign="AD_IMAGE_ID"/>
+      </foreign-key>
+      <check name="EM_OBDISC_OFFER_APPROV_CHK"><![CDATA[EM_OBDISC_APPROVAL_REQUIRED IN ('Y', 'N')]]></check>
+      <check name="EM_OBDISC_OFFER_NEXT_CHECK"><![CDATA[(APPLY_NEXT = 'N') OR (((M_OFFER_TYPE_ID) <> '94AEA884F5AD4EABB72322832B9C5172') AND ((M_OFFER_TYPE_ID) <> '312D41071ED34BA18B748607CA679F44'))]]></check>
+      <check name="EM_OBDISC_PACK_PRICE_CHECK"><![CDATA[(((M_OFFER_TYPE_ID) = 'BE5D42E554644B6AA262CCB097753951') AND (EM_OBDISC_PRICE IS NOT NULL)) OR ((M_OFFER_TYPE_ID) <> 'BE5D42E554644B6AA262CCB097753951')]]></check>
+    </table>
+  </database>

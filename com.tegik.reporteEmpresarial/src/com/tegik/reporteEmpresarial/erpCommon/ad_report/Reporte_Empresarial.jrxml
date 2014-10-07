@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte_Empresarial" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="59"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<parameter name="USER_ORG" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["'0','51F2AF9E31D326EC0131D33B8BFF07B5','3421'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="org_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_CLIENT" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Luis Avilés\\Desktop\\tegik\\Reportes\\Incom\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="detalleResumen" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="from" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse("2008-01-01")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_from" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{from}.equals("") ? " " : " AND COALESCE(cast(trx.statementdate as date),'2008-01-01' )>= date('" + $P{from} + "')"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="to" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse("2099-01-01")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_to" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{to}.equals("") ? " " : " AND COALESCE(date(trx.statementdate),'2099-01-01' ) <= date('" + $P{to} + "')"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BASE_DESIGN" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1=1 tru]]>
+	</queryString>
+	<field name="tru" class="java.lang.Boolean"/>
+	<variable name="org_id" class="java.lang.String">
+		<variableExpression><![CDATA[]]></variableExpression>
+		<initialValueExpression><![CDATA[new String($P{USER_ORG}).split(",")[1].substring(1,33)]]></initialValueExpression>
+	</variable>
+	<variable name="egresos_inicio" class="java.math.BigDecimal">
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<variable name="egresos mov" class="java.math.BigDecimal">
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<variable name="egresos_fin" class="java.math.BigDecimal">
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<variable name="ingresos_inicio" class="java.math.BigDecimal">
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<variable name="ingresos_mov" class="java.math.BigDecimal">
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<variable name="ingresos_fin" class="java.math.BigDecimal">
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<image hAlign="Right" isUsingCache="true">
+				<reportElement x="0" y="0" width="85" height="45" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.awt.Image"><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc",$V{org_id})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Column header" x="481" y="0" width="30" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="511" y="0" width="44" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" / " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="344" y="45" width="97" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de impresión: ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm">
+				<reportElement x="441" y="45" width="114" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="149" y="0" width="256" height="32" forecolor="#00447B"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte Empresarial]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="441" y="33" width="54" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{from}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="503" y="33" width="52" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{to}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="495" y="33" width="8" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="344" y="33" width="97" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rango de fechas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="101" y="33" width="101" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nivel de agrupación:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Column header" x="202" y="33" width="102" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{detalleResumen}.equals("D") ? "Detalle" :
+$P{detalleResumen}.equals("R") ? "Resumen" : "Resumen y Detalle"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="12" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="238" height="12" forecolor="#00447B"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE EMPRESARIAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="470" y="0" width="30" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="238" y="0" width="135" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE IMPRESIÓN:]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="500" y="0" width="44" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" / " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm">
+				<reportElement x="373" y="0" width="97" height="12" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("R") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["R"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ispaid">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="issotrx">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/ventas-cuentaDet.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ingresos]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("R") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["R"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ispaid">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="issotrx">
+					<subreportParameterExpression><![CDATA["N"]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/ventas-cuentaDet.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Egresos]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("R") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/cuentasResCobrar.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuentas por cobrar]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("R") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/cuentasResPagar.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuentas por pagar]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("R") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["R"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/bancos.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bancos]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("D") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["D"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ispaid">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="issotrx">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/ventas-cuentaDet.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ventas pagadas]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("D") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["D"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ispaid">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="issotrx">
+					<subreportParameterExpression><![CDATA["N"]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/ventas-cuentaDet.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Compras pagadas]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("D") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["D"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ispaid">
+					<subreportParameterExpression><![CDATA["N"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="issotrx">
+					<subreportParameterExpression><![CDATA["Y"]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/ventas-cuentaDet.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuentas por cobrar]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("D") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["D"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ispaid">
+					<subreportParameterExpression><![CDATA["N"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="issotrx">
+					<subreportParameterExpression><![CDATA["N"]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/ventas-cuentaDet.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuentas por pagar]]></text>
+			</staticText>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{detalleResumen}.equals("D") || $P{detalleResumen}.equals("A")]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="25" width="555" height="10"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="resumenDetalle">
+					<subreportParameterExpression><![CDATA["D"]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/reporteEmpresarial/erpCommon/ad_report/bancos.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="202" y="5" width="150" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bancos]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

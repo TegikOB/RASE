@@ -1,0 +1,10 @@
+"Organization","Price List Name","IsDefault","Is tax included","Is sales","Currency","Enforce price limit","Price List Version Name","Discount Schema","Valid from date","Base price list version","Product name","List price","Standard price","Price limit"
+"","Second Testing Price List Sales"," ","","","","","Second List Version 2009","Default Price List Schema","2009-01-01"," ","fga","78.305","10.30","9.80"
+"","Third Testing Price List Sales"," ","","","","","Third List Version 2009","Default Price List Schema","2009-01-01"," ","fga","15.308","10.30","9.80"
+"","Second Testing Price List Sales"," ","","","","","Second List Version 2009","Default Price List Schema","2009-01-01"," ","fgb","10.3025","10.30","9.80"
+"","Third Testing Price List Sales"," ","","","","","Third List Version 2009","Default Price List Schema","2009-01-01"," ","fgb","52.3078","10.30","9.80"
+"","Second Testing Price List Sales"," ","","","","","Second List Version 2009","Default Price List Schema","2009-01-01"," ","fgc","24.305","10.30","9.80"
+"","Third Testing Price List Sales"," ","","","","","Third List Version 2009","Default Price List Schema","2009-01-01"," ","fgc","23.3078","10.30","9.80"
+"","Service Price list"," ","","","","","Service List Version 2009","Default Price List Schema","2009-01-01","","sva","11.58","10.30","9.80"
+"","Service Price list"," ","","","","","Service List Version 2009","Default Price List Schema","2009-01-01","","svb","48.56","10.30","9.80"
+

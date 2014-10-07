@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_COSTO_PRODUCTO">
+    <function name="CONTMX_COSTO_PRODUCTO" type="NULL">
+      <parameter name="p_product_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_dateinvoiced" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="out_costo" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[CUR_INVOICE RECORD;
+v_ref NUMBER;
+BEGIN
+SELECT COALESCE(cost,0) AS costo INTO v_ref 
+                  FROM m_costing c 
+                  WHERE m_product_id = p_product_id AND datefrom <= p_dateinvoiced AND dateto >= p_dateinvoiced ORDER BY dateto DESC LIMIT 1 ;
+
+ 
+IF v_ref IS NULL THEN 
+
+	out_costo:=0.00;
+	RETURN;	
+	
+ELSE
+	out_costo:=v_ref;
+	RETURN;	                                      
+
+END IF;
+ 
+RETURN;
+	
+EXCEPTION WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ;
+  RAISE;
+END CONTMX_COSTO_PRODUCTO
+]]></body>
+    </function>
+  </database>

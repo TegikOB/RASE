@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="20A228A295C844C68B4451622057A893" trl="Y">
+    <value column="Name" original="Types of data to be synchronized in Web POS">Tipos de datos que se van a sincronizar en WebPos</value>
+    <value column="Description" original="List of the different types of data which are synchronized by Web POS.">Lista de los tipos diferentes de datos que se sincronizan mediante POS Web</value>
+    <value column="Help" original="List of the different types of data which are synchronized by Web POS.">Lista de los tipos diferentes de datos que se sincronizan mediante POS Web</value>
+  </row>
+  <row id="358AD6F66FB94E2DAD0D237F877525F1" trl="Y">
+    <value column="Name" original="Web POS default tab">Pestaña predeterminada para el WebPos</value>
+    <value column="Description" original="Default tab for Web POS point of sale window">Pestaña por defecto para la ventana de punto de venta POS Web.</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="38DC73A4EAE94F36924C2D3A012A7466" trl="N">
+    <value column="Name" original="C_DocTypeRet_ID"/>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="6E6A751F4AB24EC391AA9A6DD6B1F624" trl="Y">
+    <value column="Name" original="Email Status">Estado del Email</value>
+    <value column="Description" original="List with status of sending email.">una lista con el estado de envío de correo electrónico.</value>
+    <value column="Help" original="The Email Status indicates the status of sending email.">El correo electrónico de estado indica el estado de envío de correo 
+electrónico.</value>
+  </row>
+  <row id="A64C98EEC3DA45A4B784A3E28B4FAC3E" trl="Y">
+    <value column="Name" original="OBPOS_PrintTemplates">Plantilla de Impresio del POS</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="A8BB7B5A513E4A76A98F51FEF33676B2" trl="Y">
+    <value column="Name" original="Refund Provider">Proveedor de reembolso</value>
+    <value column="Description" original="External payment provider who processes this kind of refund types.">Proveedor de pagos externa que procesa este tipo de tipos de reembolso.</value>
+    <value column="Help" original="External payment provider who processes this kind of refund types.">Proveedor de pagos externa que procesa este tipo de tipos de reembolso.</value>
+  </row>
+  <row id="AF0F6F326155451B9B0060DF965E5E91" trl="Y">
+    <value column="Name" original="Order status">Estado del pedido</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="AF6067BC66F14BAF9CB686115D145C48" trl="Y">
+    <value column="Name" original="Document type">Tipo de documento</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="BDA324CB4B8847C3A1D2318E978BA08A" trl="Y">
+    <value column="Name" original="OBPOS_PrintTemaplate">Plantilla de Impresio del POS</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="F523B357A94B43F68C414707BA45C785" trl="Y">
+    <value column="Name" original="POS Terminal">Terminal POS</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FC7059F88CBB4EAB8162A4D3B8089C00" trl="Y">
+    <value column="Name" original="Payment Provider">Proveedor de pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

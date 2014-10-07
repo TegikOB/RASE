@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_WINDOW" version="">
+  <row id="7D98C37437B44E76AF2501704915AF82" trl="N">
+    <value column="Name" isTrl="Y" original="Assortment">Lista de productos</value>
+    <value column="Description" isTrl="Y" original="Definition of the assortment and its products">Definición de surtido y sus productos.</value>
+    <value column="Help" isTrl="Y" original="Definition of the assortment and its products">Definición de surtido y sus productos.</value>
+  </row>
+</compiereTrl>

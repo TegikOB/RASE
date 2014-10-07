@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IDL_Entities id="4A08AD1671884C7BA2A00FB3800296BC" identifier="Project">
+    <id>4A08AD1671884C7BA2A00FB3800296BC</id>
+    <active>true</active>
+    <name>Project</name>
+    <description xsi:nil="true"/>
+    <javaClassName>org.openbravo.idl.proc.ProjectProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList/>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA2002B" identifier="All Entities">
+    <id>FF80818124241FE0012424493CA2002B</id>
+    <active>true</active>
+    <name>All Entities</name>
+    <description>Default values for all entities</description>
+    <javaClassName xsi:nil="true"/>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="8DF8C67E0D1C433BA7FAE8950A588FF3" identifier="TransactionalOrg">
+        <id>8DF8C67E0D1C433BA7FAE8950A588FF3</id>
+        <active>true</active>
+        <name>TransactionalOrg</name>
+        <description>Indicates the organization to be used when processing transactional documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA2002B" entity-name="IDL_Entities" identifier="All Entities"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FEAC84EA45DD430F8D9918A2AD335A18" identifier="Organization">
+        <id>FEAC84EA45DD430F8D9918A2AD335A18</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA2002B" entity-name="IDL_Entities" identifier="All Entities"/>
+        <defaultValue>0</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA3002C" identifier="Currency">
+        <id>FF80818124241FE0012424493CA3002C</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Indicates the currency to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA2002B" entity-name="IDL_Entities" identifier="All Entities"/>
+        <defaultValue>EUR</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA3002D" identifier="Product">
+    <id>FF80818124241FE0012424493CA3002D</id>
+    <active>true</active>
+    <name>Product</name>
+    <description>Products identify stock items that you sell, or buy, items required for business use, expenses or resources.</description>
+    <javaClassName>org.openbravo.idl.proc.ProductsProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="0DC4F47C54BA4ECD9635843F1B58AEF5" identifier="Currency">
+        <id>0DC4F47C54BA4ECD9635843F1B58AEF5</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Currency used for Price List of the Business Partner .</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="449997DEDE854BFFBB8C729908CD3F62" identifier="Organization">
+        <id>449997DEDE854BFFBB8C729908CD3F62</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="4E822C41CEA3447F8CAF9071579C27BD" identifier="BillOfMaterials">
+        <id>4E822C41CEA3447F8CAF9071579C27BD</id>
+        <active>true</active>
+        <name>BillOfMaterials</name>
+        <description>Indicates if this product consists of a bill of materials. </description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="51D5F0F1549242708C2D95212E08164E" identifier="PriceListSale">
+        <id>51D5F0F1549242708C2D95212E08164E</id>
+        <active>true</active>
+        <name>PriceListSale</name>
+        <description>Price List name for sales.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="837C76D4C6B347AFAAEC1106B85A8897" identifier="AttributeSet">
+        <id>837C76D4C6B347AFAAEC1106B85A8897</id>
+        <active>true</active>
+        <name>AttributeSet</name>
+        <description>Define Product Attribute Sets to add additional attributes and values to the product.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="898B45D035AC4D6D8B8B0E6C0BBB9DB8" identifier="CostType">
+        <id>898B45D035AC4D6D8B8B0E6C0BBB9DB8</id>
+        <active>true</active>
+        <name>CostType</name>
+        <description>Identifies different types of cost .</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="9D5265A926214B448E1BE0FA0AB7860F" identifier="AttributeSetValue">
+        <id>9D5265A926214B448E1BE0FA0AB7860F</id>
+        <active>true</active>
+        <name>AttributeSetValue</name>
+        <description>Identifies the values of the actual Product Attributes.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="A6BCCC00615B4B3A9DA17D6B8C4CC2D0" identifier="PriceListPurchase">
+        <id>A6BCCC00615B4B3A9DA17D6B8C4CC2D0</id>
+        <active>true</active>
+        <name>PriceListPurchase</name>
+        <description>Price List name for purchase.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="B6256D1FA82948E19D02BCE2BA3E36D0" identifier="Discontinued">
+        <id>B6256D1FA82948E19D02BCE2BA3E36D0</id>
+        <active>true</active>
+        <name>Discontinued</name>
+        <description>Indicates a product that has been discontinued. </description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="DB9AFF82A491493595DACE2E0A70E049" identifier="Production">
+        <id>DB9AFF82A491493595DACE2E0A70E049</id>
+        <active>true</active>
+        <name>Production</name>
+        <description>Indicates if this is a product used for production plans. </description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="DFC28EA8B7874CCFA89B23F1DF834A1E" identifier="PriceListSchema">
+        <id>DFC28EA8B7874CCFA89B23F1DF834A1E</id>
+        <active>true</active>
+        <name>PriceListSchema</name>
+        <description>Default Price List Schema name</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA3002E" identifier="Category">
+        <id>FF80818124241FE0012424493CA3002E</id>
+        <active>true</active>
+        <name>Category</name>
+        <description>Identifies the category which this product belongs to.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA3002F" identifier="UOM">
+        <id>FF80818124241FE0012424493CA3002F</id>
+        <active>true</active>
+        <name>UOM</name>
+        <description>Defines a unique non monetary unit of measure.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA30030" identifier="Stocked">
+        <id>FF80818124241FE0012424493CA30030</id>
+        <active>true</active>
+        <name>Stocked</name>
+        <description>Indicates if this product is stocked.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>True</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA30031" identifier="Purchase">
+        <id>FF80818124241FE0012424493CA30031</id>
+        <active>true</active>
+        <name>Purchase</name>
+        <description>Indicates if this product is purchased.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>True</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA40032" identifier="Sale">
+        <id>FF80818124241FE0012424493CA40032</id>
+        <active>true</active>
+        <name>Sale</name>
+        <description>Indicates if this product is sold.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>True</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA40033" identifier="TaxCategory">
+        <id>FF80818124241FE0012424493CA40033</id>
+        <active>true</active>
+        <name>TaxCategory</name>
+        <description>Provides a method of grouping similar taxes.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA40034" identifier="PriceListVersionSale">
+        <id>FF80818124241FE0012424493CA40034</id>
+        <active>true</active>
+        <name>PriceListVersionSale</name>
+        <description>Price List Version name for sales.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA40035" identifier="PriceListVersionPurchase">
+        <id>FF80818124241FE0012424493CA40035</id>
+        <active>true</active>
+        <name>PriceListVersionPurchase</name>
+        <description>Price List Version name for purchase.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA50037" identifier="StandardPrecision">
+        <id>FF80818124241FE0012424493CA50037</id>
+        <active>true</active>
+        <name>StandardPrecision</name>
+        <description>Defines the number of decimal places that amounts will be rounded to for accounting transactions and documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>0</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA50038" identifier="CostingPrecision">
+        <id>FF80818124241FE0012424493CA50038</id>
+        <active>true</active>
+        <name>CostingPrecision</name>
+        <description>Defines the number of decimal places that amounts will be rounded to when performing costing calculations.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>0</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA50039" identifier="ProductType">
+        <id>FF80818124241FE0012424493CA50039</id>
+        <active>true</active>
+        <name>ProductType</name>
+        <description>Type of the product. Determines accounting consequences.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA60041" identifier="AttributeSetValueType">
+        <id>FF80818124241FE0012424493CA60041</id>
+        <active>true</active>
+        <name>AttributeSetValueType</name>
+        <description>Permits to define different types of Attribute Set Values, depending on their usage.</description>
+        <entityRef id="FF80818124241FE0012424493CA3002D" entity-name="IDL_Entities" identifier="Product"/>
+        <defaultValue>Default</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA40002" identifier="Stock">
+    <id>FF80818124241FE0012424493CA40002</id>
+    <active>true</active>
+    <name>Stock</name>
+    <description>Stock levels are the products units available in different locations managed by Openbravo ERP. </description>
+    <javaClassName>org.openbravo.idl.proc.StockProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="FF80818124241230012424493CBA0000" identifier="TransactionalOrg">
+        <id>FF80818124241230012424493CBA0000</id>
+        <active>true</active>
+        <name>TransactionalOrg</name>
+        <description>Indicates the organization to be used when processing transactional documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0001" identifier="Name">
+        <id>FF80818124241230012424493CBA0001</id>
+        <active>true</active>
+        <name>Name</name>
+        <description>Indicates the name of the physical inventory header.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0002" identifier="Description">
+        <id>FF80818124241230012424493CBA0002</id>
+        <active>true</active>
+        <name>Description</name>
+        <description>Additional related information for the physical inventory header.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0003" identifier="Warehouse">
+        <id>FF80818124241230012424493CBA0003</id>
+        <active>true</active>
+        <name>Warehouse</name>
+        <description>The warehouse that is used to store products.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue>Standard</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0004" identifier="WarehouseName">
+        <id>FF80818124241230012424493CBA0004</id>
+        <active>true</active>
+        <name>WarehouseName</name>
+        <description>Indicates the name of the warehouse.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0005" identifier="WarehouseDescription">
+        <id>FF80818124241230012424493CBA0005</id>
+        <active>true</active>
+        <name>WarehouseDescription</name>
+        <description>Additional related information for the warehouse.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0006" identifier="WarehouseCountry">
+        <id>FF80818124241230012424493CBA0006</id>
+        <active>true</active>
+        <name>WarehouseCountry</name>
+        <description>Defines a Country.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0007" identifier="WarehouseBinSeparator">
+        <id>FF80818124241230012424493CBA0007</id>
+        <active>true</active>
+        <name>WarehouseBinSeparator</name>
+        <description>The Element Separator defines the delimiter printed between elements of the structure.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue>*</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0008" identifier="Bin">
+        <id>FF80818124241230012424493CBA0008</id>
+        <active>true</active>
+        <name>Bin</name>
+        <description>A set of coordinates (x, y, z) which help locate an item in a warehouse.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA0009" identifier="MovementDate">
+        <id>FF80818124241230012424493CBA0009</id>
+        <active>true</active>
+        <name>MovementDate</name>
+        <description>Date a product was moved in or out of inventory.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>date</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA000A" identifier="BinIsDefault">
+        <id>FF80818124241230012424493CBA000A</id>
+        <active>true</active>
+        <name>BinIsDefault</name>
+        <description>A value that is shown whenever a record is created.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA000B" identifier="BinPriority">
+        <id>FF80818124241230012424493CBA000B</id>
+        <active>true</active>
+        <name>BinPriority</name>
+        <description>Where inventory should be picked from first.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>numeric</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA000C" identifier="BinRowX">
+        <id>FF80818124241230012424493CBA000C</id>
+        <active>true</active>
+        <name>BinRowX</name>
+        <description>X dimension, e.g., Aisle</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA000D" identifier="BinStackY">
+        <id>FF80818124241230012424493CBA000D</id>
+        <active>true</active>
+        <name>BinStackY</name>
+        <description>Y dimension, e.g., Bin</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA000E" identifier="BinLevelZ">
+        <id>FF80818124241230012424493CBA000E</id>
+        <active>true</active>
+        <name>BinLevelZ</name>
+        <description>Z dimension, e.g., Level</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230012424493CBA000F" identifier="Organization">
+        <id>FF80818124241230012424493CBA000F</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA40002" entity-name="IDL_Entities" identifier="Stock"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA6003B" identifier="Asset">
+    <id>FF80818124241FE0012424493CA6003B</id>
+    <active>true</active>
+    <name>Asset</name>
+    <description>Everything of value that is owned by the company.</description>
+    <javaClassName>org.openbravo.idl.proc.AssetsProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0022" identifier="Currency">
+        <id>FF80818124241FE0012424493CAA0022</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Indicates the currency to be used when processing this document.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0023" identifier="TransactionalOrg">
+        <id>FF80818124241FE0012424493CAA0023</id>
+        <active>true</active>
+        <name>TransactionalOrg</name>
+        <description>Indicates the organization to be used when processing transactional documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0024" identifier="AssetCategory">
+        <id>FF80818124241FE0012424493CAA0024</id>
+        <active>true</active>
+        <name>AssetCategory</name>
+        <description>The group of assets determines default accounts.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0025" identifier="CalculateType">
+        <id>FF80818124241FE0012424493CAA0025</id>
+        <active>true</active>
+        <name>CalculateType</name>
+        <description>Indicates how depreciation will be calculated. </description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0026" identifier="AmortizeSchedule">
+        <id>FF80818124241FE0012424493CAA0026</id>
+        <active>true</active>
+        <name>AmortizeSchedule</name>
+        <description>Refers to the periods chosen between depreciation entries.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0027" identifier="UsableLifeMonths">
+        <id>FF80818124241FE0012424493CAA0027</id>
+        <active>true</active>
+        <name>UsableLifeMonths</name>
+        <description>Months of the usable life of the asset.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>numeric</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0028" identifier="UsableLifeYears">
+        <id>FF80818124241FE0012424493CAA0028</id>
+        <active>true</active>
+        <name>UsableLifeYears</name>
+        <description>Years of the usable life of the asset.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>numeric</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0029" identifier="DepreciationStartDate">
+        <id>FF80818124241FE0012424493CAA0029</id>
+        <active>true</active>
+        <name>DepreciationStartDate</name>
+        <description>Date in which this asset starts depreciating.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003B" entity-name="IDL_Entities" identifier="Asset"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>date</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA6003F" identifier="Price List">
+    <id>FF80818124241FE0012424493CA6003F</id>
+    <active>true</active>
+    <name>Price List</name>
+    <description>Price lists are the different prices products can have. These prices are grouped by price lists. </description>
+    <javaClassName>org.openbravo.idl.proc.PriceListsProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="24FEFEB7E42F4939AE3BF96144E15582" identifier="IsDefault">
+        <id>24FEFEB7E42F4939AE3BF96144E15582</id>
+        <active>true</active>
+        <name>IsDefault</name>
+        <description>Indicates if the prices list is the default.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="4F5B14CC5C8646139518DDFD342DA8FA" identifier="Currency">
+        <id>4F5B14CC5C8646139518DDFD342DA8FA</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Indicates the currency to be used when processing this document.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="C13C921A945E4C00ACE5DB097326D23A" identifier="Organization">
+        <id>C13C921A945E4C00ACE5DB097326D23A</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="DB3B5ACC451C4D7086BF5218BCE22539" identifier="EnforcePriceLimit">
+        <id>DB3B5ACC451C4D7086BF5218BCE22539</id>
+        <active>true</active>
+        <name>EnforcePriceLimit</name>
+        <description>Indicates that prices cannot be below the limit price in Orders. Invoices are not checked.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA60040" identifier="BasePriceListVersion">
+        <id>FF80818124241FE0012424493CA60040</id>
+        <active>true</active>
+        <name>BasePriceListVersion</name>
+        <description>Iidentifies the Base Pricelist used for calculating prices (the source).</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA70041" identifier="DiscountSchema">
+        <id>FF80818124241FE0012424493CA70041</id>
+        <active>true</active>
+        <name>DiscountSchema</name>
+        <description>After calculation of the (standard) price, the trade discount percentage is calculated and applied resulting in the final price.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA70042" identifier="IsTaxIncluded">
+        <id>FF80818124241FE0012424493CA70042</id>
+        <active>true</active>
+        <name>IsTaxIncluded</name>
+        <description>Indicates if the prices include tax. This is also known as the gross price.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CA70043" identifier="IsSalesPriceList">
+        <id>FF80818124241FE0012424493CA70043</id>
+        <active>true</active>
+        <name>IsSalesPriceList</name>
+        <description>Indicates if this price list is used for sales transactions or purchase.</description>
+        <entityRef id="FF80818124241FE0012424493CA6003F" entity-name="IDL_Entities" identifier="Price List"/>
+        <defaultValue>True</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA6006A" identifier="JournalEntry">
+    <id>FF80818124241FE0012424493CA6006A</id>
+    <active>true</active>
+    <name>JournalEntry</name>
+    <description>Journal entry is a logging of transcriptions into items accounting journal.</description>
+    <javaClassName>org.openbravo.idl.proc.JournalEntriesProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0030" identifier="TransactionalOrg">
+        <id>FF80818124241FE0012424493CAA0030</id>
+        <active>true</active>
+        <name>TransactionalOrg</name>
+        <description>Indicates the organization to be used when processing transactional documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA6006A" entity-name="IDL_Entities" identifier="JournalEntry"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0031" identifier="Currency">
+        <id>FF80818124241FE0012424493CAA0031</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Indicates the currency to be used when processing this document.</description>
+        <entityRef id="FF80818124241FE0012424493CA6006A" entity-name="IDL_Entities" identifier="JournalEntry"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0032" identifier="BatchDescription">
+        <id>FF80818124241FE0012424493CAA0032</id>
+        <active>true</active>
+        <name>BatchDescription</name>
+        <description>More info about the Journal Entries batch.</description>
+        <entityRef id="FF80818124241FE0012424493CA6006A" entity-name="IDL_Entities" identifier="JournalEntry"/>
+        <defaultValue>Initial Data Load batch</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0033" identifier="AccountingSchema">
+        <id>FF80818124241FE0012424493CAA0033</id>
+        <active>true</active>
+        <name>AccountingSchema</name>
+        <description>Defines the rules used in accounting such as costing method, currency and calendar.</description>
+        <entityRef id="FF80818124241FE0012424493CA6006A" entity-name="IDL_Entities" identifier="JournalEntry"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0034" identifier="GLCategory">
+        <id>FF80818124241FE0012424493CAA0034</id>
+        <active>true</active>
+        <name>GLCategory</name>
+        <description>User defined method of grouping journal lines.</description>
+        <entityRef id="FF80818124241FE0012424493CA6006A" entity-name="IDL_Entities" identifier="JournalEntry"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA0035" identifier="Organization">
+        <id>FF80818124241FE0012424493CAA0035</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA6006A" entity-name="IDL_Entities" identifier="JournalEntry"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE0012424493CA8004A" identifier="Business Partner">
+    <id>FF80818124241FE0012424493CA8004A</id>
+    <active>true</active>
+    <name>Business Partner</name>
+    <description>Business Partner is a generic term used for several object types like customer, vendor, employee, etc.</description>
+    <javaClassName>org.openbravo.idl.proc.BusinessPartnersProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1108" identifier="Organization">
+        <id>FF80818124241FE0012424493CAA1108</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1109" identifier="Employee">
+        <id>FF80818124241FE0012424493CAA1109</id>
+        <active>true</active>
+        <name>Employee</name>
+        <description>Indicates if this Business Partner is an Employee.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA110A" identifier="IsSalesRepresentative">
+        <id>FF80818124241FE0012424493CAA110A</id>
+        <active>true</active>
+        <name>IsSalesRepresentative</name>
+        <description>Indicates if this employee is also a sales representative </description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA110B" identifier="PurchasePriceList">
+        <id>FF80818124241FE0012424493CAA110B</id>
+        <active>true</active>
+        <name>PurchasePriceList</name>
+        <description>Identifies the price list used by a Vendor</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA110C" identifier="POPaymentTerm">
+        <id>FF80818124241FE0012424493CAA110C</id>
+        <active>true</active>
+        <name>POPaymentTerm</name>
+        <description>Indicates the payment term that will be used when this purchase order becomes an invoice.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA110D" identifier="Category">
+        <id>FF80818124241FE0012424493CAA110D</id>
+        <active>true</active>
+        <name>Category</name>
+        <description>Business Partner group name.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA110E" identifier="Customer">
+        <id>FF80818124241FE0012424493CAA110E</id>
+        <active>true</active>
+        <name>Customer</name>
+        <description>Indicates a business partner that is your customer, ie. that will be making purchases from you.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA110F" identifier="Vendor">
+        <id>FF80818124241FE0012424493CAA110F</id>
+        <active>true</active>
+        <name>Vendor</name>
+        <description>Indicates if this Business Partner is a Vendor.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1110" identifier="SalePriceList">
+        <id>FF80818124241FE0012424493CAA1110</id>
+        <active>true</active>
+        <name>SalePriceList</name>
+        <description>Identifies the price list used by a Customer.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1111" identifier="PaymentTerm">
+        <id>FF80818124241FE0012424493CAA1111</id>
+        <active>true</active>
+        <name>PaymentTerm</name>
+        <description>Identifies the method and timing of payment for this transaction.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1112" identifier="Country">
+        <id>FF80818124241FE0012424493CAA1112</id>
+        <active>true</active>
+        <name>Country</name>
+        <description>Defines a Country.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1113" identifier="TaxID">
+        <id>FF80818124241FE0012424493CAA1113</id>
+        <active>true</active>
+        <name>TaxID</name>
+        <description>Identifies the legal Identification number of this Entity.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1114" identifier="Language">
+        <id>FF80818124241FE0012424493CAA1114</id>
+        <active>true</active>
+        <name>Language</name>
+        <description>Identifies the language to use for display.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1115" identifier="InvoiceTerm">
+        <id>FF80818124241FE0012424493CAA1115</id>
+        <active>true</active>
+        <name>InvoiceTerm</name>
+        <description>Defines how a Business Partner is invoiced and the frequency of invoicing.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1116" identifier="InvoiceSchedule">
+        <id>FF80818124241FE0012424493CAA1116</id>
+        <active>true</active>
+        <name>InvoiceSchedule</name>
+        <description>Identifies the frequency used when generating invoices.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1117" identifier="SOFinancialAccount">
+        <id>FF80818124241FE0012424493CAA1117</id>
+        <active>true</active>
+        <name>SOFinancialAccount</name>
+        <description>Default Customer Financial account.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1118" identifier="POFinancialAccount">
+        <id>FF80818124241FE0012424493CAA1118</id>
+        <active>true</active>
+        <name>POFinancialAccount</name>
+        <description>Default Vendor Financial Account.</description>
+        <entityRef id="FF80818124241FE0012424493CA8004A" entity-name="IDL_Entities" identifier="Business Partner"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE00124244965E40002" identifier="Costing">
+    <id>FF80818124241FE00124244965E40002</id>
+    <active>true</active>
+    <name>Costing</name>
+    <description>Standard cost of products is used for budgeting and planning, product pricing and inventory valuation.</description>
+    <javaClassName>org.openbravo.idl.proc.CostingsProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="FF80818124241230098324493CBA0000" identifier="Organization">
+        <id>FF80818124241230098324493CBA0000</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE00124244965E40002" entity-name="IDL_Entities" identifier="Costing"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230098324493CBA0001" identifier="CostType">
+        <id>FF80818124241230098324493CBA0001</id>
+        <active>true</active>
+        <name>CostType</name>
+        <description>Different types of cost.</description>
+        <entityRef id="FF80818124241FE00124244965E40002" entity-name="IDL_Entities" identifier="Costing"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230098324493CBA0002" identifier="StartingDate">
+        <id>FF80818124241230098324493CBA0002</id>
+        <active>true</active>
+        <name>StartingDate</name>
+        <description>A parameter stating the starting time range related to a specified request.</description>
+        <entityRef id="FF80818124241FE00124244965E40002" entity-name="IDL_Entities" identifier="Costing"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>date</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241230098324493CBA0003" identifier="EndingDate">
+        <id>FF80818124241230098324493CBA0003</id>
+        <active>true</active>
+        <name>EndingDate</name>
+        <description>A parameter stating the ending time range related for a specified request, query, etc.</description>
+        <entityRef id="FF80818124241FE00124244965E40002" entity-name="IDL_Entities" identifier="Costing"/>
+        <defaultValue>9999-12-31</defaultValue>
+        <dataType>date</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE00124244965E40034" identifier="Financial Account">
+    <id>FF80818124241FE00124244965E40034</id>
+    <active>true</active>
+    <name>Financial Account</name>
+    <description>Financial accounts are concerned with classifying, measuring and recording the transactions of a business</description>
+    <javaClassName>org.openbravo.idl.proc.FinAccountsProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1100" identifier="Organization">
+        <id>FF80818124241FE0012424493CAA1100</id>
+        <active>true</active>
+        <name>Organization</name>
+        <description>Indicates the organization to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1101" identifier="Currency">
+        <id>FF80818124241FE0012424493CAA1101</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Indicates the currency to be used when processing this document.</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1102" identifier="Country">
+        <id>FF80818124241FE0012424493CAA1102</id>
+        <active>true</active>
+        <name>Country</name>
+        <description>Defines a Country.</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1103" identifier="Type">
+        <id>FF80818124241FE0012424493CAA1103</id>
+        <active>true</active>
+        <name>Type</name>
+        <description>Indicates the Financial Account Type.</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue>Bank</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1104" identifier="IsDefault">
+        <id>FF80818124241FE0012424493CAA1104</id>
+        <active>true</active>
+        <name>IsDefault</name>
+        <description>Indicates if the prices list is the default.</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue>False</defaultValue>
+        <dataType>boolean</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1105" identifier="MatchingAlgorithm">
+        <id>FF80818124241FE0012424493CAA1105</id>
+        <active>true</active>
+        <name>MatchingAlgorithm</name>
+        <description>Identifies the algorithm used to match the imported bank statement. lines</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="FF80818124241FE0012424493CAA1106" identifier="BPCategory">
+        <id>FF80818124241FE0012424493CAA1106</id>
+        <active>true</active>
+        <name>BPCategory</name>
+        <description>Business Partner Category.</description>
+        <entityRef id="FF80818124241FE00124244965E40034" entity-name="IDL_Entities" identifier="Financial Account"/>
+        <defaultValue>Financial Accounts</defaultValue>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+  <IDL_Entities id="FF80818124241FE00124244965E40035" identifier="Payable">
+    <id>FF80818124241FE00124244965E40035</id>
+    <active>true</active>
+    <name>Payable</name>
+    <description>A payable is an obligation to pay some amount to a supplier or credit pending to collect from a customer.</description>
+    <javaClassName>org.openbravo.idl.proc.PayablesProcess</javaClassName>
+    <iDLEntitiesTrlList/>
+    <iDLFieldsList>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1108" identifier="TransationalOrg">
+        <id>AF80818124241FE0012424493CAA1108</id>
+        <active>true</active>
+        <name>TransationalOrg</name>
+        <description>Indicates the organization to be used when processing transactional documents.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1109" identifier="Currency">
+        <id>AF80818124241FE0012424493CAA1109</id>
+        <active>true</active>
+        <name>Currency</name>
+        <description>Indicates the currency to be used when processing documents.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1110" identifier="PaymentMethod">
+        <id>AF80818124241FE0012424493CAA1110</id>
+        <active>true</active>
+        <name>PaymentMethod</name>
+        <description>Indicates the method of payment used for this transaction.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1111" identifier="FinancialAccount">
+        <id>AF80818124241FE0012424493CAA1111</id>
+        <active>true</active>
+        <name>FinancialAccount</name>
+        <description>Default Financial Account.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1112" identifier="BusinessPartner">
+        <id>AF80818124241FE0012424493CAA1112</id>
+        <active>true</active>
+        <name>BusinessPartner</name>
+        <description>A Business Partner is anyone with whom you transact. This can include a customer, vendor, employee or any combination of these.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1113" identifier="Project">
+        <id>AF80818124241FE0012424493CAA1113</id>
+        <active>true</active>
+        <name>Project</name>
+        <description>A Business Partner is anyone with whom you transact. This can include a customer, vendor, employee or any combination of these.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1114" identifier="Campaign">
+        <id>AF80818124241FE0012424493CAA1114</id>
+        <active>true</active>
+        <name>Campaign</name>
+        <description>The Marketing Campaign defines the parameters for a Campaign.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1115" identifier="Activity">
+        <id>AF80818124241FE0012424493CAA1115</id>
+        <active>true</active>
+        <name>Activity</name>
+        <description>Identifier of an activity defined within the Project.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+      <IDL_Fields id="AF80818124241FE0012424493CAA1116" identifier="GLItem">
+        <id>AF80818124241FE0012424493CAA1116</id>
+        <active>true</active>
+        <name>GLItem</name>
+        <description>General Ledger Item.</description>
+        <entityRef id="FF80818124241FE00124244965E40035" entity-name="IDL_Entities" identifier="Payable"/>
+        <defaultValue xsi:nil="true"/>
+        <dataType>string</dataType>
+      </IDL_Fields>
+    </iDLFieldsList>
+  </IDL_Entities>
+</ob:Openbravo>

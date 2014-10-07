@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION BI_SACACOSTO">
+    <function name="BI_SACACOSTO" type="NULL">
+      <parameter name="costo" type="NUMERIC" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="p_m_product_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_fecha" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[BEGIN
+BEGIN --BODY
+
+SELECT COST INTO costo FROM M_COSTING WHERE M_PRODUCT_ID = (p_m_product_id) AND p_fecha > datefrom and p_fecha < dateto AND (costtype ='AV' OR costtype ='AVA') ORDER BY DATETO LIMIT 1;
+
+costo = COALESCE(costo, 0);
+RETURN;
+END;
+
+EXCEPTION
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('@Error=' || SQLERRM);
+RETURN;
+END BI_SACACOSTO
+]]></body>
+    </function>
+  </database>

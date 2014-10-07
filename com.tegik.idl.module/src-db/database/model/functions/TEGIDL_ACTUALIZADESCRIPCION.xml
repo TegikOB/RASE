@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_ACTUALIZADESCRIPCION">
+    <function name="TEGIDL_ACTUALIZADESCRIPCION" type="NULL">
+      <parameter name="p_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_name" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_description" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_language" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_id VARCHAR(32);
+  
+BEGIN
+
+IF p_id IS NULL THEN 
+	SELECT ad_window_trl_id INTO v_id FROM ad_window_trl WHERE ad_language=p_language AND ad_window_id=(SELECT ad_window_id 
+													FROM ad_window WHERE name = p_name);
+ELSE
+	SELECT ad_window_trl_id INTO v_id FROM ad_window_trl WHERE ad_language=p_language AND ad_window_id=p_id;
+END IF;
+
+IF v_id IS NOT NULL THEN
+	UPDATE ad_window_trl SET description=p_description WHERE  ad_window_trl_id=v_id;
+	RETURN;
+END IF;
+
+IF p_id IS NULL THEN 
+	SELECT ad_process_trl_id INTO v_id FROM ad_process_trl WHERE ad_language=p_language AND ad_process_id=(SELECT ad_process_id 
+													FROM ad_process WHERE name = p_name);
+ELSE
+	SELECT ad_process_trl_id INTO v_id FROM ad_process_trl WHERE ad_language=p_language AND ad_process_id=p_id;
+END IF;
+
+IF v_id IS NOT NULL THEN
+	UPDATE ad_process_trl SET description=p_description WHERE  ad_process_trl_id=v_id;
+	RETURN;
+END IF;
+
+RETURN;
+
+
+EXCEPTION WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ;
+  RAISE;
+END TEGIDL_ACTUALIZADESCRIPCION
+]]></body>
+    </function>
+  </database>

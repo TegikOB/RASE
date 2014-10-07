@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_CARGAINVENTARIO">
+    <function name="TEGIDL_CARGAINVENTARIO" type="VARCHAR">
+      <parameter name="p_producto" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_costo" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_hueco" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_cantidad" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_lote" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_caducidad" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_uom" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_id VARCHAR(32);
+v_producto VARCHAR(32);
+v_locator VARCHAR(32);
+v_asi VARCHAR(32);
+v_dia VARCHAR(32);
+v_mes VARCHAR(32);
+v_ano VARCHAR(32);
+v_fechalote VARCHAR(32);
+v_uom VARCHAR(32);
+ci RECORD;
+  
+BEGIN
+
+	/* Ejemplo de uso de esta función
+	SELECT 'SELECT TEGIDL_CARGAINVENTARIO(''' || p.value || ''', 0, ''' || l.value || ''', 1000, NULL, NULL, ''Unidad'');'
+	from 
+	m_product p inner join m_locator l on p.ad_client_id = l.ad_client_id and p.ad_client_id = '09CAFCAAEEC843E0AA5CB7EF74DCC3E7
+	*/
+	
+	SELECT * FROM M_INVENTORY INTO ci WHERE DESCRIPTION = 'CARGA DE INVENTARIO EPIX PRODUCCION NUEVO' ORDER BY CREATED DESC LIMIT 1;
+
+	SELECT M_PRODUCT_ID INTO v_producto FROM M_PRODUCT WHERE VALUE = p_producto AND AD_CLIENT_ID =  ci.ad_client_id;
+	IF (v_producto IS NULL) THEN
+		RAISE NO_DATA_FOUND || p_producto;
+	END IF;
+
+	SELECT M_LOCATOR_ID INTO v_locator FROM M_LOCATOR WHERE VALUE = p_hueco AND AD_CLIENT_ID =  ci.ad_client_id;
+	IF (v_locator IS NULL) THEN
+		RAISE NO_DATA_FOUND || p_hueco;
+	END IF;
+
+	SELECT GET_UUID() INTO v_asi FROM DUAL;
+
+	SELECT EXTRACT(DAY FROM TO_DATE(p_caducidad)) INTO v_dia FROM DUAL;
+	SELECT EXTRACT(MONTH FROM TO_DATE(p_caducidad)) INTO v_mes FROM DUAL;
+	SELECT EXTRACT(YEAR FROM TO_DATE(p_caducidad)) INTO v_ano FROM DUAL;
+
+	IF (LENGTH(v_dia) = 1) THEN
+		v_dia = '0' || v_dia;
+	END IF;
+
+	IF (LENGTH(v_mes) = 1) THEN
+		v_mes = '0' || v_mes;
+	END IF;
+	
+	SELECT c_uom_id INTO v_uom from c_uom where name = p_uom AND AD_CLIENT_ID IN (ci.ad_client_id, '0');
+	IF (v_uom IS  NULL) THEN
+		RAISE NO_DATA_FOUND || p_uom;
+	END IF;
+
+	v_fechalote = v_dia || '-' || v_mes || '-' || v_ano;
+
+	IF (p_lote <> '') THEN
+		SELECT GET_UUID() INTO v_asi FROM DUAL;
+		INSERT INTO m_attributesetinstance
+			(
+			m_attributesetinstance_id, ad_client_id, ad_org_id, isactive, 
+			created, createdby, updated, updatedby, m_attributeset_id, serno, 
+			lot, guaranteedate, description, m_lot_id, islocked, lock_description
+			)
+		VALUES 
+			(
+			v_asi, ci.ad_client_id, ci.ad_org_id, ci.isactive, 
+			now(), ci.createdby, now(), ci.updatedby, (select m_attributeset_id from m_product where m_product_id = v_producto), NULL, 
+			p_lote, TO_DATE(p_caducidad), p_lote || '_' || v_fechalote , NULL, 'N', NULL
+			);
+	ELSE
+		SELECT NULL INTO v_asi FROM DUAL;
+	END IF;
+
+
+	INSERT INTO m_inventoryline
+		(
+		m_inventoryline_id, ad_client_id, ad_org_id, isactive, created, 
+		createdby, updated, updatedby, m_inventory_id, m_locator_id, 
+		m_product_id, line, qtybook, qtycount, description, m_attributesetinstance_id, 
+		m_product_uom_id, quantityorder, c_uom_id, quantityorderbook, 
+		cost, relatedinventorylineid
+		)
+	VALUES 
+		(
+		GET_UUID(), ci.ad_client_id, ci.ad_org_id, ci.isactive, now(), 
+		ci.createdby, now(), ci.updatedby, ci.m_inventory_id, v_locator, 
+		v_producto, (SELECT COALESCE(MAX(LINE), 0) + 10 FROM M_INVENTORYLINE WHERE M_INVENTORY_ID = ci.m_inventory_id), 0, p_cantidad, NULL, v_asi, 
+		NULL, NULL, v_uom, NULL, 
+		p_costo, NULL
+		);
+
+
+	RETURN 'OK';
+
+
+EXCEPTION WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE(SQLERRM) ;
+  RAISE;
+END TEGIDL_CARGAINVENTARIO
+]]></body>
+    </function>
+  </database>

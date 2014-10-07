@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_haDoIGYIEd6xSNDVRTIB-A" label="INITIAL_DATA_LOAD" description="" language="java" technicalLabel="INITIAL_DATA_LOAD" local="true" author="_haEPMGYIEd6xSNDVRTIB-A" productVersion="Talend Open Studio-3.1.4.r29781">
+    <technicalStatus xmi:id="_h7gIUGYIEd6xSNDVRTIB-A" label="development" code="DEV"/>
+    <technicalStatus xmi:id="_h7gIUWYIEd6xSNDVRTIB-A" label="testing" code="TEST"/>
+    <technicalStatus xmi:id="_h7gIUmYIEd6xSNDVRTIB-A" label="production" code="PROD"/>
+    <documentationStatus xmi:id="_h7IU4GYIEd6xSNDVRTIB-A" label="unchecked" code="UCK"/>
+    <documentationStatus xmi:id="_h7IU4WYIEd6xSNDVRTIB-A" label="checked" code="CHK"/>
+    <documentationStatus xmi:id="_h7IU4mYIEd6xSNDVRTIB-A" label="validated" code="VAL"/>
+    <folders xmi:id="_h7sVk2YIEd6xSNDVRTIB-A" property="_h7sVkmYIEd6xSNDVRTIB-A" state="_h7sVkWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8JBg2YIEd6xSNDVRTIB-A" property="_h8JBgmYIEd6xSNDVRTIB-A" state="_h8JBgWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+    </folders>
+    <folders xmi:id="_h7s8o2YIEd6xSNDVRTIB-A" property="_h7s8omYIEd6xSNDVRTIB-A" state="_h7s8oWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Q9V2YIEd6xSNDVRTIB-A" property="_h8Q9VmYIEd6xSNDVRTIB-A" state="_h8Q9VWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_YggFw3bYEd6BHI-efbH7kQ" property="_YggFwnbYEd6BHI-efbH7kQ" state="_YggFwXbYEd6BHI-efbH7kQ"/>
+    </folders>
+    <folders xmi:id="_h7s8p2YIEd6xSNDVRTIB-A" property="_h7s8pmYIEd6xSNDVRTIB-A" state="_h7s8pWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8UAo2YIEd6xSNDVRTIB-A" property="_h8UAomYIEd6xSNDVRTIB-A" state="_h8UAoWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+    </folders>
+    <folders xmi:id="_h76_E2YIEd6xSNDVRTIB-A" property="_h76_EmYIEd6xSNDVRTIB-A" state="_h76_EWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h76_F2YIEd6xSNDVRTIB-A" property="_h76_FmYIEd6xSNDVRTIB-A" state="_h76_FWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8RkY2YIEd6xSNDVRTIB-A" property="_h8RkYmYIEd6xSNDVRTIB-A" state="_h8RkYWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h-DtE2YIEd6xSNDVRTIB-A" property="_h-DtEmYIEd6xSNDVRTIB-A" state="_h-DtEWYIEd6xSNDVRTIB-A"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h77mI2YIEd6xSNDVRTIB-A" property="_h77mImYIEd6xSNDVRTIB-A" state="_h77mIWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8SLc2YIEd6xSNDVRTIB-A" property="_h8SLcmYIEd6xSNDVRTIB-A" state="_h8SLcWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+    </folders>
+    <folders xmi:id="_h77mJ2YIEd6xSNDVRTIB-A" property="_h77mJmYIEd6xSNDVRTIB-A" state="_h77mJWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Jok2YIEd6xSNDVRTIB-A" property="_h8JokmYIEd6xSNDVRTIB-A" state="_h8JokWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+    </folders>
+    <folders xmi:id="_h78NM2YIEd6xSNDVRTIB-A" property="_h78NMmYIEd6xSNDVRTIB-A" state="_h78NMWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h7-pc2YIEd6xSNDVRTIB-A" property="_h7-pcmYIEd6xSNDVRTIB-A" state="_h7-pcWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8KPomYIEd6xSNDVRTIB-A" property="_h8KPoWYIEd6xSNDVRTIB-A" state="_h8KPoGYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h7_Qg2YIEd6xSNDVRTIB-A" property="_h7_QgmYIEd6xSNDVRTIB-A" state="_h7_QgWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8KPpmYIEd6xSNDVRTIB-A" property="_h8KPpWYIEd6xSNDVRTIB-A" state="_h8KPpGYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h7_3l2YIEd6xSNDVRTIB-A" property="_h7_3lmYIEd6xSNDVRTIB-A" state="_h7_3lWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8K2t2YIEd6xSNDVRTIB-A" property="_h8K2tmYIEd6xSNDVRTIB-A" state="_h8K2tWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8CT02YIEd6xSNDVRTIB-A" property="_h8CT0mYIEd6xSNDVRTIB-A" state="_h8CT0WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8ME02YIEd6xSNDVRTIB-A" property="_h8ME0mYIEd6xSNDVRTIB-A" state="_h8ME0WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8C642YIEd6xSNDVRTIB-A" property="_h8C64mYIEd6xSNDVRTIB-A" state="_h8C64WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Mr42YIEd6xSNDVRTIB-A" property="_h8Mr4mYIEd6xSNDVRTIB-A" state="_h8Mr4WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8C652YIEd6xSNDVRTIB-A" property="_h8C65mYIEd6xSNDVRTIB-A" state="_h8C65WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Mr52YIEd6xSNDVRTIB-A" property="_h8Mr5mYIEd6xSNDVRTIB-A" state="_h8Mr5WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Dh82YIEd6xSNDVRTIB-A" property="_h8Dh8mYIEd6xSNDVRTIB-A" state="_h8Dh8WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8N6A2YIEd6xSNDVRTIB-A" property="_h8N6AmYIEd6xSNDVRTIB-A" state="_h8N6AWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8EJA2YIEd6xSNDVRTIB-A" property="_h8EJAmYIEd6xSNDVRTIB-A" state="_h8EJAWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8NS82YIEd6xSNDVRTIB-A" property="_h8NS8mYIEd6xSNDVRTIB-A" state="_h8NS8WYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8EwEWYIEd6xSNDVRTIB-A" property="_h8EwEGYIEd6xSNDVRTIB-A" state="_h8EJBWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Q9U2YIEd6xSNDVRTIB-A" property="_h8Q9UmYIEd6xSNDVRTIB-A" state="_h8Q9UWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8EwFWYIEd6xSNDVRTIB-A" property="_h8EwFGYIEd6xSNDVRTIB-A" state="_h8EwE2YIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8OhE2YIEd6xSNDVRTIB-A" property="_h8OhEmYIEd6xSNDVRTIB-A" state="_h8OhEWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8FXI2YIEd6xSNDVRTIB-A" property="_h8FXImYIEd6xSNDVRTIB-A" state="_h8FXIWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8N6B2YIEd6xSNDVRTIB-A" property="_h8N6BmYIEd6xSNDVRTIB-A" state="_h8N6BWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8F-N2YIEd6xSNDVRTIB-A" property="_h8F-NmYIEd6xSNDVRTIB-A" state="_h8F-NWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8QWQGYIEd6xSNDVRTIB-A" property="_h8PvMmYIEd6xSNDVRTIB-A" state="_h8PvMWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_J-wsM4GwEd6TH7b2igsyQw" property="_J-wsMoGwEd6TH7b2igsyQw" state="_J-wsMYGwEd6TH7b2igsyQw" type="SYSTEM_FOLDER"/>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_J-xTQ4GwEd6TH7b2igsyQw" property="_J-xTQoGwEd6TH7b2igsyQw" state="_J-xTQYGwEd6TH7b2igsyQw" type="SYSTEM_FOLDER"/>
+    </folders>
+    <folders xmi:id="_h7_3k2YIEd6xSNDVRTIB-A" property="_h7_3kmYIEd6xSNDVRTIB-A" state="_h7_3kWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8K2s2YIEd6xSNDVRTIB-A" property="_h8K2smYIEd6xSNDVRTIB-A" state="_h8K2sWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h_yyc2YIEd6xSNDVRTIB-A" property="_h_yycmYIEd6xSNDVRTIB-A" state="_h_yycWYIEd6xSNDVRTIB-A">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_iAHik2YIEd6xSNDVRTIB-A" property="_iAHikmYIEd6xSNDVRTIB-A" state="_iAHikWYIEd6xSNDVRTIB-A"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_9_iGVLizEd6uM7el-YYDYg" property="_9_iGU7izEd6uM7el-YYDYg" state="_9_iGUrizEd6uM7el-YYDYg"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_iA8pAGYIEd6xSNDVRTIB-A" property="_iA8B8mYIEd6xSNDVRTIB-A" state="_iA8B8WYIEd6xSNDVRTIB-A">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_iBL5k2YIEd6xSNDVRTIB-A" property="_iBL5kmYIEd6xSNDVRTIB-A" state="_iBL5kWYIEd6xSNDVRTIB-A"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_-BRyxLizEd6uM7el-YYDYg" property="_-BRyw7izEd6uM7el-YYDYg" state="_-BRywrizEd6uM7el-YYDYg"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_iCKJ82YIEd6xSNDVRTIB-A" property="_iCKJ8mYIEd6xSNDVRTIB-A" state="_iCKJ8WYIEd6xSNDVRTIB-A">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_iCgvQ2YIEd6xSNDVRTIB-A" property="_iCgvQmYIEd6xSNDVRTIB-A" state="_iCgvQWYIEd6xSNDVRTIB-A"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_9_PLY7izEd6uM7el-YYDYg" property="_9_PLYrizEd6uM7el-YYDYg" state="_9_PLYbizEd6uM7el-YYDYg"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_iDAeg2YIEd6xSNDVRTIB-A" property="_iDAegmYIEd6xSNDVRTIB-A" state="_iDAegWYIEd6xSNDVRTIB-A">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_iDEv82YIEd6xSNDVRTIB-A" property="_iDEv8mYIEd6xSNDVRTIB-A" state="_iDEv8WYIEd6xSNDVRTIB-A"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_-AZB87izEd6uM7el-YYDYg" property="_-AZB8rizEd6uM7el-YYDYg" state="_-AZB8bizEd6uM7el-YYDYg"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_KAjb84GwEd6TH7b2igsyQw" property="_KAjb8oGwEd6TH7b2igsyQw" state="_KAjb8YGwEd6TH7b2igsyQw">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_KAt0A4GwEd6TH7b2igsyQw" property="_KAt0AoGwEd6TH7b2igsyQw" state="_KAt0AYGwEd6TH7b2igsyQw"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_-A1G07izEd6uM7el-YYDYg" property="_-A1G0rizEd6uM7el-YYDYg" state="_-A1G0bizEd6uM7el-YYDYg"/>
+      </children>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_KBJR0YGwEd6TH7b2igsyQw" property="_KBJR0IGwEd6TH7b2igsyQw" state="_KBIqwYGwEd6TH7b2igsyQw">
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_KBOKUIGwEd6TH7b2igsyQw" property="_KBNjQoGwEd6TH7b2igsyQw" state="_KBNjQYGwEd6TH7b2igsyQw"/>
+        <children xsi:type="TalendProperties:FolderItem" xmi:id="_-BDwUbizEd6uM7el-YYDYg" property="_-BDwULizEd6uM7el-YYDYg" state="_-BDJQrizEd6uM7el-YYDYg"/>
+      </children>
+    </folders>
+    <folders xmi:id="_h8F-M2YIEd6xSNDVRTIB-A" property="_h8F-MmYIEd6xSNDVRTIB-A" state="_h8F-MWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8TZk2YIEd6xSNDVRTIB-A" property="_h8TZkmYIEd6xSNDVRTIB-A" state="_h8TZkWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+    </folders>
+    <folders xmi:id="_h8HMU2YIEd6xSNDVRTIB-A" property="_h8HMUmYIEd6xSNDVRTIB-A" state="_h8HMUWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+    <folders xmi:id="_h8HzY2YIEd6xSNDVRTIB-A" property="_h8HzYmYIEd6xSNDVRTIB-A" state="_h8HzYWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER">
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8HzZ2YIEd6xSNDVRTIB-A" property="_h8HzZmYIEd6xSNDVRTIB-A" state="_h8HzZWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+      <children xsi:type="TalendProperties:FolderItem" xmi:id="_h8Iac2YIEd6xSNDVRTIB-A" property="_h8IacmYIEd6xSNDVRTIB-A" state="_h8IacWYIEd6xSNDVRTIB-A" type="SYSTEM_FOLDER"/>
+    </folders>
+    <migrationTasks>org.talend.repository.localprovider.RemoveRoutineFolderTask</migrationTasks>
+    <migrationTasks>org.talend.repository.localprovider.model.migration.ChangeXmiSerialization</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametRunProcess</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametMysqlOutputBulkExec</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametCatcher</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.upgradetUniqRow</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametDbInputToOracle</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametDbInputToMySQL</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametDbInputToPostgresql</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametDbInputToMssql</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.updatetRowGenerator</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.upgradetWarntDiePriority</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametFileZipUnzip</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.changeRunBeforeAfterToThenRunMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RemoveSpaceInJobNameMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddProductAndMappingInDBConnectionEMFMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametFTPToFTP</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametNormalize</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametFlowMeter</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametFlowMeterCatcher</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.addQuot</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.upgradetRunJobRemoveQuotesMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.changetUniqRowLinks</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddDdColumn</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.convertOldPerlTypes</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametXMLRPC</migrationTasks>
+    <migrationTasks>org.talend.repository.renametFileInputCSV</migrationTasks>
+    <migrationTasks>org.talend.repository.renametFileOutputCSV</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.upgradetAdvancedXML</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.DieOnErrorDefaultValueMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.renameRoutinesClassName</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddRenameOnFileCopyMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddPerlRefArrayPointer</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddPerlRefArrayPointer2</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.changeLookupColumnList</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddConnectorNameInConnections</migrationTasks>
+    <migrationTasks>org.talend.repository.connection.rename.runifok.oncomponentok</migrationTasks>
+    <migrationTasks>org.talend.repository.connection.rename.runerror.oncomponenterror</migrationTasks>
+    <migrationTasks>org.talend.repository.connection.rename.thenrun.onsubjobok</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.ReplaceMultiFlowBytReplicateMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.upgradeAttributestAdvancedXML</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.upgradeAttributestFilterRow</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.upperCaseDbtypeOfCreateTable</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametBufferOutput</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametMapPersistent</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.ReplaceOldContextScriptCode</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.RenametFor</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.ReplaceSpaceCharForItemNameMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.ReplaceJavaKeywordsNameForContext</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.MoveExcelSheetnameToSheetlist</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddDoubleQuoteTotMomMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.MoveExcelSheetnameToSheetlistForJava</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.HandleOracleSchemaMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.ChangeValueOfTLogRowChecks</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddQuotesToModuleListMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.UpdateTheJobsActionsOnTable</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametFTPToFTPGetMigrationTaskForPerl</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametForForPerl</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenameDbProductIdMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenameDbMacroMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.ChangeSqlPatternValueMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametForCurrentIterationMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametFileInputBasic</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.UpgradetDenormalizeMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.ReplaceRunJobLabelVariable</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddFamilyFieldProjectMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.QuoteWraptSSHcommandMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.MigrationTaskForIssue4449</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.MoveFileListFilemaskToFilemaskListForJava</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddOutputFileNameOntJasperOutputForJava</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.FileInputRegexContextVariableMigrationTaskForSave</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.FileInputRegexContextVariableMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.UpgradeRepositoryReferenceParameters</migrationTasks>
+    <migrationTasks>org.talend.designer.core.ui.views.statsandlogs.migration.UseOracleSIDAsDefaultOracleTypeMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametParseXMLRowTotExtractXMLFieldMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.migration.renametAggregateRowOpt</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.EncryptDbPasswordMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.SetContextMode</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.AddDoubleQuoteToAllDBSPNameMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.renameMultiSchemaToMSMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.ChangeExtendInsertDefaultValueMigrationTask</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametFSUniq</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametLaunchDQAnalyseTotLaunchDQReports</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenameAccessDbVersionInConnection</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.MigrationTaskForIssue7547</migrationTasks>
+    <migrationTasks>org.talend.repository.model.migration.RenametFSFilterRows</migrationTasks>
+    <componentsSettings xmi:id="_jEtMEGYIEd6xSNDVRTIB-A" name="tIntervalMatch" family="Data Quality"/>
+    <componentsSettings xmi:id="_jEtMEWYIEd6xSNDVRTIB-A" name="tFuzzyMatch" family="Data Quality"/>
+    <componentsSettings xmi:id="_jEtMEmYIEd6xSNDVRTIB-A" name="tExtractDelimitedFields" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEtME2YIEd6xSNDVRTIB-A" name="tGreenplumRollback" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEtMFGYIEd6xSNDVRTIB-A" name="tInformixRow" family="Databases/Informix"/>
+    <componentsSettings xmi:id="_jEtMFWYIEd6xSNDVRTIB-A" name="tPostgresqlRollback" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEtMFmYIEd6xSNDVRTIB-A" name="tHashInput" hidden="true" family="Technical"/>
+    <componentsSettings xmi:id="_jEtMF2YIEd6xSNDVRTIB-A" name="tInterbaseCommit" family="Databases/Interbase"/>
+    <componentsSettings xmi:id="_jEtMGGYIEd6xSNDVRTIB-A" name="tGreenplumOutputBulkExec" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEtMGWYIEd6xSNDVRTIB-A" name="tHSQLDbOutput" family="Databases/HSQLDb"/>
+    <componentsSettings xmi:id="_jEtMGmYIEd6xSNDVRTIB-A" name="tMSSqlOutputBulkExec" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEtMG2YIEd6xSNDVRTIB-A" name="tSCPGet" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jEtMHGYIEd6xSNDVRTIB-A" name="tGreenplumOutputBulk" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEtMHWYIEd6xSNDVRTIB-A" name="tPostgresqlOutput" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEtMHmYIEd6xSNDVRTIB-A" name="tParAccelBulkExec" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEtMH2YIEd6xSNDVRTIB-A" name="tFirebirdRow" family="Databases/FireBird"/>
+    <componentsSettings xmi:id="_jEtzIGYIEd6xSNDVRTIB-A" name="tSCPTruncate" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jEtzIWYIEd6xSNDVRTIB-A" name="tOracleInput" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEtzImYIEd6xSNDVRTIB-A" name="tFTPPut" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEtzI2YIEd6xSNDVRTIB-A" name="tOracleSCD" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEtzJGYIEd6xSNDVRTIB-A" name="tOracleSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEtzJWYIEd6xSNDVRTIB-A" name="tTeradataRollback" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEtzJmYIEd6xSNDVRTIB-A" name="tPostgresPlusOutput" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jEtzJ2YIEd6xSNDVRTIB-A" name="tGroovy" family="Custom Code"/>
+    <componentsSettings xmi:id="_jEtzKGYIEd6xSNDVRTIB-A" name="tFirebirdCommit" family="Databases/FireBird"/>
+    <componentsSettings xmi:id="_jEtzKWYIEd6xSNDVRTIB-A" name="tFirebirdRollback" family="Databases/FireBird"/>
+    <componentsSettings xmi:id="_jEtzKmYIEd6xSNDVRTIB-A" name="tJavaRow" family="Custom Code"/>
+    <componentsSettings xmi:id="_jEtzK2YIEd6xSNDVRTIB-A" name="tSQLiteInput" family="Databases/SQLite"/>
+    <componentsSettings xmi:id="_jEtzLGYIEd6xSNDVRTIB-A" name="tDB2SP" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jEtzLWYIEd6xSNDVRTIB-A" name="tTeradataFastLoad" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEtzLmYIEd6xSNDVRTIB-A" name="tWaitForSocket" hidden="true" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEtzL2YIEd6xSNDVRTIB-A" name="tFTPRename" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEtzMGYIEd6xSNDVRTIB-A" name="tMsgBox" family="Misc"/>
+    <componentsSettings xmi:id="_jEtzMWYIEd6xSNDVRTIB-A" name="tPostgresqlOutputBulkExec" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEtzMmYIEd6xSNDVRTIB-A" name="tFileExist" family="File/Management"/>
+    <componentsSettings xmi:id="_jEtzM2YIEd6xSNDVRTIB-A" name="tJDBCRow" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEtzNGYIEd6xSNDVRTIB-A" name="tParAccelRow" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEtzNWYIEd6xSNDVRTIB-A" name="tInterbaseConnection" family="Databases/Interbase"/>
+    <componentsSettings xmi:id="_jEtzNmYIEd6xSNDVRTIB-A" name="tInterbaseConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEtzN2YIEd6xSNDVRTIB-A" name="tNetezzaInput" family="Databases/Netezza"/>
+    <componentsSettings xmi:id="_jEtzOGYIEd6xSNDVRTIB-A" name="tJasperOutput" family="Business Intelligence/Jasper"/>
+    <componentsSettings xmi:id="_jEtzOWYIEd6xSNDVRTIB-A" name="tTeradataConnection" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEtzOmYIEd6xSNDVRTIB-A" name="tTeradataConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEtzO2YIEd6xSNDVRTIB-A" name="tSVNLogInput" family="Internet"/>
+    <componentsSettings xmi:id="_jEtzPGYIEd6xSNDVRTIB-A" name="tArray" hidden="true" family="Technical"/>
+    <componentsSettings xmi:id="_jEtzPWYIEd6xSNDVRTIB-A" name="tDB2Row" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jEtzPmYIEd6xSNDVRTIB-A" name="tFileOutputXML" family="File/Output"/>
+    <componentsSettings xmi:id="_jEtzP2YIEd6xSNDVRTIB-A" name="tFileOutputXML" family="XML"/>
+    <componentsSettings xmi:id="_jEtzQGYIEd6xSNDVRTIB-A" name="tAS400Row" family="Databases/AS400"/>
+    <componentsSettings xmi:id="_jEtzQWYIEd6xSNDVRTIB-A" name="tMysqlCommit" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEtzQmYIEd6xSNDVRTIB-A" name="tPostgresPlusInput" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jEtzQ2YIEd6xSNDVRTIB-A" name="tJDBCRollback" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEtzRGYIEd6xSNDVRTIB-A" name="tPostgresPlusConnection" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jEtzRWYIEd6xSNDVRTIB-A" name="tPostgresPlusConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEtzRmYIEd6xSNDVRTIB-A" name="tTeradataFastExport" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEtzR2YIEd6xSNDVRTIB-A" name="tVtigerCRMInput" family="Business/VtigerCRM"/>
+    <componentsSettings xmi:id="_jEtzSGYIEd6xSNDVRTIB-A" name="tELTCommit" family="ELT"/>
+    <componentsSettings xmi:id="_jEtzSWYIEd6xSNDVRTIB-A" name="tPostgresqlOutputBulk" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEtzSmYIEd6xSNDVRTIB-A" name="tFileUnarchive" family="File/Management"/>
+    <componentsSettings xmi:id="_jEtzS2YIEd6xSNDVRTIB-A" name="tJavaDBInput" family="Databases/JavaDB"/>
+    <componentsSettings xmi:id="_jEtzTGYIEd6xSNDVRTIB-A" name="tRSSInput" family="Internet"/>
+    <componentsSettings xmi:id="_jEtzTWYIEd6xSNDVRTIB-A" name="tSocketInput" family="Internet"/>
+    <componentsSettings xmi:id="_jEuaMGYIEd6xSNDVRTIB-A" name="tFileArchive" family="File/Management"/>
+    <componentsSettings xmi:id="_jEuaMWYIEd6xSNDVRTIB-A" name="tAS400Commit" family="Databases/AS400"/>
+    <componentsSettings xmi:id="_jEuaMmYIEd6xSNDVRTIB-A" name="tPrejob" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEuaM2YIEd6xSNDVRTIB-A" name="tJDBCTableList" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEuaNGYIEd6xSNDVRTIB-A" name="tMondrianInput" family="Business Intelligence/OLAP Cube"/>
+    <componentsSettings xmi:id="_jEuaNWYIEd6xSNDVRTIB-A" name="tOracleOutputBulkExec" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEuaNmYIEd6xSNDVRTIB-A" name="tTeradataMultiLoad" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEuaN2YIEd6xSNDVRTIB-A" name="tPostjob" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEuaOGYIEd6xSNDVRTIB-A" name="tParAccelCommit" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEuaOWYIEd6xSNDVRTIB-A" name="tSCPFileList" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jEuaOmYIEd6xSNDVRTIB-A" name="tParAccelOutputBulk" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEuaO2YIEd6xSNDVRTIB-A" name="tOracleSP" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEuaPGYIEd6xSNDVRTIB-A" name="tIterateToFlowOut" family="Technical"/>
+    <componentsSettings xmi:id="_jEuaPWYIEd6xSNDVRTIB-A" name="tSleep" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEuaPmYIEd6xSNDVRTIB-A" name="tJDBCOutput" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEuaP2YIEd6xSNDVRTIB-A" name="tCentricCRMInput" family="Business/CentricCRM"/>
+    <componentsSettings xmi:id="_jEuaQGYIEd6xSNDVRTIB-A" name="tWaitForSqlData" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEuaQWYIEd6xSNDVRTIB-A" name="tOracleConnection" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEuaQmYIEd6xSNDVRTIB-A" name="tOracleConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEuaQ2YIEd6xSNDVRTIB-A" name="tDTDValidator" family="XML"/>
+    <componentsSettings xmi:id="_jEuaRGYIEd6xSNDVRTIB-A" name="tGreenplumBulkExec" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEuaRWYIEd6xSNDVRTIB-A" name="tFileOutputLDIF" family="File/Output"/>
+    <componentsSettings xmi:id="_jEuaRmYIEd6xSNDVRTIB-A" name="tTeradataTPump" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEuaR2YIEd6xSNDVRTIB-A" name="tContextDump" family="Misc"/>
+    <componentsSettings xmi:id="_jEuaSGYIEd6xSNDVRTIB-A" name="tFileOutputExcel" family="File/Output"/>
+    <componentsSettings xmi:id="_jEuaSWYIEd6xSNDVRTIB-A" name="tSugarCRMInput" family="Business/SugarCRM"/>
+    <componentsSettings xmi:id="_jEuaSmYIEd6xSNDVRTIB-A" name="tParAccelSCD" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEuaS2YIEd6xSNDVRTIB-A" name="tParAccelSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEuaTGYIEd6xSNDVRTIB-A" name="tDB2Connection" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jEuaTWYIEd6xSNDVRTIB-A" name="tDB2Connection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEuaTmYIEd6xSNDVRTIB-A" name="tELTTeradataInput" family="ELT/Teradata"/>
+    <componentsSettings xmi:id="_jEuaT2YIEd6xSNDVRTIB-A" name="tSybaseCommit" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEuaUGYIEd6xSNDVRTIB-A" name="tELTFilterRows" family="ELT"/>
+    <componentsSettings xmi:id="_jEuaUWYIEd6xSNDVRTIB-A" name="tSCPFileExists" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jEuaUmYIEd6xSNDVRTIB-A" name="tDBInput" family="Databases/DB Generic"/>
+    <componentsSettings xmi:id="_jEuaU2YIEd6xSNDVRTIB-A" name="tDenormalizeSortedRow" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEuaVGYIEd6xSNDVRTIB-A" name="tSetGlobalVar" family="Custom Code"/>
+    <componentsSettings xmi:id="_jEuaVWYIEd6xSNDVRTIB-A" name="tOracleOutputBulk" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEuaVmYIEd6xSNDVRTIB-A" name="tPaloOutput" family="Business Intelligence/OLAP Cube"/>
+    <componentsSettings xmi:id="_jEuaV2YIEd6xSNDVRTIB-A" name="tMap" family="Processing"/>
+    <componentsSettings xmi:id="_jEuaWGYIEd6xSNDVRTIB-A" name="tChronometerStop" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEuaWWYIEd6xSNDVRTIB-A" name="tArrayIn" hidden="true" family="Technical"/>
+    <componentsSettings xmi:id="_jEuaWmYIEd6xSNDVRTIB-A" name="tUnite" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEuaW2YIEd6xSNDVRTIB-A" name="tLineChart" family="Business Intelligence/Charts"/>
+    <componentsSettings xmi:id="_jEuaXGYIEd6xSNDVRTIB-A" name="tReplace" family="Processing"/>
+    <componentsSettings xmi:id="_jEvBQGYIEd6xSNDVRTIB-A" name="tFileOutputARFF" family="File/Output"/>
+    <componentsSettings xmi:id="_jEvBQWYIEd6xSNDVRTIB-A" name="tFTPGet" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEvBQmYIEd6xSNDVRTIB-A" name="tHash" family="Technical"/>
+    <componentsSettings xmi:id="_jEvBQ2YIEd6xSNDVRTIB-A" name="tFileList" family="File/Management"/>
+    <componentsSettings xmi:id="_jEvBRGYIEd6xSNDVRTIB-A" name="tFileList" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEvBRWYIEd6xSNDVRTIB-A" name="tGPGDecrypt" family="File/Management"/>
+    <componentsSettings xmi:id="_jEvBRmYIEd6xSNDVRTIB-A" name="tIngresCommit" family="Databases/Ingres"/>
+    <componentsSettings xmi:id="_jEvBR2YIEd6xSNDVRTIB-A" name="tDB2SCDELT" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jEvBSGYIEd6xSNDVRTIB-A" name="tDB2SCDELT" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEvBSWYIEd6xSNDVRTIB-A" name="tFlowMeterCatcher" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEvBSmYIEd6xSNDVRTIB-A" name="tIterateToFlow" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEvBS2YIEd6xSNDVRTIB-A" name="tFileOutputShadow" family="Technical"/>
+    <componentsSettings xmi:id="_jEvBTGYIEd6xSNDVRTIB-A" name="tUniqRow" family="Data Quality"/>
+    <componentsSettings xmi:id="_jEvBTWYIEd6xSNDVRTIB-A" name="tMSSqlTableList" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEvBTmYIEd6xSNDVRTIB-A" name="tDB2Input" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jEvBT2YIEd6xSNDVRTIB-A" name="tSQLiteConnection" family="Databases/SQLite"/>
+    <componentsSettings xmi:id="_jEvBUGYIEd6xSNDVRTIB-A" name="tSQLiteConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEvBUWYIEd6xSNDVRTIB-A" name="tSetEnv" family="System"/>
+    <componentsSettings xmi:id="_jEvBUmYIEd6xSNDVRTIB-A" name="tTeradataOutput" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEvBU2YIEd6xSNDVRTIB-A" name="tLDAPOutput" family="Databases/LDAP"/>
+    <componentsSettings xmi:id="_jEvBVGYIEd6xSNDVRTIB-A" name="tRunJob" family="System"/>
+    <componentsSettings xmi:id="_jEvBVWYIEd6xSNDVRTIB-A" name="tRunJob" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEvBVmYIEd6xSNDVRTIB-A" name="tJavaDBOutput" family="Databases/JavaDB"/>
+    <componentsSettings xmi:id="_jEvBV2YIEd6xSNDVRTIB-A" name="tJasperOutputExec" family="Business Intelligence/Jasper"/>
+    <componentsSettings xmi:id="_jEvBWGYIEd6xSNDVRTIB-A" name="tMysqlRow" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEvBWWYIEd6xSNDVRTIB-A" name="tJDBCSP" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEvBWmYIEd6xSNDVRTIB-A" name="tRSSOutput" family="Internet"/>
+    <componentsSettings xmi:id="_jEvBW2YIEd6xSNDVRTIB-A" name="tFirebirdInput" family="Databases/FireBird"/>
+    <componentsSettings xmi:id="_jEvBXGYIEd6xSNDVRTIB-A" name="tFilterColumns" family="Processing"/>
+    <componentsSettings xmi:id="_jEvBXWYIEd6xSNDVRTIB-A" name="tParAccelOutput" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEvBXmYIEd6xSNDVRTIB-A" name="tJava" family="Custom Code"/>
+    <componentsSettings xmi:id="_jEvBX2YIEd6xSNDVRTIB-A" name="tVerticaOutputBulkExec" family="Databases/Vertica"/>
+    <componentsSettings xmi:id="_jEvBYGYIEd6xSNDVRTIB-A" name="tVerticaInput" family="Databases/Vertica"/>
+    <componentsSettings xmi:id="_jEvBYWYIEd6xSNDVRTIB-A" name="tAddCRCRow" family="Data Quality"/>
+    <componentsSettings xmi:id="_jEvBYmYIEd6xSNDVRTIB-A" name="tFileTouch" family="File/Management"/>
+    <componentsSettings xmi:id="_jEvBY2YIEd6xSNDVRTIB-A" name="tFileFetch" family="Internet"/>
+    <componentsSettings xmi:id="_jEvBZGYIEd6xSNDVRTIB-A" name="tSQLiteCommit" family="Databases/SQLite"/>
+    <componentsSettings xmi:id="_jEvBZWYIEd6xSNDVRTIB-A" name="tMomMessageIdList" family="Internet"/>
+    <componentsSettings xmi:id="_jEvBZmYIEd6xSNDVRTIB-A" name="tWebServiceInput" family="Internet"/>
+    <componentsSettings xmi:id="_jEvBZ2YIEd6xSNDVRTIB-A" name="tMysqlLastInsertId" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEvBaGYIEd6xSNDVRTIB-A" name="tApacheLogInput" family="File/Input"/>
+    <componentsSettings xmi:id="_jEvBaWYIEd6xSNDVRTIB-A" name="tMysqlSP" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEvBamYIEd6xSNDVRTIB-A" name="tFileInputPositional" family="File/Input"/>
+    <componentsSettings xmi:id="_jEvBa2YIEd6xSNDVRTIB-A" name="tSAPInput" family="Business/SAP"/>
+    <componentsSettings xmi:id="_jEvBbGYIEd6xSNDVRTIB-A" name="tMSSqlInput" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEvBbWYIEd6xSNDVRTIB-A" name="tAS400Input" family="Databases/AS400"/>
+    <componentsSettings xmi:id="_jEvoUGYIEd6xSNDVRTIB-A" name="tFileProperties" family="File/Management"/>
+    <componentsSettings xmi:id="_jEvoUWYIEd6xSNDVRTIB-A" name="tMysqlRollback" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEvoUmYIEd6xSNDVRTIB-A" name="tSSH" family="System"/>
+    <componentsSettings xmi:id="_jEvoU2YIEd6xSNDVRTIB-A" name="tELTMysqlInput" family="ELT/MySQL"/>
+    <componentsSettings xmi:id="_jEvoVGYIEd6xSNDVRTIB-A" name="tAssertCatcher" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEvoVWYIEd6xSNDVRTIB-A" name="tTeradataRow" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEvoVmYIEd6xSNDVRTIB-A" name="tFlowMeter" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEvoV2YIEd6xSNDVRTIB-A" name="tFileInputRegex" family="File/Input"/>
+    <componentsSettings xmi:id="_jEvoWGYIEd6xSNDVRTIB-A" name="tFileInputARFF" family="File/Input"/>
+    <componentsSettings xmi:id="_jEvoWWYIEd6xSNDVRTIB-A" name="tParAccelInput" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEvoWmYIEd6xSNDVRTIB-A" name="tELTOracleMap" family="ELT/Oracle"/>
+    <componentsSettings xmi:id="_jEvoW2YIEd6xSNDVRTIB-A" name="tSortOut" family="Technical"/>
+    <componentsSettings xmi:id="_jEvoXGYIEd6xSNDVRTIB-A" name="tJoin" family="Processing"/>
+    <componentsSettings xmi:id="_jEvoXWYIEd6xSNDVRTIB-A" name="tJDBCConnection" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEvoXmYIEd6xSNDVRTIB-A" name="tJDBCConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEvoX2YIEd6xSNDVRTIB-A" name="tVerticaOutput" family="Databases/Vertica"/>
+    <componentsSettings xmi:id="_jEvoYGYIEd6xSNDVRTIB-A" name="tAdvancedFileOutputXML" family="File/Output"/>
+    <componentsSettings xmi:id="_jEvoYWYIEd6xSNDVRTIB-A" name="tAdvancedFileOutputXML" family="XML"/>
+    <componentsSettings xmi:id="_jEvoYmYIEd6xSNDVRTIB-A" name="tSCPRename" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jEvoY2YIEd6xSNDVRTIB-A" name="tGreenplumOutput" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEvoZGYIEd6xSNDVRTIB-A" name="tMaxDBOutput" family="Databases/MaxDB"/>
+    <componentsSettings xmi:id="_jEvoZWYIEd6xSNDVRTIB-A" name="tDenormalize" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEvoZmYIEd6xSNDVRTIB-A" name="tSQLiteOutput" family="Databases/SQLite"/>
+    <componentsSettings xmi:id="_jEvoZ2YIEd6xSNDVRTIB-A" name="tJDBCCommit" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEvoaGYIEd6xSNDVRTIB-A" name="tMSSqlConnection" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEvoaWYIEd6xSNDVRTIB-A" name="tMSSqlConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEvoamYIEd6xSNDVRTIB-A" name="tSortIn" family="Technical"/>
+    <componentsSettings xmi:id="_jEvoa2YIEd6xSNDVRTIB-A" name="tPostgresqlSCDELT" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEvobGYIEd6xSNDVRTIB-A" name="tPostgresqlSCDELT" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEvobWYIEd6xSNDVRTIB-A" name="tRowGenerator" family="Misc"/>
+    <componentsSettings xmi:id="_jEvobmYIEd6xSNDVRTIB-A" name="tIngresRow" family="Databases/Ingres"/>
+    <componentsSettings xmi:id="_jEvob2YIEd6xSNDVRTIB-A" name="tParAccelOutputBulkExec" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEvocGYIEd6xSNDVRTIB-A" name="tSybaseBulkExec" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEvocWYIEd6xSNDVRTIB-A" name="tFirebirdConnection" family="Databases/FireBird"/>
+    <componentsSettings xmi:id="_jEvocmYIEd6xSNDVRTIB-A" name="tFirebirdConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEvoc2YIEd6xSNDVRTIB-A" name="tSCPDelete" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jEvodGYIEd6xSNDVRTIB-A" name="tMomInput" family="Internet"/>
+    <componentsSettings xmi:id="_jEvodWYIEd6xSNDVRTIB-A" name="tMapIn" family="Technical"/>
+    <componentsSettings xmi:id="_jEvodmYIEd6xSNDVRTIB-A" name="tInterbaseRollback" family="Databases/Interbase"/>
+    <componentsSettings xmi:id="_jEvod2YIEd6xSNDVRTIB-A" name="tNetezzaOutput" family="Databases/Netezza"/>
+    <componentsSettings xmi:id="_jEvoeGYIEd6xSNDVRTIB-A" name="tMSSqlLastInsertId" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEvoeWYIEd6xSNDVRTIB-A" name="tJavaDBRow" family="Databases/JavaDB"/>
+    <componentsSettings xmi:id="_jEvoemYIEd6xSNDVRTIB-A" name="tFileDelete" family="File/Management"/>
+    <componentsSettings xmi:id="_jEvoe2YIEd6xSNDVRTIB-A" name="tELTAggregate" family="ELT"/>
+    <componentsSettings xmi:id="_jEvofGYIEd6xSNDVRTIB-A" name="tSybaseInput" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEvofWYIEd6xSNDVRTIB-A" name="tFTPTruncate" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEwPYGYIEd6xSNDVRTIB-A" name="tLogRow" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEwPYWYIEd6xSNDVRTIB-A" name="tELTRollback" family="ELT"/>
+    <componentsSettings xmi:id="_jEwPYmYIEd6xSNDVRTIB-A" name="tSybaseConnection" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEwPY2YIEd6xSNDVRTIB-A" name="tSybaseConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEwPZGYIEd6xSNDVRTIB-A" name="tPostgresqlCommit" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEwPZWYIEd6xSNDVRTIB-A" name="tFileInputMail" family="File/Input"/>
+    <componentsSettings xmi:id="_jEwPZmYIEd6xSNDVRTIB-A" name="tMSSqlBulkExec" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEwPZ2YIEd6xSNDVRTIB-A" name="tFTPFileList" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEwPaGYIEd6xSNDVRTIB-A" name="tAggregateSortedRow" family="Processing"/>
+    <componentsSettings xmi:id="_jEwPaWYIEd6xSNDVRTIB-A" name="tReplaceList" family="Data Quality"/>
+    <componentsSettings xmi:id="_jEwPamYIEd6xSNDVRTIB-A" name="tSQLiteRollback" family="Databases/SQLite"/>
+    <componentsSettings xmi:id="_jEwPa2YIEd6xSNDVRTIB-A" name="tDie" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEwPbGYIEd6xSNDVRTIB-A" name="tMSSqlOutput" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEwPbWYIEd6xSNDVRTIB-A" name="tInfiniteLoop" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEwPbmYIEd6xSNDVRTIB-A" name="tTeradataFastLoadUtility" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jEwPb2YIEd6xSNDVRTIB-A" name="tSybaseOutput" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEwPcGYIEd6xSNDVRTIB-A" name="tSybaseRow" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEwPcWYIEd6xSNDVRTIB-A" name="tFTPDelete" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEwPcmYIEd6xSNDVRTIB-A" name="tIngresConnection" family="Databases/Ingres"/>
+    <componentsSettings xmi:id="_jEwPc2YIEd6xSNDVRTIB-A" name="tIngresConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEwPdGYIEd6xSNDVRTIB-A" name="tParseRecordSet" family="Databases"/>
+    <componentsSettings xmi:id="_jEwPdWYIEd6xSNDVRTIB-A" name="tMSSqlOutputBulk" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEwPdmYIEd6xSNDVRTIB-A" name="tSybaseRollback" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEwPd2YIEd6xSNDVRTIB-A" name="tMSSqlRow" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEwPeGYIEd6xSNDVRTIB-A" name="tFlowToIterate" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEwPeWYIEd6xSNDVRTIB-A" name="tMysqlTableList" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEwPemYIEd6xSNDVRTIB-A" name="tOracleBulkExec" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEwPe2YIEd6xSNDVRTIB-A" name="tOracleRollback" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jEwPfGYIEd6xSNDVRTIB-A" name="tIngresOutput" family="Databases/Ingres"/>
+    <componentsSettings xmi:id="_jEwPfWYIEd6xSNDVRTIB-A" name="tFileInputXML" family="File/Input"/>
+    <componentsSettings xmi:id="_jEwPfmYIEd6xSNDVRTIB-A" name="tFileInputXML" family="XML"/>
+    <componentsSettings xmi:id="_jEwPf2YIEd6xSNDVRTIB-A" name="tGroovyFile" family="Custom Code"/>
+    <componentsSettings xmi:id="_jEwPgGYIEd6xSNDVRTIB-A" name="tMomOutput" family="Internet"/>
+    <componentsSettings xmi:id="_jEwPgWYIEd6xSNDVRTIB-A" name="tSortRow" family="Processing"/>
+    <componentsSettings xmi:id="_jEwPgmYIEd6xSNDVRTIB-A" name="tAggregateOut" family="Technical"/>
+    <componentsSettings xmi:id="_jEwPg2YIEd6xSNDVRTIB-A" name="tDB2Output" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jEwPhGYIEd6xSNDVRTIB-A" name="tSybaseSCD" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEwPhWYIEd6xSNDVRTIB-A" name="tSybaseSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEwPhmYIEd6xSNDVRTIB-A" name="tGreenplumCommit" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEwPh2YIEd6xSNDVRTIB-A" name="tIngresInput" family="Databases/Ingres"/>
+    <componentsSettings xmi:id="_jEwPiGYIEd6xSNDVRTIB-A" name="tLibraryLoad" family="Custom Code"/>
+    <componentsSettings xmi:id="_jEwPiWYIEd6xSNDVRTIB-A" name="tELT" family="ELT"/>
+    <componentsSettings xmi:id="_jEwPimYIEd6xSNDVRTIB-A" name="tAggregateRow" family="Processing"/>
+    <componentsSettings xmi:id="_jEwPi2YIEd6xSNDVRTIB-A" name="tAccessInput" family="Databases/Access"/>
+    <componentsSettings xmi:id="_jEw2cGYIEd6xSNDVRTIB-A" name="tNormalize" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEw2cWYIEd6xSNDVRTIB-A" name="tLogCatcher" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jEw2cmYIEd6xSNDVRTIB-A" name="tGreenplumSCD" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEw2c2YIEd6xSNDVRTIB-A" name="tGreenplumSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEw2dGYIEd6xSNDVRTIB-A" name="tCreateTemporaryFile" family="File/Management"/>
+    <componentsSettings xmi:id="_jEw2dWYIEd6xSNDVRTIB-A" name="tSchemaComplianceCheck" family="Data Quality"/>
+    <componentsSettings xmi:id="_jEw2dmYIEd6xSNDVRTIB-A" name="tExtractRegexFields" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEw2d2YIEd6xSNDVRTIB-A" name="tParseXMLRow" family="XML"/>
+    <componentsSettings xmi:id="_jEw2eGYIEd6xSNDVRTIB-A" name="tParseXMLRow" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEw2eWYIEd6xSNDVRTIB-A" name="tSybaseOutputBulkExec" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEw2emYIEd6xSNDVRTIB-A" name="tSybaseSP" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEw2e2YIEd6xSNDVRTIB-A" name="tMaxDBInput" family="Databases/MaxDB"/>
+    <componentsSettings xmi:id="_jEw2fGYIEd6xSNDVRTIB-A" name="tLDAPInput" family="Databases/LDAP"/>
+    <componentsSettings xmi:id="_jEw2fWYIEd6xSNDVRTIB-A" name="tSendMail" family="Internet"/>
+    <componentsSettings xmi:id="_jEw2fmYIEd6xSNDVRTIB-A" name="tDBOutput" family="Databases/DB Generic"/>
+    <componentsSettings xmi:id="_jEw2f2YIEd6xSNDVRTIB-A" name="tPostgresPlusSCD" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jEw2gGYIEd6xSNDVRTIB-A" name="tPostgresPlusSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEw2gWYIEd6xSNDVRTIB-A" name="tWaitForFile" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEw2gmYIEd6xSNDVRTIB-A" name="tSugarCRMOutput" family="Business/SugarCRM"/>
+    <componentsSettings xmi:id="_jEw2g2YIEd6xSNDVRTIB-A" name="tDummyRow" family="Technical"/>
+    <componentsSettings xmi:id="_jEw2hGYIEd6xSNDVRTIB-A" name="tPostgresPlusRow" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jEw2hWYIEd6xSNDVRTIB-A" name="tMysqlSCD" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEw2hmYIEd6xSNDVRTIB-A" name="tMysqlSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEw2h2YIEd6xSNDVRTIB-A" name="tFTPFileExist" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEw2iGYIEd6xSNDVRTIB-A" name="tMSSqlRollback" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEw2iWYIEd6xSNDVRTIB-A" name="tAccessOutput" family="Databases/Access"/>
+    <componentsSettings xmi:id="_jEw2imYIEd6xSNDVRTIB-A" name="tGreenplumConnection" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEw2i2YIEd6xSNDVRTIB-A" name="tGreenplumConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEw2jGYIEd6xSNDVRTIB-A" name="tMSSqlCommit" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEw2jWYIEd6xSNDVRTIB-A" name="tXMLRPCInput" family="Internet"/>
+    <componentsSettings xmi:id="_jEw2jmYIEd6xSNDVRTIB-A" name="tHashOutput" hidden="true" family="Technical"/>
+    <componentsSettings xmi:id="_jEw2j2YIEd6xSNDVRTIB-A" name="tDBSQLRow" family="Databases/DB Generic"/>
+    <componentsSettings xmi:id="_jEw2kGYIEd6xSNDVRTIB-A" name="tFileRowCount" family="File/Management"/>
+    <componentsSettings xmi:id="_jEw2kWYIEd6xSNDVRTIB-A" name="tPostgresqlBulkExec" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEw2kmYIEd6xSNDVRTIB-A" name="tXSDValidator" family="XML"/>
+    <componentsSettings xmi:id="_jEw2k2YIEd6xSNDVRTIB-A" name="tELTTeradataMap" family="ELT/Teradata"/>
+    <componentsSettings xmi:id="_jEw2lGYIEd6xSNDVRTIB-A" name="tGreenplumRow" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jEw2lWYIEd6xSNDVRTIB-A" name="tExtractPositionalFields" family="Processing/Fields"/>
+    <componentsSettings xmi:id="_jEw2lmYIEd6xSNDVRTIB-A" name="tVerticaRow" family="Databases/Vertica"/>
+    <componentsSettings xmi:id="_jEw2l2YIEd6xSNDVRTIB-A" name="tMysqlOutput" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEw2mGYIEd6xSNDVRTIB-A" name="tPivotOutputDelimited" family="File/Output"/>
+    <componentsSettings xmi:id="_jEw2mWYIEd6xSNDVRTIB-A" name="tFTPFileProperties" family="Internet/FTP"/>
+    <componentsSettings xmi:id="_jEw2mmYIEd6xSNDVRTIB-A" name="tSalesforceOutput" family="Business/Salesforce"/>
+    <componentsSettings xmi:id="_jExdgGYIEd6xSNDVRTIB-A" name="tOracleOutput" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jExdgWYIEd6xSNDVRTIB-A" name="tTeradataCommit" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jExdgmYIEd6xSNDVRTIB-A" name="tMysqlConnection" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jExdg2YIEd6xSNDVRTIB-A" name="tMysqlConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jExdhGYIEd6xSNDVRTIB-A" name="tVtigerCRMOutput" family="Business/VtigerCRM"/>
+    <componentsSettings xmi:id="_jExdhWYIEd6xSNDVRTIB-A" name="tDB2Commit" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jExdhmYIEd6xSNDVRTIB-A" name="tSocketOutput" family="Internet"/>
+    <componentsSettings xmi:id="_jExdh2YIEd6xSNDVRTIB-A" name="tWarn" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jExdiGYIEd6xSNDVRTIB-A" name="tContextLoad" family="Misc"/>
+    <componentsSettings xmi:id="_jExdiWYIEd6xSNDVRTIB-A" name="tPostgresPlusSCDELT" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jExdimYIEd6xSNDVRTIB-A" name="tPostgresPlusSCDELT" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jExdi2YIEd6xSNDVRTIB-A" name="tInformixInput" family="Databases/Informix"/>
+    <componentsSettings xmi:id="_jExdjGYIEd6xSNDVRTIB-A" name="tMSSqlSP" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jExdjWYIEd6xSNDVRTIB-A" name="tInterbaseInput" family="Databases/Interbase"/>
+    <componentsSettings xmi:id="_jExdjmYIEd6xSNDVRTIB-A" name="tOracleTableList" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jExdj2YIEd6xSNDVRTIB-A" name="tFileInputFullRow" family="File/Input"/>
+    <componentsSettings xmi:id="_jExdkGYIEd6xSNDVRTIB-A" name="tMysqlBulkExec" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jExdkWYIEd6xSNDVRTIB-A" name="tDB2Rollback" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jExdkmYIEd6xSNDVRTIB-A" name="tInformixOutput" family="Databases/Informix"/>
+    <componentsSettings xmi:id="_jExdk2YIEd6xSNDVRTIB-A" name="tServerAlive" family="Misc"/>
+    <componentsSettings xmi:id="_jExdlGYIEd6xSNDVRTIB-A" name="tOracleCommit" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jExdlWYIEd6xSNDVRTIB-A" name="tSybaseSCDELT" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jExdlmYIEd6xSNDVRTIB-A" name="tSybaseSCDELT" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jExdl2YIEd6xSNDVRTIB-A" name="tPOP" family="Internet"/>
+    <componentsSettings xmi:id="_jExdmGYIEd6xSNDVRTIB-A" name="tPostgresPlusBulkExec" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jExdmWYIEd6xSNDVRTIB-A" name="tDenormalizeOut" family="Technical"/>
+    <componentsSettings xmi:id="_jExdmmYIEd6xSNDVRTIB-A" name="tCentricCRMOutput" family="Business/CentricCRM"/>
+    <componentsSettings xmi:id="_jExdm2YIEd6xSNDVRTIB-A" name="tOracleSCDELT" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jExdnGYIEd6xSNDVRTIB-A" name="tOracleSCDELT" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jExdnWYIEd6xSNDVRTIB-A" name="tSQLiteRow" family="Databases/SQLite"/>
+    <componentsSettings xmi:id="_jExdnmYIEd6xSNDVRTIB-A" name="tMSAXOutput" family="Business/Microsoft AX"/>
+    <componentsSettings xmi:id="_jExdn2YIEd6xSNDVRTIB-A" name="tFileInputLDIF" family="File/Input"/>
+    <componentsSettings xmi:id="_jExdoGYIEd6xSNDVRTIB-A" name="tMysqlOutputBulk" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jExdoWYIEd6xSNDVRTIB-A" name="tVerticaBulkExec" family="Databases/Vertica"/>
+    <componentsSettings xmi:id="_jExdomYIEd6xSNDVRTIB-A" name="tFixedFlowInput" family="Misc"/>
+    <componentsSettings xmi:id="_jExdo2YIEd6xSNDVRTIB-A" name="tAS400Output" family="Databases/AS400"/>
+    <componentsSettings xmi:id="_jExdpGYIEd6xSNDVRTIB-A" name="tELTTeradataOutput" family="ELT/Teradata"/>
+    <componentsSettings xmi:id="_jExdpWYIEd6xSNDVRTIB-A" name="tFileCopy" family="File/Management"/>
+    <componentsSettings xmi:id="_jExdpmYIEd6xSNDVRTIB-A" name="tFileOutputPositional" family="File/Output"/>
+    <componentsSettings xmi:id="_jExdp2YIEd6xSNDVRTIB-A" name="tMysqlOutputBulkExec" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jExdqGYIEd6xSNDVRTIB-A" name="tAssert" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jExdqWYIEd6xSNDVRTIB-A" name="tExternalSortOutput" family="File/Output"/>
+    <componentsSettings xmi:id="_jExdqmYIEd6xSNDVRTIB-A" name="tPostgresqlConnection" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jExdq2YIEd6xSNDVRTIB-A" name="tPostgresqlConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jExdrGYIEd6xSNDVRTIB-A" name="tOracleRow" family="Databases/Oracle"/>
+    <componentsSettings xmi:id="_jExdrWYIEd6xSNDVRTIB-A" name="tHSQLDbInput" family="Databases/HSQLDb"/>
+    <componentsSettings xmi:id="_jEyEkGYIEd6xSNDVRTIB-A" name="tParAccelRollback" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jEyEkWYIEd6xSNDVRTIB-A" name="tPostgresPlusRollback" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jEyEkmYIEd6xSNDVRTIB-A" name="tFirebirdOutput" family="Databases/FireBird"/>
+    <componentsSettings xmi:id="_jEyEk2YIEd6xSNDVRTIB-A" name="tMSSqlColumnList" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jEyElGYIEd6xSNDVRTIB-A" name="tLoop" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEz5wGYIEd6xSNDVRTIB-A" name="tAccessRow" family="Databases/Access"/>
+    <componentsSettings xmi:id="_jEz5wWYIEd6xSNDVRTIB-A" name="tConvertType" family="Processing"/>
+    <componentsSettings xmi:id="_jEz5wmYIEd6xSNDVRTIB-A" name="tFileOutputDelimited" family="File/Output"/>
+    <componentsSettings xmi:id="_jEz5w2YIEd6xSNDVRTIB-A" name="tSalesforceInput" family="Business/Salesforce"/>
+    <componentsSettings xmi:id="_jEz5xGYIEd6xSNDVRTIB-A" name="tFileInputDelimited" family="File/Input"/>
+    <componentsSettings xmi:id="_jEz5xWYIEd6xSNDVRTIB-A" name="tMysqlInput" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEz5xmYIEd6xSNDVRTIB-A" name="tFileInputExcel" family="File/Input"/>
+    <componentsSettings xmi:id="_jEz5x2YIEd6xSNDVRTIB-A" name="tJDBCColumnList" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEz5yGYIEd6xSNDVRTIB-A" name="tJDBCInput" family="Databases/DB JDBC"/>
+    <componentsSettings xmi:id="_jEz5yWYIEd6xSNDVRTIB-A" name="tReplicate" family="Orchestration"/>
+    <componentsSettings xmi:id="_jEz5ymYIEd6xSNDVRTIB-A" name="tELTFilterColumns" family="ELT"/>
+    <componentsSettings xmi:id="_jEz5y2YIEd6xSNDVRTIB-A" name="tXSLT" family="XML"/>
+    <componentsSettings xmi:id="_jEz5zGYIEd6xSNDVRTIB-A" name="tInterbaseRow" family="Databases/Interbase"/>
+    <componentsSettings xmi:id="_jEz5zWYIEd6xSNDVRTIB-A" name="tFileCompare" family="File/Management"/>
+    <componentsSettings xmi:id="_jEz5zmYIEd6xSNDVRTIB-A" name="tSAPOutput" family="Business/SAP"/>
+    <componentsSettings xmi:id="_jEz5z2YIEd6xSNDVRTIB-A" name="tMaxDBRow" family="Databases/MaxDB"/>
+    <componentsSettings xmi:id="_jEz50GYIEd6xSNDVRTIB-A" name="tAS400Connection" family="Databases/AS400"/>
+    <componentsSettings xmi:id="_jEz50WYIEd6xSNDVRTIB-A" name="tAS400Connection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jEz50mYIEd6xSNDVRTIB-A" name="tInterbaseOutput" family="Databases/Interbase"/>
+    <componentsSettings xmi:id="_jEz502YIEd6xSNDVRTIB-A" name="tMysqlSCDELT" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jEz51GYIEd6xSNDVRTIB-A" name="tMysqlSCDELT" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jEz51WYIEd6xSNDVRTIB-A" name="tSybaseOutputBulk" family="Databases/Sybase"/>
+    <componentsSettings xmi:id="_jEz51mYIEd6xSNDVRTIB-A" name="tELTOracleOutput" family="ELT/Oracle"/>
+    <componentsSettings xmi:id="_jEz512YIEd6xSNDVRTIB-A" name="tELTOracleInput" family="ELT/Oracle"/>
+    <componentsSettings xmi:id="_jEz52GYIEd6xSNDVRTIB-A" name="tPostgresqlInput" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jEz52WYIEd6xSNDVRTIB-A" name="tCreateTable" family="Databases"/>
+    <componentsSettings xmi:id="_jEz52mYIEd6xSNDVRTIB-A" name="tELTMysqlMap" family="ELT/MySQL"/>
+    <componentsSettings xmi:id="_jEz522YIEd6xSNDVRTIB-A" name="tPostgresqlRow" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jE0g0GYIEd6xSNDVRTIB-A" name="tStatCatcher" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_jE0g0WYIEd6xSNDVRTIB-A" name="tPostgresPlusOutputBulkExec" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jE0g0mYIEd6xSNDVRTIB-A" name="tForeach" family="Orchestration"/>
+    <componentsSettings xmi:id="_jE0g02YIEd6xSNDVRTIB-A" name="tHSQLDbRow" family="Databases/HSQLDb"/>
+    <componentsSettings xmi:id="_jE0g1GYIEd6xSNDVRTIB-A" name="tMysqlColumnList" family="Databases/MySQL"/>
+    <componentsSettings xmi:id="_jE0g1WYIEd6xSNDVRTIB-A" name="tPostgresPlusCommit" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jE0g1mYIEd6xSNDVRTIB-A" name="tGreenplumInput" family="Databases/Greenplum"/>
+    <componentsSettings xmi:id="_jE0g12YIEd6xSNDVRTIB-A" name="tJavaFlex" family="Custom Code"/>
+    <componentsSettings xmi:id="_jE0g2GYIEd6xSNDVRTIB-A" name="tELTMysqlOutput" family="ELT/MySQL"/>
+    <componentsSettings xmi:id="_jE0g2WYIEd6xSNDVRTIB-A" name="tMapOut" family="Technical"/>
+    <componentsSettings xmi:id="_jE0g2mYIEd6xSNDVRTIB-A" name="tDB2SCD" family="Databases/DB2"/>
+    <componentsSettings xmi:id="_jE0g22YIEd6xSNDVRTIB-A" name="tDB2SCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jE0g3GYIEd6xSNDVRTIB-A" name="tSampleRow" family="Processing"/>
+    <componentsSettings xmi:id="_jE0g3WYIEd6xSNDVRTIB-A" name="tBufferOutput" family="Misc"/>
+    <componentsSettings xmi:id="_jE0g3mYIEd6xSNDVRTIB-A" name="tExternalSortRow" family="Processing"/>
+    <componentsSettings xmi:id="_jE0g32YIEd6xSNDVRTIB-A" name="tPostgresPlusOutputBulk" family="Databases/PostgresPlus"/>
+    <componentsSettings xmi:id="_jE0g4GYIEd6xSNDVRTIB-A" name="tAdvancedHash" family="Technical"/>
+    <componentsSettings xmi:id="_jE0g4WYIEd6xSNDVRTIB-A" name="tSCPPut" family="Internet/SCP"/>
+    <componentsSettings xmi:id="_jE0g4mYIEd6xSNDVRTIB-A" name="tMSSqlSCD" family="Databases/MS SQL Server"/>
+    <componentsSettings xmi:id="_jE0g42YIEd6xSNDVRTIB-A" name="tMSSqlSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jE0g5GYIEd6xSNDVRTIB-A" name="tTeradataInput" family="Databases/Teradata"/>
+    <componentsSettings xmi:id="_jE0g5WYIEd6xSNDVRTIB-A" name="tPostgresqlSCD" family="Databases/PostgreSQL"/>
+    <componentsSettings xmi:id="_jE0g5mYIEd6xSNDVRTIB-A" name="tPostgresqlSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jE0g52YIEd6xSNDVRTIB-A" name="tVerticaOutputBulk" family="Databases/Vertica"/>
+    <componentsSettings xmi:id="_jE0g6GYIEd6xSNDVRTIB-A" name="tFilterRow" family="Processing"/>
+    <componentsSettings xmi:id="_jE0g6WYIEd6xSNDVRTIB-A" name="tMSAXInput" family="Business/Microsoft AX"/>
+    <componentsSettings xmi:id="_jE0g6mYIEd6xSNDVRTIB-A" name="tSystem" family="System"/>
+    <componentsSettings xmi:id="_jE0g62YIEd6xSNDVRTIB-A" name="tParAccelConnection" family="Databases/ParAccel"/>
+    <componentsSettings xmi:id="_jE0g7GYIEd6xSNDVRTIB-A" name="tParAccelConnection" family="ELT/Connections"/>
+    <componentsSettings xmi:id="_jE0g7WYIEd6xSNDVRTIB-A" name="tAS400Rollback" family="Databases/AS400"/>
+    <componentsSettings xmi:id="_jE0g7mYIEd6xSNDVRTIB-A" name="tIngresSCD" family="Databases/Ingres"/>
+    <componentsSettings xmi:id="_jE0g72YIEd6xSNDVRTIB-A" name="tIngresSCD" family="Business Intelligence/DB SCD"/>
+    <componentsSettings xmi:id="_jE0g8GYIEd6xSNDVRTIB-A" name="tAddLocationFromIP" family="Misc"/>
+    <componentsSettings xmi:id="_jE0g8WYIEd6xSNDVRTIB-A" name="tChronometerStart" family="Logs &amp; Errors"/>
+    <componentsSettings xmi:id="_OJu30IGwEd6TH7b2igsyQw" name="tSPSSInput" family="Business_Intelligence/SPSS"/>
+    <componentsSettings xmi:id="_OJu30YGwEd6TH7b2igsyQw" name="tFileOutputMSPositional" family="MultiSchema"/>
+    <componentsSettings xmi:id="_OJve4IGwEd6TH7b2igsyQw" name="tDie" family="Logs_Errors"/>
+    <componentsSettings xmi:id="_OJve4YGwEd6TH7b2igsyQw" name="tJDBCSP" family="Databases/DB_JDBC"/>
+    <componentsSettings xmi:id="_OJve4oGwEd6TH7b2igsyQw" name="tDB2SCDELT" family="Business_Intelligence/DB_SCD"/>
+    <componentsSettings xmi:id="_OJwF8IGwEd6TH7b2igsyQw" name="tMSSqlOutput" family="Databases/MS_SQL_Server"/>
+    <componentsSettings xmi:id="_OJx7IIGwEd6TH7b2igsyQw" name="tLineChart" family="Business_Intelligence/Charts"/>
+    <componentsSettings xmi:id="_OJx7IYGwEd6TH7b2igsyQw" name="tAlfrescoOutput" family="Business/Alfresco"/>
+    <componentsSettings xmi:id="_OJyiMIGwEd6TH7b2igsyQw" name="tGroovy" family="Custom_Code"/>
+    <componentsSettings xmi:id="_OJyiMYGwEd6TH7b2igsyQw" name="tJasperOutputExec" family="Business_Intelligence/Jasper"/>
+    <componentsSettings xmi:id="_OJzwUIGwEd6TH7b2igsyQw" name="tDBSQLRow" family="Databases/DB_Generic"/>
+    <componentsSettings xmi:id="_OJzwUYGwEd6TH7b2igsyQw" name="tMondrianInput" family="Business_Intelligence/OLAP_Cube"/>
+    <componentsSettings xmi:id="_OJzwUoGwEd6TH7b2igsyQw" name="tIntervalMatch" family="Data_Quality"/>
+    <componentsSettings xmi:id="_OJ2zoIGwEd6TH7b2igsyQw" name="tMSAXOutput" family="Business/Microsoft_AX"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_haEPMGYIEd6xSNDVRTIB-A" login="testing@myhome.com" password="D41D8CD98F00B204E9800998ECF8427E"/>
+  <TalendProperties:ItemState xmi:id="_h7sVkWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7sVkmYIEd6xSNDVRTIB-A" id="_h7sVkGYIEd6xSNDVRTIB-A" label="businessProcess" creationDate="2009-07-01T08:29:29.065+0200" version="0.1" item="_h7sVk2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h7s8oWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7s8omYIEd6xSNDVRTIB-A" id="_h7s8oGYIEd6xSNDVRTIB-A" label="process" creationDate="2009-07-01T08:29:29.066+0200" version="0.1" item="_h7s8o2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h7s8pWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7s8pmYIEd6xSNDVRTIB-A" id="_h7s8pGYIEd6xSNDVRTIB-A" label="context" creationDate="2009-07-01T08:29:29.066+0200" version="0.1" item="_h7s8p2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h76_EWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h76_EmYIEd6xSNDVRTIB-A" id="_h76_EGYIEd6xSNDVRTIB-A" label="code" creationDate="2009-07-01T08:29:29.089+0200" version="0.1" item="_h76_E2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h76_FWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h76_FmYIEd6xSNDVRTIB-A" id="_h76_FGYIEd6xSNDVRTIB-A" label="routines" creationDate="2009-07-01T08:29:29.089+0200" version="0.1" item="_h76_F2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h77mIWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h77mImYIEd6xSNDVRTIB-A" id="_h77mIGYIEd6xSNDVRTIB-A" label="snippets" creationDate="2009-07-01T08:29:29.090+0200" version="0.1" item="_h77mI2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h77mJWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h77mJmYIEd6xSNDVRTIB-A" id="_h77mJGYIEd6xSNDVRTIB-A" label="documentations" creationDate="2009-07-01T08:29:29.090+0200" version="0.1" item="_h77mJ2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h78NMWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h78NMmYIEd6xSNDVRTIB-A" id="_h78NMGYIEd6xSNDVRTIB-A" label="metadata" creationDate="2009-07-01T08:29:29.091+0200" version="0.1" item="_h78NM2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h7-pcWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7-pcmYIEd6xSNDVRTIB-A" id="_h7-pcGYIEd6xSNDVRTIB-A" label="connections" creationDate="2009-07-01T08:29:29.095+0200" version="0.1" item="_h7-pc2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h7_QgWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7_QgmYIEd6xSNDVRTIB-A" id="_h7_QgGYIEd6xSNDVRTIB-A" label="sapconnections" creationDate="2009-07-01T08:29:29.096+0200" version="0.1" item="_h7_Qg2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h7_3kWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7_3kmYIEd6xSNDVRTIB-A" id="_h7_3kGYIEd6xSNDVRTIB-A" label="sqlPatterns" creationDate="2009-07-01T08:29:29.097+0200" version="0.1" item="_h7_3k2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h7_3lWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h7_3lmYIEd6xSNDVRTIB-A" id="_h7_3lGYIEd6xSNDVRTIB-A" label="fileDelimited" creationDate="2009-07-01T08:29:29.097+0200" version="0.1" item="_h7_3l2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8CT0WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8CT0mYIEd6xSNDVRTIB-A" id="_h8CT0GYIEd6xSNDVRTIB-A" label="filePositional" creationDate="2009-07-01T08:29:29.101+0200" version="0.1" item="_h8CT02YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8C64WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8C64mYIEd6xSNDVRTIB-A" id="_h8C64GYIEd6xSNDVRTIB-A" label="fileRegex" creationDate="2009-07-01T08:29:29.102+0200" version="0.1" item="_h8C642YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8C65WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8C65mYIEd6xSNDVRTIB-A" id="_h8C65GYIEd6xSNDVRTIB-A" label="fileXml" creationDate="2009-07-01T08:29:29.102+0200" version="0.1" item="_h8C652YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8Dh8WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8Dh8mYIEd6xSNDVRTIB-A" id="_h8Dh8GYIEd6xSNDVRTIB-A" label="fileLdif" creationDate="2009-07-01T08:29:29.103+0200" version="0.1" item="_h8Dh82YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8EJAWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8EJAmYIEd6xSNDVRTIB-A" id="_h8EJAGYIEd6xSNDVRTIB-A" label="fileExcel" creationDate="2009-07-01T08:29:29.104+0200" version="0.1" item="_h8EJA2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8EJBWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8EwEGYIEd6xSNDVRTIB-A" id="_h8EJBGYIEd6xSNDVRTIB-A" label="SalesforceSchema" creationDate="2009-07-01T08:29:29.104+0200" version="0.1" item="_h8EwEWYIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8EwE2YIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8EwFGYIEd6xSNDVRTIB-A" id="_h8EwEmYIEd6xSNDVRTIB-A" label="genericSchema" creationDate="2009-07-01T08:29:29.105+0200" version="0.1" item="_h8EwFWYIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8FXIWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8FXImYIEd6xSNDVRTIB-A" id="_h8FXIGYIEd6xSNDVRTIB-A" label="LDAPSchema" creationDate="2009-07-01T08:29:29.106+0200" version="0.1" item="_h8FXI2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8F-MWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8F-MmYIEd6xSNDVRTIB-A" id="_h8F-MGYIEd6xSNDVRTIB-A" label="joblets" creationDate="2009-07-01T08:29:29.107+0200" version="0.1" item="_h8F-M2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8F-NWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8F-NmYIEd6xSNDVRTIB-A" id="_h8F-NGYIEd6xSNDVRTIB-A" label="WSDLSchema" creationDate="2009-07-01T08:29:29.107+0200" version="0.1" item="_h8F-N2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8HMUWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8HMUmYIEd6xSNDVRTIB-A" id="_h8HMUGYIEd6xSNDVRTIB-A" label="temp" creationDate="2009-07-01T08:29:29.109+0200" version="0.1" item="_h8HMU2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8HzYWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8HzYmYIEd6xSNDVRTIB-A" id="_h8HzYGYIEd6xSNDVRTIB-A" label="images" creationDate="2009-07-01T08:29:29.110+0200" version="0.1" item="_h8HzY2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8HzZWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8HzZmYIEd6xSNDVRTIB-A" id="_h8HzZGYIEd6xSNDVRTIB-A" label="job_outlines" creationDate="2009-07-01T08:29:29.110+0200" version="0.1" item="_h8HzZ2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8IacWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8IacmYIEd6xSNDVRTIB-A" id="_h8IacGYIEd6xSNDVRTIB-A" label="joblet_outlines" creationDate="2009-07-01T08:29:29.111+0200" version="0.1" item="_h8Iac2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8JBgWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8JBgmYIEd6xSNDVRTIB-A" id="_h8JBgGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.112+0200" version="0.1" item="_h8JBg2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8JokWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8JokmYIEd6xSNDVRTIB-A" id="_h8JokGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.113+0200" version="0.1" item="_h8Jok2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8KPoGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8KPoWYIEd6xSNDVRTIB-A" id="_h8JolGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.114+0200" version="0.1" item="_h8KPomYIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8KPpGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8KPpWYIEd6xSNDVRTIB-A" id="_h8KPo2YIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.114+0200" version="0.1" item="_h8KPpmYIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8K2sWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8K2smYIEd6xSNDVRTIB-A" id="_h8K2sGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.115+0200" version="0.1" item="_h8K2s2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8K2tWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8K2tmYIEd6xSNDVRTIB-A" id="_h8K2tGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.115+0200" version="0.1" item="_h8K2t2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8ME0WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8ME0mYIEd6xSNDVRTIB-A" id="_h8ME0GYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.117+0200" version="0.1" item="_h8ME02YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8Mr4WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8Mr4mYIEd6xSNDVRTIB-A" id="_h8Mr4GYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.118+0200" version="0.1" item="_h8Mr42YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8Mr5WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8Mr5mYIEd6xSNDVRTIB-A" id="_h8Mr5GYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.118+0200" version="0.1" item="_h8Mr52YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8NS8WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8NS8mYIEd6xSNDVRTIB-A" id="_h8NS8GYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.119+0200" version="0.1" item="_h8NS82YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8N6AWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8N6AmYIEd6xSNDVRTIB-A" id="_h8N6AGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.120+0200" version="0.1" item="_h8N6A2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8N6BWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8N6BmYIEd6xSNDVRTIB-A" id="_h8N6BGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.120+0200" version="0.1" item="_h8N6B2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8OhEWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8OhEmYIEd6xSNDVRTIB-A" id="_h8OhEGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.121+0200" version="0.1" item="_h8OhE2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8PvMWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8PvMmYIEd6xSNDVRTIB-A" id="_h8PvMGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.123+0200" version="0.1" item="_h8QWQGYIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8Q9UWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8Q9UmYIEd6xSNDVRTIB-A" id="_h8Q9UGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.125+0200" version="0.1" item="_h8Q9U2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8Q9VWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8Q9VmYIEd6xSNDVRTIB-A" id="_h8Q9VGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.125+0200" version="0.1" item="_h8Q9V2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8RkYWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8RkYmYIEd6xSNDVRTIB-A" id="_h8RkYGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.126+0200" version="0.1" item="_h8RkY2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8SLcWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8SLcmYIEd6xSNDVRTIB-A" id="_h8SLcGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.127+0200" version="0.1" item="_h8SLc2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8TZkWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8TZkmYIEd6xSNDVRTIB-A" id="_h8TZkGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.129+0200" version="0.1" item="_h8TZk2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h8UAoWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h8UAomYIEd6xSNDVRTIB-A" id="_h8UAoGYIEd6xSNDVRTIB-A" label="bin" creationDate="2009-07-01T08:29:29.130+0200" version="0.1" item="_h8UAo2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h-DtEWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h-DtEmYIEd6xSNDVRTIB-A" id="_h-DtEGYIEd6xSNDVRTIB-A" label="system" creationDate="2009-07-01T08:29:29.313+0200" version="0.1" item="_h-DtE2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_h_yycWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_h_yycmYIEd6xSNDVRTIB-A" id="_h_yycGYIEd6xSNDVRTIB-A" label="Oracle" creationDate="2009-07-01T08:29:29.495+0200" version="0.1" item="_h_yyc2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iAHikWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iAHikmYIEd6xSNDVRTIB-A" id="_iAHikGYIEd6xSNDVRTIB-A" label="system" creationDate="2009-07-01T08:29:29.529+0200" version="0.1" item="_iAHik2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iA8B8WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iA8B8mYIEd6xSNDVRTIB-A" id="_iA8B8GYIEd6xSNDVRTIB-A" label="MySQL" creationDate="2009-07-01T08:29:29.615+0200" version="0.1" item="_iA8pAGYIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iBL5kWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iBL5kmYIEd6xSNDVRTIB-A" id="_iBL5kGYIEd6xSNDVRTIB-A" label="system" creationDate="2009-07-01T08:29:29.641+0200" version="0.1" item="_iBL5k2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iCKJ8WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iCKJ8mYIEd6xSNDVRTIB-A" id="_iCKJ8GYIEd6xSNDVRTIB-A" label="Teradata" creationDate="2009-07-01T08:29:29.743+0200" version="0.1" item="_iCKJ82YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iCgvQWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iCgvQmYIEd6xSNDVRTIB-A" id="_iCgvQGYIEd6xSNDVRTIB-A" label="system" creationDate="2009-07-01T08:29:29.780+0200" version="0.1" item="_iCgvQ2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iDAegWYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iDAegmYIEd6xSNDVRTIB-A" id="_iDAegGYIEd6xSNDVRTIB-A" label="Generic" creationDate="2009-07-01T08:29:29.832+0200" version="0.1" item="_iDAeg2YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_iDEv8WYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:Property xmi:id="_iDEv8mYIEd6xSNDVRTIB-A" id="_iDEv8GYIEd6xSNDVRTIB-A" label="system" creationDate="2009-07-01T08:29:29.839+0200" version="0.1" item="_iDEv82YIEd6xSNDVRTIB-A" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_YggFwXbYEd6BHI-efbH7kQ"/>
+  <TalendProperties:Property xmi:id="_YggFwnbYEd6BHI-efbH7kQ" id="_YggFwHbYEd6BHI-efbH7kQ" label="idl" creationDate="2009-07-22T17:57:39.740+0200" version="0.1" item="_YggFw3bYEd6BHI-efbH7kQ" author="_haEPMGYIEd6xSNDVRTIB-A"/>
+  <TalendProperties:ItemState xmi:id="_J-wsMYGwEd6TH7b2igsyQw"/>
+  <TalendProperties:Property xmi:id="_J-wsMoGwEd6TH7b2igsyQw" id="_J-wsMIGwEd6TH7b2igsyQw" label="rules" creationDate="2009-08-05T13:07:25.171+0200" version="0.1" item="_J-wsM4GwEd6TH7b2igsyQw" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_J-xTQYGwEd6TH7b2igsyQw"/>
+  <TalendProperties:Property xmi:id="_J-xTQoGwEd6TH7b2igsyQw" id="_J-xTQIGwEd6TH7b2igsyQw" label="fileEBCDIC" creationDate="2009-08-05T13:07:25.172+0200" version="0.1" item="_J-xTQ4GwEd6TH7b2igsyQw" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_KAjb8YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:Property xmi:id="_KAjb8oGwEd6TH7b2igsyQw" id="_KAjb8IGwEd6TH7b2igsyQw" label="Netezza" creationDate="2009-08-05T13:07:25.359+0200" version="0.1" item="_KAjb84GwEd6TH7b2igsyQw" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_KAt0AYGwEd6TH7b2igsyQw"/>
+  <TalendProperties:Property xmi:id="_KAt0AoGwEd6TH7b2igsyQw" id="_KAt0AIGwEd6TH7b2igsyQw" label="system" creationDate="2009-08-05T13:07:25.376+0200" version="0.1" item="_KAt0A4GwEd6TH7b2igsyQw" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_KBIqwYGwEd6TH7b2igsyQw"/>
+  <TalendProperties:Property xmi:id="_KBJR0IGwEd6TH7b2igsyQw" id="_KBIqwIGwEd6TH7b2igsyQw" label="ParAccel" creationDate="2009-08-05T13:07:25.420+0200" version="0.1" item="_KBJR0YGwEd6TH7b2igsyQw" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_KBNjQYGwEd6TH7b2igsyQw"/>
+  <TalendProperties:Property xmi:id="_KBNjQoGwEd6TH7b2igsyQw" id="_KBNjQIGwEd6TH7b2igsyQw" label="system" creationDate="2009-08-05T13:07:25.428+0200" version="0.1" item="_KBOKUIGwEd6TH7b2igsyQw" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:User xmi:id="_VGxkQYZXEd6OdYLyml6kEg" login="adrianromero@openbravo.com" password="D41D8CD98F00B204E9800998ECF8427E"/>
+  <TalendProperties:ItemState xmi:id="_9_PLYbizEd6uM7el-YYDYg"/>
+  <TalendProperties:Property xmi:id="_9_PLYrizEd6uM7el-YYDYg" id="_9_PLYLizEd6uM7el-YYDYg" label="UserDefined" creationDate="2009-10-14T13:23:16.630+0200" version="0.1" item="_9_PLY7izEd6uM7el-YYDYg" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_9_iGUrizEd6uM7el-YYDYg"/>
+  <TalendProperties:Property xmi:id="_9_iGU7izEd6uM7el-YYDYg" id="_9_iGUbizEd6uM7el-YYDYg" label="UserDefined" creationDate="2009-10-14T13:23:16.661+0200" version="0.1" item="_9_iGVLizEd6uM7el-YYDYg" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_-AZB8bizEd6uM7el-YYDYg"/>
+  <TalendProperties:Property xmi:id="_-AZB8rizEd6uM7el-YYDYg" id="_-AZB8LizEd6uM7el-YYDYg" label="UserDefined" creationDate="2009-10-14T13:23:16.751+0200" version="0.1" item="_-AZB87izEd6uM7el-YYDYg" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_-A1G0bizEd6uM7el-YYDYg"/>
+  <TalendProperties:Property xmi:id="_-A1G0rizEd6uM7el-YYDYg" id="_-A1G0LizEd6uM7el-YYDYg" label="UserDefined" creationDate="2009-10-14T13:23:16.797+0200" version="0.1" item="_-A1G07izEd6uM7el-YYDYg" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_-BDJQrizEd6uM7el-YYDYg"/>
+  <TalendProperties:Property xmi:id="_-BDwULizEd6uM7el-YYDYg" id="_-BDJQbizEd6uM7el-YYDYg" label="UserDefined" creationDate="2009-10-14T13:23:16.820+0200" version="0.1" item="_-BDwUbizEd6uM7el-YYDYg" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:ItemState xmi:id="_-BRywrizEd6uM7el-YYDYg"/>
+  <TalendProperties:Property xmi:id="_-BRyw7izEd6uM7el-YYDYg" id="_-BRywbizEd6uM7el-YYDYg" label="UserDefined" creationDate="2009-10-14T13:23:16.844+0200" version="0.1" item="_-BRyxLizEd6uM7el-YYDYg" author="_J-jQ0YGwEd6TH7b2igsyQw"/>
+  <TalendProperties:User xmi:id="_RKc7kbEtEeCuZ-tK5sebhg" login="mir@openbravo.com" password="D41D8CD98F00B204E9800998ECF8427E"/>
+</xmi:XMI>

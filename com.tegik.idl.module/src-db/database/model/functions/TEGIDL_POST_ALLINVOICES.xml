@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_POST_ALLINVOICES">
+    <function name="TEGIDL_POST_ALLINVOICES" type="NULL">
+      <parameter name="p_issotrx" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_client_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+  v_existegl VARCHAR2(32);
+v_contador NUMBER;
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+regreso:='';
+
+
+
+v_contador:=0;
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM c_invoice
+      WHERE isactive='Y' 
+      AND ad_client_id=p_client_id
+      AND issotrx=p_issotrx
+      AND docstatus='DR'
+      --AND C_DOCTYPE_ID = '6BB024B7EDC8477486269F74500A1245'
+      AND AD_ORG_ID IN ('56F1FB8D23314A4DB4CB46ACF1537A49', '3940A989B9E04764AB9096F67FA4BBE5')
+      )
+    LOOP
+v_contador=v_contador+1;
+    DBMS_OUTPUT.PUT_LINE('documento:'||Cur_Parameter.documentno||' CONTADOR:'||v_contador);
+	UPDATE c_invoice SET docaction='CO', POSTED = 'N' WHERE c_invoice_id=Cur_Parameter.c_invoice_id;
+ C_INVOICE_POST(NULL, Cur_Parameter.c_invoice_id);
+    END LOOP; 
+
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_POST_ALLINVOICES
+]]></body>
+    </function>
+  </database>

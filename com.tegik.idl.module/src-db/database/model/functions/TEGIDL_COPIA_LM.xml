@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_COPIA_LM">
+    <function name="TEGIDL_COPIA_LM" type="NULL">
+      <parameter name="p_oldclient_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_newclient_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+  v_existegl VARCHAR2(32);
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+regreso:='';
+
+
+--------------------------
+--Create GL---------------
+--------------------------
+
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM gl_category
+      WHERE isactive='Y' AND ad_client_id=p_oldclient_id
+      )
+    LOOP
+
+    SELECT gl_category_id INTO v_existegl
+	    FROM gl_category 
+	    WHERE gl_category.name=Cur_Parameter.name 
+	    AND ad_client_id=p_newclient_id;
+
+	    IF v_existegl IS NULL THEN
+
+      
+      DBMS_OUTPUT.PUT_LINE('GL TO CREATE: '||Cur_Parameter.name);
+	 INSERT INTO gl_category(
+            gl_category_id, 
+            ad_client_id, 
+            ad_org_id, 
+            isactive, 
+            createdby, 
+            updatedby, 
+            "name", 
+            description, 
+            categorytype, 
+            isdefault, 
+            docbasetype)
+    VALUES ( GET_UUID(),--gl_category_id, 
+            p_newclient_id,--ad_client_id, 
+            '0',--ad_org_id, 
+            Cur_Parameter.isactive, 
+            '100',--createdby, 
+            '100',--updatedby, 
+            Cur_Parameter.name, 
+            Cur_Parameter.description, 
+            Cur_Parameter.categorytype, 
+            Cur_Parameter.isdefault, 
+            Cur_Parameter.docbasetype);
+	  END IF;
+    END LOOP; 
+
+--------------------------
+--END Create GL-----------
+--------------------------
+
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_COPIA_LM
+]]></body>
+    </function>
+  </database>

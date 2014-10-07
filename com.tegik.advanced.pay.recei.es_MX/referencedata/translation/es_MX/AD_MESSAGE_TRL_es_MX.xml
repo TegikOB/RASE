@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="00D0839059994323B4596EDA7D0BCF56" trl="Y">
+    <value column="MsgText" original="Invoice %s is already fully paid.">porcentaje de Factura que ya se encuentra totalmente integrado.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0267A646C8BD4042AE2422BCB83B4610" trl="Y">
+    <value column="MsgText" original="Not possible to split the selected bank statement line because is already matched with a transaction.">No es posible dividir la línea de banco seleccionada porque ya se ha relacionado con una transacción.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="02E1AA15BFCB420C8F618A14ED80F33E" trl="Y">
+    <value column="MsgText" original="A zero amount Payment cannot be left as an underpayment.">Un pago con importe cero no se puede dejar incompleto.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="065AAE5951154185AC73E7D9A688C43C" trl="Y">
+    <value column="MsgText" original="Payment can not be reactivated as it is a reverse payment.">El cobro/pago no se pude reactivar porque es un cobro/pago revertido.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0AF37AC554DE441DB213BA944147E82C" trl="Y">
+    <value column="MsgText" original="Payment No.">Pago/Cobro</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0BBA71AF0C1F4E069A811E7CFC80FEAD" trl="Y">
+    <value column="MsgText" original="The old financial flow is disabled. Please use the Advanced and Payables and Receivables Management module's financial flow.">El flujo financiero antiguo esta desahbilitadox. Por favor utilice el nuevo flujo del módulo Gestión de Cuentas por Pagar y por Cobrar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1405C086998B431D80615A4FB8EC783B" trl="Y">
+    <value column="MsgText" original="Date">Fecha</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="14AEEC4ACF9C48A1B39D7A58D057B296" trl="Y">
+    <value column="MsgText" original="Document Type not defined">Tipo de Documento no definido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="14EBC11B38634D229D542AAFCEAF4186" trl="Y">
+    <value column="MsgText" original="The invoice has related doubtful debt.">La factura tiene relacionado un dudoso cobro.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="167679F2C257479E9129C3C51B8F426D" trl="Y">
+    <value column="MsgText" original="There is no doubtful debt to be processed.">No hay ningún dudoso cobro para procesar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="19D77522B7A4470FBA505D39A6AA051C" trl="Y">
+    <value column="MsgText" original="More than the available amount has been distributed.">Se ha distribuido más cantidad de la disponible.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1E8BFED210524080A7F8FE17D6C4DED1" trl="Y">
+    <value column="MsgText" original="The order has more than one Payment Plan record with related Payment Plan details. Please contact your System Administrator to fix it.">El pedido dispone de más de un Plan de Pago para el Detalle de Pago. Por favor, contacte con el Administrador del Systema para que lo solucione.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1EB0D3A668784AF8A9133F066EDE6C44" trl="Y">
+    <value column="MsgText" original="Add Payment">Añadir Cobro</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1F3D51E013B34F1087BD5416EEB0387F" trl="Y">
+    <value column="MsgText" original="Amount left as credit">Cantidad a crédito</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="2118F382AC3646CA8D8F2EAE6504B876" trl="Y">
+    <value column="MsgText" original="Reconciliation No.">Nº Reconciliación</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="247F96A9D1AB44C2B24CD06B4B05068B" trl="Y">
+    <value column="MsgText" original="Payment plan lines with received (or paid) amounts cannot be deleted">Las líneas de los planes de pago con importes recibidos (o pagado) no se pueden eliminar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="2D4DB4272D2A4E23B6B2E16176FAC92F" trl="Y">
+    <value column="MsgText" original="The Java class name defined does not exist">La clase Java definida no existe</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="2EE9E3A8A29044C5B6A1BCB77EB37B87" trl="Y">
+    <value column="MsgText" original="Some of the payments selected have a different payment method than the payment method set in the header of the payment proposal.">Algunos de los pagos seleccionados tienen un método de pago diferente al método de pago seleccionado en la cabecera de la propuesta de pago.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="2FD618C9D5064C75BFF13B57B767C912" trl="Y">
+    <value column="MsgText" original="Document No.">Nº documento</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="355244CE61E647E7822FF281159181E4" trl="Y">
+    <value column="MsgText" original="The next payments have been created and executed: %s">Se han creado y ejecutado los siguientes pagos: %s</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="406CD43121E34BF2A6AA2EBDB9DC8CF5" trl="Y">
+    <value column="MsgText" original="Amounts associated to an order payment plan where not fully allocated.">Los importes asociados al plan de pagos del pedido no se distribuyeron por completo.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="40AB261679C541FD92AB5970B6703811" trl="Y">
+    <value column="MsgText" original="Order">Pedido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="41AF8742DB7045F698DEDA97BAEB5553" trl="Y">
+    <value column="MsgText" original="Only lines with the same sign are allowed.">Sólo se permiten líneas con el mismo signo.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4329807E1B00477B8A87C32A2B123DFB" trl="Y">
+    <value column="MsgText" original="The invoice has payments created using the old payables and receivables flow. Please delete them before completing it.">La factura tiene pagos creados desde el antiguo flujo de cobros y pagos. Por favor elimínelos antes de completarlos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="44973749BE9E47989F1E9D4A1C52EDEF" trl="Y">
+    <value column="MsgText" original="The amounts on the existing payment plan are not correct, and cannot be modified. Try refreshing the invoice header, re-activating and processing again the invoice.">Los importes en el plan de pagos existente no son correctos y no se pueden modificar. Pruebe a refrescar la cabecera de la factura, reactivarla y procesarla de nuevo.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="48898A3B7F9141C0B9BFBDD9AE5FCF8F" trl="Y">
+    <value column="MsgText" original="The reconciliation cannot be completed because it contains one or more items in a closed period.&lt;BR&gt;The period of the cleared item (%s) is not open or available.">No hay periodo o éste no se encuentra disponible para las líneas de reconciliación (%s).</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="49C16126D1A141C398175B0632C08F95" trl="Y">
+    <value column="MsgText" original="The organization of the financial account does not belong to the natural tree of organizations of the payment">La organización de la cuenta financiera no pertenece al arbol de organizaciones del pago</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4EA449F1999B4B01B02840DC7AF832D9" trl="Y">
+    <value column="MsgText" original="This action is not allowed, write off limit exceeded">Esta acción no está permitida, se ha excedido el límite de cancelación</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="53ED8846C7984389AF83AC1DE983859E" trl="Y">
+    <value column="MsgText" original="Value is not a valid number">El valor no es un número valido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="573263F299C743FAAA82D7750DC21B06" trl="Y">
+    <value column="MsgText" original="The field payment method is mandatory and cannot be left empty">El campo método de pago es obligatorio y no se puede dejar vacio</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="58385E335EB24A97A89B88910210FDE5" trl="Y">
+    <value column="MsgText" original="Reconciliation already posted. Not possible to split a bank statement line.&#10;Please, unpost the reconciliation if you wan to split a bank statement line.">La reconciliación ya se ha contabilizado. No es posible dividir la línea de banco. Por favor, descontabilice la reconciliación si quiere dividir la línea de banco.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="58BED27A9BE64676A4965BC726890E09" trl="Y">
+    <value column="MsgText" original="It is not possible to recognize more doubtful debt than the outstanding.">No se puede identificar un importe mayor como dudoso cobro que el pendiente de cobrar.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5D2453C087D74A48A6CED9210BD7300F" trl="Y">
+    <value column="MsgText" original="The order has payments created using the old payables and receivables flow. Please delete them before completing it.">El pedido tiene pagos creados desde el antiguo flujo de cobros y pagos. Por favor elimínelos antes de completarlos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5D767339F1D74185A7E7825F6727B3A1" trl="Y">
+    <value column="MsgText" original="Paid Amt.">Importe Pagado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5D7ED86F92CD4E9E85080377C7BC6EA0" trl="Y">
+    <value column="MsgText" original="Amount mismatch. Sum of outstanding amounts should be the same in old and new versions of the plan. Try re-freshing the invoice header.">Los importes no cuadran. La suma de los importes pendientes debería ser la misma para la versión antigua y nueva del plan. Intente refrescar la cabecera de la factura.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="617854EC2BE44DEE8B59467A5E940DB1" trl="Y">
+    <value column="MsgText" original="There is a related document posted. Please make sure related reconciliation is not posted before modifying transaction information as ledger entry depends on it.">Existe un documento relacionado contabilizado. Por favor, antes de modificar la información de la transacción, compruebe que la reconciliación relacionada no está contabilizada ya que el asiento depende de ello.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="620A5B4B99F9405BAC2B1D3188700583" trl="Y">
+    <value column="MsgText" original="It is not possible to process a Payment Proposal without line.">No es posible procesar una Propuesta de Pago sin líneas.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="628371BCC5C54C88A4D5CFA24B6FEE1D" trl="Y">
+    <value column="MsgText" original="Execution Process not defined for the pair Financial Account - Payment Method.">Proceso de Ejecución no definido para el par Cuenta Financiera - Método de Pago.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="65A7E4455E2F41F1A3D5C71221E01DE5" trl="Y">
+    <value column="MsgText" original="Payment">Pago</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="677879BD3D72467AA2D646765E596E4F" trl="Y">
+    <value column="MsgText" original="Payment No.">Pago/Cobro</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="69DFFBA66CC1446B867FEA30A9DE15A4" trl="Y">
+    <value column="MsgText" original="Credit payment">Crédito generado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6BD1C3CCCCC74E30BCA8E9B73AC6946C" trl="Y">
+    <value column="MsgText" original="Bank statement line with wrong date. Cannot import lines previous to ">Fecha incorrecta para línea de extracto bancario. No se pueden importar líneas previas a </value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6E6B065C16C747A9AA784F7434276DBE" trl="Y">
+    <value column="MsgText" original="When matching transactions after reconciliation date range, these transaction dates will be updated to bank statement line date">Al seleccionar transacciones posteriores a la fecha de reconciliación, la fecha de la transacción será actualizada a la fecha de la línea del extracto bancario</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7918E1E75DF84F499AD21A51F53F9A9B" trl="Y">
+    <value column="MsgText" original="No file import extension active">No se ha instalado ningún importador de ficheros</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7955CBDC1CB246FBB6BE1E2C5DD36ACC" trl="Y">
+    <value column="MsgText" original="Due Date">Fecha vencimiento</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7A71FF524AA04923A26AFA67ABE7FD26" trl="Y">
+    <value column="MsgText" original="Amount refunded">Cantidad devuelta</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7ADA423DD28042B181D3EB9AC5CF1DC0" trl="Y">
+    <value column="MsgText" original="It is not possible to pay more amount than the outstanding.">No es posible pagar mayor importe que el pendiente</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7DEF5C1A3377434AA34149E9777DE4D6" trl="Y">
+    <value column="MsgText" original="Mixing reconciliations: you cannot perform a manual and automatic reconciliation in parallel.">Combinación errónea de reconciliaciones: no se pueden ejecutar reconciliaciones manuales y automáticas en paralelo.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7EF14E73C8EB4C33B302885E2FBDD0EE" trl="Y">
+    <value column="MsgText" original="Document cannot be reactivated. Record already registered in the financial account">El documento no se puede reactivar. El registro ya se ha almacenado en la cuenta financiera</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="830AAC0CAD5541508FB9D6E209D23EA7" trl="Y">
+    <value column="MsgText" original="Bank Fee">Gastos Bancarios</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="8444D07DF4214ED793366B83F5BDD042" trl="Y">
+    <value column="MsgText" original="Lines with awaiting execution pending amounts cannot be deleted.">Las líneas con importes pendientes de ejecución no pueden ser borradas.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="89C77284A85346C6923D858E3AB3D363" trl="Y">
+    <value column="MsgText" original="It is not possible to process a Payment without line.">No es posible procesar un Pago sin líneas.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="8A4E2745545245ED81BFBC5324648833" trl="Y">
+    <value column="MsgText" original="The transaction has been created but it is not matched because amounts for the selected transaction and bank statement line do not match.">La transacción se ha creado, pero no se puede reconciliar debido a que los importes de la transacción y la línea del extracto bancario seleccionados no coinciden.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="8E01FDCFBE034863898A47F1AE37BB15" trl="Y">
+    <value column="MsgText" original="%s row/s inserted.&lt;br/&gt;%s row/s not inserted because credit and debit amount were 0.">%s líneas insertadas.&lt;br/&gt;%s líneas no insertadas porque la cantidad de crédito y débito  era 0.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="8EF25E4AD4EF46E4BCE4E0FACAFC717F" trl="Y">
+    <value column="MsgText" original="Bank statement line with wrong date. Cannot process lines previous to ">Fecha incorrecta para línea de extracto bancario. No se pueden importar líneas previas a </value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="8FC3C9524EE54E518B679D58F709119D" trl="Y">
+    <value column="MsgText" original="Do you want the algorithm to be run against unmatched bank statement lines?">¿Desea que el algoritmo  se ejecuta con líneas compatibles de la cuenta bancaria?</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="92EC1935A8B947BA83EF82DBD169CA8B" trl="Y">
+    <value column="MsgText" original="For credit generation and/or credit consumption payment currency should map business partner currency: %s">Al generar o consumir crédito la moneda del pago/cobro debe coincidir con la del tercero: %s</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9350C57F0C194634B4FC83028AC4D31D" trl="Y">
+    <value column="MsgText" original="Received Amt.">Importe Recibido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="939FCFA14C69435EB3A88457933160B6" trl="Y">
+    <value column="MsgText" original="Add Payment">Añadir Pago</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="962525CB12714F8EA3C06FAD8A3FAB4A" trl="Y">
+    <value column="MsgText" original="The invoice has related payments.">La factura tiene pagos relacionados.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9B5F3BE69BD34E33970599D3B352F120" trl="Y">
+    <value column="MsgText" original="Description">Descripción</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9C50BA94A0294449A16B26A91F8F06C4" trl="Y">
+    <value column="MsgText" original="Refunded payment">Efecto devuelto</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9CFC61CBF0C84814B6DB7729427A2E38" trl="Y">
+    <value column="MsgText" original="in the Financial Account">en la Cuenta Financiera</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="A0F2DD5EF309448084FB6F3F44B59798" trl="Y">
+    <value column="MsgText" original="There is an amount difference without any action selected. Please don't leave any difference or select an action.">Existen diferencias en los importes y no ha seleccionado ninguna acción. Por favor, haga coincidir los importes o seleccione una de las acciones.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="A12B892B27E84089A80A6D96919C04BD" trl="Y">
+    <value column="MsgText" original="Document already reconciled">El documento ya está reconciliado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="A170443009114AFE88C11A0EFD059DF1" trl="Y">
+    <value column="MsgText" original="Transaction">Transacción</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="A1A9F90FED00486E8973E5061D22E0E1" trl="Y">
+    <value column="MsgText" original="No bank statement lines to match. Please import a bank file first">No hay líneas de extracto bancario para conciliar. Por favor importe un extracto bancario</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="A8B738CED3184757BF9D50EC1D5B7A51" trl="Y">
+    <value column="MsgText" original="Cleared">Conciliado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="AEAD317E14D64FECBD3C753616891EB7" trl="Y">
+    <value column="MsgText" original="The invoiced order has payments created using the old payables and receivables flow, delete them before completing the invoice.">El pedido facturado tiene pagos creados desde el antiguo flujo de cobros y pagos. Por favor elimínelos antes de completarlos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B1CBFC308F82467C8E3FC87091E24522" trl="Y">
+    <value column="MsgText" original="The Bank Statement has a reconciled line">El Extracto Bancario tiene una línea reconciliada</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B3774BABFF13405FAC312979E3983F11" trl="Y">
+    <value column="MsgText" original="If a payment plan line does have a payment detail associated in awaiting execution status, the new outstanding amount must be, at least, the payment detail amount.">Si una línea del plan de pagos tiene un detalle de pago asociado que esté pendiente de ejecución, el nuevo importe pendiente debe ser, al menos, el importe del detalle del pago.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B3D6AF0669DD4DF5BDF48A4D55F84C3C" trl="Y">
+    <value column="MsgText" original="Business Partner">Tercero</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B47593972EA345E7B90F79C78908309A" trl="Y">
+    <value column="MsgText" original="Posted">Contabilizado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B6F8970C7470421FA5375E61D71A8E73" trl="Y">
+    <value column="MsgText" original="It is not possible to reconcile in a previous day to the last reconciliation or in a day in the future.">No se puede reconciliar ningún día antes de la última reconciliación ni ningún día futuro.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B9ECCDD15B1349B5B00DC6EE83AD869E" trl="Y">
+    <value column="MsgText" original="Action cannot be performed. It is not a valid action.">La acción no se puede ejecutar. No es una acción válida.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B9F31E06A19240DE87666454DB8A16E1" trl="Y">
+    <value column="MsgText" original="Payments without a business partner cannot generate/use credit">Los pagos sin tercero relacionado, no pueden generar ni consumir crédito.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BBB2F06979BA4A84BC67B134F9155862" trl="Y">
+    <value column="MsgText" original="Discrepancy between Statement and Transactions selected. The bank statement has items that remain unreconciled totaling: ">Hay una discrepancia entre el Extracto y la Transacción seleccionadas. El extracto tiene objetos que permanecen sin reconciliar con un total de:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BC2354325C5D47CEA63A298E73F1CEDB" trl="Y">
+    <value column="MsgText" original="The financial account does not have a matching algorithm defined.">La cuenta financiera no tiene definido de ningún algoritmo de ajuste.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BE7AE60244C34C8AB03616F5A70B45D2" trl="Y">
+    <value column="MsgText" original="Doubtful Debt @documentNo@ could not be processed. Payment already exists.">El dudoso cobro @documentNo@ no se ha procesado. Ya existe un pago.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C36865A47B99485980CC8B56AAF59057" trl="Y">
+    <value column="MsgText" original="The payment has some or all the generated credit already used on other payments.">El pago tiene todo o parte del crédito utilizado en otros pagos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C5133F7FD55D4AF6B8B7FB527BFB9920" trl="Y">
+    <value column="MsgText" original="Making Payments in other currencies is not allowed for the Payment Mehod">El método de pago no permite realizar pagos en otras monedas.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CAB70EC8598D40E0BFFD7F0FB8538080" trl="Y">
+    <value column="MsgText" original="Check the lines with Line No.:">Comprobar líneas con núm. línea:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CCA38D3048F04C1FA6F05AD56CF81B5D" trl="Y">
+    <value column="MsgText" original="It does not exist any Financial Account defined for this payment method and currency">No existe ninguna cuenta financiera definida para este método de pago y moneda</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D2585EEAC94945C7B3CF79C209FD7650" trl="Y">
+    <value column="MsgText" original="Document Type not defined for Doubtful Debts.">Tipo de documento no definido para dudoso cobro.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D304C035EC724B6A874E574BE59BC7BF" trl="Y">
+    <value column="MsgText" original="Selected payment method doesn't exist.">El método de pago no existe.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D374CA8D2FF541E5BF1149FCFDAEED86" trl="Y">
+    <value column="MsgText" original="The order has related payments.">El pedido tiene pagos relacionados.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D43307A25D72423CBDEC95CEB3291AF1" trl="Y">
+    <value column="MsgText" original="Not all the available amount has been allocated.">No se ha asignado toda la cantidad disponible.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="DB89900B5F2848128B2BC885FD0E49AD" trl="Y">
+    <value column="MsgText" original="The invoice has an scheduled payment included in an unprocessed proposal.">La factura tiene un pago previsto incluido en una propuesta sin procesar.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="DF6BD33E986149C0ADE4D0CC45D7394C" trl="Y">
+    <value column="MsgText" original="Not possible to add a payment without lines.">No es posible añadir un pago sin líneas.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="E217A4F4BDE84DC6A95ACB3F54549FDD" trl="Y">
+    <value column="MsgText" original="Another process is executing this payment">Otro proceso está ejecutando este efecto</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="E92C3899BD924A5C991A39B2CDA74D29" trl="Y">
+    <value column="MsgText" original="In order to import bank statements, you need to have a file import module installed and its dataset applied. System administrators can install modules via Module Management &gt; Add Modules.">Los administradores del sistema pueden instalar extensiones desde Gestión de Módulos &gt; Añadir Módulos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="EDEA16A966B94F63A7C1E339FC095B08" trl="Y">
+    <value column="MsgText" original="Payment plan cannot be modified as invoice is already paid (at least partially) even if the payment was afterwards voided.">El plan de pagos archivado no se puede modificar porque la factura ya está pagada (al menos parcialmente), incluso si el pago se anula posteriormente.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="EF56DCF572A94E6CAFE4F13948268050" trl="Y">
+    <value column="MsgText" original="Bank statement line and transaction amount does not match. Do you want to perform a partial match?">Los importes de la línea de banco y la transacción no coinciden. ¿Quiere realizar una conciliación parcial?</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="EFA31753A0BB4C4AB3E6BC741FEE811E" trl="Y">
+    <value column="MsgText" original="Invoice">Factura</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="EFA91F88357E42B4826349C32C9E0383" trl="Y">
+    <value column="MsgText" original="Payment can not be reactivated as it has been reversed. Please undo reversal prior to reactivate this payment.">El pago no puede ser reactivado porque ha sido revertido. Por favor, deshaga el pago revertido para poder reactivarlo.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F0BBB5C1155F46378B6FF74A8F561046" trl="Y">
+    <value column="MsgText" original="Receiving Payments in other currencies is not allowed for the Payment Mehod">El método de pago no permite cobrar en otras monedas.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F302E4040E1B45318BA270BDFA37179C" trl="Y">
+    <value column="MsgText" original="You must set only one amount different to zero.">Sólo puede haber una cantidad diferente de cero.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F381A9CA5B51447286C117C68394C6BA" trl="Y">
+    <value column="MsgText" original="No currency in business partner's price list">No se ha definido moneda en la lista de precios del tercero</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F4500597D99243129F93A0769047CFCB" trl="Y">
+    <value column="MsgText" original="Tax payments can not be reactivated.">El pago de impuestos no se pueden reactivar.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F579E42461DC472AA4F21B14DD3D680B" trl="Y">
+    <value column="MsgText" original="GL Item">Conceptos Contables</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FC953B2C0069441DB85EB9BECDF9B7A8" trl="Y">
+    <value column="MsgText" original="Could not load the statement. Please check the file because it could contain invalid values or there are missing values.">No se pudo cargar el comunicado. Por favor, compruebe el archivo, ya que 
+podría contener valores no válidos o si hay valores perdidos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FCDC2F10EAAD46A5A24BCEC2BF017A05" trl="Y">
+    <value column="MsgText" original="Amounts for the selected transaction and bank statement line do not match">Los importes de las líneas de la transacción y del extracto bancario seleccionados no coinciden.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FEDF027AC00540119E81B4E573C4CD97" trl="Y">
+    <value column="MsgText" original="Business Partner cannot be empty when performing refund or credit actions.">El tercero no puede ser vacio al devolver el importe al cliente o al generar o utilizar crédito.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8080812E44C5F1012E44D2099A001A" trl="Y">
+    <value column="MsgText" original="Action cannot be performed as a later reconciliation exists. First reactivate and delete later reconciliations.">No se puede realizar la acción ya que existe una reconciliación posterior. Reactive primero y elimine las reconciliaciones posteriores.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8080812E44C5F1012E44D35D750020" trl="Y">
+    <value column="MsgText" original="Reconciliation contains no line. At least one cleared item is required for a reconciliation document to be processed.">La reconciliación no contiene ninguna línea. Se requiere que haya al menos una línea de reconciliación para que un documento de reconciliacion se pueda procesar.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8080812F5805CF012F5843BD3A005B" trl="Y">
+    <value column="MsgText" original="Bank Statement No.:">Extracto Bancario Nº:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8080812F967128012F969D366A0046" trl="Y">
+    <value column="MsgText" original="Amount out of range: %s cannot be used as outstanding amount is %s">Importe fuera de rango: %s no se puede usar ya que el importe pendiente es %s</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130AC08E60130AC5B1B7F0055" trl="Y">
+    <value column="MsgText" original="Bank Revaluation Gain, Bank Revaluation Loss and Bank Fee Accounts must be filled in.">Se deben rellenar las cuentas: Beneficios por plusvalías, Pérdidas por minusvalías y Gastos bancarios.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130D696DC0130D6B52ACB005E" trl="Y">
+    <value column="MsgText" original="Payment cannot be created. The following detail %s is already paid in other payment.">El pago no se pudo crear. El detalle %s ya está pagado en otro pago.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF808081332719060133272C1D46003B" trl="Y">
+    <value column="MsgText" original="Reconciled">Reconciliado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF808081332719060133272C92070040" trl="Y">
+    <value column="MsgText" original="Outstanding Payments">Reintegros Pendientes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF808081332719060133272D1BE20044" trl="Y">
+    <value column="MsgText" original="Outstanding Deposits">Depósitos Pendientes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF808081332719060133272D70CE0048" trl="Y">
+    <value column="MsgText" original="Un-Reconciled">Pendiente de Reconciliar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80818130B6856A0130B6956220002D" trl="Y">
+    <value column="MsgText" original="Credit used in the Invoice No.: %s">Crédito consumido en la factura Nº: %s</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80818130D0918F0130D10749340156" trl="Y">
+    <value column="MsgText" original="Impossible to void because its status is not Awaiting Execution">No se puede anular porque no está en estado A Ejecutar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081813108A518013108B682CF000E" trl="Y">
+    <value column="MsgText" original="Invoice paid using credit: %s">Factura pagada usando el crédito: %s</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

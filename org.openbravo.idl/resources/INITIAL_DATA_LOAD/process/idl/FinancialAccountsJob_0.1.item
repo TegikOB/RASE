@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="DIRECTORY" name="COMP_DEFAULT_FILE_DIR" value="/home/adrian/usr/TOS-All-r29781-V3.1.4/workspace" contextMode="false"/>
+    <elementParameter field="CHECK" name="displaySubjobs" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="AUTHOR" value="adrianromero@openbravo.com" contextMode="false"/>
+    <elementParameter field="TEXT" name="STATUS" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="NAME" value="FinancialAccountsJob" contextMode="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.1" contextMode="false"/>
+    <elementParameter field="TEXT" name="PURPOSE" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="DESCRIPTION" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="36" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="36" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none" contextMode="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false" contextMode="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" contextMode="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" contextMode="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" contextMode="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" contextMode="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PASS_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" contextMode="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/home/adrian/usr/TOS-All-r29781-V3.1.4/workspace/.metadata&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tDBOutput" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ojdbc14-10g.jar" contextMode="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" contextMode="false"/>
+  </parameters>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" contextMode="false"/>
+    <elementParameter field="CHECK" name="START" value="true" contextMode="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.getProperty(&quot;filename&quot;)" contextMode="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="HEADER" value="1" contextMode="false"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0" contextMode="false"/>
+    <elementParameter field="TEXT" name="LIMIT" value="" contextMode="false"/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true" contextMode="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false" contextMode="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" contextMode="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" contextMode="false"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false" contextMode="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10" contextMode="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT" contextMode="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Type"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false" contextMode="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" contextMode="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" contextMode="false"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="parse input CSV file" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="org.openbravo.idl.proc.IdlService service = org.openbravo.idl.proc.IdlIntService.getInstance().getService(&quot;Financial Account&quot;);&#xA;org.openbravo.idl.proc.Validator validator = service.getValidator(&quot;Financial Account&quot;);&#xA;&#xA;output_row.Organization = validator.checkOrganization(input_row.Organization);&#xA;output_row.Name = validator.checkNotNull(validator.checkString(input_row.Name, 60), &quot;Name&quot;);&#xA;output_row.Description = validator.checkString(input_row.Description, 255);&#xA;output_row.Currency = validator.checkString(input_row.Currency, 3);&#xA;output_row.Type = validator.checkString(input_row.Type, 60);&#xA;output_row.IsDefault = validator.checkBoolean(input_row.IsDefault, &quot;IsDefault&quot;);&#xA;output_row.BusinessPartner = validator.checkString(input_row.BusinessPartner, 60);&#xA;output_row.Location1stLine = validator.checkString(input_row.Location1stLine, 60);&#xA;output_row.Location2ndLine = validator.checkString(input_row.Location2ndLine, 60);&#xA;output_row.LocationPostalCode = validator.checkString(input_row.LocationPostalCode, 10);&#xA;output_row.LocationCity = validator.checkString(input_row.LocationCity, 60);&#xA;output_row.LocationRegion = validator.checkString(input_row.LocationRegion, 60);&#xA;output_row.LocationCountry = validator.checkString(input_row.LocationCountry, 60);&#xA;output_row.BankCode = validator.checkString(input_row.BankCode, 4);&#xA;output_row.BranchCode = validator.checkString(input_row.BranchCode, 4);&#xA;output_row.BankControlDigit = validator.checkString(input_row.BankControlDigit, 1);&#xA;output_row.INENo = validator.checkString(input_row.INENo, 9);&#xA;output_row.SwiftCode = validator.checkString(input_row.SwiftCode, 20);&#xA;output_row.AccountControlDigit = validator.checkString(input_row.AccountControlDigit, 1);&#xA;output_row.PartialAccountNo = validator.checkString(input_row.PartialAccountNo, 10);&#xA;output_row.AccountNo = validator.checkString(input_row.AccountNo, 50);&#xA;output_row.IBAN = validator.checkString(input_row.IBAN, 34);&#xA;output_row.InitialBalance = validator.checkBigDecimal(input_row.InitialBalance);&#xA;output_row.CreditLimit = validator.checkBigDecimal(input_row.CreditLimit);&#xA;output_row.MatchingAlgorithm = validator.checkString(input_row.MatchingAlgorithm, 60);&#xA;&#xA;output_row.flag = validator.getErrorCode();&#xA;output_row.whyError = validator.getErrorMessage();&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;" contextMode="false"/>
+    <elementParameter field="TABLE" name="CONDITIONS" contextMode="false">
+      <elementValue elementRef="INPUT_COLUMN" value="flag"/>
+      <elementValue elementRef="FUNCTION" value="$source == null? false : $source.toLowerCase().compareTo($target) $operator 0"/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Check FLAG" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tFilterRow_1">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;service.logRecordError(&#xA;    input_row.whyError,&#xA;    input_row.Organization,&#xA;    input_row.Name,&#xA;    input_row.Description,&#xA;    input_row.Currency,&#xA;    input_row.Type,&#xA;    input_row.IsDefault,&#xA;    input_row.BusinessPartner,&#xA;    input_row.Location1stLine,&#xA;    input_row.Location2ndLine,&#xA;    input_row.LocationPostalCode,&#xA;    input_row.LocationCity,&#xA;    input_row.LocationRegion,&#xA;    input_row.LocationCountry,&#xA;    input_row.BankCode,&#xA;    input_row.BranchCode,&#xA;    input_row.BankControlDigit,&#xA;    input_row.INENo,&#xA;    input_row.SwiftCode,&#xA;    input_row.AccountControlDigit,&#xA;    input_row.PartialAccountNo,&#xA;    input_row.AccountNo,&#xA;    input_row.IBAN,&#xA;    input_row.InitialBalance,&#xA;    input_row.CreditLimit,&#xA;    input_row.MatchingAlgorithm);&#xA;&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Log error" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_2">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;output_row.flag = &quot;0&quot;;&#xA;output_row.whyError = &quot;&quot;;&#xA;&#xA;output_row.Organization = input_row.Organization;&#xA;output_row.Name = input_row.Name;&#xA;output_row.Description = input_row.Description;&#xA;output_row.Currency = input_row.Currency;&#xA;if (input_row.Currency != null) {&#xA;Currency cur = service.findDALInstance(false, Currency.class, new Value(Currency.PROPERTY_ISOCODE, input_row.Currency));&#xA;if (cur==null) {&#xA;  output_row.flag = &quot;-1&quot;;&#xA;  output_row.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + input_row.Currency + &quot;\n&quot;;&#xA;}&#xA;}&#xA;output_row.Type = input_row.Type;&#xA;if (input_row.Type != null) {&#xA;if (service.getReferenceValue(&quot;Financial account type&quot;, input_row.Type) == null) {&#xA;  output_row.flag = &quot;-1&quot;;&#xA;  output_row.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + input_row.Type + &quot;\n&quot;;&#xA;}&#xA;}&#xA;output_row.IsDefault = input_row.IsDefault;&#xA;output_row.BusinessPartner = input_row.BusinessPartner;&#xA;output_row.Location1stLine = input_row.Location1stLine;&#xA;output_row.Location2ndLine = input_row.Location2ndLine;&#xA;output_row.LocationPostalCode = input_row.LocationPostalCode;&#xA;output_row.LocationCity = input_row.LocationCity;&#xA;output_row.LocationRegion = input_row.LocationRegion;&#xA;output_row.LocationCountry = input_row.LocationCountry;&#xA;if ( input_row.LocationCountry!=null &amp;&amp;  input_row.LocationRegion!=null ) {&#xA;  Country country = service.findDALInstance(false, Country.class, new Value(&quot;name&quot;, input_row.LocationCountry));&#xA;  if (country == null) {&#xA;    output_row.flag = &quot;-1&quot;;&#xA;    output_row.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + input_row.LocationCountry + &quot;\n&quot;;&#xA;  } else {&#xA;    Region region = service.findDALInstance(false, Region.class, new Value(&quot;country&quot;, country),new Value(&quot;name&quot;, input_row.LocationRegion));&#xA;    if (region == null) {&#xA;      output_row.flag = &quot;-1&quot;;&#xA;      output_row.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + input_row.LocationRegion + &quot;\n&quot;;&#xA;    } else {&#xA;      output_row.LocationCountry = input_row.LocationCountry;&#xA;      output_row.LocationRegion = input_row.LocationRegion;&#xA;    }&#xA;  }&#xA;}&#xA;output_row.BankCode = input_row.BankCode;&#xA;output_row.BranchCode = input_row.BranchCode;&#xA;output_row.BankControlDigit = input_row.BankControlDigit;&#xA;output_row.INENo = input_row.INENo;&#xA;output_row.SwiftCode = input_row.SwiftCode;&#xA;output_row.AccountControlDigit = input_row.AccountControlDigit;&#xA;output_row.PartialAccountNo = input_row.PartialAccountNo;&#xA;output_row.AccountNo = input_row.AccountNo;&#xA;output_row.IBAN = input_row.IBAN;&#xA;output_row.InitialBalance = input_row.InitialBalance;&#xA;output_row.CreditLimit = input_row.CreditLimit;&#xA;output_row.MatchingAlgorithm = input_row.MatchingAlgorithm;&#xA;if (input_row.MatchingAlgorithm != null) {&#xA;MatchingAlgorithm ma = service.findDALInstance(false, MatchingAlgorithm.class, new Value(MatchingAlgorithm.PROPERTY_NAME, input_row.MatchingAlgorithm));&#xA;  if (ma == null) {&#xA;    output_row.flag = &quot;-1&quot;;&#xA;    output_row.whyError += service.Utility_messageBD(&quot;IDL_BAD_REFERENCE&quot;) + input_row.MatchingAlgorithm + &quot;\n&quot;;&#xA;  }&#xA;}&#xA;&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.openbravo.model.common.businesspartner.BusinessPartner;&#xA;import org.openbravo.model.common.currency.Currency;&#xA;import org.openbravo.model.common.geography.Country;&#xA;import org.openbravo.model.common.geography.Location;&#xA;import org.openbravo.model.common.geography.Region;&#xA;import org.openbravo.model.financialmgmt.payment.MatchingAlgorithm;&#xA;import org.openbravo.idl.proc.Value;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Reference checks" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_3">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_2" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;" contextMode="false"/>
+    <elementParameter field="TABLE" name="CONDITIONS" contextMode="false">
+      <elementValue elementRef="INPUT_COLUMN" value="flag"/>
+      <elementValue elementRef="FUNCTION" value="$source == null? false : $source.toLowerCase().compareTo($target) $operator 0"/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Check FLAG" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tFilterRow_2">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_4" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;service.logRecordError(&#xA;    input_row.whyError,&#xA;    input_row.Organization,&#xA;    input_row.Name,&#xA;    input_row.Description,&#xA;    input_row.Currency,&#xA;    input_row.Type,&#xA;    input_row.IsDefault,&#xA;    input_row.BusinessPartner,&#xA;    input_row.Location1stLine,&#xA;    input_row.Location2ndLine,&#xA;    input_row.LocationPostalCode,&#xA;    input_row.LocationCity,&#xA;    input_row.LocationRegion,&#xA;    input_row.LocationCountry,&#xA;    input_row.BankCode,&#xA;    input_row.BranchCode,&#xA;    input_row.BankControlDigit,&#xA;    input_row.INENo,&#xA;    input_row.SwiftCode,&#xA;    input_row.AccountControlDigit,&#xA;    input_row.PartialAccountNo,&#xA;    input_row.AccountNo,&#xA;    input_row.IBAN,&#xA;    input_row.InitialBalance,&#xA;    input_row.CreditLimit,&#xA;    input_row.MatchingAlgorithm);&#xA;&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Log error" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_4">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_5" contextMode="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;service.finishRecordProcess(&#xA;    input_row.Organization,&#xA;    input_row.Name,&#xA;    input_row.Description,&#xA;    input_row.Currency,&#xA;    input_row.Type,&#xA;    input_row.IsDefault,&#xA;    input_row.BusinessPartner,&#xA;    input_row.Location1stLine,&#xA;    input_row.Location2ndLine,&#xA;    input_row.LocationPostalCode,&#xA;    input_row.LocationCity,&#xA;    input_row.LocationRegion,&#xA;    input_row.LocationCountry,&#xA;    input_row.BankCode,&#xA;    input_row.BranchCode,&#xA;    input_row.BankControlDigit,&#xA;    input_row.INENo,&#xA;    input_row.SwiftCode,&#xA;    input_row.AccountControlDigit,&#xA;    input_row.PartialAccountNo,&#xA;    input_row.AccountNo,&#xA;    input_row.IBAN,&#xA;    input_row.InitialBalance,&#xA;    input_row.CreditLimit,&#xA;    input_row.MatchingAlgorithm);&#xA;" contextMode="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;" contextMode="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Finish" contextMode="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row" contextMode="false"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false" contextMode="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value="" contextMode="false"/>
+    <metadata connector="FLOW" name="tJavaRow_5">
+      <column comment="" key="false" length="40" name="Organization" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="true" length="60" name="Name" nullable="false" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="255" name="Description" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Type" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="5" name="IsDefault" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="BusinessPartner" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location1stLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="Location2ndLine" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="LocationPostalCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCity" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationRegion" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="60" name="LocationCountry" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BankCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="4" name="BranchCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="BankControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="9" name="INENo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="SwiftCode" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="1" name="AccountControlDigit" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="PartialAccountNo" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="50" name="AccountNo" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="34" name="IBAN" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="InitialBalance" nullable="true" pattern="" precision="0" type="id_String"/>
+      <column comment="" key="false" length="20" name="CreditLimit" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="60" name="MatchingAlgorithm" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="2" name="flag" nullable="true" pattern="" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="1000" name="whyError" nullable="true" pattern="" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tFilterRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row4" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_1" target="tJavaRow_3">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="REJECT" label="row3" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFilterRow_1" target="tJavaRow_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tFilterRow_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row7" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFilterRow_2" target="tJavaRow_5">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <connection connectorName="REJECT" label="row5" lineStyle="0" metaname="tFilterRow_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFilterRow_2" target="tJavaRow_4">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true" contextMode="false"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" contextMode="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Organization"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Description"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Currency"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IsDefault"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BusinessPartner"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location1stLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Location2ndLine"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationPostalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationRegion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LocationCountry"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BranchCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="BankControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INENo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SwiftCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountControlDigit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PartialAccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AccountNo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="IBAN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InitialBalance"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CreditLimit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MatchingAlgorithm"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="whyError"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false" contextMode="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true" contextMode="false"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;" contextMode="false"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute" contextMode="false"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value="" contextMode="false"/>
+    <elementParameter field="TABLE" name="THRESHLODS" contextMode="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true" contextMode="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" contextMode="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240" contextMode="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250" contextMode="false"/>
+  </subjob>
+</talendfile:ProcessType>

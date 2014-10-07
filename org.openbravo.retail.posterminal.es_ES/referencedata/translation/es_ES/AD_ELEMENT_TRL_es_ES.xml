@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_ELEMENT" version="">
+  <row id="04E35B3219FA457FAB7D3F898E74842B" trl="N">
+    <value column="Name" isTrl="Y" original="Data type">Tipo de datos</value>
+    <value column="PrintName" isTrl="Y" original="Data type">Tipo de datos</value>
+    <value column="Description" isTrl="Y" original="List of the diferents types of data which are synchronized by Web POS">Lista de los diferentes tipos de datos sincronizados por Web POS</value>
+    <value column="Help" isTrl="Y" original="List of the diferents types of data which are synchronized by Web POS">Lista de los diferentes tipos de datos sincronizados por Web POS</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0BD92938738E48A5B59C77B4EA12677C" trl="N">
+    <value column="Name" isTrl="Y" original="Default Your Company POS Login Image">Logo de compañía en la ventana de inicio del TPV</value>
+    <value column="PrintName" isTrl="Y" original="Default Your Company POS Login Image">Logo de compañía en la ventana de inicio del TPV</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Image that will be shown in the POS login window. If it is not set, it will be used the default one set in &quot;System Info&quot; window in the field &quot;Default Your Company Login Image&quot;">Imagen que se muestra en la ventana de inicio del TPV. Si está vacía, se usará la definida en la ventana "Información del Sistema".</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="155B975F19D54C63B76346997AA9D43D" trl="N">
+    <value column="Name" isTrl="N" original="Error">Error</value>
+    <value column="PrintName" isTrl="N" original="Error">Error</value>
+    <value column="Description" isTrl="Y" original="Error message">Mensaje de error</value>
+    <value column="Help" isTrl="Y" original="It is the error message got when trying to import JSON data as an order.">Mensaje de error obtenido al intentar importar el objeto JSON como un pedido.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1D728488F3784208A534A49433515F11" trl="N">
+    <value column="Name" isTrl="Y" original="Status">Estado del pedido</value>
+    <value column="PrintName" isTrl="Y" original="Order status">Estado del pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="1E5C1F5D43FF4ABE8ED353EB1BC04B60" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">Terminal TPV</value>
+    <value column="PrintName" isTrl="Y" original="POS Terminal">Terminal TPV</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="21C6A21A85304F5B888D055BFC57DA52" trl="N">
+    <value column="Name" isTrl="Y" original="Name">Nombre</value>
+    <value column="PrintName" isTrl="Y" original="Name">Nombre</value>
+    <value column="Description" isTrl="Y" original="A non-unique identifier for a payment type">Identificador no-único del tipo de pago</value>
+    <value column="Help" isTrl="Y" original="A descriptive identifier of a payment type that is used as a default search option along with the search key (that is unique and mostly shorter).">Un identificador descriptivo para un tipo de pago que se usa como opción por defecto para realizar búsquedas junto con su valor (que es único y generalmente más corto).</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="24EE4A53777F4D8FB195A31F68FEC827" trl="N">
+    <value column="Name" isTrl="Y" original="Cashupreport">Informe del cierre de caja</value>
+    <value column="PrintName" isTrl="Y" original="Cashupreport">Informe del cierre de caja</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="25960A78765D434AB6A6249209BF453E" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="PrintName" isTrl="Y" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="Description" isTrl="Y" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="Help" isTrl="Y" original="A POS Terminal Type configures all generic settings that can be used by different POS Terminals. Each of these terminals defines the specific settings.">Cada Tipo de TPV configura todos los parámetros genéricos que pueden ser usados por diferentes TPVs, cada uno de estos terminales define los parámetros específicos.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="25E5985FBE744386BD452C7857C9D412" trl="N">
+    <value column="Name" isTrl="Y" original="Document Type for Returns">Tipo de Documento para Devoluciones</value>
+    <value column="PrintName" isTrl="Y" original="Doc Type for Returns">Tipo de Documento para Devoluciones</value>
+    <value column="Description" isTrl="Y" original="Document type for returns">Tipo de Documento para Devoluciones</value>
+    <value column="Help" isTrl="Y" original="Document type used for return orders generated in back end when a POS ticket is marked to be returned.&#10;&#10;Document Types determine document sequence and processing rules.">Tipo de documento usado en los pedidos que se generan en el backoffice cuando se marca un ticket en el TPV para ser devuelto.
+    
+El tipo de documento determina el número de secuencia así como las reglas de procesado.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="293FFEE1EB8B4C8E99914352EC1BB394" trl="N">
+    <value column="Name" isTrl="Y" original="Generate Invoice for Orders">Crear factura para los pedidos</value>
+    <value column="PrintName" isTrl="Y" original="Generate Invoice for Orders">Crear factura para los pedidos</value>
+    <value column="Description" isTrl="Y" original="If checked, an invoice will be automatically generated for every order">Si está seleccionado, se generará una factura para todos los pedidos</value>
+    <value column="Help" isTrl="Y" original="If checked, a sales invoice will be automatically generated for every sales order. This is actually a default value, and can always be changed from the Web POS once the order has been created, by clicking on the &quot;Invoice&quot; button.">Si está seleccionado, se generará una factura para todos los pedidos This is actually a default value, and can always be changed from the Web POS once the order has been created, by clicking on the "Invoice" button.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2AAD5C20599C4F458554D4CD58A48E0D" trl="N">
+    <value column="Name" isTrl="Y" original="G/L Item for Cash Drop/Deposit">Concepto Contable para Movimientos</value>
+    <value column="PrintName" isTrl="Y" original="G/L Item for Cash Drop/Deposit">Concepto Contable para Movimientos</value>
+    <value column="Description" isTrl="Y" original="G/L item for cash drop/deposit">Concepto Contable para Movimientos</value>
+    <value column="Help" isTrl="Y" original="In case of automated funds movement in cash up process, two new transactions for this movement are created both in current and destination financial accounts. These transactions will use this G/L Item.">Cuando el proceso de cierre de caja realiza automáticamente movimientos entre cajas, cada uno de estos movimientos genera dos transacciones, una en la cuenta finaniera del terminal y otra en la de destio. Estas transacciones usarán este concepto contable.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2E268C131AD7430FA1F126D7FDD969B6" trl="N">
+    <value column="Name" isTrl="Y" original="JSON order data">Datos JSON del pedido</value>
+    <value column="PrintName" isTrl="Y" original="JSON order data">Datos JSON del pedido</value>
+    <value column="Description" isTrl="Y" original="JSON object sent from POS terminal">Objeto JSON enviado por el Terminal TPV</value>
+    <value column="Help" isTrl="Y" original="POS terminal serializes tickets in JSON format to be sent to back end. ">El terminal serializa los pedido para enviarlos al back end. </value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="2F46E382920D4F71A2FF7C91483B3C0A" trl="N">
+    <value column="Name" isTrl="Y" original="Border color">Color del borde</value>
+    <value column="PrintName" isTrl="Y" original="Border color">Color del borde</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="37B06BC649444A1F94C69D8FB9D3AA7C" trl="N">
+    <value column="Name" isTrl="N" original="Obpos_Currency_Panel_ID">Obpos_Currency_Panel_ID</value>
+    <value column="PrintName" isTrl="N" original="Obpos_Currency_Panel_ID">Obpos_Currency_Panel_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="390A5FBA416740C69A93D42AFFA6DE66" trl="N">
+    <value column="Name" isTrl="Y" original="Document Type for Quotations">Tipo de documento para los presupuestos</value>
+    <value column="PrintName" isTrl="Y" original="Document type for Quotations">Tipo de documento para los presupuestos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="42A6208E610743FC98F0E6EB8E6EC6EF" trl="N">
+    <value column="Name" isTrl="Y" original="Refund Provider">Proveedor de reembolso</value>
+    <value column="PrintName" isTrl="Y" original="Refund Provider">Proveedor de reembolso</value>
+    <value column="Description" isTrl="N" original="External payment provider who processes this kind of refund types.">External payment provider who processes this kind of refund types.</value>
+    <value column="Help" isTrl="N" original="External payment provider who processes this kind of refund types.">External payment provider who processes this kind of refund types.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="49487CC06DDE4CEEA49F7C7586138DD4" trl="N">
+    <value column="Name" isTrl="Y" original="Back color">Color de fondo</value>
+    <value column="PrintName" isTrl="Y" original="Back color">Color de fondo</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="4AED8A4CE763499894142AB6EBA1438D" trl="N">
+    <value column="Name" isTrl="Y" original="G/L Item for Writeoff">Concepto contable para la cancelación de la diferencia</value>
+    <value column="PrintName" isTrl="Y" original="GLItem for Writeoff">Concepto contable para la cancelación de la diferencia</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="In case the amount received when paying a ticket differs from what is expected, this G/L Item reflects this difference.">En caso de que el importe recibido al pagar un pedido difiera de lo esperado, este concepto contable refleja esta diferencia.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="50732E9493AF449C89CF0D22DEC93F3C" trl="N">
+    <value column="Name" isTrl="Y" original="Allow Not to Move">Permitir no mover</value>
+    <value column="PrintName" isTrl="Y" original="Allow Not to Move">Permitir no mover</value>
+    <value column="Description" isTrl="Y" original="Allow not to move">Permitir no mover</value>
+    <value column="Help" isTrl="Y" original="Allows user to decide to keep all counted amount in current financial account.">Permite al usuario elegir dejar todo el dinero contado en el TPV.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5347FEEE5B034B85A6D05013D68F9C74" trl="N">
+    <value column="Name" isTrl="Y" original="Show stock screen">Mostrar la pantalla de stock</value>
+    <value column="PrintName" isTrl="Y" original="Show stock screen">Mostrar la pantalla de stock</value>
+    <value column="Description" isTrl="Y" original="If this flag is active a intermediate screen will appear in web pos when the product is added to the ticket. The screen will inform about the stock of the product">Si esta opción está activa,una pantalla intermedia aparecerá cuando se añada un producto al pedido. La pantalla informará sobre el stock del producto</value>
+    <value column="Help" isTrl="Y" original="If this flag is active a intermediate screen will appear in web pos when the product is added to the ticket. The screen will inform about the stock of the product">Si esta opción está activa,una pantalla intermedia aparecerá cuando se añada un producto al pedido. La pantalla informará sobre el stock del producto</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="5A9B6C6641EF4A0DB95D6BFBC05318F5" trl="N">
+    <value column="Name" isTrl="Y" original="Order Quotation No Prefix">Prefijo para el presupuesto del pedido</value>
+    <value column="PrintName" isTrl="Y" original="Order Quotation No Prefix">Prefijo para el presupuesto del pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="This is the prefix added to the document number for Quotations.">Este es el prefijo que se añade al número de documento del presupuesto.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="62A841257A754D77A4E2C193FAB3A6F2" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Up">Cierre de caja</value>
+    <value column="PrintName" isTrl="Y" original="Cash Up">Cierre de caja</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="62DB91A540B340E6A7AC39459569FFAA" trl="N">
+    <value column="Name" isTrl="Y" original="Group Orders in One Invoice">Agrupar pedidos en una factura</value>
+    <value column="PrintName" isTrl="Y" original="Group Orders in One Invoice">Agrupar pedidos en una factura</value>
+    <value column="Description" isTrl="Y" original="Group Orders in One Invoice">Agrupar pedidos en una factura</value>
+    <value column="Help" isTrl="Y" original="In the cash up process, orders without invoice are grouped in one invoice per business partner.">En el proceso de cierre de caja, los pedidos sin factura se agrupan en una única factura para cada tercero.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6722815581AD468BAFAB517BB2AC2003" trl="N">
+    <value column="Name" isTrl="Y" original="Open Drawer Before Closing Ticket">Abrir el cajón antes de cerrar el pedido</value>
+    <value column="PrintName" isTrl="Y" original="Open Drawer Before Closing Ticket">Abrir el cajón antes de cerrar el pedido</value>
+    <value column="Description" isTrl="Y" original="A flag which define if we want to open drawer before paying ticket">Opción que define si queremos abrir el cajón antes de pagar el pedido</value>
+    <value column="Help" isTrl="Y" original="A flag which define if we want to open drawer before paying ticket">Opción que define si queremos abrir el cajón antes de pagar el pedido</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6C7C3521C10D4DEBAB4450F2E44AC299" trl="N">
+    <value column="Name" isTrl="N" original="Obpos_Userterminal_Access_ID">Obpos_Userterminal_Access_ID</value>
+    <value column="PrintName" isTrl="N" original="Obpos_Userterminal_Access_ID">Obpos_Userterminal_Access_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6E0A2FC7280F4126A8C632C96BB6F08F" trl="N">
+    <value column="Name" isTrl="Y" original="G/L Item for Deposits">Concepto Contable para Ingresos</value>
+    <value column="PrintName" isTrl="Y" original="G/L Item for Deposits">Concepto Contable para Ingresos</value>
+    <value column="Description" isTrl="Y" original="G/L Item for Deposits">Concepto Contable para Ingresos</value>
+    <value column="Help" isTrl="Y" original="When creating a deposit, two transactions are created: one in current financial account deposit the amount and another one in the origin financial account to take it out from there. Both of these transactions will use this G/L Item.">Cuando se hace un ingreso, se crean dos transacciones: una en la cuenta financiera del TPV para realizar el ingreso y otra en la cuenta financiera de origen para retirarlo de ésta. Ambas transacciones usan este concepto contable.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7146407151614B58BC7AAB9BF0137B6E" trl="N">
+    <value column="Name" isTrl="Y" original="Payment Type">Obpos_App_Payment_ID</value>
+    <value column="PrintName" isTrl="Y" original="Payment Type">Método de Pago</value>
+    <value column="Description" isTrl="N" original="Payment Type"/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7454B46A5CE64DD699C1373CF1646F46" trl="N">
+    <value column="Name" isTrl="Y" original="Send Email">Enviar Email</value>
+    <value column="PrintName" isTrl="Y" original="Send Email">Enviar Email</value>
+    <value column="Description" isTrl="Y" original="A flag indicating whether this order is going to be sent by email.">Opción para enviar el pedido por Email</value>
+    <value column="Help" isTrl="Y" original="A flag indicating whether this order is going to be sent by email. This option belongs to Web POS.">Opción para enviar el pedido por Email. Esta opción pertenece a Web POS.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="Y" original="Send Email">Enviar Email</value>
+    <value column="PO_PrintName" isTrl="Y" original="Send Email">Enviar Email</value>
+  </row>
+  <row id="77709949EE2B43A588A7005C003D08DF" trl="N">
+    <value column="Name" isTrl="Y" original="Scale URL">URL de la Balanza</value>
+    <value column="PrintName" isTrl="Y" original="Scale URL">URL de la Balanza</value>
+    <value column="Description" isTrl="Y" original="Scale URL">URL de la Balanza</value>
+    <value column="Help" isTrl="Y" original="URL where the scale is in.">URL de la Balanza</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="7827371DDC18467DAC2F8ECD68691268" trl="N">
+    <value column="Name" isTrl="Y" original="Time to Incrementally Refresh Masterdata (in minutes)">Minutos para actualizar los datos maestros incrementalmente</value>
+    <value column="PrintName" isTrl="Y" original="Time to Incrementally Refresh Masterdata (in minutes)">Minutos para actualizar los datos maestros incrementalmente</value>
+    <value column="Description" isTrl="N" original="Time to incrementally refresh masterdata (in minutes)"/>
+    <value column="Help" isTrl="N" original="This field allows the user to specify the interval of time between every incremental refresh of the master data (which includes business partners, products, tax information, ...). This time is specified in minutes.&#10;&#10;The incremental refresh is much lighter, less expensive and therefore can be completed quicker than a total refresh, but will not detect deletions of master data records.&#10;&#10;So, if this field is set to 60, the master data will be refreshed every 60 minutes, if the user is logged in.">This field allows the user to specify the interval of time between every incremental refresh of the master data (which includes business partners, products, tax information, ...). This time is specified in minutes.
+
+The incremental refresh is much lighter, less expensive and therefore can be completed quicker than a total refresh, but will not detect deletions of master data records.
+
+So, if this field is set to 60, the master data will be refreshed every 60 minutes, if the user is logged in.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="79160EA002E24CE686C91226AEF1CBAF" trl="N">
+    <value column="Name" isTrl="Y" original="Payment Method">Método de Pago</value>
+    <value column="PrintName" isTrl="Y" original="Payment Method">Método de Pago</value>
+    <value column="Description" isTrl="Y" original="Payment Method">Método de Pago</value>
+    <value column="Help" isTrl="Y" original="Generic POS Terminal payment method which defines the generic settings for it, such as payment method (card, cash...) and cash up and cash management settings.">Define los parámtros genéricos para un método de pago TPV, como son la forma de pago (tarjeta, efectivo...) y las opciones para gestión y cierre de caja.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="817096B54C6E42519F0713ED39F0599F" trl="N">
+    <value column="Name" isTrl="Y" original="Email Status">Estado del Email</value>
+    <value column="PrintName" isTrl="Y" original="Email Status">Estado del Email</value>
+    <value column="Description" isTrl="Y" original="The Email Status indicates the status of sending email.">El estado del Email indica en que estado se encuentra el envío.</value>
+    <value column="Help" isTrl="Y" original="The Email Status indicates the status of sending email. To change the status of sending email, complete the order in Web POS application.">El estado del Email indica en que estado se encuentra el envío. Para cambiar el estado, completa el pedido en la aplicación Web POS.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="Y" original="Email Status">Estado del Email</value>
+    <value column="PO_PrintName" isTrl="Y" original="Email Status">Estado del Email</value>
+  </row>
+  <row id="83A5E76D7056433A8592EC0358DD249C" trl="N">
+    <value column="Name" isTrl="Y" original="POS Classname">Nombre de clase del TPV</value>
+    <value column="PrintName" isTrl="Y" original="POS Classname">Nombre de clase del TPV</value>
+    <value column="Description" isTrl="Y" original="POS Classname window or action.">Ventana o acción del nombre de clase TPV</value>
+    <value column="Help" isTrl="Y" original="POS Classname represents a POS window or action can be assigned to roles.">El nombre de clase del TPV representa una ventana o una acción que puede ser asignada a los roles.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="8430BB8113094DA3975CF8257E3B62F1" trl="N">
+    <value column="Name" isTrl="Y" original="Allow Pay on Credit">Allow pay on credit</value>
+    <value column="PrintName" isTrl="Y" original="Allow Pay on Credit">Allow pay on credit</value>
+    <value column="Description" isTrl="N" original="Allow Pay on Credit"/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="95EEFDC7A68540E1B1999C8105F97DB2" trl="N">
+    <value column="Name" isTrl="Y" original="Allow Move Everything">Permitir retirar todo</value>
+    <value column="PrintName" isTrl="Y" original="Allow Move Everything">Permitir retirar todo</value>
+    <value column="Description" isTrl="Y" original="Allow Move Everything">Permitir retirar todo</value>
+    <value column="Help" isTrl="Y" original="Includes an option in cash up process to move everything from current financial account, so cash up process would set it to 0.">Incluye una opción en el proceso de cierre de caja para retirar el importe total contada de la cuenta financiera del TPV, quedándose esta a 0.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="978AB1EC829942829FE4D62020F3A3CD" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">Obpos_Applications_ID</value>
+    <value column="PrintName" isTrl="Y" original="POS Terminal">Obpos_Applications_ID</value>
+    <value column="Description" isTrl="Y" original="Web POS terminal">Terminal TPV</value>
+    <value column="Help" isTrl="Y" original="Web POS terminal">Terminal TPV</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9894CEF35FEE419C9A8D05C8D17303E9" trl="N">
+    <value column="Name" isTrl="Y" original="Allow Variable Amount">Permitir importe variable</value>
+    <value column="PrintName" isTrl="Y" original="Allow Variable Amount">Permitir importe variable</value>
+    <value column="Description" isTrl="Y" original="Allow to keep a variable amount">Permitir importe variable</value>
+    <value column="Help" isTrl="Y" original="When checked, it will include in the cash up process the option to allow user to manually define the amount to be kept in current financial account.">Cuando esta opción está seleccionada, se incluye en la lista de opciones en el cierre de caja una que permite al usuario definir manualmente el importe a mantener en la cuenta financiera del TPV.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9A08A9CC0EAD4B1DADB9CC98D0137EE4" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Up Date">Fecha del cierre de caja</value>
+    <value column="PrintName" isTrl="Y" original="Cash Up Date">Fecha del cierre de caja</value>
+    <value column="Description" isTrl="N" original="Cash Up Date"/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="9E95A0C00A6C4BDF8BC7D88C0BD4292A" trl="N">
+    <value column="Name" isTrl="Y" original="Default Tab for Web POS">Default tab for Web POS</value>
+    <value column="PrintName" isTrl="Y" original="Default Tab for Web POS">Default tab for Web POS</value>
+    <value column="Description" isTrl="N" original="Indicates which tab is selected in Web POS when the window is opened or a order is completed">Indicates which tab is selected in Web POS when the window is opened or a order is completed</value>
+    <value column="Help" isTrl="N" original="Indicates which tab is selected in Web POS when the window is opened or a order is completed">Indicates which tab is selected in Web POS when the window is opened or a order is completed</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="A7B5555743F2408B83F6F83B228871BC" trl="N">
+    <value column="Name" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="PrintName" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="Description" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="Help" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="PO_Description" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="PO_Help" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="PO_Name" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+    <value column="PO_PrintName" isTrl="Y" original="Grouped Product">Producto agrupado</value>
+  </row>
+  <row id="A9B6086ABEC242D18380A6E11E0D17FE" trl="N">
+    <value column="Name" isTrl="Y" original="G/L Item for Withdrawals">Concepto contable para reintegros</value>
+    <value column="PrintName" isTrl="Y" original="G/L Item for Withdrawals">Concepto contable para reintegros</value>
+    <value column="Description" isTrl="Y" original="G/L Item for Withdrawals">Concepto contable para reintegros</value>
+    <value column="Help" isTrl="Y" original="When creating a withdrawal, two transactions are created: one in current financial account to take out the amount and another one in the destination financial account to deposit it there. Both of these transactions will use this G/L Item.">Cuando se retira efectivo, se crean dos transacciones: una en la cuenta financiera del TPV para retirar el dinero y otra en la cuenta de destino para depositarlo. Ambas tranacciones utilizan este concepto contable.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B04DB872B1D349309E77CDC5B533AC6A" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Differences">Diferencias de caja</value>
+    <value column="PrintName" isTrl="Y" original="Cash Differences">Diferencias de caja</value>
+    <value column="Description" isTrl="Y" original="G/L item for cash differences">Concepto contable para diferencias de caja</value>
+    <value column="Help" isTrl="Y" original="This is the G/L Item used in Cash Up process in case there are differences between the expected and counted amount in this payment type. In this case a new transaction with this G/L Item and difference between expected and counted amounts will be created.">Es el concepto contable que usa el proceso de cierre da caja si de que haya habido diferencias entre la cantidad esperada y la contada. En este caso, se crea una transacción con este concepto contable y con una cantidad igual a la diferencia entre lo contado y esperado.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B0BC80EECCEF42849D73662764F03944" trl="N">
+    <value column="Name" isTrl="Y" original="Clear error">Eliminar el error</value>
+    <value column="PrintName" isTrl="Y" original="Clear error">Eliminar el error</value>
+    <value column="Description" isTrl="Y" original="Delete fixed error">Eliminar el error</value>
+    <value column="Help" isTrl="Y" original="Once the error has been fixed and saved again, it is possible to remove it from the table by executing this process.">Una vez que el error ha sido subsanado y guardado de nuevo, es posible elminarlo ejecutando este proceso.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B359ED0480614607863ABD8AFFEF4087" trl="N">
+    <value column="Name" isTrl="Y" original="Allow Deposits">Permitir ingresos</value>
+    <value column="PrintName" isTrl="Y" original="Allow Deposits">Permitir ingresos</value>
+    <value column="Description" isTrl="Y" original="Allow Deposits">Permitir ingresos</value>
+    <value column="Help" isTrl="Y" original="When deposits are allowed, it will be possible for POS users to deposit money in current financial account through Cash Management process.">Cuando se permiten ingresos, los usuarios podrán depositar efectivo en la cuenta financiera del TPV mediante el proceso de gestión de caja.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B8445AA4E57D4124A1CFE9B7EC5016BE" trl="N">
+    <value column="Name" isTrl="Y" original="Order Document No Prefix">Prefijo para el número de documento del pedido </value>
+    <value column="PrintName" isTrl="Y" original="Order Document No Prefix">Prefijo para el número de documento del pedido </value>
+    <value column="Description" isTrl="Y" original="Order Document No Prefix">Prefijo para el número de documento del pedido </value>
+    <value column="Help" isTrl="Y" original="Each terminal needs to define a unique prefix to be added to the sales order document numbers generated from POS tickets making them unique.">Prefijo para el número de documento del pedido </value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C368F632C733475CACA3898B2218CC40" trl="N">
+    <value column="Name" isTrl="Y" original="POS Product Category">Categoría de Producto TPV</value>
+    <value column="PrintName" isTrl="Y" original="POS Product Category">Categoría de Producto TPV</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Discount types marked as &quot;POS Product Category&quot; will be shown in POS as a Product Category, inside it all discounts of this type will be included.&#10;&#10;The types flagged in this way, are required to implement a js method that will be invoked when an item inside the category is added. This method is in charge of implementing the logic to add the products.">Los tipos de descuentos marcados como "Categoría de producto TPV" se mostrará en el TPV como una categoría de productos, donde se incluiran todos los descuentos de este tipo.
+
+Los tipos marcados de este modo, tienen que implementar un método js que se invocará cuando se añada un elemento a la categoría. Este método se encarga de la lógica para agregar los productos.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C6831B6B74094363B29F2896B5DA54C7" trl="N">
+    <value column="Name" isTrl="N" original="Hardware URL">Hardware URL</value>
+    <value column="PrintName" isTrl="N" original="Hardware URL">Hardware URL</value>
+    <value column="Description" isTrl="N" original="Hardware URL">Hardware URL</value>
+    <value column="Help" isTrl="Y" original="URL used by the printer and customer display.">URL usada para la impresora y el display del cliente.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C6BA1658F53D4450BA251FE8015C8012" trl="N">
+    <value column="Name" isTrl="Y" original="Allow Withdrawals">Permitir reintegros</value>
+    <value column="PrintName" isTrl="Y" original="Allow Drops">Permitir reintegros</value>
+    <value column="Description" isTrl="Y" original="Allow Withdrawals">Permitir reintegros</value>
+    <value column="Help" isTrl="Y" original="When withdrawals are allowed, it will be possible for POS users to drop money from current financial account from Cash Management process.">Cuando se permiten reintegros, los usuarios TPV pueden retirar dinero de la cuenta financiera actual mediante la Gestión de Caja.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="C8F58079BD734350BBBA73E18F12B526" trl="N">
+    <value column="Name" isTrl="Y" original="Reconciliation">Reconciliación</value>
+    <value column="PrintName" isTrl="Y" original="Reconciliation">Reconciliación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="CDA952493BCC4A6E81D6594E1A7B94CA" trl="N">
+    <value column="Name" isTrl="Y" original="Payment Provider">Proveedor de pago</value>
+    <value column="PrintName" isTrl="Y" original="Payment Provider">Proveedor de pago</value>
+    <value column="Description" isTrl="Y" original="External payment provider who processes this kind of payment types.">Proveedor de pagos externo que procesa este tipo de métodos de pago.</value>
+    <value column="Help" isTrl="Y" original="External payment provider who processes this kind of payment types.">Proveedor de pagos externo que procesa este tipo de métodos de pago.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D228AAEC54A34EA5BBB8606FA125F83F" trl="N">
+    <value column="Name" isTrl="Y" original="Time to Fully Refresh Masterdata (in minutes)">Minutos para actualizar completamente los datos maestros</value>
+    <value column="PrintName" isTrl="Y" original="Time to Fully Refresh Masterdata (in minutes)">Minutos para actualizar completamente los datos maestros</value>
+    <value column="Description" isTrl="N" original="Time to fully refresh masterdata (in minutes)"/>
+    <value column="Help" isTrl="Y" original="This field allows the user to specify the interval of time between every refresh of the master data (which includes business partners, products, tax information, ...). This time is specified in minutes.&#10;&#10;The total refresh can be a very expensive operation, and if done too much frequently it can tax the server, and decrease the performance of all POS terminals, so it is strongly recommended to set it to a high value (60 minutes, or greater if possible).&#10;&#10;So, if this field is set to 60, the master data will be refreshed every 60 minutes, if the user is logged in.">Este campo permite al usuario especificar el intervalo de tiempo entre cada actualización de los datos maestros (que incluye a terceros, productos, impuestos, ...). Este tiempo se indica en minutos.
+
+La actualización total puede ser una operación muy costosa, y si se hace con demasiada frecuencia puede relentizar el servidor, y disminuir el rendimiento de todos los terminales de punto de venta, por lo que es muy recomendable ajustarlo a un valor alto (60 minutos, o más si posible).
+
+Por lo tanto, si este campo está establecido en 60, los datos maestros se actualizan cada 60 minutos, si el usuario está autentificado</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="DA705E89C1C34B5DBF646A5D1C16A517" trl="N">
+    <value column="Name" isTrl="Y" original="Cash">Efectivo</value>
+    <value column="PrintName" isTrl="Y" original="Cash">Efectivo</value>
+    <value column="Description" isTrl="Y" original="A flag indicating is a cash method.">Opción para indicar que es método de pago en efectivo.</value>
+    <value column="Help" isTrl="Y" original="A payment type checked as flag shows when selected a panel with the coins and bank notes of the currency associated with this payment type.">Un tipo de pago marcado como "Efectivo", mostrará el panel de monedas y billetes si tiene creado uno en la pestaña "Monedas y billetes" de su tipo de moneda asociada.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E104C51645C2480885157F125A9EAC81" trl="N">
+    <value column="Name" isTrl="N" original="Obpos_Errors_ID">Obpos_Errors_ID</value>
+    <value column="PrintName" isTrl="N" original="Obpos_Errors_ID">Obpos_Errors_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E6D9D4462E574910AA248EBAE2BF96B9" trl="N">
+    <value column="Name" isTrl="Y" original="Default POS Role">Rol del TPV por defecto</value>
+    <value column="PrintName" isTrl="Y" original="EM_OBPOS_Default POS Role">Rol del TPV por defecto</value>
+    <value column="Description" isTrl="Y" original="Default POS Role">Rol del TPV por defecto</value>
+    <value column="Help" isTrl="Y" original="Role to be used by default in Web POS. This role must have access to Web POS form.">Rol a usar por defecto en Web POS. Este rol tiene que tener acceso al formulario del Web POS</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="E9A79CB8043A4F01A17C442B6A6CB351" trl="N">
+    <value column="Name" isTrl="N" original="Use Barcode Scanner">Usar Lector de Códigos</value>
+    <value column="PrintName" isTrl="N" original="Use Barcode Scanner">Usar Lector de Códigos</value>
+    <value column="Description" isTrl="N" original="Check this property when an external barcode scanner will be used with this terminal type">Seleccione esta propiedad cuando use un lector de códigos externo con este tipo de terminal</value>
+    <value column="Help" isTrl="N" original="If this property is checked, the Web POS will take into account that an external barcode scanner is going to be used in this POS terminal type. Checking this option and then not connecting an external barcode will cause the virtual keyboard to be shown continuously in some devices (specifically, in iOS devices (iPads, iPhones)).&#10;&#10;If this option is not checked, then the barcode scanners will not be detected in the application even if they are correctly connected to the system.">Si esta propiedad está seleccionada, TPV Web tendrá en cuenta que se usará un lector de códigos de barra externo en este tipo de terminal. Marcando esta opción y no conectando un lector de código de barras se mostrará un teclado virtual continuamente en algunos dispositivos(concretamente, en dispositivos iOS (iPads, iPhones)).
+
+Si esta opción no está seleccionada, los lectores no serán detectados por la aplicación aunque esten bien conectado al sistema.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EC33F46B900B4EE091EB1175CB1AA24E" trl="N">
+    <value column="Name" isTrl="Y" original="Document Type for Reconciliations">Tipo de documento para reconciliaciones</value>
+    <value column="PrintName" isTrl="Y" original="Document Type for Reconciliations">Tipo de documento para reconciliaciones</value>
+    <value column="Description" isTrl="Y" original="Document type for reconciliations">Tipo de documento para reconciliaciones</value>
+    <value column="Help" isTrl="Y" original="When Cash Up process is executed from POS, a reconciliation including all transactions done in that terminal since last cash up is created. This is the document type used for that reconciliation.">Cuando el proceso cierre de caja se ejecuta desde los puntos de venta, se crea una reconciliación incluyendo todas las transacciones hechas en ese terminal desde el último cierre de caja. Este es el tipo de documento que se utiliza para dicha reconciliación.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="EE2B7A44BD9F474280CD205A7E03C05F" trl="N">
+    <value column="Name" isTrl="Y" original="Save again">Guardar de nuevo</value>
+    <value column="PrintName" isTrl="Y" original="Save again">Guardar de nuevo</value>
+    <value column="Description" isTrl="Y" original="Try to process the order again">Intentar procesar el pedido nuevamente</value>
+    <value column="Help" isTrl="Y" original="After fixing the data, the order can be processed again. Depending on the error, to fix the data can require to edit the JSON data to adjust it, or to properly set up configuration.">Después de arreglar los datos, el pedido puede ser procesado de nuevo. En función del error, arreglar los datos puede requerir de editor el objeto JSON o de configurar correctamente la aplicación.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F17730174F0C4E81AA724CFE5A29720F" trl="N">
+    <value column="Name" isTrl="Y" original="Automate Movement to Other Account">Automatizar movimiento a otra cuenta</value>
+    <value column="PrintName" isTrl="Y" original="Automate Movement to Other Account">Automatizar movimiento a otra cuenta</value>
+    <value column="Description" isTrl="Y" original="Automate Movement to Other Account">Automatizar movimiento a otra cuenta</value>
+    <value column="Help" isTrl="Y" original="When this field is flagged, Cash Up process will transfer founds from the financial account in this payment method to the one defined in the close event. In case it is not flagged, Cash Up process will create a reconciliation but will keep all the amount in current financial account.&#10;&#10;If checked, different options on how to do this movement can be defined by setting the rest of fields in this group.">Cuando este campo está activado, el proceso de cierre de caja transferirá fondos de la cuenta finaniera en este método de pago a la cuenta definida en el evento de cierre de caja. Si no está activo, el cierre de caja crea un reconciliación pero mantiene toda la cantidad.
+Estando activo, se pueden configurar las diferentes opciones para realizar este movimiente con el resto de campos de este grupo.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="F8BE69312A68424E90808A2DD987EE51" trl="N">
+    <value column="Name" isTrl="Y" original="Keep Fixed Amount">Mantener cantidad fija</value>
+    <value column="PrintName" isTrl="Y" original="Keep Fixed Amount">Mantener cantidad fija</value>
+    <value column="Description" isTrl="Y" original="Keep Fixed Amount">Mantener cantidad fija</value>
+    <value column="Help" isTrl="Y" original="Allows to keep a fixed amount in the current financial account.">Se permite mantener una cantidad prefijada en la cuenta financiera del TPV.</value>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813321B791013321CDED310055" trl="N">
+    <value column="Name" isTrl="Y" original="Is scale">Se pesa</value>
+    <value column="PrintName" isTrl="Y" original="Is scale">Se pesa</value>
+    <value column="Description" isTrl="Y" original="Whether this product is sold by weight">Indica si un producto se vende por peso.</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813321F15D013322049BD00044" trl="N">
+    <value column="Name" isTrl="N" original="Y">Y</value>
+    <value column="PrintName" isTrl="N" original="Y">Y</value>
+    <value column="Description" isTrl="Y" original="Position Y">Posición Y</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813321F15D01332204F97C0049" trl="N">
+    <value column="Name" isTrl="N" original="X">X</value>
+    <value column="PrintName" isTrl="N" original="X">X</value>
+    <value column="Description" isTrl="Y" original="Position X">Posición X</value>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

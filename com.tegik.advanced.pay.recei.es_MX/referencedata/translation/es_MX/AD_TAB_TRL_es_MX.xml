@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="15ECCF8974044A81982F57F9F1E1A67B" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de pagos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Sales Invoice Payment Plans">Plan de pago de factura de ventas</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Sales invoice payment plan information is shown grouped in two sections. ">Sales invoice payment plan information is shown grouped in two sections. </value>
+  </row>
+  <row id="1EA4A3F31A27483A8C6E93176AE912D3" trl="Y">
+    <value column="Name" original="Accounting">Contabilidad</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Accounting information related to the doubtful debt">Información contable relacionada con el dudoso cobro</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Accounting information related to the doubtful debt">Accounting information related to the doubtful debt</value>
+  </row>
+  <row id="2A9BA5FDA0F8470D881F8EA9DEDCC598" trl="Y">
+    <value column="Name" original="Accounting History">Historia Contable</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Accounting history">Historia Contable</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab shows the accounting history of a given transaction.">This tab shows the accounting history of a given transaction.</value>
+  </row>
+  <row id="2ECAED4620B840BA8DD738140F58A629" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de pagos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Sales Invoice Payment Plans">Plan de pago de factura de ventas</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Purchase invoice payment plan information is shown grouped in two sections. ">Purchase invoice payment plan information is shown grouped in two sections. </value>
+  </row>
+  <row id="3FD616A223E44621806A8573068B6C62" trl="Y">
+    <value column="Name" original="Doubtful Debts Process">Proceso de cobro dudoso</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect.">Las deudas de dudoso cobro son aquellas que tienen probabilidad de no ser cobradas.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.">Doubtful debts are those debts which a business or individual is unlikely to be able to collect. The reasons for potential non payment can include disputes over supply, delivery, at the conditioner of item or the appearance of financial stress within a customer's operations. When such a dispute occurs it is prudent to add this debt or portion thereof to the doubtful debt reserve.</value>
+  </row>
+  <row id="5B9941AC1F6A4529A76FCA7CDA0A7D7A" trl="Y">
+    <value column="Name" original="Transactions old">Transacciones</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="60825C9E68644DBC9C530DDCABE05A6E" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de pagos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.">Lista de pagos previstos contra una factura y un plan de pago asociado a esa factura</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The payment plan tab lists the scheduled payments expected against the invoice.">The payment plan tab lists the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="6707D7449A8D45DB851F608BA88329C8" trl="Y">
+    <value column="Name" original="Payment Details">Detalles de Pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Displays the details of the payments (pre-payments or regular payments) made for the order or for the invoice/s of the order.">Displays the details of the payments (pre-payments or regular payments) made for the order or for the invoice/s of the order.</value>
+  </row>
+  <row id="79DFBE24B39742AD877E3163643E619F" trl="Y">
+    <value column="Name" original="Cleared items">Líneas de Reconciliación</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Cleared transactions">Líneas de Reconciliación</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab shows the transactions cleared or set as matched in a reconciliation.">This tab shows the transactions cleared or set as matched in a reconciliation.</value>
+  </row>
+  <row id="7A8D43541F8C49F1BD8A431A0041BF89" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de pagos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.">Lista de pagos previstos contra una factura y un plan de pago asociado a esa factura</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The payment plan tab lists the scheduled payments expected against the invoice.">The payment plan tab lists the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="7BE8B207C88947C498677C172ECDDECC" trl="Y">
+    <value column="Name" original="Doubtful Debt Method">Método de dudoso cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="81644A22CC4D4B879AA71C33C30E00A4" trl="Y">
+    <value column="Name" original="Pick and Edit Lines">Elegir y seleccionar líneas</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="89C009D99323470DB51F100697E2F50C" trl="Y">
+    <value column="Name" original="Lines">Líneas</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="9380E9AFB1074FB98030E5549D7FF346" trl="Y">
+    <value column="Name" original="Financial Account Defaults">Valores por defecto de cuenta financiera</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Default accounts for the financial accounts in this accounting schema">Cuentas por defecto para las cuentas financieras en este esquema contable</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Default ledger accounts for the financial accounts.">Default ledger accounts for the financial accounts.</value>
+  </row>
+  <row id="9817E22E2536417F8C9AEC8D5FA33E18" trl="Y">
+    <value column="Name" original="Payment Details">Detalles del pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of payment made details against a particular invoice based on the payment in plan..">Lista de detalles de pago realizados a una factura basados en el plan de pago.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab displays the details of the payments made against the invoice.">This tab displays the details of the payments made against the invoice.</value>
+  </row>
+  <row id="9D859A2A50F44562AFA21AAF2DF91B8A" trl="Y">
+    <value column="Name" original="Doubtful Debt">Dudoso cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="A94442B27F664A41BF64735DFA76FB4D" trl="Y">
+    <value column="Name" original="Payment Plan (old)">Plan de Pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of scheduled payments in expected against a particular invoice and payment plan associated with that invoice.">Lista de pagos planificados para una factura y plan de pago asociado a esa factura.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The payment plan tab lists the scheduled payments expected against the invoice.">The payment plan tab lists the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="B82C02920AA84E8DB57D553185BD2F06" trl="Y">
+    <value column="Name" original="Payment Details">Detalles de Cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Displays the details of the payments (pre-payments or regular payments) received for the order or for the invoice/s of the order.">Displays the details of the payments (pre-payments or regular payments) received for the order or for the invoice/s of the order.</value>
+  </row>
+  <row id="C095D2CC39704DBE8B906B7CD7710968" trl="Y">
+    <value column="Name" original="Reconciliations old">Reconciliaciones</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="D4D450A66C754D65940DBC36B11779C8" trl="Y">
+    <value column="Name" original="Lines">Líneas</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E4DC11F751F34F0DAE11A4D856CD99EB" trl="Y">
+    <value column="Name" original="Doubtful Debt">Dudoso cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="EB0466B2A22343F28773B356D292BC7E" trl="Y">
+    <value column="Name" original="Payment Plan (old)">Plan de Cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of scheduled payments expected against a particular invoice and payment plan associated with that invoice.">Lista de cobros planificados para una factura y plan de cobro asociado a esa factura.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="List of the scheduled payments expected against the invoice.">List of the scheduled payments expected against the invoice.</value>
+  </row>
+  <row id="EB0E0C5A58344F7FA345097E7365CD22" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de Cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Shows the total amount expected to be collected upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.">Shows the total amount expected to be collected upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.</value>
+  </row>
+  <row id="F6C2283A21314407BBBB23FF14B85ED4" trl="Y">
+    <value column="Name" original="Payment Details">Detalles del pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of payment made details against a particular invoice based on the payment in plan..">Lista de detalles de pago realizados a una factura basados en el plan de pago.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab displays the details of the payments made against the invoice.">This tab displays the details of the payments made against the invoice.</value>
+  </row>
+  <row id="F9751D712A804D57B97A36803843F2D7" trl="Y">
+    <value column="Name" original="Payment Details (old)">Detalles de Pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of payments made details against a particular invoice based on the payment plan">Lista de los detalles de los pagos realizados contra una factura basados en el plan de pagos</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab displays the details of the payments made against the invoice.">This tab displays the details of the payments made against the invoice.</value>
+  </row>
+  <row id="FA57D75B1BBB4583B4A777008A29BF54" trl="Y">
+    <value column="Name" original="Payment Plan">Plan de Pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Shows the total amount expected to be paid upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.">Shows the total amount expected to be paid upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.</value>
+  </row>
+  <row id="FA66A130BE8B48E88BF4F5A6E2FA0CDD" trl="Y">
+    <value column="Name" original="Doubtful Debt Run">Procesado del dudoso cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FD40D9C2F1F14943933DEFEF4A8458E4" trl="Y">
+    <value column="Name" original="Payment Details (old)">Detalles de Cobro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="List of payment made details against a particular invoice based on the payment in plan..">Lista de los detalles de cobros  realizados contra una factura basados en el plan de cobros..</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Display the details of the payments received against the invoice.">Display the details of the payments received against the invoice.</value>
+  </row>
+  <row id="FF8080812F213146012F2135BC25000E" trl="Y">
+    <value column="Name" original="Transactions old 2">Transacción</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The transaction tab lists all the deposit and withdrawal transactions of the financial account.">The transaction tab lists all the deposit and withdrawal transactions of the financial account.</value>
+  </row>
+  <row id="FF80808130BB89090130BB9A3A2B0043" trl="Y">
+    <value column="Name" original="Accounting">Contabilidad</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The accounting tab is a read-only tab which showa every financial account transaction posting.">The accounting tab is a read-only tab which showa every financial account transaction posting.</value>
+  </row>
+  <row id="FF8080813320657F0133209DE21B0042" trl="Y">
+    <value column="Name" original="Reconciliations">Reconciliaciones</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The reconciliation tab shows the reconciliations created manually if no matching algorithm is assigned to the financial account as well as the ones created while matching an imported bank statement file otherwise.">The reconciliation tab shows the reconciliations created manually if no matching algorithm is assigned to the financial account as well as the ones created while matching an imported bank statement file otherwise.</value>
+  </row>
+</compiereTrl>

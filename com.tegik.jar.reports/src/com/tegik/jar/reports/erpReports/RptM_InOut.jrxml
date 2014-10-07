@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RptM_InOut" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="238"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="default" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="8"/>
+	<style name="Report_Title" fontName="Bitstream Vera Sans" fontSize="18"/>
+	<style name="Report_Subtitle" forecolor="#555555" fontName="Bitstream Vera Sans" fontSize="14"/>
+	<style name="Report_Data_Label" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Report_Data_Field" fontName="Bitstream Vera Sans" fontSize="11" isBold="false"/>
+	<style name="Total_Field" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="GroupHeader_DarkGray" mode="Opaque" forecolor="#FFFFFF" backcolor="#555555" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="12" isBold="true"/>
+	<style name="Group_Data_Label" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Group_Data_Field" fontName="Bitstream Vera Sans" fontSize="11"/>
+	<style name="Detail_Header" mode="Opaque" forecolor="#FFFFFF" backcolor="#5D5D5D" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Line" fontName="Bitstream Vera Sans" fontSize="8">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==1)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+	</style>
+	<style name="Total_Gray" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="Detail_Data_Label" mode="Opaque" backcolor="#CCCCCC" fontName="Bitstream Vera Sans" fontSize="10" isBold="true"/>
+	<style name="Detail_Data_Field" mode="Opaque" backcolor="#CCCCCC" fontName="Bitstream Vera Sans" fontSize="10"/>
+	<style name="Group_Footer" fontName="Bitstream Vera Sans" fontSize="11" isBold="true"/>
+	<style name="Report_Footer" isDefault="true" vAlign="Middle" fontName="Bitstream Vera Sans" fontSize="11"/>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NUMBERFORMAT" class="java.text.DecimalFormat" isForPrompting="false"/>
+	<parameter name="SUBREP_RptM_InOut_Lines" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["http://localhost/openbravo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREP_RptM_InOut_Lines_Salida" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT M_INOUT.M_INOUT_ID,C_ORDER.documentno as order_documentno,(SELECT COALESCE(firstname,'') || ' ' ||COALESCE (lastname,'')
+FROM ad_user use
+inner join c_order ord on use.ad_user_id = ord.salesrep_id
+inner join c_orderline ordl on ord.c_order_id = ordl.c_order_id
+inner join m_inoutline iol on ordl.c_orderline_id = iol.c_orderline_id and iol.m_inout_id = M_INOUT.m_inout_id limit 1) as vendedor_salida,
+       (SELECT bp.url
+        FROM c_bpartner bp
+          INNER JOIN ad_orginfo oi
+                  ON bp.c_bpartner_id = oi.c_bpartner_id
+                 AND oi.ad_org_id = AD_ORG.ad_org_id) pag_web,
+       (SELECT bpl.phone
+        FROM c_bpartner_Location bpl
+        inner join c_bpartner bp on bpl.c_bpartner_id = bp.c_bpartner_id
+          INNER JOIN ad_orginfo oi
+                  ON bp.c_bpartner_id = oi.c_bpartner_id
+                 AND oi.ad_org_id = AD_ORG.ad_org_id) org_telefono,
+       COALESCE(AD_USER.NAME,'') AS contacto,
+       COALESCE(TO_CHAR(C_BPARTNER.TAXID),'') AS rfc,
+       COALESCE(TO_CHAR(ADDRESS1),'') AS direccion,
+       COALESCE(TO_CHAR(POSTAL),'') AS cp,
+       COALESCE(TO_CHAR(C_LOCATION.CITY),'') AS ciudad,
+       COALESCE(TO_CHAR(C_COUNTRY.NAME),'') AS pais,
+       COALESCE(TO_CHAR(C_BPARTNER_LOCATION.PHONE),'') AS telefono,
+       COALESCE(TO_CHAR(C_BPARTNER_LOCATION.FAX),'') AS fax,
+       (SELECT COALESCE(firstname,'') || ' ' ||COALESCE (lastname,'')
+        FROM ad_user
+        WHERE ad_user_id = c_order.salesrep_id)
+AS vendedor,
+(select COALESCE(firstname,'')||' '|| COALESCE(lastname,'') from ad_user where ad_user_id = c_order.createdby) AS comprador,
+(select printname from c_doctype where c_doctype_id = m_inout.c_doctype_id) AS titulo,
+ M_INOUT.ISSOTRX, C_BPARTNER_LOCATION.NAME, COALESCE(TO_CHAR(C_LOCATION.ADDRESS1),'')||COALESCE(TO_CHAR(C_LOCATION.ADDRESS2),'') AS ADDRESS,
+COALESCE(TO_CHAR(C_LOCATION.POSTAL),'')||' - '||COALESCE(TO_CHAR(C_LOCATION.CITY),'') AS POSTAL,
+C_REGION.NAME AS REGION, M_INOUT.DOCUMENTNO, M_INOUT.MOVEMENTDATE, C_BPARTNER.VALUE AS PARTNER_VALUE, C_BPARTNER.TAXID,
+MAX(C_ORDER.POREFERENCE) AS POREFERENCE, AD_CLIENT.DESCRIPTION AS ENTITY, C_LOCATION_DESCRIPTION(AD_ORGINFO.C_LOCATION_ID) AS ENTITY_LOCATION,
+C_ORDER.DATEPROMISED, AD_ORGINFO.AD_ORG_ID AS ORGANIZATIONID, M_INOUT.docstatus AS STATUS, C_BPARTNER.NAME AS BP_NAME, AD_ORG.social_name AS ORG_NAME,
+AD_ORGINFO.TAXID AS ORG_TAXID, C_Location_Description(AD_ORGINFO.C_LOCATION_ID) AS LOCATION,
+(COALESCE(TO_CHAR(AD_USER.NAME), '') || CASE WHEN AD_USER.NAME IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(C_BPARTNER.TAXID), '') || CASE WHEN C_BPARTNER.TAXID IS null THEN '' ELSE CHR(13) END ||
+COALESCE(TO_CHAR(ADDRESS1), '') || CASE WHEN ADDRESS1 IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(POSTAL), '') || CASE WHEN POSTAL IS null THEN '' ELSE CHR(13) END ||
+COALESCE(TO_CHAR(C_LOCATION.CITY), '') || CASE WHEN C_LOCATION.CITY IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(C_COUNTRY.NAME), '') || CASE WHEN C_COUNTRY.NAME IS null THEN '' ELSE CHR(13) END ||
+COALESCE(TO_CHAR(C_BPARTNER_LOCATION.PHONE), '') || CASE WHEN C_BPARTNER_LOCATION.PHONE IS null THEN '' ELSE CHR(13) END || COALESCE(TO_CHAR(C_BPARTNER_LOCATION.FAX), '') ||
+CASE WHEN C_BPARTNER_LOCATION.FAX IS null THEN '' ELSE CHR(13) END) AS BP_DATA,
+SHOWLOGO, SHOWCOMPANYDATA, HEADERMARGIN
+FROM C_BPARTNER_LOCATION right join M_INOUT on M_INOUT.C_BPARTNER_LOCATION_ID = C_BPARTNER_LOCATION.C_BPARTNER_LOCATION_ID
+			 left join C_LOCATION on C_BPARTNER_LOCATION.C_LOCATION_ID = C_LOCATION.C_LOCATION_ID
+			 left join C_COUNTRY on C_LOCATION.C_COUNTRY_ID = C_COUNTRY.C_COUNTRY_ID
+			 left join C_REGION on C_LOCATION.C_REGION_ID = C_REGION.C_REGION_ID
+			 left join C_ORDER on M_INOUT.C_ORDER_ID = C_ORDER.C_ORDER_ID
+			 --left join AD_ORG on AD_ORG.AD_ORG_ID = AD_ORGINFO.AD_ORG_ID
+			 left join AD_USER on C_ORDER.AD_USER_ID = AD_USER.AD_USER_ID
+			 left join C_POC_DOCTYPE_TEMPLATE ON C_POC_DOCTYPE_TEMPLATE.C_DOCTYPE_ID = M_INOUT.C_DOCTYPE_ID,
+     C_BPARTNER, AD_CLIENT, AD_ORGINFO, AD_ORG
+WHERE M_INOUT.C_BPARTNER_ID = C_BPARTNER.C_BPARTNER_ID
+AND M_INOUT.AD_CLIENT_ID = AD_CLIENT.AD_CLIENT_ID
+AND AD_ORGINFO.AD_ORG_ID = (SELECT o.AD_ORG_ID FROM AD_ORG o JOIN AD_OrgType t USING (AD_ORGTYPE_ID)
+                            WHERE AD_ISORGINCLUDED(M_INOUT.AD_ORG_ID, o.ad_org_id, M_INOUT.ad_client_id)<>-1
+                                  AND (t.IsLegalEntity='Y' OR t.IsAcctLegalEntity='Y'))
+AND COALESCE(C_BPARTNER_LOCATION.ISSHIPTO, 'Y') = 'Y'
+AND M_INOUT.M_INOUT_ID IN ($P{DOCUMENT_ID})
+AND AD_ORGINFO.AD_ORG_ID = AD_ORG.AD_ORG_ID
+GROUP BY M_INOUT.M_INOUT_ID, M_INOUT.ISSOTRX, C_BPARTNER.NAME, C_BPARTNER_LOCATION.NAME, C_LOCATION.ADDRESS1, C_LOCATION.ADDRESS2, C_LOCATION.POSTAL, C_LOCATION.CITY, C_REGION.NAME,
+M_INOUT.DOCUMENTNO, M_INOUT.MOVEMENTDATE, C_BPARTNER.VALUE, C_BPARTNER.TAXID, AD_CLIENT.DESCRIPTION, AD_ORGINFO.C_LOCATION_ID, C_ORDER.DATEPROMISED, AD_ORGINFO.ad_org_id, M_INOUT.docstatus,
+AD_ORG.social_name, AD_ORGINFO.TAXID, AD_USER.NAME, C_BPARTNER_LOCATION.PHONE, C_BPARTNER_LOCATION.FAX, SHOWLOGO, SHOWCOMPANYDATA, HEADERMARGIN, AD_ORGINFO.ad_client_id, C_COUNTRY.NAME,c_order.salesrep_id,m_inout.c_doctype_id,C_ORDER.documentno,c_order.createdby,ad_org.ad_org_id]]>
+	</queryString>
+	<field name="m_inout_id" class="java.lang.String"/>
+	<field name="order_documentno" class="java.lang.String"/>
+	<field name="vendedor_salida" class="java.lang.String"/>
+	<field name="pag_web" class="java.lang.String"/>
+	<field name="org_telefono" class="java.lang.String"/>
+	<field name="contacto" class="java.lang.String"/>
+	<field name="rfc" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<field name="cp" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="pais" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.String"/>
+	<field name="fax" class="java.lang.String"/>
+	<field name="vendedor" class="java.lang.String"/>
+	<field name="comprador" class="java.lang.String"/>
+	<field name="titulo" class="java.lang.String"/>
+	<field name="issotrx" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="postal" class="java.lang.String"/>
+	<field name="region" class="java.lang.String"/>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="movementdate" class="java.sql.Timestamp"/>
+	<field name="partner_value" class="java.lang.String"/>
+	<field name="taxid" class="java.lang.String"/>
+	<field name="poreference" class="java.lang.String"/>
+	<field name="entity" class="java.lang.String"/>
+	<field name="entity_location" class="java.lang.String"/>
+	<field name="datepromised" class="java.sql.Timestamp"/>
+	<field name="organizationid" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="bp_name" class="java.lang.String"/>
+	<field name="org_name" class="java.lang.String"/>
+	<field name="org_taxid" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="bp_data" class="java.lang.String"/>
+	<field name="SHOWLOGO" class="java.lang.String"/>
+	<field name="SHOWCOMPANYDATA" class="java.lang.String"/>
+	<field name="HEADERMARGIN" class="java.lang.String"/>
+	<group name="PrintLarge" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="120" splitType="Stretch">
+				<printWhenExpression><![CDATA[new Boolean($F{HEADERMARGIN}.equalsIgnoreCase("large"))]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="PrintMedium" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="80" splitType="Stretch">
+				<printWhenExpression><![CDATA[new Boolean($F{HEADERMARGIN}.equalsIgnoreCase("medium"))]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="PrintSmall" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="50" splitType="Stretch">
+				<printWhenExpression><![CDATA[new Boolean($F{HEADERMARGIN}.equalsIgnoreCase("small"))]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="M_INOUT_ID" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{m_inout_id}]]></groupExpression>
+		<groupHeader>
+			<band height="161" splitType="Stretch">
+				<image scaleImage="RetainShape" hAlign="Right" vAlign="Top" isUsingCache="true">
+					<reportElement key="image-1" x="372" y="0" width="176" height="81">
+						<printWhenExpression><![CDATA[new Boolean($F{SHOWLOGO}.equalsIgnoreCase("Y"))]]></printWhenExpression>
+					</reportElement>
+					<imageExpression class="java.awt.Image"><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylegal", $F{organizationid})]]></imageExpression>
+				</image>
+				<textField isBlankWhenNull="false">
+					<reportElement key="textField-22" x="133" y="92" width="239" height="56" forecolor="#FF0000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="36"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[(($F{status}.compareTo("VO")==0) ? "ANULADO" : " ")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement key="staticText-2" x="0" y="6" width="320" height="37"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="SansSerif" size="26"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{titulo}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement positionType="Float" mode="Transparent" x="0" y="47" width="330" height="57" backcolor="#FFFFFF"/>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="1" width="330" height="11" backcolor="#B9D5FE"/>
+						<textField pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="330" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[($F{issotrx}.equals("Y") ? "Cliente: " :"Proveedor: ") +$F{bp_name}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="12" width="330" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="330" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["R.F.C: "+$F{rfc}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="23" width="330" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="330" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["Dirección Fiscal: "+$F{direccion} +", "+$F{cp} +", "+$F{ciudad} +", "+$F{pais}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="34" width="330" height="11" backcolor="#B9D5FE"/>
+						<textField pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="330" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["Teléfono: "+$F{telefono}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="45" width="330" height="11" backcolor="#B9D5FE"/>
+						<textField pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="330" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["Contacto: " + $F{contacto}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Transparent" x="345" y="82" width="210" height="57" backcolor="#FFFFFF"/>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="1" width="210" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="210" height="11" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{org_name}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="12" width="210" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="210" height="11" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["R.F.C.: "+$F{org_taxid}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="23" width="210" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="210" height="11" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{location}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="34" width="210" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="210" height="11" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Right" verticalAlignment="Top">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["Tel. "+$F{org_telefono}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="45" width="210" height="11" backcolor="#B9D5FE"/>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="210" height="11" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Right" verticalAlignment="Top">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA["Web "+$F{pag_web}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Transparent" x="0" y="113" width="303" height="45" backcolor="#FFFFFF"/>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="0" width="301" height="11" backcolor="#B9D5FE"/>
+						<textField isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="111" y="0" width="190" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="111" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle" markup="none">
+								<font fontName="SansSerif" size="7" isBold="true"/>
+							</textElement>
+							<text><![CDATA[No. de Documento:]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="11" width="301" height="11" backcolor="#B9D5FE"/>
+						<textField isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="111" y="0" width="190" height="11"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{issotrx}.equals("Y") ? $F{vendedor_salida} : $F{comprador}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="111" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle" markup="none">
+								<font fontName="SansSerif" size="7" isBold="true"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{issotrx}.equals("Y") ? "Agente:":"Comprador:"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="33" width="301" height="11" backcolor="#B9D5FE">
+							<printWhenExpression><![CDATA[$F{issotrx}.equals("N")]]></printWhenExpression>
+						</reportElement>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="111" y="0" width="190" height="11" backcolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{order_documentno}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="111" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle" markup="none">
+								<font fontName="SansSerif" size="7" isBold="true"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{issotrx}.equals("Y") ? "No. de orden de venta:":"No. de orden de compra:"]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement positionType="Float" mode="Transparent" x="0" y="22" width="301" height="11" backcolor="#B9D5FE"/>
+						<textField>
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="111" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle" markup="none">
+								<font fontName="SansSerif" size="7" isBold="true"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{issotrx}.equals("Y") ? "Fecha de Envío:":"Fecha de Recepción:"]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="111" y="0" width="190" height="11" backcolor="#FFFFFF"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="7"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[org.openbravo.erpCommon.utility.Utility.applyCountryDateFormat($F{movementdate},$F{organizationid})]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-1" x="0" y="0" width="550" height="35">
+					<printWhenExpression><![CDATA[$F{issotrx}.equals("N")]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="M_INOUT_ID">
+					<subreportParameterExpression><![CDATA[$F{m_inout_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="NUMBERFORMAT">
+					<subreportParameterExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.getCountryNumberFormat($F{organizationid},$P{NUMBERFORMAT})]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBREP_RptM_InOut_Lines}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-1" x="0" y="0" width="550" height="35">
+					<printWhenExpression><![CDATA[$F{issotrx}.equals("Y")]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="M_INOUT_ID">
+					<subreportParameterExpression><![CDATA[$F{m_inout_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="NUMBERFORMAT">
+					<subreportParameterExpression><![CDATA[org.openbravo.erpCommon.utility.Utility.getCountryNumberFormat($F{organizationid},$P{NUMBERFORMAT})]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUBREP_RptM_InOut_Lines_Salida}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="43" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-33" x="429" y="16" width="100" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pagina " + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-34" style="default" x="531" y="16" width="18" height="18"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-3" x="0" y="12" width="550" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="134">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-34" style="default" x="531" y="104" width="18" height="18"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-3" x="0" y="100" width="550" height="1"/>
+			</line>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-33" x="429" y="104" width="100" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pagina " + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="43" y="50" width="59" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Surtió]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="453" y="50" width="59" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Recibió]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="248" y="50" width="59" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Revisó]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-3" x="27" y="38" width="102" height="1"/>
+			</line>
+			<line>
+				<reportElement key="line-3" x="429" y="36" width="102" height="1"/>
+			</line>
+			<line>
+				<reportElement key="line-3" x="228" y="37" width="102" height="1"/>
+			</line>
+		</band>
+	</lastPageFooter>
+</jasperReport>

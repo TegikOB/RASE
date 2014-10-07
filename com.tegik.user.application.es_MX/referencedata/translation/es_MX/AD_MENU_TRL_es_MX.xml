@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="1005400002" trl="Y">
+    <value column="Name" original="Register">Registrar</value>
+    <value column="Description" original="Register your installation of Openbravo ERP in order to receive development and commercial updates and information">Registra tu instalación de Openbravo ERP para recibir actualizaciones 
+comerciales y de desarollo así como información.</value>
+  </row>
+  <row id="6FD97ECD72B4405FA1442FD8673AE571" trl="Y">
+    <value column="Name" original="Navigation Bar Components">Componentes de Barra de Navegacion</value>
+    <value column="Description" original="Navigation Bar Components">Componentes de Barra de Navegación</value>
+  </row>
+  <row id="7CBC6E3EE9CD4121BC336C5DF5524085" trl="Y">
+    <value column="Name" original="Grid Configuration at System Level">Defina la configuración de la red a nivel de sistema</value>
+    <value column="Description" original="Define the Grid Configuration at System Level">Defina la configuración de la red a nivel de sistema</value>
+  </row>
+  <row id="B487FABEB36F45C28E22CD309914FD71" trl="Y">
+    <value column="Name" original="View Implementation">Implementacion de Vista</value>
+    <value column="Description" original="A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.">Una vista se muestra en el interfaz de usuario principal. La implementacion 
+de vista define la clase Java encargada de generar el Javascript del lado 
+del cliente.</value>
+  </row>
+  <row id="F8841106C28A4D769320A8010FD6E8DC" trl="Y">
+    <value column="Name" original="Grid Configuration at Window/Tab/Field Level">configuración de red a nivel de tabulación y campo</value>
+    <value column="Description" original="Grid Configuration at Tab and Field level">configuración de red a nivel de tabulación y campo</value>
+  </row>
+  <row id="FF8080812EB90459012EBA72B4E7004D" trl="Y">
+    <value column="Name" original="Alert Management">Gestión de Alertas</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="FF8081813157AED2013157C149F40039" trl="Y">
+    <value column="Name" original="Window Personalization">Personalización de Ventana</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

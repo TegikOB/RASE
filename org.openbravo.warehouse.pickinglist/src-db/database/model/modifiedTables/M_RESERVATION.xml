@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_RESERVATION">
+    <table name="M_RESERVATION" primaryKey="M_RESERVATION_KEY">
+      <column name="EM_OBWPL_GENERATEDBYPICKING" primaryKey="false" required="true" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <check name="EM_OBWPL_M_RESERV_GENBYPICKING"><![CDATA[EM_OBWPL_GENERATEDBYPICKING IN ('Y', 'N')]]></check>
+    </table>
+  </database>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="027E3BB9B7114CA68F976D0C0133E682" trl="Y">
+    <value column="Name" original="Payment Type">Tipo de pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="2628B44F02DF452A95BEDAF2050CC617" trl="Y">
+    <value column="Name" original="Coins and Bank notes">Monedas y billetes de banco</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Coins and bank notes panel for the Web POS window.">Monedas y billetes de banco del panel para la ventana WebPos</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="28AC9979365E4DD987EA59A3F0787B75" trl="Y">
+    <value column="Name" original="POS Print Templates">Plantilla de Impresio del POS</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="POS Print Templates">Plantilla de Impresio del POS</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Defines print templates to be used from Web POS">Defines print templates to be used from Web POS</value>
+  </row>
+  <row id="33BF870C0F014B08AB1A7A580CD23B56" trl="Y">
+    <value column="Name" original="Reconciliation">Conciliación</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="36BD8C59083849CCA7CF84DE0BABF7AF" trl="Y">
+    <value column="Name" original="Approvals">Aprobaciones</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Keeps track of all approvals granted by supervisors to this Order.">Realiza un seguimiento de todas las homologaciones concedidas por los 
+supervisores de la presente Orden.</value>
+  </row>
+  <row id="4D9F5E9CC0014A96861CEFB64BBF013B" trl="Y">
+    <value column="Name" original="Payment Method">Método de pago</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Payment Method">Método de pago</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Defines each of the payment methods the terminal type can use. When creating the POS terminal based on this type, all payment methods defined here will be available to create different payment types. Note that even they are available, it is not mandatory to create all of them, so it would be possible to have different terminals based on same type but each of them with different payment types.&#10;Here it is defined the payment method (cash, card, etc...) and also which actions are allowed for Cash Management and Cash Up processes.&#10;">Define cada una de las formas de pago del tipo de terminal puede utilizar. 
+Al crear el terminal punto de venta sobre la base de este tipo, todos los 
+métodos de pago definidos aquí estarán disponibles para crear diferentes 
+tipos de pago. Tenga en cuenta que incluso ellos están disponibles, no es 
+obligatorio para crear todos ellos, por lo que sería posible tener 
+diferentes terminales basados ​​en mismo tipo, pero cada uno de ellos con 
+pago diferente types.Here se define el método de pago (efectivo, tarjeta de 
+, etc ..) y también por los que se les permite acciones para la gestión de 
+efectivo y sus procesos.</value>
+  </row>
+  <row id="B6F711C7D81A4DF492C9C874564152C3" trl="Y">
+    <value column="Name" original="POS Terminal Access">Acceso terminal POS</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="This tab contains the POS terminals the user has access to. If there are no terminals defined in this tab, the user has access to all terminals in the system.">Esta ficha contiene los terminales de punto de venta que el usuario tiene 
+acceso. Si no hay terminales definidos en esta ficha, el usuario tiene 
+acceso a todas las terminales del sistema.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab contains the POS terminals the user has access to. If there are no terminals defined in this tab, the user has access to all terminals in the system.">Esta ficha contiene los terminales de punto de venta que el usuario tiene 
+acceso. Si no hay terminales definidos en esta ficha, el usuario tiene 
+acceso a todas las terminales del sistema.</value>
+  </row>
+  <row id="D01039797B054BE69CA5770B8CFB933C" trl="Y">
+    <value column="Name" original="Terminal Type">Tipo de Terminal</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Header of terminal type">Encabezado de tipo de terminal</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Terminal type groups a set of allowed payment methods and defines which are the document types for each of the different documents that are generated in back end from POS transactions.">Grupos de tipos de terminales de un conjunto de métodos permitidos del pago 
+y define cuales son los tipos de documentos de cada uno de los diferentes 
+documentos que se generan en la parte de atrás de transacciones.</value>
+  </row>
+  <row id="EA65410E0F7C439A97C1301C2B882150" trl="Y">
+    <value column="Name" original="Cash Up History">Historia de Efectivo</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="EC4D45180BCB4EB5A78FA8E8F319FD1C" trl="Y">
+    <value column="Name" original="Errors While Importing POS Data">Errores al importar pedidos desde el POS</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Errors while importing POS data">Errores al importar datos de punto de venta</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="This tab shows the list of errors occurred when synchronizing from POS terminal.">Esta pestaña muestra la lista de los errores ocurridos durante la 
+sincronización de la terminal POS.</value>
+  </row>
+</compiereTrl>

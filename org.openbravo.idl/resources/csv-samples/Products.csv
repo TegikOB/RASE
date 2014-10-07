@@ -1,0 +1,10 @@
+"Organization","Search key","Name","Description","UPC/EAN ","Product category ","UOM","Product type ","Production","BillofMaterial","Discontinued","CostType","AttributeSet","AttributeSetValue","Stocked","Purchase","Sale","Tax category ","Standard cost ","Price - Sales ","Price - Purchase "
+"","sva","Service A","Consultant services",3344571,"Services","HR","Service","False","False","FALSE","","",,"False","False","True","IVA 16%",,52.5,
+"","svb","Service B","Consultant services",3344572,"Services","HR","Service","False","False","FALSE","","",,"False","False","True","IVA 16%",,58.5,
+"","fga","Final good A","Final goods for selling",3344561,"Final goods","Kg","Item","False","False","FALSE","Average","Lots",,"True","False","True","IVA 16%",,16.5,
+"","fgb","Final good B","Final goods for selling",3344562,"Final goods","Kg","Item","False","False","FALSE","Average","Lots",,"True","False","True","IVA 16%",,16.5,
+"","fgc","Final good C","Final goods for selling",3344563,"Final goods","Kg","Item","False","False","FALSE","Average","Lots",,"True","False","True","IVA 16%",,17.5,
+"0","rma","Raw material A","Raw material for purchase",3344567,"Raw material","Bg","Item","False","False","FALSE","Average","Serial Number",,"True","True","False","IVA 4%",,,2.5
+"0","rmb","Raw material B","Raw material for purchase",3344534,"Raw material","Bg","Item","False","False","FALSE","Average","Serial Number",,"True","True","False","IVA 4%",,,3.5
+"0","rmc","Raw material C","Raw material for purchase",3344523,"Raw material","Bg","Item","False","False","FALSE","Average","Serial Number",,"True","True","False","IVAa 4%",,,4.5
+

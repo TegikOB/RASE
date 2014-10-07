@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="30D3252389BC4D04AB90D31506034956" trl="Y">
+    <value column="Name" original="level">nivel</value>
+    <value column="PrintName" original="Level">Nivel</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="496EBFE512C849FE8E2BD0C1B1D22F75" trl="Y">
+    <value column="Name" original="msg">mensaje</value>
+    <value column="PrintName" original="Message">Mensaje</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="B29C94B1B6EB4C6381F6F9CDA8D95DDA" trl="Y">
+    <value column="Name" original="loglevel">nivel de log</value>
+    <value column="PrintName" original="Log Level">Nivel de Log</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="B9BD3FBA84B245D884F09F2C32F0FFFA" trl="Y">
+    <value column="Name" original="json">json</value>
+    <value column="PrintName" original="Json">JSON</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="BC8B4ACD54074AE087A8099EA231A998" trl="N">
+    <value column="Name" original="Obmobc_Logclient_ID"/>
+    <value column="PrintName" original="Obmobc_Logclient_ID">Obmobc_Logclient_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D6860200407A411E83BAABF546D3E285" trl="N">
+    <value column="Name" original="Terminal">Terminal</value>
+    <value column="PrintName" original="Terminal">Terminal</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

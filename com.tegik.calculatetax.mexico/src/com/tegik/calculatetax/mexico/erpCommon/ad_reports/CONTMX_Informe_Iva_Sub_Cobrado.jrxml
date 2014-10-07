@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CONTMX_Informe_Iva_subreport1" pageWidth="555" pageHeight="802" orientation="Landscape" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.5000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT pay.num_cobro,
+       date(fechac) fecha_cobro_pago,
+       i.num_factura,
+       date(fechaf) fecha_factura,
+       p.name producto,
+       importepagado impuesto_cobrado_pagado,
+       importetotal,
+       porcentaje
+FROM contmx_reporteiva_des crd
+inner join (select fin_payment_id, documentno as num_cobro from fin_payment fp left join c_bpartner bp on fp.c_bpartner_id= bp.c_bpartner_id) pay on crd.fin_payment_id = pay.fin_payment_id
+inner join (select c_invoice_id, documentno as num_factura from c_invoice) i on crd.c_invoice_id = i.c_invoice_id
+inner join m_product p on crd.m_product_id = p.m_product_id
+WHERE contmx_reporteiva_id = $P{DOCUMENT_ID} AND crd.tipo = 'cobrado'
+ORDER BY i.num_factura]]>
+	</queryString>
+	<field name="num_cobro" class="java.lang.String"/>
+	<field name="fecha_cobro_pago" class="java.sql.Date"/>
+	<field name="num_factura" class="java.lang.String"/>
+	<field name="fecha_factura" class="java.sql.Date"/>
+	<field name="producto" class="java.lang.String"/>
+	<field name="impuesto_cobrado_pagado" class="java.math.BigDecimal"/>
+	<field name="importetotal" class="java.math.BigDecimal"/>
+	<field name="porcentaje" class="java.math.BigDecimal"/>
+	<variable name="sumXPagar" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{impuesto_cobrado_pagado}]]></variableExpression>
+	</variable>
+	<variable name="sumIngreso" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{importetotal}]]></variableExpression>
+	</variable>
+	<variable name="avPorc" class="java.math.BigDecimal" calculation="Average">
+		<variableExpression><![CDATA[$F{porcentaje}]]></variableExpression>
+	</variable>
+	<pageHeader>
+		<band height="28">
+			<frame>
+				<reportElement mode="Opaque" x="1" y="25" width="554" height="2" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="16" y="1" width="172" height="23" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Detalles de IVA por pagar]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="23" width="554" height="2" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="250" y="0" width="57" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero de cobro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="319" y="0" width="69" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de cobro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="57" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero de factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="69" y="0" width="69" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="0" width="112" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="388" y="0" width="51" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IVA por pagar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="439" y="0" width="85" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IVA total reconocido en ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="524" y="0" width="28" height="23" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="552" height="18" forecolor="#000000"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="250" y="0" width="69" height="18"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{num_cobro}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="319" y="0" width="69" height="18"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[$F{fecha_cobro_pago}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="69" height="18"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{num_factura}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="69" y="0" width="69" height="18"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[$F{fecha_factura}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="138" y="0" width="112" height="18"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{producto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="439" y="0" width="58" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{importetotal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="524" y="0" width="28" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{porcentaje}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="388" y="0" width="40" height="18"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{impuesto_cobrado_pagado}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="31">
+			<staticText>
+				<reportElement style="Column header" x="319" y="1" width="69" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total: ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="388" y="1" width="40" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sumXPagar}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="439" y="1" width="58" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sumIngreso}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="524" y="1" width="28" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{avPorc}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="319" y="0" width="236" height="1" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+		</band>
+	</lastPageFooter>
+</jasperReport>

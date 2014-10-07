@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_CALCULO_IMP_IVA">
+    <function name="CONTMX_CALCULO_IMP_IVA" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- variables that will contain the parameters deriving from the AD_PInstance table
+  v_Suma NUMBER;
+  v_Porcentaje NUMBER;
+  v_totalFactura NUMBER;
+  v_totalCobrado NUMBER;
+  v_impuestoInd_c NUMBER:=0; 
+  v_impuestoTotal_c NUMBER:=0; 
+  v_impuestoTotalPagado_c NUMBER:=0; 
+    v_impuestoInd_p NUMBER:=0; 
+  v_impuestoTotal_p NUMBER:=0; 
+  v_impuestoTotalPagado_p NUMBER:=0; 
+  v_diaInicio DATE; -- dua de inicio
+  v_diaFinal DATE; --dia final
+  Cur_Parameter RECORD; -- cursor variable to loop through all parameters
+  v_User VARCHAR2(32);
+  v_Record_ID VARCHAR2(32);
+  v_Client VARCHAR2(32);
+  v_ResultStr VARCHAR(2000):=''; -- will contain text describing the stage the stored procedure is in
+  v_Message VARCHAR(60000):=''; -- will contain the final message to be logged
+  v_Cursor RECORD;
+  v_org_id VARCHAR(32);
+  v_reporte_id VARCHAR(32);
+  v_concepto NUMBER:=0;
+  v_conceptoiva NUMBER:=0;
+  v_totalconcepto NUMBER =0;--concepto contable de cada pago que tiene un impuesto agregado
+  v_porceDeduc NUMERIC=0;--Porcentaje deducible de cada factura 
+ v_seqno NUMBER;
+  iva_gl NUMBER;
+ 
+ BEGIN
+    -- Obtenemos los parametros
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID,
+        i.AD_Client_ID, p.ParameterName, p.P_String, p.P_Number, p.P_Date
+        FROM AD_PInstance i
+          LEFT JOIN AD_PInstance_Para p
+             ON i.AD_PInstance_ID=p.AD_PInstance_ID
+               WHERE i.AD_PInstance_ID=p_PInstance_ID
+                ORDER BY p.SeqNo)
+    LOOP
+      v_User:=Cur_Parameter.AD_User_ID;
+      v_Client:=Cur_Parameter.AD_Client_ID;
+      v_Record_ID:=Cur_Parameter.Record_ID; -- save the m_productprice primary key
+      IF (Cur_Parameter.ParameterName='dia_inicio') THEN
+        v_diaInicio:=Cur_Parameter.P_Date;
+      END IF;
+      IF (Cur_Parameter.ParameterName='dia_final') THEN
+        v_diaFinal:=Cur_Parameter.P_Date;
+      END IF;
+       IF (Cur_Parameter.ParameterName='ad_org_id') THEN
+        v_org_id:=Cur_Parameter.P_String;
+      END IF;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE( 'Record_ID = ' || v_Record_ID) ; 
+
+
+ 
+  BEGIN --BODY
+  
+
+  v_reporte_id =get_uuid();
+
+SELECT COUNT(contmx_reporteiva_id)
+	FROM contmx_reporteiva
+		INTO v_seqno;
+
+   --hacemos el insert para una factura 
+  INSERT INTO contmx_reporteiva(contmx_reporteiva_id, ad_client_id, ad_org_id, isactive, createdby, updatedby, 
+   name,  datei, datef, totaliva, c_currency_id, fecha_conversion, seq)
+      VALUES (v_reporte_id, v_Client, v_org_id, 'Y', v_User, v_User, 
+      'IVA',v_diaInicio, v_diaFinal,0, '130' , now(), 'IVA' || (10000+v_seqno));
+
+
+/*************************************************************
+ciclo para obtener todas las factura  de cada cobro(IVA POR PAGAR)
+**************************************************************/
+
+
+  FOR v_Cursor IN (SELECT fp.documentno AS numero_cobro,
+		   inv.documentno AS numero_factura,
+		   C_CURRENCY_CONVERT_PRECISION(inv.grandtotal , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A')AS total_factura,
+                   inv.dateinvoiced AS fecha_factura,
+                   fp.paymentdate AS fecha_cobro,
+                    C_CURRENCY_CONVERT_PRECISION(fpdv.paidamt , fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS total_pagado,
+                   inv.c_invoice_id, fp.fin_payment_id, 
+		   pd.name AS nombre_producto, inv.ad_org_id ,
+			   C_CURRENCY_CONVERT_PRECISION( il.linenetamt  , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS importe,
+			   il.c_tax_id, 
+			   il.c_invoiceline_id,
+			   pd.m_product_id, 
+			   inv.C_CURRENCY_ID AS moneda
+		    FROM fin_payment AS fp 
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id
+                                        INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+                                        INNER JOIN  m_product AS pd ON pd.m_product_id = il.m_product_id
+					INNER JOIN c_tax AS t ON t.c_tax_id =il.c_tax_id
+						WHERE fp.isreceipt = 'Y'
+						AND fp.status IN ('RDNC', 'RPR', 'RPPC')
+						AND v_diaInicio <= fp.paymentdate
+						AND v_diaFinal >=fp.paymentdate
+						AND (v_org_id = fp.ad_org_id OR v_org_id='0') 
+						AND fp.ad_client_id =v_Client
+						 )
+  LOOP
+--obtenemos datos de la factura y del cobro
+   v_totalFactura := COALESCE(v_Cursor.total_factura,0);  
+   v_totalCobrado :=COALESCE(v_Cursor.total_pagado,0);
+   v_Porcentaje = COALESCE(v_totalCobrado/(v_totalFactura/100)/100,0);
+
+--suma de todos los impuestos por linea
+   SELECT COALESCE(SUM(intax.taxamt),0)
+      INTO v_impuestoInd_c
+		FROM c_invoicelinetax as intax 
+		INNER JOIN C_Tax tax ON tax.C_Tax_ID =intax.C_tax_ID
+			WHERE intax.c_invoiceline_id = v_Cursor.c_invoiceline_id
+			AND tax.em_contmx_isiva='Y';
+			
+ v_impuestoInd_c = C_CURRENCY_CONVERT_PRECISION(v_impuestoInd_c  , v_Cursor.moneda ,'130' ,v_Cursor.fecha_cobro,'S',v_Client ,v_Cursor.ad_org_id,'A');
+
+--proratear el impuesto
+  v_impuestoTotalPagado_c :=v_impuestoInd_c *v_Porcentaje;
+
+--aplicamos la suma al importe de linea total y todos los impuestos		
+    v_impuestoTotal_c :=  v_impuestoTotal_c + v_impuestoTotalPagado_c ;
+
+
+  --insertar el producto
+   INSERT INTO contmx_reporteiva_des(contmx_reporteiva_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteiva_id,c_invoice_id, fin_payment_id, m_product_id, importetotal, importepagado, fechac, fechaf, tipo, porcentaje ) 
+   VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+   v_reporte_id,v_Cursor.c_invoice_id, v_Cursor.fin_payment_id, v_Cursor.m_product_id,
+    round(v_impuestoInd_c,2) ,  round(v_impuestoTotalPagado_c,2) ,v_Cursor.fecha_cobro, v_Cursor.fecha_factura, 'cobrado',  round((v_porcentaje*100 ),2)); 
+
+   END LOOP; 
+
+
+/*************************************************************
+ciclo para obtener todos los conceptos contables desde los cobros (IVA POR PAGAR)
+**************************************************************/
+
+
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fpd.ad_org_id,'A') AS amount, 
+          fp.fin_payment_id,
+	 fpd.amount,
+          fp.c_currency_id AS moneda,
+          fp.paymentdate AS fecha_cobro, fpd.ad_org_id,  
+          gl.c_glitem_id, 
+	  tax.RATE
+         FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+	 INNER JOIN C_TAX tax ON tax.C_TAX_ID = gl.em_contmx_c_tax_id
+         WHERE fp.status IN ('RDNC', 'RPR')
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id =v_Client
+	AND tax.em_contmx_isiva='Y')
+
+LOOP 
+
+  
+
+v_concepto:=v_Cursor.amount -(v_Cursor.amount / ((v_Cursor.rate/100) + 1 ) );
+
+
+--hacemos una conversion de moneda 
+v_concepto = C_CURRENCY_CONVERT_PRECISION(v_concepto  , v_Cursor.moneda ,'130' ,v_Cursor.fecha_cobro,'S',v_Client ,v_Cursor.ad_org_id,'A');
+
+--aplicamos la suma total de impuesto de cobros	
+    v_impuestoTotal_c :=  v_impuestoTotal_c + v_concepto ;
+    
+ INSERT INTO contmx_reporteiva_des(contmx_reporteiva_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteiva_id,fin_payment_id, importepagado, c_glitem_id,fechac, tipo ) 
+    VALUES (get_uuid(),  v_Client, v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id,  round(v_concepto,2),v_Cursor.c_glitem_id ,v_Cursor.fecha_cobro,'cobrado');
+
+END LOOP;
+
+
+
+/*******************************************************************************
+ciclo para obtener todas las factura  de cada pago (IVA POR ACREDICTAR PAGADO)
+
+*******************************************************************************/
+
+
+  FOR v_Cursor IN (SELECT fp.documentno AS numero_cobro,
+		   inv.documentno AS numero_factura,
+		   C_CURRENCY_CONVERT_PRECISION(inv.grandtotal , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS total_factura,
+C_CURRENCY_CONVERT_PRECISION(inv.grandtotal , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS total_factDeduc,
+                   inv.dateinvoiced AS fecha_factura,
+                   fp.paymentdate AS fecha_cobro,inv.ad_org_id,
+                   C_CURRENCY_CONVERT_PRECISION(fpdv.paidamt , fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client , inv.ad_org_id,'A') AS total_pagado,
+                   inv.c_invoice_id, fp.fin_payment_id, 
+		   pd.name AS nombre_producto,
+		   C_CURRENCY_CONVERT_PRECISION( il.linenetamt  , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS importe,
+		   il.c_tax_id, 
+		   il.c_invoiceline_id,
+		   pd.m_product_id,
+	           inv.C_CURRENCY_ID AS moneda,
+		   pd.em_contmx_tipocant AS tipoCantidad,
+		   pd.em_contmx_limite AS limite
+		    FROM fin_payment AS fp 
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id
+                                        INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+                                        INNER JOIN  m_product AS pd ON pd.m_product_id = il.m_product_id
+					INNER JOIN c_tax AS t ON t.c_tax_id =il.c_tax_id
+						WHERE fp.isreceipt = 'N'
+						AND fp.status IN ('PWNC', 'PPM', 'RPPC') 
+						AND v_diaInicio <= fp.paymentdate
+						AND v_diaFinal >=fp.paymentdate
+						AND (v_org_id = fp.ad_org_id OR v_org_id='0') 
+						AND fp.ad_client_id =v_Client
+						AND ( pd.em_contmx_deducirietu ='Y' OR pd.em_contmx_deducirisr ='Y' )
+						)
+  LOOP
+
+--obtenemos datos de la factura y del pago
+   v_porceDeduc :=  v_Cursor.total_factura / v_Cursor.total_factDeduc;
+   v_totalFactura := COALESCE(v_Cursor.total_factura * v_porceDeduc ,0);  
+   v_totalCobrado :=COALESCE(v_Cursor.total_pagado * v_porceDeduc ,0);
+   v_Porcentaje = COALESCE(v_totalCobrado/(v_totalFactura/100)/100,0);
+
+--suma de todos los impuestos por linea
+   SELECT COALESCE(SUM(intax.taxamt),0)
+      INTO v_impuestoInd_p
+		FROM c_invoicelinetax as intax
+		INNER JOIN C_Tax tax ON tax.C_Tax_ID =intax.C_tax_ID 
+			WHERE intax.c_invoiceline_id = v_Cursor.c_invoiceline_id
+			AND tax.em_contmx_isiva='Y';
+
+		
+--vemos si el producto tiene un limite deducible
+IF(v_Cursor.tipoCantidad = 'CL' AND v_Cursor.limite < v_Cursor.importe ) THEN 
+  v_porceDeduc =v_Cursor.limite / v_Cursor.importe ;
+  v_impuestoInd_p = v_impuestoInd_p * v_porceDeduc;
+	ELSE IF(v_Cursor.tipoCantidad = 'PL')THEN 
+	  v_porceDeduc = v_Cursor.limite / 100;
+	    v_impuestoInd_p = v_impuestoInd_p * v_porceDeduc;
+	END IF;
+END IF;
+
+
+v_impuestoInd_p = C_CURRENCY_CONVERT_PRECISION(v_impuestoInd_p  , v_Cursor.moneda ,'130' ,v_Cursor.fecha_cobro,'S',v_Client ,v_Cursor.ad_org_id,'A');
+
+--proratear el impuesto
+  v_impuestoTotalPagado_p :=v_impuestoInd_p*v_Porcentaje;
+--aplicamos la suma al importe de linea total y todos los impuestos		
+    v_impuestoTotal_p :=  v_impuestoTotal_p + v_impuestoTotalPagado_p ;
+
+
+  --insertar el producto a cada cobro
+   INSERT INTO contmx_reporteiva_des(contmx_reporteiva_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteiva_id,c_invoice_id, fin_payment_id, m_product_id, importetotal, importepagado, fechac, fechaf, tipo, porcentaje, porceDeduc ) 
+   VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+   v_reporte_id,v_Cursor.c_invoice_id, v_Cursor.fin_payment_id, v_Cursor.m_product_id,
+    round(v_impuestoInd_p,2) ,  round(v_impuestoTotalPagado_p,2),v_Cursor.fecha_cobro, v_Cursor.fecha_factura, 'pagado',  round(v_porcentaje*100,2),round(v_porceDeduc*100,2)  );
+      
+  END LOOP; 
+
+/*******************************************************************************
+ciclo para obtener todas las factura  de cada pago
+FACTURA FINANCIERA
+
+*******************************************************************************/
+
+
+  FOR v_Cursor IN (SELECT fp.documentno AS numero_cobro,
+		   inv.documentno AS numero_factura,
+		   C_CURRENCY_CONVERT_PRECISION(inv.grandtotal , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS total_factura,
+C_CURRENCY_CONVERT_PRECISION(inv.grandtotal , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS total_factDeduc,
+                   inv.dateinvoiced AS fecha_factura,
+                   fp.paymentdate AS fecha_cobro,inv.ad_org_id,
+                   C_CURRENCY_CONVERT_PRECISION(fpdv.paidamt , fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client , inv.ad_org_id,'A') AS total_pagado,
+                   inv.c_invoice_id, fp.fin_payment_id, 
+		   C_CURRENCY_CONVERT_PRECISION( il.linenetamt  , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS importe,
+		   il.c_tax_id, 
+		   il.c_invoiceline_id,
+	           inv.C_CURRENCY_ID AS moneda,
+	           cu.c_glitem_id AS account
+		    FROM fin_payment AS fp 
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id
+                                        INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+                                         INNER JOIN  c_glitem as cu ON il.account_id = cu.c_glitem_id
+					INNER JOIN c_tax AS t ON t.c_tax_id =il.c_tax_id
+						WHERE fp.isreceipt = 'N'
+						AND fp.status IN ('PWNC', 'PPM', 'RPPC') 
+						AND v_diaInicio <= fp.paymentdate
+						AND v_diaFinal >=fp.paymentdate
+						AND (v_org_id = fp.ad_org_id OR v_org_id='0') 
+						AND fp.ad_client_id =v_Client)
+  LOOP
+
+
+--obtenemos datos de la factura y del pago
+   v_porceDeduc :=  v_Cursor.total_factura / v_Cursor.total_factDeduc;
+   v_totalFactura := COALESCE(v_Cursor.total_factura * v_porceDeduc ,0);  
+   v_totalCobrado :=COALESCE(v_Cursor.total_pagado * v_porceDeduc ,0);
+   v_Porcentaje = COALESCE(v_totalCobrado/(v_totalFactura/100)/100,0);
+
+
+--suma de todos los impuestos por linea
+   SELECT COALESCE(SUM(intax.taxamt),0)
+      INTO v_impuestoInd_p
+		FROM c_invoicelinetax as intax
+		INNER JOIN C_Tax tax ON tax.C_Tax_ID =intax.C_tax_ID 
+			WHERE intax.c_invoiceline_id = v_Cursor.c_invoiceline_id
+			AND tax.em_contmx_isiva='Y';
+
+		
+
+
+v_impuestoInd_p = C_CURRENCY_CONVERT_PRECISION(v_impuestoInd_p  , v_Cursor.moneda ,'130' ,v_Cursor.fecha_cobro,'S',v_Client ,v_Cursor.ad_org_id,'A');
+--proratear el impuesto
+  v_impuestoTotalPagado_p :=v_impuestoInd_p*v_Porcentaje;
+--aplicamos la suma al importe de linea total y todos los impuestos		
+    v_impuestoTotal_p :=  v_impuestoTotal_p + v_impuestoTotalPagado_p ;
+
+
+  --insertar el producto a cada cobro si no es cero iva
+   INSERT INTO contmx_reporteiva_des(contmx_reporteiva_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteiva_id,c_invoice_id, fin_payment_id, c_glitem_id , 
+   importetotal, importepagado, fechac, fechaf, 
+   tipo, porcentaje, porceDeduc ) 
+   VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+   v_reporte_id,v_Cursor.c_invoice_id, v_Cursor.fin_payment_id, v_Cursor.account,
+    round(v_impuestoInd_p,2) ,  round(v_impuestoTotalPagado_p,2), v_Cursor.fecha_cobro, v_Cursor.fecha_factura, 
+   'pagado',  round(v_porcentaje*100,2),round(v_porceDeduc*100,2)  );      
+  END LOOP; 
+
+
+
+
+/*************************************************************
+ciclo para obtener todos los conceptos contables desde los pagos
+**************************************************************/
+
+
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fpd.ad_org_id,'A') AS amount, 
+          fp.fin_payment_id,
+          fp.c_currency_id AS moneda,
+          fp.paymentdate AS fecha_cobro, fpd.ad_org_id,  
+          gl.c_glitem_id, 
+	  tax.RATE
+         FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+	 INNER JOIN C_TAX tax ON tax.C_TAX_ID = gl.em_contmx_c_tax_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id =v_Client
+	AND tax.em_contmx_isiva='Y')
+
+LOOP 
+
+  
+
+--
+v_concepto:=v_Cursor.amount -(v_Cursor.amount / ((v_Cursor.rate/100) + 1 ) );
+
+--hacemos una conversion de moneda 
+v_concepto = C_CURRENCY_CONVERT_PRECISION(v_concepto  , v_Cursor.moneda ,'130' ,v_Cursor.fecha_cobro,'S',v_Client ,v_Cursor.ad_org_id,'A');
+
+
+--aplicamos la suma total de impuesto de cobros	
+    v_impuestoTotal_p :=  v_impuestoTotal_p + v_concepto ;
+
+    
+ INSERT INTO contmx_reporteiva_des(contmx_reporteiva_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteiva_id,fin_payment_id, importepagado, c_glitem_id,fechac, tipo ) 
+    VALUES (get_uuid(),  v_Client, v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id,  round(v_concepto,2),v_Cursor.c_glitem_id ,v_Cursor.fecha_cobro,'pagado');
+
+END LOOP;
+
+
+
+
+ /*********************************************************************************
+ calcular los impuesto pagadosc con anterioridad
+************************************************************************************/
+
+
+
+
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fpd.ad_org_id,'A') AS amount, 
+          fp.fin_payment_id,
+          fp.c_currency_id AS moneda,
+          fp.paymentdate AS fecha_cobro, fpd.ad_org_id,  
+           gl.c_glitem_id, 
+           gl.em_contmx_c_tax_id as impuesto
+         FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_iva = 'Y'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id =v_Client)
+LOOP 
+
+  
+--tomar el iva 
+   SELECT t.RATE
+      INTO iva_gl
+	FROM  C_Tax AS t
+	  WHERE t.c_tax_id = v_Cursor.impuesto
+	  AND t.em_contmx_isiva='Y';
+	
+--si el usuario añadio el iva	
+IF( iva_gl IS NOT NULL )THEN
+v_conceptoiva:=v_Cursor.amount -(v_Cursor.amount / ((iva_gl/100) + 1 ) );
+	ELSE 
+	v_conceptoiva:= v_Cursor.amount;
+END IF;
+
+--hacemos una conversion de moneda 
+v_conceptoiva = C_CURRENCY_CONVERT_PRECISION(v_conceptoiva  , v_Cursor.moneda ,'130' ,v_Cursor.fecha_cobro,'S',v_Client ,v_Cursor.ad_org_id,'A');
+
+--sumamos el total
+v_totalconcepto:=v_totalconcepto + v_conceptoiva;
+
+ INSERT INTO contmx_reporteiva_des(contmx_reporteiva_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteiva_id,fin_payment_id, importepagado, c_glitem_id,fechac, tipo, issotrx ) 
+    VALUES (get_uuid(),  v_Client, v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id,  round(v_conceptoiva,2),v_Cursor.c_glitem_id ,v_Cursor.fecha_cobro,'ivapagado', 'N');
+
+END LOOP;
+ 
+
+/*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+UPDATE contmx_reporteiva SET ivacobrado= round(v_impuestoTotal_c,2) WHERE contmx_reporteiva_id=v_reporte_id;
+UPDATE contmx_reporteiva SET ivapagado= round(v_impuestoTotal_p,2) WHERE contmx_reporteiva_id=v_reporte_id;
+UPDATE contmx_reporteiva SET ivaxpagar= round(v_totalconcepto,2) WHERE contmx_reporteiva_id=v_reporte_id;     
+UPDATE contmx_reporteiva SET totaliva= round(v_impuestoTotal_c-v_totalconcepto-v_impuestoTotal_p,2) WHERE contmx_reporteiva_id=v_reporte_id;
+
+
+
+    -- Successfully finish the process by updating AD_PInstance, setting the 
+    -- IsProcessing, ErrorMsg and Result
+    DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message) ;
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 1, v_Message) ;
+    RETURN;
+  END; -- BODY
+
+
+ EXCEPTION
+ WHEN OTHERS THEN
+   v_ResultStr:= '@ERROR=' || SQLERRM;
+   DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+   AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr) ;
+   RETURN;
+END CONTMX_CALCULO_IMP_IVA
+]]></body>
+    </function>
+  </database>

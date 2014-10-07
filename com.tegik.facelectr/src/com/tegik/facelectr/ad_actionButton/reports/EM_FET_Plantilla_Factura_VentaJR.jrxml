@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EM_FET_Plantilla_Factura_Venta" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.652892561983477"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="99"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#A9A9A9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FF8C00">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFE2BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#FFF7EF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String"/>
+	<parameter name="BASE_DESIGN" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT i.ad_org_id org,
+       '?re=' ||COALESCE(oi.taxid,'') || '=' ||bp.taxid|| '&tt=' ||ROUND(I.GRANDTOTAL,2) || '&id=' ||COALESCE(i.em_fet_foliofiscal,'') AS strqrcode,
+       i.em_fet_docstatus docstatus,
+       i.documentno no_factura,
+       i.dateinvoiced fecha_factura,
+       DATE((select  max(duedate) from fin_payment_schedule where fin_payment_schedule.c_invoice_id = i.c_invoice_id)) fecha_vencimiento,
+       COALESCE(i.poreference,'') referencia,
+       COALESCE(i.description,'') descripcion,
+       dt.printname AS doctype,
+       dt.docbasetype,
+       o.name organizacion,
+       COALESCE(o.social_name,'') social_name,
+       CASE
+         WHEN oi.em_fet_personamoral = 'Y' THEN 'PERSONA MORAL RÉGIMEN GENERAL.'
+         ELSE 'PERSONA FÍSICA'
+       END AS regimen,
+       COALESCE(oi.taxid,'') vrfc,
+       COALESCE(vdir.calle,'') vcalle,
+       COALESCE(vdir.numero,'') vnumero,
+       COALESCE(vdir.colonia,'') vcolonia,
+       COALESCE(vdir.ciudad,'') vciudad,
+       COALESCE(vdir.postal,'') vpostal,
+       COALESCE(vdir.estado,'') vestado,
+       COALESCE(vdir.pais,'') vpais,
+       COALESCE(vdirfsc.calle,'') vfcalle,
+       COALESCE(vdirfsc.numero,'') vfnumero,
+       COALESCE(vdirfsc.colonia,'') vfcolonia,
+       COALESCE(vdirfsc.ciudad,'') vfciudad,
+       COALESCE(vdirfsc.postal,'') vfpostal,
+       COALESCE(vdirfsc.estado,'') vfestado,
+       COALESCE(vdirfsc.pais,'') vfpais,
+       I.GRANDTOTAL,
+       bp.em_fet_razonsocial cliente,
+       bp.value clienteno,
+       bp.taxid crfc,
+       cdir.calle ccalle,
+       cdir.numero cnumero,
+       cdir.colonia ccolonia,
+       cdir.ciudad cciudad,
+       cdir.postal cpostal,
+       cdir.estado cestado,
+       cdir.pais cpais,
+       bpl.telefono ctelefono,
+       (SELECT documentno
+        FROM c_order
+        WHERE c_order_id = i.c_order_id) no_orden,
+       (SELECT name FROM ad_user WHERE ad_user_id = i.salesrep_id) salesrep,
+       COALESCE((SELECT name
+        FROM Fin_Paymentmethod
+        WHERE fin_paymentmethod_id =  i.fin_paymentmethod_id),'') metodo_pago,
+       COALESCE(' - ' ||bp.referenceno,'') AS metodo_ref,
+       (SELECT iso_code
+        FROM c_currency
+        WHERE c_currency_id = i.c_currency_id) moneda,
+       pt.name condicion_pago,
+       CASE
+         WHEN i.em_fet_fecha_timbre != '' OR i.em_fet_fecha_timbre != NULL THEN to_char(to_date(TRIM('T' FROM SUBSTRING(i.em_fet_fecha_timbre FROM '.*T')),'YYYY-MM-DD') + pt.netdays,'YYYY-MM-DD')
+         ELSE to_char(DATE((select  max(duedate) from fin_payment_schedule where fin_payment_schedule.c_invoice_id = i.c_invoice_id)))
+       END AS lim_pago,
+       CASE em_fet_formadepago
+         WHEN '1' THEN 'Pago en una sola exhibición'
+         WHEN '2' THEN 'Parcialidad ' || em_fet_parcialidad || ' de ' || em_fet_parcialidadtotal
+       END AS forma_pago,
+       (SELECT ccr.multiplyrate
+        FROM C_Conversion_Rate ccr
+        WHERE ccr.c_currency_id = i.c_currency_id
+        AND   ccr.ad_client_id = i.ad_client_id
+        AND   ccr.c_currency_id_to = '130'
+        AND   i.dateinvoiced BETWEEN ccr.validfrom
+        AND   ccr.validto
+        AND   ccr.isactive = 'Y') cambio,
+       COALESCE(i.em_fet_cadenaoriginal_sat,'') cadena_timbre,
+       COALESCE(i.em_fet_certificado_sat,'') certificado_sat,
+       COALESCE(i.em_fet_sellosat,'') sello_sat,
+       i.em_fet_fecha_timbre fecha_timbre,
+       COALESCE(i.em_fet_sellocfd,'') sello_emisor,
+       COALESCE(i.em_fet_numcertificado,'') certificado_digital,
+       COALESCE(i.em_fet_foliofiscal,'') folio_fiscal,
+       COALESCE(i.em_fet_cantidadenletras,'') cantidadenletras,
+       date_part('day',CURRENT_TIMESTAMP)::int dia,
+       date_part('month',CURRENT_TIMESTAMP)::int mes,
+       date_part('year',CURRENT_TIMESTAMP)::int año,
+       i.em_fet_correoelectronico,
+       COALESCE(o.em_fet_email,'') as correo_org,
+       COALESCE(o.em_fet_telefono,'') AS tel_org,
+       COALESCE(o.em_fet_email_sucursal,'') as correo_org_sucursal,
+       COALESCE(o.em_fet_telefono_sucursal,'') AS tel_org_sucursal,
+       adc.em_fet_usardescripcion usardescripcion
+
+FROM c_invoice i
+  INNER JOIN ad_org o ON i.ad_org_id = o.ad_org_id
+  INNER JOIN ad_client adc ON i.ad_client_id = adc.ad_client_id
+  INNER JOIN c_bpartner bp ON i.c_bpartner_id = bp.c_bpartner_id
+  INNER JOIN c_paymentterm pt ON i.c_paymentterm_id = pt.c_paymentterm_id
+  INNER JOIN c_doctype dt ON i.c_doctypetarget_id = dt.c_doctype_id
+  LEFT JOIN (SELECT c_bpartner_location_id,
+                    c_location_id,
+                    phone telefono
+             FROM c_bpartner_location) bpl ON i.c_bpartner_location_id = bpl.c_bpartner_location_id
+  LEFT JOIN ad_orginfo oi ON i.ad_org_id = oi.ad_org_id
+-- Direccion del vendedor fiscal
+
+  LEFT JOIN (SELECT c_location_id,
+                    address1 calle,
+                    em_tdirm_numex || COALESCE(' - ' || em_tdirm_numin, '') numero,
+                    address2 colonia,
+                    city ciudad,
+                    postal,
+                    (SELECT name
+                     FROM c_country
+                     WHERE c_country_id = dir.c_country_id) pais,
+                    (SELECT name FROM c_region WHERE c_region_id = dir.c_region_id) estado
+             FROM c_location dir) vdir ON oi.c_location_id = vdir.c_location_id
+-- Direccion del vendedor fisica
+
+  LEFT JOIN (SELECT c_location_id,
+                    address1 calle,
+                    em_tdirm_numex || COALESCE(' - ' || em_tdirm_numin, '') numero,
+                    address2 colonia,
+                    city ciudad,
+                    postal,
+                    (SELECT name
+                     FROM c_country
+                     WHERE c_country_id = dir.c_country_id) pais,
+                    (SELECT name FROM c_region WHERE c_region_id = dir.c_region_id) estado
+             FROM c_location dir) vdirfsc ON oi.em_tdirm_dirfiscal = vdirfsc.c_location_id
+-- Direccion del cliente
+
+  LEFT JOIN (SELECT c_location_id,
+                    address1 calle,
+                    em_tdirm_numex || COALESCE(' - ' || em_tdirm_numin, '') numero,
+                    address2 colonia,
+                    city ciudad,
+                    postal,
+                    (SELECT name
+                     FROM c_country
+                     WHERE c_country_id = dir.c_country_id) pais,
+                    (SELECT name FROM c_region WHERE c_region_id = dir.c_region_id) estado
+             FROM c_location dir) cdir ON bpl.c_location_id = cdir.c_location_id
+WHERE i.c_invoice_id = $P{DOCUMENT_ID}
+LIMIT 1]]>
+	</queryString>
+	<field name="org" class="java.lang.String"/>
+	<field name="strqrcode" class="java.lang.String"/>
+	<field name="docstatus" class="java.lang.String"/>
+	<field name="no_factura" class="java.lang.String"/>
+	<field name="fecha_factura" class="java.sql.Timestamp"/>
+	<field name="fecha_vencimiento" class="java.sql.Date"/>
+	<field name="referencia" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="doctype" class="java.lang.String"/>
+	<field name="docbasetype" class="java.lang.String"/>
+	<field name="organizacion" class="java.lang.String"/>
+	<field name="social_name" class="java.lang.String"/>
+	<field name="regimen" class="java.lang.String"/>
+	<field name="vrfc" class="java.lang.String"/>
+	<field name="vcalle" class="java.lang.String"/>
+	<field name="vnumero" class="java.lang.String"/>
+	<field name="vcolonia" class="java.lang.String"/>
+	<field name="vciudad" class="java.lang.String"/>
+	<field name="vpostal" class="java.lang.String"/>
+	<field name="vestado" class="java.lang.String"/>
+	<field name="vpais" class="java.lang.String"/>
+	<field name="vfcalle" class="java.lang.String"/>
+	<field name="vfnumero" class="java.lang.String"/>
+	<field name="vfcolonia" class="java.lang.String"/>
+	<field name="vfciudad" class="java.lang.String"/>
+	<field name="vfpostal" class="java.lang.String"/>
+	<field name="vfestado" class="java.lang.String"/>
+	<field name="vfpais" class="java.lang.String"/>
+	<field name="grandtotal" class="java.math.BigDecimal"/>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="clienteno" class="java.lang.String"/>
+	<field name="crfc" class="java.lang.String"/>
+	<field name="ccalle" class="java.lang.String"/>
+	<field name="cnumero" class="java.lang.String"/>
+	<field name="ccolonia" class="java.lang.String"/>
+	<field name="cciudad" class="java.lang.String"/>
+	<field name="cpostal" class="java.lang.String"/>
+	<field name="cestado" class="java.lang.String"/>
+	<field name="cpais" class="java.lang.String"/>
+	<field name="ctelefono" class="java.lang.String"/>
+	<field name="no_orden" class="java.lang.String"/>
+	<field name="salesrep" class="java.lang.String"/>
+	<field name="metodo_pago" class="java.lang.String"/>
+	<field name="metodo_ref" class="java.lang.String"/>
+	<field name="moneda" class="java.lang.String"/>
+	<field name="condicion_pago" class="java.lang.String"/>
+	<field name="lim_pago" class="java.lang.String"/>
+	<field name="forma_pago" class="java.lang.String"/>
+	<field name="cambio" class="java.math.BigDecimal"/>
+	<field name="cadena_timbre" class="java.lang.String"/>
+	<field name="certificado_sat" class="java.lang.String"/>
+	<field name="sello_sat" class="java.lang.String"/>
+	<field name="fecha_timbre" class="java.lang.String"/>
+	<field name="sello_emisor" class="java.lang.String"/>
+	<field name="certificado_digital" class="java.lang.String"/>
+	<field name="folio_fiscal" class="java.lang.String"/>
+	<field name="cantidadenletras" class="java.lang.String"/>
+	<field name="dia" class="java.lang.Integer"/>
+	<field name="mes" class="java.lang.Integer"/>
+	<field name="año" class="java.lang.Integer"/>
+	<field name="em_fet_correoelectronico" class="java.lang.String"/>
+	<field name="correo_org" class="java.lang.String"/>
+	<field name="tel_org" class="java.lang.String"/>
+	<field name="correo_org_sucursal" class="java.lang.String"/>
+	<field name="tel_org_sucursal" class="java.lang.String"/>
+	<field name="usardescripcion" class="java.lang.String"/>
+	<variable name="Fecha" class="java.util.Date">
+		<variableExpression><![CDATA[new Date()]]></variableExpression>
+	</variable>
+	<variable name="mes" class="java.lang.String">
+		<variableExpression><![CDATA[$F{mes} == 1 ? "Enero" :
+$F{mes} == 2 ? "Febrero" :
+$F{mes} == 3 ? "Marzo" :
+$F{mes} == 4 ? "Abril" :
+$F{mes} == 5 ? "Mayo" :
+$F{mes} == 6 ? "Junio" :
+$F{mes} == 7 ? "Julio" :
+$F{mes} == 8 ? "Agosto" :
+$F{mes} == 9 ? "Septiembre" :
+$F{mes} == 10 ? "Octubre" :
+$F{mes} == 11 ? "Noviembre" : "Diciembre"]]></variableExpression>
+	</variable>
+	<variable name="metodo_pago" class="java.lang.String">
+		<variableExpression><![CDATA[$F{metodo_pago}+$F{metodo_ref}]]></variableExpression>
+	</variable>
+	<variable name="fecha_fact" class="java.lang.String">
+		<variableExpression><![CDATA[]]></variableExpression>
+		<initialValueExpression><![CDATA[$F{fecha_timbre}.split("T")[0]]]></initialValueExpression>
+	</variable>
+	<variable name="mes_lim_pago" class="java.lang.String">
+		<variableExpression><![CDATA[($F{lim_pago}.split("-")[1]).equals("01") ? "Enero" :
+($F{lim_pago}.split("-")[1]).equals("02") ? "Febrero" :
+($F{lim_pago}.split("-")[1]).equals("03") ? "Marzo" :
+($F{lim_pago}.split("-")[1]).equals("04") ? "Abril" :
+($F{lim_pago}.split("-")[1]).equals("05") ? "Mayo" :
+($F{lim_pago}.split("-")[1]).equals("06") ? "Junio" :
+($F{lim_pago}.split("-")[1]).equals("07") ? "Julio" :
+($F{lim_pago}.split("-")[1]).equals("08") ? "Agosto" :
+($F{lim_pago}.split("-")[1]).equals("09") ? "Septiembre" :
+($F{lim_pago}.split("-")[1]).equals("10") ? "Octubre" :
+($F{lim_pago}.split("-")[1]).equals("11") ? "Noviembre" : "Diciembre"]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="307" splitType="Stretch">
+			<textField>
+				<reportElement x="190" y="0" width="365" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font fontName="DejaVu Sans" size="20"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{doctype}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="52" width="258" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{social_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="63" width="258" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vrfc}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="85" width="258" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vcalle}+" "+($F{vnumero}.equals("")? "":"No. "+$F{vnumero})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="96" width="258" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vcolonia}+" "+($F{vpostal}.equals("")? "":"C.P. "+$F{vpostal})+" "+($F{vciudad}.equals("")? "":$F{vciudad})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="107" width="258" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vestado}+", "+$F{vpais}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="305" y="49" width="250" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{docbasetype}.equals("ARI")?"Factura ":"Nota de credito ")+$F{no_factura}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="118" width="258" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!($F{tel_org} == null || $F{tel_org}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tel: "+$F{tel_org}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="129" width="258" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!($F{correo_org} == null || $F{correo_org}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["email: "+$F{correo_org}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="305" y="63" width="250" height="11"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Certificado Digital "+$F{certificado_digital}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="305" y="74" width="250" height="11"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Folio Fiscal "+$F{folio_fiscal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="140" width="552" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Descripcion: "+$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="29" width="365" height="18" forecolor="#000000">
+					<printWhenExpression><![CDATA[!$F{docstatus}.equals("Facturado")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font fontName="DejaVu Sans" size="14"/>
+				</textElement>
+				<text><![CDATA[La factura no tiene timbre fiscal]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="305" y="85" width="250" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!($F{vfcalle} == null || $F{vfcalle}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Expedida en "+$F{vfcalle}+" "+($F{vfnumero}.equals("")? "":"No. "+$F{vfnumero})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="3" y="74" width="258" height="11" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{regimen}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Right" isUsingCache="true">
+				<reportElement x="0" y="0" width="85" height="45" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.awt.Image"><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc",$F{org})]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="156" width="550" height="146" backcolor="#FCDBB5"/>
+				<line>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="13" width="550" height="1" forecolor="#404040" backcolor="#FFFFFF"/>
+				</line>
+				<line>
+					<reportElement mode="Opaque" x="0" y="0" width="550" height="1" forecolor="#404040" backcolor="#FFFFFF"/>
+				</line>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Transparent" x="0" y="1" width="74" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[   Cliente]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="Float" x="549" y="1" width="1" height="12" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement positionType="Float" x="0" y="1" width="1" height="12" forecolor="#808080"/>
+				</line>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" mode="Transparent" x="72" y="1" width="404" height="12" backcolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{clienteno}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="14" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha_timbre}.replace('T',' ')]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Fecha de vencimiento:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Fecha de Emisión:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.util.Date"><![CDATA[$F{fecha_vencimiento}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="26" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cliente}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  R.F.C.:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Nombre o Razón Social:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{crfc}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="38" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{ccalle}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Número:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Calle:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cnumero}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="50" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{referencia}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Colonia:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Referencia:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{ccolonia}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="62" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cpostal}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Ciudad:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Código Postal:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cciudad}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="74" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cestado}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  País:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Estado:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cpais}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="86" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{ctelefono}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  e-Mail:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Teléfono:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{em_fet_correoelectronico}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="98" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{no_orden}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Forma de Pago:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  No. de Orden:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{forma_pago}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="110" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{metodo_pago}+$F{metodo_ref}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Condiciones de Pago:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Método de pago:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{condicion_pago}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="122" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="434" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{salesrep}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Agente de ventas:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="134" width="550" height="12" backcolor="#FCDBB5"/>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="549" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="112" y="0" width="1" height="11" forecolor="#808080"/>
+					</line>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="114" y="0" width="190" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{moneda}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="305" y="0" width="98" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Tipo de Cambio:]]></text>
+					</staticText>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="403" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<line>
+						<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="304" y="0" width="1" height="11" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+					<staticText>
+						<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="1" y="0" width="111" height="11" forecolor="#000000"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7" isBold="false"/>
+						</textElement>
+						<text><![CDATA[  Moneda:]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+						<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="404" y="0" width="144" height="11" backcolor="#FFFFFF"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{cambio}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement positionType="Float" mode="Opaque" x="0" y="11" width="550" height="1" forecolor="#808080" backcolor="#FFFFFF"/>
+					</line>
+				</frame>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="305" y="107" width="250" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!(($F{vfestado} == null || $F{vfestado}.equals("")) && ($F{vfpais} == null || $F{vfpais}.equals("")))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vfestado}+", "+$F{vfpais}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="305" y="96" width="250" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!(($F{vfcolonia} == null || $F{vfcolonia}.equals("")) && ($F{vfpostal} == null || $F{vfpostal}.equals("")) && ($F{vfciudad} == null || $F{vfciudad}.equals("")))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vfcolonia}+" "+($F{vfpostal}.equals("")? "":"C.P. "+$F{vfpostal})+" "+($F{vfciudad}.equals("")? "":$F{vfciudad})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="305" y="129" width="250" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!($F{correo_org_sucursal} == null || $F{correo_org_sucursal}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["email de sucursal: "+$F{correo_org_sucursal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="305" y="118" width="250" height="11" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[!($F{tel_org_sucursal} == null || $F{tel_org_sucursal}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tel. Sucursal: "+$F{tel_org_sucursal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band splitType="Stretch">
+			<subreport>
+				<reportElement mode="Transparent" x="0" y="0" width="551" height="0"/>
+				<subreportParameter name="DOCUMENT_ID">
+					<subreportParameterExpression><![CDATA[$P{DOCUMENT_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usar_descripcion">
+					<subreportParameterExpression><![CDATA[$F{usardescripcion}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/facelectr/ad_actionButton/reports/EM_FET_Plantilla_Factura_Venta_sub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band>
+			<subreport>
+				<reportElement x="0" y="0" width="551" height="0"/>
+				<subreportParameter name="DOCUMENT_ID">
+					<subreportParameterExpression><![CDATA[$P{DOCUMENT_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{BASE_DESIGN} + "/com/tegik/facelectr/ad_actionButton/reports/EM_FET_Plantilla_Factura_Venta_sub_tax.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="160">
+			<staticText>
+				<reportElement style="Title" x="432" y="0" width="37" height="11" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="0" y="52" width="547" height="103"/>
+				<staticText>
+					<reportElement style="Title" x="265" y="14" width="151" height="10" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Certificado Digital SAT]]></text>
+				</staticText>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="113" y="92" width="432" height="10" backcolor="#FCDBB5"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="10" y="1" width="420" height="8" backcolor="#FAB394"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{sello_sat}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<line>
+					<reportElement positionType="Float" x="113" y="69" width="432" height="1" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement x="113" y="36" width="432" height="1" forecolor="#808080"/>
+				</line>
+				<staticText>
+					<reportElement style="Title" positionType="Float" x="114" y="59" width="152" height="10" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[   Sello Digital del Emisor]]></text>
+				</staticText>
+				<line>
+					<reportElement x="265" y="24" width="280" height="1" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement positionType="Float" x="113" y="58" width="432" height="1" forecolor="#808080"/>
+				</line>
+				<staticText>
+					<reportElement style="Title" x="114" y="37" width="152" height="10" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[   Cadena Original del Timbre]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="Float" x="1" y="102" width="544" height="1" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="103" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement x="113" y="47" width="432" height="1" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="545" y="0" width="1" height="103" forecolor="#808080"/>
+				</line>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="113" y="70" width="432" height="10" backcolor="#FCDBB5"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="12" y="1" width="420" height="8" backcolor="#FAB394"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{sello_emisor}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<staticText>
+					<reportElement style="Title" x="422" y="14" width="118" height="10" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha de Certificación]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Title" positionType="Float" x="114" y="81" width="152" height="10" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[   Sello Digital del SAT]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="Float" x="113" y="80" width="432" height="1" forecolor="#808080"/>
+				</line>
+				<frame>
+					<reportElement positionType="Float" mode="Opaque" x="113" y="48" width="432" height="10" backcolor="#FCDBB5"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="10" y="0" width="422" height="8" backcolor="#FAB394"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="7"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cadena_timbre}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<line>
+					<reportElement x="0" y="0" width="546" height="1" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement positionType="Float" x="113" y="91" width="432" height="1" forecolor="#808080"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="422" y="25" width="118" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha_timbre}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="265" y="25" width="152" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{certificado_sat}]]></textFieldExpression>
+				</textField>
+				<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+					<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="2" y="14" width="110" height="86"/>
+					<imageExpression class="net.sf.jasperreports.engine.JRRenderable"><![CDATA[new com.barcodelib.barcode.BarcodeJasperRenderer(com.barcodelib.barcode.BarcodeJasperFactory.createQRCode($F{strqrcode}, 0, 1,0,(float)(3.0),(float)(0.0)))]]></imageExpression>
+				</image>
+			</frame>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+				<reportElement style="Detail" positionType="Float" mode="Transparent" x="469" y="0" width="75" height="11" backcolor="#FEFEFE"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{grandtotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="2" y="0" width="95" height="11" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe con letra:   ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="97" y="0" width="325" height="11"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cantidadenletras}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="15" width="548" height="34"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="2" y="13" width="535" height="18"/>
+					<textElement>
+						<font fontName="DejaVu Sans" size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["EN "+ $F{vciudad} +" A " +$F{dia}+ " DE " +$V{mes}+ " AÑO " +$F{año}+
+"\nDEBE(MOS) Y PAGARE(MOS) INCONDICIONALMENTE POR ESTE PAGARE A LA ORDEN DE "+$F{social_name}+
+"\nEN "+ $F{vciudad} +" O EN CUALQUIER OTRA PLAZA A ELECCION DE NUESTRO ACREEDOR POR EL IMPORTE "+
+"DE LAS MERCANCIAS Y/O POR LOS SERVICIOS RECIBIDOS A ENTERA SATISFACCION.\n\nSI ESTE PAGARE NO "+
+"FUERA CUBIERTO A SU VENCIMIENTO CAUSARA INTERESES MORATORIOS AL 5% MENSUAL SIN QUE POR ESTO SE ENTIENDA\n"+
+"PRORROGADO EL PLAZO.\n\n"+
+"EL DIA "+($F{lim_pago}.split("-")[2])+" DE "+$V{mes_lim_pago}+" DE "+($F{lim_pago}.split("-")[0])+" LA CANTIDAD DE:\n\n"+
+"( "+$F{cantidadenletras}+" ).  ACEPTAMOS ________________________."]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="545" y="0" width="1" height="34" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="34" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement positionType="Float" x="1" y="33" width="544" height="1" forecolor="#808080"/>
+				</line>
+				<line>
+					<reportElement positionType="Float" x="1" y="0" width="544" height="1" forecolor="#808080"/>
+				</line>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+					<reportElement style="Detail" positionType="Float" mode="Transparent" x="398" y="4" width="139" height="9" backcolor="#FEFEFE"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["BUENO POR $"+$F{grandtotal}.setScale(2, BigDecimal.ROUND_DOWN)]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="170" height="22" forecolor="#5D5D5D" backcolor="#D16232"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="74" y="1" width="62" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<elementGroup/>
+				<textField>
+					<reportElement style="Column header" x="0" y="1" width="74" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Página "+$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="182" y="2" width="365" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Sans" size="8"/>
+				</textElement>
+				<text><![CDATA[Este documento es una representación impresa de un CFDI]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

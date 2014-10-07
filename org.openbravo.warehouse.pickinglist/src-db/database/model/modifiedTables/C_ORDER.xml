@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_ORDER">
+    <table name="C_ORDER" primaryKey="C_ORDER_KEY">
+      <column name="EM_OBWPL_GENERATEPICKING" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBWPL_ISINPICKINGLIST" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault><![CDATA['N']]></onCreateDefault>
+      </column>
+      <column name="EM_OBWPL_READYPL" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default><![CDATA[N]]></default>
+        <onCreateDefault/>
+      </column>
+      <check name="EM_OBWPL_C_ORDER_GENERATEPIC"><![CDATA[EM_OBWPL_GENERATEPICKING IN ('Y', 'N')]]></check>
+      <check name="EM_OBWPL_C_ORDER_ISINPL_CHK"><![CDATA[EM_OBWPL_ISINPICKINGLIST IN ('Y', 'N')]]></check>
+      <check name="EM_OBWPL_C_ORDER_READY"><![CDATA[EM_OBWPL_READYPL IN ('Y', 'N')]]></check>
+    </table>
+  </database>

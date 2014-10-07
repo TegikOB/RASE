@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRAD_PARAMETER">
+    <function name="TRLMX_TRAD_PARAMETER" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+v_tradMod VARCHAR(60);
+
+BEGIN
+
+
+SELECT COUNT(OBUIAPP_PARAMETER_ID) 
+  FROM OBUIAPP_PARAMETER_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM OBUIAPP_PARAMETER)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+--toma traduccion de mexico
+SELECT * FROM OBUIAPP_PARAMETER_TRL t 
+  WHERE V_Record.OBUIAPP_PARAMETER_ID = t.OBUIAPP_PARAMETER_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+
+--toma la traduccion de españa  
+  SELECT * FROM OBUIAPP_PARAMETER_TRL t
+  WHERE V_Record.OBUIAPP_PARAMETER_ID = t.OBUIAPP_PARAMETER_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+
+   SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+
+--si esta vacio inserta
+IF(v_TradMex.AD_Language IS NULL AND v_tradMod <> 'es_MX' )THEN
+
+DBMS_OUTPUT.PUT_LINE( 'Inserta una palabra '|| V_TradEsp.name);
+
+
+INSERT INTO  OBUIAPP_PARAMETER_TRL (
+  OBUIAPP_PARAMETER_trl_id ,
+  OBUIAPP_PARAMETER_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  name , 
+  description ,
+  help , 
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.OBUIAPP_PARAMETER_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.name , 
+  V_TradEsp.description ,
+  V_TradEsp.help , 
+  V_TradEsp.istranslated);
+
+END IF; 
+
+--si esta al nombre original o esta a la de ingles coloca la de españa
+
+ IF (v_TradMex.name = V_Record.name AND v_tradMod <> 'es_MX' ) THEN 
+
+   
+DBMS_OUTPUT.PUT_LINE( 'Actualiza la palabra '|| V_TradEsp.name);
+
+  UPDATE OBUIAPP_PARAMETER_TRL 
+  SET name =V_TradEsp.name, description = V_TradEsp.description 
+  WHERE OBUIAPP_PARAMETER_TRL_ID= v_TradMex.OBUIAPP_PARAMETER_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRAD_PARAMETER
+]]></body>
+    </function>
+  </database>

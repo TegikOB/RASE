@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="519E5DF804FD4BC4B0FBE6DD51F3EDA8" trl="Y">
+    <value column="Name" original="Widget">Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="F222C5956BC84B538924F626DFC8DBBB" trl="Y">
+    <value column="Name" original="Widget Instance">Instancia de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

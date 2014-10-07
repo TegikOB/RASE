@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE AD_ORGINFO">
+    <table name="AD_ORGINFO" primaryKey="AD_ORGINFO_KEY">
+      <column name="EM_TDIRM_DIRFISCAL" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="C_LOCATION" name="EM_TDIRM_LOCATION">
+        <reference local="EM_TDIRM_DIRFISCAL" foreign="C_LOCATION_ID"/>
+      </foreign-key>
+    </table>
+  </database>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_PROCESS" version="">
+  <row id="C59D80628EAC461CA227D7ABAD089FA0" trl="N">
+    <value column="Name" isTrl="N" original="Add Pack">Añadir paquete</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Selecting one of the Pack Discounts, inserts in the document lines for all products included in that pack.">Seleccionando uno de los paquetes de descuento, inserta en las lineas del documento para todos los productos incluidos en este paquete.</value>
+  </row>
+</compiereTrl>

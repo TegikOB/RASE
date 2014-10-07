@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="11116BEF61CB4A3FBA8D50CE5A1FE332" trl="Y">
+    <value column="Name" original="In">En</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="2047BA216D4D46D9BD97D914ED6567DA" trl="Y">
+    <value column="Name" original="Store">Tienda</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="3A151748C2C74D0F85B6A0C17342CA11" trl="Y">
+    <value column="Name" original="Group">Grupo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="48FA55D0472B45128326E85D1C104917" trl="Y">
+    <value column="Name" original="Out">Salida</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

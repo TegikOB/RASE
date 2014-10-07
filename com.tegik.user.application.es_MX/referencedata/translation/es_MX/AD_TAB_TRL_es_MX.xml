@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="13FE911F7F684A47801DF55525BAD4A1" trl="Y">
+    <value column="Name" original="Grid Configuration at System Level">Defina la configuración de la red a nivel de sistema</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Define the Grid Configuration at System Level">Defina la configuración de la red a nivel de sistema</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="In this tab the user can set some properties that will be used to define how the grid filtering should work at system level. The values set here will be used in all grids, unless its properties are overriden at tab or field level.">En esta pestaña el usuario puede establecer algunas propiedades que se 
+utilizarán para definir cómo el filtrado de rejilla debe trabajar a nivel de 
+sistema. Los valores establecidos aquí serán utilizados en todas las redes, 
+a menos que sus propiedades se reemplazan en pestaña o campo de nivel.</value>
+  </row>
+  <row id="25EB9212730C4E88B95C75BFCD6F5EBF" trl="Y">
+    <value column="Name" original="Navigation Bar Component">Componente de Barra de Navegación</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Navigation Bar Component">Componente de Barra de Navegación</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="49B33DC2EDFD45A48EECE139AD5E9AC9" trl="Y">
+    <value column="Name" original="Tab">Solapa</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Grid Configuration at Tab level">configuración de red a nivel pestaña</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="In this tab the user can set some properties that will be used to define how the grid filtering should work in the selected tab. The values set here will be used in all its fields, unless its properties are overriden at field level. If a property is not set, its value will be taking from the system level.">En esta pestaña el usuario puede establecer algunas propiedades que se 
+utilizarán para definir cómo el filtrado de rejilla debe trabajar en la 
+pestaña seleccionada. Los valores establecidos aquí serán utilizados en 
+todos sus ámbitos, a menos que sus propiedades son anulados a nivel de 
+campo. Si una propiedad no está definida, su valor se toma desde el nivel 
+del sistema.</value>
+  </row>
+  <row id="6D732D027FFA4FB1BD0140ED3B606C0E" trl="Y">
+    <value column="Name" original="Process Definition">Definición de proceso</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Access for Process Definitions">Acceso para definición de proceso </value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Grants access to Process Definition. By default, access to process definitions in a window (invoked from a button), is inherited from the permission to the window. To revoke this inherited access and manually decide case by case which are the accessible processes, it is necessary to define a &quot;Secured Process&quot; Preference (at system level or for that specific window) with &quot;Y&quot; as value.">Grants access to Process Definition. By default, access to process 
+definitions in a window (invoked from a button), is inherited from the 
+permission to the window. To revoke this inherited access and manually 
+decide case by case which are the accessible processes, it is necessary to 
+define a "Secured Process" Preference (at system level or for that specific 
+window) with "Y" as value.</value>
+  </row>
+  <row id="6EFD1987E93847DE87AD7B70282FBDF1" trl="Y">
+    <value column="Name" original="Navigation Bar Component Role Access">Permisos de Rol de Componente de Barra de Navegación</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Maintain access by role to navigation bar components">Mantenimiento de los permisos de acceso de roles a los componentes de barra de navegación</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Maintain access by role to navigation bar components">Mantener el acceso de función a los componentes de la barra de navegación</value>
+  </row>
+  <row id="7BF1D74F5C60424088416584DFD1EC1F" trl="Y">
+    <value column="Name" original="View Role Access">Mostrar Permisos de Rol</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Defines the access to views by Role.">Define los permisos de acceso de los roles a las vistas.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Defines the access to views by Role.">Define el acceso a las vistas por función.</value>
+  </row>
+  <row id="D26230D6D21546C6970E79FF1C51165E" trl="Y">
+    <value column="Name" original="Field">Campo</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Grid Configuration at Field Level">Configuración de la red a nivel de campo</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="In this tab the user can set some properties that will be used to define how the grid filtering should work in the selected field. If a property is not set, its value will be taking from the tab level. If it is not defined in the tab level, its value will be taken from the system level.">En esta pestaña el usuario puede establecer algunas propiedades que se 
+utilizarán para definir cómo el filtrado de rejilla debe trabajar en el 
+campo seleccionado. Si una propiedad no está definida, su valor se toma 
+desde el nivel de tabulación. Si no se define en el nivel de pestaña, su 
+valor será tomada desde el nivel del sistema.</value>
+  </row>
+  <row id="D275449FFACC4539A401336214FDBF94" trl="Y">
+    <value column="Name" original="Menu Parameters">Parámetros de Menú</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Menu Parameters">Parámetros de Menú</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The menu parameters are used in the new user interface to pass parameters to standard view implementations.">Los parámetros del menú se utilizan en la nueva interfaz de usuario para 
+pasar parámetros a las implementaciones de vista estándar.</value>
+  </row>
+  <row id="F648835984F842AF906FA5F97EF6641B" trl="Y">
+    <value column="Name" original="View Implementation">Implementación de Vista</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.">Una vista se muestra en el interfaz de usuario principal. La implementación de vista define la clas Java responsable de generar el Javascript del lado del cliente.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="A view is shown in the user interface as a tab in the multi-tab interface or as a popup. The view can be anything from a grid, form or a popup window. When the view is shown in the multi-tab interface then it must be a Smartclient canvas.&#10;The view implementation defines the component which is capable of generating the client side javascript to be shown in the browser. A view implementation is a java class which extends the org.openbravo.client.kernel.BaseTemplateComponent class.">Una vista se muestra en la interfaz de usuario como una pestaña en la 
+interfaz de varias fichas o como una ventana emergente. La vista puede ser 
+cualquier cosa, desde una cuadrícula, forma o una ventana emergente. Cuando 
+se muestra la vista de la interfaz de varias fichas, entonces debe ser una 
+implementación de vista SmartClient canvas.The define el componente que es 
+capaz de generar el lado del cliente javascript que se muestra en el 
+navegador. Una implementación de vista es una clase Java que amplía la clase 
+org.openbravo.client.kernel.BaseTemplateComponent.</value>
+  </row>
+  <row id="FF8080812EFBEA81012EFBED3F58000C" trl="Y">
+    <value column="Name" original="View Implementation">Implementación de Vista</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Edit the selected role's access to specified application view impementations.">Editar el acceso del rol selecionado a las implementaciones de vistas de la aplicación especificadas.</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="View implementation tab allows to select customized views.">Ver ficha de la aplicación permite seleccionar vistas personalizadas.</value>
+  </row>
+  <row id="FF8081813157AED2013157BF6D810023" trl="Y">
+    <value column="Name" original="Window Personalization">Personalización de Ventana</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Maintains window personalization records">Mantiene la personalización de la ventana</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF80818132D7FB620132D819C1720046" trl="Y">
+    <value column="Name" original="Process">Proceso</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF80818132D85DB50132D86374920010" trl="Y">
+    <value column="Name" original="Process Access">Acceso a Proceso</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF80818132D8C36D0132D8C4936F0006" trl="Y">
+    <value column="Name" original="Parameter">Parámetro</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

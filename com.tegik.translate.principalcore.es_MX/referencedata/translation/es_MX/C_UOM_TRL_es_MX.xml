@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="C_UOM" version="">
+  <row id="100" trl="Y">
+    <value column="Name" isTrl="Y" original="Unit">Unidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="Ud ">Ud </value>
+  </row>
+  <row id="101" trl="Y">
+    <value column="Name" isTrl="Y" original="Hour">Hora</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="h  ">h  </value>
+  </row>
+  <row id="102" trl="Y">
+    <value column="Name" isTrl="Y" original="Day">Dia</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="d  ">d  </value>
+  </row>
+  <row id="103" trl="Y">
+    <value column="Name" isTrl="Y" original="Minutes">Minutos</value>
+    <value column="Description" isTrl="Y" original="(lowest unit for resorce assigments)">(unidad bajo para asignar recurso)</value>
+    <value column="UOMSymbol" isTrl="N" original="min">min</value>
+  </row>
+  <row id="104" trl="Y">
+    <value column="Name" isTrl="Y" original="Labour day">Dia de Labor</value>
+    <value column="Description" isTrl="Y" original="8 hours">8 horas</value>
+    <value column="UOMSymbol" isTrl="N" original="D  ">D  </value>
+  </row>
+  <row id="105" trl="Y">
+    <value column="Name" isTrl="Y" original="Week">Semana</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="w  ">w  </value>
+  </row>
+  <row id="106" trl="Y">
+    <value column="Name" isTrl="Y" original="Month">Mes</value>
+    <value column="Description" isTrl="Y" original="30 days">20 dias</value>
+    <value column="UOMSymbol" isTrl="N" original="m  ">m  </value>
+  </row>
+  <row id="107" trl="Y">
+    <value column="Name" isTrl="Y" original="Labour month">Mes de Labor</value>
+    <value column="Description" isTrl="N" original="20 days">20 days</value>
+    <value column="UOMSymbol" isTrl="N" original="M  ">M  </value>
+  </row>
+  <row id="108" trl="Y">
+    <value column="Name" isTrl="Y" original="Year">Año</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="Y  ">Y  </value>
+  </row>
+  <row id="2EBC93C05D75431E9EEFB29CEC76F244" trl="Y">
+    <value column="Name" isTrl="Y" original="Ounce">Onza</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="oz ">oz </value>
+  </row>
+  <row id="6FA87C4EE1FD4C86940A5F2E47C429DA" trl="Y">
+    <value column="Name" isTrl="Y" original="Pound">Libra</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="Lb ">Lb </value>
+  </row>
+  <row id="72BA247D31F745F3AF11F74A5E2CCBEF" trl="N">
+    <value column="Name" isTrl="N" original="Kilogram">Kilogram</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="UOMSymbol" isTrl="N" original="kg ">kg </value>
+  </row>
+</compiereTrl>

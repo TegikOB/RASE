@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="1AC604AA78444D47BDA43F53DC050912" trl="Y">
+    <value column="Name" original="Orders Awaiting Delivery Report">Informe de Pedidos a la Espera de Entrega</value>
+    <value column="Description" original="Orders Awaiting Delivery Report">Informe de Pedidos a la Espera de Entrega</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="00DA059B5BF642408854FEE543C725DC" trl="Y">
+    <value column="MsgText" original="Categories">Categorías</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="04BF18418E0E4A8CA78917F6F4FAB43A" trl="Y">
+    <value column="MsgText" original="Your browser is not supported by Openbravo Web POS.">Su navegador no está soportado por Openbravo Web POS.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0745179AC41245D78FB81B40870633F9" trl="Y">
+    <value column="MsgText" original="This user is not registered offline. In order to be able to do offline log in, you first need to log in online, so the user is registered for later offline usage.">Este usuario no está registrado para ser usado sin conexión. Para poder 
+entrar sin conexión, es necesario entrar primero conectado para que el 
+usuario quede registrado.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0EE7DA62B0AE4F3CA99837B1CD8FD1F7" trl="Y">
+    <value column="MsgText" original="Brand">Marca</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0F340EF05382478DBBD2E03E72A18CD0" trl="N">
+    <value column="MsgText" original="y">y</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="118B3DB2757844E89B5361B6C647DE3F" trl="Y">
+    <value column="MsgText" original="The context information has changed">La información del contexto ha cambiado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="129F772DE1AC4C7CBA05F1F043962BF1" trl="Y">
+    <value column="MsgText" original="Are you sure you want to log out? Any pending tickets will be deleted. There is no undo for this action.">Pueden existir pedidos pendientes que serán eliminados al salir.¿Está seguro 
+de que quiere salir?</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="131BF17999F041BA8EBC27529EE1337D" trl="Y">
+    <value column="MsgText" original="Warehouse">Almacén</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="14CF1B578ADE4C98AE4757DB5A54FFA0" trl="Y">
+    <value column="MsgText" original="Undo">Deshacer</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="188DEF75C41E4591A6EA0653813ED052" trl="Y">
+    <value column="MsgText" original="Price list:">Lista de precios:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="192B26EBFA18427089D2488169EF0BC7" trl="Y">
+    <value column="MsgText" original="Apply">Aplicar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1D6A507A63894D1DAE1344901965D62C" trl="Y">
+    <value column="MsgText" original="No access">No se puede acceder al TPV Web</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1EE0FF043B0D40968E891A9FA0FB6220" trl="Y">
+    <value column="MsgText" original="(No category)">(Sin categoría)</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="32360CCD780547EB9E2610F3D38BE46E" trl="Y">
+    <value column="MsgText" original="Cancel">Cancelar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="38DF240154074A9793BCCB93C3C7FC2F" trl="Y">
+    <value column="MsgText" original="User">Usuario</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3B8E5D98397743CAB01A9140E1F1D5C1" trl="Y">
+    <value column="MsgText" original="BROWSE">NAVEGAR</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3DB1695B24E248308141292CA28EC0D9" trl="Y">
+    <value column="MsgText" original="Yes">Sí</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3EA5A4A6149D47F38BDB72C30EBCD617" trl="Y">
+    <value column="MsgText" original="Currency:">Moneda:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4125E049FC3942C39597DA7AAE82FC8C" trl="Y">
+    <value column="MsgText" original="Lock Screen">Bloquear Pantalla</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="44E2FBBC2D3C4B43B4A28D993C743297" trl="Y">
+    <value column="MsgText" original="Log in again">Iniciar sesión de nuevo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="45CBE507166842938F4F1776544ECCA8" trl="Y">
+    <value column="MsgText" original="Generic">Generico</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="471624B4DAA542268C3431BFE228CDC8" trl="Y">
+    <value column="MsgText" original="Back">Banco</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="489005C129F5429F8315C1CF4B98E30E" trl="Y">
+    <value column="MsgText" original="Edit Profile">Editar perfil</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="496D9E4AE9C042989AA2231E8CC21E10" trl="Y">
+    <value column="MsgText" original="WARNING!">¡ATENCIÓN!</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4BBC40BE821C40A39FF6229D01F27752" trl="Y">
+    <value column="MsgText" original="Client:">Cliente:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4EBA804564084BA5AC5DB01FE7D488D1" trl="Y">
+    <value column="MsgText" original="Location:">Dirección:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="530E5281DB344E069AD5A7F89BDECEDB" trl="Y">
+    <value column="MsgText" original="(All categories)">(Todas las categorías)</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="56A2A0836FEC49AC88539A2D7558CFBE" trl="Y">
+    <value column="MsgText" original="DISCOUNT">DESCUENTO</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="595B04A62E5F4FFDB6E57B0AFF3D4094" trl="Y">
+    <value column="MsgText" original="The user or password is not correct">El usuario o la contraseña son incorrectos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5C01BF20D9F54996AB397D6C22A95711" trl="N">
+    <value column="MsgText" original="No">No</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5DB7BD0ABD15432FB907215C3A16D2BF" trl="Y">
+    <value column="MsgText" original="Offline">Sin conexión</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="609E83AFE22040819F66D76230246225" trl="Y">
+    <value column="MsgText" original="OK">ACEPTAR</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6353C0B0C4354E00A3CB8F09005CE29C" trl="Y">
+    <value column="MsgText" original="Done">Hecho</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="63FBD2F2CB2A4FAA8B967841C721A0D5" trl="N">
+    <value column="MsgText" original="d">d</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="81062F7B27454D8D8DA9FD022B3024D4" trl="Y">
+    <value column="MsgText" original="SUCCESS">ÉXITO</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="83A5EB7310C340859F4702FF266B2EC7" trl="Y">
+    <value column="MsgText" original="Set as Default">Por defecto</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="891098B21ABE4376B00B2A4B60A5571A" trl="N">
+    <value column="MsgText" original="1,2,3,...">1,2,3,...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="8CF8F60510AD4197BD0B8EAA5ABE515B" trl="Y">
+    <value column="MsgText" original="Language">Idioma</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9342BD5B83DE47319B400D56130F236B" trl="Y">
+    <value column="MsgText" original="The context information (client, organization, or role) has changed. This can happen when there is a backoffice tab open in the same browser, and the &quot;profile&quot; information (current organization or role) is changed. You now need to enter your credentials again to ensure that you are logged in the correct organization.">La información del contexto (cliente, organización o rol) ha cambiado. Esto 
+puede ocurrir cuando hay una pestaña de Openbravo abierta en el mismo 
+navegador, y la información del "perfil" (organización actual y rol) ha 
+cambiado. Necesita volver a introducir sus credenciales de nuevo para 
+asegurar que está utilizando el perfil correcto.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="93D53622FBD6472D93DA71FF27AE0B16" trl="Y">
+    <value column="MsgText" original="Supported browsers are %0 and %1.">Los navegadores soportados son %0 y %1.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="953E975B9193423983F3C371702147E6" trl="Y">
+    <value column="MsgText" original="Apologies for this inconvenience.">Perdone por la molestia.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9D5F5B0449A44937BE7B50E69B4A98C1" trl="Y">
+    <value column="MsgText" original="Screen locked">Pantalla bloqueada</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9F887189284B4BE1BD639088F1F2ABD7" trl="Y">
+    <value column="MsgText" original="Online">Conectado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="A2DA38723FEA4AA28CF28A9D15BF2D7F" trl="Y">
+    <value column="MsgText" original="Organization">Organización</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="AD38AD0F94E74540A0CBFB07C270EA67" trl="Y">
+    <value column="MsgText" original="SCAN">ESCANEAR</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="AD438F79E4B94354AC6323E944CE2452" trl="Y">
+    <value column="MsgText" original="Role">Rol</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B543382DDA8142F09E03CC2340EF2E1C" trl="Y">
+    <value column="MsgText" original="End Session">Terminar Sesión</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B6030684344E4A7EB7821CECAC28A00E" trl="Y">
+    <value column="MsgText" original="User">Usuario</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BAF6D2232E0A4943866FC5237AD5468F" trl="Y">
+    <value column="MsgText" original="Log Out">Salir</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BB31C5F8D9474134843A5D123636B0AD" trl="Y">
+    <value column="MsgText" original="Browser not supported">Navegador no soportado</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C4315A1B9B0746C38F56D74B56C2386B" trl="Y">
+    <value column="MsgText" original="Organization:">Organización:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C4BC9A9586804E1DB5F6F373102A45BB" trl="Y">
+    <value column="MsgText" original="PRICE">PRECIO</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C88B6F2C58B3477BAEA816BF54559E50" trl="Y">
+    <value column="MsgText" original="ERROR!">¡ERROR!</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C9A5287970E94DBB96A8A21B55A6ADAB" trl="Y">
+    <value column="MsgText" original="Password">Contraseña</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CB0023079F364BB1A42B2104F51A72C6" trl="N">
+    <value column="MsgText" original="UPC/EAN"/>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CC9FB6E6597A466E8B11684FF30C3EA3" trl="Y">
+    <value column="MsgText" original="The connection was restored. However, in the meantime, your session timed out. You must login again now to ensure proper synchronization. Your pending tickets will be saved.">La conexión se ha restablecido. Sin embargo, mientras tanto, la sesión ha 
+expirado. Debe iniciar sesión de nuevo para asegurar una sincronización 
+correcta. Sus pedidos pendientes serán guardados.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CD9685F4E4F1407999D69700DCD5E8A0" trl="Y">
+    <value column="MsgText" original="QUANTITY">CANTIDAD</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CDC4A54D6EBE43219A800CB88798485D" trl="Y">
+    <value column="MsgText" original="Profile">Perfil</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D05E4639FF9047308378499422EDE5AD" trl="Y">
+    <value column="MsgText" original="No results">Sin resultados</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D39F57009CF5428888584DB84382EE84" trl="Y">
+    <value column="MsgText" original="Filtering by: ">Filtrar por:</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D5601AF50A844F23A48582665F10FF99" trl="Y">
+    <value column="MsgText" original="Log In">Entrar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="E498A05E564341C788A5102E16513FE7" trl="N">
+    <value column="MsgText" original="m">m</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="E624271F1AAB479E85057455E8507345" trl="Y">
+    <value column="MsgText" original="User has no access to %0 application. Ask system administrator.">El usuario no pude acceder la aplicación %0. Pregunte al administrador del 
+sistema.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FE0C33F1B41A4933A67DDB69DADF6915" trl="Y">
+    <value column="MsgText" original="Data limit reached. Please narrow your query.">Ha alcanzado el límite de datos. Por favor, acorte la sentencia.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

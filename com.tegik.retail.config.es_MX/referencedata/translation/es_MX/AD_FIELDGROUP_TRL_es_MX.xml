@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELDGROUP" version="">
+  <row id="3FB0D54D18D04E2681F2D1140A9DE322" trl="Y">
+    <value column="Name" original="Retail Configuration">Configuración Minorista</value>
+  </row>
+</compiereTrl>

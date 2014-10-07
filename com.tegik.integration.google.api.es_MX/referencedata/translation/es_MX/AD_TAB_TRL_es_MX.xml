@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="FF8080813161A3D30131620862BF0014" trl="Y">
+    <value column="Name" original="Google Integration Defaults">Valores por Defecto de Integración con Google</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original=""/>
+    <value column="Filtername" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

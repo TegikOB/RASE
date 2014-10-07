@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ************************************************************************************
+ * Copyright (C) 2012 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************
+-->
+
+<output>
+  <ticket>
+  <%
+    var total = OB.DEC.Zero;
+    %>
+    <line>
+        <image>ticket-image.png</image>
+    </line>
+    <line></line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblCashMgmtHeader')) %></text>
+    </line>
+    <line>
+    </line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblStore') + ': ' + OB.POS.modelterminal.get('terminal').organization$_identifier) %></text>
+    </line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTerminal') + ': ' + OB.POS.modelterminal.get('terminal')._identifier) %></text>
+    </line>
+        <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblUser') + ': ' + OB.POS.modelterminal.get('context').user._identifier) %></text>
+    </line>
+    <line>
+      <text align="center" length="42"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTime') + ': ' + OB.I18N.formatDate(new Date()) + ' - ' + OB.I18N.formatHour(new Date(), true)) %></text>
+    </line>
+    <line>
+    </line>
+    <%
+    cashmgmt.forEach(function(depositsdrops){
+    if(depositsdrops.type==='drop'){
+    %>
+    <line>
+      <text align ="left" length="17"><%=OB.UTIL.encodeXMLComponent(depositsdrops.description) %></text>
+      <text align ="left" length="1"><%=' '%></text>
+      <text align ="left" length="8"><%=OB.UTIL.encodeXMLComponent(depositsdrops.user) %></text>
+      <text align ="left" length="1"><%=' '%></text>
+      <text align ="left" length="5"><%=OB.UTIL.encodeXMLComponent(depositsdrops.time) %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(OB.DEC.sub(0,depositsdrops.origAmount)) %></text>
+    </line>
+    <%
+    total = OB.DEC.sub(total, depositsdrops.amount);
+    if(depositsdrops.amount!==depositsdrops.origAmount){
+      %>
+     <line>
+      <text align ="right" length="32"><%= '('+OB.I18N.formatCurrency(OB.DEC.sub(0,depositsdrops.amount))+' '+depositsdrops.isocode+')' %></text>
+    </line>
+    <%
+    }
+    }else{
+    %>
+     <line>
+      <text align ="left" length="17"><%=OB.UTIL.encodeXMLComponent(depositsdrops.description) %></text>
+      <text align ="left" length="1"><%=' '%></text>
+      <text align ="left" length="8"><%=OB.UTIL.encodeXMLComponent(depositsdrops.user) %></text>
+      <text align ="left" length="1"><%=' '%></text>
+      <text align ="left" length="5"><%=OB.UTIL.encodeXMLComponent(depositsdrops.time) %></text>
+      <text align ="right" length="10"><%= OB.I18N.formatCurrency(OB.DEC.add(0,depositsdrops.origAmount)) %></text>
+    </line>
+    <%
+    total = OB.DEC.add(total, depositsdrops.origAmount);
+    if(depositsdrops.amount!==depositsdrops.origAmount){
+      %>
+     <line>
+      <text align ="right" length="32"><%= '('+OB.I18N.formatCurrency(OB.DEC.add(0,depositsdrops.amount))+' '+depositsdrops.isocode+')' %></text>
+    </line>
+    <%
+    }
+    }
+    });
+    %>
+     <line>
+      <text align ="left" length="25" bold="true"><%=OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_LblTotal')) %></text>
+      <text align ="right" length="17" bold="true"><%= OB.I18N.formatCurrency(OB.DEC.add(0,total)) %></text>
+    </line>
+  </ticket>
+</output>

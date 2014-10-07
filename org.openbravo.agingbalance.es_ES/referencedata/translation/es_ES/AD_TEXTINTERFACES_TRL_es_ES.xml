@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_ES" table="AD_TEXTINTERFACES" version="">
+  <row id="041E09F4477645BFAD9BBB80CC646C7E" trl="Y">
+    <value column="Text" original="As Of Date:">Fecha:</value>
+  </row>
+  <row id="049622F82A1443AAAAFFCC3D26DCEBFC" trl="Y">
+    <value column="Text" original="Current">Actual</value>
+  </row>
+  <row id="17A3C632C33D4BBDBB48871E3AE2C11D" trl="Y">
+    <value column="Text" original="Credits">Crédito</value>
+  </row>
+  <row id="1A4E2BFA5E5A454784980C6A30248908" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="1CBB2611687F43BBACBD018342E744E4" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="1DAB1E5789E84845BF6541A8CAF00B85" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="1F182B12C9F647A2BED07467BCBDE98C" trl="Y">
+    <value column="Text" original="Net Due">Balance</value>
+  </row>
+  <row id="28B044EB0358456E92D1B5F50E30B46C" trl="Y">
+    <value column="Text" original="Accounting Schema:">Esquema contable:</value>
+  </row>
+  <row id="2B391EAE819B4092B2F76199597FF05E" trl="Y">
+    <value column="Text" original="Current">Actual</value>
+  </row>
+  <row id="3058EEA7AE7D4B38B893B68469E92D79" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="3411EE69133A4444A8EB3EFA5C170747" trl="Y">
+    <value column="Text" original="CURRENT">ACTUAL</value>
+  </row>
+  <row id="42FDC13EB9CD46EFB233B650A88D5964" trl="Y">
+    <value column="Text" original="NET">NETO</value>
+  </row>
+  <row id="437E65377C5046A0860933E16F6037A7" trl="Y">
+    <value column="Text" original="CURRENT">ACTUAL</value>
+  </row>
+  <row id="43E2E38886854E048B582B09D0C7DAF7" trl="Y">
+    <value column="Text" original="NET">NETO</value>
+  </row>
+  <row id="46390FDE27994AD390B3837744ADB814" trl="Y">
+    <value column="Text" original="Credits">Crédito</value>
+  </row>
+  <row id="482D01ABF10A4579A438EEB5CFB9C445" trl="Y">
+    <value column="Text" original="NET">NETO</value>
+  </row>
+  <row id="4A6369A0CB1142D9941525BB0DA0B136" trl="Y">
+    <value column="Text" original="Accounting Schema:">Esquema contable:</value>
+  </row>
+  <row id="4CC879B3E32C46C4A513CE8B5A248A1B" trl="N">
+    <value column="Text" original="&gt;&amp;nbsp">&gt;&amp;nbsp</value>
+  </row>
+  <row id="53078025415D404F81D43A86410AE2B6" trl="Y">
+    <value column="Text" original="days overdue">días de retraso</value>
+  </row>
+  <row id="5433CCD5371143AC9D90ECB73C6EE97F" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="5747FD80919D416BB49C61E505A51E11" trl="Y">
+    <value column="Text" original="Net Due">Balance</value>
+  </row>
+  <row id="5D1F9860A67B46158235E771B22099EC" trl="Y">
+    <value column="Text" original="As Of Date">Fecha</value>
+  </row>
+  <row id="611003DB4DBF4342A41C9C709C734B43" trl="N">
+    <value column="Text" original="XLS">XLS</value>
+  </row>
+  <row id="764AD43E1EC34AF3B6E8E589ECE7152A" trl="Y">
+    <value column="Text" original="Accounting Schema:">Esquema contable:</value>
+  </row>
+  <row id="7DFE7D529F2546AC831C7724B2AD0C69" trl="Y">
+    <value column="Text" original="Document Date">Fecha de documento</value>
+  </row>
+  <row id="8DF42EDCF9084F3C98F97AA122F519CE" trl="Y">
+    <value column="Text" original="As Of Date:">Fecha:</value>
+  </row>
+  <row id="8F811713F86E40D18A959ECD3BFD5BA5" trl="Y">
+    <value column="Text" original="Document Date">Fecha de documento</value>
+  </row>
+  <row id="91E203F24A6E4B65A44C9A03D4BAFBA3" trl="Y">
+    <value column="Text" original="Document Date">Fecha de documento</value>
+  </row>
+  <row id="97227281A3704D83822E3E63A928ABA4" trl="Y">
+    <value column="Text" original="Accounting Schema">Esquema contable</value>
+  </row>
+  <row id="9FFC55EAF5DA4394BF161A6877D97C9F" trl="Y">
+    <value column="Text" original="As Of Date:">Fecha:</value>
+  </row>
+  <row id="A6CFD947F7F9474C9E0F2D96FE2C71C7" trl="Y">
+    <value column="Text" original="As Of Date:">Fecha:</value>
+  </row>
+  <row id="ABCBB6BA91D049BFB4A0148364EDD1B9" trl="Y">
+    <value column="Text" original="Accounting Schema:">Esquema contable:</value>
+  </row>
+  <row id="BB94D02C14584D93B8117C169B8BFB89" trl="Y">
+    <value column="Text" original="CURRENT">ACTUAL</value>
+  </row>
+  <row id="BDEFD1D79A094CE3910BA962EE0311B8" trl="Y">
+    <value column="Text" original="Aging Inquiry">Consulta de saldos por antigüedad</value>
+  </row>
+  <row id="BFCD78DFEC05482B8B790870B0F2D121" trl="Y">
+    <value column="Text" original="CREDITS">CRÉDITO</value>
+  </row>
+  <row id="C311F0E7BB5140C09DFA2770F72ABB9C" trl="Y">
+    <value column="Text" original="Organization:">Organización:</value>
+  </row>
+  <row id="C34338935E1B4F6EB84AC920C1BE91F2" trl="Y">
+    <value column="Text" original="BUSINESS PARTNER">TERCERO</value>
+  </row>
+  <row id="C5BF6357287F4B5B85BE90F1F522A499" trl="Y">
+    <value column="Text" original="CREDITS">CRÉDITO</value>
+  </row>
+  <row id="C6F5A9C55E3342CCA4A6001186BBE7AD" trl="N">
+    <value column="Text" original="PDF">PDF</value>
+  </row>
+  <row id="CB20D06DF47B4A22804993021DDB93CE" trl="Y">
+    <value column="Text" original="Show Details">Mostrar detalles</value>
+  </row>
+  <row id="CCA8D78BDEB74E90BFC949F41319CFD6" trl="Y">
+    <value column="Text" original="Accounting Schema:">Esquema contable:</value>
+  </row>
+  <row id="CDAA13A3BDA646298990E4C1B6451ADB" trl="Y">
+    <value column="Text" original="Number Of Days Overdue:">Número de días de retraso:</value>
+  </row>
+  <row id="D0BCFF896A8844A1A7D52B2A022A6D3A" trl="Y">
+    <value column="Text" original="Net Due">Balance</value>
+  </row>
+  <row id="D65AD0DA639845F7A0A5D859DA9027AF" trl="Y">
+    <value column="Text" original="As Of Date:">Fecha:</value>
+  </row>
+  <row id="E2B7A0F3B7BE4611B07BF5C83F61F02B" trl="Y">
+    <value column="Text" original="Accounting Schema:">Esquema contable:</value>
+  </row>
+  <row id="E50B33BC7671459688F3F1B08FAE1C3D" trl="Y">
+    <value column="Text" original="CREDITS">CRÉDITO</value>
+  </row>
+  <row id="E54D19C62E8042A0884E16800B9C9B3E" trl="Y">
+    <value column="Text" original="BUSINESS PARTNER">TERCERO</value>
+  </row>
+  <row id="ECC645935B0141FAB1D603B38FC27001" trl="Y">
+    <value column="Text" original="BUSINESS PARTNER">TERCERO</value>
+  </row>
+  <row id="ED6EF5189E244016BE8F62CCF41FC05A" trl="Y">
+    <value column="Text" original="Credits">Crédito</value>
+  </row>
+  <row id="EDD44B8157F0452FA6ED16090298550F" trl="Y">
+    <value column="Text" original="Current">Actual</value>
+  </row>
+  <row id="F5FCECB743A542289FDA20A01E581ADD" trl="Y">
+    <value column="Text" original="As Of Date:">Fecha:</value>
+  </row>
+</compiereTrl>

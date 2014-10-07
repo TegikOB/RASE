@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_CALCULO_IMP_DIOT">
+    <function name="CONTMX_CALCULO_IMP_DIOT" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- variables that will contain the parameters deriving from the AD_PInstance table
+
+v_ivadevoluciones numeric=0;
+v_ivaretenido numeric=0;
+v_valorsiniva numeric=0;
+v_valorcero numeric=0;
+v_valorexcento numeric=0;
+v_montoimponce numeric=0;
+v_valorimponce numeric=0;
+v_montoimpquince numeric=0;
+v_valordieseis numeric=0;
+v_montoquince numeric=0;
+v_valoronce numeric=0;
+v_valordiez numeric=0;
+v_montoonce numeric=0;
+v_valorimpquince numeric=0;
+v_valorquince numeric=0;
+
+  v_bpartner VARCHAR(60);
+  v_tipoproveedor VARCHAR(32);
+  v_tipooperacion VARCHAR(32);
+  v_rfc VARCHAR(20);
+  v_pais VARCHAR(60);
+  v_diaInicio DATE; -- dua de inicio
+  v_diaFinal DATE; --dia final
+  v_RECORD RECORD; -- cursor variable to loop through all parameters
+  v_User VARCHAR2(32);
+  v_Record_ID VARCHAR2(32);
+  v_Client VARCHAR2(32);
+  v_ResultStr VARCHAR(2000):=''; -- will contain text describing the stage the stored procedure is in
+  v_Message VARCHAR(60000):=''; -- will contain the final message to be logged
+  Cur_Parameter RECORD;
+  v_portercero RECORD;
+  v_org_id VARCHAR(32);
+  v_reporte_id VARCHAR(32);
+v_reporte2_id VARCHAR(32);
+  v_seqNo NUMBER:=0;
+    v_porcentajesiniva NUMERIC=0;
+  v_total NUMBER:=0;
+  por_impuesto NUMBER:=0;
+  iva_1516 NUMBER:=0;
+  iva_15 NUMBER:=0;
+   iva_1011 NUMBER:=0;
+  iva_10 NUMBER:=0;
+  iva_siniva NUMBER:=0;
+ v_iva NUMBER:=0;
+v_idtem VARCHAR(32);
+iva_imp1516 NUMERIC=0;
+iva_imp1011 NUMERIC=0;
+iva_cero NUMERIC=0;
+ BEGIN
+
+    -- Obtenemos los parametros  
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID,
+        i.AD_Client_ID, p.ParameterName, p.P_String, p.P_Number, p.P_Date
+        FROM AD_PInstance i
+          LEFT JOIN AD_PInstance_Para p
+             ON i.AD_PInstance_ID=p.AD_PInstance_ID
+               WHERE i.AD_PInstance_ID=p_PInstance_ID
+                ORDER BY p.SeqNo)
+    LOOP
+      v_User:=Cur_Parameter.AD_User_ID;
+      v_Client:=Cur_Parameter.AD_Client_ID;
+      v_Record_ID:=Cur_Parameter.Record_ID; -- save the m_productprice primary key
+      IF (Cur_Parameter.ParameterName='dia_inicio') THEN
+        v_diaInicio:=Cur_Parameter.P_Date;
+      END IF;
+      IF (Cur_Parameter.ParameterName='dia_final') THEN
+        v_diaFinal:=Cur_Parameter.P_Date;
+      END IF;
+       IF (Cur_Parameter.ParameterName='ad_org_id') THEN
+        v_org_id:=Cur_Parameter.P_String;
+      END IF;
+    END LOOP;
+ 
+  BEGIN --BODY
+
+--Es el numero de Folio
+ SELECT COUNT(contmx_diot_encab_id)
+	FROM contmx_diot_encab
+		INTO v_seqno;
+ 
+--es el ID de la primer nivel
+v_reporte_id =get_uuid();
+
+
+--insertamos en el emcabezado del proceso
+INSERT INTO contmx_diot_encab( contmx_diot_encab_id , ad_client_id,ad_org_id,isactive,createdby,updatedby,
+  name,datei,datef,seq,c_currency_id,datecalculo)
+  VALUES (v_reporte_id,v_Client,v_org_id,'Y',v_Client,v_Client,
+  'DIOT',v_diaInicio,v_diaFinal, 'DIOT' || (10000+ v_seqNo), '130', now());
+
+
+--hacemos el loop para obtener el id de cada tercero de una organizacion
+FOR v_portercero IN (SELECT c_bpartner_id FROM c_bpartner WHERE ad_org_id=v_org_id OR v_org_id='0' )
+LOOP
+
+v_total=0;
+
+SELECT taxid, em_contmx_tercero, em_contmx_operacion
+	FROM c_bpartner 
+	WHERE c_bpartner_id=v_portercero.c_bpartner_id 
+		INTO v_rfc, v_tipoproveedor, v_tipooperacion ;
+
+SELECT p.name FROM C_BPARTNER_LOCATION AS d 
+INNER JOIN C_LOCATION AS l ON l.c_location_id=d.c_location_id 
+INNER JOIN C_REGION as r ON r.c_region_id=l.c_region_id
+INNER JOIN C_COUNTRY AS p ON p.c_country_id=r.c_country_id
+WHERE d.c_bpartner_id=v_portercero.c_bpartner_id
+LIMIT 1
+INTO v_pais;
+
+
+v_reporte2_id =get_uuid();
+
+	INSERT INTO contmx_diot( contmx_diot_id,contmx_diot_encab_id,ad_client_id,ad_org_id,isactive,createdby,updatedby,name,
+	c_bpartner_id, tercero, operacion, rfc, fiscal, pais)
+	VALUES (v_reporte2_id, v_reporte_id, v_Client,v_org_id,'Y',v_Client,v_Client,'DIOT',
+	v_portercero.c_bpartner_id,v_tipoproveedor, v_tipooperacion, v_rfc, v_rfc, v_pais );
+
+
+
+--ciclo para sacar todos los productos pagados
+
+/*
+---------------------------------------------------------------------------------------------------------
+*/
+
+
+
+FOR v_RECORD IN (SELECT fp.fin_payment_id,
+			C_CURRENCY_CONVERT_PRECISION(inv.grandtotal, inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS totalconiva,
+			inv.c_invoice_id,
+			inv.dateinvoiced,
+			C_CURRENCY_CONVERT_PRECISION(inv.totallines, inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS totalsiniva,
+			inv.c_invoice_id, 
+			inv.c_bpartner_id,
+			inv.ad_org_id,
+			C_CURRENCY_CONVERT_PRECISION( fpdv.paidamt, fpdv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fpdv.ad_org_id,'A') AS paidamt,
+			fp.paymentdate FROM fin_payment AS fp
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id	
+						WHERE fp.status IN ('PWNC', 'PPM')
+						AND fp.isreceipt = 'N'
+						AND (v_org_id = inv.ad_org_id OR v_org_id='0') 
+						AND v_diaInicio <= fp.paymentdate
+						AND inv.docstatus = 'CO'
+						AND v_diaFinal >=fp.paymentdate
+						AND inv.c_bpartner_id=v_portercero.c_bpartner_id)
+				
+	
+LOOP
+v_porcentajesiniva =v_RECORD.totalsiniva/v_RECORD.totalconiva;
+
+
+--Valor de los actos o actividades pagados a la tasa del 15% o 16% de IVA. 
+SELECT  COALESCE(SUM((it.taxbaseamt/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND (tax.rate=16 OR tax.rate=15) 
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVA'
+				INTO iva_1516;
+
+v_valordieseis=v_valordieseis + iva_1516;
+
+--Valor de los actos o actividades pagados a la tasa del 15% de IVA. 
+SELECT  COALESCE(SUM((it.taxbaseamt/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND  tax.rate=15
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVA'
+				INTO iva_15;
+
+v_valorquince = v_valorquince + iva_15;
+
+--Valor de los actos o actividades pagados a la tasa del 10% o 11% de IVA. 
+SELECT  COALESCE(SUM((it.taxbaseamt/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+		FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND (tax.rate=10 OR tax.rate=11) 
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVA'
+				INTO iva_1011;
+v_valoronce=v_valoronce+iva_1011;
+
+
+--Valor de los actos o actividades pagados a la tasa del 10% de IVA. 
+SELECT  COALESCE(SUM(((it.taxbaseamt)/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND  tax.rate=10
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVA'
+				INTO iva_10;
+
+v_valordiez=v_valordiez+iva_10;
+
+--Valor de los actos o actividades pagados por los que no se pagara iva. 
+SELECT  COALESCE(SUM(((it.taxbaseamt)/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVAE' 
+				AND  tax.rate=0
+				INTO iva_siniva;
+
+v_valorsiniva=v_valorsiniva+iva_siniva;
+
+
+--valor de los demas actos o actividades pagados a la tasa de 0% de IVA
+SELECT  COALESCE(SUM(((it.taxbaseamt)/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVA0' 
+				AND  tax.rate=0
+				INTO iva_cero;
+
+v_valorcero = v_valorcero+iva_cero;
+
+
+--Valor de los actos o actividades pagados en la importacion de bienes y servicios a la tasa de 15% o 16% de iVA
+IF(v_tipoproveedor = 'E' OR v_tipoproveedor = 'G')THEN 
+SELECT  COALESCE(SUM(((it.taxbaseamt)/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVAI'
+				AND  (tax.rate=15 OR tax.rate=16)			
+				INTO iva_imp1516;
+v_valorimpquince=v_valorimpquince +iva_imp1516;
+
+
+--Valor de los actos o actividades pagados en la importacion de bienes y servicios a la tasa de 10% o 11% de iVA
+SELECT  COALESCE(SUM(((it.taxbaseamt)/v_RECORD.totalconiva)*v_RECORD.paidamt),0)
+			FROM c_invoicetax AS it 
+				INNER JOIN c_tax AS tax ON tax.c_tax_id = it.c_tax_id
+				WHERE v_RECORD.c_invoice_id = it.c_invoice_id 
+				AND tax.em_contmx_isiva='Y' AND tax.em_contmx_tipo='IVAI'
+				AND  (tax.rate=10 OR tax.rate=11)			
+				INTO iva_imp1011;
+
+v_valorimponce=v_valorimponce + iva_imp1011;
+END IF;
+
+
+INSERT INTO contmx_diot_des (contmx_diot_des_id,contmx_diot_id,ad_client_id,ad_org_id,isactive,createdby,updatedby ,
+fechaf,fechac, c_invoice_id, total,name,fin_payment_id ,c_bpartner_id, 
+valorquince, valordieseis, valordiez, valoronce, valorsiniva, valorimppnce,valorimpquince,valorcero)
+VALUES(get_uuid() ,v_reporte2_id,v_Client,v_RECORD.ad_org_id,'Y',v_Client,v_Client,
+v_RECORD.dateinvoiced,v_RECORD.paymentdate, v_RECORD.c_invoice_id,v_RECORD.paidamt*v_porcentajesiniva,'DIOT', v_RECORD.fin_payment_id,v_RECORD.c_bpartner_id,
+ iva_15, iva_1516, iva_10, iva_1011, iva_siniva, iva_imp1011, iva_imp1516,iva_cero );
+v_total=v_total+(v_RECORD.paidamt*v_porcentajesiniva);
+
+		
+END LOOP;
+
+
+
+		
+FOR v_RECORD IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+			fp.paymentdate,  
+			fp.fin_payment_id, fp.ad_org_id,
+			gl.c_glitem_id , fp.c_bpartner_id
+				FROM FIN_PAYMENT AS fp
+				INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+				INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+					WHERE fp.status IN ('PWNC', 'PPM') 
+					AND gl.em_contmx_isdiot='Y'
+					AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= fp.paymentdate
+					AND v_diaFinal >=fp.paymentdate
+					AND fp.c_bpartner_id= v_portercero.c_bpartner_id )
+	
+LOOP 
+INSERT INTO contmx_diot_des (contmx_diot_des_id,contmx_diot_id,ad_client_id,ad_org_id,isactive,createdby,updatedby ,
+		fechac, total, name,fin_payment_id ,c_bpartner_id,c_glitem_id)
+		VALUES(get_uuid() ,v_reporte2_id,v_Client,v_RECORD.ad_org_id,'Y',v_Client,v_Client,
+		v_RECORD.paymentdate, v_RECORD.amount,'DIOT', v_RECORD.fin_payment_id,v_RECORD.c_bpartner_id, v_RECORD.c_glitem_id );
+		v_total= v_total+ v_RECORD.amount;
+
+
+END LOOP;
+
+ DBMS_OUTPUT.PUT_LINE( 'ERROR6');
+--acomodar los valores en el encabezado
+UPDATE contmx_diot SET total=v_total WHERE contmx_diot_id= v_reporte2_id;
+UPDATE contmx_diot SET valordieseis=v_valordieseis WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valoronce=v_valoronce WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valordiez=v_valordiez WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valorquince=v_valorquince WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valorsiniva=v_valorsiniva WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valorcero=v_valorcero WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valorimpquince=v_valorimpquince WHERE v_reporte2_id=contmx_diot_id;
+UPDATE contmx_diot SET valorimppnce=v_valorimponce WHERE v_reporte2_id=contmx_diot_id;
+end LOOP;
+
+DELETE FROM contmx_diot WHERE total=0;
+ 
+    -- Successfully finish the process by updating AD_PInstance, setting the 
+    -- IsProcessing, ErrorMsg and Result
+    DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message) ;
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 1, v_Message) ;
+    RETURN;
+  END; -- BODY
+
+
+ EXCEPTION
+ WHEN OTHERS THEN
+   v_ResultStr:= '@ERROR=' || SQLERRM;
+   DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+   AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr) ;
+   RETURN;
+END CONTMX_CALCULO_IMP_DIOT
+]]></body>
+    </function>
+  </database>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_PROCESS_PARA" version="">
+  <row id="6D378BD702944EF3ACF1BF8474A3AB11" trl="Y">
+    <value column="Name" original="Pack">Paquete</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

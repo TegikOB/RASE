@@ -1,0 +1,6 @@
+"Organization","DocumentNo","BusinessPartner","IsReceipt","Currency","PaymentMethod","PaymentDate","FinancialAccount","Project","Campaign","Activity","InvoiceNo","OrderNo","GLItem","Amount"
+"Main","00001","atlas","True","EUR","Inmediate","2010-04-24","World Testing Bank",,,,,,"GLItem Test","10"
+"Main",,"helmet","True","EUR","Inmediate","2010-04-24","World Testing Bank",,,,,,"GLItem Test","20"
+"Main",,"moon","True","EUR","15 days","2010-04-24","World Testing Bank",,,,,,"GLItem Test","30"
+"Main",,"ocean","True","EUR","15 days","2010-04-24","Customer National Testing Bank",,,,,,"GLItem Test","40"
+"Main",,"atlas","True","EUR","1 month","2010-04-24","Customer National Testing Bank",,,,,,"GLItem Test","50"

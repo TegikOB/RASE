@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="0DCA6AF8BA8C48B0A499211B5F58E9B5" trl="N">
+    <value column="Title" isTrl="Y" original="Best Selling Category by Store">Categorías de producto más vendidas</value>
+    <value column="Description" isTrl="Y" original="Best selling product category in terms of  sales, cost and gross margin during a filtered period.">Categorías de producto más vendidas en términos de ventas, costes y margenes brutos durante un periodo de tiempo.</value>
+  </row>
+  <row id="134CADAC10DD41039D33FDB1F9512CBB" trl="N">
+    <value column="Title" isTrl="Y" original="Best Selling Product by Store">Produtos más vendidos</value>
+    <value column="Description" isTrl="Y" original="Best selling product in terms of  sales, cost and gross margin during a filtered period.">Producto más vendidos en términos de ventas, costes y margenes brutos durante un periodo de tiempo.</value>
+  </row>
+  <row id="31E93D579AAF479E9F364D7AD701599E" trl="N">
+    <value column="Title" isTrl="Y" original="Best Selling Customer by Store">Mejores compradores</value>
+    <value column="Description" isTrl="Y" original="Best selling customer in terms of  sales, cost and gross margin during a filtered period.">Mejores compradores en términos de ventas, costes y margenes brutos durante un periodo de tiempo.</value>
+  </row>
+  <row id="424AA912CE69414091B776C7628DEB4B" trl="N">
+    <value column="Title" isTrl="Y" original="Customer Contacts">Contactos</value>
+    <value column="Description" isTrl="Y" original="A list of customer contacts showing name, identifier, mail, main phone, alternative phone, fax, first name and last name">Lista de contactos de clientes que muestra nombre y apellido, identificador, correo, teléfono principal, teléfono alternativo y fax</value>
+  </row>
+  <row id="927E935EAD54494E808C9D6AED12DAF6" trl="N">
+    <value column="Title" isTrl="Y" original="Best Selling Salesman by Store">Mejores vendedores</value>
+    <value column="Description" isTrl="Y" original="Best selling salesman in terms of  sales, cost and gross margin during a filtered period.">Mejores vendedores en términos de ventas, costes y margenes brutos durante un periodo de tiempo.</value>
+  </row>
+  <row id="B8EBD50E091E4697AFD2900831A634CE" trl="N">
+    <value column="Title" isTrl="Y" original="Best Selling Store">Tiendas con mayores ventas</value>
+    <value column="Description" isTrl="Y" original="Best selling store in terms of  sales, cost and gross margin during a filtered period.">Tiendas con mayores ventas en términos de ventas, costes y margenes brutos durante un periodo de tiempo.</value>
+  </row>
+  <row id="DB506A35BCF24980AED43596A9435BEA" trl="N">
+    <value column="Title" isTrl="N" original="Product Contribution">Ventas de productos</value>
+    <value column="Description" isTrl="N" original="Total quantity, sales, cost and gross margin information about sold products, during a filtered period.">Información sobre cantidad todal, ventas, costes y márgenes brutos de productos vendidos durante un periodo de tiempo.</value>
+  </row>
+  <row id="F080F51DF91E4504B0EA34EEB2E7977C" trl="N">
+    <value column="Title" isTrl="N" original="Basket Analysis">Análisis de ventas</value>
+    <value column="Description" isTrl="N" original="Total quantity and sales per period corresponding to sold products">Cantidad total y ventas por periodo correspondientes as productos vendidos</value>
+  </row>
+</compiereTrl>

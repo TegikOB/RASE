@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="031552634F9146CFB0C6140B8955DF1D" trl="Y">
+    <value column="Name" original="OpenID Identifier">Identificador OpenID</value>
+    <value column="PrintName" original="OpenID Identifier">Identificador OpenID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="066A5B188E3341F68CB01AC3D2803AED" trl="Y">
+    <value column="Name" original="OpenID Identifier">Identificador OpenID</value>
+    <value column="PrintName" original="OpenID Identifier">Identificador OpenID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

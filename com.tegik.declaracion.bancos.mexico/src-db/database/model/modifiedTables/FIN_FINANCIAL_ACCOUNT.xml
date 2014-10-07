@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE FIN_FINANCIAL_ACCOUNT">
+    <table name="FIN_FINANCIAL_ACCOUNT" primaryKey="FIN_FINANCIAL_ACCOUNT_KEY">
+      <column name="EM_BANMEX_CONFIGURACION_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="BANMEX_CONFIGURACION" name="EM_BANMEX_CONFIG_FK">
+        <reference local="EM_BANMEX_CONFIGURACION_ID" foreign="BANMEX_CONFIGURACION_ID"/>
+      </foreign-key>
+    </table>
+  </database>

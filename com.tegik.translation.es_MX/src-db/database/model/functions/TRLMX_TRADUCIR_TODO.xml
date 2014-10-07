@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRADUCIR_TODO">
+    <function name="TRLMX_TRADUCIR_TODO" type="VARCHAR">
+      <body><![CDATA[v_string varchar(60);
+BEGIN
+
+--INSERTA TODAS LA PALABRAS
+SELECT trlmx_trad_ad_process_para() INTO v_string;
+SELECT trlmx_trad_ad_textinter()INTO v_string;
+SELECT trlmx_trad_parameter() INTO v_string;
+SELECT trlmx_trad_query_column() INTO v_string;
+SELECT trlmx_trad_selector() INTO v_string;
+SELECT trlmx_trad_widget_class() INTO v_string;
+SELECT trlmx_trad_widget_class1() INTO v_string;
+SELECT trlmx_traduccir_ad_element() INTO v_string;
+SELECT trlmx_traduccir_ad_field() INTO v_string;
+SELECT trlmx_traduccir_ad_message() INTO v_string;
+SELECT trlmx_traduccir_ad_process() INTO v_string;
+SELECT trlmx_traduccir_ad_ref_list() INTO v_string;
+SELECT trlmx_traduccir_ad_reference() INTO v_string;
+SELECT trlmx_traduccir_ad_tab() INTO v_string;
+SELECT trlmx_traduccir_ad_window() INTO v_string;
+SELECT trlmx_trad_ad_fieldgro() INTO v_string;
+
+
+--ACTUALIZA TODAS LA PALABRAS
+SELECT trlmx_trad_ad_process_para() INTO v_string;
+SELECT trlmx_trad_ad_textinter()INTO v_string;
+SELECT trlmx_trad_parameter() INTO v_string;
+SELECT trlmx_trad_query_column() INTO v_string;
+SELECT trlmx_trad_selector() INTO v_string;
+SELECT trlmx_trad_widget_class() INTO v_string;
+SELECT trlmx_trad_widget_class1() INTO v_string;
+SELECT trlmx_traduccir_ad_element() INTO v_string;
+SELECT trlmx_traduccir_ad_field() INTO v_string;
+SELECT trlmx_traduccir_ad_message() INTO v_string;
+SELECT trlmx_traduccir_ad_process() INTO v_string;
+SELECT trlmx_traduccir_ad_ref_list() INTO v_string;
+SELECT trlmx_traduccir_ad_reference() INTO v_string;
+SELECT trlmx_traduccir_ad_tab() INTO v_string;
+SELECT trlmx_traduccir_ad_window() INTO v_string;
+SELECT trlmx_trad_ad_fieldgro() INTO v_string;
+
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRADUCIR_TODO
+]]></body>
+    </function>
+  </database>

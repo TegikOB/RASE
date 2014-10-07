@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_MESSAGE" version="">
+  <row id="4E6353FCCB4E468887A4F4CF322B792B" trl="N">
+    <value column="MsgText" isTrl="N" original="Currency field is mandatory.">El campo Moneda es obligatorio.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="59E92E43EBC2441C8C4F74259DDE28B9" trl="N">
+    <value column="MsgText" isTrl="N" original="The pack price is a mandatory field">El campo Precio del paquete es obligatorio</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7EF55187858149578C54B1FD0A493DA7" trl="N">
+    <value column="MsgText" isTrl="N" original="Adding %0 extra %1, %2 discount can be applied">Añadiendo %0 extra %1, se puede aplicar el descuento %2</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="81F8CB0AF15543DC9EE3E37FDB5AB98F" trl="N">
+    <value column="MsgText" isTrl="N" original="Percentage field is mandatory.">El campo Porcentaje es obligatorio.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A489F5457EDE43968A56F88E0FB47F74" trl="N">
+    <value column="MsgText" isTrl="N" original="Amount field is mandatory.">El campo Importe es obligatorio.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C78ECEA720F9447A894C5023E261B52B" trl="N">
+    <value column="MsgText" isTrl="N" original="Promotion %0 (buy X, gift Y) doesn't define gift qty for gift product %1">Promoción %0 (compra X, regalo Y) no define la cantidad a regalar para el producto regalo %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CE05C10E1546475DAD7FD946D3F0BDE5" trl="N">
+    <value column="MsgText" isTrl="N" original="The products of the pack %0 have been added succesfully.">Los productos del paquete %0 se han añadido con éxito.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D9D82286E54F400D813A1FA52F7AFD71" trl="N">
+    <value column="MsgText" isTrl="N" original="Promotions that affect to multiple lines are not allowed to continue cascade. Set &quot;Apply Next Discounts&quot; to false.">Las promociones que afectan a varias lineas no pueden continuar en cascada. Establece "Aplicar los siguientes descuentos" a falso o deshabilitado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

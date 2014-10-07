@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRADUCCIR_AD_REF_LIST">
+    <function name="TRLMX_TRADUCCIR_AD_REF_LIST" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+v_tradMod VARCHAR(60);
+BEGIN
+
+
+SELECT COUNT(AD_REF_LIST_ID) 
+  FROM AD_REF_LIST_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM AD_REF_LIST)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+SELECT * FROM AD_REF_LIST_TRL t 
+  WHERE V_Record.AD_REF_LIST_ID = t.AD_REF_LIST_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+  
+  SELECT * FROM AD_REF_LIST_TRL t
+  WHERE V_Record.AD_REF_LIST_ID = t.AD_REF_LIST_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+
+SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+
+ 
+IF(v_TradMex.AD_Language IS NULL AND v_tradMod <> 'es_MX' )THEN
+
+
+DBMS_OUTPUT.PUT_LINE( 'Inserta la palabra '|| V_TradEsp.name);
+INSERT INTO  AD_REF_LIST_TRL (
+  AD_REF_LIST_trl_id ,
+  AD_REF_LIST_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  name , 
+  description ,
+  help , 
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.AD_REF_LIST_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.name , 
+  V_TradEsp.description ,
+  V_TradEsp.help , 
+  V_TradEsp.istranslated);
+
+END IF; 
+
+
+ IF (v_TradMex.name = V_Record.name AND v_tradMod <> 'es_MX' ) THEN 
+
+   
+DBMS_OUTPUT.PUT_LINE( 'Actualiza la palabra '||v_TradMex.name ||' a '  || V_TradEsp.name);
+
+  UPDATE AD_REF_LIST_TRL 
+  SET name =V_TradEsp.name, description = V_TradEsp.description 
+  WHERE AD_REF_LIST_TRL_ID= v_TradMex.AD_REF_LIST_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRADUCCIR_AD_REF_LIST
+]]></body>
+    </function>
+  </database>

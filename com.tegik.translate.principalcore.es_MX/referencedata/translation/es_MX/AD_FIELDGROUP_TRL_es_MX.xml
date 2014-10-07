@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="AD_FIELDGROUP" version="">
+  <row id="0595CF7C85754F72B393E766F9CF327C" trl="Y">
+    <value column="Name" isTrl="Y" original="List Price">Precio de Tarifa</value>
+  </row>
+  <row id="0E163B32BB494F28B16FDA409991959E" trl="Y">
+    <value column="Name" isTrl="Y" original="Accounting Dimensions">Dimensiones contables</value>
+  </row>
+  <row id="1000100000" trl="Y">
+    <value column="Name" isTrl="Y" original="Assets">Activos</value>
+  </row>
+  <row id="1000100001" trl="Y">
+    <value column="Name" isTrl="Y" original="Audit">Auditoría</value>
+  </row>
+  <row id="1000300000" trl="Y">
+    <value column="Name" isTrl="Y" original="Contact Details">Detalles de contacto</value>
+  </row>
+  <row id="1000300001" trl="Y">
+    <value column="Name" isTrl="Y" original="Company Details">Detalles de empresa</value>
+  </row>
+  <row id="1000300002" trl="Y">
+    <value column="Name" isTrl="Y" original="Newsletter Subscription">Suscripción al boletín de noticias</value>
+  </row>
+  <row id="1000500000" trl="Y">
+    <value column="Name" isTrl="Y" original="SMTP Server">Servidor SMTP</value>
+  </row>
+  <row id="1000500001" trl="Y">
+    <value column="Name" isTrl="Y" original="Email template">Plantilla del correo electrónico</value>
+  </row>
+  <row id="1002100000" trl="Y">
+    <value column="Name" isTrl="Y" original="Type">Tipo</value>
+  </row>
+  <row id="101" trl="Y">
+    <value column="Name" isTrl="Y" original="Status">Estado</value>
+  </row>
+  <row id="102" trl="Y">
+    <value column="Name" isTrl="Y" original="Quantities">Cantidades</value>
+  </row>
+  <row id="103" trl="Y">
+    <value column="Name" isTrl="Y" original="Amounts">Importes</value>
+  </row>
+  <row id="104" trl="Y">
+    <value column="Name" isTrl="Y" original="Reference">Referencia</value>
+  </row>
+  <row id="105" trl="Y">
+    <value column="Name" isTrl="Y" original="History">Historial</value>
+  </row>
+  <row id="106" trl="Y">
+    <value column="Name" isTrl="Y" original="Product">Producto</value>
+  </row>
+  <row id="107" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner">Tercero</value>
+  </row>
+  <row id="108" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse">Almacén</value>
+  </row>
+  <row id="109" trl="Y">
+    <value column="Name" isTrl="Y" original="Bank">Banco</value>
+  </row>
+  <row id="110" trl="Y">
+    <value column="Name" isTrl="Y" original="Cash Journal">Diario</value>
+  </row>
+  <row id="111" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax">Impuesto</value>
+  </row>
+  <row id="112" trl="Y">
+    <value column="Name" isTrl="Y" original="Project">Proyecto</value>
+  </row>
+  <row id="113" trl="Y">
+    <value column="Name" isTrl="N" original="General">General</value>
+  </row>
+  <row id="114" trl="Y">
+    <value column="Name" isTrl="Y" original="Action">Acción</value>
+  </row>
+  <row id="115" trl="Y">
+    <value column="Name" isTrl="Y" original="Standard Cost">Costo estándar</value>
+  </row>
+  <row id="116" trl="Y">
+    <value column="Name" isTrl="Y" original="Actual Costs">Costo real</value>
+  </row>
+  <row id="117" trl="Y">
+    <value column="Name" isTrl="Y" original="Statistics">Estadísticas</value>
+  </row>
+  <row id="118" trl="Y">
+    <value column="Name" isTrl="Y" original="Defaults">Por defecto</value>
+  </row>
+  <row id="119" trl="Y">
+    <value column="Name" isTrl="Y" original="Request Management">Gestión de peticiones</value>
+  </row>
+  <row id="120" trl="Y">
+    <value column="Name" isTrl="Y" original="Web Store">Tienda web</value>
+  </row>
+  <row id="121" trl="Y">
+    <value column="Name" isTrl="Y" original="Internal">Interno</value>
+  </row>
+  <row id="122" trl="Y">
+    <value column="Name" isTrl="Y" original="External">Externo</value>
+  </row>
+  <row id="123" trl="Y">
+    <value column="Name" isTrl="Y" original="Common">Común</value>
+  </row>
+  <row id="124" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipment">Remisión</value>
+  </row>
+  <row id="125" trl="Y">
+    <value column="Name" isTrl="Y" original="Document">Documento</value>
+  </row>
+  <row id="126" trl="Y">
+    <value column="Name" isTrl="Y" original="Line">Línea</value>
+  </row>
+  <row id="1714098AD15E4B4692378950DEDD1FA4" trl="Y">
+    <value column="Name" isTrl="Y" original="Step 1: Payment">Paso 1: pago</value>
+  </row>
+  <row id="1791D2AFE9A94115889B61D03CFC87D0" trl="Y">
+    <value column="Name" isTrl="Y" original="Defaults Payment OUT">Valores por defecto para Pago</value>
+  </row>
+  <row id="186B6172A38941CCA6F85C0852D82D18" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment IN">Cobro</value>
+  </row>
+  <row id="18E9C0CF3E0D4B008744301C2DAEC079" trl="Y">
+    <value column="Name" isTrl="Y" original="Location Settings">Configuracion de Direcciones</value>
+  </row>
+  <row id="1F959EBBBFF64AA18E975D1AD70C1588" trl="Y">
+    <value column="Name" isTrl="Y" original="Step 3: Reconcile">Paso 3: Reconciliación</value>
+  </row>
+  <row id="20E50987265A49C087236256E52D3CF9" trl="Y">
+    <value column="Name" isTrl="Y" original="Proxy settings">Configuraciones del Proxy</value>
+  </row>
+  <row id="2216B16A05284E558D809ACC59EBC166" trl="Y">
+    <value column="Name" isTrl="Y" original="Bank Account">Cuenta Bancaria</value>
+  </row>
+  <row id="234172F0D6064D81999B32091AE39018" trl="Y">
+    <value column="Name" isTrl="Y" original="Filter Options">Opciones de Filtrado</value>
+  </row>
+  <row id="392B1D87375D422F920E4DA159A86385" trl="Y">
+    <value column="Name" isTrl="Y" original="Step 2: Deposit / Withdrawal">Paso 2: Depósito / Extracción</value>
+  </row>
+  <row id="3EE1956EA4C4430A8666E6197EB4D074" trl="Y">
+    <value column="Name" isTrl="Y" original="Scheduling">Planificador</value>
+  </row>
+  <row id="402880E72F1C15A5012F1C7AA98B00E8" trl="Y">
+    <value column="Name" isTrl="Y" original="More Information">Mas Informacion</value>
+  </row>
+  <row id="430DD5E155044FDF84A0178BBDF0FE4D" trl="Y">
+    <value column="Name" isTrl="Y" original="Balance Sheet ad P&amp;L Presentation Options">Opciones de presentación de Cuadros plan general contable</value>
+  </row>
+  <row id="47850828C3E64E458EA4B11F03ABAE28" trl="Y">
+    <value column="Name" isTrl="Y" original="Unit Price">Unidad de Precio</value>
+  </row>
+  <row id="486D71D088A445099DEF3BC6F5F86D42" trl="Y">
+    <value column="Name" isTrl="Y" original="Advanced Configuration">Configuracion Avanzada</value>
+  </row>
+  <row id="5779017ADB22479BB143E49A8B3A9AE0" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment monitor">Seguimiento de pagos</value>
+  </row>
+  <row id="72644AE293D3494B9631412FEA0B878E" trl="Y">
+    <value column="Name" isTrl="Y" original="Definition">Definiccion</value>
+  </row>
+  <row id="7976C188F5094C488684D1347F28BE2D" trl="Y">
+    <value column="Name" isTrl="Y" original="Logos settings">Configuración de los logotipos</value>
+  </row>
+  <row id="7D71A54EFD94439F94C531270E362823" trl="Y">
+    <value column="Name" isTrl="Y" original="Defaults Payment IN">Valores por defecto para Cobro</value>
+  </row>
+  <row id="7EF34AE738BF40D498254FFC03BB31ED" trl="Y">
+    <value column="Name" isTrl="Y" original="Revenue Plan">Plan de ingresos</value>
+  </row>
+  <row id="800000" trl="Y">
+    <value column="Name" isTrl="Y" original="Dimensions">Dimensiones</value>
+  </row>
+  <row id="800001" trl="Y">
+    <value column="Name" isTrl="Y" original="Tax Category">Categoría de Impuesto</value>
+  </row>
+  <row id="800002" trl="Y">
+    <value column="Name" isTrl="Y" original="BP Tax Category">Categoría de Impuesto de Tercero</value>
+  </row>
+  <row id="9E1CC6B8E1804E2487C4BC88009C8783" trl="Y">
+    <value column="Name" isTrl="Y" original="Expense Plan">Plan de gastos</value>
+  </row>
+  <row id="AE71A689EC32416CAD7994B5D29CE3C6" trl="Y">
+    <value column="Name" isTrl="Y" original="On Hold">Bloqueo de terceros</value>
+  </row>
+  <row id="BE26AE91D1864A078EE2ABBFAB897D26" trl="Y">
+    <value column="Name" isTrl="Y" original="Finish Details">Detalles de la Finalización</value>
+  </row>
+  <row id="C6F541D454D14028B784A27B5C35E9D4" trl="Y">
+    <value column="Name" isTrl="Y" original="Matching info">Información de relación</value>
+  </row>
+  <row id="D2A0D89EDB884813B6833F6880777C27" trl="Y">
+    <value column="Name" isTrl="Y" original="Bank Account Format">Formato cuenta bancaria</value>
+  </row>
+  <row id="DED752CA2E4D49DB9B1232C707FD2622" trl="Y">
+    <value column="Name" isTrl="Y" original="Notifications">Notificaciones</value>
+  </row>
+  <row id="DEDC5F9EA78A40CEA9F4497C0800D881" trl="Y">
+    <value column="Name" isTrl="Y" original="Visibility">Visibilidad</value>
+  </row>
+  <row id="E891D258B7B7454EB9CE80F45F4EB10E" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment OUT">Pago</value>
+  </row>
+  <row id="F6B170DDB43E461DB53FF37F53307766" trl="Y">
+    <value column="Name" isTrl="Y" original="Limit Price">Precio Limite</value>
+  </row>
+  <row id="FFEBF36F217A49C49FCDA375681FC2D6" trl="Y">
+    <value column="Name" isTrl="Y" original="Open Items">Elementos Abiertos</value>
+  </row>
+</compiereTrl>

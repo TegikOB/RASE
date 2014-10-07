@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBUISEL_SELECTOR" version="">
+  <row id="C2123888B8324264A82407C31C77F1EA" trl="Y">
+    <value column="Name" original="Sale Product Complete">Venta de productos completada</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

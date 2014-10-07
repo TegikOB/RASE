@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="AD_PROCESS" version="">
+  <row id="0515E6559C31478E92703A3D10E6783B" trl="Y">
+    <value column="Name" isTrl="Y" original="Schedule Process">Programar Proceso</value>
+    <value column="Description" isTrl="Y" original="Request a process to be run in the background or scheduled.">Pedir que el proceso se ejecute de fondo o de forma programada.</value>
+    <value column="Help" isTrl="Y" original="Request a process to be run in the background or scheduled.">Pedir que el proceso se ejecute de fondo o de forma programada.</value>
+  </row>
+  <row id="100" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Periods">Crear periodos</value>
+    <value column="Description" isTrl="Y" original="Create 12 standard calendar periods (Jan-Dec) and an optional 13th period">Crear 12 periodos según el calendario (Enero-Diciembre)</value>
+    <value column="Help" isTrl="Y" original="Create 12 standard calendar periods (Jan-Dec) and an optional 13th period for adjustments">Crear 12 periodos según el calendario (Enero-Diciembre)</value>
+  </row>
+  <row id="1000500000" trl="Y">
+    <value column="Name" isTrl="Y" original="Pareto Product Report Legacy">Informe Pareto de Productos Antiguo</value>
+    <value column="Description" isTrl="Y" original="Pareto Product Report Legacy">Informe Pareto de Productos Antiguo</value>
+    <value column="Help" isTrl="N" original="">La lógica para el Informe de Pareto normalmente dice que el 20% de nuestros productos representan el 80% del valor, por lo que estos informes normalmente se estructuran como:· Código de Producto· Descripción del Producto· Cantidad· Costo (medio o estándar)· Valor (Cantidad*Costo)· Clase (A, B o C)Después, basándonos en la clasificación se asignan diferentes frecuencias de conteo (Productos A se cuentan semanalmente, Productos B se cuentan mensualmente y los Productos C son contados anualmente o nunca).PropósitoEsta ventan puede proporcionar:* Un informe que clasifica los productos en tres clases dependiendo del costo del mismo pulsando en el botón de Buscar.* Actualiza una propiedad de la tabla Específico de la Organización para el Producto siguiendo el mismo criteriopara poder ser usado como condición de filtro en el proceso de Creación de Listado de Inventario. Este proceso es lanzado al pulsar el botón Actualiza ABC.</value>
+  </row>
+  <row id="1000500001" trl="Y">
+    <value column="Name" isTrl="Y" original="M_UPDATE_PARETO_PRODUCT_LEGACY">Actualiza Pareto producto</value>
+    <value column="Description" isTrl="Y" original="Updates a Org specific column of the product depending on the Pareto distribution">Actualiza una columna específica de producto para una organización dependiendo de la distribución de Pareto</value>
+    <value column="Help" isTrl="Y" original="Updates a Org specific column of the product depending on the Pareto distribution">Actualiza una columna específica de producto para una organización dependiendo de la distribución de Pareto</value>
+  </row>
+  <row id="1000500002" trl="Y">
+    <value column="Name" isTrl="Y" original="Print orders process">Proceso de impresión de pedidos</value>
+    <value column="Description" isTrl="Y" original="Process to print orders or send them through email to the client">Proceso para imprimir pedidos o para enviarlos por correo electrónico al cliente</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000500003" trl="Y">
+    <value column="Name" isTrl="Y" original="Print invoices process">Proceso de impresión de facturas</value>
+    <value column="Description" isTrl="Y" original="Process to print invoices or send them through email to the client">Proceso para imprimir facturas o para enviarlas por correo electrónico al cliente</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1000500004" trl="Y">
+    <value column="Name" isTrl="Y" original="Print shipments process">Proceso de impresión de remisiones</value>
+    <value column="Description" isTrl="Y" original="Process to print shipments or send them through email to the client">Proceso para imprimir remisiones o para enviarlos por correo electrónico al cliente</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1002100000" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Vat Registers">Crear registros IVA</value>
+    <value column="Description" isTrl="Y" original="Create Vat Registers">Crear registros IVA</value>
+    <value column="Help" isTrl="Y" original="Create Vat Registers">Crear registros IVA</value>
+  </row>
+  <row id="1002100001" trl="Y">
+    <value column="Name" isTrl="Y" original="Report VAT Register">Informe registros IVA</value>
+    <value column="Description" isTrl="Y" original="Report VAT Register">Informe registros IVA</value>
+    <value column="Help" isTrl="Y" original="Report VAT Register">Informe registros IVA</value>
+  </row>
+  <row id="1002100002" trl="Y">
+    <value column="Name" isTrl="Y" original="Report Tax Payment">Informe de pago de impuestos</value>
+    <value column="Description" isTrl="Y" original="Report Tax Payment">Informe de pago de impuestos</value>
+    <value column="Help" isTrl="Y" original="Report Tax Payment">Informe de pago de impuestos</value>
+  </row>
+  <row id="1002100003" trl="Y">
+    <value column="Name" isTrl="Y" original="Withholding Report">Informe anual de certificación</value>
+    <value column="Description" isTrl="Y" original="Withholding Report">Informe anual de certificación</value>
+    <value column="Help" isTrl="Y" original="Withholding Report">Informe anual de certificación</value>
+  </row>
+  <row id="1003900000" trl="Y">
+    <value column="Name" isTrl="Y" original="TaxPayment Post">Contabilización de los pagos de impuestos</value>
+    <value column="Description" isTrl="Y" original="TaxPayment Post">Contabilización de los pagos de impuestos</value>
+    <value column="Help" isTrl="Y" original="Post the TaxPayment">Contabilizar los pagos de impuestos</value>
+  </row>
+  <row id="1004400000" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Purchase Order">Crear Pedido de Compra (Necesidades de material)</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="In order to create a Purchase Order from selected Requisition Lines, it is necessary to set some values:&lt;br/&gt;&#10;Order Date: The date of the Purchase Order&lt;br/&gt;&#10;Business Partner, Price List and Organization: If all the selected requisition lines have a common Business Partner, Price List or Organization, then the common value is shown in the appropriate field.&lt;br/&gt;&#10;For other required values the corresponding default values are used.&lt;br/&gt;&#10;Once the Purchase Order is created, it is marked as Completed and its Document Number is shown in the success message.">Este proceso genere diferentes Pedidos de Compra para cumplir con las líneas de la necesidad de material. Por cada línea de necesidad de material es generada una línea de Pedido de Compra con la cantidad necesaria para cumplir con la requerida. El proceso cierra la necesidad de material cuando finaliza satisfactoriamente.La Fecha de Pedido es la usada para todas las fechas necesarias de los Pedidos de Compra.El Tercero es el proveedor usado en los Pedidos de Compra. Si es dejado en blanco se usará por orden de preferencia el tercero de la lína de necesidad, el tercero de la cabecera de la necesidad o el proveedor actual definido en el producto.La Tarifa es la tarifa usada en los Pedidos de Compra. Si es dejada en blanco se usará la tarifa de la línea de necesidad o la tarifa definida en la cabecera de la necesidad.La Organización es la organización usada en los Pedidos de Compra.El Almacén es el almacén usado en las cabeceras de los Pedidos de Compra.</value>
+  </row>
+  <row id="1004400002" trl="Y">
+    <value column="Name" isTrl="Y" original="Change status">Cambiar estado</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="This process changes the status of the requisition. If it is open an has purchase order lines assigned it is set to closed, in case it hasn't any purchase order it is set as canceled. When the requisition is closed or canceled the process set it as open.">Este proceso cambia el estado de la necesidad de material. Si está abierta y tiene líneas de pedidos de compra asociadas se cambia a cerrada, en caso de no tener pedidos de compra se cambia a cancelada. Cuando la necesidad está cerrada o cancelada se cambia su estado a abierta.</value>
+  </row>
+  <row id="1004400003" trl="Y">
+    <value column="Name" isTrl="Y" original="Post Requisition">Procesar necesidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1004400004" trl="Y">
+    <value column="Name" isTrl="Y" original="Print Requisition">Imprimir necesidad de material</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005400001" trl="Y">
+    <value column="Name" isTrl="Y" original="TestHeartbeat">Probar Heartbeat</value>
+    <value column="Description" isTrl="Y" original="Test the Heartbeat Configuration">Probar la configuración Heartbeat</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005400002" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Registration">Actualizar registro</value>
+    <value column="Description" isTrl="Y" original="Register with Openbravo">Registrarse en Openbravo</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005500000" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Aging Balance">Informe de efectos por antigüedad</value>
+    <value column="Description" isTrl="Y" original="Payment Aging Balance">Informe de efectos por antigüedad</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005800000" trl="Y">
+    <value column="Name" isTrl="Y" original="Heartbeat Process">Proceso Heartbeat</value>
+    <value column="Description" isTrl="Y" original="Heartbeat Process">Proceso Heartbeat</value>
+    <value column="Help" isTrl="Y" original="Heartbeat Process">Proceso Heartbeat</value>
+  </row>
+  <row id="1005900000" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Progress">Progreso de Proyectos</value>
+    <value column="Description" isTrl="Y" original="Report that shows the progress of the projects.">Informe que muestra el progreso de los proyectos.</value>
+    <value column="Help" isTrl="Y" original="The Project Progress report permits to track the progress of projects with useful indicators such as the time burned or the completion percentage.">El informe del Progreso de Proyectos permite seguir el progreso de los proyectos a través de indicadores útiles como el tiempo consumido o el porcentaje completado.</value>
+  </row>
+  <row id="101" trl="Y">
+    <value column="Name" isTrl="Y" original="Renumber">Reenumerar</value>
+    <value column="Description" isTrl="Y" original="Renumber Discount entries">Reenumerar las entradas de descuento</value>
+    <value column="Help" isTrl="Y" original="Renumber Discount entries">Reenumerar las entradas de descuento</value>
+  </row>
+  <row id="103" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Price List">Crear lista de precios</value>
+    <value column="Description" isTrl="Y" original="Create Prices based on parameters of this version">Crear precios según los parámetros de la versión</value>
+    <value column="Help" isTrl="Y" original="Create Prices for this pricelist version in the sequence of the Discount Schema Price List.|Lines with a higher sequence overwrite existing prices.  The sequence should be from generic to specific.">Crea precios para esta versión en la secuencia del esquema de descuentos de tarifas.|Líneas con una secuencia superior sobreescribe precios existentes. La secuencia debería ser de genérica a específica</value>
+  </row>
+  <row id="104" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Order">Proceso pedido</value>
+    <value column="Description" isTrl="Y" original="Process Order">Proceso pedido</value>
+    <value column="Help" isTrl="Y" original="Process Order">Proceso pedido</value>
+  </row>
+  <row id="105" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Inventory Count List">Crear lista de conteo de inventario</value>
+    <value column="Description" isTrl="Y" original="Create Inventory Count List">Crear lista de conteo de inventario</value>
+    <value column="Help" isTrl="Y" original="The inventory count lines are generated.  You can add new lines or delete lines.">Cuenta las líneas generadas.Se puede añadir nuevas líneas o borrarlas</value>
+  </row>
+  <row id="106" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Quantity">Actualizar cantidad</value>
+    <value column="Description" isTrl="Y" original="The Book Quantity is updated with current book quantity">El libro cantidad se actualiza con el libro actual de cantidad</value>
+    <value column="Help" isTrl="Y" original="The Update Quantity Process will update the book quantity with the current book quantity.">Actualiza el libro cantidad con la cantidad actual</value>
+  </row>
+  <row id="107" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Inventory Count">Proceso de conteo de inventario</value>
+    <value column="Description" isTrl="Y" original="Process Inventory count and update Inventory">Proceso inventario cuenta y actualiza el inventario</value>
+    <value column="Help" isTrl="Y" original="Process Inventory count and update Inventory">Proceso inventario cuenta y actualiza el inventario</value>
+  </row>
+  <row id="108" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Accounts">Copiar cuentas</value>
+    <value column="Description" isTrl="Y" original="Copy and overwrite all accounts to system defaults (DANGEROUS!!!)">Copiar y reescribir todas las cuentas al sistema por defecto (¡peligroso!)</value>
+    <value column="Help" isTrl="Y" original="Copy and overwrite all accounts to system defaults (DANGEROUS!!!)">Copiar y reescribir todas las cuentas al sistema por defecto (¡peligroso!)</value>
+  </row>
+  <row id="109" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Shipment">Procesar remisión</value>
+    <value column="Description" isTrl="Y" original="Process Shipment (Update Inventory)">Procesar remisión (Actualiza inventario)</value>
+    <value column="Help" isTrl="Y" original="Process Shipment will move products out of inventory and mark line items as shipped.">Procesar remisión actualiza el inventario y marca las líneas como "entregadas".</value>
+  </row>
+  <row id="110" trl="Y">
+    <value column="Name" isTrl="Y" original="Order Print">Imprimir pedido</value>
+    <value column="Description" isTrl="Y" original="** Special **">** Especial **</value>
+    <value column="Help" isTrl="Y" original="** Special **">** Especial **</value>
+  </row>
+  <row id="111" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Invoice">Proceso factura</value>
+    <value column="Description" isTrl="Y" original="Process Invoice">Proceso factura</value>
+    <value column="Help" isTrl="Y" original="Process Invoice">Proceso factura</value>
+  </row>
+  <row id="112" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Accounts">Copiar cuentas</value>
+    <value column="Description" isTrl="Y" original="Copy and overwrite Accounts to Business Partners of this group">Copiar y sobre escribir cuentas de los terceros de esta categoría</value>
+    <value column="Help" isTrl="Y" original="This process allows the business partners accounting accounts configuration. Its rewrites the business partner's accounts with the business partner group's accounts">Mediante este proceso podemos configurar las cuentas contables de todos los terceros de este grupo de manera ágil. Este proceso copia y sobre escribe la configuración de las cuentas contables de cada uno de los terceros del grupo, actualizandolo con los valores configurados para el grupo.</value>
+  </row>
+  <row id="113" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Window Tabs">Copiar solapas de una ventana</value>
+    <value column="Description" isTrl="Y" original="Copy all Tabs and Fields from other Window">Copia todas las solapas y campos de otra ventana</value>
+    <value column="Help" isTrl="Y" original="Copy tabs and fields from a selected window to the current window.">Copia las solapas y campos de otra ventana a la ventana actual.</value>
+  </row>
+  <row id="114" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Tab Fields">Copiar campos de una solapa</value>
+    <value column="Description" isTrl="Y" original="Copy Fields from other Tab">Copiar campos de otra solapa</value>
+    <value column="Help" isTrl="Y" original="Copy fields and tab configuration from other selected tab to the current tab.">Este proceso nos permite copiar los campos y la configuración de una solapa a la solapa actual.</value>
+  </row>
+  <row id="115" trl="Y">
+    <value column="Name" isTrl="Y" original="Vendor Selection">Selección de proveedor</value>
+    <value column="Description" isTrl="Y" original="Products with more than one vendor">Productos con más de un proveedor</value>
+    <value column="Help" isTrl="Y" original="Vendor Selection is initiated when there is a product that is supplied by more than one vendor.  It allows the selection of a specific vendor for a Purchase Order.">La selección de proveedor empieza cuando hay un producto que puede ser suministrado por más de un proveedor. Permite la selección de un proveedor específico para una orden de compra.</value>
+  </row>
+  <row id="116" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Print">Imprimir factura</value>
+    <value column="Description" isTrl="Y" original="** Special **">** Especial **</value>
+    <value column="Help" isTrl="Y" original="** Special **">** Especial **</value>
+  </row>
+  <row id="117" trl="Y">
+    <value column="Name" isTrl="Y" original="Delivery Note / Shipment Print">Imprimir remisión</value>
+    <value column="Description" isTrl="Y" original="** Special **">** Especial **</value>
+    <value column="Help" isTrl="Y" original="** Special **">** Especial **</value>
+  </row>
+  <row id="118" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Shipments">Crear remisiones</value>
+    <value column="Description" isTrl="Y" original="Generate shipment">Crear remisiones</value>
+    <value column="Help" isTrl="Y" original="Creates shipments from the selected organization and all its descends">Crea las remisiones de la organización seleccionada en el desplegable y todas las organizaciones dependientes.</value>
+  </row>
+  <row id="119" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Invoices">Facturar</value>
+    <value column="Description" isTrl="Y" original="Generate Invoices">Facturar</value>
+    <value column="Help" isTrl="Y" original="Generate Invoices">Facturar</value>
+  </row>
+  <row id="120" trl="Y">
+    <value column="Name" isTrl="Y" original="Order Transactions">Transacciones</value>
+    <value column="Description" isTrl="Y" original="Sales Order Transaction Report">Informe de transacciones de venta</value>
+    <value column="Help" isTrl="Y" original="Sales Order Transaction Report">Informe de transacciones de venta</value>
+  </row>
+  <row id="121" trl="Y">
+    <value column="Name" isTrl="Y" original="Open Orders">Pedidos abiertos</value>
+    <value column="Description" isTrl="Y" original="Open Orders">Pedidos abiertos</value>
+    <value column="Help" isTrl="Y" original="Open Orders">Pedidos abiertos</value>
+  </row>
+  <row id="122" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Movements">Procesar movimientos</value>
+    <value column="Description" isTrl="Y" original="Process Inventory Movements">Procesar movimientos de remisión</value>
+    <value column="Help" isTrl="Y" original="Process Inventory Movements will update inventory quantities based on the defined movements between warehouses or locations.">Actualizará las cantidades del inventario según los movimientos definidos entre almacenes o lugares.</value>
+  </row>
+  <row id="123" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Commission">Generar comisión</value>
+    <value column="Description" isTrl="Y" original="Generate Commission">Generar comisión</value>
+    <value column="Help" isTrl="Y" original="Generate Commission">Generar comisión</value>
+  </row>
+  <row id="124" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Transaction Summary">Resumen de las operaciones del producto</value>
+    <value column="Description" isTrl="Y" original="Product Transaction Summary">Resumen de las operaciones del producto</value>
+    <value column="Help" isTrl="Y" original="The report shows transaction summary for stored products">El informe muestra un resumen de operaciones para los productos almacenados.</value>
+  </row>
+  <row id="127" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Transactions">Operaciones de factura</value>
+    <value column="Description" isTrl="Y" original="Invoice Transactions">Operaciones de factura</value>
+    <value column="Help" isTrl="Y" original="Invoice Transactions">Operaciones de factura</value>
+  </row>
+  <row id="128" trl="Y">
+    <value column="Name" isTrl="Y" original="Daily Invoice">Facturar diariamente</value>
+    <value column="Description" isTrl="Y" original="Daily Invoice">Facturar diariamente</value>
+    <value column="Help" isTrl="Y" original="Daily Invoice">Facturar diariamente</value>
+  </row>
+  <row id="129" trl="Y">
+    <value column="Name" isTrl="Y" original="Monthly Invoice">Facturar mensualmente</value>
+    <value column="Description" isTrl="Y" original="Monthly Invoice">Facturar mensualmente</value>
+    <value column="Help" isTrl="Y" original="Monthly Invoice">Facturar mensualmente</value>
+  </row>
+  <row id="130" trl="Y">
+    <value column="Name" isTrl="Y" original="Weekly Invoice">Facturar semanalmente</value>
+    <value column="Description" isTrl="Y" original="Weekly Invoice">Facturar semanalmente</value>
+    <value column="Help" isTrl="Y" original="Weekly Invoice">Facturar semanalmente</value>
+  </row>
+  <row id="131" trl="Y">
+    <value column="Name" isTrl="Y" original="Weekly Product Invoice">Facturar producto semanalmente</value>
+    <value column="Description" isTrl="Y" original="Weekly Product Invoice">Facturar producto semanalmente</value>
+    <value column="Help" isTrl="Y" original="Weekly Product Invoice">Facturar producto semanalmente</value>
+  </row>
+  <row id="132" trl="Y">
+    <value column="Name" isTrl="Y" original="Monthly Product Invoice">Facturar producto mensualmente</value>
+    <value column="Description" isTrl="Y" original="Monthly Product Invoice">Facturar producto mensualmente</value>
+    <value column="Help" isTrl="Y" original="Monthly Product Invoice">Facturar producto mensualmente</value>
+  </row>
+  <row id="133" trl="Y">
+    <value column="Name" isTrl="Y" original="Monthly Vendor Invoice Report">Facturar a proveedor mensualmente</value>
+    <value column="Description" isTrl="Y" original="Monthly Vendor Invoice Report">Facturar a proveedor mensualmente</value>
+    <value column="Help" isTrl="Y" original="Monthly Vendor Invoice Report">Facturar a proveedor mensualmente</value>
+  </row>
+  <row id="134" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Invoices (manual)">Generar facturas (manualmente)</value>
+    <value column="Description" isTrl="Y" original="Generate and print Invoices manually">Generar e imprimir facturas manualmente</value>
+    <value column="Help" isTrl="Y" original="This process generates invoices from completed sales shipments. It also has filter utilities">Este proceso permite crear y completar las facturas de todas aquellas remisiones seleccionados. Indepentientemente de la busqueda por filtros que se puede realizar, muestra únicamente las remisiones que estén completados y tengán pendiente de facturar alguna cantidad.</value>
+  </row>
+  <row id="136" trl="Y">
+    <value column="Name" isTrl="Y" original="Verify BOM">Comprobar LDM</value>
+    <value column="Description" isTrl="Y" original="Verify BOM Structure">Comprobar estructura LDM </value>
+    <value column="Help" isTrl="Y" original="The Verify BOM Structure checks the elements and steps which comprise a Bill of Materials.">Comprobar LDM comprueba los elementos y pasos incluídos en la Lista De Materiales.</value>
+  </row>
+  <row id="137" trl="Y">
+    <value column="Name" isTrl="Y" original="Create/Process Production">Crear/Procesar producción</value>
+    <value column="Description" isTrl="Y" original="Create production lines, if not created - otherwise process the production">Crear líneas de producción, si no se crean de todos modos  procesar la producción</value>
+    <value column="Help" isTrl="Y" original="Create/Post Production will generate the production lines and process the production.  If the production lines already exists, the production will be processed">Genera las líneas de producción y procesa la producción, si las líneas ya existen se procesa sólo la producción</value>
+  </row>
+  <row id="138" trl="Y">
+    <value column="Name" isTrl="Y" original="Quarterly Customer Invoice by Product">Facturar a cliente por producto trimestralmente</value>
+    <value column="Description" isTrl="Y" original="Quarterly Customer Invoice by Product">Facturar a cliente por producto trimestralmente</value>
+    <value column="Help" isTrl="Y" original="Quarterly Customer Invoice by Product">Facturar a cliente por producto trimestralmente</value>
+  </row>
+  <row id="139" trl="Y">
+    <value column="Name" isTrl="Y" original="Quarterly Customer Invoice by Vendor">Facturar a cliente por proveedor trimestralmente</value>
+    <value column="Description" isTrl="Y" original="Quarterly Customer Invoice by Vendor">Facturar a cliente por proveedor trimestralmente</value>
+    <value column="Help" isTrl="Y" original="Quarterly Customer Invoice by Vendor">Facturar a cliente por proveedor trimestralmente</value>
+  </row>
+  <row id="140" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Accounts">Copiar cuentas</value>
+    <value column="Description" isTrl="Y" original="Copy and overwrite Accounts to Products of this category">Copiar y sobre escribir cuentas de los productos de esta categoría</value>
+    <value column="Help" isTrl="Y" original="The Copy Accounts Process will take the accounts defined for a product category and copy them to any product that references this category.  If an account exists at the product level it will be overwritten.">El proceso Copiar cuentas toma las cuentas definidas para una categoría de producto y las copia a cualquier producto que haga referencia a esa categoría. Si existe una cuenta a nivel de producto, será sobrescrita.</value>
+  </row>
+  <row id="142" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Receipt from Invoice">Crear remisión de factura</value>
+    <value column="Description" isTrl="Y" original="Create and process delivery Receipt from this invoice.  The invoice should be correct and completed.">Crea y procesa una remisión de entrega a partir de la factura.  La factura debe estar correcta y completa.</value>
+    <value column="Help" isTrl="Y" original="Create and process delivery Receipt from this invoice.  The invoice should be correct and completed.">Crea y procesa una remisión de entrega a partir de la factura.  La factura debe estar correcta y completa.</value>
+  </row>
+  <row id="144" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Cash">Procesar caja</value>
+    <value column="Description" isTrl="Y" original="Process Cash">Procesar caja</value>
+    <value column="Help" isTrl="Y" original="Process Cash">Procesar caja</value>
+  </row>
+  <row id="147" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Statement">Proceso sentencia</value>
+    <value column="Description" isTrl="Y" original="Process Statement">Proceso sentencia</value>
+    <value column="Help" isTrl="Y" original="Process Statement">Proceso sentencia</value>
+  </row>
+  <row id="151" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Summary">Resumen de factura</value>
+    <value column="Description" isTrl="Y" original="Invoice Summary">Resumen de factura</value>
+    <value column="Help" isTrl="Y" original="Invoice Summary">Resumen de factura</value>
+  </row>
+  <row id="154" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Invoice from Receipt">Crear factura de la remisión</value>
+    <value column="Description" isTrl="Y" original="Create and process Invoice from this receipt. The receipt should be correct and completed.">Crea y procesa la factura de esta remisión. La remisión debe estar correcta y completo.</value>
+    <value column="Help" isTrl="Y" original="Generate Invoice from Receipt will create an invoice based on the selected receipt and match the invoice to that receipt. If the receipt line is related to an existing order line, then the price of the invoice line is taken from that order line. In other case, it uses the retrieved price from the price list selected in the below drop-down list.">Crear factura de la remisión crea una factura para la remisión seleccionada y conforma (match) la factura con la remisión.</value>
+  </row>
+  <row id="155" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Payment">Crea pagos</value>
+    <value column="Description" isTrl="Y" original="Create Payment">Crea pagos</value>
+    <value column="Help" isTrl="Y" original="Create Payment">Crea pagos</value>
+  </row>
+  <row id="159" trl="Y">
+    <value column="Name" isTrl="Y" original="Dunning Letter">Letra de reclamación de impago</value>
+    <value column="Description" isTrl="Y" original="Dunning Letter">Letra de reclamación de impago</value>
+    <value column="Help" isTrl="Y" original="Dunning Letter">Letra de reclamación de impago</value>
+  </row>
+  <row id="160" trl="Y">
+    <value column="Name" isTrl="Y" original="Tire Letter">Letra de la rueda</value>
+    <value column="Description" isTrl="Y" original="Tire Letter">Letra de la rueda</value>
+    <value column="Help" isTrl="Y" original="Tire Letter">Letra de la rueda</value>
+  </row>
+  <row id="161" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Transaction Value">Valor de operación de producto</value>
+    <value column="Description" isTrl="Y" original="Product Transaction Value">Valor de operación de producto</value>
+    <value column="Help" isTrl="Y" original="The report shows product transactions with valuation">El informe muestra operaciones de productos con valoración</value>
+  </row>
+  <row id="162" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Status Summary">Resumen del estado del proyecto</value>
+    <value column="Description" isTrl="Y" original="Project Status of Project Cycle">Estado del proyecto en el ciclo del proyecto</value>
+    <value column="Help" isTrl="Y" original="Project Status of Project Cycle">Estado del proyecto en el ciclo del proyecto</value>
+  </row>
+  <row id="164" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Order">Crear pedido</value>
+    <value column="Description" isTrl="Y" original="Generate Order from Project">Crea un pedido a partir del proyecto</value>
+    <value column="Help" isTrl="Y" original="The Generate Order process will generate a new Order document based on the project phase. A price list and warehouse/service point must be defined on the project.">Este proceso crea un nuevo pedido a partir de la información recogida en el proyecto. Se debe indicar una tarifa en el proyecto. Al lanzar al proyecto se solicita al usuario que seleccione el almacén contra el que se realiza el pedido.</value>
+  </row>
+  <row id="165" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Lines">Copiar líneas</value>
+    <value column="Description" isTrl="Y" original="Copy Commission Lines from other Commission">Copiar las líneas de otra comisión</value>
+    <value column="Help" isTrl="Y" original="Copy Commission Lines from other Commission">Copiar las líneas de otra comisión</value>
+  </row>
+  <row id="166" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Invoice">Crear factura</value>
+    <value column="Description" isTrl="Y" original="Create Invoice from Commission Calculation">Crea una factura a partir de una comisión calculada</value>
+    <value column="Help" isTrl="Y" original="Create Invoice from Commission Calculation">Crea una factura a partir de una comisión calculada</value>
+  </row>
+  <row id="167" trl="Y">
+    <value column="Name" isTrl="Y" original="Open/Close All">Abrir/Cerrar todo</value>
+    <value column="Description" isTrl="Y" original="Open/Close all Base Document Types">Abrir/Cerrar todo</value>
+    <value column="Help" isTrl="Y" original="Open/Close all Base Document Types.&#10;NOTE: You will not be able to close the fiscal year if you close all its periods permanently. Maybe you should close it before changing the last period from closed to permanently closed.">Abrir/Cerrar todo</value>
+  </row>
+  <row id="168" trl="Y">
+    <value column="Name" isTrl="Y" original="Open/Close">Abrir/cerrar</value>
+    <value column="Description" isTrl="Y" original="Open/Close">Abrir/cerrar</value>
+    <value column="Help" isTrl="Y" original="Open/Close">Abrir/cerrar</value>
+  </row>
+  <row id="169" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Journal">Proceso asiento</value>
+    <value column="Description" isTrl="Y" original="Process Journal">Proceso asiento</value>
+    <value column="Help" isTrl="Y" original="Process Journal">Proceso asiento</value>
+  </row>
+  <row id="172" trl="Y">
+    <value column="Name" isTrl="Y" original="Synchronize Terminology">Sincronizar términos</value>
+    <value column="Description" isTrl="Y" original="Synchronize the terminology within the system.">Sincronizar la terminología del sistema</value>
+    <value column="Help" isTrl="Y" original="Based on the entries in Window Element, the fields in windows, parameters, etc. are synchronized, if they are centrally maintained.">Los elementos de las ventanas como las solapas, los campos, los parámetros, la propia ventana se sincronizan con este  proceso si están marcados como mantenimiento central. Sincronizar significa que heredan las características de otros elementos a los que se les haya asociado. Estas características son la descripción, la ayuda, etc...</value>
+  </row>
+  <row id="173" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Columns from DB">Crear columnas de la base de datos</value>
+    <value column="Description" isTrl="Y" original="Create Dictionary Columns of Table not existing as a Column but in the Database">Crea columnas en el diccionario que no esten ya creadas pero si en la base de datos</value>
+    <value column="Help" isTrl="Y" original="If you have added columns in the database to this table, this procedure creates the Column records in the Dictionary.  Please be aware, that they may deleted, if the entity type is not set to User.">Si se han añadido columnas en la base de datos a esta tabla, este procedimiento lo único que hace es crearlas a su vez en el diccionario. Por favor tener en cuenta, de que pueden ser borradas si el tipo de entidad no ha sido fijada por el usuario</value>
+  </row>
+  <row id="174" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Fields">Crear campos</value>
+    <value column="Description" isTrl="Y" original="Create Field from Table, which do not exist in the Tab yet">Crea campos de las tablas, que todavía no existen en la solapa.</value>
+    <value column="Help" isTrl="Y" original="Based on the Table of this Tab, this procedure creates the missing Fields">Según la tabla de la solapa, este procedimiento crea los campos que todavía no existen en la solapa</value>
+  </row>
+  <row id="175" trl="Y">
+    <value column="Name" isTrl="Y" original="Resubmit Posting">Reinicializar contabilidad</value>
+    <value column="Description" isTrl="Y" original="Resubmit posting of documents with posting errors">Volver a contabilizar los documentos con error de contabilización</value>
+    <value column="Help" isTrl="Y" original="Documents with posting errors are reset to be posted by the next run of the accounting engine - after fixing the cause (e.g. opening period).">Los documentos con errores de contabilización se reinician para ser contabilizados en la siguiente ejecución del motor de contabilización - después de corregir la causa del error (por ejemplo, abrir el periodo)</value>
+  </row>
+  <row id="176" trl="Y">
+    <value column="Name" isTrl="Y" original="Reset Accounting Old">Reinicializar cuentas</value>
+    <value column="Description" isTrl="Y" original="Reset Accounting Entries">Reinicializar cuentas</value>
+    <value column="Help" isTrl="Y" original="The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the &quot;Accounting Server Process&quot; or the &quot;G/L Posting by DB Tables&quot; process. ">Elimina registros de contabilidad para volver a crearlos cuando se vuelva a correr la contabilidad. Este es un proceso muy delicado y sólo se debe hacer después de cambiar la estructura de contabilidad y si no es posible fijar entradas de asientos manualmente</value>
+  </row>
+  <row id="179" trl="Y">
+    <value column="Name" isTrl="Y" original="Verify Languages">Comprobar idiomas</value>
+    <value column="Description" isTrl="Y" original="Verify existence of language translation in system (required after creating a new language)">Comprueba los idiomas que existen en el sistema (ejecutarlo después de crear un nuevo idioma)</value>
+    <value column="Help" isTrl="Y" original="Verify the translation creates missing translation records. Start this process after creating a new language. It will create new records by copying the base language entries.">Crea registros traducidos que no existan. Iniciar este proceso después de crear un nuevo idioma.Creará nuevos registros copiando las entradas que existan del idioma base</value>
+  </row>
+  <row id="180" trl="Y">
+    <value column="Name" isTrl="Y" original="Inventory Valuation Report">Informe de valoración de inventario</value>
+    <value column="Description" isTrl="Y" original="Inventory Valuation Report">Informe de valoración de inventario</value>
+    <value column="Help" isTrl="Y" original="Report lists products with their on-hand quantity and values at the valuation date">El informe muestra productos con su cantidad disponible y su valor en la fecha valor</value>
+  </row>
+  <row id="182" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Cost Update">Actualizar costo producto</value>
+    <value column="Description" isTrl="Y" original="Sets future cost price and standard cost price">Establecer para un futuro el precio de costo y el precio medio</value>
+    <value column="Help" isTrl="Y" original="For Standard Costing you can|- update the future cost price|- set the standard cost price to the future cost price">Para costos estándar se puede|- actualizar el futuro precio de costo|- establecer el precio costo estándar para el futuro precio costo</value>
+  </row>
+  <row id="184" trl="Y">
+    <value column="Name" isTrl="Y" original="Process/Unprocess Expenses">Procesar gastos</value>
+    <value column="Description" isTrl="Y" original="Process/Unprocess Expenses">Procesar gastos</value>
+    <value column="Help" isTrl="Y" original="Process/Unprocess expense sheet.">Procese el informe de gastos.</value>
+  </row>
+  <row id="185" trl="Y">
+    <value column="Name" isTrl="Y" original="Recompile DB Objects">Recompilar objetos BD</value>
+    <value column="Description" isTrl="Y" original="Recompile Database Objects">Recompilar los objetos de la base de datos</value>
+    <value column="Help" isTrl="Y" original="Recompile Functions, Procedures, Triggers, Views, etc.">Recompila funciones, procedimientos, triggers, vistas, etc</value>
+  </row>
+  <row id="186" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Sales Orders from Expenses">Crear pedidos de venta según gastos</value>
+    <value column="Description" isTrl="Y" original="Create Sales Orders for Customers from Expense Reports">Crear pedidos de venta para clientes según informes de gastos</value>
+    <value column="Help" isTrl="Y" original="Create Sales Orders for Customers from Expense Reports">Crear pedidos de venta para clientes según informes de gastos</value>
+  </row>
+  <row id="187" trl="Y">
+    <value column="Name" isTrl="Y" original="Create AP Expense Invoices">Crear facturas de gastos AP </value>
+    <value column="Description" isTrl="Y" original="Create AP Invoices from Expenses to be paid to employees">Crear AP facturas de gastos para pagar a los empleados </value>
+    <value column="Help" isTrl="Y" original="Create AP Invoices from Expenses to be paid to employees">Crear AP facturas de gastos para pagar a los empleados </value>
+  </row>
+  <row id="188" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Batch old">Procesar lote</value>
+    <value column="Description" isTrl="Y" original="Process Batch old. Do not use this one">Procesar lote</value>
+    <value column="Help" isTrl="Y" original="Process Batch">Procesar lote</value>
+  </row>
+  <row id="189" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Columns">Copiar columnas</value>
+    <value column="Description" isTrl="Y" original="Copy Report Columns from other Column Set">Copia columnas de otras columnas ya creadas</value>
+    <value column="Help" isTrl="Y" original="Copy columns at the end of this Column Set">Copia columnas al final de esta serie de columnas</value>
+  </row>
+  <row id="190" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Lines">Copiar líneas</value>
+    <value column="Description" isTrl="Y" original="Copy Report Lines from other Line Set">Copia líneas de informes de otras líneas ya creadas</value>
+    <value column="Help" isTrl="Y" original="Copy lines at the end of this Line Set">Copia líneas al final de esta serie de líneas</value>
+  </row>
+  <row id="192" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy/Create">Copiar/crear</value>
+    <value column="Description" isTrl="Y" original="Copy existing OR create Print Format from Table">Copiar de uno existente o crear un formato de impresión de una tabla</value>
+    <value column="Help" isTrl="Y" original="Select either a table to create a print format [creates initial rough layout]|OR a print format to copy into the current print format [copies layout].">Seleccionar o bien una tabla para crear un formato de impresión (crea un layout inicial en bruto) o un formato de impresión para copiar al formato de impresión actual (copia el layout)</value>
+  </row>
+  <row id="193" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate PO from Sales Order">Crear PC a partir de PV</value>
+    <value column="Description" isTrl="Y" original="Create Purchase Order from Sales Orders">Crear compra a partir de pedido venta</value>
+    <value column="Help" isTrl="Y" original="After completing sales orders, you can create one or more purchase orders for each sales order. A purchase order references always only one sales order (i.e. no consolidation of sales orders).||POs are created for all sales order lines where the product h">Después de completar los pedidos de venta, se pueden crear uno o más pedidos de compra para cada uno de los pedidos de venta. Un pedido de compra sólo referencia a un único pedido de venta.||Los pedidos de compra son creados para todas las líneas del pedido de venta dónde el producto sea de  ese proveedor, el proveedor tiene una lista de precios con todos los productos y sus precios más recientes. Se copia también la unidad de medida. Tener en cuenta que el PC y el PV pueden tener diferentes monedas.||Una vez que se corre el proceso, necesita sincronizar el PV/PC manualmente.(en el caso de añadir líneas adicionales y cambiar líneas (producto&amp;cantidad)|</value>
+  </row>
+  <row id="198" trl="Y">
+    <value column="Name" isTrl="Y" original="Import Report Line Set">Importar conjunto de líneas de informe</value>
+    <value column="Description" isTrl="Y" original="Import Report Line Set information">Importar la información del conjunto de líneas de un informe</value>
+    <value column="Help" isTrl="Y" original="The Parameters are default values for null import record values, they do not overwrite any data.">Los parámetros son valores por defecto para registros importados nulos, no se sobrescriben datos.</value>
+  </row>
+  <row id="199" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Shipments (manual)">Crear remisiones (manualmente)</value>
+    <value column="Description" isTrl="Y" original="Generate shipments manually">Crear remisiones manualmente</value>
+    <value column="Help" isTrl="Y" original="This process generates shipments from completed sale orders. It also has filter utilities.">Este proceso permite crear y completar las remisiones de todos aquellos pedidos seleccionados. Indepentientemente de la busqueda por filtros que se puede realizar, muestra únicamente los pedidos que estén completados y tengán pendiente de servir alguna cantidad.</value>
+  </row>
+  <row id="200" trl="Y">
+    <value column="Name" isTrl="Y" original="Print Invoices">Imprimir facturas</value>
+    <value column="Description" isTrl="Y" original="Print Invoices to paper or send PDF">Imprimir facturas a papel o a pdf</value>
+    <value column="Help" isTrl="Y" original="Remark: If you enter just a Document No FROM value, all invoices greater or equal to that document number are printed; alternatively, you may use the % character as a wildcard.">Nota: Si solo se introduce un No de documento, todas las facturas mayores o iguales a este documento son imprimidas; alternativamente podrá utilizarse el carácter % como un comodín.</value>
+  </row>
+  <row id="202" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Report">Crear Informe</value>
+    <value column="Description" isTrl="Y" original="Create Financial Report">Crear informe financiero</value>
+    <value column="Help" isTrl="Y" original="The default period is the current period. You can optionally enter other restrictions.">El período por defecto es el período actual. Manualmente pueden introducirse otras restricciones.</value>
+  </row>
+  <row id="203" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Accounting Balance">Actualizar balance de contabilidad</value>
+    <value column="Description" isTrl="Y" original="Update Daily Accounting Balances">Actualizar diariamente el balance de contabilidad</value>
+    <value column="Help" isTrl="Y" original="This process is run automatically">Este proceso corre automáticamente.</value>
+  </row>
+  <row id="204" trl="Y">
+    <value column="Name" isTrl="Y" original="Statement of Accounts">Estado de cuentas</value>
+    <value column="Description" isTrl="Y" original="Report Account Statement Beginning Balance and Transactions">Informe de cuentas del balance inicial y transacciones.</value>
+    <value column="Help" isTrl="Y" original="Select a Period (current period if empty) or enter a Account Date Range">Seleccionar un periodo (periodo actual si esta vacío) o entre un Rango de Días de Cuenta</value>
+  </row>
+  <row id="205" trl="Y">
+    <value column="Name" isTrl="Y" original="Cache Reset">Limpiar cache</value>
+    <value column="Description" isTrl="Y" original="Reset Cache of the System ** Close all Windows before proceeding **">Limpiar el cache del sistema**Cerrar todas las ventanas antes proceder**</value>
+    <value column="Help" isTrl="Y" original="To increase performance, Openbravo caches repeatedly used data. This process clears the local cache.">Para mejorar el rendimiento, Openbravo cachea los datos empleados repetidas veces. Este proceso limpia la cache local.</value>
+  </row>
+  <row id="208" trl="Y">
+    <value column="Name" isTrl="Y" original="Start Replication Run">Empezar replicación</value>
+    <value column="Description" isTrl="Y" original="Start Replication with Remote Host">Empezar la replicación con el host remoto</value>
+    <value column="Help" isTrl="Y" original="Start Replication with Remote Host">Empezar la replicación con el host remoto</value>
+  </row>
+  <row id="210" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Lines">Copiar líneas</value>
+    <value column="Description" isTrl="Y" original="Copy lines (products) from an existing Invoice.">Copia líneas de otra factura</value>
+    <value column="Help" isTrl="Y" original="Copy lines (products) from an existing Invoice. By selecting any existing past  invoice, the process will copy all lines (products) from it to the one currently  being edited. This process can be used repetitively to copy lines (products) from several invoices into a new one.">Permite copiar líneas de otra factura a la factura actual.</value>
+  </row>
+  <row id="211" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Lines">Copiar líneas</value>
+    <value column="Description" isTrl="Y" original="Browse history of this particular document type for the selected business partner to be able to select lines (products) from these.">Copia líneas de otro pedido</value>
+    <value column="Help" isTrl="Y" original="Browse history of this particular document type for the selected business partner to be able to select lines (products) from these. For example, if you are creating a new sales order for business partner A, Copy Lines window will give you the history of products ordered and the prices given to business partner A within the last X days. X can be set within the business partner window. Consider this as a tiny CRM window.">Consultar el histórico de ese tipo de documento concreto para el tercero seleccionado para poder seleccionar líneas (productos) de estas. Por ejemplo, si está creando un nuevo pedido de venta para el tercero A, la ventana Copiar líneas le proporcionará un histórico de los productos pedidos y sus precios para el tercero A en los últimos X días. X puede establecerse en la ventana de tercero. Puedo considerar esto como una pequeña ventana CRM.</value>
+  </row>
+  <row id="212" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Details">Copiar detalles</value>
+    <value column="Description" isTrl="Y" original="Copy Lines/Phases/Tasks from another existing project">Copia líneas/fases/tareas de otro proyecto</value>
+    <value column="Help" isTrl="Y" original="Copy Lines/Phases/Tasks from another existing project">Copia líneas/fases/tareas de otro proyecto</value>
+  </row>
+  <row id="213" trl="Y">
+    <value column="Name" isTrl="Y" original="Start Process">Comenzar proceso</value>
+    <value column="Description" isTrl="Y" original="Start Recurring Run">Lanza el proceso de forma periódica</value>
+    <value column="Help" isTrl="Y" original="Start Recurring Run">Lanza el proceso de forma periódica</value>
+  </row>
+  <row id="214" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Details">Copiar detalles</value>
+    <value column="Description" isTrl="Y" original="Copy Journal/Lines from other Journal Batch">Copia asientos/apuntes de otro lote de asientos</value>
+    <value column="Help" isTrl="Y" original="Copy Journal/Lines from other Journal Batch">Copia asientos/apuntes de otro lote de asientos</value>
+  </row>
+  <row id="215" trl="Y">
+    <value column="Name" isTrl="Y" original="Set Project Type">Establecer el tipo de proyecto</value>
+    <value column="Description" isTrl="Y" original="Set Project Type and for Service Projects copy Phases and Tasks of Project Type into Project">Establece el tipo de proyecto y para proyectos multifase copia fases y asuntos del tipo de proyecto al proyecto</value>
+    <value column="Help" isTrl="Y" original="Set Project Type and for Service Projects copy Phases and Tasks of Project Type into Project">Establece el tipo de proyecto y para proyectos multifase copia fases y asuntos del tipo de proyecto al proyecto</value>
+  </row>
+  <row id="216" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Order from Project Phase">Generar pedido</value>
+    <value column="Description" isTrl="Y" original="Generate Order from Project Phase">Generar pedido</value>
+    <value column="Help" isTrl="Y" original="The Generate Order process will generate a new Order document based on the project phase or tasks. A price list and warehouse/service point must be defined on the project.  If a product is defined on phase level, the Phase information is used as the basis">The Generate Order process will generate a new Order document based on the project phase or tasks. A price list and warehouse/warehouse must be defined on the project.  If a product is defined on phase level, the Phase information is used as the basis for the Order (milestone invoicing) - otherwise the individual tasks.</value>
+  </row>
+  <row id="217" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Print">Imprimir proyecto</value>
+    <value column="Description" isTrl="Y" original="** Special **">** Especial **</value>
+    <value column="Help" isTrl="Y" original="** Special **">** Especial **</value>
+  </row>
+  <row id="218" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Cycle Report">Ciclo del proyecto</value>
+    <value column="Description" isTrl="Y" original="Report Projects based on Project Cycle">Informes del proyecto basados en el ciclo del mismo</value>
+    <value column="Help" isTrl="Y" original="The Project Cycle reports on common project phases of a Cycle Step/Phase. All Report information is weighted by the relative weight of the Cycle Step and converted to the currency of the Project Cycle (e.g. for Sales Funnel Reporting).&lt;p&gt;|The Projects mus">The Project Cycle reports on common project phases of a Cycle Step/Phase. All Report information is weighted by the relative weight of the Cycle Step and converted to the currency of the Project Cycle (e.g. for Sales Funnel Reporting).&lt;p&gt;||The Projects must have a Project Type, Phase and Currency defined. The Phase must be assigned to a Cycle Step.</value>
+  </row>
+  <row id="221" trl="Y">
+    <value column="Name" isTrl="Y" original="Import Bank Statement">Importar extracto bancario</value>
+    <value column="Description" isTrl="Y" original="Import Bank Statement">Importar extracto bancario</value>
+    <value column="Help" isTrl="Y" original="The Parameters are default values for null import record values, they do not overwrite any data.">Los parámetros son valores por defecto para registros importados nulos, no se sobrescriben datos.</value>
+  </row>
+  <row id="222" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer Assets">Activos cliente</value>
+    <value column="Description" isTrl="Y" original="Report Customer Assets with Delivery Count">Informe de activos del cliente con control de entrega</value>
+    <value column="Help" isTrl="Y" original="Report Customer Assets with Delivery Count">Informe de activos del cliente con control de entrega</value>
+  </row>
+  <row id="223" trl="Y">
+    <value column="Name" isTrl="Y" original="Asset Delivery">Entrega activos</value>
+    <value column="Description" isTrl="Y" original="Report Asset Deliveries">Informe de entrega de activos</value>
+    <value column="Help" isTrl="Y" original="Report Asset Deliveries">Informe de entrega de activos</value>
+  </row>
+  <row id="224" trl="Y">
+    <value column="Name" isTrl="Y" original="Issue to Project">Suministro para el proyecto</value>
+    <value column="Description" isTrl="Y" original="Issue Material to Project from Receipt or manual Inventory Location">Suministro de material para el proyecto desde una recepción o desde inventario</value>
+    <value column="Help" isTrl="Y" original="Select a Project and either|&lt;BR&gt;- Material Receipt|&lt;BR&gt;- Expense Report|&lt;br&lt;- Inventory Location and Project Line not issued yet|&lt;BR&gt;- Inventory Location, Product and Quantity|The default Movement Date is today's date.">Seleccionar un proyecto|&lt;br&gt;- Recepción de material|&lt;br&gt;- Informe de gasto|&lt;br&gt;- Ubicación del inventario y línea de proyecto no entregada|&lt;br&gt;- Ubicación de inventario, producto y cantidad|La fecha por defecto del movimiento es la de hoy.</value>
+  </row>
+  <row id="225" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate PO from Project">Generar PC de un proyecto</value>
+    <value column="Description" isTrl="Y" original="Generate PO from Project Line(s)">Generar PC de las líneas de un proyecto</value>
+    <value column="Help" isTrl="N" original="|">|</value>
+  </row>
+  <row id="226" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Detail Accounting Report">Contabilidad detalles proyecto</value>
+    <value column="Description" isTrl="Y" original="Project Detail Accounting Report">Contabilidad detalles proyecto</value>
+    <value column="Help" isTrl="Y" original="Project Detail Accounting Report">Contabilidad detalles proyecto</value>
+  </row>
+  <row id="227" trl="Y">
+    <value column="Name" isTrl="Y" original="Close Project">Cerrar proyecto</value>
+    <value column="Description" isTrl="Y" original="Close Project">Cerrar proyecto</value>
+    <value column="Help" isTrl="Y" original="Close Project">Cerrar proyecto</value>
+  </row>
+  <row id="228" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Lines not Issued">Proyecto líneas no incluidas</value>
+    <value column="Description" isTrl="Y" original="Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project">Listado de las líneas de un pedido de trabajo o activos del proyecto no incluidos en el proyecto</value>
+    <value column="Help" isTrl="Y" original="Lists Project Lines of a Work Order or Asset Project, which are not issued to the Project">Listado de las líneas de un pedido de trabajo o activos del proyecto no incluidos en el proyecto</value>
+  </row>
+  <row id="229" trl="Y">
+    <value column="Name" isTrl="Y" original="Project POs not Issued">Proyecto líneas pedidos compra no incluidas</value>
+    <value column="Description" isTrl="Y" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Listado de las líneas de un proyecto con pedidos de compra generados de un pedido de trabajo o activos del pedido no incluidas en el trabajo</value>
+    <value column="Help" isTrl="Y" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Listado de las líneas de un proyecto con pedidos de compra generados de un pedido de trabajo o activos del pedido no incluidas en el trabajo</value>
+  </row>
+  <row id="230" trl="Y">
+    <value column="Name" isTrl="Y" original="Get Price">Conseguir precios</value>
+    <value column="Description" isTrl="Y" original="Get Price for Project Line based on Project Price List">Conseguir precios para una línea según la lista de precios del proyecto</value>
+    <value column="Help" isTrl="Y" original="Get Price for Project Line based on Project Price List">Conseguir precios para una línea según la lista de precios del proyecto</value>
+  </row>
+  <row id="23D1B163EC0B41F790CE39BF01DA320E" trl="Y">
+    <value column="Name" isTrl="Y" original="Insert Orphan Line">Insertar líneas sin remision</value>
+    <value column="Description" isTrl="Y" original="Process to insert orphan lines not related to shipments in return material orders">Proceso para insertar líneas sin albarán en la orden de devolución de material</value>
+    <value column="Help" isTrl="N" original="Inserts a return order line not related to any shipment line. It has to be set the product with attribute if necessary and the quantity desired to return. Alternatively it can be set the price and tax to be used if values different than default are desired.">Inserts a return order line not related to any shipment line. It has to be set the product with attribute if necessary and the quantity desired to return. Alternatively it can be set the price and tax to be used if values different than default are desired.</value>
+  </row>
+  <row id="3C386BC12832466790E50F2F8C5EBD85" trl="N">
+    <value column="Name" isTrl="N" original="Create Variants">Create Variants</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Process that creates all the Variants Products of the Generic Product based on the combination of its Variant Characteristics' Values. Only values that are active in the Characteristic Configuration tab are considered.&#10;&#10;In case there is any characteristic configured with the Defines Price or Defines Image flag checked this process also sets the Price or an Image to the created Product Variants.&#10;&#10;If the Generic Product already has any Variant created the process returns an error message and no new Variant is created.">Process that creates all the Variants Products of the Generic Product based on the combination of its Variant Characteristics' Values. Only values that are active in the Characteristic Configuration tab are considered.
+
+In case there is any characteristic configured with the Defines Price or Defines Image flag checked this process also sets the Price or an Image to the created Product Variants.
+
+If the Generic Product already has any Variant created the process returns an error message and no new Variant is created.</value>
+  </row>
+  <row id="3F2B4AAC707B4CE7B98D2005CF7310B5" trl="N">
+    <value column="Name" isTrl="Y" original="Costing Background process">Proceso de background del cálculo de costes</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4062D3F4448547C3A2BCDFB09D062BA2" trl="Y">
+    <value column="Name" isTrl="Y" original="Register Module">Registrar Módulo</value>
+    <value column="Description" isTrl="Y" original="This process registers a module in the central repository">Este proceso registra el módulo en el repositorio central</value>
+    <value column="Help" isTrl="Y" original="This process registers a module in the central repository checking the name, javaname, db_prefix etc. are available to be used. To register a module you must have a valid username and password in Openbravo Central Repository. You should register into &lt;a href=&quot;http://forge.openbravo.com&quot; target=&quot;_blank&quot;&gt;Openbravo Forge&lt;/a&gt; to obtain these credentials">Este proceso registra un módulo en el repositorio central comprobando que el nombre, el nombre Java y el prefijo de base de datos se pueden usar.</value>
+  </row>
+  <row id="406CFC3A1DE144FF855DA10A987C057C" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Monitor for Openbravo 2.50">Proceso de Seguimiento de Pagos</value>
+    <value column="Description" isTrl="Y" original="Payment Monitor for Openbravo 2.50">Proceso de Seguimiento de Pagos</value>
+    <value column="Help" isTrl="Y" original="Background process to update payment monitor info of invoices">Proceso que se ejecuta en segundo plano y que actualiza la información del seguimiento de pagos de facturas</value>
+  </row>
+  <row id="462033447A1548F09BBFB0683FA976CC" trl="Y">
+    <value column="Name" isTrl="Y" original="Asset report for depreciation schedule">Informe del plan de amortización</value>
+    <value column="Description" isTrl="Y" original="Asset report for depreciation schedule">Informe del plan de amortización</value>
+    <value column="Help" isTrl="Y" original="Asset report for depreciation schedule">Informe del plan de amortización</value>
+  </row>
+  <row id="468156B616E04DB39CBAD3592316FD50" trl="Y">
+    <value column="Name" isTrl="Y" original="Reschedule Process">Reprogramar Proceso</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="49DEE812BF0545269781FCEBF2235924" trl="N">
+    <value column="Name" isTrl="Y" original="Process Shipment Java">Procesar albarán java</value>
+    <value column="Description" isTrl="Y" original="Process Shipment (Update Inventory)">Procesar albarán (Actualiza inventario)</value>
+    <value column="Help" isTrl="N" original="Process Shipment will move products out of inventory and mark line items as shipped.">Process Shipment will move products out of inventory and mark line items as shipped.</value>
+  </row>
+  <row id="53863D4359114ADE92133F772135AEEB" trl="Y">
+    <value column="Name" isTrl="Y" original="Set as Ready">Validar</value>
+    <value column="Description" isTrl="Y" original="Set an organization as ready">Validar la organización</value>
+    <value column="Help" isTrl="Y" original="This procedure checks if the organization fulfills every requirement before setting it as ready.">Este procedimiento comprueba si la organización cumple todos los requisitos antes de validarla.</value>
+  </row>
+  <row id="58591E3E0F7648E4A09058E037CE49FC" trl="N">
+    <value column="Name" isTrl="N" original="Update Product Characteristics Description">Update Product Characteristics Description</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="58763832F5F3485CAD33B8B9FCD6C640" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Audit Trail Infrastructure">Actualizar infrastructura de histórico de auditoría.</value>
+    <value column="Description" isTrl="Y" original="Update Audit Trail Infrastructure">Actualizar la infrastructura del histórico de auditoría.</value>
+    <value column="Help" isTrl="Y" original="This process updates the infrastructure for a complete audit of the selected tables.&lt;br/&gt;&#10;This process:&lt;br/&gt;&#10;- Will Stop the background process scheduler during process execution&lt;br/&gt;&#10;- Can take several minutes. Do not close the browser during execution.">Este proceso actualiza la infrastructura para una completa auditoría de las tablas seleccionadas.&lt;br/&gt;Este proceso:&lt;br/&gt;- Parará el scheduler de procesos en background durante su ejecución&lt;br/&gt;- Puede tardar varios minutos. No cierre su navegador mientras se ejecuta el proceso..</value>
+  </row>
+  <row id="5A2A0AF88AF54BB085DCC52FCC9B17B7" trl="N">
+    <value column="Name" isTrl="Y" original="Reservation Process">Proceso de reservas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="645271C57F8C4DA4A1F64C7ACE37B101" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Payment Monitor">Seguimiento de Pagos de Factura</value>
+    <value column="Description" isTrl="Y" original="Invoice Payment Monitor">Seguimiento de Pagos de Factura</value>
+    <value column="Help" isTrl="Y" original="Updates payment monitor info">Actualiza la información del seguimiento de pagos</value>
+  </row>
+  <row id="64B3FF29AC174F4B94538BD0A3CE1CD3" trl="N">
+    <value column="Name" isTrl="Y" original="Costing Migration Process">Proceso de migración de cálculo de costes</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="The costing migration process initializes the new costing engine.&lt;br&gt;&lt;br&gt;&#10;This process creates a costing rule which uses the &quot;Average&quot; costing algorithm for each legal entity of the instance. &lt;br&gt;&lt;br&gt;&#10;The costing migration process is done in three steps:&lt;br&gt;&#10;&#10;1st step:&lt;br&gt;&#10;this process generates the closing and the opening balances of the inventory per each organization and warehouse with stocked products. The opening inventory balances are left in draft status therefore can be reviewed and the unit costs set are based on the &quot;legacy&quot; costs.&lt;br&gt;&lt;br&gt;&#10;&#10;2nd step:&lt;br&gt;&#10;the user can review the opening inventories to set up the proper stock and cost if needed. Once done the opening inventories can be processed.&lt;br&gt;&lt;br&gt;&#10;&#10;3rd step:&lt;br&gt;&#10;the migration process is launched once again to validate all the costing rules set once all the opening inventories have been processed.&lt;br&gt;&lt;br&gt;&#10;When the process is finished it is recommended to schedule the &quot;Costing Background&quot; process to automatically calculate the cost of all material transactions.">The costing migration process initializes the new costing engine.&lt;br&gt;&lt;br&gt;
+This process creates a costing rule which uses the "Average" costing algorithm for each legal entity of the instance. &lt;br&gt;&lt;br&gt;
+The costing migration process is done in three steps:&lt;br&gt;
+
+1st step:&lt;br&gt;
+this process generates the closing and the opening balances of the inventory per each organization and warehouse with stocked products. The opening inventory balances are left in draft status therefore can be reviewed and the unit costs set are based on the "legacy" costs.&lt;br&gt;&lt;br&gt;
+
+2nd step:&lt;br&gt;
+the user can review the opening inventories to set up the proper stock and cost if needed. Once done the opening inventories can be processed.&lt;br&gt;&lt;br&gt;
+
+3rd step:&lt;br&gt;
+the migration process is launched once again to validate all the costing rules set once all the opening inventories have been processed.&lt;br&gt;&lt;br&gt;
+When the process is finished it is recommended to schedule the "Costing Background" process to automatically calculate the cost of all material transactions.</value>
+  </row>
+  <row id="65D1E895C7FD47B48F3D18BC9E28BE9F" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Audit Trail Infrastructure (PL)">Actualizar infrastructura de histórico de auditoría (PL)</value>
+    <value column="Description" isTrl="Y" original="Update Audit Trail Infrastructure">Actualizar la infrastructura del histórico de auditoría.</value>
+    <value column="Help" isTrl="Y" original="This process updates the required infrastructure to track complete audit for the tables selected as Fully Audited.">Este proceso actualiza la infrastructura requerida para realizar una auditoría completa de las tablas seleccionadas como Completamente auditadas. </value>
+  </row>
+  <row id="69DFD737ACC74499A44574B046F8983C" trl="Y">
+    <value column="Name" isTrl="Y" original="Unschedule Process">Desprogramar Proceso</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6D3B1C36BF594A51878281B505F6CECF" trl="N">
+    <value column="Name" isTrl="Y" original="Sales Invoice Dimensional Report">Análisis dimensional facturas ventas</value>
+    <value column="Description" isTrl="Y" original="Sales Invoice Dimensional Report">Análisis dimensional facturas ventas</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E1ADD5C8B6B4ACB82237DAA8114451E" trl="N">
+    <value column="Name" isTrl="Y" original="Explode">Explotar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process will explode the product of the selected line.">This process will explode the product of the selected line.</value>
+  </row>
+  <row id="6FBD65B0FDB74D1AB07F0EADF18D48AE" trl="N">
+    <value column="Name" isTrl="Y" original="Process Manufacturing Plan">Proceso Plan Producción</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Process Manufacturing Plan">Process Manufacturing Plan</value>
+  </row>
+  <row id="75F83D534E764C7C8781FFA6C08E87ED" trl="N">
+    <value column="Name" isTrl="Y" original="Pareto Product Report">Informe Pareto de Productos</value>
+    <value column="Description" isTrl="Y" original="Pareto Product Report">Informe Pareto de Productos</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7CB6B4D1ECCF4036B3F111D2CF11AADE" trl="N">
+    <value column="Name" isTrl="Y" original="Create Reservations">Crear reservas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7E9E0E62BF1341B796A57F3AC4A2D861" trl="Y">
+    <value column="Name" isTrl="Y" original="Display Jasper Report">Mostrar Informe Jasper</value>
+    <value column="Description" isTrl="Y" original="Display Jasper Report">Mostrar Informe Jasper</value>
+    <value column="Help" isTrl="Y" original="Display Jasper Report">Mostrar Informe Jasper</value>
+  </row>
+  <row id="7EDBFEC35BDA4FF4AF05ED516CDAFB90" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Custom Module">Crear un módulo personalizado</value>
+    <value column="Description" isTrl="Y" original="Create Custom Module">Crear un módulo personalizado</value>
+    <value column="Help" isTrl="Y" original="Creates standard module for customizations">Crea un módulo estándar para las personalizaciones.</value>
+  </row>
+  <row id="800000" trl="Y">
+    <value column="Name" isTrl="Y" original="Journal Entries Report">Diario asientos</value>
+    <value column="Description" isTrl="Y" original="Journal Entries Report">Diario asientos</value>
+    <value column="Help" isTrl="Y" original="The journal entries report is a list of all the journal vouchers of an organization and general ledger shown in a chronological order.">Diario asientos</value>
+  </row>
+  <row id="800001" trl="Y">
+    <value column="Name" isTrl="Y" original="General Ledger Report">Libro mayor</value>
+    <value column="Description" isTrl="Y" original="Report general ledger">Libro mayor</value>
+    <value column="Help" isTrl="Y" original="The General Ledger report lists every ledger &quot;subaccount&quot; and its debit and credit ledger entries within a given period of time.">Libro mayor</value>
+  </row>
+  <row id="800002" trl="Y">
+    <value column="Name" isTrl="Y" original="Change Project Status">Cambiar estado del proyecto</value>
+    <value column="Description" isTrl="Y" original="Change project status">Cambiar estado del proyecto</value>
+    <value column="Help" isTrl="Y" original="Change project status to be able to generate orders.">Cambie el estado del proyecto para generar pedidos.</value>
+  </row>
+  <row id="800003" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Project Lines">Copiar líneas</value>
+    <value column="Description" isTrl="Y" original="Copy lines from the project assign to the proposal as proposal lines">Copia las líneas del proyecto asignado a un presupuesto como líneas del presupuesto</value>
+    <value column="Help" isTrl="Y" original="Copy lines from the project assign to the proposal as proposal lines">Copia las líneas del proyecto asignado a un presupuesto como líneas del presupuesto</value>
+  </row>
+  <row id="800004" trl="Y">
+    <value column="Name" isTrl="Y" original="OrderPO Print">Imprimir pedidos de compra</value>
+    <value column="Description" isTrl="Y" original="** Special **">** Especial **</value>
+    <value column="Help" isTrl="Y" original="** Special **">** Especial **</value>
+  </row>
+  <row id="800005" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Sales Order from Project">Generar pedidos de venta de un proyecto</value>
+    <value column="Description" isTrl="Y" original="Generate Sales Order From Project">Genera pedidos de venta de un proyecto</value>
+    <value column="Help" isTrl="Y" original="This process will create a new Sales Order, both header and lines, with the Business Partner of the project and the newly created price list.">Generar pedidos de venta de un proyecto</value>
+  </row>
+  <row id="800006" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Purchase Order from Project">Generar pedidos de compra de un proyecto</value>
+    <value column="Description" isTrl="Y" original="Generate Purchase Order From Project">Genera pedidos de compra de un proyecto</value>
+    <value column="Help" isTrl="Y" original="Generate Purchase Order From Project">Genera pedidos de compra de un proyecto</value>
+  </row>
+  <row id="800010" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Attributes from Shipment">Actualiza los atributos de los artículos de la remisión</value>
+    <value column="Description" isTrl="Y" original="Update attributes from shipment">Actualiza los atributos de los artículos de la remisión</value>
+    <value column="Help" isTrl="Y" original="Update attributes from shipment">Actualiza los atributos de los artículos de la remisión</value>
+  </row>
+  <row id="800018" trl="Y">
+    <value column="Name" isTrl="Y" original="Material Transaction Report">Informe Transacción de Material</value>
+    <value column="Description" isTrl="Y" original="Report Material Transaction">Informe de movimientos de almacén</value>
+    <value column="Help" isTrl="Y" original="Report Material Transaction">Informe de movimientos de almacén</value>
+  </row>
+  <row id="800020" trl="Y">
+    <value column="Name" isTrl="Y" original="Total Product Template Report">Totalizado plantillas</value>
+    <value column="Description" isTrl="Y" original="Report Total Product Template">Totalizado de plantillas</value>
+    <value column="Help" isTrl="Y" original="Report Total Product Template">Totalizado de plantillas</value>
+  </row>
+  <row id="800021" trl="Y">
+    <value column="Name" isTrl="Y" original="Balance sheet and P&amp;L structure">Cuadros plan general contable</value>
+    <value column="Description" isTrl="Y" original="Balance sheet and P&amp;L structure">Cuadros plan general contable</value>
+    <value column="Help" isTrl="Y" original="The Balance sheet and P&amp;L structure report engine allows to launch the Balance Sheet and P&amp;L which need to be previously configured.">Cuadros plan general contable</value>
+  </row>
+  <row id="800022" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Product Template">Copiar plantilla</value>
+    <value column="Description" isTrl="Y" original="Copy products from the business partner's template of that sales order.">Copia los productos de la plantilla del tercero asociado al pedido de venta y los inserta como líneas del propio pedido con sus cantidades, precios e impuestos.</value>
+    <value column="Help" isTrl="Y" original="Copy products from the business partner's template of that sales order.">Copia los productos de la plantilla del tercero asociado al pedido de venta y los inserta como líneas del propio pedido con sus cantidades, precios e impuestos.</value>
+  </row>
+  <row id="800023" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Taxes Report">Impuestos</value>
+    <value column="Description" isTrl="Y" original="Report Tax Invoice">Informe de impuestos</value>
+    <value column="Help" isTrl="Y" original="The invoice taxes report provides invoice tax related information per each tax rate.">Informe de impuestos</value>
+  </row>
+  <row id="800024" trl="Y">
+    <value column="Name" isTrl="Y" original="Change Debt Payment">Modificar Efecto</value>
+    <value column="Description" isTrl="Y" original="Take this Debt/Payment out of the settlement">Sacar este efecto de la liquidación actual</value>
+    <value column="Help" isTrl="Y" original="Take this Debt/Payment out of the settlement">Sacar este efecto de la liquidación actual</value>
+  </row>
+  <row id="800025" trl="Y">
+    <value column="Name" isTrl="Y" original="Post Settlement">Procesar Liquidación</value>
+    <value column="Description" isTrl="Y" original="Post Settlement">Procesar Liquidación</value>
+    <value column="Help" isTrl="Y" original="Post Settlement">Procesar Liquidación</value>
+  </row>
+  <row id="800026" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Report">Efectos</value>
+    <value column="Description" isTrl="Y" original="Report debt payment">Informe efectos</value>
+    <value column="Help" isTrl="Y" original="Report debt payment">Informe efectos</value>
+  </row>
+  <row id="800027" trl="Y">
+    <value column="Name" isTrl="Y" original="Create File">Crear archivo</value>
+    <value column="Description" isTrl="Y" original="Create File">Crear archivo</value>
+    <value column="Help" isTrl="Y" original="Create File">Crear archivo</value>
+  </row>
+  <row id="800030" trl="Y">
+    <value column="Name" isTrl="Y" original="Service Project Report">Informe Proyectos de servicio</value>
+    <value column="Description" isTrl="Y" original="Service Project Report">Informe Proyectos de servicio</value>
+    <value column="Help" isTrl="Y" original="Service Project Report">Informe Proyectos de servicio</value>
+  </row>
+  <row id="800032" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse Control Report">Informe Control Almacén</value>
+    <value column="Description" isTrl="Y" original="Report Warehouse Control">Informe seguimiento de almacén</value>
+    <value column="Help" isTrl="Y" original="Report Warehouse Control">Informe seguimiento de almacén</value>
+  </row>
+  <row id="800033" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Consignment Report">Facturacion consigna</value>
+    <value column="Description" isTrl="Y" original="Report To Invoice Consignment">Informe de facturacion consigna</value>
+    <value column="Help" isTrl="Y" original="Report To Invoice Consignment">Informe de facturacion consigna</value>
+  </row>
+  <row id="800036" trl="Y">
+    <value column="Name" isTrl="Y" original="Close Year">Crear asiento de regularización</value>
+    <value column="Description" isTrl="Y" original="This proces creates the closing transactions and the corresponding opening transactions for the following year.">Crear asiento de regularización</value>
+    <value column="Help" isTrl="Y" original="This proces creates the closing transactions and the corresponding opening transactions for the following year.&#10;The following year must already exist in the system and the first period must be open.&#10;The ledger accounting entries created by the Fiscal Year closing process are:&#10;     1. P&amp;L Closing: Resets all revenue and costs accounts and posts P&amp;L transaction. Currently posted into last day of last period of closing year.&#10;     2. Closing entry or Balance Sheet Closing: Creates closing transactions for asset and liabilities. Currently posted into last day of last period of closing year.&#10;     3. Opening entry: Posts opposite entry of closing entry. First day of first period of new year">Crear asiento de regularización</value>
+  </row>
+  <row id="800038" trl="Y">
+    <value column="Name" isTrl="Y" original="Undo Close Year">Borrar asiento de regularización</value>
+    <value column="Description" isTrl="Y" original="This process undo all what was done by the closing year process; all the accounting entries which were generated are undo or reverted.">Borrar asiento de regularización</value>
+    <value column="Help" isTrl="Y" original="This process undo all what was done by the closing year process; all the accounting entries which were generated are undo or reverted.">Borrar asiento de regularización</value>
+  </row>
+  <row id="800039" trl="Y">
+    <value column="Name" isTrl="Y" original="Trial Balance">Balance sumas y saldos</value>
+    <value column="Description" isTrl="Y" original="Trial Balance Report">Balance sumas y saldos</value>
+    <value column="Help" isTrl="Y" original="The trial balance helps to check that the total amount of debits are equal to the total amount of credits.">Balance sumas y saldos</value>
+  </row>
+  <row id="800040" trl="Y">
+    <value column="Name" isTrl="Y" original="Create All Price Lists">Actualizar tarifas</value>
+    <value column="Description" isTrl="Y" original="Create price list version for a price list">Crea todos las versiones de tarifa para una tarifa determinada</value>
+    <value column="Help" isTrl="Y" original="Create price list version for a price list">Crea todos las versiones de tarifa para una tarifa determinada</value>
+  </row>
+  <row id="800046" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Movements Report">Informe Movimiento de Productos</value>
+    <value column="Description" isTrl="Y" original="Report product movement">Informe de los distintos movimientos de un artículo</value>
+    <value column="Help" isTrl="Y" original="Report product movement">Informe de los distintos movimientos de un artículo</value>
+  </row>
+  <row id="800048" trl="Y">
+    <value column="Name" isTrl="Y" original="Move a Storage Bin">Mover una posicion entera</value>
+    <value column="Description" isTrl="Y" original="Move a Storage Bin">Mover una posicion entera</value>
+    <value column="Help" isTrl="Y" original="Move a Storage Bin">Mover una posicion entera</value>
+  </row>
+  <row id="800050" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse movement">Movimiento almacén</value>
+    <value column="Description" isTrl="Y" original="**Special**">**Especial**</value>
+    <value column="Help" isTrl="Y" original="**Special**">**Especial**</value>
+  </row>
+  <row id="800058" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipments Dimensional Report">Análisis dimensional remisiones de venta</value>
+    <value column="Description" isTrl="Y" original="Shipment dimensional analyze">Análisis dimensional de remisiones de venta</value>
+    <value column="Help" isTrl="Y" original="This report shows information about goods shipped to the customers (Goods Shipments in a status Completed or Voided) during a selected period of time. ">Análisis dimensional de remisiones de venta JR</value>
+  </row>
+  <row id="800061" trl="Y">
+    <value column="Name" isTrl="Y" original="Expense Report">Informe de gastos</value>
+    <value column="Description" isTrl="Y" original="Report expense">Informe de gastos</value>
+    <value column="Help" isTrl="Y" original="Report expense">Informe de gastos</value>
+  </row>
+  <row id="800062" trl="Y">
+    <value column="Name" isTrl="Y" original="Create From Multiple">Crear de...(masivo)</value>
+    <value column="Description" isTrl="Y" original="Create From Multiple">Crear de...(masivo)</value>
+    <value column="Help" isTrl="Y" original="Create From Multiple">Crear de...(masivo)</value>
+  </row>
+  <row id="800064" trl="Y">
+    <value column="Name" isTrl="Y" original="Acct Server Process">Proceso de Contabilidad</value>
+    <value column="Description" isTrl="Y" original="Acct Server Process">Proceso de Contabilidad</value>
+    <value column="Help" isTrl="Y" original="Acct Server Process">Proceso de Contabilidad</value>
+  </row>
+  <row id="800067" trl="Y">
+    <value column="Name" isTrl="Y" original="Price List Report">Tarifas</value>
+    <value column="Description" isTrl="Y" original="Price List Report">Tarifas</value>
+    <value column="Help" isTrl="Y" original="Price List Report is a report which shows Price List information which can filtered for a specif &quot;Product Category&quot; or a set of selected &quot;Products&quot;.">Tarifas</value>
+  </row>
+  <row id="800068" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Invoice  (Volume Discount)">Crear factura</value>
+    <value column="Description" isTrl="Y" original="Create invoice">Crear factura</value>
+    <value column="Help" isTrl="Y" original="Create invoice">Crear factura</value>
+  </row>
+  <row id="800069" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Price List Version">Generar versión de tarifas</value>
+    <value column="Description" isTrl="Y" original="Create Price List Version">Generar versión de tarifas</value>
+    <value column="Help" isTrl="Y" original="Create Price List Version">Generar versión de tarifas</value>
+  </row>
+  <row id="800070" trl="Y">
+    <value column="Name" isTrl="Y" original="Settlement printed">Liquidación impresa</value>
+    <value column="Description" isTrl="Y" original="** special **">**Especial **</value>
+    <value column="Help" isTrl="Y" original="** special **">**Especial **</value>
+  </row>
+  <row id="800073" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Rep Pricelist">Tarifas comerciales</value>
+    <value column="Description" isTrl="Y" original="Sales Rep Pricelist">Tarifas comerciales</value>
+    <value column="Help" isTrl="Y" original="Sales Rep Pricelist">Tarifas comerciales</value>
+  </row>
+  <row id="800074" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Order Returns Dimensional Report">Informe de devoluciones para pedido venta</value>
+    <value column="Description" isTrl="Y" original="Report refund sales order dimensional analyses">Informe de devoluciones para pedido venta</value>
+    <value column="Help" isTrl="Y" original="Report refund sales order dimensional analyses">Informe de devoluciones para pedido venta</value>
+  </row>
+  <row id="800075" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Purchase Invoices from Deliveries">Creación de facturas de compra desde consigna</value>
+    <value column="Description" isTrl="Y" original="Create purchase invoices from deliveries">Creación de facturas de compra desde consigna</value>
+    <value column="Help" isTrl="Y" original="This window helps you to create purchase invoices from goods shipments.">Creación de facturas de compra desde consigna</value>
+  </row>
+  <row id="800076" trl="Y">
+    <value column="Name" isTrl="Y" original="Payment Tracker">Seguimiento cobros-pagos</value>
+    <value column="Description" isTrl="Y" original="Payment Tracker">Seguimiento cobros-pagos</value>
+    <value column="Help" isTrl="Y" original="Payment Tracker">Seguimiento cobros-pagos</value>
+  </row>
+  <row id="800077" trl="Y">
+    <value column="Name" isTrl="Y" original="Replace Balances">Reemplazar conceptos</value>
+    <value column="Description" isTrl="Y" original="Replace Balances">Reemplazar conceptos</value>
+    <value column="Help" isTrl="Y" original="Replace Balances">Reemplazar conceptos</value>
+  </row>
+  <row id="800079" trl="Y">
+    <value column="Name" isTrl="Y" original="Traceability Report">Informe Trazabilidad</value>
+    <value column="Description" isTrl="Y" original="Traceability Report">Informe Trazabilidad</value>
+    <value column="Help" isTrl="Y" original="Traceability Report">Informe Trazabilidad</value>
+  </row>
+  <row id="800081" trl="Y">
+    <value column="Name" isTrl="Y" original="Cashflow Forecast">Previsión de tesorería</value>
+    <value column="Description" isTrl="Y" original="Cashflow Forecast">Previsión de tesorería</value>
+    <value column="Help" isTrl="Y" original="Cashflow Forecast">Previsión de tesorería</value>
+  </row>
+  <row id="800082" trl="Y">
+    <value column="Name" isTrl="Y" original="Funds Transfer">Movimientos caja-banco</value>
+    <value column="Description" isTrl="Y" original="Make transfers between cash and bank">Movimientos entre caja y banco</value>
+    <value column="Help" isTrl="Y" original="Make transfers between cash and bank">Movimientos entre caja y banco</value>
+  </row>
+  <row id="800083" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy from Settlement">Copiar de liquidación</value>
+    <value column="Description" isTrl="Y" original="Generates a manual settlement">Permite crear una liquidación manual partiendo de otra liquidación manual ya existente.</value>
+    <value column="Help" isTrl="Y" original="Generates a manual settlement copying an existing one.">Para seleccionar la liquidación manual en la que queremos basarnos, nos permite filtrar la busqueda por fechas, descripción o número de documento.</value>
+  </row>
+  <row id="800085" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Average Costs">Generar costo medio</value>
+    <value column="Description" isTrl="Y" original="Generates raw materials average costs.">Genera costo medio de materias primas</value>
+    <value column="Help" isTrl="N" original="">Calcula el costo medio de las materias primas teniendo en cuenta los pedidos de compra precedentes.</value>
+  </row>
+  <row id="800087" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Table Identifiers">Actualiza Identificadores tablas</value>
+    <value column="Description" isTrl="Y" original="Update all the table identifiers SQL">Actualiza todas las SQL de los identificadores de tabla</value>
+    <value column="Help" isTrl="Y" original="Update all the table identifiers SQL">Actualiza todas las SQL de los identificadores de tabla</value>
+  </row>
+  <row id="800088" trl="Y">
+    <value column="Name" isTrl="Y" original="Valued Stock Report Legacy">Informe Valoración de existencia Antiguo</value>
+    <value column="Description" isTrl="Y" original="Valued Stock Report Legacy">Informe Valoración de existencia Antiguo</value>
+    <value column="Help" isTrl="Y" original="Valued Stock Report Legacy shows the stock for a particular warehouse and the value of that stock.">Informe Valoración de Stock</value>
+  </row>
+  <row id="800089" trl="Y">
+    <value column="Name" isTrl="Y" original="Grant Access">Insertar permisos</value>
+    <value column="Description" isTrl="Y" original="Inserts access to module and window, process, task, workflow and forms.">Insertar permisos</value>
+    <value column="Help" isTrl="Y" original="Inserts access to module and window, process, task, workflow and forms.">Insertar permisos</value>
+  </row>
+  <row id="800091" trl="Y">
+    <value column="Name" isTrl="Y" original="ReportTrialBalanceDetail">Informe detallado del balance sumas y saldos</value>
+    <value column="Description" isTrl="Y" original="ReportTrialBalanceDetail">Informe detallado del balance sumas y saldos</value>
+    <value column="Help" isTrl="Y" original="ReportTrialBalanceDetail">Informe detallado del balance sumas y saldos</value>
+  </row>
+  <row id="800092" trl="Y">
+    <value column="Name" isTrl="Y" original="Proposal Report">Consulta de presupuestos</value>
+    <value column="Description" isTrl="Y" original="Report proposal query">Consulta de presupuestos</value>
+    <value column="Help" isTrl="Y" original="Report proposal query">Consulta de presupuestos</value>
+  </row>
+  <row id="800094" trl="Y">
+    <value column="Name" isTrl="Y" original="Process a Winning Bid">Adjudicar proyecto</value>
+    <value column="Description" isTrl="Y" original="Award contract to project">Adjudicar un proyecto</value>
+    <value column="Help" isTrl="Y" original="Award contract to project. Project Lines will be deleted and replaced by Proposal Lines.">Adjudicar un proyecto</value>
+  </row>
+  <row id="800098" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Document">Crear documento de test</value>
+    <value column="Description" isTrl="Y" original="Creates a apliccation test.">Crea un test para la aplicación</value>
+    <value column="Help" isTrl="Y" original="Select a test group or a single test. A apliccation testing text file will be generated.">Selecciona un grupo de test o un test individual y se generará un archivo de ejecución de test.</value>
+  </row>
+  <row id="800099" trl="Y">
+    <value column="Name" isTrl="Y" original="Bpartner print">Rpt C_Bpartner</value>
+    <value column="Description" isTrl="Y" original="** special **">** especial **</value>
+    <value column="Help" isTrl="Y" original="** special **">** especial **</value>
+  </row>
+  <row id="800100" trl="Y">
+    <value column="Name" isTrl="Y" original="Business Partner Contract">Contrato de Tercero</value>
+    <value column="Description" isTrl="Y" original="Creates business partner contract">Crea el contrato del tercero</value>
+    <value column="Help" isTrl="Y" original="Creates a PDF report containing the business partner name, address,... And the price list for the customer.">Crea un informe en PDF con los datos del tercero y las tarifas que se le aplican en los diferentes productos.</value>
+  </row>
+  <row id="800101" trl="Y">
+    <value column="Name" isTrl="Y" original="Promissory Note">Pagaré</value>
+    <value column="Description" isTrl="Y" original="** special **">** especial **</value>
+    <value column="Help" isTrl="Y" original="** special **">** especial **</value>
+  </row>
+  <row id="800102" trl="Y">
+    <value column="Name" isTrl="Y" original="Applied Discounts in Invoices">Descuentos</value>
+    <value column="Description" isTrl="Y" original="Applied Discounts in Invoices">Descuentos</value>
+    <value column="Help" isTrl="Y" original="Applied Discounts in Invoices">Descuentos</value>
+  </row>
+  <row id="800103" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Work Requirement">Procesar Orden de Fabricación</value>
+    <value column="Description" isTrl="Y" original="Process to create, if explodePhases is checked, the phases and all the products of the phases.">Proceso que crea las fases de orden de fabricación. Si no está marcado el check de explotar fases solo meterá los productos.</value>
+    <value column="Help" isTrl="Y" original="With this process the operations and the products will be generated from the selected production plan. If the plan is not of type &quot;explodeOperations&quot;, only the products from the previously registered operations will be generated.">Mediante este proceso se crearán las fases de producción del plan seleccionado. Si el plan no estuviera marcado como explotar fases el proceso tan solo metería los productos de las fases que ya estén previamente registradas.</value>
+  </row>
+  <row id="800105" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Standards">Generar estándares</value>
+    <value column="Description" isTrl="Y" original="Inserts the standard values for the selected Work Requirement Phase and Cost Center version">Proceso que mete los productos del parte de fabricación. Si la fase es de consumo conjunto los mete en la solapa de "consumo global" y si es de cantidad vacía meterá las cantidades a cero.</value>
+    <value column="Help" isTrl="Y" original="With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.&#10;This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.&#10;If the Activity of the Work Requirement Phase uses toolsets they are also inserted.&#10;Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.">Mediante este proceso se introducen los productos involucrados en el parte de fabricación. Si la fase seleccionada es de "consumo conjunto" los productos que se gastan se introducen en la solapa de consumo conjunto. Si la fase es de "cantidad vacía" se meterán todas las cantidades a cero.</value>
+  </row>
+  <row id="800106" trl="Y">
+    <value column="Name" isTrl="Y" original="Validate Work Effort">Validar Parte de Trabajo</value>
+    <value column="Description" isTrl="Y" original="Process to validate and actualize stocks of all production runs.">Proceso para validar y actualizar stocks de los partes de fabricación.</value>
+    <value column="Help" isTrl="Y" original="With this process the work effort is closed. Stocks are actualized and average costs are calculated">Mediante este proceso se cierra el parte de trabajo. Se actualizan los stocks de producto y se calculan los costos medios.</value>
+  </row>
+  <row id="800109" trl="Y">
+    <value column="Name" isTrl="Y" original="Calculate Standard Costs">Calcular costo estándar</value>
+    <value column="Description" isTrl="Y" original="Calculates the standard cost of manufactured products.">Calcula el costo estándar de los productos fabricados.</value>
+    <value column="Help" isTrl="Y" original="Calculates the standard cost of manufactured products.">Calcula el costo estándar de los productos fabricados.</value>
+  </row>
+  <row id="800112" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Version">Copiar Versión</value>
+    <value column="Description" isTrl="Y" original="Process to copy the structure of the selected version.">Proceso que copia la estrucuta de la versión seleccionada sobre la activa.</value>
+    <value column="Help" isTrl="Y" original="Process to copy the structure of the selected version.">Proceso que copia la estrucuta de la versión seleccionada sobre la activa.</value>
+  </row>
+  <row id="800114" trl="Y">
+    <value column="Name" isTrl="Y" original="Input Time Measurement">Explotar valores</value>
+    <value column="Description" isTrl="Y" original="With this process are inserted all the Control Points of the selected group to fill with taken measurements.">Mediante este proceso se intoducen todos los puntos de control del grupo seleccionado para meter las medidas tomadas.</value>
+    <value column="Help" isTrl="Y" original="With this process are inserted all the Control Points of the selected group to fill with taken measurements.">Mediante este proceso se intoducen todos los puntos de control del grupo seleccionado para meter las medidas tomadas.</value>
+  </row>
+  <row id="800115" trl="Y">
+    <value column="Name" isTrl="Y" original="CCP sheet">Plantilla PCC</value>
+    <value column="Description" isTrl="Y" original="Print of the critical control points of selected groups.">Impresión de los puntos de control crítico de los grupos seleccionados.</value>
+    <value column="Help" isTrl="Y" original="Print of the critical control points of selected groups.">Impresión de los puntos de control crítico de los grupos seleccionados.</value>
+  </row>
+  <row id="800117" trl="Y">
+    <value column="Name" isTrl="Y" original="Close Work Requirement">Cerrar Orden de Fabricación</value>
+    <value column="Description" isTrl="Y" original="With this process are closed the work requirement and all its phases">Mediante este proceso se cierran la orden de fabricación y todas las fases que estuvieran abiertas.</value>
+    <value column="Help" isTrl="Y" original="With this process are closed the work requirement and all its phases">Mediante este proceso se cierran la orden de fabricación y todas las fases que estuvieran abiertas.</value>
+  </row>
+  <row id="800118" trl="Y">
+    <value column="Name" isTrl="Y" original="Close Phase">Cerrar fase</value>
+    <value column="Description" isTrl="Y" original="With this process it will be closed the work requirement phase. If all the phases are closed the work requirement will also be closed.">Mediante este procedimiento se cerrará la Fase de Orden de Fabricación. Si todas las Fases de la Orden de Fabricación están cerradas automáticamente se cerrará la Orden también.</value>
+    <value column="Help" isTrl="Y" original="With this process it will be closed the work requirement phase. If all the phases are closed the work requirement will also be closed.">Mediante este procedimiento se cerrará la Fase de Orden de Fabricación. Si todas las Fases de la Orden de Fabricación están cerradas automáticamente se cerrará la Orden también.</value>
+  </row>
+  <row id="800119" trl="Y">
+    <value column="Name" isTrl="Y" original="CCP Measures sheet">Plantilla de datos de PCC</value>
+    <value column="Description" isTrl="Y" original="Print of the selected critical control points measures.">Impresión de la toma de datos de puntos de control crítico seleccionada.</value>
+    <value column="Help" isTrl="Y" original="Print of the selected critical control points measures.">Impresión de la toma de datos de puntos de control crítico seleccionada.</value>
+  </row>
+  <row id="800120" trl="Y">
+    <value column="Name" isTrl="Y" original="Run Periodic Control">Ejecutar Control Periódico</value>
+    <value column="Description" isTrl="Y" original="With this process are planed all the gatherings of the periodic control selected.">Con este proceso se planifica todo lo relacionado con el control periódico seleccionado.</value>
+    <value column="Help" isTrl="Y" original="With this process are planed all the gatherings of the periodic control selected.">Con este proceso se planifica todo lo relacionado con el control periódico seleccionado.</value>
+  </row>
+  <row id="800123" trl="Y">
+    <value column="Name" isTrl="Y" original="G/L Items Report">Conceptos contables</value>
+    <value column="Description" isTrl="Y" original="G/L Items Report">Conceptos contables</value>
+    <value column="Help" isTrl="Y" original="G/L Items Report">Conceptos contables</value>
+  </row>
+  <row id="800124" trl="Y">
+    <value column="Name" isTrl="Y" original="Performance Scorecard">Visión general de la empresa</value>
+    <value column="Description" isTrl="Y" original="Performance Scorecard">Visión general de la empresa</value>
+    <value column="Help" isTrl="Y" original="Performance Scorecard">Visión general de la empresa</value>
+  </row>
+  <row id="800125" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Amortization">Crear amortización</value>
+    <value column="Description" isTrl="Y" original="Create Amortization">Crear amortización</value>
+    <value column="Help" isTrl="Y" original="Create Amortization">Crear amortización</value>
+  </row>
+  <row id="800126" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Payment">Crear efecto</value>
+    <value column="Description" isTrl="Y" original="Create Payment">Crear efecto</value>
+    <value column="Help" isTrl="Y" original="Create Payment">Crear efecto</value>
+  </row>
+  <row id="800127" trl="Y">
+    <value column="Name" isTrl="Y" original="Explode Measure Shift">Explotar PCC turno</value>
+    <value column="Description" isTrl="Y" original="Explode Measure Shift">Explotar PCC turno</value>
+    <value column="Help" isTrl="Y" original="Explode Measure Shift">Explotar PCC turno</value>
+  </row>
+  <row id="800128" trl="Y">
+    <value column="Name" isTrl="Y" original="Edit CCP Measured Values">Editar Valores de tomas de datos de PCC</value>
+    <value column="Description" isTrl="Y" original="Edit CCP Measured Values">Editar Valores de tomas de datos de PCC</value>
+    <value column="Help" isTrl="Y" original="Edit CCP Measured Values">Editar Valores de tomas de datos de PCC</value>
+  </row>
+  <row id="800129" trl="Y">
+    <value column="Name" isTrl="Y" original="Create from Maintenance Part">Crear desde un parte de mantenimiento</value>
+    <value column="Description" isTrl="Y" original="Create from Maintenance Part">Crear desde un parte de mantenimiento</value>
+    <value column="Help" isTrl="Y" original="Create from Maintenance Part">Crear desde un parte de mantenimiento</value>
+  </row>
+  <row id="800130" trl="Y">
+    <value column="Name" isTrl="Y" original="Insert Maintenances">Insertar Mantenimientos</value>
+    <value column="Description" isTrl="Y" original="Insert Maintenances">Insertar Mantenimientos</value>
+    <value column="Help" isTrl="Y" original="Insert Maintenances">Insertar Mantenimientos</value>
+  </row>
+  <row id="800131" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Internal Consumption">Procesar consumo interno</value>
+    <value column="Description" isTrl="Y" original="Process Internal Consumption">Procesar consumo interno</value>
+    <value column="Help" isTrl="Y" original="Process Internal Consumption">Procesar consumo interno</value>
+  </row>
+  <row id="800133" trl="Y">
+    <value column="Name" isTrl="Y" original="Journal Entries Report Detail">Detalle libro mayor</value>
+    <value column="Description" isTrl="Y" original="Journal Entries Report detail">Detalle libro mayor</value>
+    <value column="Help" isTrl="Y" original="Journal Entries Report detail">Detalle libro mayor</value>
+  </row>
+  <row id="800134" trl="Y">
+    <value column="Name" isTrl="Y" original="Post Amortization">Procesar amortización</value>
+    <value column="Description" isTrl="Y" original="Post Amortization">Procesar amortización</value>
+    <value column="Help" isTrl="Y" original="Post Amortization">Procesar amortización</value>
+  </row>
+  <row id="800135" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Budget">Copiar Presupuesto</value>
+    <value column="Description" isTrl="Y" original="Copy Budget">Copiar Presupuesto</value>
+    <value column="Help" isTrl="Y" original="Copy Budget">Copiar Presupuesto</value>
+  </row>
+  <row id="800136" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy Accounts">Copiar cuentas</value>
+    <value column="Description" isTrl="Y" original="Copy and overwrite Accounts">Copiar y sobreescribir cuentas</value>
+    <value column="Help" isTrl="Y" original="The Copy Accounts Process will take the accounts defined for a asset group and copy them to any asset that references this group.  If an account exists at the product level it will be overwritten.">El proceso de copia de cuentas tomará las cuentas definidas para un grupo de activos y las copiará en cada uno de los activos del grupo, sobreescribiendo las que ya existan.</value>
+  </row>
+  <row id="800137" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Budget Reports in Excel">Generador excel de presupuestos</value>
+    <value column="Description" isTrl="Y" original="Create Budget Reports in Excel">Generador excel de presupuestos</value>
+    <value column="Help" isTrl="Y" original="Create Budget Reports in Excel">Generador excel de presupuestos</value>
+  </row>
+  <row id="800138" trl="Y">
+    <value column="Name" isTrl="Y" original="Export Budget to Excel">Exportar presupuesto a excel</value>
+    <value column="Description" isTrl="Y" original="Export Budget to Excel">Exportar presupuesto a excel</value>
+    <value column="Help" isTrl="Y" original="Export Budget to Excel">Exportar presupuesto a excel</value>
+  </row>
+  <row id="800140" trl="Y">
+    <value column="Name" isTrl="Y" original="Post Payment Management">Procesado de gestión de efectos</value>
+    <value column="Description" isTrl="Y" original="Post Payment Management">Procesado de gestión de efectos</value>
+    <value column="Help" isTrl="Y" original="Post Payment Management">Procesado de gestión de efectos</value>
+  </row>
+  <row id="800141" trl="Y">
+    <value column="Name" isTrl="Y" original="Calculate Freight Amount">Calcular costo transporte</value>
+    <value column="Description" isTrl="Y" original="Calculate Freight Amount">Calcular costo transporte</value>
+    <value column="Help" isTrl="Y" original="Calculate Freight Amount">Calcular costo transporte</value>
+  </row>
+  <row id="800142" trl="Y">
+    <value column="Name" isTrl="Y" original="Process">Procesar</value>
+    <value column="Description" isTrl="Y" original="Process">Procesar</value>
+    <value column="Help" isTrl="Y" original="Process">Procesar</value>
+  </row>
+  <row id="800143" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipper Report">Informe transportista</value>
+    <value column="Description" isTrl="Y" original="Shipper Report">Informe transportista</value>
+    <value column="Help" isTrl="Y" original="Shipper Report">Informe transportista</value>
+  </row>
+  <row id="800144" trl="Y">
+    <value column="Name" isTrl="Y" original="User Defined Accounting Report">Creación de informes contables</value>
+    <value column="Description" isTrl="Y" original="Selects an accounting model to obtain its report.">Seleccionar un modelo contable para la creación de sus informes.</value>
+    <value column="Help" isTrl="Y" original="Selects an accounting model to obtain its report.">Seleccionar un modelo contable para la creación de sus informes.</value>
+  </row>
+  <row id="800145" trl="Y">
+    <value column="Name" isTrl="Y" original="Remittance printed">Remesa impresa</value>
+    <value column="Description" isTrl="Y" original="Remittance printed">Remesa impresa</value>
+    <value column="Help" isTrl="Y" original="Remittance printed">Remesa impresa</value>
+  </row>
+  <row id="800146" trl="Y">
+    <value column="Name" isTrl="Y" original="Remittance printed">Imprimir remesa</value>
+    <value column="Description" isTrl="Y" original="Remittance printed">Imprimir remesa</value>
+    <value column="Help" isTrl="Y" original="Remittance printed">Imprimir remesa</value>
+  </row>
+  <row id="800147" trl="Y">
+    <value column="Name" isTrl="Y" original="Delete Client">Borrar Entidad</value>
+    <value column="Description" isTrl="Y" original="This process deletes a client">Elimina una entidad.</value>
+    <value column="Help" isTrl="Y" original="This process deletes a client and all of its data. This operation cannot be undone so please exercise caution.&#10;Under certain circumstances, this process fails to complete successfully, leaving the system in an inconsistent state that prevents it from working correctly. We strongly advise to backup your system before initiating this operation.&#10;This operation can take a long time to complete.">Elimina una entidad y todos los datos que de ella dependen. Por lo que hay que ser muy cuidadoso a la hora de ejecturlo.La ejecución de este proceso puede llevar mucho tiempo.En caso de que falle, se mostrará un mensaje indicando qué sentencias SQL han hecho fracasar el proceso.Cuando el proceso se ha ejecutado correctamente, todos los triggers y constraints deberían estar en estado ACTIVADO, en caso de que no sea así se mostrará un mensaje de error.shown.</value>
+  </row>
+  <row id="800148" trl="Y">
+    <value column="Name" isTrl="Y" original="Offers Report">Informe ofertas</value>
+    <value column="Description" isTrl="Y" original="Offers Report">Informe ofertas</value>
+    <value column="Help" isTrl="Y" original="Offers Report">Informe ofertas</value>
+  </row>
+  <row id="800151" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Production Costs">Generar costos de producción</value>
+    <value column="Description" isTrl="Y" original="Create Production Costs">Generar costos de producción</value>
+    <value column="Help" isTrl="Y" original="Create Production Costs">Generar costos de producción</value>
+  </row>
+  <row id="800152" trl="Y">
+    <value column="Name" isTrl="Y" original="Calculate Indirect Cost">Calcular costo indirecto</value>
+    <value column="Description" isTrl="Y" original="Calculates the unitary indirect cost for the given period time.">Calcula el costo unitario del costo indirecto para el periodo de tiempo dado.</value>
+    <value column="Help" isTrl="Y" original="This process will recalculate the cost if it's allready calculated">Este proceso recalculará el costo si ya ha sido calculado previamente.</value>
+  </row>
+  <row id="800153" trl="Y">
+    <value column="Name" isTrl="Y" original="Cashflow Forecast">Previsión de Tesorería</value>
+    <value column="Description" isTrl="Y" original="Cashflow Forecast">Previsión de Tesorería</value>
+    <value column="Help" isTrl="Y" original="Cashflow Forecast">Previsión de Tesorería</value>
+  </row>
+  <row id="800155" trl="Y">
+    <value column="Name" isTrl="Y" original="Production Cost Report">Costo de producción</value>
+    <value column="Description" isTrl="Y" original="Production Cost Report">Costo de producción</value>
+    <value column="Help" isTrl="Y" original="Production Cost Report">Costo de producción</value>
+  </row>
+  <row id="800156" trl="Y">
+    <value column="Name" isTrl="Y" original="Rpt M_Product">RptM_Product</value>
+    <value column="Description" isTrl="Y" original="**Special**">**Especial**</value>
+    <value column="Help" isTrl="Y" original="**Special**">**Especial**</value>
+  </row>
+  <row id="800159" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Material Requisitions">Lanzar necesidad de material</value>
+    <value column="Description" isTrl="Y" original="Generate Material Requisitions">Lanzar necesidad de material</value>
+    <value column="Help" isTrl="Y" original="Generate Material Requisitions">Lanzar necesidad de material</value>
+  </row>
+  <row id="800160" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Work Requirements">Lanzar Orden de Producción</value>
+    <value column="Description" isTrl="Y" original="Generate Work Requirements">Lanzar Orden de Producción</value>
+    <value column="Help" isTrl="Y" original="Generate Work Requirements">Lanzar Orden de Producción</value>
+  </row>
+  <row id="800161" trl="Y">
+    <value column="Name" isTrl="Y" original="Recalculate Dates/Quantities">Recalcular fechas y cantidades</value>
+    <value column="Description" isTrl="Y" original="Recalculate Dates/Quantities">Recalcular fechas y cantidades</value>
+    <value column="Help" isTrl="Y" original="Recalculate Dates/Quantities">Recalcular fechas y cantidades</value>
+  </row>
+  <row id="800162" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Manufacturing Plan Old">Simular producciones</value>
+    <value column="Description" isTrl="Y" original="Process Manufacturing Plan">Simular producciones</value>
+    <value column="Help" isTrl="Y" original="Process Manufacturing Plan. Old process using stored procedure.">Simular producciones</value>
+  </row>
+  <row id="800163" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Purchase Orders">Lanzar Orden de Compra</value>
+    <value column="Description" isTrl="Y" original="Create Purchase Orders">Lanzar Orden de Compra</value>
+    <value column="Help" isTrl="Y" original="Create Purchase Orders">Lanzar Orden de Compra</value>
+  </row>
+  <row id="800164" trl="Y">
+    <value column="Name" isTrl="Y" original="Process Purchase Plan">Simular compras</value>
+    <value column="Description" isTrl="Y" original="Process Purchase Plan">Simular compras</value>
+    <value column="Help" isTrl="Y" original="Process Purchase Plan">Simular compras</value>
+  </row>
+  <row id="800165" trl="Y">
+    <value column="Name" isTrl="Y" original="Copy from Order">Copiar Pedido</value>
+    <value column="Description" isTrl="Y" original="Copy From Order">Copiar Pedido</value>
+    <value column="Help" isTrl="Y" original="Copies lines from Order">Copia líneas de un pedido</value>
+  </row>
+  <row id="800168" trl="Y">
+    <value column="Name" isTrl="Y" original="Not Posted Transaction Report">Documentos no contabilizados</value>
+    <value column="Description" isTrl="Y" original="Not Posted Transaction Report">Documentos no contabilizados</value>
+    <value column="Help" isTrl="Y" original="Not Posted Transaction Report list the transactions and/or documents in status &quot;Complete&quot; which are not already posted.">Documentos no contabilizados</value>
+  </row>
+  <row id="800169" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Tax Report">Creación de informes de impuestos</value>
+    <value column="Description" isTrl="Y" original="Create Tax Report">Creación de informes de impuestos</value>
+    <value column="Help" isTrl="Y" original="Create Tax Report">Creación de informes de impuestos</value>
+  </row>
+  <row id="800170" trl="Y">
+    <value column="Name" isTrl="Y" original="Alert Process">Proceso de Alertas</value>
+    <value column="Description" isTrl="Y" original="Alert Process">Proceso de Alertas</value>
+    <value column="Help" isTrl="Y" original="AlertProcess">Proceso de Alertas</value>
+  </row>
+  <row id="800171" trl="Y">
+    <value column="Name" isTrl="Y" original="Purchase Order Report">Informe pedidos de compra </value>
+    <value column="Description" isTrl="Y" original="Purchase Order Report">Informe pedidos de compra </value>
+    <value column="Help" isTrl="Y" original="This report displays a detailed list of the purchase orders issued to the suppliers.">Informe de pedidos de compra JR</value>
+  </row>
+  <row id="800172" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Report by Partner and Product">Ventas por tercero y producto </value>
+    <value column="Description" isTrl="Y" original="Report Sales by partner and Product">Ventas por tercero y producto</value>
+    <value column="Help" isTrl="Y" original="Report Sales by partner and Product">Ventas por tercero y producto</value>
+  </row>
+  <row id="800173" trl="Y">
+    <value column="Name" isTrl="Y" original="Production Run Status Report">Informe Partes de Fabricación </value>
+    <value column="Description" isTrl="Y" original="Production Run Status Report">Informe Partes de Fabricación </value>
+    <value column="Help" isTrl="Y" original="Production Run Status Report JR">Informe Partes de Fabricación JR</value>
+  </row>
+  <row id="800174" trl="Y">
+    <value column="Name" isTrl="Y" original="BOM Production Report">Informe Producción</value>
+    <value column="Description" isTrl="Y" original="BOM Report Production">Informe Producción</value>
+    <value column="Help" isTrl="Y" original="Report Production">Informe Producción</value>
+  </row>
+  <row id="800175" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer Invoice Report">Facturas </value>
+    <value column="Description" isTrl="Y" original="Customer Invoice Report">Facturas </value>
+    <value column="Help" isTrl="Y" original="Customer Invoice Report JR">Informe de facturas de cliente JR</value>
+  </row>
+  <row id="800176" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Order Report">Pedidos </value>
+    <value column="Description" isTrl="Y" original="Sales Order Report">Pedidos </value>
+    <value column="Help" isTrl="Y" original="Sales Order Report JR">Informe de pedidos de venta JR</value>
+  </row>
+  <row id="800177" trl="Y">
+    <value column="Name" isTrl="Y" original="Pending Work Requirement">Fases de OF a realizar </value>
+    <value column="Description" isTrl="Y" original="In this report are all the open work requirement phases and the quantities done and that left to do.">En este informe se presentan las fases de orden de fabricación que están abiertas y las cantidades que están realizadas y faltan por completar.</value>
+    <value column="Help" isTrl="Y" original="In this report are all the open work requirement phases and the quantities done and that left to do.">En este informe se presentan las fases de orden de fabricación que están abiertas y las cantidades que están realizadas y faltan por completar.</value>
+  </row>
+  <row id="800178" trl="Y">
+    <value column="Name" isTrl="Y" original="Orders Awaiting Invoice Report">Pedidos no facturados </value>
+    <value column="Description" isTrl="Y" original="Orders Awaiting Invoice Report">Pedidos no facturados </value>
+    <value column="Help" isTrl="Y" original="Orders Awaiting Invoice Report JR">Pedidos no facturados JR</value>
+  </row>
+  <row id="800179" trl="Y">
+    <value column="Name" isTrl="Y" original="Expiration Date Report">Informe Caducidades</value>
+    <value column="Description" isTrl="Y" original="Expiration Date Report">Informe Caducidades</value>
+    <value column="Help" isTrl="Y" original="Expiration Date Report JR">Informe de caducidades JR</value>
+  </row>
+  <row id="800180" trl="Y">
+    <value column="Name" isTrl="Y" original="Vendor Invoice Report">Facturas </value>
+    <value column="Description" isTrl="Y" original="Report Invoice Vendor">Informe de facturas de proveedores</value>
+    <value column="Help" isTrl="Y" original="This report provides information about the total amount invoiced by each supplier within a given time period and for a given currency.">Informe factura proveedor JR</value>
+  </row>
+  <row id="800181" trl="Y">
+    <value column="Name" isTrl="Y" original="Purchase Dimensional Report">Análisis dimensional pedidos compras</value>
+    <value column="Description" isTrl="Y" original="Purchase dimensional analyses">Análisis dimensional de pedido compra </value>
+    <value column="Help" isTrl="Y" original="This report displays information about the purchase orders issued and sent to the suppliers.">Análisis dimensional pedidos JR</value>
+  </row>
+  <row id="800182" trl="Y">
+    <value column="Name" isTrl="Y" original="Goods Receipts Dimensional Report">Análisis dimensional remisiones de compra</value>
+    <value column="Description" isTrl="Y" original="Goods receipt dimensional analyses">Análisis dimensional de pedido compra </value>
+    <value column="Help" isTrl="Y" original="This report displays information about the goods received in the organization. ">Análisis dimensional remisiones JR</value>
+  </row>
+  <row id="800183" trl="Y">
+    <value column="Name" isTrl="Y" original="Purchase Invoice Dimensional Report">Análisis dimensional facturas compras</value>
+    <value column="Description" isTrl="Y" original="Invoice vendor dimensional analyses">Análisis dimensional de factura compra </value>
+    <value column="Help" isTrl="Y" original="This report displays information about the purchase invoices received in the organization.&#10;">Análisis dimensional de factura compra JR</value>
+  </row>
+  <row id="800184" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Dimensional Report">Análisis dimensional pedidos ventas</value>
+    <value column="Description" isTrl="Y" original="Sales dimensional analyze">Análisis dimensional de pedido venta </value>
+    <value column="Help" isTrl="Y" original="Sales dimensional analyze JR">Análisis dimensional de pedido venta JR</value>
+  </row>
+  <row id="800185" trl="Y">
+    <value column="Name" isTrl="Y" original="Stock Report">Informe Stock</value>
+    <value column="Description" isTrl="Y" original="Customer Stock Report">Informe de stock</value>
+    <value column="Help" isTrl="Y" original="Stock Report shows a stock level of all products (that have quantity on hand different from zero) and their location (warehouse and storage bin) grouped by product category. For each row product, quantity, unit, attribute, shelves, column, height and warehouse">Informe de stock JR</value>
+  </row>
+  <row id="800187" trl="Y">
+    <value column="Name" isTrl="Y" original="ReportShipmentEdition">Informe de edición de la remisión</value>
+    <value column="Description" isTrl="Y" original="ReportShipmentEdition">Informe de edición de la remisión</value>
+    <value column="Help" isTrl="Y" original="ReportShipmentEditionJR">Informe de edición de remisión JR</value>
+  </row>
+  <row id="800188" trl="Y">
+    <value column="Name" isTrl="Y" original="Proposal print Jr">Informe de presupuesto </value>
+    <value column="Description" isTrl="Y" original="Proposal print Jr">Informe de presupuesto </value>
+    <value column="Help" isTrl="Y" original="Proposal print Jr">Informe de presupuesto </value>
+  </row>
+  <row id="800189" trl="Y">
+    <value column="Name" isTrl="Y" original="Shipment Report">Remisión </value>
+    <value column="Description" isTrl="Y" original="Shipment Report">Remisiones </value>
+    <value column="Help" isTrl="Y" original="Shipment Report JR">Informe de remisiones JR</value>
+  </row>
+  <row id="800190" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoiced Sales Order Report">Pedidos facturados </value>
+    <value column="Description" isTrl="Y" original="Invoiced Sales Order Report">Pedidos facturados </value>
+    <value column="Help" isTrl="Y" original="Invoiced Sales Order Report JR">Pedidos facturados JR</value>
+  </row>
+  <row id="800191" trl="Y">
+    <value column="Name" isTrl="Y" original="Cash Report">Caja </value>
+    <value column="Description" isTrl="Y" original="Report cash">Informe caja </value>
+    <value column="Help" isTrl="Y" original="Report cash JR">Informe de caja JR</value>
+  </row>
+  <row id="800192" trl="Y">
+    <value column="Name" isTrl="Y" original="Delivered Sales Order Report">Pedidos suministrados </value>
+    <value column="Description" isTrl="Y" original="Delivered Sales Order Report">Pedidos suministrados </value>
+    <value column="Help" isTrl="Y" original="Delivered Sales Order Report JR">Informe pedidos venta suministrado JR</value>
+  </row>
+  <row id="800194" trl="Y">
+    <value column="Name" isTrl="Y" original="Print Process plan">Impresión Plan Producción </value>
+    <value column="Description" isTrl="Y" original="Print of the selected Process Plans with all the sequences and products.">Impresión de los planes de producción seleccionados con sus secuencias y productos.</value>
+    <value column="Help" isTrl="Y" original="Print of the selected Process Plans with all the sequences and products.">Impresión de los planes de producción seleccionados con sus secuencias y productos.</value>
+  </row>
+  <row id="800195" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Order Open Item">Pedidos de venta pendientes de pago </value>
+    <value column="Description" isTrl="Y" original="SalesOrderOpenItem">Pedidos de venta pendientes de pago</value>
+    <value column="Help" isTrl="Y" original="SalesOrderOpenItemJR">Pedidos de venta pendientes de pago JR</value>
+  </row>
+  <row id="800196" trl="Y">
+    <value column="Name" isTrl="Y" original="Discount Invoice Report">Descuentos </value>
+    <value column="Description" isTrl="Y" original="ReportInvoiceDiscount">Informe de descuentos sobre factura</value>
+    <value column="Help" isTrl="Y" original="ReportInvoiceDiscountJR">Informe de descuentos sobre facturas JR</value>
+  </row>
+  <row id="800197" trl="Y">
+    <value column="Name" isTrl="Y" original="Daily Work Requirements Report">Órdenes de fabricación del día. </value>
+    <value column="Description" isTrl="Y" original="In this report are showed the work requirements of type ramp. By default only from actual date.">En este informe se muestran las órdenes de fabricación de tipo rampa. Por defecto las del día actual.</value>
+    <value column="Help" isTrl="Y" original="In this report are showed the work requirements of type ramp. By default only from actual date.">En este informe se muestran las órdenes de fabricación de tipo rampa. Por defecto las del día actual.</value>
+  </row>
+  <row id="800198" trl="Y">
+    <value column="Name" isTrl="Y" original="Stock for Open Orders">Informe pedidos pendientes y stock </value>
+    <value column="Description" isTrl="Y" original="Show the lines of the pending orders with the actual stock of each product.">Muestra las líneas de los  pedidos pendientes de servir con el stock actual de cada uno de los productos.</value>
+    <value column="Help" isTrl="Y" original="Show the lines of the pending orders with the actual stock of each product.">Muestra las líneas de los  pedidos pendientes de servir con el stock actual de cada uno de los productos.</value>
+  </row>
+  <row id="800199" trl="Y">
+    <value column="Name" isTrl="Y" original="Project Profitability">Rentabilidad de Proyectos</value>
+    <value column="Description" isTrl="Y" original="Project Profitability">Rentabilidad de Proyectos</value>
+    <value column="Help" isTrl="Y" original="Project Profitability JR">Informe de rentabilidad de proyectos JR</value>
+  </row>
+  <row id="800200" trl="Y">
+    <value column="Name" isTrl="Y" original="Bank Report">Banco </value>
+    <value column="Description" isTrl="Y" original="Report bank">Informe banco </value>
+    <value column="Help" isTrl="Y" original="Report bank JR">Informe de banco JR</value>
+  </row>
+  <row id="800201" trl="Y">
+    <value column="Name" isTrl="Y" original="Invoice Detail">Detalle facturas </value>
+    <value column="Description" isTrl="Y" original="Invoice Detail">Detalle facturas </value>
+    <value column="Help" isTrl="Y" original="Invoice Detail JR">Detalle facturas JR</value>
+  </row>
+  <row id="800204" trl="Y">
+    <value column="Name" isTrl="Y" original="Standard Costs Report">Costo estándar </value>
+    <value column="Description" isTrl="Y" original="Manufacturing Standard Cost">Informe de los costos estándar de producción.</value>
+    <value column="Help" isTrl="Y" original="Manufacturing Standard Cost">Informe de los costos estándar de producción.</value>
+  </row>
+  <row id="800205" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Invoice Dimensional Report Legacy">Análisis dimensional facturas ventas Antiguo</value>
+    <value column="Description" isTrl="Y" original="Sales Invoice Dimensional Report">Análisis dimensional facturas ventas Antiguo</value>
+    <value column="Help" isTrl="Y" original="Sales Invoice Dimensional Report  shows information about registered sales invoices (Sales Invoices in a status Completed or Voided) during a selected period of time. ">Análisis dimensional de factura venta JR</value>
+  </row>
+  <row id="800206" trl="Y">
+    <value column="Name" isTrl="Y" original="Cash Flow Statement">ReportCashFlow</value>
+    <value column="Description" isTrl="Y" original="Cash Flow Statement">ReportCashFlow</value>
+    <value column="Help" isTrl="Y" original="Cash Flow Statement">Cash Flow</value>
+  </row>
+  <row id="800207" trl="Y">
+    <value column="Name" isTrl="Y" original="Generate Cash Flow Statement">Generar Cash Flow</value>
+    <value column="Description" isTrl="Y" original="Generate Cash Flow Statement">Generar Cash Flow</value>
+    <value column="Help" isTrl="Y" original="Generate Cash Flow Statement">Genera Cash Flow</value>
+  </row>
+  <row id="85601427EAEE401FA0250FF0A6DD62EF" trl="N">
+    <value column="Name" isTrl="Y" original="Generate Amortization Plan">Generar plan de amortización</value>
+    <value column="Description" isTrl="Y" original="Generate Amortization Plan">Generar plan de amortización</value>
+    <value column="Help" isTrl="N" original="This process will generate the amortization plan based on the depreciation method selected in the asset.">This process will generate the amortization plan based on the depreciation method selected in the asset.</value>
+  </row>
+  <row id="970EAD9B846648A7AB1F0CCA5058356C" trl="Y">
+    <value column="Name" isTrl="Y" original="Import Client">Importar Entidad</value>
+    <value column="Description" isTrl="Y" original="Import a client from xml">Importar entidad desde XML</value>
+    <value column="Help" isTrl="Y" original="Import a client and its data from a xml file">Importar una entidad junto con sus datos desde un fichero XML</value>
+  </row>
+  <row id="9CD67D41E43242CDA034FB994B75812A" trl="N">
+    <value column="Name" isTrl="Y" original="M_UPDATE_PARETO_PRODUCT">Actualiza Pareto producto</value>
+    <value column="Description" isTrl="Y" original="Updates a Org specific column of the product depending on the Pareto distribution">Actualiza una columna específica de producto para una organización dependiendo de la distribución de Pareto</value>
+    <value column="Help" isTrl="N" original="Updates a Org specific column of the product depending on the Pareto distribution">Updates a Org specific column of the product depending on the Pareto distribution</value>
+  </row>
+  <row id="9DB4D30BFC5144B9B431CB49DDE9270D" trl="Y">
+    <value column="Name" isTrl="Y" original="Kill Session">Matar Sesión</value>
+    <value column="Description" isTrl="Y" original="Kill the selected session">Mata la sesión seleccionada</value>
+    <value column="Help" isTrl="Y" original="Kills the selected session and logs the user out.">Mata la sesión seleccionada y expulsa del sistema al usuario.</value>
+  </row>
+  <row id="9EB2228A60684C0DBEC12D5CD8D85218" trl="N">
+    <value column="Name" isTrl="Y" original="Calculate Promotions">Calcular promociones</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Calculates and applies the promotions that can valid for the current document modifying final prices if any of them is applicable.">Calculates and applies the promotions that can valid for the current document modifying final prices if any of them is applicable.</value>
+  </row>
+  <row id="A269DCA4DE114E438695B66E166999B4" trl="N">
+    <value column="Name" isTrl="Y" original="Validate Costing Rule">Regla de cálculo de costes validada</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Validate and initialize the Costing Rule. It automatically creates and process the Close and Opening Physical inventories to overwrite an existing Costing Rule. If the instance is using the legacy engine costs it is mandatory to run the Cost Migration Process in advance with System Administrator role.">Validate and initialize the Costing Rule. It automatically creates and process the Close and Opening Physical inventories to overwrite an existing Costing Rule. If the instance is using the legacy engine costs it is mandatory to run the Cost Migration Process in advance with System Administrator role.</value>
+  </row>
+  <row id="A34A85C161B342E0916642E86842086F" trl="Y">
+    <value column="Name" isTrl="Y" original="Export Reference Data">Exportar Datos de Referencia</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A3FE1F9892394386A49FB707AA50A0FA" trl="N">
+    <value column="Name" isTrl="Y" original="Create Order">Crear Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="A firm quote establishes a commitment to the customer at a quoted price for a indicated quantity. If the firm quote check box is not selected and the price list is modified after the quotation then the new prices will be reflected in the sales order or invoice">A firm quote establishes a commitment to the customer at a quoted price for a indicated quantity. If the firm quote check box is not selected and the price list is modified after the quotation then the new prices will be reflected in the sales order or invoice</value>
+  </row>
+  <row id="ABDFC8131D964936AD2EF7E0CED97FD9" trl="N">
+    <value column="Name" isTrl="Y" original="Update Actuals">Actualizar actuales</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="ACD33F81B247441B8659BECF10D7A808" trl="Y">
+    <value column="Name" isTrl="Y" original="Print payments process">Proceso de impresión de pagos</value>
+    <value column="Description" isTrl="Y" original="Process to print payments or send them through email to the client">Proceso que imprime pagos, o los envía por correo electrónico al cliente</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BB35E1D5CE2648EB8C955DD022E994DA" trl="Y">
+    <value column="Name" isTrl="Y" original="Instance Purpose Configuration">Configuración del Propósito de la Instancia</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BDB3B6FCA0AB453DB4E83503BAB82470" trl="Y">
+    <value column="Name" isTrl="Y" original="Apply Modules">Aplicar Módulos</value>
+    <value column="Description" isTrl="Y" original="This process apply all the installed modules">Este proceso aplica todos los módulos instalados</value>
+    <value column="Help" isTrl="Y" original="This process applies all the installed modules. It loads the module definition in the database and generate and compiles the corresponding code.">Este proceso aplica todos los módulos instalados. Carga la definición del módulo en la base de datos y genera y compila el código correspondiente.</value>
+  </row>
+  <row id="CD7283DF804B449C97DA09446669EEEF" trl="N">
+    <value column="Name" isTrl="Y" original="Process Batch">Procesar lote</value>
+    <value column="Description" isTrl="Y" original="GL Journal Batch Process">Proceso de serie de asientos</value>
+    <value column="Help" isTrl="N" original="GL Journal Batch Process">GL Journal Batch Process</value>
+  </row>
+  <row id="D234AE084F7040DCB66E281A4237FF99" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer Statement">Declaracion del Cliente</value>
+    <value column="Description" isTrl="N" original="Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period">Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period</value>
+    <value column="Help" isTrl="N" original="Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period">Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period</value>
+  </row>
+  <row id="D56220370A774B7FA51323BE3C6E0F22" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Payment in Advance">Crear Efecto por Adelantado</value>
+    <value column="Description" isTrl="Y" original="Create Payment in Advance">Crear Efecto por Adelantado</value>
+    <value column="Help" isTrl="Y" original="Create Payment in Advance">Crear Efecto por Adelantado</value>
+  </row>
+  <row id="D85D5B5E368A49B1A6293BA4AE15F0F9" trl="Y">
+    <value column="Name" isTrl="Y" original="Export Client">Exportar Entidad</value>
+    <value column="Description" isTrl="Y" original="Export a client to xml">Exportar entidad a XML</value>
+    <value column="Help" isTrl="Y" original="Export a client to a xml file">Exportar una entidad a un fichero XML</value>
+  </row>
+  <row id="DAE719940FE9463F8A3E3C401BBAFC53" trl="N">
+    <value column="Name" isTrl="Y" original="Explode">Explotar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process will explode the product of the selected line.">This process will explode the product of the selected line.</value>
+  </row>
+  <row id="DFC78024B1F54CBB95DC73425BA6687F" trl="N">
+    <value column="Name" isTrl="Y" original="Explode">Explotar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="This process will explode the product of the selected line.">This process will explode the product of the selected line.</value>
+  </row>
+  <row id="E264309FF8244A94936502BF51829109" trl="Y">
+    <value column="Name" isTrl="Y" original="Reset Accounting">Restablecer Contabilidad</value>
+    <value column="Description" isTrl="N" original="Reset Accounting Entries">Reset Accounting Entries</value>
+    <value column="Help" isTrl="N" original="The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the &quot;Accounting Server Process&quot; or the &quot;G/L Posting by DB Tables&quot; process. The manual changes done for the accounting entries description will obviously be lost after running this process">The reset accounting process allows to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the "Accounting Server Process" or the "G/L Posting by DB Tables" process. The manual changes done for the accounting entries description will obviously be lost after running this process</value>
+  </row>
+  <row id="E5BE98DCF4514A18B571F21183B397DD" trl="N">
+    <value column="Name" isTrl="Y" original="Valued Stock Report">Informe Valoración de Stock</value>
+    <value column="Description" isTrl="Y" original="Valued Stock Report">Informe Valoración de Stock</value>
+    <value column="Help" isTrl="N" original="Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.">Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.</value>
+  </row>
+  <row id="EFDBF909811544DAAE4E876AA781E5DC" trl="N">
+    <value column="Name" isTrl="N" original="Year Close">Year Close</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F9DFC02162B0473B9676870117DF61FE" trl="Y">
+    <value column="Name" isTrl="N" original="ApplyModulesCallServlet">ApplyModulesCallServlet</value>
+    <value column="Description" isTrl="Y" original="This process is called by AJAX calls from the main ApplyModules process">Este proceso es llamado mediante AJAX desde el proceso principal ApplyModules</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FB5E34FD1398452095C7B9C471233910" trl="Y">
+    <value column="Name" isTrl="Y" original="StaticCommunityBranding">Community Branding Estático</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FB740AB61B0E42B198D2C88D3A0D0CE6" trl="Y">
+    <value column="Name" isTrl="Y" original="Update Payment Plan">Actualizar Plan de Pago</value>
+    <value column="Description" isTrl="Y" original="This process will update some details of the payment plan.">Este proceso añade algunos detalles al plan de pago.</value>
+    <value column="Help" isTrl="Y" original="This process will update some details of the payment plan.">Este proceso añade algunos detalles al plan de pago.</value>
+  </row>
+  <row id="FF80808133362F6A013336781FCE0066" trl="N">
+    <value column="Name" isTrl="Y" original="Create Invoice">Crear factura</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FF8081813219E68E013219ECFE930004" trl="N">
+    <value column="Name" isTrl="Y" original="Create Product Copy">Crear copia de producto</value>
+    <value column="Description" isTrl="Y" original="Create a product copied from the line product and insert a new line in the sequence using this new product created">Crea un producto copiado desde la linea de producto e inserta una nueva linea en la secuencia usando este nuevo producto creado</value>
+    <value column="Help" isTrl="N" original="Create a product copied from the line product and insert a new line in the sequence using this new product created">Create a product copied from the line product and insert a new line in the sequence using this new product created</value>
+  </row>
+  <row id="FF808181324D007801324D2AE1130066" trl="N">
+    <value column="Name" isTrl="Y" original="Create Work Effort">Crear parte de trabajo</value>
+    <value column="Description" isTrl="Y" original="Create all Work Effort for a specific day">Crea todos los partes de trabajo para un día concreto</value>
+    <value column="Help" isTrl="N" original="Create all Work Effort for a specific day">Create all Work Effort for a specific day</value>
+  </row>
+  <row id="FF808181326CD80501326CE906D70042" trl="N">
+    <value column="Name" isTrl="Y" original="Validate Work Effort">Validar parte de trabajo</value>
+    <value column="Description" isTrl="Y" original="Process to validate and actualize stocks of production run.">Proceso para validar y actualizar stocks del parte de fabricación. </value>
+    <value column="Help" isTrl="N" original="Process to validate the work effort in Production Run Window. With this process the work effort is closed. Stocks are actualized and average costs are calculated">Process to validate the work effort in Production Run Window. With this process the work effort is closed. Stocks are actualized and average costs are calculated</value>
+  </row>
+  <row id="FF80818132A4F6AD0132A573DD7A0021" trl="N">
+    <value column="Name" isTrl="Y" original="Create Standards">Generar estándares</value>
+    <value column="Description" isTrl="Y" original="Inserts the standard values for the selected Work Requirement Phase and Cost Center version">Inserta los valores estándar para la fase de la orden de fabricación  y  la versión del centro de costos seleccionadas</value>
+    <value column="Help" isTrl="N" original="With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.&#10;This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.&#10;If the Activity of the Work Requirement Phase uses toolsets they are also inserted.&#10;Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.">With this process the products involved on the selected work requirement phase will be inserted. If the phase is of global use all the used products (P-) will go to the global use tab and if it is of no quantity all the quantities will be zero.
+This process also inserts the correspondent machines, salary categories and indirect costs of the selected Cost Center version.
+If the Activity of the Work Requirement Phase uses toolsets they are also inserted.
+Depending on the configuration of the Cost Center the process will also calculate the Cost Center use.</value>
+  </row>
+  <row id="FF80818132C964E30132C9747257002E" trl="N">
+    <value column="Name" isTrl="Y" original="Get Stock">Obtener stock</value>
+    <value column="Description" isTrl="Y" original="Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.">Insertar el stock disponible priorizado por las reglas definididas por el usuario en la tabla M_Stock_Proposed. </value>
+    <value column="Help" isTrl="N" original="Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.">Insert the available stock prioritized by user defined rules into M_Stock_Proposed table.</value>
+  </row>
+</compiereTrl>

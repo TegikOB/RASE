@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************************
+* Copyright (C) 2013 Openbravo S.L.U.
+* Licensed under the Openbravo Commercial License version 1.0
+* You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+* or in the legal folder of this module distribution.
+************************************************************************************
+-->
+<output>
+  <display>
+    <% if(order.getPending() === order.getTotal()){ 
+    %>
+      <line>
+        <text align="left" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_display_total'))%></text>
+        <text align="right" length="10"><%= order.printGross() %></text>
+      </line>
+      <line>
+        <text align="left" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_RemainingToPay'))%></text>
+        <text align="right" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.formatCurrency(order.getPending()))%></text>
+      </line>
+    <% }else{ 
+    %>
+      <% if(!order.getChange()){   
+      %>
+      <line>
+        <text align="left" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_Paid'))%></text>
+        <text align="right" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.formatCurrency(OB.DEC.sub(order.getTotal(), order.getPending()))) %></text>
+      </line>
+      <line>
+        <text align="left" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_RemainingToPay'))%></text>
+        <text align="right" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.formatCurrency(order.getPending()))%></text>
+      </line>
+    <% }else{ 
+    %>
+      <line>
+        <text align="left" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_Paid'))%></text>
+        <text align="right" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.formatCurrency(OB.DEC.add(order.getTotal(), order.getChange()))) %></text>
+      </line>
+      <line>
+        <text align="left" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.getLabel('OBPOS_ticketChange'))%></text>
+        <text align="right" length="10"><%= OB.UTIL.encodeXMLComponent(OB.I18N.formatCurrency(order.getChange()))%></text>
+      </line>
+    <% } 
+    %>
+    <% } 
+    %>
+  </display>
+</output>

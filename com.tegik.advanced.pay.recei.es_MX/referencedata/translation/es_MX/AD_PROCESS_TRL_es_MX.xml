@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_PROCESS" version="">
+  <row id="017312F51139438A9665775E3B5392A1" trl="Y">
+    <value column="Name" original="Doubtful Debt Run Process">Proceso de ejecución de dudoso cobro</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="0BDC2164ED3E48539FCEF4D306F29EFD" trl="Y">
+    <value column="Name" original="Doubtful Debt Process">Proceso de dudoso cobro</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="12016E2EDE0245B5A36B84CBA144DBDF" trl="Y">
+    <value column="Name" original="Add Details">Añadir detalles</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Select pending payments from Orders or Invoices, or create Payment Details related to GL Items.">Seleccione los pagos pendientes de órdenes o facturas, o crear Detalles de 
+pago relacionados a conceptos contables de los artículos.</value>
+  </row>
+  <row id="15C8708DFC464C2D91286E59624FDD18" trl="Y">
+    <value column="Name" original="Modify">Modificar</value>
+    <value column="Description" original="Process to modify transactions GL Item type once they have been created">Proceso para modificar transacciones existentes del tipo concepto contable</value>
+    <value column="Help" original="Process to modify transactions GL Item type once they have been created">Proceso para modificar las transacciones de tipo de concepto contable de 
+ítem una vez que se han creado</value>
+  </row>
+  <row id="29D17F515727436DBCE32BC6CA28382B" trl="Y">
+    <value column="Name" original="Reverse Payment">Revertir pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="2EED9BC16DB34D2B80BA40A21564BECF" trl="Y">
+    <value column="Name" original="Add Payment">Añadir Cobro/Pago</value>
+    <value column="Description" original="Add Payment">Añadir Cobro/Pago</value>
+    <value column="Help" original="Select sales invoices or sales orders that you want to match to this payment">Seleccione las facturas de venta o pedidos de venta que desee para que 
+coincida con este pago</value>
+  </row>
+  <row id="3C4A5FB206B74C3CA9FE20116FCA0464" trl="Y">
+    <value column="Name" original="Reconciliation Details">Imprimir informe de reconciliación detallado</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="4A059E4F79294640AD37B1B718C56E5D" trl="Y">
+    <value column="Name" original="Add Payment From Transaction">Añadir Pago desde Transacción</value>
+    <value column="Description" original="Add Payment From Transaction">Añadir Pago desde Transacción</value>
+    <value column="Help" original="Window to add new payments from the Add Transaction popup of Financial Account window.">Ventana para agregar nuevos pagos de la lista Agregar Transacción emergente 
+de la ventana Cuenta Financiera.</value>
+  </row>
+  <row id="58A9261BACEF45DDA526F29D8557272D" trl="Y">
+    <value column="Name" original="Bank Statement Process">Proceso de Extracto Bancario</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="5BE14AA10165490A9ADEFB7532F7FA94" trl="Y">
+    <value column="Name" original="Add Payment From Journal">Añadir pago desde el diario</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="6255BE488882480599C81284B70CD9B3" trl="Y">
+    <value column="Name" original="Payment Process">Proceso de Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="62E6270312534380B9A8BDF603CA8FBB" trl="Y">
+    <value column="Name" original="Select Expected Payments">Seleccionar Pagos a liquidar</value>
+    <value column="Description" original="Select Expected Payments">Seleccionar Pagos a liquidar</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="7AC7BE9024E448A0BB863C159DA762F9" trl="Y">
+    <value column="Name" original="Import Statement">Importar extracto bancario</value>
+    <value column="Description" original="ImportBankFile">Importar extracto bancario</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B54318B49E984B9CB855AEFB1F474CD6" trl="Y">
+    <value column="Name" original="APRM Process Invoice">APRM Procesar Factura</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Process the invoice and executes the payments that can be generated automatically in case is necessary">Procesar la factura y ejecuta los pagos que se pueden generar de forma 
+automática en caso de que sea necesario</value>
+  </row>
+  <row id="BBA11D1A061346459AF6148920FE6629" trl="Y">
+    <value column="Name" original="Reconciliation Summary">Imprimir informe de reconciliación resumido</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="C125EA7C85234D8B89FEA511FCCD2E9E" trl="Y">
+    <value column="Name" original="Match Statement">Conciliación automática</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="D16966FBF9604A3D91A50DC83C6EA8E3" trl="Y">
+    <value column="Name" original="Payment Proposal Process">Procesar Propuesta de Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Java class to process the Payment Proposals">Clase Java para procesar las propuestas de pago</value>
+  </row>
+  <row id="D5B90B539C254B959045EDCA1DC99BDF" trl="Y">
+    <value column="Name" original="Payment Monitor">Monitorización de pagos</value>
+    <value column="Description" original="Payment Monitor">Seguimiento de Pagos</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="DC23BB9234174E52879E4B21C8CD1F4B" trl="Y">
+    <value column="Name" original="Process Payment Proposal">Processar Propuesta de Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Process that opens the popup with the parameters to process the Payment Proposal">Proceso que se abre la ventana emergente con los parámetros para procesar la 
+propuesta de pago</value>
+  </row>
+  <row id="DE1B382FDD2540199D223586F6E216D0" trl="Y">
+    <value column="Name" original="Add Payment From Journal Line">Añadir pago desde línea del diario</value>
+    <value column="Description" original="Add Payment From Journal Line">Añadir pago desde línea del diario</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E011F492B0814A74B63CD1F3B9FF0526" trl="Y">
+    <value column="Name" original="Execute Payment">Ejecutar Pago</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E3E92E9F08214507958E6875E66F2F99" trl="Y">
+    <value column="Name" original="Add Transaction">Añadir transacción</value>
+    <value column="Description" original="Add Transaction From Financial Account">Añadir transacción</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E54287EE357C493EB127DC3BA1758751" trl="Y">
+    <value column="Name" original="Execute Pending Payments">Ejecutar Efectos Pendientes</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="EB3D56BDD37E4229B67DBAB9F9A9B167" trl="Y">
+    <value column="Name" original="Reconcile">Conciliación manual</value>
+    <value column="Description" original="Manual reconciliation from Financial Account window">Conciliación manual desde la ventana Cuenta Financiera</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="F68F2890E96D4D85A1DEF0274D105BCE" trl="Y">
+    <value column="Name" original="Transaction Process">Proceso de Transacción</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF8080812E2F8EAE012E2F94CF470014" trl="Y">
+    <value column="Name" original="Reconcile">Proceso de Reconciliación</value>
+    <value column="Description" original="Manages processing of reconciliation documents">Gestiona el procesado de los documentos de reconciliación.</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FF8080812F348A97012F349DC24F0007" trl="Y">
+    <value column="Name" original="Delete">Eliminar</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

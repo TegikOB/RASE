@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBUISEL_SELECTOR_FIELD" version="">
+  <row id="0456380DFAF6405498A44B04FE6046DF" trl="Y">
+    <value column="Name" original="Quantity Order in draft transactions">Cantidad de proyectos de transacciones</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="33B6086F30CA46F8BC9B82FB6C906CB3" trl="Y">
+    <value column="Name" original="Order UOM">Unidad del pedido</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

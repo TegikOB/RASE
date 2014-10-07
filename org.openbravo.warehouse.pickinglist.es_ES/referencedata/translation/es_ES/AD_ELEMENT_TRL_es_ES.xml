@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_ELEMENT" version="">
+  <row id="0C6D95554A994F4AAD635B8CD02A6C02" trl="N">
+    <value column="Name" isTrl="Y" original="Validate">Validar</value>
+    <value column="PrintName" isTrl="Y" original="Validate">Validar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="0E37B28CE713426BBBC9EA0943F1D045" trl="N">
+    <value column="Name" isTrl="Y" original="In Picking List">En preparación</value>
+    <value column="PrintName" isTrl="Y" original="In Picking List">En preparación</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="29D77C83F2E042A9B3283117DD79D028" trl="N">
+    <value column="Name" isTrl="Y" original="Cancel">Eliminar</value>
+    <value column="PrintName" isTrl="Y" original="Cancel">Eliminar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="6D6A1C0D0A2B493B91BA9F144EF16A48" trl="N">
+    <value column="Name" isTrl="N" original="Obwpl_Pickinglist_Pick_Edit_ID">Obwpl_Pickinglist_Pick_Edit_ID</value>
+    <value column="PrintName" isTrl="N" original="Obwpl_Pickinglist_Pick_Edit_ID">Obwpl_Pickinglist_Pick_Edit_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="75007990FB154F84BF608349FB866116" trl="N">
+    <value column="Name" isTrl="Y" original="Documentdate">Fecha documento</value>
+    <value column="PrintName" isTrl="Y" original="Documentdate">Fecha documento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="784A8BDD513744B1B5181F9B6DC7D695" trl="N">
+    <value column="Name" isTrl="Y" original="Edit Lines">Editar Lineas</value>
+    <value column="PrintName" isTrl="Y" original="Edit Lines">Editar Lineas</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="820D9B6361DF4E3F8ADFD0D9ED43A33D" trl="N">
+    <value column="Name" isTrl="Y" original="Status">Estatus</value>
+    <value column="PrintName" isTrl="Y" original="Status">Estatus</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="AE7EDB65F32640A48F921DD98DF04290" trl="N">
+    <value column="Name" isTrl="Y" original="Generate Picking List">Generar Preparación de Pedido</value>
+    <value column="PrintName" isTrl="Y" original="Generate Picking List">Generar Preparación de Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="B6905C5EA68B47018A2FDB21AFFC6DB4" trl="N">
+    <value column="Name" isTrl="Y" original="Warehouse Picking List">Preparación pedido</value>
+    <value column="PrintName" isTrl="Y" original="Warehouse Picking List">Preparación pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D36AF9CC144766AEE040007F01003ABC" trl="N">
+    <value column="Name" isTrl="Y" original="Generated By Picking List">Generado por Preparación Pedido</value>
+    <value column="PrintName" isTrl="Y" original="Generated By Picking List">Generado por Preparación Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D44E189924EF4C65AA04B5381737D3FD" trl="N">
+    <value column="Name" isTrl="N" original="Obwpl_Pickinglist_ID">Obwpl_Pickinglist_ID</value>
+    <value column="PrintName" isTrl="N" original="Obwpl_Pickinglist_ID">Obwpl_Pickinglist_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+  <row id="D6DF03B029C94C229AE16CB3F432DDF8" trl="N">
+    <value column="Name" isTrl="Y" original="Process">Procesar</value>
+    <value column="PrintName" isTrl="Y" original="Process">Procesar</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+    <value column="PO_Description" isTrl="N" original=""/>
+    <value column="PO_Help" isTrl="N" original=""/>
+    <value column="PO_Name" isTrl="N" original=""/>
+    <value column="PO_PrintName" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

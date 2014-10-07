@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TRLMX_TRADUCCIR_AD_MESSAGE">
+    <function name="TRLMX_TRADUCCIR_AD_MESSAGE" type="VARCHAR">
+      <body><![CDATA[V_Record RECORD;
+v_TradMex RECORD;
+V_TradEsp RECORD;
+V_Cont NUMBER;
+v_tradMod VARCHAR(60);
+BEGIN
+
+
+SELECT COUNT(AD_MESSAGE_ID) 
+  FROM AD_MESSAGE_TRL 
+    WHERE AD_LANGUAGE='es_ES'
+INTO V_Cont;
+
+FOR V_Record IN (SELECT * FROM AD_MESSAGE)
+LOOP
+V_Cont=V_Cont-1;
+
+DBMS_OUTPUT.PUT_LINE( 'Numero de Palabras que faltan '|| V_Cont);
+
+SELECT * FROM AD_MESSAGE_TRL t 
+  WHERE V_Record.AD_MESSAGE_ID = t.AD_MESSAGE_ID 
+   AND AD_Language= 'es_MX'
+  INTO v_TradMex;
+  
+  SELECT * FROM AD_MESSAGE_TRL t
+  WHERE V_Record.AD_MESSAGE_ID = t.AD_MESSAGE_ID 
+   AND AD_Language= 'es_ES' INTO V_TradEsp ;
+
+  SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+
+--Inserta si esta vacio
+IF(v_TradMex.AD_Language IS NULL AND v_tradMod <> 'es_MX'   )THEN
+
+DBMS_OUTPUT.PUT_LINE( 'Inserta la palabra '|| V_TradEsp.msgtext);
+INSERT INTO  AD_MESSAGE_TRL (
+  AD_MESSAGE_trl_id ,
+  AD_MESSAGE_id ,
+  ad_language ,
+  ad_client_id ,
+  ad_org_id ,
+  isactive ,
+  created ,
+  createdby ,
+  updated ,
+  updatedby ,
+  msgtext , 
+  msgtip ,
+  istranslated )
+  VALUES (
+  get_uuid(), 
+  V_Record.AD_MESSAGE_ID ,
+  'es_MX', 
+  V_TradEsp.ad_client_id ,
+  V_TradEsp.ad_org_id ,
+  V_TradEsp.isactive ,
+  V_TradEsp.created ,
+  V_TradEsp.createdby ,
+  V_TradEsp.updated ,
+  V_TradEsp.updatedby ,
+  V_TradEsp.msgtext , 
+  V_TradEsp.msgtip ,
+  V_TradEsp.istranslated);
+
+END IF; 
+
+SELECT AD_Language FROM AD_MODULE 
+  WHERE V_Record.AD_MODULE_ID= AD_MODULE_ID
+	INTO v_tradMod;
+
+--Actualiza si esta igual al original
+ IF (v_TradMex.msgtext = V_Record.msgtext AND v_tradMod <> 'es_MX'  ) THEN 
+
+   
+DBMS_OUTPUT.PUT_LINE( 'Actualiza la palabra '||v_TradMex.msgtext ||' a '  || V_TradEsp.msgtext);
+  UPDATE AD_MESSAGE_TRL 
+  SET msgtext =V_TradEsp.msgtext
+  WHERE AD_MESSAGE_TRL_ID= v_TradMex.AD_MESSAGE_TRL_ID;
+  END IF;
+
+
+END LOOP;
+
+RETURN 'TERMINO EXITOSAMENTE';
+END TRLMX_TRADUCCIR_AD_MESSAGE
+]]></body>
+    </function>
+  </database>

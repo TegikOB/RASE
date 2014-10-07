@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="C662C29A164243C18C71BE164899A71B" trl="Y">
+    <value column="Name" original="Payment Report">Informe de pagos y cobros</value>
+    <value column="Description" original="Payment Report">Informe de pagos y cobros</value>
+  </row>
+</compiereTrl>

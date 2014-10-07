@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="5445A3183C924660A1C2789E88433667" trl="Y">
+    <value column="Name" original="POS Print Templates">Platillas de Impresion de POS</value>
+    <value column="Description" original="Defines print templates to be used from Web POS">Define las plantillas de impresión que se utilizarán a partir Web POS</value>
+    <value column="Help" original="Defines print templates to be used from Web POS">Define las plantillas de impresión que se utilizarán a partir Web POS</value>
+  </row>
+  <row id="8AC4D0AC73A44547ACE1FC6A39D00F7F" trl="Y">
+    <value column="Name" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="Description" original="Defines Terminal Properties">Define las propiedades del terminal</value>
+    <value column="Help" original="POS Terminal Types are used to define a series of properties that will be shared among all terminals of the same type. In this way, definition of type is done once and reused by different terminals, each of these terminals will set the terminal specific configuration.">Tipos terminales POS se utilizan para definir una serie de propiedades que 
+serán compartidos entre todos los terminales del mismo tipo. De esta manera, 
+la definición de tipo se hace una vez y volver a utilizarse por diferentes 
+terminales, cada uno de estos terminales se establezca la configuración 
+específica del terminal.</value>
+  </row>
+  <row id="B2738FA83B494AD08AE1660859C014A6" trl="Y">
+    <value column="Name" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="Description" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="Help" original="When synchronizing data from POS to back office, the errors are not shown in POS user interface as the cashier needn't know how to react in those cases. This window compiles all the errors occurred, allowing to fix data to try to create the data again.">Al sincronizar los datos de punto de venta para respaldar el cargo, los 
+errores no se muestran en la interfaz de usuario de POS como el cajero no 
+tiene que saber cómo reaccionar en esos casos. Esta ventana se produjeron 
+compila todos los errores, lo que permite fijar los datos para tratar de 
+crear de nuevo los datos.</value>
+  </row>
+</compiereTrl>

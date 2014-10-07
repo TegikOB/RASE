@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_SUMARDEDUC_INV">
+    <function name="CONTMX_SUMARDEDUC_INV" type="NULL">
+      <parameter name="p_ep_instance" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_totaldeducible NUMERIC=0;
+
+p_record_id VARCHAR(60);
+p_message VARCHAR(2000);
+p_docAction VARCHAR(60);
+p_user VARCHAR(60);
+p_result NUMBER;
+ 
+TYPE RECORD IS REF CURSOR;
+Cur_Params RECORD;
+ 
+BEGIN
+ 
+  FOR Cur_Params IN (
+    SELECT *
+    FROM ad_ep_instance_para
+    WHERE ad_ep_instance_id = p_ep_instance
+    ) LOOP
+    IF (cur_params.parametername LIKE 'DocAction') THEN
+      p_docaction := Cur_Params.p_string;
+    ELSIF (cur_params.parametername LIKE 'Record_ID') THEN
+      p_record_id := cur_params.p_string;
+    ELSIF (cur_params.parametername LIKE 'User') THEN
+      p_user := cur_params.p_string;
+    ELSIF (cur_params.parametername LIKE 'Message') THEN
+      p_message := cur_params.p_text;
+    ELSIF (cur_params.parametername LIKE 'Result') THEN
+      p_result := cur_params.p_number;
+    END IF;
+  END LOOP;
+
+
+--sacar la sumatoria de todos los que son deducibles
+SELECT SUM(il.LineNetAmt + lt.taxamt) FROM C_INVOICE i
+  INNER JOIN C_INVOICELINE il on il.c_invoice_id = i.c_invoice_id
+  INNER JOIN M_PRODUCT p ON p.m_product_id = il.m_product_id
+  INNER JOIN C_INVOICELINETAX lt ON lt.c_invoiceline_id = il.c_invoiceline_id
+    WHERE ( p.em_contmx_deducirietu ='Y' OR p.em_contmx_deducirisr ='Y' )
+      AND i.c_invoice_id = p_record_id
+  INTO v_totaldeducible;
+
+
+--actualizar el campo de sumatoria de deducible
+UPDATE C_INVOICE SET em_contmx_totaldeduc=v_totaldeducible WHERE c_invoice_id = p_record_id;
+END CONTMX_SUMARDEDUC_INV
+]]></body>
+    </function>
+  </database>

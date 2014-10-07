@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EM_FET_Plantilla_Factura_Venta_sub_tax" pageWidth="555" pageHeight="802" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.6500000000000032"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT  (COALESCE(tax.Name,'IVA') || '  ' || COALESCE(tax.Rate,0) || '%') TaxName,
+COALESCE(itx.TaxAmt,0) Tax
+FROM C_Invoice inv
+INNER JOIN C_InvoiceTax itx on itx.C_Invoice_ID = inv.C_Invoice_ID
+INNER JOIN C_Tax tax on tax.C_Tax_ID = itx.C_Tax_ID
+INNER JOIN AD_Client adc on adc.AD_Client_ID = inv.AD_Client_ID
+WHERE inv.C_Invoice_ID = $P{DOCUMENT_ID}]]>
+	</queryString>
+	<field name="taxname" class="java.lang.String"/>
+	<field name="tax" class="java.math.BigDecimal"/>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<frame>
+				<reportElement mode="Transparent" x="0" y="0" width="551" height="10" forecolor="#000000"/>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="469" y="0" width="75" height="10"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{tax}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="369" y="0" width="100" height="10"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{taxname}+":"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<noData>
+		<band height="14">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="2" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="12" width="551" height="2" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="549" y="2" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="551" height="2" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="142" y="2" width="270" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No se encontraron impuestos]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

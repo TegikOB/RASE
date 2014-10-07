@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_MESSAGE" version="">
+  <row id="7938078439B24EB3861721205A149DC9" trl="N">
+    <value column="MsgText" isTrl="Y" original="If Retail Organization Type is Store then Anonymous Customer, Anonymous Customer Location and Local Warehouse can't be null.">Si el tipo de Organización Minorista es Tienda, los campos Cliente anónimo, Domicilio del ciente anónimo y Domicilio del almacén no pueden estar vacíos.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="88A76C1B50354335B75E2ED138E4A3B3" trl="N">
+    <value column="MsgText" isTrl="N" original="If Retail Organization Type is Store then Organization Type can't be 'Organization'.">Si el tipo de organización de venta al por menor es "Tienda", el tipo de organización no puede ser 'Organización'.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="950E1356A9114655AE50B9217FDF6EB1" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Copy of ">Copia de</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BE50A839E02B4E218294215B16AAD786" trl="N">
+    <value column="MsgText" isTrl="Y" original="Do you want to clone the product list?">¿Desea clonar esta lista de productos?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FBF3173F260C49FCB619EBCDB7C40183" trl="N">
+    <value column="MsgText" isTrl="Y" original="A price list with the same name exists: %s">Existe una lista de precios con el mismo nombre: %s</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

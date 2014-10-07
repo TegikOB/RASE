@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_COPIA_SECUENCIAS">
+    <function name="TEGIDL_COPIA_SECUENCIAS" type="NULL">
+      <parameter name="p_oldclient_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_newclient_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+   v_existesec VARCHAR(32);
+  
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+regreso:='';
+
+
+--------------------------
+--Create Users------------
+--------------------------
+
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM ad_sequence
+      WHERE isactive='Y' AND ad_client_id=p_oldclient_id 
+      AND UPPER(TRIM(ad_sequence.name)) NOT IN (
+					SELECT UPPER(TRIM(s.name)) 
+					FROM ad_sequence s
+					WHERE s.ad_client_id='0'
+					)
+      )
+    LOOP
+
+	    SELECT ad_sequence_id INTO v_existesec
+	    FROM ad_sequence 
+	    WHERE ad_sequence.name=Cur_Parameter.name 
+	    AND ad_client_id=p_newclient_id;
+
+	    IF v_existesec IS NULL THEN
+
+		     DBMS_OUTPUT.PUT_LINE('SEQ TO CREATE: '||Cur_Parameter.name);
+			 INSERT INTO ad_sequence(
+			    ad_sequence_id, 
+			    ad_client_id, 
+			    ad_org_id, 
+			    isactive, 
+			    createdby, 
+			    updatedby, 
+			    "name", 
+			    description, 
+			    vformat, 
+			    isautosequence, 
+			    incrementno, 
+			    startno, 
+			    currentnext, 
+			    currentnextsys, 
+			    istableid, 
+			    prefix, 
+			    suffix, 
+			    startnewyear)
+		    VALUES (
+			    GET_UUID(), 
+			    p_newclient_id,--ad_client_id, 
+			    '0',--ad_org_id, 
+			    Cur_Parameter.isactive, 
+			    '100',--createdby, 
+			    '100',--updatedby, 
+			    Cur_Parameter.name, 
+			    Cur_Parameter.description, 
+			    Cur_Parameter.vformat, 
+			    Cur_Parameter.isautosequence, 
+			    Cur_Parameter.incrementno, 
+			    10000001,
+			    10000001,--currentnext, 
+			    10000001,--currentnextsys, 
+			    Cur_Parameter.istableid, 
+			    Cur_Parameter.prefix, 
+			    Cur_Parameter.suffix, 
+			    Cur_Parameter.startnewyear);
+
+	   END IF;
+    END LOOP; 
+
+--------------------------
+--END Create Users--------
+--------------------------
+
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_COPIA_SECUENCIAS
+]]></body>
+    </function>
+  </database>

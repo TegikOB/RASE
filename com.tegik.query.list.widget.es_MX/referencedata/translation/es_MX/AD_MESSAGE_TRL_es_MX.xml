@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="18EE399F2AF54EA3BEB5086D4BF6D4B1" trl="Y">
+    <value column="MsgText" original="Showing %0 of %1 rows">Mostrando %0 de %1 filas</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4D8B309237B84F3DAC3F193F69CB81C5" trl="Y">
+    <value column="MsgText" original="Current user/role does not have access to widget %0">Usuario/Rol  no tiene acceso al widget %0</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="51E3AB93D32F488E896F1E03654B89F3" trl="Y">
+    <value column="MsgText" original="'Where Clause Left Part' field is mandatory when the 'Can be filtered' flag is enabled.">'Parte Izquierda de la cláusula Where' es obligatoria cuando 'Puede ser filtrado' está activado.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5E5284441DF84DD9805D53C571E2D05E" trl="Y">
+    <value column="MsgText" original="Show all...">Mostrar todos...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF808081319977E50131998EB8900032" trl="Y">
+    <value column="MsgText" original="Data export capability is">Exportar datos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

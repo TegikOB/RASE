@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_WINDOW" version="">
+  <row id="8AC4D0AC73A44547ACE1FC6A39D00F7F" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="Description" isTrl="Y" original="Defines Terminal Properties">Define las propiedades del terminal</value>
+    <value column="Help" isTrl="Y" original="POS Terminal Types are used to define a series of properties that will be shared among all terminals of the same type. In this way, definition of type is done once and reused by different terminals, each of these terminals will set the terminal specific configuration.">Los tipos de TPV se usan para definir una serie de propiedades que pueden ser compartidas por diferentes terminales del mismo tipo. De esta manera, la definición del tipo se hace una vez y es reusada por diferentes terminales, cada uno de ello seteará la configuración específica.</value>
+  </row>
+  <row id="B2738FA83B494AD08AE1660859C014A6" trl="N">
+    <value column="Name" isTrl="Y" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="Description" isTrl="Y" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="Help" isTrl="Y" original="When synchronizing data from POS to back office, the errors are not shown in POS user interface as the cashier needn't know how to react in those cases. This window compiles all the errors occurred, allowing to fix data to try to create the data again.">Al sincronizar pedidos desde el TPV al backoffice, los posibles errores no son mostrados al usuario en el TPV ya que el cajero no necesita saber cómo actuar en estos casos. Esta ventana recoge todos estos errors, permitiendo arreglar la información para intentar volver a crear los pedidos de nuevo.</value>
+  </row>
+  <row id="FF80818132F311740132F322B8CD0048" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">Terminal Punto de Venta</value>
+    <value column="Description" isTrl="Y" original="POS Terminal">Terminal Punto de Venta</value>
+    <value column="Help" isTrl="Y" original="A POS terminal is each one of the physical terminals in a store.">Un TPV es cada uno de los terminales físicos en una tienda.</value>
+  </row>
+</compiereTrl>

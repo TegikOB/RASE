@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="01E166C76B5A49E5A321738145D112B2" trl="Y">
+    <value column="MsgText" original="Delete this widget?">¿Borrar este widget?</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="03D018ABB0414D18A1B60782C0DD1389" trl="Y">
+    <value column="MsgText" original="Admin Others">Administrar Otros</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="06E9344CB05A46F0BFEF458B0407002C" trl="Y">
+    <value column="MsgText" original="No widgets have been added.">Ningún widget se ha añadido.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="091F3DEA915E4A56A0F076513C33F2AE" trl="Y">
+    <value column="MsgText" original="Refresh">Refrescar</value>
+    <value column="MsgTip" original="WMO: Widget Menu Option"/>
+  </row>
+  <row id="0A3B691314614A099CFD4B599E937134" trl="Y">
+    <value column="MsgText" original="Move Up">Mover Arriba</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1547AA8E541249B1979258E8D5443594" trl="Y">
+    <value column="MsgText" original="Role">Rol</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="1EB68E2D11EF4404ADFB6470D052EB99" trl="Y">
+    <value column="MsgText" original="Value">Valor</value>
+    <value column="MsgTip" original="Label uses in the 'Admin Others' dialog's second combo"/>
+  </row>
+  <row id="2AEA0063724C4EB69EA7829F37CCACF4" trl="N">
+    <value column="MsgText" original="Widget">Widget</value>
+    <value column="MsgTip" original="Label uses in the 'Add Widget' dialog"/>
+  </row>
+  <row id="2E9BF9F5877342E7A56AF057AEB0C21F" trl="Y">
+    <value column="MsgText" original="Delete this widget">Borrar este widget</value>
+    <value column="MsgTip" original="WMO: Widget Menu Option"/>
+  </row>
+  <row id="2F7CA97F29E54308A86908AB1D328EEF" trl="Y">
+    <value column="MsgText" original="Parameter Values">Valores de Parámetros</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3BD0E336B1D34CC8ABCF214ED7C6AD4B" trl="Y">
+    <value column="MsgText" original="Client">Cliente</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="44A806E26F1647F1A7A5D83A2D6F053D" trl="Y">
+    <value column="MsgText" original="Organization">Organización</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="46B38C05D7054F3E91EFE26B96153B26" trl="Y">
+    <value column="MsgText" original="Edit Parameters">Editar Parámetros</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4D4433A442EB4F0C8DF2F2A57A8BBE31" trl="Y">
+    <value column="MsgText" original="This widget removal capability is">para borrar este widget</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5461DD962C8B441FB02C1AC880642493" trl="Y">
+    <value column="MsgText" original="Add">Añadir</value>
+    <value column="MsgTip" original="This label is used in the 'Add Widget' Dialog"/>
+  </row>
+  <row id="5B8E92850CA74EB2B17EEF4AC099032B" trl="Y">
+    <value column="MsgText" original="No widgets have been removed.">Ningún widget ha sido eliminado.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5D359FFC22134C0AB4FF9E0BD6B47D86" trl="Y">
+    <value column="MsgText" original="Community instances cannot delete widget classes that belong to the Workspace module.">Las instancias de Comunidad no pueden borrar clases de widget que pertenecen 
+al módulo de Espacio de Trabajo.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5E70B4EEF8E7486A8EEBEFC99D36C9BC" trl="Y">
+    <value column="MsgText" original="Changes will be published to all users in this entity">Los cambios serán publicados a todos los usuarios de esta entidad</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="68DF6DE9C5504710A6698DF1D3569374" trl="Y">
+    <value column="MsgText" original="Level">Nivel</value>
+    <value column="MsgTip" original="Label uses in the 'Admin Others' dialog's first combo"/>
+  </row>
+  <row id="6B3520F1A0F5415B9A8C5CA78D06AA75" trl="Y">
+    <value column="MsgText" original="System">Sistema</value>
+    <value column="MsgTip" original="The label for System admin mode option"/>
+  </row>
+  <row id="6D9EC1A8E9204820A371B5CDD35E3570" trl="Y">
+    <value column="MsgText" original="The event type send to the handler is not supported.">El tipo del evento enviado al gestor no está soportado.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7EDEEA0AE0D74F37AE006AD9AB25D198" trl="Y">
+    <value column="MsgText" original="Manage Workspace">Gestionar el Espacio de Trabajo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="88A4B1F1CC734C139C60CDFD17028E35" trl="Y">
+    <value column="MsgText" original="Recent Views">Vistas Recientes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="95BB721B09B04ABA812A79BBB2AD9EBF" trl="Y">
+    <value column="MsgText" original="Publish">Publicar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9A0BD5C58B094E0884DD43D4281EDF06" trl="Y">
+    <value column="MsgText" original="Add Widget">Añadir Widget</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9E19BE42AD6443D28196CC71DF96D0B2" trl="Y">
+    <value column="MsgText" original="Edit">Editar</value>
+    <value column="MsgTip" original="Label uses in the 'Admin Others' button"/>
+  </row>
+  <row id="A1F6CE173F6F4C188FD66D5F23256F00" trl="Y">
+    <value column="MsgText" original="Edit Settings">Editar Configuración</value>
+    <value column="MsgTip" original="WMO: Widget Menu Option"/>
+  </row>
+  <row id="B542D76D375D496F8BB8C684F306D359" trl="Y">
+    <value column="MsgText" original="Not all parameters have been set, please enter values for the mandatory parameters.">No todos los parámetros han sido introducidos, por favor introduzca valores para los parámetros obligatorios.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B6C5F00084E94B8C9DCAA4AACF06511A" trl="Y">
+    <value column="MsgText" original="Error publishing changes to _level_ _levelvalue_">Error al publicar cambios a _level_ _levelvalue_</value>
+    <value column="MsgTip" original="Do not remove _level_ and _levelvalue_ are placeholders for a dynamic message"/>
+  </row>
+  <row id="D51589640C7D4E488C3DE86C84B54DA4" trl="Y">
+    <value column="MsgText" original="Create New">Crear Nuevo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="DAC446583C4E4DDB8129536D2EAE2C03" trl="Y">
+    <value column="MsgText" original="Changes have been published to _level_ _levelvalue_">Los cambios han publicado a _level_ _levelvalue_</value>
+    <value column="MsgTip" original="Do no remove _level_ and _levelvalue_ are place holders for a dynamic message"/>
+  </row>
+  <row id="DF021DB4E9804733A5B0747E70257D9A" trl="Y">
+    <value column="MsgText" original="Editing Workspace for _level_: _levelvalue_">Editando el Espacio de Trabajo para _level_: _levelvalue_</value>
+    <value column="MsgTip" original="_level_ and _levelvalue_ are place holdes, do not remove from the message"/>
+  </row>
+  <row id="E3D1B923F8E04C779E7D21999B43D709" trl="Y">
+    <value column="MsgText" original="Community instances are not allowed to move down default Widget Instances delivered by Openbravo">Las instancias de comunidad no pueden cambiar la posición de las instancias de widgets por defecto en Openbravo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F074D98ECE654C8A9D8D9B39AA81CFD3" trl="Y">
+    <value column="MsgText" original="No widgets have been moved.">No se ha cambiado la posición de ningún widget.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F2A4C75D27E1409AB6B8C0B4122C5691" trl="Y">
+    <value column="MsgText" original="Move Down">Mover Abajo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F30EDD35EF024B91BDD2CD55E9489680" trl="Y">
+    <value column="MsgText" original="Changes Published">Los Cambios han sido Publicados</value>
+    <value column="MsgTip" original="Title of a dialog to the user"/>
+  </row>
+  <row id="FF808081304A113601304A69D3300065" trl="Y">
+    <value column="MsgText" original="Learn More">Obtener información</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EAAEB40011" trl="Y">
+    <value column="MsgText" original="About">Acerca de</value>
+    <value column="MsgTip" original="WMO: Widget Menu Option"/>
+  </row>
+  <row id="FF8081812E14E58B012E14EC708B002C" trl="N">
+    <value column="MsgText" original="Widget">Widget</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14ED0DF50035" trl="Y">
+    <value column="MsgText" original="Parent Module">Módulo Padre</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EDBD4F0044" trl="Y">
+    <value column="MsgText" original="Widget Title">Título de Widget</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EE1780004B" trl="Y">
+    <value column="MsgText" original="Widget Superclass">Superclase de Widget</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EE71E30052" trl="Y">
+    <value column="MsgText" original="Author Message">Mensaje del Autor</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EECF460059" trl="Y">
+    <value column="MsgText" original="Data Access Level">Nivel de Acceso de Datos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EF26E20060" trl="Y">
+    <value column="MsgText" original="Author URL">URL del Autor</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EF8D5E0067" trl="Y">
+    <value column="MsgText" original="Enabled For All Users">Activado para todos los Usuarios</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14EFDA22006E" trl="Y">
+    <value column="MsgText" original="Widget Description">Descripción del Widget</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F038030075" trl="Y">
+    <value column="MsgText" original="Module Name">Nombre del Módulo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F08F5A007C" trl="Y">
+    <value column="MsgText" original="License Type">Tipo de Licencia</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F0DB090083" trl="Y">
+    <value column="MsgText" original="Module Version">Versión del Módulo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F11F84008A" trl="Y">
+    <value column="MsgText" original="Update Information">Información de Actualización</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F175840091" trl="Y">
+    <value column="MsgText" original="Maturity Status">Nivel de Madurez</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F1C0D00098" trl="Y">
+    <value column="MsgText" original="License Text">Texto de la Licencia</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F2151A009F" trl="Y">
+    <value column="MsgText" original="Java Package">Paquete Java</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F25BC100A6" trl="Y">
+    <value column="MsgText" original="Author">Autor</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F2A85F00AD" trl="Y">
+    <value column="MsgText" original="Type">Tipo</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E14E58B012E14F2ED5300B4" trl="Y">
+    <value column="MsgText" original="DB_Prefix">Prefijo de Base de Datos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF8081812E9F4334012E9F4645BF0007" trl="Y">
+    <value column="MsgText" original="Recent Documents">Documentos Recientes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80818131E162F30131E16910BF0003" trl="N">
+    <value column="MsgText" original=""/>
+    <value column="MsgTip" original="Instance Purpose"/>
+  </row>
+</compiereTrl>

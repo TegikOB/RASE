@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="68BBCC31506745D6A9223F63B87FD96D" trl="Y">
+    <value column="Name" original="Template">Plantilla</value>
+    <value column="Description" original="Maintain component templates">Mantiene plantillas de componentes</value>
+  </row>
+  <row id="8C54E34A8D594B10865A86BDC2082EEE" trl="Y">
+    <value column="Name" original="User Interface">Interfaz de Usuario</value>
+    <value column="Description" original="Contains the application dictionary for the new user interface">Contiene la definición en el diccionario de aplicación del nuevo interfaz de usuario</value>
+  </row>
+</compiereTrl>

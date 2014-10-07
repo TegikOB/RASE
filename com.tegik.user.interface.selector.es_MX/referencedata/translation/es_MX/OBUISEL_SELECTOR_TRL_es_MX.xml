@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBUISEL_SELECTOR" version="">
+  <row id="387D9FFC48A74054835C5DF6E6FD08F7" trl="Y">
+    <value column="Name" original="Selector Field Property Selector">Selector de campos Selector Propiedad</value>
+    <value column="Description" original="Selector Field Property Selector">Selector de campos Selector Propiedad</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="E4F389D409DF4EC3B371B69C8A124DA7" trl="Y">
+    <value column="Name" original="Model Selector">Selector modelo</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

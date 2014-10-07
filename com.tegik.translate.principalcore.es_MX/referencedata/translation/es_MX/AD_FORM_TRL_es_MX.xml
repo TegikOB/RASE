@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="AD_FORM" version="">
+  <row id="100" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Invoices from Orders">Generar facturas (manualmente)</value>
+    <value column="Description" isTrl="Y" original="Create invoices for all processed sales orders/goods shipments that have not been invoiced.">Crea las facturas correspondientes a todos los pedidos de venta y remisiones procesados que no hayan sido facturados.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1003100000" trl="Y">
+    <value column="Name" isTrl="Y" original="Session Preferences">Preferencias Sesión</value>
+    <value column="Description" isTrl="Y" original="View session information and set certain system settings.">Muestra la información de la sesión y establece ciertos parámetros del sistema.</value>
+    <value column="Help" isTrl="N" original="Session preferences allow showing or hiding accounting tabs or translation tabs for a given user, role, client and organization.">Session preferences allow showing or hiding accounting tabs or translation tabs for a given user, role, client and organization.</value>
+  </row>
+  <row id="1003100002" trl="Y">
+    <value column="Name" isTrl="Y" original="Session Variables">Variables Sesión</value>
+    <value column="Description" isTrl="Y" original="View and set session variables.">Muestra y edita las variables de sesión.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1004400000" trl="Y">
+    <value column="Name" isTrl="Y" original="Requisition To Order">Necesidad a Pedido</value>
+    <value column="Description" isTrl="Y" original="Create a Purchase Order from Requisition lines.">Crear un pedido de compra desde líneas de necesidad de material.</value>
+    <value column="Help" isTrl="Y" original="Procurement management team can use this window to manage &quot;Completed&quot; requisitions all at once.">En la ventana Necesidad a Pedido es posible crear Pedidos de Compra desde las líneas de necesidad deseadas.La ventana está estructurada en 2 diferentes áreas. La superior para buscar necesidades abiertas. Y la segunda para las líneas de necesidad bloqueadas.Para buscar las líneas de necesiadad hay disponibles varios filtros. El check "Añadir líneas sin proveedor" es usado cuando para incluir líneas de necesidad que no tengan un proveedor asociado cuando se ha seleccionado uno en el filtro.La relación de las líneas de necesidad encontradas muestra líneas abiertas de necesidades que han sido completadas y que no están bloqueadas.Las líneas de necesidad que se pretenden utilizar para crear el Pedido de Compra han de ser seleccionadas en esta relación y añadidas al área inferior de bloqueo.En el área de bloqueo aparecen todas las líneas de necesidad bloqueadas por el usuario, aunque no cumplan los filtros del área superior. Las líneas de necesidad que hayan estado bloqueadas más de 3 días se consideran como desbloqueadas y no aparecerían en esta relación.Cada vez que se presiona el botón Crear se abre un popup para crear un único Pedido de Compra con todas las líneas necesarias según las líneas de necesidad que estén seleccionadas en el área de bloqueo. En la relación de líneas bloqueadas es posible cambiar la cantidad que se desea que se pida para cada línea de necesidad y es posible indicar el precio.</value>
+  </row>
+  <row id="1005800000" trl="Y">
+    <value column="Name" isTrl="Y" original="Registration">Registro</value>
+    <value column="Description" isTrl="Y" original="Registration form for Openbravo installation">Formulario de registro de la instalación de Openbravo</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1005800001" trl="Y">
+    <value column="Name" isTrl="N" original="Heartbeat">Heartbeat</value>
+    <value column="Description" isTrl="Y" original="Heartbeat pop-up window">Heartbeat ventana pop-up</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="102" trl="Y">
+    <value column="Name" isTrl="Y" original="Initial Client Setup">Crear entidad</value>
+    <value column="Description" isTrl="Y" original="Create a new empty client from scratch.">Crea un nuevo cliente desde el principio.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="110" trl="Y">
+    <value column="Name" isTrl="Y" original="Create Shipments from Orders">Generar remisiones (manualmente)</value>
+    <value column="Description" isTrl="Y" original="Create shipments for all processed sales orders that fit the criteria and the parameters specified.">Crea las remisiones correspondientes a todos los pedidos de venta procesados que cumplan con los criterios y parámetros especificados. </value>
+    <value column="Help" isTrl="Y" original="Generate Shipments manually&lt;hints id=&quot;hah_hints&quot; /&gt;">Generar remisiones manualmente&lt;hints id="hah_hints" /&gt;</value>
+  </row>
+  <row id="12D4CE60E8694097829C8FBBDBD503C4" trl="Y">
+    <value column="Name" isTrl="Y" original="Audit Trail">Histórico de auditoría</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="25C886DA08E947F29AAC1D30D8B753A1" trl="Y">
+    <value column="Name" isTrl="Y" original="Module Management">Gestión de Módulos</value>
+    <value column="Description" isTrl="Y" original="Mangament for installed modules">Gestión de los módulos instalados</value>
+    <value column="Help" isTrl="Y" original="&#10;Use Module Management to browse the currently installed modules, to check for updates to installed modules and search for new modules to install.&#10;&lt;div class=&quot;HelpItems&quot;&gt;&#10;&lt;h3&gt;&lt;a name=&quot;installed&quot;&gt;Installed Modules&lt;/a&gt;&lt;/h3&gt;&#10;&lt;span&gt;View the details of currently installed modules. You can also find updates to installed modules. Uninstall installed modules, disable or enable modules and rebuild the system after installing/uninstalling a module.&lt;/span&gt;&#10;&lt;h3&gt;&lt;a name=&quot;add&quot;&gt;Add Modules&lt;/a&gt;&lt;/h3&gt;&#10;&lt;span&gt;Search for a specific module, or browse all available modules in the Central Repository. You can also browse for modules from the file system. Click Install Now to install a module.&lt;/span&gt;&#10;&lt;h3&gt;&lt;a name=&quot;history&quot;&gt;Installation History&lt;/a&gt;&lt;/h3&gt;&#10;&lt;span&gt;View the history of module installations/uninstallations and errors that may have occurred during these processes.&lt;/span&gt;&#10;&lt;h3&gt;&lt;a name=&quot;history&quot;&gt;System Rebuild&lt;/a&gt;&lt;/h3&gt;&#10;&lt;span&gt;After installing or uninstalling a module, you must restart the application context for any changes to take effect.&lt;/span&gt;&#10;&lt;ul&gt;&#10;&lt;li&gt;&lt;b&gt;&lt;a name=&quot;restart&quot;&gt;Restart server:&lt;/a&gt;&lt;/b&gt; Restarts the application server and launches the login screen.&lt;/li&gt;&#10;&lt;li&gt;&lt;b&gt;&lt;a name=&quot;nothing&quot;&gt;Take no action:&lt;/a&gt;&lt;/b&gt; Select if you intend to restart the server or reload the application manually, later.&lt;/li&gt;&#10;&lt;/ul&gt;&lt;/div&gt;">Use Gestión de Módulos para navegar por los módulos instalados actualmente,buscar actualizaciones o para encontrar nuevos módulos que instalar. &lt;div class="HelpItems"&gt;&lt;h3&gt;&lt;a name="installed"&gt;Módulos Instalados&lt;/a&gt;&lt;/h3&gt; &lt;span&gt;Ver los detalles de los módulos instalados actualmente. También puede encontrar actualizaciones de los módulos instalados y recompilar el sistema después de instalar/desinstalar un módulo.&lt;/span&gt;&lt;h3&gt;&lt;a name="add"&gt;Añadir Módulos&lt;/a&gt;&lt;/h3&gt;&lt;span&gt;Buscar un módulo en concreto, o navegar por todos los módulos disponibles en el Repositorio Central. También puede navegar por el sistema de ficheros para encontrar módulos. Presione Instalar Ahora para instalar un módulo.&lt;/span&gt;&lt;h3&gt;&lt;a name="history"&gt;Histórico de Instalaciones&lt;/a&gt;&lt;/h3&gt;&lt;span&gt;Ver el histórico de la instalación/desinstalación de módulos y los errores que hayan podido suceder durante el proceso.&lt;/span&gt;&lt;h3&gt;&lt;a name="history"&gt;Recompilar el Sistema&lt;/a&gt;&lt;/h3&gt;&lt;span&gt;Después de instalar o desinstalar un módulo, se debe reiniciar el contexto de la aplicación para que los cambios tengan efecto.&lt;/span&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;a name="restart"&gt;Reiniciar servidor:&lt;/a&gt;&lt;/b&gt; Reinicia el servidor y redirige a la pantalla de login.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;a name="reload"&gt;Recargar contexto:&lt;/a&gt;&lt;/b&gt; Recarga el contexto Openbravo y redirige a la pantalla de login. &lt;i&gt;Nota:&lt;/i&gt; Existe un error conocido en el servidor de aplicaciones por el que se consume (y no se liberan) 30MB de memoria cada vez que se recarga el contexto.&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;a name="nothing"&gt;No hacer nada:&lt;/a&gt;&lt;/b&gt; Seleccionar si desea reiniciar el servidor posteriormente o si va a recargar la aplicación manualmente.&lt;/li&gt;&lt;/ul&gt;</value>
+  </row>
+  <row id="800002" trl="Y">
+    <value column="Name" isTrl="Y" original="Payments Selection (Bank)">Selección de pagos para el banco</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800003" trl="Y">
+    <value column="Name" isTrl="Y" original="GL Posting by DB Tables">Proceso contable</value>
+    <value column="Description" isTrl="Y" original="Recreate accounting information and add transactions for the General Ledger, grouped by defined database tables.">Vuelve a crear la información contable y añada las transacciones del libro mayor, agrupadas en las tablas predefinidas de la base de datos. </value>
+    <value column="Help" isTrl="N" original="The G/L Posting by DB Table allows to massively post the transactions related to a given transactional table or to all of them.">The G/L Posting by DB Table allows to massively post the transactions related to a given transactional table or to all of them.</value>
+  </row>
+  <row id="800007" trl="Y">
+    <value column="Name" isTrl="Y" original="Background Process">Listado de procesos en background</value>
+    <value column="Description" isTrl="Y" original="Edit predefined processes made by the user.">Edita los procesos predefinidos por el usuario.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800009" trl="Y">
+    <value column="Name" isTrl="Y" original="Pending Goods Receipts">Pedidos de compra pendientes de recibir</value>
+    <value column="Description" isTrl="Y" original="This window provides a view of the order lines pending to be received and a process to automatically create goods receipt/s for the ones received.">Edita las remisiones existentes a medida que se cumplan los pedidos.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800011" trl="Y">
+    <value column="Name" isTrl="Y" original="SQL Query">Consulta SQL</value>
+    <value column="Description" isTrl="Y" original="Execute SQL query and view results within the Openbravo application.">Ejecuta la consulta SQL y muestre los resultados dentro de la aplicación de Openbravo.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800014" trl="Y">
+    <value column="Name" isTrl="Y" original="Import/Export Translations">Importar/Exportar traducciones</value>
+    <value column="Description" isTrl="Y" original="Import or export localizations.">Importa o exporte las localizaciones.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800015" trl="Y">
+    <value column="Name" isTrl="Y" original="About">Acerca de</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800016" trl="Y">
+    <value column="Name" isTrl="Y" original="Alert Management">Gestión de Alertas</value>
+    <value column="Description" isTrl="Y" original="Edit predefined alerts made by the user.">Edita las alertas predefinidas por el usuario.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800017" trl="Y">
+    <value column="Name" isTrl="N" original="Logout">Logout</value>
+    <value column="Description" isTrl="N" original="Logout">Logout</value>
+    <value column="Help" isTrl="Y" original="Logout servlet">Servlet de logout</value>
+  </row>
+  <row id="800018" trl="Y">
+    <value column="Name" isTrl="Y" original="Menu">Menú</value>
+    <value column="Description" isTrl="Y" original="Menu">Menú</value>
+    <value column="Help" isTrl="Y" original="Menu servlet">Menú servlet</value>
+  </row>
+  <row id="8D6282279F464B1696B0EE3E23023B65" trl="Y">
+    <value column="Name" isTrl="Y" original="Instance Activation">Activación de la Instancia</value>
+    <value column="Description" isTrl="Y" original="Manage current instance">Administrar la instancia actual</value>
+    <value column="Help" isTrl="Y" original="Manage current instance, it allows to activate the instance.">Administrar la instancia actual permite activar la instancia.</value>
+  </row>
+  <row id="C09B000F160B47BE938A77FDE3207643" trl="Y">
+    <value column="Name" isTrl="Y" original="Enterprise module management">Gestión del módulo de Empresa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CBFBF581CC3C4D68AD184DD0A20300D1" trl="Y">
+    <value column="Name" isTrl="Y" original="EditHelp">EditarAyuda</value>
+    <value column="Description" isTrl="Y" original="Edit Help">Editar Ayuda</value>
+    <value column="Help" isTrl="Y" original="Shows a GUI to edit help for windows, tabs, fields and elements.">Muestra una Interfaz gráfica de usuario para editar la ayuda de ventanas, solapas y elementos.</value>
+  </row>
+  <row id="DE2329ABCAA84D5F99B59043CFFFE454" trl="Y">
+    <value column="Name" isTrl="Y" original="Initial organization setup">Crear organización</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

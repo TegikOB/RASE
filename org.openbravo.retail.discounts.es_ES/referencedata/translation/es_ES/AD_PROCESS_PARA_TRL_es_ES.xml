@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_PROCESS_PARA" version="">
+  <row id="6D378BD702944EF3ACF1BF8474A3AB11" trl="N">
+    <value column="Name" isTrl="N" original="Pack">Paquete</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7B885871B7884052B9C1A0110216A1DF" trl="N">
+    <value column="Name" isTrl="N" original="Quantity">Cantidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original="Quantity of packs to be added">Cantidad de paquetes incluidos</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_MENU" version="">
+  <row id="FF80808131F60B750131F6299C08002E" trl="N">
+    <value column="Name" isTrl="N" original="Cashflow Forecast Report">Informe de previsión de tesorería</value>
+    <value column="Description" isTrl="N" original="Cashflow Forecast Report">Informe de previsión de tesorería</value>
+  </row>
+</compiereTrl>

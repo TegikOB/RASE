@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_ES" table="AD_PROCESS" version="">
+  <row id="473A3AA4C0F143BF900EB108B92618F1" trl="Y">
+    <value column="Name" original="Receivables Aging Schedule">Listado de saldos a cobrar por antigüedad</value>
+    <value column="Description" original="Receivables Aging Schedule">Listado de saldos a cobrar por antigüedad</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="FFB782F2FB024533B5B52818D9FE3E0F" trl="Y">
+    <value column="Name" original="Payables Aging Schedule">Listado de saldos a pagar por antigüedad</value>
+    <value column="Description" original="Payables Aging Schedule">Listado de saldos a pagar por antigüedad</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

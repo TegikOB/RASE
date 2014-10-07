@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_COPIA_DOCTYPE">
+    <function name="TEGIDL_COPIA_DOCTYPE" type="NULL">
+      <parameter name="p_oldclient_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_newclient_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+  v_doctype_id VARCHAR(32);
+  v_libromaestro_id VARCHAR(32);
+  v_sequence_id VARCHAR(32);
+  v_doctypeshipment_id VARCHAR(32);
+  v_doctypeinvoice_id VARCHAR(32); 
+  v_olddtship VARCHAR(32); 
+  v_olddtinv VARCHAR(32); 
+  v_glret VARCHAR (255);
+  v_seqret VARCHAR (255);
+  Cur_Template RECORD;
+  v_poc_doctype_template_id VARCHAR(32);
+  Cur_Template_email RECORD;
+  CUR_VENTANAS RECORD;
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+regreso:='';
+v_glret:='';
+v_seqret:='';
+--------------------------
+--Create GL---------------
+--------------------------
+SELECT tegidl_copia_lm(p_oldclient_id,p_newclient_id)
+INTO v_glret;
+IF v_glret !='' THEN
+	RAISE_APPLICATION_ERROR(-20000, v_glret);
+END IF;
+--------------------------
+--END Create GL-----------
+--------------------------
+--------------------------
+--Create SEQ--------------
+--------------------------
+SELECT tegidl_copia_secuencias(p_oldclient_id,p_newclient_id)
+INTO v_seqret;
+IF v_seqret !='' THEN
+	RAISE_APPLICATION_ERROR(-20000, v_seqret);
+END IF;
+--------------------------
+--END Create SEQ----------
+--------------------------
+
+--------------------------
+--Create Doctypes---------
+--------------------------
+
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM c_doctype
+      WHERE isactive='Y' AND ad_client_id=p_oldclient_id
+      )
+    LOOP
+      DBMS_OUTPUT.PUT_LINE('DOCTYPE TO CREATE: '||Cur_Parameter.name);
+
+	v_doctype_id:=GET_UUID();
+
+	---------------
+	--GET GL-------
+	---------------
+	SELECT c.gl_category_id INTO v_libromaestro_id
+	FROM gl_category c
+	WHERE c.name IN (SELECT c2.name FROM gl_category c2
+			WHERE gl_category_id=Cur_Parameter.gl_category_id
+			)
+	AND c.ad_client_id=p_newclient_id;	
+	---------------
+	--END GET GL---
+	---------------
+	---------------
+	--GET SEQ------
+	---------------
+	SELECT s.ad_sequence_id INTO v_sequence_id
+	FROM ad_sequence s
+	WHERE s.name IN (SELECT s2.name FROM ad_sequence s2
+			WHERE s2.ad_sequence_id=Cur_Parameter.docnosequence_id
+			)
+	AND s.ad_client_id=p_newclient_id;	
+	---------------
+	--END GET SEQ--
+	---------------
+	
+ 
+	INSERT INTO c_doctype(
+            c_doctype_id, 
+            ad_client_id, 
+            ad_org_id, 
+            isactive, 
+            createdby, 
+            updatedby, 
+            "name", 
+            printname, 
+            description, 
+            docbasetype, 
+            issotrx, 
+            docsubtypeso, 
+            c_doctypeshipment_id, 
+            c_doctypeinvoice_id, 
+            isdocnocontrolled, 
+            docnosequence_id, 
+            gl_category_id, 
+            documentnote, 
+            isdefault, 
+            documentcopies, 
+            ad_table_id, 
+            orgfiltered, 
+            c_doctype_reversed_id, 
+            isexpense, 
+            isreversal, 
+            em_ajgar_isajgar, 
+            em_almac_isprice0, 
+            em_almac_forzarrepartidor, 
+            em_cascos_iscascos, 
+            em_compras_iscompraind, 
+            em_dev_isdev, 
+            em_dtt_ad_window_id, 
+            em_dtt_ad_process_id, 
+            em_oplog_isoplog, 
+            em_sugcom_issugcom, 
+            em_vtadist_isvtadist, 
+            em_vtadist_iscotizacion, 
+            em_vtapiso_isvtapiso,
+            em_vtadist_isrefacturacion)
+    VALUES ( v_doctype_id,--c_doctype_id, 
+            p_newclient_id,--ad_client_id, 
+            '0',--ad_org_id, 
+            Cur_Parameter.isactive, 
+            '100',--createdby, 
+            '100',--updatedby, 
+            Cur_Parameter.name, 
+            Cur_Parameter.printname, 
+            Cur_Parameter.description, 
+            Cur_Parameter.docbasetype, 
+            Cur_Parameter.issotrx, 
+            Cur_Parameter.docsubtypeso, 
+            NULL,--c_doctypeshipment_id, 
+            NULL,--c_doctypeinvoice_id, 
+            Cur_Parameter.isdocnocontrolled, 
+            v_sequence_id,--docnosequence_id, 
+            v_libromaestro_id,--gl_category_id, 
+            Cur_Parameter.documentnote, 
+            Cur_Parameter.isdefault, 
+            Cur_Parameter.documentcopies, 
+            Cur_Parameter.ad_table_id, 
+            Cur_Parameter.orgfiltered, 
+            NULL,--c_doctype_reversed_id, 
+            Cur_Parameter.isexpense, 
+            Cur_Parameter.isreversal, 
+            Cur_Parameter.em_ajgar_isajgar, 
+            Cur_Parameter.em_almac_isprice0, 
+            Cur_Parameter.em_almac_forzarrepartidor, 
+            Cur_Parameter.em_cascos_iscascos, 
+            Cur_Parameter.em_compras_iscompraind, 
+            Cur_Parameter.em_dev_isdev, 
+            Cur_Parameter.em_dtt_ad_window_id, 
+            Cur_Parameter.em_dtt_ad_process_id, 
+            Cur_Parameter.em_oplog_isoplog, 
+            Cur_Parameter.em_sugcom_issugcom, 
+            Cur_Parameter.em_vtadist_isvtadist, 
+            Cur_Parameter.em_vtadist_iscotizacion, 
+            Cur_Parameter.em_vtapiso_isvtapiso,
+            Cur_Parameter.em_vtadist_isrefacturacion);
+
+			-----------------------------------------
+			--Create doc template--------------------
+			-----------------------------------------
+			FOR Cur_Template IN
+			      (SELECT *
+			      FROM c_poc_doctype_template
+			      WHERE isactive='Y' AND ad_client_id=p_oldclient_id
+			      AND c_doctype_id=Cur_Parameter.c_doctype_id
+			      )
+			    LOOP
+			        v_poc_doctype_template_id =GET_UUID();
+				INSERT INTO c_poc_doctype_template(
+					c_poc_doctype_template_id, 
+					ad_client_id, 
+					ad_org_id, 
+					isactive,
+					created,
+					createdby,
+					updated,
+					updatedby, 
+					c_doctype_id, 
+					"name", 
+					templatelocation, 
+					reportfilename, 
+					templatefilename, 
+					showcompanydata, 
+					showlogo, 
+					headermargin,
+					em_dtt_iscopia,
+					em_dtt_issalidaalmacen)
+				VALUES (v_poc_doctype_template_id,--c_poc_doctype_template_id, 
+				        p_newclient_id,--ad_client_id, 
+				        '0',--ad_org_id, 
+				        Cur_Template.isactive,
+						now(),
+				        '100',--createdby,
+						now(), 
+				        '100',--updatedby,
+						v_doctype_id,--c_doctype_id, 
+						Cur_Template.name, 
+						Cur_Template.templatelocation, 
+						Cur_Template.reportfilename, 
+						Cur_Template.templatefilename, 
+						Cur_Template.showcompanydata, 
+						Cur_Template.showlogo, 
+						Cur_Template.headermargin,
+						Cur_Template.em_dtt_iscopia,
+						Cur_Template.em_dtt_issalidaalmacen);
+
+			/*FOR Cur_Template_email IN
+			      (SELECT *
+			      FROM c_poc_emaildefinition
+			      WHERE isactive='Y' AND ad_client_id=p_oldclient_id
+			      AND c_poc_doctype_template_id=Cur_Template.c_poc_doctype_template_id
+			      )
+			    LOOP*/
+				INSERT INTO c_poc_emaildefinition(
+					    c_poc_emaildefinition_id, 
+					    ad_client_id, 
+					    ad_org_id, 
+					    isactive, 
+					    created, 
+					    createdby, 
+					    updated, 
+					    updatedby, 
+					    c_poc_doctype_template_id, 
+					    subject, 
+					    body, 
+					    isdefault, 
+					    ad_language)
+				    VALUES (GET_UUID(),--c_poc_emaildefinition_id, 
+					    p_newclient_id,--ad_client_id, 
+					    '0',--ad_org_id,  
+					    'Y',--isactive, 
+					    now(),
+					    '100',--createdby,
+					    now(), 
+					    '100',--updatedby, 
+					    v_poc_doctype_template_id,--c_poc_doctype_template_id, 
+					    NULL,--Cur_Template_email.subject, 
+					    NULL,--Cur_Template_email.body, 
+					    NULL,--Cur_Template_email.isdefault,  
+					    'es_ES'--Cur_Template_email.ad_language
+					    );
+
+				--END LOOP;
+
+					
+			END LOOP;
+
+			-----------------------------------------
+			--Create doc template--------------------
+			-----------------------------------------
+
+			-----------------------------------------
+			--Asignar ventanas-----------------------
+			-----------------------------------------
+			FOR CUR_VENTANAS IN (SELECT AD_WINDOW_ID, ISACTIVE FROM DTT_DOC_WIN WHERE C_DOCTYPE_ID = Cur_Parameter.c_doctype_id)
+			LOOP
+				INSERT INTO dtt_doc_win(
+					dtt_doc_win_id, ad_client_id, ad_org_id, 
+					isactive, created, createdby, 
+					updated, updatedby, ad_window_id, 
+					c_doctype_id)
+				VALUES 
+					(GET_UUID(), p_newclient_id, '0', 
+					CUR_VENTANAS.ISACTIVE, now(), '100', 
+					now(), '100', CUR_VENTANAS.AD_WINDOW_ID, 
+					v_doctype_id);
+
+			END LOOP;
+
+
+    END LOOP; 
+
+--------------------------
+--END Create Doctypes-----
+--------------------------
+---------------------------------------
+--ASIGN SHIPMENT AND INVOICE DOCS------
+---------------------------------------
+FOR Cur_Parameter IN
+      (SELECT *
+      FROM c_doctype
+      WHERE isactive='Y' AND ad_client_id=p_newclient_id
+      )
+    LOOP
+        --shipment
+	SELECT dt.c_doctypeshipment_id INTO v_olddtship
+	FROM c_doctype dt
+	WHERE dt.name=Cur_Parameter.name
+	AND dt.ad_client_id=p_oldclient_id;
+	
+	SELECT dt.c_doctype_id INTO v_doctypeshipment_id
+	FROM c_doctype dt
+	WHERE dt.name IN (SELECT dt2.name FROM c_doctype dt2
+			WHERE dt2.c_doctype_id=v_olddtship)
+	AND dt.ad_client_id=p_newclient_id;
+
+	UPDATE c_doctype SET c_doctypeshipment_id=v_doctypeshipment_id
+	WHERE c_doctype_id=Cur_Parameter.c_doctype_id;
+
+	--invoice
+	SELECT dt.c_doctypeinvoice_id INTO v_olddtinv
+	FROM c_doctype dt
+	WHERE dt.name=Cur_Parameter.name
+	AND dt.ad_client_id=p_oldclient_id;
+	
+	SELECT dt.c_doctype_id INTO v_doctypeinvoice_id
+	FROM c_doctype dt
+	WHERE dt.name IN (SELECT dt2.name FROM c_doctype dt2
+			WHERE dt2.c_doctype_id=v_olddtinv)
+	AND dt.ad_client_id=p_newclient_id;
+
+	UPDATE c_doctype SET c_doctypeinvoice_id=v_doctypeinvoice_id
+	WHERE c_doctype_id=Cur_Parameter.c_doctype_id;	
+
+    END LOOP;
+---------------------------------------
+--END ASIGN SHIPMENT AND INVOICE DOCS--
+---------------------------------------
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_COPIA_DOCTYPE
+]]></body>
+    </function>
+  </database>

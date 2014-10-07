@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="0D5107C3E85B4520AD9E4386DAA90C30" trl="Y">
+    <value column="Name" original="Template">Plantilla</value>
+    <value column="PrintName" original="Template">Plantilla</value>
+    <value column="Description" original="The template used to generate the client-side representation.">La plantilla utilizada para generar la representación en el cliente</value>
+    <value column="Help" original="The template used to generate the client-side representation (in the browser) of the datasource.">La plantilla utilizada para generar la representación en el lado del cliente 
+(en el navegador) de la fuente de datos.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="3FB0A141F73D4E119BC633EEB22D07FD" trl="Y">
+    <value column="Name" original="Java class name">Nombre de la clase Java</value>
+    <value column="PrintName" original="Class implementing the functionality in java">Clase que implementa la funcionalidad en Java</value>
+    <value column="Description" original="Class implementing the functionality in java">Clase que implementa la funcionalidad en Java</value>
+    <value column="Help" original="Class implementing the functionality in java">Clase que implementa la funcionalidad en Java</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="60A68A01BC1D481996705730BDEA560D" trl="Y">
+    <value column="Name" original="Datasource Field">Campo de Fuente de Datos</value>
+    <value column="PrintName" original="Datasource Field">Campo de Fuente de Datos</value>
+    <value column="Description" original="The datasource field is part of the datasource definition.">El campo de fuente de datos es parte de la definición de la fuente de datos.</value>
+    <value column="Help" original="The datasource field is part of the datasource definition.">El campo de fuente de datos es parte de la definición de la fuente de datos.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="73C534367AFA4C28A9F8767D59AAE37E" trl="Y">
+    <value column="Name" original="Datasource">Fuente de datos</value>
+    <value column="PrintName" original="Datasource">Fuente de datos</value>
+    <value column="Description" original="The datasource ">Fuente de datos </value>
+    <value column="Help" original="The datasource provides data from the database or from in-memory data.">La fuente de datos proporciona información de la base de datos o de datos 
+almacenados en memoria.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9D90F1136B8048D590DC661CF73DFCF6" trl="Y">
+    <value column="Name" original="Use As Table Data Origin">Usar datos de la tabla de origen</value>
+    <value column="PrintName" original="UseAsTableDataOrigin">Usar datos de la tabla de origen</value>
+    <value column="Description" original="A flag indicating whether this datasource is used as a data origin in the Table window">Una bandera que indica si esta fuente de datos se utiliza como un origen de 
+datos en la ventana de la Tabla</value>
+    <value column="Help" original="A flag indicating whether this datasource is used as a data origin in the Table window. In that case, the Table and Column subtabs of the Datasource window are hidden, because the columns of the datasource must be defined in the Columns tab of the Tables and Columns window.">una bandera que indica si esta fuente de datos se utiliza como un origen de 
+datos en la ventana de tablas. En ese caso, la tabla y de columna fichas 
+secundarias de la ventana de origen de datos están ocultos, porque las 
+columnas de la fuente de datos se deben definir en la ficha Columnas de la 
+ventana de tablas y columnas.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D8467987FB7A4EA6AADCB5500A96CBDB" trl="Y">
+    <value column="Name" original="HQL Where Clause">Cláusula de HQL 'where'</value>
+    <value column="PrintName" original="The HQL where clause used to filter and query for data.">La cláusula de HQL 'where' para filtrar y consultar datos.</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

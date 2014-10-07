@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="FF808081321441D9013214697218000D" trl="Y">
+    <value column="Name" original="Enable Google Button in Login Page">Activa el botón de Google en la página de login</value>
+    <value column="Description" original="Shows/hides the G button in the Login page">Muestra/oculta el botón G en la página de login</value>
+  </row>
+</compiereTrl>

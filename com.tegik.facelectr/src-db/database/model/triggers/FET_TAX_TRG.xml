@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER FET_TAX_TRG">
+    <trigger name="FET_TAX_TRG" table="C_TAX" fires="before" insert="true" update="false" delete="false" foreach="row">
+      <body><![CDATA[
+    /*************************************************************************
+    * The contents of this file are subject to the Compiere Public
+    * License 1.1 ("License"); You may not use this file except in
+    * compliance with the License. You may obtain a copy of the License in
+    * the legal folder of your Openbravo installation.
+    * Software distributed under the License is distributed on an
+    * "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+    * implied. See the License for the specific language governing rights
+    * and limitations under the License.
+    * The Original Code is  Compiere  ERP &  Business Solution
+    * The Initial Developer of the Original Code is Jorg Janke and ComPiere, Inc.
+    * Portions created by Jorg Janke are Copyright (C) 1999-2001 Jorg Janke,
+    * parts created by ComPiere are Copyright (C) ComPiere, Inc.;
+    * All Rights Reserved.
+    * Contributor(s): Openbravo SLU
+    * Contributions are Copyright (C) 2001-2008 Openbravo, S.L.U.
+    *
+    * Specifically, this derivative work is based upon the following Compiere
+    * file and version.
+    *************************************************************************
+    * $Id: C_Tax_Trg.sql,v 1.2 2003/02/18 03:33:22 jjanke Exp $
+    ***
+    * Title: Tax Changes
+    * Description:
+    *  - New Accounting Defaults
+    *  - Translation
+    ************************************************************************/
+    TYPE RECORD IS REF CURSOR;
+  Cur_Defaults RECORD;
+  v_count NUMBER;
+  v_AD_Client_ID VARCHAR2(32) := :new.AD_Client_ID;
+  v_AD_ORG_ID VARCHAR2(32) := :new.AD_ORG_ID;
+  v_C_Tax_ID VARCHAR2(32) := :new.C_Tax_ID;
+  v_CreatedBy VARCHAR2(32) := :new.CreatedBy;
+  v_UpdatedBy VARCHAR2(32) := :new.UpdatedBy;
+    
+BEGIN
+    
+    IF AD_isTriggerEnabled()='N' THEN RETURN;
+    END IF;
+
+:NEW.EM_Fet_Nombrefacturacion = :NEW.NAME;
+
+  -- Updating
+END FET_TAX_TRG
+]]></body>
+    </trigger>
+  </database>

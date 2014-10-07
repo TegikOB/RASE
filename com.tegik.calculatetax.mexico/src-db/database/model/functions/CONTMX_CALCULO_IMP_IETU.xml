@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_CALCULO_IMP_IETU">
+    <function name="CONTMX_CALCULO_IMP_IETU" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- variables that will contain the parameters deriving from the AD_PInstance table
+  v_Suma NUMBER;
+  v_Porcentaje NUMBER;
+  v_totalFactura NUMBER;
+  v_totalCobrado NUMBER;
+  v_importe NUMBER;
+  v_sumaIETUc NUMERIC= 0;
+   v_sumaIETUp NUMERIC=0; 
+  v_nomina NUMBER = 0;
+  v_seguridad NUMBER =0;
+  v_prov_isr NUMBER =0;
+  v_ingreso NUMERIC=0;
+  v_egreso NUMERIC=0;	
+  v_tasa NUMBER;
+  v_ietudeter NUMBER:= 0;
+  v_diaInicio DATE; -- dua de inicio
+  v_diaFinal DATE; --dia final
+  Cur_Parameter RECORD; -- cursor variable to loop through all parameters
+  v_User VARCHAR2(32);
+  v_Record_ID VARCHAR2(32);
+  v_Client VARCHAR2(32);
+  v_ResultStr VARCHAR(2000):=''; -- will contain text describing the stage the stored procedure is in
+  v_Message VARCHAR(60000):=''; -- will contain the final message to be logged
+  v_Cursor RECORD;
+  v_org_id VARCHAR(32);
+  v_reporte_id VARCHAR(32);
+  v_prov_ietu NUMBER:= 0;
+  v_sumaisrret NUMBER:= 0; 
+  v_seqno NUMBER:=0;
+v_factorss NUMBER:=0;
+ 
+ 
+ BEGIN
+
+    -- Obtenemos los parametros
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID,
+        i.AD_Client_ID, p.ParameterName, p.P_String, p.P_Number, p.P_Date
+        FROM AD_PInstance i
+          LEFT JOIN AD_PInstance_Para p
+             ON i.AD_PInstance_ID=p.AD_PInstance_ID
+               WHERE i.AD_PInstance_ID=p_PInstance_ID
+                ORDER BY p.SeqNo)
+    LOOP
+      v_User:=Cur_Parameter.AD_User_ID;
+      v_Client:=Cur_Parameter.AD_Client_ID;
+      v_Record_ID:=Cur_Parameter.Record_ID; -- save the m_productprice primary key
+      IF (Cur_Parameter.ParameterName='dia_inicio') THEN
+        v_diaInicio:=Cur_Parameter.P_Date;
+      END IF;
+      IF (Cur_Parameter.ParameterName='dia_final') THEN
+        v_diaFinal:=Cur_Parameter.P_Date;
+      END IF;
+       IF (UPPER(Cur_Parameter.ParameterName)=UPPER('ad_org_id')) THEN
+        v_org_id:=Cur_Parameter.P_String;
+      END IF;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE( 'Record_ID = ' || v_Record_ID) ;
+ 
+  BEGIN --BODY
+
+  SELECT COUNT(contmx_reporteietu_id)
+	FROM contmx_reporteietu where ad_client_Id = v_Client
+		INTO v_seqno;
+		
+--Obtener el nombre
+
+ SELECT c.em_contmx_ietusegsuel
+    INTO v_factorss
+      FROM ad_client AS c
+       WHERE c.ad_client_id =v_Client;
+
+  SELECT c.em_contmx_ietu 
+    INTO v_tasa
+      FROM ad_client AS c
+       WHERE c.ad_client_id =v_Client;
+
+  v_reporte_id =get_uuid();
+
+   --hacemos el insert para una factura 
+  INSERT INTO contmx_reporteietu(contmx_reporteietu_id, ad_client_id, ad_org_id, isactive, createdby, updatedby, 
+   name,  datei, datef, ingreso, deduccion, impuesto, tasa, ietu , credictofs , credictoa, credictofi, pagosprov, retenidoisr, pagasprovietu, cargoietu, c_currency_id, fecha_conversion ,seq )
+      VALUES (v_reporte_id, v_Client, v_org_id, 'Y', v_User, v_User, 
+      'IETU',v_diaInicio, v_diaFinal, 0, 0,0,round(v_tasa,2),0,0,0,0,0,0,0,0, '130',now(), 'IETU' || (10000+v_seqno) );
+
+--ciclo para obtener todas las factura  de cada cobro
+/*
+---------------------------------------------------------------------------------------------------------
+*/
+  FOR v_Cursor IN (SELECT fp.documentno AS numero_cobro,
+		   inv.documentno AS numero_factura,
+		    C_CURRENCY_CONVERT_PRECISION(inv.grandtotal , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS total_factura,
+                   inv.dateinvoiced AS fecha_factura,
+                   fp.paymentdate AS fecha_cobro,
+                   C_CURRENCY_CONVERT_PRECISION(fpdv.paidamt , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A')  AS total_pagado,
+                   inv.c_invoice_id, fp.fin_payment_id, 
+		   pd.name AS nombre_producto, fp.ad_org_id,
+			   C_CURRENCY_CONVERT_PRECISION(il.linenetamt , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS importe,
+			   il.c_tax_id, 
+			   il.c_invoiceline_id,
+			   pd.m_product_id
+		    FROM fin_payment AS fp 
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id
+                                        INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+                                        INNER JOIN  m_product AS pd ON pd.m_product_id = il.m_product_id
+						WHERE 
+						fp.AD_CLIENT_ID = v_Client
+						AND fp.isreceipt = 'Y'
+						AND fp.status IN ('RDNC', 'RPR') 
+						AND v_diaInicio <= fp.paymentdate
+						AND v_diaFinal >=fp.paymentdate
+						AND (v_org_id = fp.ad_org_id OR v_org_id='0') )
+  LOOP
+--obtenemos datos de la factura y del cobro
+   v_totalFactura := COALESCE(v_Cursor.total_factura,0);  
+   v_totalCobrado :=COALESCE(v_Cursor.total_pagado,0);
+   v_Porcentaje = COALESCE(v_totalCobrado/(v_totalFactura/100)/100,0);
+  -- v_Message=v_org_id;
+  
+--aplicamos la suma al importe de linea 		
+    v_importe := v_Cursor.importe*v_Porcentaje;
+    
+    v_sumaIETUc =COALESCE(v_sumaIETUc + v_importe, 0);
+
+  --insertar el producto a cada cobro
+  INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+  contmx_reporteietu_id,c_invoice_id, fin_payment_id, m_product_id, total, pagado, ietu, fechac, fechaf, tipo ) 
+   VALUES (get_uuid(),  v_Client, v_Cursor.ad_org_id, 'Y', v_User, v_User,
+   v_reporte_id,v_Cursor.c_invoice_id, v_Cursor.fin_payment_id, v_Cursor.m_product_id,
+   round(COALESCE(v_Cursor.importe,0),2) , round(COALESCE(v_importe,0),2), 0,v_Cursor.fecha_cobro, v_Cursor.fecha_factura, 'cobro' );     
+  END LOOP; 
+     
+
+--calcular los ingresos
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+            fp.paymentdate AS fecha_cobro,  
+       fp.fin_payment_id, fp.ad_org_id,
+         gl.c_glitem_id 
+      FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('RDNC', 'RPR') 
+         AND gl.em_contmx_ingreso='Y'
+	  AND fp.isreceipt = 'Y'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id = v_Client)
+LOOP 
+
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx, fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2),v_Cursor.c_glitem_id ,'cobro', 'N', v_Cursor.fecha_cobro);
+
+
+v_ingreso=v_ingreso+ v_Cursor.amount; 
+END LOOP;
+
+
+ --Actualizar los ultimos valores
+
+ UPDATE contmx_reporteietu SET ingreso=round(v_sumaIETUc+v_ingreso,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+--ciclo para sacar todos los productos pagados
+
+/*
+---------------------------------------------------------------------------------------------------------
+*/
+  FOR v_Cursor IN (SELECT fp.documentno AS numero_cobro,
+				inv.documentno AS numero_factura,
+				C_CURRENCY_CONVERT_PRECISION(inv.grandtotal, inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS total_factura,
+                                inv.dateinvoiced AS fecha_factura,
+                                fp.paymentdate AS fecha_cobro,
+                                C_CURRENCY_CONVERT_PRECISION(fpdv.paidamt, inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A')  AS total_pagado,
+				inv.c_invoice_id, fp.fin_payment_id,
+				pd.name AS nombre_producto, fp.ad_org_id,
+				C_CURRENCY_CONVERT_PRECISION(il.linenetamt , inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A')  AS importe,
+				il.c_tax_id, 
+				il.c_invoiceline_id,
+				pd.m_product_id
+					FROM fin_payment AS fp 
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id 
+					INNER JOIN c_invoiceline AS il ON inv.c_invoice_id = il.c_invoice_id 
+                                        INNER JOIN  m_product AS pd ON pd.m_product_id = il.m_product_id
+						WHERE fp.isreceipt = 'N'
+						AND fp.status IN ('PWNC', 'PPM') 
+						AND v_diaInicio <= fp.paymentdate
+						AND v_diaFinal >=fp.paymentdate
+						AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+                                                AND pd.em_contmx_deducirietu = 'Y' 
+                                                AND fp.ad_client_id = v_Client)
+  LOOP
+
+--obtenemos datos de la factura para prorratear 
+   v_totalFactura := COALESCE(v_Cursor.total_factura,0);  
+   v_totalCobrado :=COALESCE(v_Cursor.total_pagado,0);
+   v_Porcentaje = COALESCE(v_totalCobrado/(v_totalFactura/100)/100,0);
+
+
+
+
+--aplicamos la suma al importe de linea y todos los impuestos		
+    v_importe := v_Cursor.importe*v_Porcentaje;
+    v_sumaIETUp =COALESCE(v_sumaIETUp + v_importe ,0);
+  
+
+  --insertar el producto a cada pago
+  INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,c_invoice_id, fin_payment_id, m_product_id,total, pagado, ietu, fechac, fechaf, tipo, issotrx ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.c_invoice_id, v_Cursor.fin_payment_id, v_Cursor.m_product_id,
+    round(COALESCE(v_Cursor.importe,0),2), round(COALESCE(v_importe,0),2), 0 ,v_Cursor.fecha_cobro, v_Cursor.fecha_factura, 'pagado', 'Y' );     
+   END LOOP; 
+     
+
+--calcular los egresos
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+            fp.paymentdate AS fecha_cobro,  
+       fp.fin_payment_id, fp.ad_org_id,
+         gl.c_glitem_id 
+      FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_egreso='Y'
+	AND fp.isreceipt = 'N'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id =v_Client)
+LOOP 
+
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx, fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2),v_Cursor.c_glitem_id ,'pagado', 'N', v_Cursor.fecha_cobro);
+
+
+v_egreso=v_egreso+ v_Cursor.amount; 
+END LOOP;
+
+ --Actualizar el reporte con las deducciones 
+ UPDATE contmx_reporteietu SET deduccion=round(v_sumaIETUp+v_egreso,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+--calcular saldo
+
+
+v_ietudeter := (v_sumaIETUc - v_sumaIETUp)*(v_tasa);
+UPDATE contmx_reporteietu SET ietu = round(v_ietudeter,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+UPDATE contmx_reporteietu SET impuesto = round(v_sumaIETUc - v_sumaIETUp,2)  WHERE contmx_reporteietu_id =v_reporte_id ;
+
+
+FOR v_Cursor IN (SELECT    C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A')*v_factorss AS amount,
+                  fp.fin_payment_id, 
+                  fp.paymentdate AS fecha_cobro,  
+                  gl.c_glitem_id,  fp.ad_org_id,
+                 fp.amount AS cantidad,
+                 fp.C_CURRENCY_ID AS idcurrency
+         FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_nomina='Y'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id =v_Client)
+LOOP 
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx, fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2),v_Cursor.c_glitem_id ,'salario', 'N' , v_Cursor.fecha_cobro);
+
+v_nomina=v_nomina + v_Cursor.amount;
+END LOOP;
+ 
+UPDATE contmx_reporteietu SET credictofs=round(v_nomina,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+--calcular las seguridad social
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A')*v_factorss AS amount, 
+              fp.paymentdate AS fecha_cobro, 
+              fp.fin_payment_id, fp.ad_org_id,
+               gl.c_glitem_id 
+      FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_ss='Y'
+         AND fp.ad_org_id=v_org_id
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id = v_Client)
+LOOP 
+
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx, fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2),v_Cursor.c_glitem_id ,'seguridad', 'N', v_Cursor.fecha_cobro);
+
+v_seguridad=v_seguridad + v_Cursor.amount;
+END LOOP;
+ 
+UPDATE contmx_reporteietu SET credictoa=round(v_seguridad,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+--calcular las pago provisionales de isr
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount, 
+            fp.paymentdate AS fecha_cobro,  
+       fp.fin_payment_id, fp.ad_org_id,
+         gl.c_glitem_id 
+      FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_isisr='Y'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id = v_Client)
+LOOP 
+
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx, fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2),v_Cursor.c_glitem_id ,'pago provisional ISR', 'N', v_Cursor.fecha_cobro);
+
+v_prov_isr=v_prov_isr+ v_Cursor.amount; 
+END LOOP;
+ 
+UPDATE contmx_reporteietu SET pagosprov=round(v_prov_isr,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+--calcular las pago provisionales de isr
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount,  
+        fp.paymentdate AS fecha_cobro,  fp.ad_org_id,
+        fp.fin_payment_id,  gl.c_glitem_id 
+             FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_isietu='Y'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id = v_Client)
+LOOP 
+
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx, fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2),v_Cursor.c_glitem_id ,'pagos provisionales de IETU', 'N', v_Cursor.fecha_cobro);
+
+v_prov_ietu=v_prov_ietu+ v_Cursor.amount;
+END LOOP;
+ 
+UPDATE contmx_reporteietu SET pagasprovietu=round(v_prov_ietu,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+
+--calcular las pago provisionales de isr
+FOR v_Cursor IN (SELECT C_CURRENCY_CONVERT_PRECISION(fpd.amount, fp.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fp.ad_org_id,'A') AS amount,
+        fp.paymentdate AS fecha_cobro, fp.ad_org_id,
+       fp.fin_payment_id,  gl.c_glitem_id 
+FROM FIN_PAYMENT AS fp
+         INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id =fp.fin_payment_id 
+         INNER JOIN C_GLITEM AS gl ON gl.c_glitem_id = fpd.c_glitem_id
+         WHERE fp.status IN ('PWNC', 'PPM') 
+         AND gl.em_contmx_isrret='Y'
+         AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+         AND v_diaInicio <= fp.paymentdate
+	AND v_diaFinal >=fp.paymentdate
+	AND fp.ad_client_id = v_Client)
+LOOP 
+
+
+
+ INSERT INTO contmx_reporteietu_des(contmx_reporteietu_des_id,ad_client_id, ad_org_id, isactive, createdby, updatedby,
+   contmx_reporteietu_id,fin_payment_id, total, c_glitem_id, tipo, issotrx , fechac ) 
+    VALUES (get_uuid(),  v_Client,  v_Cursor.ad_org_id, 'Y', v_User, v_User,
+    v_reporte_id, v_Cursor.fin_payment_id, round(v_Cursor.amount,2) ,v_Cursor.c_glitem_id ,'ISR retenido', 'N', v_Cursor.fecha_cobro);
+  v_sumaisrret =  v_sumaisrret + v_Cursor.amount;
+  
+END LOOP; 
+ 
+UPDATE contmx_reporteietu SET retenidoisr = round(v_sumaisrret,2) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+ /*
+---------------------------------------------------------------------------------------------------------------
+*/
+--Calcula el eitu a cargo del mes 
+
+--UPDATE contmx_reporteietu SET cargoietu=(v_ietudeter - credictofs - credictoa - credictofi - pagosprov - retenidoisr - pagasprovietu) WHERE contmx_reporteietu_id =v_reporte_id ;
+
+--Calculo de impuesto
+
+
+
+
+    -- Successfully finish the process by updating AD_PInstance, setting the 
+    -- IsProcessing, ErrorMsg and Result
+    DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message) ;
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 1, v_Message) ;
+    RETURN;
+  END; -- BODY
+
+
+ EXCEPTION
+ WHEN OTHERS THEN
+   v_ResultStr:= '@ERROR=' || SQLERRM;
+   DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+   AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr) ;
+   RETURN;
+END CONTMX_CALCULO_IMP_IETU
+]]></body>
+    </function>
+  </database>

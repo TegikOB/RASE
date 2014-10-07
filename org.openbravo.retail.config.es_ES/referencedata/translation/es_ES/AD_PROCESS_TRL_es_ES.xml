@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_PROCESS" version="">
+  <row id="608163463C454454A152260DB63FEB9B" trl="N">
+    <value column="Name" isTrl="Y" original="Charts Zoho">Gráficos Zoho</value>
+    <value column="Description" isTrl="Y" original="Displays a zoho chart">Muestra un gráfico de Zoho</value>
+    <value column="Help" isTrl="Y" original="Displays a zoho chart">Muestra un gráfico de Zoho</value>
+  </row>
+  <row id="BBF5C85870774F0C89D1DCF8F7767F76" trl="N">
+    <value column="Name" isTrl="Y" original="Include All Products">Incluir Todos los Productos</value>
+    <value column="Description" isTrl="Y" original="Include all products in the assortment">Incluye todos los productos en la lista de productos</value>
+    <value column="Help" isTrl="Y" original="Include all products in the assortment">Incluye todos los productos en la lista de productos</value>
+  </row>
+</compiereTrl>

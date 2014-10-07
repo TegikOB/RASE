@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="2680DB8FDE3F4626BF1FAA53D2F73C6E" trl="Y">
+    <value column="Name" original="Contains">Contiene</value>
+    <value column="Description" original="Filters records by checking if the filter is contained in the value in the record">Filtra registros comprobando si el filtro está contenido en el valor del registro</value>
+  </row>
+  <row id="5A623E16A16742CA940F8F82E4535D0D" trl="Y">
+    <value column="Name" original="Starts with">Empieza por</value>
+    <value column="Description" original="Filters records by comparing the entered filter from the start of the record value">Filtra registros comparando el filtro con el comienzo del valor del registro</value>
+  </row>
+  <row id="9CA0544E6B04479EB23013801D31BAEA" trl="Y">
+    <value column="Name" original=""/>
+    <value column="Description" original="The selector component type.">El tipo de componente del selector.</value>
+  </row>
+</compiereTrl>

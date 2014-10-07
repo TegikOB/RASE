@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_INOUTLINE">
+    <table name="M_INOUTLINE" primaryKey="M_INOUTLINE_KEY">
+      <column name="EM_OBWPL_PICKINGLIST_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_OBWPL_EDITLINES_PE" primaryKey="false" required="false" type="CHAR" size="1" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="OBWPL_PICKINGLIST" name="EM_OBWPL_M_INOUTLINE_PL">
+        <reference local="EM_OBWPL_PICKINGLIST_ID" foreign="OBWPL_PICKINGLIST_ID"/>
+      </foreign-key>
+      <check name="EM_OBWPL_M_INOUTLINE_EL"><![CDATA[EM_OBWPL_EDITLINES_PE IN ('Y', 'N')]]></check>
+    </table>
+  </database>

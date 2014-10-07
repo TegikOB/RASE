@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="04F794FC6B99485488F52EA9ED325DE3" trl="Y">
+    <value column="MsgText" original="Receivables">Cobros</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3ADEA41758EA42B68F871DE1CAEF6D9E" trl="Y">
+    <value column="MsgText" original="No conversion rate found for: ">No se ha encontrado conversión para: </value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3E4B6571585941E0A8A512AF05C6FEFB" trl="Y">
+    <value column="MsgText" original="Receivables/Payables">Cobros/Pagos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5DD299179EC64419B6B1EDD29DB2E777" trl="Y">
+    <value column="MsgText" original="Payables">Pagos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C36BDF26FEB9458C99E97FB3ADF00253" trl="Y">
+    <value column="MsgText" original="No data has been found. Please ensure that the selected filter options are correct.">No se ha encontrado ningún dato. Compruebe que los filtros son correctos.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C6CBEDF919D046B088C21FF45D37D422" trl="Y">
+    <value column="MsgText" original="Business Partner Category">Grupos de Terceros</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

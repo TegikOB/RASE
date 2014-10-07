@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_PROCESS" version="">
+  <row id="3DAA5E63A30D45A8ABF87701F8BD91EF" trl="Y">
+    <value column="Name" original=""/>
+    <value column="Description" original="Orders Awaiting Delivery Report">Informe de Pedidos a la Espera de Entrega</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

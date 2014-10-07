@@ -1,0 +1,3 @@
+"Organization", "TransactionalOrg", "Journal Header", "Journal Line", "Currency", "Accounting Schema", "General Ledger Category", "Accounting Date", "Opening", "Alias", "Account", "Product", "Business Partner", "Project", "Campaign", "Sales Region", "Debit Amount", "Credit Amount", "Tax", "Withholding", "Activity"
+F&B US East Coast, F&B US East Coast, Journal1, Line1, USD, F&B International Group US/A/US Dollar, Manual, 2013-11-10, false,, 1110, US/0001, US-C1/0001, , , , 15.23, 0, Exempt, "", ""
+F&B US East Coast, F&B US East Coast, Journal1, Line2, USD, F&B International Group US/A/US Dollar, Manual, 2013-11-06, false,, 2110, US/0001, US-C2/0001, , , , 0, 15.23, Sales Exempt, "", ""

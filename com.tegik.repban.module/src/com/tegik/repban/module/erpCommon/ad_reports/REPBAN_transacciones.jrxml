@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Ventasxfamymca" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="dataset1">
+		<parameter name="marca" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="familia" class="java.lang.String"/>
+		<parameter name="org_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="salesrep_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="subfamilia" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="almacen" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="producto" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="c_bpartner_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<parameter name="banco_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT COALESCE((SELECT name FROM ad_org WHERE ad_org_id = $P{org_id} LIMIT 1),'Todas')
+AS organizacion,
+     '' AS familia,
+     '' AS subfamilia,
+       COALESCE((SELECT name FROM m_warehouse WHERE m_warehouse_id = $P{almacen} LIMIT 1),'Todos')
+AS almacen,
+       COALESCE((SELECT name FROM m_product WHERE m_product_id = $P{producto} LIMIT 1),'Todos')
+AS producto,
+       COALESCE((SELECT name FROM c_bpartner WHERE c_bpartner_id = $P{c_bpartner_id} LIMIT 1),'Todos')
+AS tercero,
+       COALESCE((SELECT name FROM fin_financial_account WHERE fin_financial_account_id = $P{banco_id} LIMIT 1),'Todos')
+AS banco]]>
+		</queryString>
+		<field name="organizacion" class="java.lang.String"/>
+		<field name="familia" class="java.lang.String"/>
+		<field name="subfamilia" class="java.lang.String"/>
+		<field name="almacen" class="java.lang.String"/>
+		<field name="producto" class="java.lang.String"/>
+		<field name="tercero" class="java.lang.String"/>
+		<field name="banco" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/modules/com.tegik.vtadist.module/src/com/tegik/vtadist/module/erpCommon/ad_reports"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="banco_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_banco_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{banco_id}.equals("") ? " ": "AND fa.fin_financial_account_id='" + $P{banco_id}+"'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_CLIENT" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_user_client" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["'"+$P{USER_CLIENT}+"'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="from" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse("2008-01-01")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="to" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse("2099-01-01")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="c_bpartner_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_to_1" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["'" + new SimpleDateFormat("yyyy-MM-dd").format($P{to}) + " 23:59:59'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_ORG" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["'0','51F2AF9E31D326EC0131D33B8BFF07B5','3421'"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_to" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["'" + $P{to} + "'" + "23:59:59"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="org_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aux_org_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{org_id}.equals("") ? " ": "AND fa.ad_org_id='" + $P{org_id}+"'"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT fa.ad_org_id org,
+    fa.fin_financial_account_id AS banco_id,fa.name AS banco, cur.iso_code AS currency, fa.initialbalance AS ini,
+
+COALESCE((SELECT COALESCE(SUM(depositamt),0.00)-COALESCE(SUM(paymentamt),0.00)+COALESCE(fa.initialbalance,0.00) AS inibalance
+ FROM aprm_finacc_transaction_v WHERE statementdate<$P{from}
+AND fin_financial_account_id=fa.fin_financial_account_id),0.00) AS inibalance,
+
+COALESCE((SELECT COALESCE(SUM(depositamt),0.00)-COALESCE(SUM(paymentamt),0.00)+COALESCE(fa.initialbalance,0.00) AS inibalance
+ FROM aprm_finacc_transaction_v WHERE statementdate<$P{from}
+AND fin_financial_account_id=fa.fin_financial_account_id),0.00)
++
+COALESCE((SELECT COALESCE(SUM(depositamt),0.00)-COALESCE(SUM(paymentamt),0.00)+COALESCE(fa.initialbalance,0.00) AS inibalance
+ FROM aprm_finacc_transaction_v WHERE statementdate<=$P!{aux_to_1} AND statementdate>=$P{from}
+AND fin_financial_account_id=fa.fin_financial_account_id),0.00) AS endbalance
+
+FROM fin_financial_account fa
+INNER JOIN c_currency cur ON fa.c_currency_id=cur.c_currency_id
+WHERE fa.ad_client_id IN ($P!{USER_CLIENT}) $P!{aux_banco_id}  $P!{aux_org_id}
+GROUP BY fa.ad_org_id, banco,fa.fin_financial_account_id, ini, currency
+]]>
+	</queryString>
+	<field name="org" class="java.lang.String"/>
+	<field name="banco_id" class="java.lang.String"/>
+	<field name="banco" class="java.lang.String"/>
+	<field name="currency" class="java.lang.String"/>
+	<field name="ini" class="java.math.BigDecimal"/>
+	<field name="inibalance" class="java.math.BigDecimal"/>
+	<field name="endbalance" class="java.math.BigDecimal"/>
+	<variable name="org_id" class="java.lang.String">
+		<variableExpression><![CDATA[]]></variableExpression>
+		<initialValueExpression><![CDATA[new String($P{USER_ORG}).split(",")[1].substring(1,33)]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="203" y="0" width="396" height="16" forecolor="#00447B"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BANCOS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="170" y="27" width="312" height="32"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1">
+						<datasetParameter name="marca">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="familia">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="org_id">
+							<datasetParameterExpression><![CDATA[$P{org_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="salesrep_id">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="subfamilia">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="producto">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="almacen">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="banco_id">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="c_bpartner_id">
+							<datasetParameterExpression><![CDATA[$P{c_bpartner_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="32" width="312">
+						<staticText>
+							<reportElement style="Column header" x="0" y="13" width="89" height="12" forecolor="#000000"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Cuenta financiera:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="89" y="13" width="223" height="12"/>
+							<textElement>
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{banco}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="Column header" positionType="Float" x="0" y="1" width="89" height="12" forecolor="#000000"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Unidad de negocio:]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="false">
+							<reportElement style="Detail" positionType="Float" mode="Transparent" x="89" y="1" width="223" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+								<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{organizacion}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<textField>
+				<reportElement style="Column header" x="703" y="0" width="45" height="12" forecolor="#010101"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+				<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{PAGE_NUMBER}+" "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="748" y="0" width="54" height="12" forecolor="#010101"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["/" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="576" y="39" width="93" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de impresión:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm">
+				<reportElement x="669" y="39" width="113" height="12" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement mode="Transparent" x="668" y="27" width="60" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{from}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="575" y="27" width="93" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Rango de Fechas:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement mode="Transparent" x="739" y="27" width="62" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="SansSerif" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{to}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="728" y="27" width="11" height="12" forecolor="#063167"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<image hAlign="Right" isUsingCache="true">
+				<reportElement x="10" y="0" width="85" height="45" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.awt.Image"><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc",$V{org_id})]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+			<textField>
+				<reportElement style="Column header" x="701" y="0" width="45" height="12" forecolor="#010101"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{PAGE_NUMBER}+" "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="746" y="0" width="54" height="12" forecolor="#010101"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["/" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="470" y="0" width="129" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE IMPRESIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="0" width="202" height="12" forecolor="#00447B"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BANCOS]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm">
+				<reportElement x="599" y="0" width="101" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<subreport>
+				<reportElement x="2" y="25" width="795" height="30" isPrintInFirstWholeBand="true"/>
+				<subreportParameter name="to">
+					<subreportParameterExpression><![CDATA[$P{to}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="USER_CLIENT">
+					<subreportParameterExpression><![CDATA[$P{USER_CLIENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BASE_WEB">
+					<subreportParameterExpression><![CDATA[$P{BASE_WEB}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="from">
+					<subreportParameterExpression><![CDATA[$P{from}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="inibalance">
+					<subreportParameterExpression><![CDATA[$F{inibalance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="bpartner_id">
+					<subreportParameterExpression><![CDATA[$P{c_bpartner_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="banco_id">
+					<subreportParameterExpression><![CDATA[$F{banco_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/modules/com.tegik.repban.module/src/com/tegik/repban/module/erpCommon/ad_reports/REPBAN_transacciones_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="22" width="797" height="2" forecolor="#000000" backcolor="#00447B"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="12" y="4" width="62" height="16" forecolor="#000000"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Banco]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="74" y="4" width="235" height="16"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{banco}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="309" y="4" width="47" height="16"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="¤ #,##0.00">
+				<reportElement style="Detail" positionType="Float" x="451" y="4" width="125" height="16"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{inibalance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="356" y="4" width="95" height="16" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo inicial:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="¤ #,##0.00">
+				<reportElement style="Detail" positionType="Float" x="663" y="4" width="138" height="16"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{endbalance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="576" y="4" width="87" height="16" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo final:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="94">
+			<staticText>
+				<reportElement x="203" y="0" width="396" height="16" forecolor="#00447B"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BANCOS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="170" y="33" width="312" height="32"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1">
+						<datasetParameter name="marca">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="familia">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="org_id">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="salesrep_id">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="subfamilia">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="producto">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="almacen">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="banco_id">
+							<datasetParameterExpression><![CDATA[$P{banco_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="c_bpartner_id">
+							<datasetParameterExpression><![CDATA[$P{c_bpartner_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="32" width="312">
+						<staticText>
+							<reportElement style="Column header" x="0" y="12" width="89" height="12" forecolor="#000000"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Cuenta financiera:]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="89" y="12" width="223" height="12"/>
+							<textElement>
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{banco}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="Column header" positionType="Float" x="0" y="0" width="89" height="12" forecolor="#000000"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="SansSerif" size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Unidad de negocio:]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="false">
+							<reportElement style="Detail" positionType="Float" mode="Transparent" x="89" y="0" width="223" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+								<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{organizacion}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="736" y="33" width="62" height="12" forecolor="#010101"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{to}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm">
+				<reportElement x="685" y="45" width="113" height="12" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="592" y="45" width="93" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de impresión:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="33" width="11" height="12" forecolor="#010101"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="685" y="33" width="40" height="12" forecolor="#010101"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{from}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="592" y="33" width="93" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rango de fechas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="65" width="318" height="24" forecolor="#00447B"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[No se encontraron registros]]></text>
+			</staticText>
+			<image hAlign="Right" isUsingCache="true">
+				<reportElement x="10" y="0" width="85" height="45" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.awt.Image"><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc",$V{org_id})]]></imageExpression>
+			</image>
+		</band>
+	</noData>
+</jasperReport>

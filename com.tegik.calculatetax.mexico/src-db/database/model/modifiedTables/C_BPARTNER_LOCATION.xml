@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_BPARTNER_LOCATION">
+    <table name="C_BPARTNER_LOCATION" primaryKey="C_BPARTNER_LOCATION_KEY">
+      <column name="EM_CONTMX_NACIONALIDAD" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

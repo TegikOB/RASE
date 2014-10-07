@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_COPIARENTIDAD">
+    <function name="TEGIDL_COPIARENTIDAD" type="VARCHAR">
+      <parameter name="entidad_origen" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="entidad_destino" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="nombretabla" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="condiccion" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_fk RECORD;
+v_porlinea RECORD;
+v_porcolumna RECORD;
+v_lineaid VARCHAR;
+v_fk_id VARCHAR;
+v_error VARCHAR;
+v_generadoid VARCHAR;
+v_columnas VARCHAR='';
+v_contador NUMERIC=0;
+v_c_location_id VARCHAR;
+v_vaciarForeneas VARCHAR='';
+v_colocarForeaneas VARCHAR='';
+BEGIN
+--Comprobando si existen las entidades 
+IF (( SELECT ad_client_id FROM ad_client WHERE ad_client_id=entidad_origen) IS NULL ) THEN 
+RETURN  'La entidad de origen no existe en la base de datos';
+END IF;
+IF(( SELECT ad_client_id FROM ad_client WHERE ad_client_id=entidad_destino) IS NULL)THEN 
+RETURN 'La entidad de destino no existe en la base de datos';
+END IF;
+IF((SELECT tablename from AD_TABLE WHERE UPPER(tablename) = UPPER(nombretabla)) IS NULL)THEN 
+RETURN 'El nombre de la tabla esta mal escrita revisa desde el query SELECT * FROM AD_TABLE ORDER BY tablename';
+END IF;
+--Crear una tabla temporal
+	EXECUTE IMMEDIATE 'CREATE TABLE temporal AS SELECT * 
+				FROM ' || nombretabla || 
+				' WHERE  ad_client_id=''' || entidad_origen || ''' AND ' || 
+				 condiccion||';' ;
+--columna para debuggear
+ALTER TABLE temporal ADD COLUMN debuggear VARCHAR(32);
+ALTER TABLE temporal DROP COLUMN ad_client_id;
+EXECUTE 'ALTER TABLE temporal RENAME COLUMN '|| nombretabla||'_id TO id;' ;
+
+--Contabilizador 
+SELECT COUNT(id) FROM temporal into v_contador;
+
+--Si la tabla es AD_USER hacemos un update a username
+IF(UPPER(nombretabla) ='AD_USER' )THEN 
+	EXECUTE IMMEDIATE 'UPDATE AD_USER SET username = ''b''|| username WHERE AD_CLIENT_ID =''' || entidad_origen|| 
+			''' AND  ' ||condiccion || ';';
+END IF;
+
+
+--Revision de constraints de llaves foraneas
+FOR v_porlinea IN (SELECT * FROM temporal)LOOP
+v_lineaid=v_porlinea.id;
+
+DBMS_OUTPUT.PUT_LINE( 'PROCESANDO...... '|| v_contador);
+DBMS_OUTPUT.PUT_LINE( 'Revisando la tabla el id '|| v_lineaid || '  de la tabla ' ||  UPPER(nombretabla));
+v_vaciarForeneas = 'UPDATE temporal SET  ';
+v_colocarForeaneas = 'UPDATE temporal SET ';
+
+	FOR v_fk IN (SELECT (SELECT UPPER(tablename) FROM ad_table WHERE ad_table_id=r.ad_table_id) AS tablaFK,
+		(SELECT UPPER(columnname) FROM ad_column WHERE ad_column_id = r.ad_key) AS columnaForenea,
+		UPPER(c.columnname) AS columna , 
+		(SELECT accesslevel FROM AD_TABLE WHERE AD_TABLE_ID =r.ad_table_id  ) AS accesslevel
+			FROM AD_TABLE AS t 
+			INNER JOIN AD_COLUMN AS c ON  c.ad_table_id=t.ad_table_id and c.sqllogic is null
+			INNER JOIN AD_REF_TABLE AS r ON r.ad_reference_id = c.ad_reference_value_id
+				WHERE UPPER(t.tablename) =UPPER(nombretabla)
+				AND (c.ad_reference_id='18'
+				AND UPPER((SELECT (SELECT UPPER(tablename) FROM ad_table WHERE ad_table_id=r.ad_table_id))) != 'AD_CLIENT' )
+
+	UNION
+	SELECT (SELECT UPPER(tablename) FROM ad_table WHERE ad_table_id=r.ad_table_id) AS tablaFK,
+		(SELECT UPPER(columnname) FROM ad_column WHERE ad_column_id = r.ad_column_id) AS columnaForenea,
+		UPPER(c.columnname) AS columna , 
+		(SELECT accesslevel FROM AD_TABLE WHERE AD_TABLE_ID =r.ad_table_id  ) AS accesslevel
+			FROM AD_TABLE AS t 	
+			INNER JOIN AD_COLUMN AS c ON  c.ad_table_id=t.ad_table_id and c.sqllogic is null
+			INNER JOIN OBUISEL_Selector AS r ON r.ad_reference_id = c.ad_reference_value_id
+				WHERE UPPER(t.tablename) =UPPER(nombretabla)
+				AND (c.ad_reference_id='95E2A8B50A254B2AAE6774B8C2F28120'
+				AND UPPER((SELECT (SELECT UPPER(tablename) FROM ad_table WHERE ad_table_id=r.ad_table_id))) != 'AD_CLIENT' )
+	UNION 
+	SELECT overlay(UPPER(c.columnname) placing '' from char_length(UPPER(c.columnname))-2 for char_length(UPPER(c.columnname))) AS tablaFK, 
+			UPPER(c.columnname) AS columnaForanea, 
+		UPPER(c.columnname) AS columna,
+		(SELECT accesslevel FROM AD_TABLE WHERE UPPER(tablename)=UPPER(overlay(c.columnname placing '' from char_length(c.columnname)-2 for char_length(c.columnname)))) AS accesslevel
+			FROM AD_TABLE AS t 
+			INNER JOIN AD_COLUMN AS c ON  c.ad_table_id=t.ad_table_id and c.sqllogic is null
+				WHERE UPPER(t.tablename) = UPPER(nombretabla)
+				AND (c.ad_reference_id = '19')
+				AND UPPER(c.columnname) != UPPER('AD_CLIENT_ID')
+	UNION 
+	SELECT overlay(UPPER(c.columnname) placing '' from char_length(UPPER(c.columnname))-2 for char_length(UPPER(c.columnname))) AS tablaFK, 
+			UPPER(c.columnname) AS columnaForanea, 
+		UPPER(c.columnname) AS columna,
+		(SELECT accesslevel FROM AD_TABLE WHERE UPPER(tablename)=UPPER(overlay(c.columnname placing '' from char_length(c.columnname)-2 for char_length(c.columnname)))) AS accesslevel
+			FROM AD_TABLE AS t 
+			INNER JOIN AD_COLUMN AS c ON  c.ad_table_id=t.ad_table_id and c.sqllogic is null
+				WHERE UPPER(t.tablename) = UPPER(nombretabla)
+				AND c.ad_reference_id != '19' 
+				AND c.ad_reference_id != '20'
+				AND c.ad_reference_id !='18'
+				AND c.ad_reference_id !='13'
+				AND c.ad_reference_id !='10'
+				AND c.ad_reference_id != '95E2A8B50A254B2AAE6774B8C2F28120'
+				AND UPPER(c.columnname) <> UPPER('AD_Client_ID')
+				AND UPPER(c.columnname) LIKE '%_ID') 
+
+	LOOP
+	
+	DBMS_OUTPUT.PUT_LINE( '-----Revisando la columna ' || v_fk.columna) ;
+	--colocando el vacio con un string
+	v_vaciarForeneas = v_vaciarForeneas || ' '|| v_fk.columna || '=NULL,'; 
+
+	--columnas no permitidas 
+	IF(v_fk.columna !='DEFAULT_M_WAREHOUSE_ID'  AND v_fk.columna !='C_LOCATION_ID' AND v_fk.columna != 'M_RETURNLOCATOR_ID')THEN
+		--Sistema/entidad
+		DBMS_OUTPUT.PUT_LINE( 'ACCESLEVEL' || COALESCE(v_fk.accesslevel, 'NADA'));
+		IF(v_fk.accesslevel = '6'  OR v_fk.accesslevel = '3' OR v_fk.accesslevel = '7' OR v_fk.accesslevel = '4' OR v_fk.accesslevel = '1')THEN
+			v_fk_id=tegidl_exiteforanea(v_fk.columna, nombretabla, 
+						v_fk.columnaForenea, v_fk.tablaFK,
+						v_lineaid , entidad_destino, entidad_origen);
+			IF( v_fk_id IS NULL )THEN
+	
+			RETURN 'ERROR: Ver los mensajes';
+			END IF;
+		END IF;
+
+		--colocamos y obtenemos los ids
+		IF(v_fk_id != '1')THEN 
+		v_colocarForeaneas=v_colocarForeaneas || v_fk.columna||'='''|| v_fk_id ||''',  '; 
+		END IF;
+	END IF;
+	--Que debemos hacer en caso de un C_LOCATION 
+	IF(v_fk.columna ='C_LOCATION_ID')THEN
+
+	  EXECUTE IMMEDIATE 'SELECT c_location_id  
+			FROM ' || nombretabla ||
+				' WHERE '||nombretabla ||'_id ='''||v_lineaid ||''';' INTO  v_c_location_id;
+		IF(v_c_location_id IS NOT NULL)THEN
+		  v_generadoid=get_uuid();
+		  CREATE TABLE temporal2 AS SELECT * FROM C_LOCATION WHERE c_location_id=v_c_location_id;
+		  UPDATE temporal2 SET c_location_id=v_generadoid,
+						ad_client_id=entidad_destino;
+		  INSERT INTO C_LOCATION SELECT * FROM temporal2;
+		  DROP TABLE temporal2;
+		  v_colocarForeaneas=v_colocarForeaneas  || v_fk.columna||'='''|| v_generadoid ||''', '; 
+		END IF;
+	END IF;
+	
+	END LOOP;
+--disminuye el contador
+v_contador=v_contador-1;
+
+--vaciar y colocar las foreaneas en un execute
+v_vaciarForeneas=overlay(UPPER(v_vaciarForeneas) placing '' from char_length(UPPER(v_vaciarForeneas)) for char_length(UPPER(v_vaciarForeneas)));
+v_vaciarForeneas = v_vaciarForeneas || ' WHERE '|| 'id='''|| v_lineaid||''';'; 
+v_colocarForeaneas=v_colocarForeaneas  || ' id='''|| get_uuid() ||''', debuggear=''' ||v_lineaid ||
+		''' WHERE '|| 'id='''|| v_lineaid||''';'; 
+EXECUTE v_vaciarForeneas ;
+EXECUTE v_colocarForeaneas;
+
+END LOOP;
+
+
+DBMS_OUTPUT.PUT_LINE( 'Creando la copia');
+EXECUTE 'ALTER TABLE temporal RENAME COLUMN id TO '|| nombretabla||'_id;' ;
+ALTER TABLE temporal ADD COLUMN ad_client_id character varying(32);
+UPDATE temporal SET ad_client_id =entidad_destino;
+
+
+--colocar en un string todas las columnas para el SUPER INSERT 
+FOR v_porcolumna IN (SELECT c.columnname FROM AD_COLUMN AS c 
+			INNER JOIN AD_TABLE AS t ON t.ad_table_id =c.ad_table_id
+					WHERE  UPPER(t.tablename)=UPPER(nombretabla) and c.sqllogic is null)
+LOOP
+v_columnas=v_columnas || v_porcolumna.columnname || ' , ';
+
+
+END LOOP;
+v_columnas=overlay(UPPER(v_columnas) placing '' from char_length(UPPER(v_columnas))-1 for char_length(UPPER(v_columnas)));
+
+--insertar un super insert
+EXECUTE 'INSERT INTO '|| nombretabla || '( '|| v_columnas || ') '||' SELECT ' || v_columnas||' FROM temporal;';
+DROP TABLE temporal;
+
+
+
+
+/*****DEBUGGERAR LINEA POR LINEA EN CASO DE ERROR AL INSERTAR (cambiar despues del IN el query de la tabla donde 
+se tiene el error )
+v_contador=0;		
+FOR v_porlinea IN (SELECT t.ad_process_access_id as id, t.debuggear FROM temporal t)
+LOOP
+v_contador=v_contador+1;
+RAISE NOTICE '%', 'INSERT INTO '|| nombretabla || '( '|| v_columnas || ') '||' SELECT ' || v_columnas||' 
+									FROM temporal 
+									WHERE '|| nombretabla || '_id='''
+
+									|| v_porlinea.id||''';';
+									
+DBMS_OUTPUT.PUT_LINE( 'El id de la copia es ' ||v_porlinea.debuggear|| '  ------' || v_contador); 
+EXECUTE 'INSERT INTO '|| nombretabla || '( '|| v_columnas || ') '||' SELECT ' || v_columnas||' 
+								FROM temporal 
+								WHERE '|| nombretabla || '_id='''
+									|| v_porlinea.id||''';';
+
+END LOOP;
+
+
+
+------------------------------------------*******************/
+
+
+RETURN 'Termino exitosamente';
+END TEGIDL_COPIARENTIDAD
+]]></body>
+    </function>
+  </database>

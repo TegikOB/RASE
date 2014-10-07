@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="03EFA0B843B84CCC86DA958ECAA3B074" trl="Y">
+    <value column="MsgText" original="Before">Antes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="073D44494805431ABF02F2A4F997979F" trl="N">
+    <value column="MsgText" original="Jul">Jul</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="076648ED2FF14F5784BC71A4750D008D" trl="N">
+    <value column="MsgText" original="Oct">Oct</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="08494EA6F9994169A4991B71C29A046B" trl="Y">
+    <value column="MsgText" original="Fri">Vie</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0927D18D2BE74B0DA08D6767F1093109" trl="Y">
+    <value column="MsgText" original="Columns">Columnas</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0B2FA3A470744479A088E7B65D96B802" trl="Y">
+    <value column="MsgText" original="Confirm">Confirmar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="0BE034AE15D545B7AD5164A3F6988305" trl="Y">
+    <value column="MsgText" original="By Upcoming Period">Por periodos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="19875CFF6B6B4D6B8D06FE1EF0313139" trl="Y">
+    <value column="MsgText" original="Upcoming next Week">Semana siguiente</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="21D38AD3FFC44BC8910F8A185D6626BF" trl="Y">
+    <value column="MsgText" original="By Seconds">Por segundos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="27C5BABA1E2944CC859DC6ADAB508293" trl="Y">
+    <value column="MsgText" original="Upcoming Later">Posteriores</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="2ADA167E2D0C4DC2A0A357B19FC0ED78" trl="Y">
+    <value column="MsgText" original="Upcoming Tomorrow">Mañana</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="36ECA3AA04F546359EB9AEA67C8D16EF" trl="N">
+    <value column="MsgText" original="Mar">Mar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3868DB377AD04F6E8210F503F82783C1" trl="N">
+    <value column="MsgText" original="Nov">Nov</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="393ECCCA60F249BD90103D250459745D" trl="N">
+    <value column="MsgText" original="No">No</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3CF74C13B9F14C218CCF673BDD372ED8" trl="Y">
+    <value column="MsgText" original="Yes">Sí</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="3EEB4C5E396146068769B1BF993D9B3F" trl="N">
+    <value column="MsgText" original="AM">AM</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="414A21904E994915AA9D60F3F8A2ACE8" trl="Y">
+    <value column="MsgText" original="Done">Hecho</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="440D4DC2068A45A1AAAECE9AD79ECC33" trl="Y">
+    <value column="MsgText" original="Wed">Mie</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="44F24231925842ABB71AB970CEAFB9D3" trl="Y">
+    <value column="MsgText" original="No items to show.">No hay registros que mostrar.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="49DCB783728540A6B9EC8F17E6A8F0E3" trl="Y">
+    <value column="MsgText" original="Apr">Abr</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4AC07369664145EB8CAE1A034F861172" trl="Y">
+    <value column="MsgText" original="Sat">Sab</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="4B1CB97BD137403E83D60CDA8B802118" trl="N">
+    <value column="MsgText" original="No">No</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="52D6F041A4064A20BDCC913848552117" trl="Y">
+    <value column="MsgText" original="Note">Nota</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5898B1563C034910B55147D9AE1F7A13" trl="Y">
+    <value column="MsgText" original="Value is not a valid (decimal) number">El valor no es un número decimal válido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5A5DC8F15AB14E7B9043E936E5241E03" trl="Y">
+    <value column="MsgText" original="Question">Pregunta</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5AB1CFD1DB644950A7F157FB1B9B25E7" trl="Y">
+    <value column="MsgText" original="By Year">Por año</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5F8C24DC3EFF41A7ABDBDB405C551A30" trl="N">
+    <value column="MsgText" original="${loadingImage}">${loadingImage}</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="5FDAA729EDA2494B9270C18410F608FF" trl="Y">
+    <value column="MsgText" original="Value is not a valid date.">El valor no es una fecha válida.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6705566F90C340CDA154E3BCF279D1A5" trl="Y">
+    <value column="MsgText" original="Yes">Sí</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="681B7678E6104E3AB76059288F23BB6B" trl="Y">
+    <value column="MsgText" original="Thu">Jue</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6A5B799296A84A97B4B44EE4595A2BC1" trl="Y">
+    <value column="MsgText" original="Cancel">Cancelar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6A64F4C6595447858E09D3BF1E365E00" trl="Y">
+    <value column="MsgText" original="Contacting server...">Estableciendo conexión con el servidor...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6F1B7214BDA14DCE89ED8145492E2480" trl="Y">
+    <value column="MsgText" original="Dec">Dic</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="6FD9F6D26B1D433AB63F24D071F2A8E9" trl="Y">
+    <value column="MsgText" original="Value is not a valid string">El valor no es una cadena de texto válida</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="719B677EDFC64A1E8A261053A345A931" trl="Y">
+    <value column="MsgText" original="Cancel">Cancelar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7567EB9676974F80977EE14F36D061EA" trl="Y">
+    <value column="MsgText" original="Loading data...">Cargando datos...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="75AD1BEDFB5742329794D1CF5FA2BEA5" trl="Y">
+    <value column="MsgText" original="Upcoming next Month">Mes que viene</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="77ECA856B3E446AA8C72F980E613187A" trl="Y">
+    <value column="MsgText" original="Show date chooser">Mostrar selector de fecha</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="7C15B69483EE464F9946975BD6585790" trl="Y">
+    <value column="MsgText" original="Upcoming Day">Hoy</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="802BE9DC8B3A48CC9207CD9A8E8D1134" trl="N">
+    <value column="MsgText" original="Jun">Jun</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="810E2C3850AF44FC8A14D1C907BFC2A8" trl="Y">
+    <value column="MsgText" original="Group by ${viewer.getSummaryTitle(field)}">Agrupar por ${viewer.getSummaryTitle(field)}</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="810EF7D2E0B144AFB800BD7238C53DB2" trl="N">
+    <value column="MsgText" original="Sep">Sep</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="81784D246D1A4263AF4232EF32420B5E" trl="Y">
+    <value column="MsgText" original="OK">Aceptar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="87B3828B6DC142868C1A14BEC8783E5D" trl="Y">
+    <value column="MsgText" original="Clear Sort">Eliminar orden</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="9627AEA9DE6E4197B5DF00E5591E0B8E" trl="Y">
+    <value column="MsgText" original="This action will discard all unsaved edited values for this list.">Todos los cambios no guardados en esta lista serán descartados.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="97A7B1C1B6B24862B2F52C47959E29CE" trl="Y">
+    <value column="MsgText" original="By Hours">Por horas</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="AD5A49B6CAF340509FDB782B17691BAD" trl="Y">
+    <value column="MsgText" original="Tue">Mar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="ADFB5D7447B94191B8D0C7523382CFB7" trl="Y">
+    <value column="MsgText" original="Mon">Lun</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B31B14F792BC4012992C7710CAC48BC9" trl="Y">
+    <value column="MsgText" original="By Quarter">Por trimestre</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B3ACEF51CF934FE4A155C11F98259059" trl="Y">
+    <value column="MsgText" original="Sort Ascending">Ordenar Ascendentemente</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="B82AC66751AB49A1949842F40C0970C8" trl="Y">
+    <value column="MsgText" original="Today">Hoy</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BB9BF5F3C9C74D3DA40BC68B35894F6B" trl="Y">
+    <value column="MsgText" original="Aug">Ago</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BC6E7EFDA7874982A6AC648A5FF3E441" trl="Y">
+    <value column="MsgText" original="Sort Descending">Ordenar Descendentemente</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="BD46E7BB97844F359BEFAF87DA6B18C6" trl="Y">
+    <value column="MsgText" original="By Day">Por día</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C00CE5F42AE3497CB01131E43D67BFD6" trl="Y">
+    <value column="MsgText" original="By Day of Month">Por día del mes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="C7B99E0D8B6C4312AF378E9A6AEEF402" trl="Y">
+    <value column="MsgText" original="Value is not a valid (integer) number">El valor no es un número entero válido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CB4306989274411AA97A8F0949A07A87" trl="N">
+    <value column="MsgText" original="${loadingImage}">${loadingImage}</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="CDC513581B754BECAC3A2A42A78289D8" trl="Y">
+    <value column="MsgText" original="Field is required, please enter/select a value.">Es necesario introducir un valor para el campo. Por favor introduzca o seleccione un valor.</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D0FBC82DC0C0440184A5083DB0282DCA" trl="N">
+    <value column="MsgText" original="May">May</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D13053ADB49C4E5E8FC33DCD317AFB5F" trl="Y">
+    <value column="MsgText" original="By Minutes">Por minutos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D1C66ECA6F9D4478B998DD861E36EE8E" trl="N">
+    <value column="MsgText" original="Feb">Feb</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D1CF7A1BF1CF4F6690E4441FD55A4EC8" trl="Y">
+    <value column="MsgText" original="Ungroup">Desagrupar</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D350B5F3693F4481B152739B2C8352F0" trl="Y">
+    <value column="MsgText" original="By Week">Por semana</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D50AFA642836488C83B9B876F499FE82" trl="Y">
+    <value column="MsgText" original="Value is not a valid date">El valor no es una fecha válida</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D686B8A32ADC411F9EA3E61C3ECCBE6E" trl="Y">
+    <value column="MsgText" original="Note">Nota</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D6FC3718D50D463DAE7E7A7B67D348C0" trl="Y">
+    <value column="MsgText" original="Unfreeze ${viewer.getSummaryTitle(field)}">Desbloquear ${viewer.getSummaryTitle(field)}</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="D9055AD1F1034064AE5FFA7272072A39" trl="Y">
+    <value column="MsgText" original="Jan">Ene</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="DBEEBCB652484D8CADE5D5231E345E68" trl="Y">
+    <value column="MsgText" original="By Milliseconds">Por milisegundos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="E93E72E829124C699B64401EEA1F4884" trl="Y">
+    <value column="MsgText" original="Freeze ${viewer.getSummaryTitle(field)}">Bloquear ${viewer.getSummaryTitle(field)}</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="EFBFFE22B06E45F4A02843C135971358" trl="Y">
+    <value column="MsgText" original="By Month">Por mes</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F110B5081A7D4544A1FD6A5928EA7D50" trl="Y">
+    <value column="MsgText" original="Upcoming this Week">Esta semana</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F2F34B0344E549369217D26D33DE3075" trl="N">
+    <value column="MsgText" original="${loadingImage}">${loadingImage}</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F5130923A787474EAFFA2476BDC7883D" trl="Y">
+    <value column="MsgText" original="Sun">Dom</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F5E31F08914240608EA59B1B8066A66F" trl="N">
+    <value column="MsgText" original="PM">PM</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="F6A6EED1F1BE49F583DAD4989B4C7F56" trl="Y">
+    <value column="MsgText" original="Identifier">Identificador</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FCFAF4A3EDF7430899E7EA7AC7C90D4F" trl="Y">
+    <value column="MsgText" original="Value is not a valid boolean">El valor no es un booleano válido</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130D566F90130D57A27990003" trl="Y">
+    <value column="MsgText" original="Add Formula Field...">Añadir Campo de Fórmula...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130D566F90130D57BA5C30008" trl="Y">
+    <value column="MsgText" original="Edit Formula Field...">Editar Campo de Fórmula...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130D566F90130D57BE552000D" trl="Y">
+    <value column="MsgText" original="Add Summary Field...">Añadir Campo Resumen...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130D566F90130D57C35910012" trl="Y">
+    <value column="MsgText" original="Edit Summary Field...">Editar Campo Resumen...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130E0E1230130E10F1BDA0009" trl="Y">
+    <value column="MsgText" original="Remove Formula Field...">Eliminar Campo de Fórmula...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+  <row id="FF80808130E0E1230130E10F67C5000F" trl="Y">
+    <value column="MsgText" original="Remove Summary Field...">Eliminar Campo Resumen...</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

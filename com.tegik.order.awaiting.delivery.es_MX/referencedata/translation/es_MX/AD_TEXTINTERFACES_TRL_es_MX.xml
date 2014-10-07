@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TEXTINTERFACES" version="">
+  <row id="D217B67C621E11DEBEE4001B388C05F0" trl="Y">
+    <value column="Text" original="Not shipped orders filter">Filtro de pedidos no enviados</value>
+  </row>
+  <row id="D235F5EC621E11DEA0EB001B388C05F0" trl="Y">
+    <value column="Text" original="Order Reference">Referencia de Pedido</value>
+  </row>
+  <row id="D4CEE110621E11DE9A90001B388C05F0" trl="Y">
+    <value column="Text" original="Order Document No.">Número del Documento del Pedido</value>
+  </row>
+  <row id="D4D5216A621E11DE8F79001B388C05F0" trl="Y">
+    <value column="Text" original="Delivery Terms">Condiciones de Entrega</value>
+  </row>
+  <row id="D4D6DD16621E11DEBF56001B388C05F0" trl="Y">
+    <value column="Text" original="Delivery Location">Ubicación de Entrega</value>
+  </row>
+  <row id="D4DA403C621E11DEBC20001B388C05F0" trl="Y">
+    <value column="Text" original="Ordered Quantity">Cantidad Pedida</value>
+  </row>
+  <row id="D4DBC998621E11DE8893001B388C05F0" trl="Y">
+    <value column="Text" original="Pending Quantity">Cantidad Pendiente</value>
+  </row>
+  <row id="D4DD3332621E11DE8A1C001B388C05F0" trl="Y">
+    <value column="Text" original="Quantity in Stock">Cantidad en existencias</value>
+  </row>
+  <row id="D4EE2FC0621E11DE9C19001B388C05F0" trl="Y">
+    <value column="Text" original="Generated on">Generado el</value>
+  </row>
+</compiereTrl>

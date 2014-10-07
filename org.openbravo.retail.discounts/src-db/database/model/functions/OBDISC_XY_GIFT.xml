@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION OBDISC_XY_GIFT">
+    <function name="OBDISC_XY_GIFT" type="VARCHAR">
+      <parameter name="p_type" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_rule_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_line_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_priceprecision" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_stdprecision" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_user_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_taxincluded" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[/************************************************************************************
+ * Copyright (C) 2012 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************/
+  v_docId VARCHAR(32);
+  v_x NUMBER;
+  v_y NUMBER;
+  v_chunks NUMBER;
+  v_gift_chunks NUMBER;
+  v_product VARCHAR(32);
+  v_totalAmt NUMBER;
+  v_promotionAmt NUMBER;
+  v_distribute VARCHAR(1);
+  v_grossAmt NUMBER;
+  v_previousDiscount NUMBER;
+
+  TYPE RECORD IS REF CURSOR;
+  Cur_Order RECORD;
+
+  v_tax VARCHAR(32);
+  v_qty NUMBER;
+  v_unitPrice NUMBER;
+  v_newUnitPrice NUMBER;
+  v_newGrossAmt NUMBER;
+  v_newNetAmt NUMBER;
+  v_newNetPrice NUMBER;
+  v_priceactual NUMBER;
+  v_basePrice NUMBER;
+  v_netAmt NUMBER;
+  v_totalPromotion NUMBER;
+  v_displayedPromotion NUMBER;
+BEGIN
+  select em_obdisc_distribute
+    into v_distribute
+    from m_offer
+   where m_offer_id = p_rule_id;
+
+  if (p_type ='O') then
+		select gross_unit_price, c_tax_id, qtyordered,
+					 c_order_id, m_product_id, line_gross_amount, priceactual, linenetamt
+			into v_unitprice, v_tax, v_qty,
+					 v_docId, v_product, v_grossAmt, v_priceactual, v_netAmt
+			from c_orderline
+		 where c_orderline_id = p_line_id;
+
+		 -- check if products in order are all the ones in the the rule
+		 select count(distinct ol.m_product_id)
+			 into v_x
+			 from c_orderline ol, m_offer_product op
+			where c_order_id = v_docId
+				and op.m_product_id = ol.m_product_id
+        and op.m_offer_id = p_rule_id;
+
+                 select floor(ol.qtyordered / coalesce(op.em_obdisc_qty + op.em_obdisc_gifqty, 1))
+			 into v_gift_chunks
+			 from c_orderline ol, m_offer_product op
+			where op.m_offer_id = p_rule_id
+			        and ol.c_order_id = v_docId
+				and op.m_product_id = ol.m_product_id
+				and op.em_obdisc_is_gift = 'Y';
+                 
+
+		 select min(floor(ol.qtyordered / coalesce(op.em_obdisc_qty, 1)))
+			 into v_chunks
+			 from c_orderline ol, m_offer_product op
+			where c_order_id = v_docId
+				and op.m_product_id = ol.m_product_id
+				and op.m_offer_id = p_rule_id;		
+
+	        if (coalesce(v_chunks, 0) = 0 OR v_gift_chunks < v_chunks) then
+	          v_chunks := v_gift_chunks;
+	        end if; 
+  else
+		select gross_unit_price, c_tax_id, qtyinvoiced,
+					 c_invoice_id, m_product_id, line_gross_amount, priceactual, linenetamt
+			into v_unitprice, v_tax, v_qty,
+					 v_docId, v_product, v_grossAmt, v_priceactual, v_netAmt
+			from c_invoiceline
+		 where c_invoiceline_id = p_line_id;
+
+		 -- check if products in invoices are all the ones in the the rule
+		 select count(distinct ol.m_product_id)
+			 into v_x
+			 from c_invoiceline ol, m_offer_product op
+			where ol.c_invoice_id = v_docId
+				and op.m_product_id = ol.m_product_id
+        and op.m_offer_id = p_rule_id;
+
+                 select floor(il.qtyinvoiced / coalesce(op.em_obdisc_qty + op.em_obdisc_gifqty, 1))
+			 into v_gift_chunks
+			 from c_invoiceline il, m_offer_product op
+			where il.c_invoice_id = v_docId
+				and op.m_product_id = il.m_product_id
+                                and op.m_offer_id = p_rule_id
+				and op.em_obdisc_is_gift = 'Y';
+
+		 select min(floor(ol.qtyinvoiced / coalesce(op.em_obdisc_qty, 1)))
+			 into v_chunks
+			 from c_invoiceline ol, m_offer_product op
+			where c_invoice_id = v_docId
+				and op.m_product_id = ol.m_product_id
+				and op.m_offer_id = p_rule_id;				
+
+	        if (coalesce(v_chunks, 0) = 0 OR v_gift_chunks < v_chunks) then
+	          v_chunks := v_gift_chunks;
+	        end if; 
+  end if;
+   select count(*)
+     into v_y
+     from m_offer_product
+    where m_offer_id = p_rule_id;
+
+    if (v_x != v_y) then
+      return 'Y'; 
+    end if;
+	
+
+    if (v_chunks = 0) then
+      return 'Y'; 
+    end if;
+
+   if (v_distribute = 'Y') then
+     v_totalAmt := 0;
+     v_promotionAmt := 0;
+     
+     for Cur_Order in (select ol.c_orderline_id as id, ol.qtyordered as qty, ol.gross_unit_price, op.em_obdisc_qty, op.em_obdisc_gifqty, 
+                              op.em_obdisc_is_gift, ol.priceactual
+												 from c_orderline ol, m_offer_product op
+												where ol.c_order_id = v_docId
+													and op.m_product_id = ol.m_product_id
+													and op.m_offer_id = p_rule_id
+													and p_type = 'O'
+												union
+                       select ol.c_invoiceline_id as id, ol.qtyinvoiced as qty, ol.gross_unit_price, op.em_obdisc_qty, op.em_obdisc_gifqty, 
+                              op.em_obdisc_is_gift, ol.priceactual
+												 from c_invoiceline ol, m_offer_product op
+												where ol.c_invoice_id = v_docId
+													and op.m_product_id = ol.m_product_id
+													and op.m_offer_id = p_rule_id
+													and p_type = 'I') loop
+
+        -- If this is not the first line  this same discount is applied, it is needed to revert previous
+        -- lines to calculate totals
+       if (p_type = 'O') then
+				 select coalesce(sum(amtoffer), 0)
+					 into v_previousDiscount
+					 from c_orderline_offer
+					where c_orderline_id = Cur_Order.id
+						and m_offer_id = p_rule_id;
+			 else
+				 select coalesce(sum(amtoffer), 0)
+					 into v_previousDiscount
+					 from c_invoiceline_offer
+					where c_invoiceline_id = Cur_Order.id
+						and m_offer_id = p_rule_id;
+       end if;
+
+       if (p_taxIncluded = 'Y') then  
+				 v_totalAmt := v_totalAmt + Cur_Order.qty * (Cur_Order.gross_unit_price + v_previousDiscount);
+				 if (Cur_Order.em_obdisc_is_gift = 'Y') then
+					 v_promotionAmt := v_promotionAmt + (Cur_Order.gross_unit_price + v_previousDiscount) * v_chunks * coalesce(Cur_Order.em_obdisc_gifqty, 1);
+				 end if;
+			 else
+			   v_totalAmt := v_totalAmt + Cur_Order.qty * (Cur_Order.priceactual + v_previousDiscount);
+				 if (Cur_Order.em_obdisc_is_gift = 'Y') then
+					 v_promotionAmt := v_promotionAmt + (Cur_Order.priceactual + v_previousDiscount) * v_chunks * coalesce(Cur_Order.em_obdisc_gifqty, 1);
+				 end if;
+       end if;
+     end loop;
+
+		 if (p_taxIncluded = 'Y') then
+       v_newGrossAmt := v_grossAmt * (1 - v_promotionAmt / v_totalAmt);
+       v_newUnitPrice := v_newGrossAmt / v_qty;
+
+       v_newNetPrice := c_get_net_price_from_gross(v_tax, v_newGrossAmt, v_newGrossAmt, p_priceprecision, v_qty);
+       v_newNetAmt := c_get_net_price_from_gross(v_tax, v_newGrossAmt,v_newGrossAmt, p_priceprecision, 1);
+       v_basePrice := v_unitprice;
+       v_totalPromotion := v_grossAmt - v_newGrossAmt;
+     else
+       v_newNetAmt := v_netAmt * (1 - v_promotionAmt / v_totalAmt);
+       v_newNetPrice := v_newNetAmt / v_qty;
+       v_basePrice := v_priceactual;
+       v_totalPromotion := v_netAmt - v_newNetAmt;
+ 		 end if;
+
+     -- check if current line is gift to show or not the complete discount here
+		 select count(*)
+			 into v_x
+			 from m_offer_product
+			where m_offer_id = p_rule_id
+				and m_product_id = v_product
+				and em_obdisc_is_gift = 'Y';
+     if (v_x != 0) then
+        if (p_taxIncluded = 'Y') then
+          v_displayedPromotion := v_unitprice * v_chunks;
+        else
+          v_displayedPromotion := v_priceactual * v_chunks;
+        end if;
+     else
+        v_displayedPromotion := 0;
+     end if;
+   else
+		 -- not distributed: apply discount only in case the current line
+		 -- is one of the gift products
+		 select count(*)
+			 into v_x
+			 from m_offer_product
+			where m_offer_id = p_rule_id
+				and m_product_id = v_product
+				and em_obdisc_is_gift = 'Y';
+
+		 if (v_x = 0) then
+			 -- Discount needs to be applied in a different line, not applying
+			 -- in cascade as this line participates in the discount
+			 return 'N'; 
+		 end if;
+
+		 select em_obdisc_gifqty
+			 into v_x
+			 from m_offer_product
+			where m_offer_id = p_rule_id
+				and m_product_id = v_product
+				and em_obdisc_is_gift = 'Y';
+
+		 if (p_taxIncluded = 'Y') then
+       v_newGrossAmt := round(v_unitprice * (v_qty - v_chunks * coalesce(v_x, 1)), p_stdprecision);
+       v_newUnitPrice := round(v_newGrossAmt / v_qty, p_priceprecision);
+
+       v_newNetPrice := c_get_net_price_from_gross(v_tax, v_newGrossAmt, v_newGrossAmt, p_priceprecision, v_qty);
+       v_newNetAmt := round(v_newNetPrice * v_qty, p_stdprecision);
+       v_basePrice := v_unitprice;
+       v_totalPromotion := v_grossAmt - v_newGrossAmt;
+     else
+       v_newNetAmt := round(v_priceactual * (v_qty - v_chunks * coalesce(v_x, 1)), p_stdprecision);
+       v_newNetPrice := round(v_newNetAmt / v_qty, p_priceprecision);
+       v_basePrice := v_priceactual;
+       v_totalPromotion := v_netAmt - v_newNetAmt;
+     end if;
+   end if;
+
+   M_PROMOTION_ADD(p_type, p_line_id, p_rule_id, p_taxIncluded, v_newUnitPrice, v_newGrossAmt, v_newNetPrice, v_newNetAmt, v_totalPromotion, v_displayedPromotion, v_basePrice, p_user_id);
+		 
+   return 'N';
+END OBDISC_XY_GIFT
+]]></body>
+    </function>
+  </database>

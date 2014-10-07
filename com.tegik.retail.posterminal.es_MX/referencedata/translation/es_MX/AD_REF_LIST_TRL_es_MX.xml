@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="043B9CA543D8481D852EC96C0E46B747" trl="Y">
+    <value column="Name" original="Confirm return dialog">Confirma el retorno de un dialogo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="100EB6B59DAB49DC9994B8D41124A579" trl="N">
+    <value column="Name" original="Web POS action void layaway"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="1455C9DD10BC4C62ADEA89E370CA2FEF" trl="Y">
+    <value column="Name" original="WEB POS Open Discounts From Keyboard ">Abrir descuento del teclado</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="146CD71739FA446A8F7CB84E2DC03D43" trl="Y">
+    <value column="Name" original="Layaway">Pago a plazos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="17C09B4292F348ADAD162FE6DF0B2ECD" trl="Y">
+    <value column="Name" original="Confirm payment dialog">Confirmar diálogo pago</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="17EE67AD7A2D4741A53E4340F5329D4C" trl="Y">
+    <value column="Name" original="Web POS Use Modal instead of dropdown in Sales Reprentative">Utilice modal en lugar de desplegable de Representante legal de Ventas</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="1C47151F141F4DD1AF1A18E85F15F4A4" trl="Y">
+    <value column="Name" original="Business partner">Tercero</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="2076E11B7C3D44CFA6C32EF1A3475EAC" trl="Y">
+    <value column="Name" original="Web POS Open drawer from menu">Abra el cajón desde el menú</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="21F479EBB63A4D53A1C2754D0EE4C7A1" trl="Y">
+    <value column="Name" original="Web POS Quotation: Editable Firm Check">Cotización: cheque firme editable</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="2306F5CAB63A4150B89C1931EFAA7BB1" trl="Y">
+    <value column="Name" original="Not imported due to errors">No importado debido a errores</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="2CA7BAB67A38404A8E72556527E8C914" trl="Y">
+    <value column="Name" original="Web POS window Point of Sale">Ventana de Punto de Venta </value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="2D5507B656C647A3A9EA131D0E9E9785" trl="Y">
+    <value column="Name" original="Scan">Scaneo</value>
+    <value column="Description" original="Scan tab">Pestaña de Scaneo</value>
+  </row>
+  <row id="2F9B68257FFC416698B4BE8F1969EB72" trl="Y">
+    <value column="Name" original="Enable switch from positive line to return line">Activar el interruptor de la línea positiva a la línea de retorno</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="301E1F174C8C4F1890123885B3F683A3" trl="Y">
+    <value column="Name" original="Web POS Cash Up Differences Approval">Dinero en efectivo por diferencias de aprobación</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="332013E31D67427EA1A6AF1C949FDBAE" trl="Y">
+    <value column="Name" original="Web POS Discretionary Discount Approval">Aprobación discrecional de descuento</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="38BBDAA851F8442F824E80451D217E5B" trl="Y">
+    <value column="Name" original="Web POS action Receipt properties">propiedades de recibos acción</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="3E5BC9B9EA0041FBBA3C116AD65FF480" trl="N">
+    <value column="Name" original="Web POS Enable Multi Order menu entry"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="410AEC0E3F084BAA8D9565AAAD4D3D82" trl="Y">
+    <value column="Name" original="Web POS action create and edit customers">Acciones de crear y editar clientes</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="480300CF74B444C78F8AB31E172442E0" trl="Y">
+    <value column="Name" original="Return">Devolución</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="4CE4785B44FE4274A6256B948A345767" trl="Y">
+    <value column="Name" original="Web POS action Print receipt">accion de Imprimir recibo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="4F232254B6E34276938B86A5C1EAA064" trl="N">
+    <value column="Name" original="Quotations are not Firm by default"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="52F8D3A1F21B430598A451C5213F2311" trl="N">
+    <value column="Name" original="Print Return order once instead twice in Web Pos "/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="55D40DCFE3FE49C39AAB6E0607094A6C" trl="Y">
+    <value column="Name" original="Web POS window Cash Management">Ventana de administrar efectivo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="56E9EAA1759B416C86AA801E363AA5A8" trl="Y">
+    <value column="Name" original="Web POS Session">Sesión de la web</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="69866AA7260440C0A81D4ADF7BC84EBC" trl="Y">
+    <value column="Name" original="Web POS Product Images from server instead of cache">Imágenes de Productos de servidor en lugar de la memoria caché</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="6E2B450BFCC94F6E9228DFBD7A67F005" trl="Y">
+    <value column="Name" original="Web POS Back Office">Devuelta a Oficina</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="71C3E0A595884C0CA5E60436FAD4C285" trl="Y">
+    <value column="Name" original="Web POS Remove Receipts Approval">Remover recibos de aprobacion</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="7B216FE08B8D456B9F979F883D780D98" trl="Y">
+    <value column="Name" original="Web POS Returns Approval">Aprobación de Devoluciones </value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="7E1C5D59E1D4460FBF2F169801F572CF" trl="Y">
+    <value column="Name" original="Print ticket">Imprimir ticket </value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="7F5090BE8BBE47ADBA645E0E4B6B01B3" trl="Y">
+    <value column="Name" original="Web POS window Cash Up">Ventana de Efectivo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="88917BAF70ED44C4803EAD048ABA5412" trl="Y">
+    <value column="Name" original="Closed Receipt">Recibo Cancelado</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="898DA3A00DD64A45A8478F78249EF521" trl="Y">
+    <value column="Name" original="Browse">Navegar</value>
+    <value column="Description" original="Browse tab">Pestaña del Browser</value>
+  </row>
+  <row id="8A9DDD8D41B94395A1D68E6B3E31595E" trl="Y">
+    <value column="Name" original="Cash Up Report">efectivo por informe</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="8CA80355EF064A0EAD578CB8AB07C9FC" trl="Y">
+    <value column="Name" original="Return Invoice">Devolucion de Factura</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="9963B3AAB6B24511B2C4BB65ED571CF6" trl="Y">
+    <value column="Name" original="Web POS action Credit Sales ">Accion de ventas con credicto</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="9A000A73E266414D857CAED9FFCD724E" trl="Y">
+    <value column="Name" original="Web POS action Print cash up">Accion de Imprimir efectivo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="9AFB5C15D64B426992C10D23585A411F" trl="Y">
+    <value column="Name" original="Web POS action reject quotation">Acciones de rechazar contizacion</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="9ED6892B8C8F4507A9F0C53648566E9A" trl="Y">
+    <value column="Name" original="POS Terminal">Terminal Punto de Venta</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="AAA9F81A601C4BD09955AA2CF5B66B82" trl="N">
+    <value column="Name" original="Web POS action Print cash management"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="AC340E3F059542B6A207D3329644A5DB" trl="Y">
+    <value column="Name" original="Web POS action Change price">Acciones de cambiar precio</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="BFE70DE60D1F49A89265E01A5083FCDB" trl="Y">
+    <value column="Name" original="Web POS payment Cash">Pagos en Efectivo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="C5D8283E95204B4EAC715761C14CB2D3" trl="Y">
+    <value column="Name" original="Do not allow Sales with return">No permitir ventas con devolucion</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="C7AEA9FED5F842FBAFAA303F7CE11404" trl="Y">
+    <value column="Name" original="Web POS Search Paid Receipts">Buscar recibos de pagos</value>
+    <value column="Description" original="Web POS Search Paid Receipts"/>
+  </row>
+  <row id="C90AEFC4F3E0474BB2DABA68484FC58F" trl="Y">
+    <value column="Name" original="Web POS action Apply discount">Acciones de aplicar descuentos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="C90D0A44373041B99ECFCF1437E8DE2B" trl="N">
+    <value column="Name" original="Web POS Sales Representative in Receipt properties window"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="CE0B6F39F4C74D0E864D77D7D827D573" trl="Y">
+    <value column="Name" original="Web POS Search Layaways">Buscar plazos de pagos</value>
+    <value column="Description" original="Web POS Search Layaways"/>
+  </row>
+  <row id="D225C0A7CC4C482695D955CBE039C3E9" trl="N">
+    <value column="Name" original="Web POS payment Voucher"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D23840F192554E2BB01473C944E8AF5D" trl="Y">
+    <value column="Name" original="Invoice">Factura</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D52DAD3CB2834FA4940C7C1C8403C56A" trl="Y">
+    <value column="Name" original="Web POS action Invoice receipt">Acción WebPos recibo de la factura</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D56514BAA9CD492D8EEA8B01956AEA60" trl="Y">
+    <value column="Name" original="Web POS payment Card">Tarjeta de Pago Web Pos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D7E5D22E0D33475C95E2AB7A54ED4BE1" trl="Y">
+    <value column="Name" original="Web POS action reactivate quotation">Acciones de reactivar contizacion</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="D7E6CD2A8FC248C5B83551715D5D3670" trl="Y">
+    <value column="Name" original="Web POS action Return receipt">Acciones de devolucion de recibo</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="DBE1607D49324DDAB132CDE9C9BC5769" trl="Y">
+    <value column="Name" original="Web POS payment Empty">Pago vacio</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="DC7DFA0A33DC4D0A961B3B02494A9135" trl="Y">
+    <value column="Name" original="Imported correctly">Importar correctamente </value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E040AF7F52904DDB874D5ECF516E3C3C" trl="N">
+    <value column="Name" original="Failed"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E35C5C7370AA45CC99FD66633E73D34D" trl="Y">
+    <value column="Name" original="Web POS action customers window">accion de ventana de cliente </value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E53EE08A990E4ED99FEB794FF1F4E94C" trl="N">
+    <value column="Name" original="Web POS action layaway the receipt"/>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E88F2F3FE4FB4A449F29694A4282912C" trl="Y">
+    <value column="Name" original="Web POS action create sales order from quotation">Acción crear órdenes de venta desde la cotización</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E99D946D06DB4600BC2CAF9B9389BF9D" trl="Y">
+    <value column="Name" original="Web POS action create new quotation">Accion de crear nuevas cotizaciones </value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="F0583BBD061544CE864C58A2EEE3BA9D" trl="Y">
+    <value column="Name" original="Sent">Enviado</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="F361E0B95E0F42A6A9C18A81F96D0868" trl="Y">
+    <value column="Name" original="Web POS action Advanced Discounts">Accion de descuentos avanzados</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="F6A388F9B07F4F8BACF468704E14ABF6" trl="Y">
+    <value column="Name" original="Web POS action show quotations">accion de mostrar cotizaciones </value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

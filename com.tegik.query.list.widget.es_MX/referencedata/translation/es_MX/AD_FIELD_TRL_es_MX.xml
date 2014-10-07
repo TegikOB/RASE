@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELD" version="">
+  <row id="97735A85B532BEE5E040007F0100334A" trl="Y">
+    <value column="Name" original="Tab">Solapa</value>
+    <value column="Description" original="An indication that a tab is displayed within a window.">Indica si una solapa se muestra en una ventana.</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

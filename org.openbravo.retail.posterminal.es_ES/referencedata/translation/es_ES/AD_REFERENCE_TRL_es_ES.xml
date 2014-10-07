@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REFERENCE" version="">
+  <row id="20A228A295C844C68B4451622057A893" trl="N">
+    <value column="Name" isTrl="Y" original="Types of data to be synchronized in Web POS">Tipos de datos a sincronizar en TPV Web</value>
+    <value column="Description" isTrl="Y" original="List of the different types of data which are synchronized by Web POS.">Lista de los diferentes tipos de datos que son soncronizados en TPV Web.</value>
+    <value column="Help" isTrl="Y" original="List of the different types of data which are synchronized by Web POS.">Lista de los diferentes tipos de datos que son soncronizados en TPV Web.</value>
+  </row>
+  <row id="358AD6F66FB94E2DAD0D237F877525F1" trl="N">
+    <value column="Name" isTrl="Y" original="Web POS default tab">Pestaña por defecto de TPV Web</value>
+    <value column="Description" isTrl="Y" original="Default tab for Web POS point of sale window">Pestaña por defecto de del TPV Web punto de venta</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="38DC73A4EAE94F36924C2D3A012A7466" trl="N">
+    <value column="Name" isTrl="N" original="C_DocTypeRet_ID">C_DocTypeRet_ID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E6A751F4AB24EC391AA9A6DD6B1F624" trl="N">
+    <value column="Name" isTrl="Y" original="Email Status">Estado del Email</value>
+    <value column="Description" isTrl="Y" original="List with status of sending email.">Listado de estado de los emails procesados.</value>
+    <value column="Help" isTrl="Y" original="The Email Status indicates the status of sending email.">Listado de estado de los emails procesados.</value>
+  </row>
+  <row id="A8BB7B5A513E4A76A98F51FEF33676B2" trl="N">
+    <value column="Name" isTrl="Y" original="Refund Provider">Proveedor de reembolso</value>
+    <value column="Description" isTrl="Y" original="External payment provider who processes this kind of refund types.">Proveedor de pago externo que procesa este tipo de reembolsos.</value>
+    <value column="Help" isTrl="Y" original="External payment provider who processes this kind of refund types.">Proveedor de pago externo que procesa este tipo de reembolsos.</value>
+  </row>
+  <row id="AF0F6F326155451B9B0060DF965E5E91" trl="N">
+    <value column="Name" isTrl="Y" original="Order status">Estado del pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AF6067BC66F14BAF9CB686115D145C48" trl="N">
+    <value column="Name" isTrl="Y" original="Document type">Tipo de documento</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F523B357A94B43F68C414707BA45C785" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">TPV</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FC7059F88CBB4EAB8162A4D3B8089C00" trl="N">
+    <value column="Name" isTrl="Y" original="Payment Provider">Proveedor de pago</value>
+    <value column="Description" isTrl="Y" original="External payment provider who processes this kind of payment types.">Proveedor de pago externo que procesa este tipo de reembolsos.</value>
+    <value column="Help" isTrl="Y" original="External payment provider who processes this kind of payment types.">Proveedor de pago externo que procesa este tipo de reembolsos.</value>
+  </row>
+  <row id="FF8081813321447901332148312C0010" trl="N">
+    <value column="Name" isTrl="N" original="OBPOS_Product Parent">OBPOS_Product Parent</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

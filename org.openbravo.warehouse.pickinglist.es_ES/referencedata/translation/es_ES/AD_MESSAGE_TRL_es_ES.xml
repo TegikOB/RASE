@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_MESSAGE" version="">
+  <row id="00094320AF47477AA5A318AEBAB9FB40" trl="N">
+    <value column="MsgText" isTrl="Y" original="There are some products with units pending to be verified.">Existen cantidades de productos sin verificar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="16CFEADF286A47F09E2BF3B38244AB3B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Product">Producto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="284A39AC5B1A4718888A83FCD041C9BC" trl="N">
+    <value column="MsgText" isTrl="Y" original="The barcode entered doesn't match any product in the picking list.">El código de barras insertado no coincide con ningún producto de la Preparación de Pedido.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2B0A65E4A7DB4E8BA0531E96FD61173C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Processes the selected Picking List completing each Goods Shipment related to it.">Procesa la Preparación de Pedido seleccionado completando todos los albaranes relacionados.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3429242E94D049C686DD1504039B9C8F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Document no: ">Nº documento: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="39AB0ACDA68E4CC58487D9FBC62A7381" trl="N">
+    <value column="MsgText" isTrl="Y" original="Quantity">Cantidad</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="43B9F3F694E6435B807ADD4C5C6971DB" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total movement quantity exceeds the pending ordered quantity. The sum of  all movement quantities must be equal or lower than %0.">La cantidad total movida excede la cantidad pendiente pedida. La suma de todas las cantidades movidas tiene que ser igual o menot que %0.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="474954DB0A944402AAA7C757157DB9F1" trl="N">
+    <value column="MsgText" isTrl="Y" original="The following order is already in a pickinglist in draft status: ">El siguiente pedido esta ya en una preparación de pedido en estado borrador: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="54D5731B940C408DA35851D49EFD5D91" trl="N">
+    <value column="MsgText" isTrl="Y" original="Generate Picking List">Generar Picking List</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5FC2BE57FDE641978FBD2C552C86AF0B" trl="N">
+    <value column="MsgText" isTrl="Y" original="There is not enough stock in warehouses to create the whole Picking List. ">No hay suficient stock en el almacén para crear completamente la Preparación de Pedido. </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="63F11BDA6A204DB583523F94DF119BAA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Qty Verified">Cant. Verificada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="72C6E14A866B449098FBBA720B521295" trl="N">
+    <value column="MsgText" isTrl="Y" original="Creates a Picking List for each selected Sales Order Line.">Crea una Preparación de Pedido por cada Línea de Pedido de Venta seleccionada.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="792471460DE042DDB51EE5B8431FA32C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Picking List created successfully">Preparación de Pedido creado correctamente.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9D01EE732BFB425189640912ED260DED" trl="N">
+    <value column="MsgText" isTrl="Y" original="Picking List">Preparación de Pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9E8193B24B1148AD8AFB60040EAE49C5" trl="N">
+    <value column="MsgText" isTrl="Y" original="and business partner: ">y tercero: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B7711A249F2A45179AE54E71BAB21ABD" trl="N">
+    <value column="MsgText" isTrl="Y" original="Are you sure you want to cancel this Picking List?">Estás seguro de querer eliminar la Preparación de Pedido?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C3AF3FF5C3DB41749EBB3B1FB827782A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Process">Procesar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CED0034BE8094266B30E68B7CF29DF5F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Qty Pending">Cant. Pendiente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DC63E4135B15466BADE8FFEB5564C3F4" trl="N">
+    <value column="MsgText" isTrl="Y" original="Validate Barcode">Validar cód. barras</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E6BD83ECFD9D4ECFA9446FAF766703C5" trl="N">
+    <value column="MsgText" isTrl="Y" original="Barcode">Código de barras</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EA86C035E3E44C46B98D21896F38937F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Group selected sales orders in one Picking List">Agrupar los pedidos seleccionado en una Preparación de Pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EDC792BEC56845BEB6A0F30A25A89BA4" trl="N">
+    <value column="MsgText" isTrl="Y" original="Picking list document type must be defined">El tipo de documento Picking list debe ser definido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EEA41E1D56964EE29F5DE48A23D43702" trl="N">
+    <value column="MsgText" isTrl="Y" original="Movement quantity exceeds the available quantity (%0) considering the quantity reserved in other reservations (%1). Please, enter a valid number.">La cantidad movida excede la cantidad disponible (%0) considrando la cantidad reservada en otras reservas (%1). Por favor, introduce un número válido.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

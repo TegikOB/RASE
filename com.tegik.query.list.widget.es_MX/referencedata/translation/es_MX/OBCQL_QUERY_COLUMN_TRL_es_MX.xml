@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBCQL_QUERY_COLUMN" version="">
+  <row id="01AA894DAA8040218F90CC3B9E73344B" trl="Y">
+    <value column="Name" original="Outstanding amount">Importe pendiente</value>
+  </row>
+  <row id="0600761021A34EB3BE58351A91A9EA14" trl="Y">
+    <value column="Name" original="Currency">Moneda</value>
+  </row>
+  <row id="15817E30D88A4E04ACA56D1E92D24FD7" trl="Y">
+    <value column="Name" original="Date">Fecha</value>
+  </row>
+  <row id="19E44CB31B56433593B192089455EBBE" trl="Y">
+    <value column="Name" original="Organization">Organización</value>
+  </row>
+  <row id="1B141EDF4FEC40218AE4443460BA3F67" trl="Y">
+    <value column="Name" original="Currency">Moneda</value>
+  </row>
+  <row id="1FCFFA0840074019BF84BBD9E507CB91" trl="Y">
+    <value column="Name" original="Date">Fecha</value>
+  </row>
+  <row id="366186B2156C445EA59FECA4E1B72F51" trl="Y">
+    <value column="Name" original="UOM">Unidad</value>
+  </row>
+  <row id="379830F53AF44639B79DB5AB113A575F" trl="Y">
+    <value column="Name" original="Document Number">Número Documento</value>
+  </row>
+  <row id="379E3A62E4FF4007B32C6A96BEFDEFCC" trl="Y">
+    <value column="Name" original="Attribute">Atributo</value>
+  </row>
+  <row id="3C3DBC6021C94CFFA82AF855A7AF6C2F" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+  </row>
+  <row id="45C959E0C3B54D7BBD1244DF35F852B9" trl="Y">
+    <value column="Name" original="Organization">Organización</value>
+  </row>
+  <row id="493479BFB7D94915889AA9BDD6BB3EA8" trl="Y">
+    <value column="Name" original="Days till due">Días hasta vencimiento</value>
+  </row>
+  <row id="4FE8DE4D7CF94B128CBA09973BD21C1D" trl="Y">
+    <value column="Name" original="Document Number">Número Documento</value>
+  </row>
+  <row id="51429339D294475986634D7E876F4A53" trl="Y">
+    <value column="Name" original="Document Number">Número Documento</value>
+  </row>
+  <row id="5410706611F04069A9326D70425EAD22" trl="Y">
+    <value column="Name" original="Due amount">Importe vencido</value>
+  </row>
+  <row id="56DC401F52BF4BE593C782240AE4AB67" trl="Y">
+    <value column="Name" original="Amount">Importe</value>
+  </row>
+  <row id="5C4E31EC2ACC4F60951D135BABD8F691" trl="Y">
+    <value column="Name" original="Organization">Organización</value>
+  </row>
+  <row id="6B151041105E4DD0805AC2F709A7A81E" trl="Y">
+    <value column="Name" original="Date">Fecha</value>
+  </row>
+  <row id="70CEB497CA254F3C892AE0B68920897D" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+  </row>
+  <row id="742D993ADF7444318F8CAF38DDCB1997" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+  </row>
+  <row id="7DF4871F997942C1A51E064F022CF5E8" trl="Y">
+    <value column="Name" original="Supplier">Proveedor</value>
+  </row>
+  <row id="7EFCCE042B4841D0B9377B54F11973E7" trl="Y">
+    <value column="Name" original="Days till due">Días hasta vencimiento</value>
+  </row>
+  <row id="837952B858F447D0965FFA2B7DE2476A" trl="Y">
+    <value column="Name" original="Organization">Organización</value>
+  </row>
+  <row id="879667D64C66466297E4113CBABEACA5" trl="Y">
+    <value column="Name" original="Currency">Moneda</value>
+  </row>
+  <row id="88104CDF6CC2418FB405A4B5BA74265D" trl="Y">
+    <value column="Name" original="Planned delivery">Entrega prevista</value>
+  </row>
+  <row id="8B623EFDB1244BBDA320EDEE47FB6C21" trl="Y">
+    <value column="Name" original="Product">Producto</value>
+  </row>
+  <row id="94B1051270614629B02531C5F894BCF1" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+  </row>
+  <row id="99076BD44F06465DACC0C4BAE01773DC" trl="Y">
+    <value column="Name" original="Organization">Organización</value>
+  </row>
+  <row id="9F88542C3F944CDF867298D292C8113C" trl="Y">
+    <value column="Name" original="Payment Terms">Condiciones de Pago</value>
+  </row>
+  <row id="9FC7E75A21F34920AA2695261935FD06" trl="Y">
+    <value column="Name" original="Document Number">Número Documento</value>
+  </row>
+  <row id="B1C95647F5AC45A3A3B4EC6BBFE8CD06" trl="Y">
+    <value column="Name" original="Received">Recibido</value>
+  </row>
+  <row id="B1CA7F1719964CD2B9F2ECD4B7BD162B" trl="Y">
+    <value column="Name" original="Pending">Pendiente</value>
+  </row>
+  <row id="BBBF2F44391C43F98B4FDEAF62BE81D1" trl="Y">
+    <value column="Name" original="Date">Fecha</value>
+  </row>
+  <row id="C13ADACEAEC74C1FA77151F5DA0D3965" trl="N">
+    <value column="Name" original="Total">Total</value>
+  </row>
+  <row id="C31C48F4A17D43B291BA6762D05E75B4" trl="Y">
+    <value column="Name" original="Document">Documento</value>
+  </row>
+  <row id="CDC05CE5642E4327BA12FEA50597A8A3" trl="Y">
+    <value column="Name" original="Amount">Importe</value>
+  </row>
+  <row id="D8C77A2A8B934351ACF38542FD807183" trl="Y">
+    <value column="Name" original="Outstanding amount">Importe pendiente</value>
+  </row>
+  <row id="DFFE8FF0D0D8414796B134FA89E07F43" trl="Y">
+    <value column="Name" original="Order date">Fecha pedido</value>
+  </row>
+  <row id="E124D5EEE43A4E1FA0CB7CBC5A87483D" trl="Y">
+    <value column="Name" original="Currency">Moneda</value>
+  </row>
+  <row id="F582F7725D3F40469A956945A85A67AD" trl="Y">
+    <value column="Name" original="Due amount">Importe vencido</value>
+  </row>
+  <row id="FAB0DB1A67D948DB85AD5918B7845ABF" trl="Y">
+    <value column="Name" original="Amount">Importe</value>
+  </row>
+  <row id="FE9812790C0943C584999CEAAD93E95D" trl="Y">
+    <value column="Name" original="Amount">Importe</value>
+  </row>
+</compiereTrl>

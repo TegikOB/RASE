@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="OBUISEL_SELECTOR_FIELD" version="">
+  <row id="082C760C3435477B9A20B9990749F6C7" trl="Y">
+    <value column="Name" isTrl="Y" original="Location">Domicilio</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="09443D24F490441BA12AFB6490481875" trl="Y">
+    <value column="Name" isTrl="Y" original="List Price">Precio de tarifa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="0C77D170D18142549484CF860A6BE104" trl="Y">
+    <value column="Name" isTrl="Y" original="Characteristic Description">Descripcion de la Caracteristica</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="13CA3020FEB644D9AA51B4797181BB29" trl="N">
+    <value column="Name" isTrl="N" original="id">id</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="190E45B61635477BBC0799229F889FD6" trl="N">
+    <value column="Name" isTrl="N" original="orgid">orgid</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1A3CADEA9ED94D039A6667599E0E63C0" trl="Y">
+    <value column="Name" isTrl="Y" original="Vendor">Proveedor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1D2F1F18ECE84352ABF8CA71EECA9589" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse Qty.">Cant. almacén</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="1E2A8D7793C64421814CAD979FFBB1FB" trl="Y">
+    <value column="Name" isTrl="Y" original="Unit Price">Precio unitario</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="28CA79CC4C39406C9A29B81474381859" trl="Y">
+    <value column="Name" isTrl="Y" original="value">valor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="32244F2B9B414FD4B3AB8607DC91EA3A" trl="Y">
+    <value column="Name" isTrl="Y" original="List Price">Precio de Tarifa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="348E946313BF4336ABDA800BA68829CF" trl="Y">
+    <value column="Name" isTrl="Y" original="Category">Categoría</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="36B5DC1CD166494D8221B493042D7CCF" trl="Y">
+    <value column="Name" isTrl="Y" original="Credit Line available">Crédito disponible</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="38075EEC36C24E3CAB44D1B33D2CE637" trl="Y">
+    <value column="Name" isTrl="Y" original="identifier">Identificador</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3C4C59A1AB77437A959F10D42D32FDE7" trl="Y">
+    <value column="Name" isTrl="Y" original="location identifier">Identificador de localización</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3E910632234C4C42AF49DCE8CC95A12B" trl="Y">
+    <value column="Name" isTrl="Y" original="Search Key">Identificador</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB53BDDB0012" trl="Y">
+    <value column="Name" isTrl="Y" original="Contact">Contacto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB542B790018" trl="Y">
+    <value column="Name" isTrl="Y" original="Value">Valor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB54A1B0001E" trl="Y">
+    <value column="Name" isTrl="Y" original="Credit Line available">Crédito disponible</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB550A2A0024" trl="Y">
+    <value column="Name" isTrl="Y" original="location identifier">Identificador de localización</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB555EB6002A" trl="Y">
+    <value column="Name" isTrl="Y" original="contact identifier">Identificador de contacto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB55C5640030" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer Balance">Crédito usado</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB5625760036" trl="Y">
+    <value column="Name" isTrl="Y" original="Name">Nombre</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB569247003C" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer">Cliente</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB5711430042" trl="Y">
+    <value column="Name" isTrl="Y" original="identifier">Identificador</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB5774570048" trl="Y">
+    <value column="Name" isTrl="Y" original="Location">Domicilio</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB57E44B004E" trl="Y">
+    <value column="Name" isTrl="Y" original="Vendor">Proveedor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4028E61131FB4B1B0131FB5844630054" trl="Y">
+    <value column="Name" isTrl="Y" original="income">ingresos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="45EF44862E664D33924023F7293977D0" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM out">Unidad de salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5545248A63EC4FB1833AB17C07C5542C" trl="Y">
+    <value column="Name" isTrl="Y" original="Value">Valor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5B2FA3B98CF64853A30AAE19AC8C8B78" trl="Y">
+    <value column="Name" isTrl="Y" original="Quantity Order in draft transactions">Cantidad Pedida en transacciones en borrador</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="5C49AEF18F02402180E472E45E58C776" trl="Y">
+    <value column="Name" isTrl="Y" original="Price Limit">Precio límite</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="63507B832CF94D8BB30286ED4369E55B" trl="Y">
+    <value column="Name" isTrl="Y" original="Credit Line available">Crédito disponible</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="681AD87159544997B999B254DD4F97EC" trl="Y">
+    <value column="Name" isTrl="Y" original="UOM">Unidad</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6DDC519575994A81A5C92046AD2FB7B6" trl="Y">
+    <value column="Name" isTrl="Y" original="Ordered Qty.">Cant. Pedida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7167B12683FD4B8C99FA777C92A39BC5" trl="Y">
+    <value column="Name" isTrl="Y" original="Product UOM out">Unidad del producto de salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="797E2E6C7A6D4A349491B85A1C1ACB7D" trl="Y">
+    <value column="Name" isTrl="Y" original="Name">Nombre</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="7CA7330BA4864D2FB1FED44CDB88A622" trl="Y">
+    <value column="Name" isTrl="Y" original="Name">Nombre</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8296CA3FDAB04B698B1EDD4BC76F1512" trl="Y">
+    <value column="Name" isTrl="Y" original="On Hand Quantity order">Cantidad del pedido disponible</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8AB5D5043894438B8AFDBC8491C8F692" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer Balance">Crédito usado</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="8E80548AE96B4932A482852994C13D4A" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer Balance">Crédito usado</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9658A4E18959420F927BC4A1B26D0931" trl="Y">
+    <value column="Name" isTrl="Y" original="Unit Price">Precio unitario</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9835921A3AA54B8D8D0126B3696F8354" trl="Y">
+    <value column="Name" isTrl="Y" original="Name">Nombre</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9AB014C04115417395A89F1371848698" trl="N">
+    <value column="Name" isTrl="N" original="PriceListVersionID">PriceListVersionID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="9D9998D878F2442BB240A5872C8D6A8E" trl="Y">
+    <value column="Name" isTrl="Y" original="Value">Valor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A246D4AC538E42BE9F0CD8182A558712" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer">Cliente</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A70124FC61904F7BAD6F8BDF436931B4" trl="Y">
+    <value column="Name" isTrl="Y" original="contact identifier">Identificador de contacto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="A7AE694B7ACF4F568C845BBA3E234C94" trl="Y">
+    <value column="Name" isTrl="Y" original="name">nombre</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="AF04AEFE8D914932819A7FE9DF0D8656" trl="Y">
+    <value column="Name" isTrl="Y" original="Warehouse Qty.">Cant. Almacén</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="B103893820FC4080809A97FABD49D8AF" trl="Y">
+    <value column="Name" isTrl="Y" original="identifier">Identificador</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BB033289258248078B1F36B148D04387" trl="Y">
+    <value column="Name" isTrl="Y" original="Locator out">Dirección de salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C68D5472E5C94D01AD29C3AA4946B698" trl="Y">
+    <value column="Name" isTrl="Y" original="Generic Product">Producto Generico</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C8D400B2F068460C882BB44977BEAAEF" trl="Y">
+    <value column="Name" isTrl="Y" original="Income">Ingresos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="CA8DF8BBBDA34D5AB299E14E86320BC6" trl="Y">
+    <value column="Name" isTrl="Y" original="Customer">Cliente</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D56CFF8036B04B60BFC564E21856FB3D" trl="Y">
+    <value column="Name" isTrl="Y" original="Ordered Qty.">Cant. Pedida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D5CD42F686A14DFA949052B99900D679" trl="Y">
+    <value column="Name" isTrl="Y" original="Product id">ID del Producto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D7DF368232B34336ACC82DB829649720" trl="Y">
+    <value column="Name" isTrl="Y" original="name">nombre</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="DCA048BA81224FFB95F8870E059DF69F" trl="Y">
+    <value column="Name" isTrl="Y" original="Attribute out">Atributo de salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E2614E6C77B74F888D0D7C26DFAEDA1F" trl="Y">
+    <value column="Name" isTrl="Y" original="Currency">Moneda</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E357F858B44C4203BFB7CF0B14B89626" trl="Y">
+    <value column="Name" isTrl="Y" original="Order UOM">Unidad del Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E6B0D69F192E4DEA88BFB260858C0F00" trl="Y">
+    <value column="Name" isTrl="Y" original="Unit Price">Precio Aplicado</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="E833784709A148949BAE34B8032CEAC8" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Order Doc No">Numero del documento del pedido de venta</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EDADAD64A1634FDEA50343CE1AAAF1FB" trl="Y">
+    <value column="Name" isTrl="Y" original="ProductID">ProductoID</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F0DB30CF17844041AE30FF506441B1A9" trl="Y">
+    <value column="Name" isTrl="Y" original="Quantity order out">Cantidad de pedido de salida</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F476021BCB7E486AB4EF83C0E6936CFD" trl="Y">
+    <value column="Name" isTrl="Y" original="List Price">Precio de Tarifa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F91FD25B57A74BD587AEDB091A0FD53D" trl="Y">
+    <value column="Name" isTrl="Y" original="Vendor">Proveedor</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="F9AE747C37D1488C8683771629B6BD9E" trl="Y">
+    <value column="Name" isTrl="Y" original="Sales Price List">Tarifas de venta</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FB43216FCC1A473AA41E051E567D9490" trl="Y">
+    <value column="Name" isTrl="Y" original="Contact">Contacto</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="FEC924F6B1894D2092859C85342FF705" trl="N">
+    <value column="Name" isTrl="Y" original="Price List Version">Versión de tarifa</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

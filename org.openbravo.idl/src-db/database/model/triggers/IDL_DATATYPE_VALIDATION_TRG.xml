@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER IDL_DATATYPE_VALIDATION_TRG">
+    <trigger name="IDL_DATATYPE_VALIDATION_TRG" table="IDL_FIELDS" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+/**********************************************************************************
+* Copyright (C) 2009-2010 Openbravo S.L.U.
+* Licensed under the Openbravo Commercial License version 1.0
+* You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+* or in the legal folder of this module distribution.
+***********************************************************************************/
+
+   v_checkNumber NUMBER(20);
+   --v_checkDate DATE;
+BEGIN
+
+  IF AD_isTriggerEnabled()='N' THEN RETURN;
+  END IF;
+
+  IF :NEW.DATATYPE='numeric' THEN
+     IF :NEW.DEFAULTVALUE IS NOT NULL THEN
+        IF TRIM(:NEW.DEFAULTVALUE) != ' ' THEN
+           IF LENGTH(TRIM(TRANSLATE(:NEW.DEFAULTVALUE, ' +-.0123456789',' '))) > 0 THEN
+              RAISE_APPLICATION_ERROR(-20000, '@IDL_DATATYPE_GENERAL@' || :NEW.DATATYPE);
+           ELSE
+             v_checkNumber := TO_NUMBER(:NEW.DEFAULTVALUE);
+           END IF;
+        END IF;
+     END IF;
+  ELSIF :NEW.DATATYPE='boolean' THEN
+     IF :NEW.DEFAULTVALUE IS NOT NULL THEN
+        IF TRIM(:NEW.DEFAULTVALUE) != ' ' THEN
+           IF upper(:NEW.DEFAULTVALUE)!='TRUE' AND upper(:NEW.DEFAULTVALUE)!='FALSE' THEN
+              RAISE_APPLICATION_ERROR(-20000, '@IDL_DATATYPE_GENERAL@' || :NEW.DATATYPE);
+           END IF;
+        END IF;
+     END IF;
+  --ELSIF :NEW.DATATYPE='date' THEN
+  --      v_checkDate := TO_DATE(NEW.DEFAULTVALUE, 'DD/MM/YYYY');
+  END IF;
+  
+EXCEPTION
+  WHEN OTHERS THEN
+    RAISE_APPLICATION_ERROR(-20000, '@IDL_DATATYPE_GENERAL@' || :NEW.DATATYPE);
+
+END IDL_DATATYPE_VALIDATION_TRG
+]]></body>
+    </trigger>
+  </database>

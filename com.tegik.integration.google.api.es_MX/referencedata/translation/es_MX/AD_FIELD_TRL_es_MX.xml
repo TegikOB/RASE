@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELD" version="">
+  <row id="07704D7F8EC54861B176ACC4F0803A47" trl="Y">
+    <value column="Name" original="Default Role">Rol por defecto</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

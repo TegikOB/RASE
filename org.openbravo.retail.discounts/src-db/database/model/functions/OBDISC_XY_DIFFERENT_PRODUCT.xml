@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION OBDISC_XY_DIFFERENT_PRODUCT">
+    <function name="OBDISC_XY_DIFFERENT_PRODUCT" type="VARCHAR">
+      <parameter name="p_type" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_rule_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_line_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_priceprecision" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_stdprecision" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_user_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_taxincluded" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[/************************************************************************************
+ * Copyright (C) 2012 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************/
+
+  CURSOR cur_line_candidates (pDocType VARCHAR, docId VARCHAR, ruleId VARCHAR) IS
+  select ol.pricestd, ol.line, ol.c_orderline_id as id, ol.qtyOrdered as qty, 
+         ol.gross_unit_price, ol.priceActual, ol.line_gross_amount, ol.linenetamt, ol.grosspricestd
+	 from c_orderline ol, m_offer o
+	where pDocType = 'O'
+	  and ol.c_order_id = docId
+    and o.m_offer_id = ruleId
+    AND((PRODUCT_SELECTION = 'Y'
+				AND NOT EXISTS
+				(SELECT 1
+				FROM M_OFFER_PRODUCT
+				WHERE M_OFFER_ID = o.M_OFFER_ID
+					AND M_PRODUCT_ID = ol.M_Product_ID
+				))
+				OR(PRODUCT_SELECTION = 'N'
+				AND EXISTS
+				(SELECT 1
+				FROM M_OFFER_PRODUCT
+				WHERE M_OFFER_ID = o.M_OFFER_ID
+					AND M_PRODUCT_ID = ol.M_Product_ID
+				)))
+		AND((PROD_CAT_SELECTION = 'Y'
+				AND NOT EXISTS
+				(SELECT 1
+				FROM M_PRODUCT P,
+					M_OFFER_PROD_CAT OP
+				WHERE OP.M_OFFER_ID = o.M_OFFER_ID
+					AND P.M_PRODUCT_ID = ol.M_Product_ID
+					AND OP.M_PRODUCT_CATEGORY_ID = P.M_PRODUCT_CATEGORY_ID
+				))
+				OR(PROD_CAT_SELECTION = 'N'
+				AND EXISTS
+				(SELECT 1
+				FROM M_PRODUCT P,
+					M_OFFER_PROD_CAT OP
+				WHERE OP.M_OFFER_ID = o.M_OFFER_ID
+					AND P.M_PRODUCT_ID = ol.M_Product_ID
+					AND OP.M_PRODUCT_CATEGORY_ID = P.M_PRODUCT_CATEGORY_ID
+				)))
+		union
+		select ol.pricestd, ol.line, ol.c_invoiceline_id as id, ol.qtyInvoiced as qty, 
+           ol.gross_unit_price, ol.priceActual, ol.line_gross_amount, ol.linenetamt, ol.grosspricestd
+	 from c_invoiceline ol, m_offer o
+	where pDocType = 'I'
+	  and ol.c_invoice_id = docId
+    and o.m_offer_id = ruleId
+    AND((PRODUCT_SELECTION = 'Y'
+				AND NOT EXISTS
+				(SELECT 1
+				FROM M_OFFER_PRODUCT
+				WHERE M_OFFER_ID = o.M_OFFER_ID
+					AND M_PRODUCT_ID = ol.M_Product_ID
+				))
+				OR(PRODUCT_SELECTION = 'N'
+				AND EXISTS
+				(SELECT 1
+				FROM M_OFFER_PRODUCT
+				WHERE M_OFFER_ID = o.M_OFFER_ID
+					AND M_PRODUCT_ID = ol.M_Product_ID
+				)))
+		AND((PROD_CAT_SELECTION = 'Y'
+				AND NOT EXISTS
+				(SELECT 1
+				FROM M_PRODUCT P,
+					M_OFFER_PROD_CAT OP
+				WHERE OP.M_OFFER_ID = o.M_OFFER_ID
+					AND P.M_PRODUCT_ID = ol.M_Product_ID
+					AND OP.M_PRODUCT_CATEGORY_ID = P.M_PRODUCT_CATEGORY_ID
+				))
+				OR(PROD_CAT_SELECTION = 'N'
+				AND EXISTS
+				(SELECT 1
+				FROM M_PRODUCT P,
+					M_OFFER_PROD_CAT OP
+				WHERE OP.M_OFFER_ID = o.M_OFFER_ID
+					AND P.M_PRODUCT_ID = ol.M_Product_ID
+					AND OP.M_PRODUCT_CATEGORY_ID = P.M_PRODUCT_CATEGORY_ID
+				)))
+      order by 1 desc, 2;
+  v_line_candidate cur_line_candidates%ROWTYPE;
+
+  v_docId VARCHAR(32);
+  v_x NUMBER;
+  v_y NUMBER;
+  v_distribute VARCHAR(1);
+
+  v_totalQty NUMBER;
+  v_chunks NUMBER;
+  v_unitsToCheck NUMBER;
+  v_lastLineInId VARCHAR(32);
+  v_discountedQty NUMBER;
+  v_totalPrice NUMBER;
+  v_chunksInThisGroup NUMBER;
+  v_nextY NUMBER;
+  v_checkedQty NUMBER;
+  v_newGrossAmt NUMBER;
+	v_newUnitPrice NUMBER;
+	v_newNetPrice NUMBER;
+	v_newNetAmt NUMBER;
+	v_tax VARCHAR(32);
+	v_qty NUMBER;
+	v_unitprice NUMBER;
+	v_subType VARCHAR(60);
+	v_avgPrice NUMBER;
+	v_unitsToDiscount NUMBER;
+	v_previousDiscount NUMBER;
+	v_distributed VARCHAR(1);
+	v_distributionAmt NUMBER;
+	v_distributionQty NUMBER;
+	v_priceactual NUMBER;
+  v_basePrice NUMBER;
+  v_origGrossAmt NUMBER;
+  v_origLineNetAmt NUMBER;
+  v_totalPromotion NUMBER;
+  v_displayedTotal NUMBER;
+  v_continueChecking NUMBER;
+BEGIN
+  select em_obdisc_x, em_obdisc_y,
+         em_obdisc_distribute, EM_OBDISC_Subtype, EM_OBDISC_Distribute
+    into v_x, v_y,
+         v_distribute, v_subType, v_distributed
+    from m_offer
+   where m_offer_id = p_rule_id;
+
+  if (p_type ='O') then
+		select c_order_id, c_tax_id, qtyOrdered, gross_unit_price, priceactual,
+		       line_gross_amount, linenetamt
+			into v_docId, v_tax, v_qty, v_unitprice, v_priceactual,
+			     v_origGrossAmt, v_origLineNetAmt
+			from c_orderline
+		 where c_orderline_id = p_line_id;
+	else
+   	select c_invoice_id, c_tax_id, qtyInvoiced, gross_unit_price, priceactual,
+   	       line_gross_amount, linenetamt
+			into v_docId, v_tax, v_qty, v_unitprice, v_priceactual,
+			     v_origGrossAmt, v_origLineNetAmt
+			from c_invoiceline
+		 where c_invoiceline_id = p_line_id;
+  end if;
+
+  if (p_taxIncluded = 'Y') then
+    v_basePrice := v_unitprice;
+  else
+    v_basePrice := v_priceactual;
+  end if;
+  
+  v_totalQty := 0;
+  OPEN cur_line_candidates(p_type, v_docId, p_rule_id);
+  loop
+    FETCH cur_line_candidates INTO v_line_candidate;
+    EXIT WHEN cur_line_candidates%NOTFOUND;
+    
+    v_totalQty := v_totalQty + v_line_candidate.qty;
+  end loop;
+  
+  CLOSE cur_line_candidates;
+
+  if (v_totalQty < v_x) then
+    RETURN 'N';
+  end if;
+
+  v_chunks := floor(v_totalQty / v_x);
+  v_unitsToCheck := v_chunks * v_x;
+
+  v_displayedTotal := 0;
+  v_totalPrice := 0;
+  v_lastLineInId := null;
+  OPEN cur_line_candidates(p_type, v_docId, p_rule_id);
+  loop
+    FETCH cur_line_candidates INTO v_line_candidate;
+    EXIT WHEN cur_line_candidates%NOTFOUND;
+    if (v_lastLineInId is null) then 
+			if (v_line_candidate.qty > v_unitsToCheck) then
+				v_discountedQty := v_unitsToCheck;
+			else
+				v_discountedQty := v_line_candidate.qty;
+			end if;
+			v_unitsToCheck := v_unitsToCheck - v_discountedQty;
+
+			if (v_subType = 'AVG' or v_distributed = 'Y') then
+				 -- Remove adjustments done by this rule in previous lines
+			  if (p_type = 'O') then
+				 select coalesce(sum(amtoffer), 0)
+					 into v_previousDiscount
+					 from c_orderline_offer
+					where c_orderline_id = v_line_candidate.id
+						and m_offer_id = p_rule_id;
+				else 
+				 select coalesce(sum(amtoffer), 0)
+					 into v_previousDiscount
+					 from c_invoiceline_offer
+					where c_invoiceline_id = v_line_candidate.id
+						and m_offer_id = p_rule_id;
+				end if;
+
+        if (p_taxIncluded = 'Y') then  
+				  v_totalPrice := v_totalPrice + (v_discountedQty * (v_line_candidate.gross_unit_price + v_previousDiscount));
+				else
+				  v_totalPrice := v_totalPrice + (v_discountedQty * (v_line_candidate.priceActual + v_previousDiscount));
+				end if;
+			end if;
+
+			if (v_unitsToCheck = 0) then
+				v_lastLineInId := v_line_candidate.id;
+			end if;
+		else
+		  -- after last line. If current line is in this position, it is not in the promotion
+		  -- so can participate in a new one.
+		  if (v_line_candidate.id = p_line_id) then
+        CLOSE cur_line_candidates;
+        return 'Y';
+		  end if;
+	  end if;
+  end loop;
+  CLOSE cur_line_candidates;
+
+  v_unitsToDiscount := v_chunks * (v_x - v_y);
+  if (v_subType = 'AVG') then
+    v_unitsToCheck := v_chunks * v_x;
+    v_avgPrice := v_totalPrice / v_unitsToCheck;
+  end if;
+
+  v_nextY := v_x;
+  v_checkedQty := 0;
+  v_distributionQty := 0;
+  v_distributionAmt := 0;
+  OPEN cur_line_candidates(p_type, v_docId, p_rule_id);
+  loop
+    FETCH cur_line_candidates INTO v_line_candidate;
+    EXIT WHEN cur_line_candidates%NOTFOUND;
+    v_continueChecking := 0;
+    v_checkedQty := v_checkedQty + v_line_candidate.qty;
+    -- CHEAPEST
+    if (v_subType = 'CHEAPEST') then
+			if (v_checkedQty < v_nextY) then
+				-- This line participates in the discount, but has not any discount applied,
+				-- prevent to apply another discount in cascade
+				--CLOSE cur_line_candidates;
+				--RETURN 'N';
+				v_continueChecking := 1;
+			end if;
+
+			if (v_continueChecking = 0) then
+
+			v_chunksInThisGroup := 0;
+			loop
+				exit when v_nextY > v_checkedQty;
+				
+				v_chunksInThisGroup := v_chunksInThisGroup + (v_x - v_y);
+				v_nextY := v_nextY + v_x;
+
+			end loop;
+
+
+      if (v_distributed = 'Y') then
+        if (p_taxIncluded = 'Y') then
+          v_distributionAmt := v_distributionAmt + (v_line_candidate.grosspricestd  * v_chunksInThisGroup);
+        else
+          v_distributionAmt := v_distributionAmt + (v_line_candidate.pricestd * v_chunksInThisGroup);
+        end if;
+
+        v_distributionQty := v_distributionQty + v_chunksInThisGroup;
+        if (v_line_candidate.id = p_line_id) then
+          if (v_chunksInThisGroup > 0) then
+            if (p_taxIncluded = 'Y') then
+              v_displayedTotal := v_line_candidate.grosspricestd * v_chunksInThisGroup;
+            else
+              v_displayedTotal := v_line_candidate.pricestd * v_chunksInThisGroup;
+            end if;
+          else
+            v_displayedTotal := 0;
+          end if;
+        end if;
+			elsif (v_line_candidate.id = p_line_id) then
+				if (v_chunksInThisGroup > 0) then
+          if (p_taxIncluded = 'Y') then
+						v_newGrossAmt := round(v_line_candidate.gross_unit_price * (v_line_candidate.qty - v_chunksInThisGroup), p_stdprecision);
+						v_newUnitPrice := round(v_newGrossAmt / v_line_candidate.qty, p_priceprecision);
+
+						v_newNetPrice := c_get_net_price_from_gross(v_tax, v_newGrossAmt, v_newGrossAmt, p_priceprecision, v_qty);
+						v_newNetAmt := round(v_newNetPrice * v_qty, p_stdprecision);
+            v_totalPromotion := v_line_candidate.line_gross_amount - v_newGrossAmt;
+					else
+					  v_newNetAmt := round(v_line_candidate.priceactual * (v_line_candidate.qty - v_chunksInThisGroup), p_stdprecision);
+            v_newNetPrice := round(v_newNetAmt / v_line_candidate.qty, p_priceprecision);
+            v_totalPromotion := v_line_candidate.linenetamt - v_newNetAmt;
+					end if;
+					
+			    M_PROMOTION_ADD(p_type, p_line_id, p_rule_id, p_taxIncluded, v_newUnitPrice, v_newGrossAmt, v_newNetPrice, v_newNetAmt, v_totalPromotion, v_totalPromotion, v_basePrice, p_user_id);
+				end if;
+				CLOSE cur_line_candidates;
+				return 'N';
+			end if;
+			end if;
+		else --AVG
+
+      if (v_line_candidate.qty > v_unitsToCheck) then
+        v_discountedQty := v_unitsToCheck;
+      else
+        v_discountedQty := v_line_candidate.qty;
+      end if;
+      v_unitsToCheck := v_unitsToCheck - v_discountedQty;
+      if (v_line_candidate.id = p_line_id) then
+        if (p_taxIncluded = 'Y') then
+					v_newGrossAmt := round(v_unitPrice * v_qty - (v_discountedQty * v_unitPrice * v_unitsToDiscount * v_avgPrice / v_totalPrice), p_stdprecision);
+					v_newUnitPrice := round(v_newGrossAmt / v_line_candidate.qty, p_priceprecision);
+
+					v_newNetPrice := c_get_net_price_from_gross(v_tax, v_newGrossAmt, v_newGrossAmt, p_priceprecision, v_qty);
+					v_newNetAmt := round(v_newNetPrice * v_qty, p_stdprecision);
+          v_totalPromotion := v_origGrossAmt - v_newGrossAmt;
+				else
+					v_newNetAmt := round(v_priceactual * v_qty - (v_discountedQty * v_priceactual * v_unitsToDiscount * v_avgPrice / v_totalPrice), p_stdprecision);
+          v_newNetPrice := round(v_newNetAmt / v_line_candidate.qty, p_priceprecision);
+          v_totalPromotion := v_origLineNetAmt - v_newNetAmt;
+				end if;
+
+        M_PROMOTION_ADD(p_type, p_line_id, p_rule_id, p_taxIncluded, v_newUnitPrice, v_newGrossAmt, v_newNetPrice, v_newNetAmt, v_totalPromotion, v_totalPromotion, v_basePrice, p_user_id);
+      end if;
+    end if;
+
+    
+    if (v_lastLineInId is not null and v_lastLineInId = v_line_candidate.id) then
+      exit;
+    end if;
+  end loop;
+  CLOSE cur_line_candidates;
+
+  if not (v_subtype = 'CHEAPEST' and v_distribute ='Y') then
+     RETURN 'N';
+  end if;
+
+  -- distributed
+  v_unitsToDiscount := v_chunks * (v_x - v_y);
+  if (p_taxIncluded = 'Y') then
+		v_newGrossAmt := round(v_qty * v_unitPrice * (1 - ((v_distributionAmt * v_unitsToDiscount) / (v_totalPrice * v_distributionQty))), p_stdprecision);
+		v_newUnitPrice := round(v_newGrossAmt / v_qty, p_priceprecision);
+
+		v_newNetPrice := c_get_net_price_from_gross(v_tax, v_newGrossAmt, v_newGrossAmt, p_priceprecision, v_qty);
+		v_newNetAmt := round(v_newNetPrice * v_qty, p_stdprecision);
+    v_totalPromotion := v_origGrossAmt - v_newGrossAmt;
+	else
+   v_newNetAmt := round(v_qty * v_priceactual * (1 - (v_distributionAmt * v_unitsToDiscount / (v_totalPrice * v_distributionQty))), p_stdprecision);
+   v_newNetPrice := round(v_newNetAmt / v_qty, p_priceprecision);
+   v_totalPromotion := v_origLineNetAmt - v_newNetAmt;
+	end if;
+
+  M_PROMOTION_ADD(p_type, p_line_id, p_rule_id, p_taxIncluded, v_newUnitPrice, v_newGrossAmt, v_newNetPrice, v_newNetAmt, v_totalPromotion, v_displayedTotal, v_basePrice, p_user_id);
+
+  RETURN 'N';
+END OBDISC_XY_DIFFERENT_PRODUCT
+]]></body>
+    </function>
+  </database>

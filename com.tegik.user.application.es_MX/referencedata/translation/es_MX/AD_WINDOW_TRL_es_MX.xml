@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="54AE252A40C34DA285FC48DA94EB3847" trl="Y">
+    <value column="Name" original="Navigation Bar Components">Componentes de Barra de Navegacion</value>
+    <value column="Description" original="Navigation Bar Components">Componentes de Barra de Navegación</value>
+    <value column="Help" original="Makes it possible to define components which are shown in the navigation bar in the main layout of the Openbravo user interface.">Permite definir los componentes que se muestran en la barra de navegación en 
+el diseño principal de la interfaz de usuario de Openbravo.</value>
+  </row>
+  <row id="7E72F3A16C704449BC50FCE1512C3805" trl="Y">
+    <value column="Name" original="Grid Configuration at Window/Tab/Field Level">Configuración de red a nivel Ventana / Solapa / Campo</value>
+    <value column="Description" original="Grid Configuration at Tab and Field level">configuración de red a nivel de tabulación y campo</value>
+    <value column="Help" original="Grid Configuration at Tab and Field level">configuración de red a nivel de tabulación y campo</value>
+  </row>
+  <row id="EBA40241D46D4FA4A24E4A09C61994AA" trl="Y">
+    <value column="Name" original="View Implementation">Implementacion de Vista</value>
+    <value column="Description" original="A view is shown in the main user interface, the view implementation defines the javaclass responsible for generating the client-side javascript.">Una vista se muestra en el interfaz de usuario principal. La implementacion 
+de vista define la clase Java encargada de generar el Javascript del lado 
+del cliente.</value>
+    <value column="Help" original="A view is shown in the user interface as a tab in the multi-tab interface or as a popup. The view can be anything from a grid, form or a popup window. When the view is shown in the multi-tab interface then it must be a Smartclient canvas.&#10;The view implementation defines the component which is capable of generating the client side javascript to be shown in the browser. A view implementation is a java class which extends the org.openbravo.client.kernel.BaseTemplateComponent class.">Una vista se muestra en la interfaz de usuario como una pestaña en la 
+interfaz de varias fichas o como una ventana emergente. La vista puede ser 
+cualquier cosa, desde una cuadrícula, forma o una ventana emergente. Cuando 
+se muestra la vista de la interfaz de varias fichas, entonces debe ser una 
+implementación de vista SmartClient canvas.The define el componente que es 
+capaz de generar el lado del cliente javascript que se muestra en el 
+navegador. Una implementación de vista es una clase Java que amplía la clase 
+org.openbravo.client.kernel.BaseTemplateComponent.</value>
+  </row>
+  <row id="FD487747E8A2425B8BAE570FCA569D66" trl="Y">
+    <value column="Name" original="Grid Configuration at System Level">Configuración de la red a nivel de campo</value>
+    <value column="Description" original="Define the Grid Configuration at System Level">Defina la configuración de la red a nivel de sistema</value>
+    <value column="Help" original="Define the Grid Configuration at System Level">Defina la configuración de la red a nivel de sistema</value>
+  </row>
+  <row id="FF8081813157AED2013157BE93460020" trl="Y">
+    <value column="Name" original="Window Personalization">Personalización de Ventana</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

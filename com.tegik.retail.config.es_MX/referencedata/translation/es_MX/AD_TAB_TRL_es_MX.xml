@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="09647409484B4587B828D815E94CFD35" trl="Y">
+    <value column="Name" original="Cash Management Events">Eventos de Gestión de Caja</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Cash Management Events">Eventos de Gestión de Caja</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Define events for cash management in POS. These events can be shared between different terminal types and terminals.&#10;In the case of Close events, they are directly matched to terminal payment types from the payment type. In and Out events, are matched with terminal payment types based on their currency and payment method; so an event will be able to be used from all terminal payment types in the same Organization tree having the same currency and payment method than the event.">Definición de los eventos para la Gestión de Caja en el TPV. Estos eventos 
+pueden ser compartidos por diferentes tipos de terminal y terminales.En el 
+caso de los eventos de Cierre, se asocian directamente a los tipos de pago 
+del terminal desde éstos. Los eventos de Entrada y Retirada se asocian con 
+los tipos de terminal en base a sus moendas y métodos de pago, de manera que 
+se podrán usar por todos los tipos de terminal en el mismo árbol de 
+organizaciones que tengan la misma moneda y método de pago que el evento.</value>
+  </row>
+  <row id="09EF738DE00C4500819EC13BB48DEAE2" trl="Y">
+    <value column="Name" original="Assortment">Lista de Productos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Definition of the assortment">Definición de la variedad</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Definition of the assortment">Definición de la variedad</value>
+  </row>
+</compiereTrl>

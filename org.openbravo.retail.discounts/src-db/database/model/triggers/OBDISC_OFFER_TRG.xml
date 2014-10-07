@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+  <database name="TRIGGER OBDISC_OFFER_TRG">
+    <trigger name="OBDISC_OFFER_TRG" table="M_OFFER" fires="before" insert="true" update="true" delete="false" foreach="row">
+      <body><![CDATA[
+/************************************************************************************
+ * Copyright (C) 2012 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************/
+v_count NUMBER;
+BEGIN
+  IF AD_isTriggerEnabled()='N' THEN RETURN;
+  END IF;
+
+  if :new.m_offer_type_id = '7B49D8CC4E084A75B7CB4D85A6A3A578' and :new.em_obdisc_amt is null then --Discretionary Fixed Amount
+    RAISE_APPLICATION_ERROR(-20000, '@OBDISC_MandatoryAmount@');
+  end if;
+
+  if :new.m_offer_type_id = '8338556C0FBF45249512DB343FEFD280' and :new.em_obdisc_percentage is null then --Discretionary Fixed Percentage
+    RAISE_APPLICATION_ERROR(-20000, '@OBDISC_MandatoryPercentage@');
+  end if;
+
+  -- check currency is set if price is present
+  if :new.em_obdisc_price is not null or :new.em_obdisc_amt is not null then
+    if :new.em_obdisc_c_currency_id is null then
+      RAISE_APPLICATION_ERROR(-20000, '@OBDISC_MandatoryCurrency@');
+    end if;
+  else
+    -- if there is no price, currency shouldn't be there
+    :new.em_obdisc_c_currency_id := null;
+  end if;
+
+
+END OBDISC_OFFER_TRG
+]]></body>
+    </trigger>
+  </database>

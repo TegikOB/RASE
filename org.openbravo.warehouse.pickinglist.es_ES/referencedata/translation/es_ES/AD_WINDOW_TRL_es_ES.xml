@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_WINDOW" version="">
+  <row id="5336ACB5F0CF46F3AB3D147C273AF01F" trl="N">
+    <value column="Name" isTrl="N" original="PickingList Pick and Edit">PickingList Pick and Edit</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="BDC6A221B4AD4D09B660F9E285991B79" trl="N">
+    <value column="Name" isTrl="Y" original="Warehouse Picking List">Preparación de Pedidos</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

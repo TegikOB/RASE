@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_TEXTINTERFACES" version="">
+  <row id="2F320231B36448D49129CAC8F59EB844" trl="N">
+    <value column="Text" isTrl="N" original="SALE">SALE</value>
+  </row>
+  <row id="57472697073C4166B7434C84A74D98EE" trl="N">
+    <value column="Text" isTrl="N" original="WITHDRAWAL">WITHDRAWAL</value>
+  </row>
+</compiereTrl>

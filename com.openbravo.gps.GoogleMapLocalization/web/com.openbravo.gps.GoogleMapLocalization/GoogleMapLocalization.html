@@ -1,0 +1,333 @@
+<!--
+ *************************************************************************
+ * The contents of this file are subject to the Openbravo  Public  License
+ * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+ * Version 1.1  with a permitted attribution clause; you may not  use this
+ * file except in compliance with the License. You  may  obtain  a copy of
+ * the License at http://www.openbravo.com/legal/license.html
+ * Software distributed under the License  is  distributed  on  an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific  language  governing  rights  and  limitations
+ * under the License.
+ * The Original Code is Openbravo ERP.
+ * The Initial Developer of the Original Code is Openbravo SLU
+ * All portions are Copyright (C) 2011 Openbravo SLU
+ * All Rights Reserved.
+ * Contributor(s):  ______________________________________.
+ ************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps JavaScript API v3 Example: Map Simple</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        html, body, #map_canvas {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        #contextMenu {
+            position: absolute;
+        
+            min-width: 100px;
+            z-index: 1000;
+            background: #fff;
+            border-top: solid 1px #CCC;
+            border-left: solid 1px #CCC;
+            border-bottom: solid 1px #676767;
+            border-right: solid 1px #676767;
+            padding: 0px;
+            margin: 0px;
+            display:none;
+        }
+        
+        #contextMenu a {
+            color: #000;
+            text-decoration: none;
+            display: block;
+            line-height: 22px;
+            height: 22px;
+            padding: 1px 10px;
+        }
+        
+        #contextMenu li {
+            list-style: none;
+            padding: 1px;
+            margin: 0px;
+        }
+        
+        #contextMenu li.hover a {
+            background-color: #A7C4FA;
+        }
+        
+        #contextMenu li.separator {
+            border-top: solid 1px #ccc;
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script src="mapsv3/smartinfowindow.js"></script>
+    <script type="text/javascript">
+    var OB = top.OB, isc = top.isc;
+    isc.addProperties(Array, top.Array);
+    var map;
+    var markers = [];
+    var infowindows = [];
+
+    var localizaciones = []; 
+    
+    var record = top.OB.OBGMPSL_selectedRecord;
+    var tabId = top.OB.OBGMPSL_selectedTabId;
+    
+    function initialize() {
+        var myOptions = {
+          zoom: 8,
+          center: new google.maps.LatLng(-30, 141),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            myOptions);
+        
+        geolocalizame();
+        
+        createRightClickMenu();
+        
+        //google.maps.event.addListener(map, 'click', function(event) {
+            //registerLocation(event.latLng);
+        //});
+      }
+   
+    function search(buttonType) {
+        var addressField = document.getElementById('search_address');
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode(
+            {'address': addressField.value}, 
+            function(results, status) { 
+                if (status == google.maps.GeocoderStatus.OK) {
+                    
+                    var loc = results[0].geometry.location;
+                    var location = new google.maps.LatLng(loc.lat(), loc.lng());
+                    
+                    var bounds = results[0].geometry.bounds;
+                    
+                    map.fitBounds(bounds);
+                    
+                    if (buttonType ==='register') {
+                        registerLocation(location)
+                    }
+                } 
+                else {
+                    alert("Not found: " + status); 
+                } 
+            }
+        );
+    };
+    
+    function registerLocation(event) {
+        var data = [];
+        
+        data.push(record.id);
+        data.push(tabId);
+        data.push(event.lat().toString());
+        data.push(event.lng().toString());
+        data.push(record.organization);
+        data.push(record.client);
+        data.push(record._identifier);
+        
+        var callback = function(response, data, request) {
+            //infowindow.open(map);
+        }
+        
+        var address;
+        
+        var geocoderAddress = new google.maps.Geocoder();
+        var latlng = new google.maps.LatLng(event.lat(), event.lng());
+        geocoderAddress.geocode({'latLng': latlng},function(data,status){
+            if(status == google.maps.GeocoderStatus.OK){
+                address = data[0].formatted_address; //this is the full address
+                
+                makeMarker(event, address);
+                //for(var i=0; i < data[0].address_components.length; i++){
+                    
+                //}
+            }
+        })
+        
+        top.OB.RemoteCallManager.call('com.openbravo.gps.GoogleMapLocalization.process.RegisterLocationActionHandler', {data: data}, {}, callback);
+    }
+    
+    function makeMarker(event, address) {
+        
+        var i;
+        
+        for (i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+            infowindows[i].close();
+        }
+        
+        var markerOptions = {map: map, position: new google.maps.LatLng(event.lat(), event.lng())};
+        var marker = new google.maps.Marker(markerOptions);
+        markers.push(marker);
+        
+        var infowindow = new google.maps.InfoWindow();
+        
+        var content = '<div style="text-align: center; font-size:15px;"><b>' + record._identifier+ '</b></div></br>';
+        content = content + '<div id="content">' + OB.I18N.getLabel('obgmpsl_Localization_Registered') + '</div></br>'
+        content = content + '<div><i><b>' + address + '</b></i></div>'
+        content = content + '<div>' + OB.I18N.getLabel('obgmpsl_Localization_Latitude') + ': <b>' + event.lat().toString() + '</b></div>'
+        content = content + '<div>' + OB.I18N.getLabel('obgmpsl_Localization_Longitude') + ': <b>' + event.lng().toString() + '</b></div>';
+    
+        infowindow.setContent(content);
+        infowindow.setPosition(marker.getPosition());
+        
+        infowindows.push(infowindow);
+        
+        infowindow.open(map);
+
+        google.maps.event.addListener(marker, 'click', function(e) {
+            
+            infowindow.close();
+            infowindow.open(map);
+        });
+     }
+    
+    function createRightClickMenu() {
+        
+        // Create the context menu element
+        var contextMenu = $(document.createElement('ul'))
+            .attr('id', 'contextMenu');
+
+        // Fill our context menu with links
+        contextMenu.append(
+            '<li><a href="#zoomIn">' + OB.I18N.getLabel('obgmpsl_Localization_ZoomIn') + '</a></li>' +
+            '<li><a href="#zoomOut">' + OB.I18N.getLabel('obgmpsl_Localization_ZoomOut') + '</a></li>' +
+            '<li><a href="#centerHere">' + OB.I18N.getLabel('obgmpsl_Localization_CenterMap') + '</a></li>' + 
+            '<li><a href="#registerLocation">' + OB.I18N.getLabel('obgmpsl_Localization_RegisterLocation') + '</a></li>'
+        );
+
+        // Disable the browser context menu on our context menu
+        contextMenu.bind('contextmenu', function() { return false; });
+
+        // Append it to the map object
+        $(map.getDiv()).append(contextMenu);
+        
+       // Keep track of where you clicked
+        var clickedLatLng;
+
+        // Display and position the menu 
+        google.maps.event.addListener(map, 'rightclick', function(e)
+                {
+                    // start buy hiding the context menu if its open
+                    contextMenu.hide();
+
+                    var mapDiv = $(map.getDiv()),
+                        x = e.pixel.x,
+                        y = e.pixel.y;
+
+                    // save the clicked location
+                    clickedLatLng = e.latLng;
+
+                    // adjust if clicked to close to the edge of the map
+                    if ( x > mapDiv.width() - contextMenu.width() )
+                        x -= contextMenu.width();
+
+                    if ( y > mapDiv.height() - contextMenu.height() )
+                        y -= contextMenu.height();
+
+                    // Set the location and fade in the context menu
+                    contextMenu.css({ top: y, left: x }).fadeIn(100);
+                });
+        
+        // Set some events on the context menu links
+        contextMenu.find('a').click( function()
+        {
+            // fade out the menu
+            contextMenu.fadeOut(75);
+
+            var action = $(this).attr('href').substr(1);
+
+            switch ( action )
+            {
+                case 'zoomIn':
+                    map.setZoom(
+                        map.getZoom() + 1
+                    );
+                    map.panTo(clickedLatLng);
+                    break;
+
+                case 'zoomOut':
+                    map.setZoom(
+                        map.getZoom() - 1
+                    );
+                    map.panTo(clickedLatLng);
+                    break;
+
+                case 'centerHere':
+                    map.panTo(clickedLatLng);
+                    break;
+                    
+                case 'registerLocation':
+                    registerLocation(clickedLatLng);
+                    break;
+            }
+
+            return false;
+        });
+
+        //Hover events for effect
+        contextMenu.find('a').hover( function() {
+            $(this).parent().addClass('hover');
+        }, function() {
+            $(this).parent().removeClass('hover');
+        });
+
+        // Hide context menu on some events
+        $.each('click dragstart zoom_changed maptypeid_changed'.split(' '), function(i,name){
+            google.maps.event.addListener(map, name, function(){ contextMenu.hide() });
+        });
+    }
+    
+    function pedirPosicion(pos) {
+        var centro = new google.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
+        map.setCenter(centro); //pedimos que centre el mapa..
+        map.setMapTypeId(google.maps.MapTypeId.ROADMAP); //y lo volvemos un mapa callejero
+        //alert("¡Hola! Estas en : "+pos.coords.latitude+ ","+pos.coords.longitude+" Rango de localización de +/- "+pos.coords.accuracy+" metros");
+     }
+ 
+     function geolocalizame(){
+           navigator.geolocation.getCurrentPosition(pedirPosicion);
+     };
+
+     google.maps.event.addDomListener(window, 'load', initialize);
+      
+    </script>
+  </head>
+  <body>
+    <table>
+        <tbody>
+            <tr>
+                <td><input type="text" id="search_address" value="" style="left: 100px; z-index:200; position:relative;"/></td>
+                <td><button onclick="search('search');" style="left: 100px; z-index:200; position:relative;">Search</button></td>
+                <td><button onclick="search('register');" style="left: 100px; z-index:200; position:relative;">Register</button></td>
+                <td><button onclick="geolocalizame();" style="left: 100px; z-index:200; position:relative;">Go to my location</button></td>
+            </tr>
+            <tr>    
+                <td><div id="map_canvas" style="width:1000px; height:750px; position:absolute; top: 0px; overflow-x: hidden; overflow-y: hidden"></div></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <ul id="contextMenu">
+        <li><a href="#zoomIn"></a></li>
+        <li><a href="#zoomOut"></a></li>
+        <li><a href="#centerHere"></a></li>
+        <li><a href="#registerLocation"></a></li>
+    </ul>
+    
+  </body>
+</html>

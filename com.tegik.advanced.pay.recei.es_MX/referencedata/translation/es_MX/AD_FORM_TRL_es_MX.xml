@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FORM" version="">
+  <row id="4201E189318E443297F6B23F03CABB9D" trl="Y">
+    <value column="Name" original="AccountTransactions">AccountTransactions</value>
+    <value column="Description" original="Transactions associated with the Financial Account">Las transacciones relacionadas con la cuenta financiera</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

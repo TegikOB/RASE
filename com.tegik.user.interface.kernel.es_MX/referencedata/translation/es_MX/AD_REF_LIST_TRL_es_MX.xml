@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="632BBEE009DF4704996CCDC0B8C46FDA" trl="Y">
+    <value column="Name" original="Freemarker">Freemarker</value>
+    <value column="Description" original="Adds the Freemarker template language to the system">Añade el lenguaje de plantillas Freemarker al sistema</value>
+  </row>
+  <row id="6B6540830B6C4EE2ACAEA0997E96254A" trl="Y">
+    <value column="Name" original=""/>
+    <value column="Description" original="Kernel Component">Componente de Núcleo</value>
+  </row>
+</compiereTrl>

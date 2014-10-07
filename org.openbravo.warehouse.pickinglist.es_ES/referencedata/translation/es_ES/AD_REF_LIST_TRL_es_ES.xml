@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REF_LIST" version="">
+  <row id="05E548F9987145BDB48752588BEEDEEA" trl="N">
+    <value column="Name" isTrl="Y" original="Draft">Borrador</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="0C706BE398144F5E98B5552012EF2AF0" trl="N">
+    <value column="Name" isTrl="Y" original="Not group">No agrupar</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="1080354EA5A84B3FB94D5F1642586AB7" trl="N">
+    <value column="Name" isTrl="Y" original="Picking list">Preparación Pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="6FA412A8BF6D4E6DB1047F7FA9415280" trl="N">
+    <value column="Name" isTrl="Y" original="Group by business partner">Agrupar por tercero</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="8720CE1B6EFA433AA29243CD0F896A86" trl="N">
+    <value column="Name" isTrl="Y" original="Completed">Completado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="ABC5E57A6EA84060A374E553F357476C" trl="N">
+    <value column="Name" isTrl="Y" original="Group Picking List">Agrupar preparación de pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="C5B742BD43F04CEB9A32D5AB67D672FA" trl="N">
+    <value column="Name" isTrl="Y" original="Group by organization">Agrupar por organización</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="DE22183005C949F0BFB67A7660DCCA65" trl="N">
+    <value column="Name" isTrl="Y" original="Canceled">Cancelado</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

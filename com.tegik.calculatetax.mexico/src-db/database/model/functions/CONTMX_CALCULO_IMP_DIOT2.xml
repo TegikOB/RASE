@@ -1,0 +1,619 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION CONTMX_CALCULO_IMP_DIOT2">
+    <function name="CONTMX_CALCULO_IMP_DIOT2" type="NULL">
+      <parameter name="p_pinstance_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- variables that will contain the parameters deriving from the AD_PInstance table
+
+
+
+  v_bpartner VARCHAR(60);
+  v_rfc VARCHAR(20);
+  v_Nofiscal VARCHAR(30); 
+  v_pais VARCHAR(32);
+v_nacionalidad VARCHAR(32);
+  v_nombre VARCHAR(30);
+  v_diaInicio DATE; -- dua de inicio
+  v_diaFinal DATE; --dia final
+  v_RECORD RECORD; -- cursor variable to loop through all parameters
+  v_User VARCHAR2(32);
+  v_Record_ID VARCHAR2(32);
+  v_Client VARCHAR2(32);
+  v_ResultStr VARCHAR(2000):=''; -- will contain text describing the stage the stored procedure is in
+  v_Message VARCHAR(60000):=''; -- will contain the final message to be logged
+  Cur_Parameter RECORD;
+  v_portercero RECORD;
+  v_porconcepto RECORD;
+  v_porproducto RECORD;
+  v_org_id VARCHAR(32);
+  v_reporte_id VARCHAR(32);
+v_reporte2_id VARCHAR(32);
+v_reporte3_id VARCHAR(32);
+v_reporte4_id VARCHAR(32);
+
+  v_seqNo NUMBER:=0;
+    v_porcentajesiniva NUMERIC=0;
+  v_total NUMBER:=0;
+  por_impuesto NUMBER:=0;
+v_aceptar RECORD;
+
+--variables para el segundo nivel
+v_baseImpuestoProducto NUMERIC=0;
+v_ImpuestoProducto  NUMERIC=0;
+v_totalpagadoProd NUMERIC=0;
+v_totalapagarProd NUMERIC=0;
+v_totalpagado_sinivaProd NUMERIC=0;
+v_totalapagar_sinivaProd NUMERIC=0;
+
+ BEGIN
+
+    -- Obtenemos los parametros  
+    v_ResultStr:='ReadingParameters';
+    FOR Cur_Parameter IN
+      (SELECT i.Record_ID, i.AD_User_ID,
+        i.AD_Client_ID, p.ParameterName, p.P_String, p.P_Number, p.P_Date
+        FROM AD_PInstance i
+          LEFT JOIN AD_PInstance_Para p
+             ON i.AD_PInstance_ID=p.AD_PInstance_ID
+               WHERE i.AD_PInstance_ID=p_PInstance_ID
+                ORDER BY p.SeqNo)
+    LOOP
+      v_User:=Cur_Parameter.AD_User_ID;
+      v_Client:=Cur_Parameter.AD_Client_ID;
+      v_Record_ID:=Cur_Parameter.Record_ID; -- save the m_productprice primary key
+      IF (Cur_Parameter.ParameterName='dia_inicio') THEN
+        v_diaInicio:=Cur_Parameter.P_Date;
+      END IF;
+      IF (Cur_Parameter.ParameterName='dia_final') THEN
+        v_diaFinal:=Cur_Parameter.P_Date;
+      END IF;
+       IF (Cur_Parameter.ParameterName='ad_org_id') THEN
+        v_org_id:=Cur_Parameter.P_String;
+      END IF;
+    END LOOP;
+ 
+  BEGIN --BODY
+
+--Es el numero de Folio
+ SELECT COUNT(contmx_diot_encab_id)
+	FROM contmx_diot_encab
+		INTO v_seqno;
+ 
+--es el ID de la primer nivel
+v_reporte_id =get_uuid();
+
+
+--insertamos en el primer nivel (Ventana Encabezado)
+INSERT INTO contmx_diot_encab( contmx_diot_encab_id , ad_client_id,ad_org_id,isactive,createdby,updatedby,
+  name,datei,datef,seq,c_currency_id,datecalculo)
+  VALUES (v_reporte_id,v_Client,v_org_id,'Y',v_User,v_User,
+  'DIOT',v_diaInicio,v_diaFinal, 'DIOT' || (10000+ v_seqNo), '130', now());
+
+
+
+--hacemos el loop para obtener el id de cada tercero de una organizacion
+FOR v_portercero IN (SELECT c_bpartner_id, em_contmx_tercero AS tipoproveedor, 
+                     em_contmx_operacion AS tipooperacion FROM c_bpartner AS bp
+			WHERE bp.Ad_Client_ID =  v_Client 
+			AND bp.em_contmx_tercero IS NOT NULL )
+LOOP
+
+
+
+			
+--dependiendo del tipo de proveedor se van a asignar los primeros variables 
+IF(v_portercero.tipoproveedor = '04' OR v_portercero.tipoproveedor = '05')THEN 
+
+  --obtenemos el rfc 
+  SELECT taxid
+	FROM c_bpartner 
+		WHERE c_bpartner_id=v_portercero.c_bpartner_id 
+			INTO v_rfc ;
+END IF;
+
+IF(v_portercero.tipoproveedor = '05' )THEN 
+
+  --obtenemos el pais de residencia del tercero
+  SELECT name, em_contmx_nofiscal
+	FROM c_bpartner 
+		WHERE c_bpartner_id=v_portercero.c_bpartner_id 
+			INTO v_nombre, v_nofiscal ; 
+			
+  SELECT p.c_country_id, d.em_contmx_nacionalidad FROM C_BPARTNER_LOCATION AS d 
+	INNER JOIN C_LOCATION AS l ON l.c_location_id=d.c_location_id 
+	INNER JOIN C_REGION as r ON r.c_region_id=l.c_region_id
+	INNER JOIN C_COUNTRY AS p ON p.c_country_id=r.c_country_id
+		WHERE d.c_bpartner_id=v_portercero.c_bpartner_id
+			LIMIT 1
+			INTO v_pais, v_nacionalidad;
+						
+END IF;
+
+
+--obtenemos el id del segundo nivel para asocialos
+v_reporte2_id =get_uuid();
+v_total=0;
+
+
+--Insertamos en el segundo nivel de DIOT (Ventana Terceros)
+INSERT INTO contmx_diot( contmx_diot_id,contmx_diot_encab_id,ad_client_id,ad_org_id,isactive,createdby,updatedby,name,
+c_bpartner_id, tercero, operacion, rfc, fiscal,extranjero, c_country_id, nacionalidad)
+VALUES (v_reporte2_id, v_reporte_id, v_Client,v_org_id,'Y',v_User,v_User,'DIOT',
+v_portercero.c_bpartner_id,v_portercero.tipoproveedor, v_portercero.tipooperacion, v_rfc, v_nofiscal,v_nombre, v_pais, v_nacionalidad );
+
+
+
+
+v_nombre=NULL;
+v_nofiscal=NULL;
+v_pais=NULL;
+v_nacionalidad=NULL;
+
+
+
+	--Segundo ciclo para obtener todas las facturas de un tercero
+	FOR v_RECORD IN (SELECT fp.fin_payment_id,
+			C_CURRENCY_CONVERT_PRECISION(inv.grandtotal, inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS totalconiva,
+			inv.c_invoice_id,
+			inv.dateinvoiced,
+			C_CURRENCY_CONVERT_PRECISION(inv.totallines, inv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,inv.ad_org_id,'A') AS totalsiniva,
+			inv.c_invoice_id, 
+			inv.c_bpartner_id,
+			inv.ad_org_id,
+			C_CURRENCY_CONVERT_PRECISION( fpdv.paidamt, fpdv.C_CURRENCY_ID ,'130' ,fp.paymentdate,'S',v_Client ,fpdv.ad_org_id,'A') AS paidamt,
+			fp.paymentdate, fpdv.C_CURRENCY_ID  
+			       FROM fin_payment AS fp
+					INNER JOIN fin_payment_detail_v AS fpdv ON fp.fin_payment_id = fpdv.fin_payment_id 
+					INNER JOIN fin_payment_sched_inv_v AS fps ON fps.fin_payment_sched_inv_v_id = fpdv.fin_payment_sched_inv_v_id 
+					INNER JOIN c_invoice AS inv ON inv.c_invoice_id = fps.c_invoice_id	
+						WHERE fp.status IN ('PWNC', 'PPM')
+						AND fp.isreceipt = 'N'
+						AND (v_org_id = inv.ad_org_id OR v_org_id='0') 
+						AND v_diaInicio <= fp.paymentdate
+						AND inv.docstatus = 'CO'
+						AND v_diaFinal >=fp.paymentdate
+						AND inv.c_bpartner_id=v_portercero.c_bpartner_id)
+				
+	
+	LOOP
+	--Obtener la cantidad sin iva
+	v_porcentajesiniva =v_RECORD.totalsiniva/v_RECORD.totalconiva;
+	
+	--Generar el id para el tercer nivel 
+	v_reporte3_id=get_uuid();
+
+	--Insertamos en el tercer nivel (Ventana  Pagos)
+	INSERT INTO contmx_diot_des (contmx_diot_des_id,contmx_diot_id,ad_client_id,ad_org_id,isactive,createdby,updatedby ,
+	fechaf,fechac, c_invoice_id, total,name,fin_payment_id ,c_bpartner_id)
+	VALUES(v_reporte3_id ,v_reporte2_id,v_Client,v_RECORD.ad_org_id,'Y',v_User,v_User,
+	v_RECORD.dateinvoiced,v_RECORD.paymentdate, v_RECORD.c_invoice_id,v_RECORD.paidamt*v_porcentajesiniva,'DIOT', v_RECORD.fin_payment_id,v_RECORD.c_bpartner_id);
+        v_total=v_total+(v_RECORD.paidamt*v_porcentajesiniva);
+
+
+		--Tercer ciclo para obtener todos los productos 
+		FOR v_porproducto IN (SELECT lt.taxbaseamt , 
+					lt.taxamt , 
+					l.m_product_id AS product_id , 
+					t.rate AS rango, 
+					t.em_contmx_isiva AS esiva,
+				        t.em_contmx_tipo AS tipo,
+					t.iswithholdingtax AS retenido,
+				        p.em_contmx_limite AS limite,
+					p.em_contmx_tipocant AS tipolimite,
+					l.qtyinvoiced AS cantidad, 
+					 l.ad_org_id  FROM  c_invoicelinetax AS lt
+						INNER JOIN c_invoiceline AS l ON l.c_invoiceline_id=lt.c_invoiceline_id
+						INNER JOIN c_tax AS t ON t.c_tax_id=lt.c_tax_id
+						INNER JOIN m_product AS p ON p.m_product_id =l.m_product_id
+							WHERE v_RECORD.c_invoice_id = l.c_invoice_id )
+							
+		LOOP
+
+		--Generar el id para el cuarto nivel 
+		v_reporte4_id=get_uuid();
+
+		--Totales de ivas pagados
+	        v_baseImpuestoProducto= C_CURRENCY_CONVERT_PRECISION(v_porproducto.taxbaseamt, v_RECORD.C_CURRENCY_ID ,'130' ,v_RECORD.paymentdate,'S',v_Client ,v_porproducto.ad_org_id,'A');
+	        v_ImpuestoProducto= C_CURRENCY_CONVERT_PRECISION(v_porproducto.taxamt, v_RECORD.C_CURRENCY_ID ,'130' ,v_RECORD.paymentdate,'S',v_Client ,v_porproducto.ad_org_id,'A');
+	        v_totalpagadoProd=(((v_baseImpuestoProducto+ v_ImpuestoProducto)/v_RECORD.totalconiva)*v_RECORD.paidamt) ;
+	        v_totalapagarProd = (v_baseImpuestoProducto + v_ImpuestoProducto);
+	        v_totalpagado_sinivaProd=(((v_baseImpuestoProducto)/v_RECORD.totalconiva)*v_RECORD.paidamt);
+		v_totalapagar_sinivaProd =(v_baseImpuestoProducto);
+
+		
+
+		--intesertamos en el cuarto nivel (ventana Productos)
+		INSERT INTO contmx_diot_product (contmx_diot_product_id,contmx_diot_des_id,ad_client_id,ad_org_id,isactive,createdby,updatedby,
+		m_product_id)
+		VALUES(v_reporte4_id ,v_reporte3_id,v_Client,v_RECORD.ad_org_id,'Y',v_User,v_User,
+		v_porproducto.product_id);	
+
+		--Valor de los actos o actividades pagados a la tasa del 15% o 16% de IVA.
+		IF(v_porproducto.tipo = 'IVA16' AND v_porproducto.esiva='Y' AND v_porproducto.rango=16 )THEN  
+		UPDATE contmx_diot_product 
+			SET valordieseis=COALESCE(v_totalpagado_sinivaProd,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;	
+	
+			--Monto de IVA no acreditable a la tasa de 15% o 16%
+			IF(v_porproducto.tipolimite ='PL')THEN 
+			UPDATE contmx_diot_product 
+				SET montoquince=COALESCE(v_totalpagadoProd,0) 
+				 -COALESCE(v_totalpagado_sinivaProd*v_porproducto.limite*((v_porproducto.rango/100)+1),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+			END IF;
+
+			IF(v_porproducto.tipolimite ='CL' AND (v_porproducto.cantidad*v_porproducto.limite) < v_totalapagar_sinivaProd)THEN 
+			UPDATE contmx_diot_product 
+				SET montoquince=COALESCE(v_totalpagadoProd,0) - 
+				COALESCE(((v_totalpagado_sinivaProd*((v_porproducto.cantidad*v_porproducto.limite)/v_totalapagar_sinivaProd))
+				*((v_porproducto.rango/100)+1) ),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+
+			END IF;
+			
+		END IF;			
+		/*
+		--Valor de los actos o actividades pagados a la tasa del 15% de IVA. 
+		*/
+
+		
+		--Valor de los actos o actividades pagados a la tasa del 10% o 11% de IVA. 
+		IF(v_porproducto.tipo='IVA11' AND v_porproducto.esiva='Y' AND v_porproducto.rango=11 )THEN  
+		UPDATE contmx_diot_product 
+			SET valoronce=COALESCE(v_totalpagado_sinivaProd,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+		
+		/*--Valor de los actos o actividades pagados a la tasa del 10% de IVA. 
+
+		v_valordiez=v_valordiez+iva_10;
+		*/
+		
+		--Valor de los actos o actividades pagados por los que no se pagara iva. 
+		IF(v_porproducto.tipo='IVAE' AND v_porproducto.esiva='Y' AND v_porproducto.rango=0 )THEN  
+		UPDATE contmx_diot_product 
+			SET valorsiniva=COALESCE(v_totalpagado_sinivaProd,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+
+
+		--valor de los demas actos o actividades pagados a la tasa de 0% de IVA
+		IF(v_porproducto.tipo='IVA0' AND v_porproducto.esiva='Y' AND v_porproducto.rango=0 )THEN  
+		UPDATE contmx_diot_product 
+			SET valorcero=COALESCE(v_totalpagado_sinivaProd,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+
+
+		IF(v_portercero.tipoproveedor = '05' OR v_portercero.tipoproveedor = '15')THEN 
+
+
+			--Valor de los actos o actividades pagados en la importacion de bienes y servicios a la tasa de 15% o 16% de iVA
+			IF(v_porproducto.tipo='IVAI16' AND v_porproducto.esiva='Y' AND v_porproducto.rango=16 )THEN 
+			UPDATE contmx_diot_product 
+				SET valorimpquince=COALESCE(v_totalpagado_sinivaProd,0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+
+				--Monto de IVA pagado mps acreditable por la importacion a la tasa de 15%o 16%
+				IF(v_porproducto.tipolimite ='PL')THEN 
+
+				UPDATE contmx_diot_product 
+					SET montoimpquince=COALESCE(v_totalpagadoProd,0) 
+				 -COALESCE(v_totalpagado_sinivaProd*v_porproducto.limite*((v_porproducto.rango/100)+1),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+				
+				IF(v_porproducto.tipolimite ='CL' AND (v_porproducto.cantidad*v_porproducto.limite) < v_totalapagar_sinivaProd )THEN 
+				UPDATE contmx_diot_product 
+					SET montoimpquince=COALESCE(v_totalpagadoProd,0) - 
+				COALESCE(((v_totalpagado_sinivaProd*((v_porproducto.cantidad*v_porproducto.limite)/v_totalapagar_sinivaProd))
+				*((v_porproducto.rango/100)+1) ),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+			END IF;
+
+		--Valor de los actos o actividades pagados en la importacion de bienes y servicios a la tasa de 10% o 11% de iVA
+			IF(v_porproducto.tipo='IVAI11' AND v_porproducto.esiva='Y' AND v_porproducto.rango=11 )THEN  
+			UPDATE contmx_diot_product 
+				SET valorimppnce=COALESCE(v_totalpagado_sinivaProd,0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+
+				--Monto de IVA pagado mps acreditable por la importacion a la tasa de 10%o 11%
+
+				IF(v_porproducto.tipolimite ='PL')THEN 
+				UPDATE contmx_diot_product 
+					SET montoimponce=COALESCE(v_totalpagadoProd,0) 
+				 -COALESCE(v_totalpagado_sinivaProd*v_porproducto.limite*((v_porproducto.rango/100)+1),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+				IF(v_porproducto.tipolimite ='CL' AND (v_porproducto.cantidad*v_porproducto.limite) < v_totalapagar_sinivaProd )THEN 
+				UPDATE contmx_diot_product 
+					SET montoimponce=COALESCE(v_totalpagadoProd,0) - 
+					COALESCE(((v_totalpagado_sinivaProd*((v_porproducto.cantidad*v_porproducto.limite)/v_totalapagar_sinivaProd))
+					*((v_porproducto.rango/100)+1) ),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+		
+			END IF;
+			--Valor de los actos y actividades pagados en la importacion de bienes y servicios por lo que no se pagara IVA
+			IF(v_porproducto.tipo='IVAIE' AND v_porproducto.esiva='Y' AND v_porproducto.rango=0 )THEN 
+				UPDATE contmx_diot_product 
+					SET valorexcento=COALESCE(v_totalpagado_sinivaProd,0)
+						WHERE contmx_diot_product_id=v_reporte4_id;
+				
+				
+			END IF;
+		END IF;
+		--Impuestos Retenido por el contribuyebte
+		IF(v_porproducto.retenido = 'Y' AND v_porproducto.rango < 0 )THEN
+		UPDATE contmx_diot_product 
+			SET ivaretenido=COALESCE((v_totalpagado_sinivaProd*(v_porproducto.rango/100)*-1),0)
+				WHERE contmx_diot_product_id=v_reporte4_id;		 
+		END IF;
+		
+		END LOOP;
+	--sumar todos los producto a la ventana pago
+	UPDATE  contmx_diot_des
+		SET ivadevoluciones =(SELECT SUM(ivadevoluciones) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		ivaretenido = (SELECT SUM(ivaretenido) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorsiniva =(SELECT SUM(valorsiniva) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorcero =(SELECT SUM(valorcero) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorexcento =(SELECT SUM(valorexcento) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoimponce =(SELECT SUM(montoimponce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorimppnce =(SELECT SUM(valorimppnce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoimpquince = (SELECT SUM(montoimpquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valordieseis = (SELECT SUM(valordieseis) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoquince = (SELECT SUM(montoquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valoronce = (SELECT SUM(valoronce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valordiez = (SELECT SUM(valordiez) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoonce = (SELECT SUM(montoonce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorimpquince = (SELECT SUM(valorimpquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorquince = (SELECT SUM(valorquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id)
+			WHERE contmx_diot_des_id=v_reporte3_id;
+	END LOOP;
+
+/*-----------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------CONCEPTO CONTABLES ----------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------*/	
+
+
+	
+	FOR v_RECORD IN (SELECT fp.fin_payment_id, fp.paymentdate, fp.ad_org_id
+				FROM FIN_PAYMENT AS fp
+					INNER JOIN FIN_PAYMENT_DETAIL AS fpd ON fpd.fin_payment_id=fp.fin_payment_id
+					INNER JOIN C_GLITEM AS g ON fpd.c_glitem_id=g.c_glitem_id
+					INNER JOIN c_tax AS t ON g.em_contmx_c_tax_id =t.c_tax_id 
+					WHERE fp.status IN ('PWNC', 'PPM') 
+					AND (v_org_id = fp.ad_org_id OR v_org_id='0')
+					AND v_diaInicio <= fp.paymentdate
+					AND v_diaFinal >=fp.paymentdate
+					AND fp.c_bpartner_id= v_portercero.c_bpartner_id
+					GROUP BY fp.fin_payment_id, fp.paymentdate, fp.ad_org_id)
+	
+	LOOP 
+
+   	--Generar el id para el tercer nivel 
+	v_reporte3_id=get_uuid();
+
+ DBMS_OUTPUT.PUT_LINE('3');
+
+	INSERT INTO contmx_diot_des (contmx_diot_des_id,contmx_diot_id,ad_client_id,isactive,createdby,updatedby ,ad_org_id,
+	fechac, total, name,fin_payment_id )
+	VALUES(v_reporte3_id ,v_reporte2_id,v_Client,'Y',v_User,v_User,v_RECORD.ad_org_id,
+	v_RECORD.paymentdate, 0,'DIOT', v_RECORD.fin_payment_id );
+
+
+	FOR v_porconcepto IN (SELECT fpd.c_glitem_id, t.rate AS rango, 
+					t.em_contmx_isiva AS esiva, t.em_contmx_tipo AS tipo,
+					t.iswithholdingtax AS retenido, g.em_contmx_limite AS limite,
+					g.em_contmx_tipocant AS tipolimite, fpd.amount AS totalpagado,
+					(fpd.amount-( fpd.amount*(t.rate/100)))  AS totalpagado_siniva
+				FROM FIN_PAYMENT_DETAIL AS fpd
+					INNER JOIN C_GLITEM AS g ON fpd.c_glitem_id=g.c_glitem_id
+					INNER JOIN c_tax AS t ON g.em_contmx_c_tax_id =t.c_tax_id 
+					WHERE fpd.c_glitem_id is not null 
+					AND   fpd.fin_payment_id = v_RECORD.fin_payment_id)
+		LOOP
+
+		v_total=v_total+(v_porconcepto.totalpagado);
+
+
+		--Generar el id para el tercer nivel 
+		v_reporte4_id=get_uuid();
+
+		--intesertamos en el cuarto nivel (ventana Productos)
+		INSERT INTO contmx_diot_product (contmx_diot_product_id,contmx_diot_des_id,ad_client_id,ad_org_id,isactive,createdby,updatedby,
+		c_glitem_id)
+		VALUES(v_reporte4_id ,v_reporte3_id,v_Client,v_RECORD.ad_org_id,'Y',v_User,v_User,
+		v_porconcepto.c_glitem_id);
+
+
+
+
+	
+		--Valor de los actos o actividades pagados a la tasa del 15% o 16% de IVA.
+		IF(v_porconcepto.tipo = 'IVA16' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=16 )THEN  
+		UPDATE contmx_diot_product 
+			SET valordieseis=COALESCE(v_porconcepto.totalpagado_siniva,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+
+		--Monto de IVA no acreditable a la tasa de 15% o 16
+			IF(v_porconcepto.tipolimite ='PL')THEN 
+			UPDATE contmx_diot_product 
+				SET montoquince=COALESCE(v_porconcepto.totalpagado,0) 
+				 -COALESCE(v_porconcepto.totalpagado_siniva*v_porconcepto.limite*((v_porconcepto.rango/100)+1),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+			END IF;
+			IF(v_porconcepto.tipolimite ='CL'  AND v_porconcepto.limite < v_porconcepto.totalpagado_siniva )THEN 
+			
+			UPDATE contmx_diot_product 
+				SET montoquince=COALESCE(v_porconcepto.totalpagado,0) 
+				- COALESCE((v_porconcepto.limite*((v_porconcepto.rango/100)+1) ),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+					
+			END IF;
+		END IF;	
+
+
+		--Valor de los actos o actividades pagados a la tasa del 10% o 11% de IVA. 
+		IF(v_porconcepto.tipo='IVA11' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=11 )THEN  
+		UPDATE contmx_diot_product 
+			SET valoronce=COALESCE(v_porconcepto.totalpagado_siniva,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+
+
+		/*--Valor de los actos o actividades pagados a la tasa del 10% de IVA. 
+
+		*/
+		
+
+		--Valor de los actos o actividades pagados por los que no se pagara iva. 
+		IF(v_porconcepto.tipo='IVAE' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=0 )THEN  
+		UPDATE contmx_diot_product 
+			SET valorsiniva=COALESCE(v_porconcepto.totalpagado_siniva,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+
+
+		--valor de los demas actos o actividades pagados a la tasa de 0% de IVA
+		IF(v_porconcepto.tipo='IVA0' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=0 )THEN  
+		UPDATE contmx_diot_product 
+			SET valorcero=COALESCE(v_porconcepto.totalpagado_siniva,0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+		
+		IF(v_portercero.tipoproveedor = '05' OR v_portercero.tipoproveedor = '15')THEN 
+		
+			--Valor de los actos o actividades pagados en la importacion de bienes y servicios a la tasa de 15% o 16% de iVA
+			IF(v_porconcepto.tipo='IVAI16' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=16 )THEN 
+			UPDATE contmx_diot_product 
+				SET valorimpquince=COALESCE(v_porconcepto.totalpagado_siniva,0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				--Monto de IVA pagado mps acreditable por la importacion a la tasa de 15%o 16%
+
+				IF(v_porconcepto.tipolimite ='PL')THEN 
+				UPDATE contmx_diot_product 
+					SET montoimpquince=COALESCE(v_porconcepto.totalpagado,0) 
+				 -COALESCE(v_porconcepto.totalpagado_siniva*v_porconcepto.limite*((v_porconcepto.rango/100)+1),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+				IF(v_porconcepto.tipolimite ='CL' AND v_porconcepto.limite < v_porconcepto.totalpagado_siniva )THEN 
+				UPDATE contmx_diot_product 
+					SET montoimpquince=COALESCE(v_porconcepto.totalpagado,0) 
+				- COALESCE((v_porconcepto.limite*((v_porconcepto.rango/100)+1) ),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+			END IF;
+
+
+			--Valor de los actos o actividades pagados en la importacion de bienes y servicios a la tasa de 10% o 11% de iVA
+			IF(v_porconcepto.tipo='IVAI11' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=11 )THEN  
+			UPDATE contmx_diot_product 
+				SET valorimppnce=COALESCE(v_porconcepto.totalpagado_siniva,0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+
+				--Monto de IVA pagado mps acreditable por la importacion a la tasa de 10%o 11%
+
+				IF(v_porconcepto.tipolimite ='PL')THEN 
+								DBMS_OUTPUT.PUT_LINE( 'entro 3');
+				UPDATE contmx_diot_product 
+					SET montoimponce=COALESCE(v_porconcepto.totalpagado,0) 
+				 -COALESCE(v_porconcepto.totalpagado_siniva*v_porconcepto.limite*((v_porconcepto.rango/100)+1),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+				IF(v_porconcepto.tipolimite ='CL'  AND v_porconcepto.limite < v_porconcepto.totalpagado_siniva  )THEN 
+				DBMS_OUTPUT.PUT_LINE( 'entro 4');
+				UPDATE contmx_diot_product 
+					SET montoimponce=COALESCE(v_porconcepto.totalpagado,0) 
+				- COALESCE((v_porconcepto.limite*((v_porconcepto.rango/100)+1) ),0)
+					WHERE contmx_diot_product_id=v_reporte4_id;
+				END IF;
+			END IF;
+			--Valor de los actos y actividades pagados en la importacion de bienes y servicios por lo que no se pagara IVA
+			IF(v_porconcepto.tipo='IVAIE' AND v_porconcepto.esiva='Y' AND v_porconcepto.rango=0 )THEN 
+				UPDATE contmx_diot_product 
+					SET valorexcento=COALESCE(v_porconcepto.totalpagado_siniva,0)
+						WHERE contmx_diot_product_id=v_reporte4_id;
+				
+				
+			END IF;
+		END IF;
+		--Impuestos Retenido por el contribuyebte
+		IF(v_porconcepto.retenido = 'Y' AND v_porconcepto.rango < 0 )THEN
+		UPDATE contmx_diot_product 
+			SET ivaretenido=COALESCE((v_porconcepto.totalpagado_siniva*(v_porconcepto.rango/100)*-1),0)
+				WHERE contmx_diot_product_id=v_reporte4_id;
+		END IF;
+		END LOOP;
+		DBMS_OUTPUT.PUT_LINE( 'ENTRO4');
+		--sumamos todos los pagos de conceptos contables 
+	UPDATE  contmx_diot_des
+		SET ivadevoluciones =(SELECT SUM(ivadevoluciones) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		ivaretenido = (SELECT SUM(ivaretenido) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorsiniva =(SELECT SUM(valorsiniva) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorcero =(SELECT SUM(valorcero) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorexcento =(SELECT SUM(valorexcento) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoimponce =(SELECT SUM(montoimponce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorimppnce =(SELECT SUM(valorimppnce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoimpquince = (SELECT SUM(montoimpquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valordieseis = (SELECT SUM(valordieseis) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoquince = (SELECT SUM(montoquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valoronce = (SELECT SUM(valoronce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valordiez = (SELECT SUM(valordiez) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		montoonce = (SELECT SUM(montoonce) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorimpquince = (SELECT SUM(valorimpquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id),
+		valorquince = (SELECT SUM(valorquince) FROM contmx_diot_product WHERE contmx_diot_des_id=v_reporte3_id)
+			WHERE contmx_diot_des_id=v_reporte3_id;
+	END LOOP;
+
+
+--sumar todos los resultados en la ventana de terceros
+UPDATE  contmx_diot
+	SET ivadevoluciones =(SELECT SUM(ivadevoluciones) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	ivaretenido = (SELECT SUM(ivaretenido) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valorsiniva =(SELECT SUM(valorsiniva) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valorcero =(SELECT SUM(valorcero) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valorexcento =(SELECT SUM(valorexcento) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	montoimponce =(SELECT SUM(montoimponce) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valorimppnce =(SELECT SUM(valorimppnce) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	montoimpquince = (SELECT SUM(montoimpquince) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valordieseis = (SELECT SUM(valordieseis) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	montoquince = (SELECT SUM(montoquince) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valoronce = (SELECT SUM(valoronce) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valordiez = (SELECT SUM(valordiez) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	montoonce = (SELECT SUM(montoonce) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valorimpquince = (SELECT SUM(valorimpquince) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id),
+	valorquince = (SELECT SUM(valorquince) FROM contmx_diot_des WHERE contmx_diot_id=v_reporte2_id)
+		WHERE contmx_diot_id=v_reporte2_id;
+UPDATE contmx_diot SET total=v_total WHERE contmx_diot_id= v_reporte2_id;
+
+END LOOP;
+
+DELETE FROM CONTMX_DIOT WHERE total=0;
+
+FOR v_aceptar IN (SELECT rfc FROM contmx_diot WHERE contmx_diot_encab_id = v_reporte_id )
+LOOP
+
+END LOOP;
+
+ 
+    -- Successfully finish the process by updating AD_PInstance, setting the 
+    -- IsProcessing, ErrorMsg and Result
+    DBMS_OUTPUT.PUT_LINE('Updating PInstance - Finished ' || v_Message) ;
+    AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 1, v_Message) ;
+    RETURN;
+  END; -- BODY
+
+
+ EXCEPTION
+ WHEN OTHERS THEN
+   v_ResultStr:= '@ERROR=' || SQLERRM;
+   DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+   AD_UPDATE_PINSTANCE(p_PInstance_ID, NULL, 'N', 0, v_ResultStr) ;
+   RETURN;
+END CONTMX_CALCULO_IMP_DIOT2
+]]></body>
+    </function>
+  </database>

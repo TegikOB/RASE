@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="AD_PROCESS_PARA" version="">
+  <row id="123" trl="Y">
+    <value column="Name" isTrl="Y" original="Product Search Key">Identificador</value>
+    <value column="Description" isTrl="Y" original="A fast method for finding a particular product.">Método rápido para hallar un registro particular.</value>
+    <value column="Help" isTrl="N" original="A product search key allows for a fast method of finding a particular product. ">A product search key allows for a fast method of finding a particular product. </value>
+  </row>
+  <row id="227" trl="Y">
+    <value column="Name" isTrl="Y" original="Delete existing Accounting Entries">Eliminar registros de contabilidad existentes</value>
+    <value column="Description" isTrl="Y" original="The selected accounting entries will be deleted!  DANGEROUS !!!">Las asientos contables seleccionados serán eliminados. PELIGRO!!!</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="233" trl="Y">
+    <value column="Name" isTrl="Y" original="Pricelist Version">Versión tarifa</value>
+    <value column="Description" isTrl="Y" original="Only used if Price List is used to set future cost price">La utilización de este parámetro es válido sólo si la lista de precios se usa para fijar el futuro precio de costo.</value>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="302" trl="Y">
+    <value column="Name" isTrl="Y" original="Target Payment Rule">Modo pago</value>
+    <value column="Description" isTrl="Y" original="How you pay the invoice">Forma de pago de la factura</value>
+    <value column="Help" isTrl="Y" original="The Payment Rule indicates the method of invoice payment.">La forma de pago establece el modo en que realizará los pagos dicho cliente.</value>
+  </row>
+  <row id="3401DE925FBB4A3AAC72E914595E1C71" trl="Y">
+    <value column="Name" isTrl="Y" original="Process action">Procesar acción</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="6E19A05CE9564C15BA5FAA118C005859" trl="Y">
+    <value column="Name" isTrl="Y" original="Language">Lenguaje</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800007" trl="Y">
+    <value column="Name" isTrl="Y" original="Storage Bin from">Espacio origen</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800008" trl="Y">
+    <value column="Name" isTrl="Y" original="Storage Bin to">Espacio destino</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="800013" trl="Y">
+    <value column="Name" isTrl="Y" original="Set Book Quantity to zero">Fijar Cantidad Registrada a Cero</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="D906A4F1EF4E4372A32DDD1BD34A54BF" trl="Y">
+    <value column="Name" isTrl="Y" original="Cascade">Recursivamente</value>
+    <value column="Description" isTrl="Y" original="Also mark as ready organization every child organization">Validar recursivamente las organizaciones que dependan de ésta</value>
+    <value column="Help" isTrl="Y" original="Also mark as ready organization every child organization">Validar recursivamente las organizaciones que dependan de ésta</value>
+  </row>
+</compiereTrl>

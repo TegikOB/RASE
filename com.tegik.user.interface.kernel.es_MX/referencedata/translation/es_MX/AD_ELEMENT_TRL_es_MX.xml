@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="1663D48FCF45475FB6AF23DE940BF7B4" trl="Y">
+    <value column="Name" original="Template">Plantilla</value>
+    <value column="PrintName" original="Template">Plantilla</value>
+    <value column="Description" original="The template source code.">El código fuente de la plantilla</value>
+    <value column="Help" original="The source code of the template. This code gets executed when the template is processed. The language of the source code (freemarker or another) is defined by the template language field. Note that instead of this field it is also possible to use the template class path location field to point to a file containing the source cod">El código fuente de la plantilla. Este código se ejecuta cuando la plantilla se procesa. El lenguaje del codigo fuente (freemarker u otro) se define a través del campo de lenguaje de la plantilla. Nota: en vez de este campo también puede utilizarse el campo de localización de la plantilla en el classpath para especificar otro fichero que contenga el código fuente</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="1E20B2070A5447D6A31B4A3C95EBD941" trl="Y">
+    <value column="Name" original="Input Mask">Máscara de entrada</value>
+    <value column="PrintName" original="Input Mask">Máscara de entrada</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original="Input Mask">Máscara de entrada</value>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="2EA11B0C11DD465C896EA8D54D6492DB" trl="N">
+    <value column="Name" original="OBCLKER_Ref_Mask_ID">OBCLKER_Ref_Mask_ID</value>
+    <value column="PrintName" original="OBCLKER_Ref_Mask_ID">OBCLKER_Ref_Mask_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="6F1CAC3037204B29AA6A1BEEEB322DEC" trl="Y">
+    <value column="Name" original="Template">Plantilla</value>
+    <value column="PrintName" original="Template">Plantilla</value>
+    <value column="Description" original="The template used to generate the visualization of the component.">La plantilla usada para generar la visualización del componente.</value>
+    <value column="Help" original="Defines the template which is used to generate the (javascript) code to render the component.">Define la plantilla que se utiliza para generar el código (javascript) para renderizar el componente</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="77DBB0D293A34966B10E6AC12F2B4DB9" trl="N">
+    <value column="Name" original="Obclker_Uidefinition_ID">Obclker_Uidefinition_ID</value>
+    <value column="PrintName" original="Obclker_Uidefinition_ID">Obclker_Uidefinition_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9E248D010B9949AEA6751C2529385EB6" trl="Y">
+    <value column="Name" original="Template Classpath Location">Localización de la plantilla</value>
+    <value column="PrintName" original="Template Classpath Location">Localización de la plantilla</value>
+    <value column="Description" original="Defines the location in the classpath of the template file">Define la localización del fichero de la plantilla en el classpath</value>
+    <value column="Help" original="Defines the location in the classpath of the template file. The template is loaded using the classloader. The path must be an absolute path (so start with a /).">Define la localización del fichero de la plantilla en el classpath. La plantilla se carga utilizando el cargador de clases. La ruta debe definirse de forma absoluta (por lo que tiene que empezar con /).</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="CA00B1284F5F4B988C3B578EDFF32E2E" trl="Y">
+    <value column="Name" original="Implementation class name">Nombre de la clase implementadora</value>
+    <value column="PrintName" original="Implementation class name">Nombre de la clase implementadora</value>
+    <value column="Description" original="Name of the java class implementing the functionality.">Nombre de la clase Java que implementa la funcionalidad.</value>
+    <value column="Help" original="Name of the java class implementing the functionality.">Nombre de la clase Java que implementa la funcionalidad.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="CBF6C0089C3E47899CF0EF6CB5808CA0" trl="Y">
+    <value column="Name" original="Depends On Template ">Depende de la plantilla </value>
+    <value column="PrintName" original="Depends On Template ">Depende de la plantilla </value>
+    <value column="Description" original="The template on which the current template depends">La plantilla de la cual esta plantilla depende</value>
+    <value column="Help" original="Defines the template on which the current template depends.">Define la plantilla de la cual esta plantilla depende</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D5EF1F8B9EBF4639BD6064E551B46B79" trl="Y">
+    <value column="Name" original="Template Language">Lenguaje de la plantilla</value>
+    <value column="PrintName" original="Template Language">Lenguaje de la plantilla</value>
+    <value column="Description" original="Defines the template language used to process this template.">Define el lenguaje usado para procesar esta plantilla</value>
+    <value column="Help" original="Defines the template language used to process this template.">Define el lenguaje usado para procesar esta plantilla</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D9FC90D101014BFCBC33D29EECC65C1D" trl="Y">
+    <value column="Name" original="Component Type">Tipo de componente</value>
+    <value column="PrintName" original="Component Type">Tipo de componente</value>
+    <value column="Description" original="A type of component for which the template operates.">El tipo de componente para el que esta plantilla opera</value>
+    <value column="Help" original="A type of component for which the template operates.">El tipo de componente para el que esta plantilla opera</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="F65B59C7313C4FDBA800BFDF404698CA" trl="Y">
+    <value column="Name" original="Template dependency">Dependencia de plantilla</value>
+    <value column="PrintName" original="Template dependency">Dependencia de plantilla</value>
+    <value column="Description" original="Template dependency">Dependencia de plantilla</value>
+    <value column="Help" original="Defines a template dependency, that a template depends on another template, i.e. uses functions from the other template.">Define una dependencia de esta plantilla sobre otra plantilla; por ejemplo, debido a que esta plantilla utiliza funciones de la otra plantilla</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="FBD6AA3EB93549EBBE6067E3FB649A91" trl="Y">
+    <value column="Name" original=""/>
+    <value column="PrintName" original=""/>
+    <value column="Description" original="Is used to define that this template overrides another template.">Se usa para especificr que estaa plantilla sobreescribe otra plantilla</value>
+    <value column="Help" original="Defines that this template overrides the template which is defined in this field. When processing a user interface component request from the browser, the system searches for the template to handle the request. The 'overrides template' field plays an important role in this process. When a template is selected then the system checks if the template is overridden, if this is the case then the overriding template is used. This search step are done multi-level (so if the overriding template is again overridden then the deepest/last overriding template is used).">Define que esta plantilla sobreescribe la plantilla especificada en este campo. Cuando se procesa una petición de componente de interfaz de usuario realizada por el navegador, el sistema busca la pantilla correcta para gestionar la petición. El campo "Sobreescribe plantilla" juega un papel importante en este proceso. Cuando la plantilla es seleccionada el sistema comprueba si la plantilla está sobreescrita, y si es así, entonces la plantilla que la sobreescribe es seleccionada en su lugar. Esta comprobación se realiza en todos los niveles necesarios (por lo que si la plantilla que sobreescribe es a su vez sobreescrita por otra, entonces esta última será la seleccionada).</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

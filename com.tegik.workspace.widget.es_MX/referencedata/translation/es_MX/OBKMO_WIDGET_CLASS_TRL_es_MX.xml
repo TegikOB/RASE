@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="479BC7D918D84F948F4C2BDA402D0AA3" trl="Y">
+    <value column="Title" original="Openbravo Technical Training Listings">Listado de Cursos Técnicos de Openbravo</value>
+    <value column="Description" original="Displays latest Openbravo Education offering and special promotions of technical courses"/>
+  </row>
+  <row id="50F3F7AED43A4B31AF176F1AF0714284" trl="Y">
+    <value column="Title" original="Welcome to Openbravo 3">Bienvenido a Openbravo 3</value>
+    <value column="Description" original="Provides the Openbravo news content"/>
+  </row>
+  <row id="C26A68FD8CF347EC9D1FB7E274622450" trl="Y">
+    <value column="Title" original="URL Widget">Widget de URL</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E9DA175470B747268E09DEF5174FDD3A" trl="Y">
+    <value column="Title" original="Openbravo Education Listings">Listado de Openbravo Education</value>
+    <value column="Description" original="Displays latest Openbravo Education offering and special promotions"/>
+  </row>
+  <row id="F41E327965084556BCF7EC7B271603AA" trl="Y">
+    <value column="Title" original="Calendar Widget">Widget calendario</value>
+    <value column="Description" original="This widget is work-in-progress and its API will change in the following months. Use it at your own risk."/>
+  </row>
+  <row id="FF8080812E144FAE012E1455F6020009" trl="Y">
+    <value column="Title" original="Getting Started">Para Empezar</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

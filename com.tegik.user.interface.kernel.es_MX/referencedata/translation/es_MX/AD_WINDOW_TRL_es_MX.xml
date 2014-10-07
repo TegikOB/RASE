@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_WINDOW" version="">
+  <row id="CB53174675F84DCEAA13D2BED48F820C" trl="Y">
+    <value column="Name" original="Template">Plantilla</value>
+    <value column="Description" original="Maintain component templates">Mantiene plantillas de componentes</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

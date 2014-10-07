@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_COPIA_PERMROL">
+    <function name="TEGIDL_COPIA_PERMROL" type="NULL">
+      <parameter name="p_oldrol_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_newrol_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_useorg" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+
+   v_oldrol RECORD;
+   v_newrol RECORD;
+   v_curorg RECORD;	
+ v_orgvalue VARCHAR(255);
+ v_neworg_id VARCHAR(32);
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+regreso:='';
+SELECT * INTO v_oldrol FROM ad_role WHERE ad_role_id=p_oldrol_id;
+SELECT * INTO v_newrol FROM ad_role WHERE ad_role_id=p_newrol_id;  
+--------------------------
+--ad_role_orgaccess------
+--------------------------
+IF p_useorg='Y' THEN
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM ad_role_orgaccess
+      WHERE isactive='Y' AND ad_role_id=p_oldrol_id
+      )
+    LOOP
+	    SELECT "value" INTO v_orgvalue FROM ad_org WHERE ad_org_id=Cur_Parameter.ad_org_id;
+	    
+	    SELECT ad_org_id INTO v_neworg_id FROM ad_org 
+	    WHERE ad_client_id=v_newrol.ad_client_id AND isactive='Y' 
+	    AND TRIM(UPPER("value"))=TRIM(UPPER(v_orgvalue));
+
+	    IF v_neworg_id IS NOT NULL THEN
+		     INSERT INTO ad_role_orgaccess(
+			    ad_role_orgaccess_id, 
+			    ad_role_id, 
+			    ad_org_id, 
+			    ad_client_id, 
+			    isactive, 
+			    createdby, 
+			    updatedby, 
+			    is_org_admin)
+		     VALUES ( GET_UUID(), 
+			    p_newrol_id, 
+			    v_neworg_id, 
+			    v_newrol.ad_client_id, 
+			    'Y', 
+			    '100', 
+			    '100', 
+			    Cur_Parameter.is_org_admin);
+	    END IF; 
+    END LOOP; 
+  
+END IF;
+--------------------------
+--END ad_role_org_access--
+--------------------------
+
+--------------------------
+--ad_window_access--------
+--------------------------
+
+  FOR Cur_Parameter IN
+      (SELECT *
+      FROM ad_window_access
+      WHERE isactive='Y' AND ad_role_id=p_oldrol_id
+      )
+    LOOP
+    DBMS_OUTPUT.PUT_LINE('oldrol:'|| v_oldrol.ad_role_id||'newrol:'|| v_newrol.ad_role_id||'ad_window_id:'|| Cur_Parameter.ad_window_id);
+	    INSERT INTO ad_window_access(
+		    ad_window_access_id, 
+		    ad_window_id, 
+		    ad_role_id, 
+		    ad_client_id, 
+		    ad_org_id, 
+		    isactive, 
+		    createdby, 
+		    updatedby, 
+		    isreadwrite)
+	    VALUES ( GET_UUID(),--ad_window_access_id, 
+		    Cur_Parameter.ad_window_id, 
+		    v_newrol.ad_role_id, 
+		    v_newrol.ad_client_id, 
+		    '0',--ad_org_id, 
+		    Cur_Parameter.isactive, 
+		    '100',
+		    '100', 
+		    Cur_Parameter.isreadwrite);
+
+    END LOOP; 
+
+--------------------------
+--END ad_window_access----
+--------------------------
+
+--------------------------
+--ad_process_access-------
+--------------------------
+FOR Cur_Parameter IN
+      (SELECT *
+      FROM ad_process_access
+      WHERE isactive='Y' AND ad_role_id=p_oldrol_id
+      )
+    LOOP
+	    INSERT INTO ad_process_access(
+            ad_process_access_id, 
+            ad_process_id, 
+            ad_role_id, 
+            ad_client_id, 
+            ad_org_id, 
+            isactive, 
+            createdby, 
+            updatedby, 
+            isreadwrite)
+    VALUES (  GET_UUID(),--ad_window_access_id, 
+	      Cur_Parameter.ad_process_id,
+	      v_newrol.ad_role_id, 
+	      v_newrol.ad_client_id,
+	      '0',--ad_org_id, 
+	      Cur_Parameter.isactive, 
+	      '100',
+	      '100', 
+	      Cur_Parameter.isreadwrite);
+
+
+
+    END LOOP;
+--------------------------
+--END ad_process_access---
+--------------------------
+
+--------------------------
+--ad_form_access----------
+--------------------------
+FOR Cur_Parameter IN
+      (SELECT *
+      FROM ad_form_access
+      WHERE isactive='Y' AND ad_role_id=p_oldrol_id
+      )
+    LOOP
+	    INSERT INTO ad_form_access(
+            ad_form_access_id, 
+            ad_form_id, 
+            ad_role_id, 
+            ad_client_id, 
+            ad_org_id, 
+            isactive, 
+            createdby, 
+            updatedby, 
+            isreadwrite)
+    VALUES (  GET_UUID(),--ad_window_access_id, 
+	      Cur_Parameter.ad_form_id,
+	      v_newrol.ad_role_id, 
+	      v_newrol.ad_client_id,
+	      '0',--ad_org_id, 
+	      Cur_Parameter.isactive, 
+	      '100',
+	      '100', 
+	      Cur_Parameter.isreadwrite);
+
+    END LOOP;
+--------------------------
+--END ad_form_access------
+--------------------------
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_COPIA_PERMROL
+]]></body>
+    </function>
+  </database>

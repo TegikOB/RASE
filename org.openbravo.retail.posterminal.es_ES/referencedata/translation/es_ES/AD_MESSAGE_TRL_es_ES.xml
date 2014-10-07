@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_MESSAGE" version="">
+  <row id="00A259C4671144B1B913066A818911EB" trl="N">
+    <value column="MsgText" isTrl="Y" original="This promotion type requires a amount/percentage to be discounted.">Este tipo de promoción requiere una cantidad o porcentaje a ser descontado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0135A1C01B014EB7B271C6F92882A7E9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Layaway has been voided successfully.">El articulo reservado ha sido anulado con éxito.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0203613AEC064948948A14C2F6A07983" trl="N">
+    <value column="MsgText" isTrl="Y" original="Description">Descripción</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="030CF7E140F54B939F918A10CBF9C24E" trl="N">
+    <value column="MsgText" isTrl="Y" original="This product cannot be grouped">Este producto no puede ser agrupado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0367AD478D6C4BA4AEB5DA6710FA8C79" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Process payment: %0">Pago</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="039151CD453C4E99B49C088A926B96A5" trl="N">
+    <value column="MsgText" isTrl="Y" original="Do you want to close this paid receipt?">¿Quiere cerrar este pedido pagado?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="043D9CD78F8A439AB3EED76467C5926F" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error loading the Pos Terminal. Make sure the store is associated with an Assortment.">Ha habido un error cargando el terminal punto de venta. Asegurese que la tienda esta asociada con una lista de productos.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="057874AA8DD34E3E871A52858908F880" trl="N">
+    <value column="MsgText" isTrl="Y" original="Set price %0 to %1">Cambiado precio de %1 a %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="05915E7990C64F11ADE316290B916FDF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Changes for customer %0 cannot be saved locally">Los cambios del cliente %0 no se han podido guardar localmente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="05AA5CF3C6F04ABE91FE380C3BF5739A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Assign to receipt">Asig. al pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0616FB7F76E947778B1E9D9C5088108D" trl="N">
+    <value column="MsgText" isTrl="Y" original="You cannot withdraw more than is available">No puede retirar una cantidad mayor de la disponible</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0768F1FFE0EE4131A6004EB391CB0DAA" trl="N">
+    <value column="MsgText" isTrl="N" original="D-F">D-F</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="09E3A771CEE34D80835DAC078B4A1C59" trl="N">
+    <value column="MsgText" isTrl="Y" original="Steps">Pasos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0A56DF2DFED348C9903595B07D77D607" trl="N">
+    <value column="MsgText" isTrl="Y" original="No weight on the scale.">No hay peso en la balanza.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0BA9EDF60016400AB26863699BC7E32A" trl="N">
+    <value column="MsgText" isTrl="N" original="Assign a sales representative to this receipt">Asignar un representate de ventas a este pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0D774343B3F84139A0992C4E828E4A95" trl="N">
+    <value column="MsgText" isTrl="Y" original=" Starting cash"> Cantidad inicial</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="0FA21BFB69CC4ACE9140703D4AC9611E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Payment amount not valid.\nContact your administrator.">Cantidad de pago no válida.
+Contacte con su administrador.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1006F5619E8D4127B94592BC2715CA19" trl="N">
+    <value column="MsgText" isTrl="Y" original="The quantity of this product cannot be changed because it has been configured not to be grouped. Another line can be added to the receipt with the same product instead.">No se puede cambiar la cantidad de este producto porque está configurado como no agrupable. Puede añadir otra linea con el mismo producto al pedido.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1142865C2F27417AB22D6DEEB9F6C9E7" trl="N">
+    <value column="MsgText" isTrl="Y" original="More...">Más...</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="122C89DF5DF64C48B9D823B25FE489A8" trl="N">
+    <value column="MsgText" isTrl="Y" original="1) Review pending receipts">1) Revisar pedidos pendientes</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="12BF57825EA1456E8567E73E1E947402" trl="N">
+    <value column="MsgText" isTrl="N" original="TOTAL">TOTAL</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1315FACB3884414BA9E7B8CAB3A9E81F" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Gross Sales">Ventas brutas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="13B5DDB06BBB43DC917DC7DC10741688" trl="N">
+    <value column="MsgText" isTrl="Y" original="Processing pending orders...">Procesando pedidos pendientes...</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1513EA3E1A5E41EA859BADB61D90C1E0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Exact amount paid.">Pagada la cantidad exacta.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="18B44B47473948FE8B1827EBDAD761DB" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Added line %0 x %1">Añadida línea %0 x %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="19E44C96D0F841EFB4F4E811ADFB6398" trl="N">
+    <value column="MsgText" isTrl="Y" original="The amount exceeds the Customer %0 's credit limit. The actual available credit is %1. Choose another payment method or increase the credit limit.">La suma excede el límite de crédito del cliente %0. El crédito actual es %1. Elija otro tipo de pago o incremente el límite de pago.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1A49DEC52F304B47B6DF39D32072634C" trl="N">
+    <value column="MsgText" isTrl="Y" original="The Cash Management process was completed successfully.">El proceso de gestión de caja ha sido completado con éxito.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1A9AABD246474DCF8A54BE84FB3F825C" trl="N">
+    <value column="MsgText" isTrl="Y" original="RETURNED">DEVOLUCIÓN</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1A9DA0487BD74829B4ED8E8F5128823F" trl="N">
+    <value column="MsgText" isTrl="Y" original="PRINT">IMPRIMIR</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1AF83DD2A09747F1ACD5A5B3E9A0D8FF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Description">Descripción</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1BA906CE68B74DBF82AE51AB9B22C820" trl="N">
+    <value column="MsgText" isTrl="Y" original="Select withdrawal destination">Seleccione destino</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1F900B46255747E5879F9BDD93AAEC3A" trl="N">
+    <value column="MsgText" isTrl="Y" original="NOT PAID">NO PAGADO</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="1FD548D21DB8431A8366E38A915B00A0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Reactivate Quotation">Reactivar Presupuesto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="226F8BAA4A794C21BDB6C9A6BEB9DAB4" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 cannot be saved locally.">El cliente %0 no se ha podido guardar localmente.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="22A448BF5FFA41D7959C12C9E111D162" trl="N">
+    <value column="MsgText" isTrl="Y" original="Adding %0 extra %1, %2 discount can be applied">Añadiendo %0 extra %1, %2 de descuento puede ser aplicado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2331476EA93D4BA281CA540830345612" trl="N">
+    <value column="MsgText" isTrl="Y" original="The warehouse list is not correctly configured. The organization of a terminal needs a list of warehouses for the Web POS to work correctly. This can be configured in the Organization window in Openbravo.">La lista de almacenes no ha sido configurada correctamente. La organización del terminal necesita una lista de almacenes para que TPV Web funcione correctamente. Se puede configurar en la ventana de organización de Openbravo.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="26DEA7A001924557AC9DBAF36CF2FC8C" trl="N">
+    <value column="MsgText" isTrl="Y" original="DRAFT">BORRADOR</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="27C6DC5845234E6C82AFF85A28716118" trl="N">
+    <value column="MsgText" isTrl="Y" original="PAID">PAGADO</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="28A63F3B85784B1F94C9D098D3C05E23" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error voiding the Layaway.">Ha habido un error anulando el artículo reservado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="28AB7BFD45B14FF6A5058166DF47B1AF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total is zero. No payment needed">El total es cero. No se requiere pagar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="295AEB3ADEFF4089A71D580CD14F2280" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipt no: %0 has been closed successfully.">El pedido núm: %0 se ha cerrado correctamente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="295EAD8D4DA644ABAD28457D2C036092" trl="N">
+    <value column="MsgText" isTrl="Y" original="Create Sales Order">Crear pedido de ventas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="29C6A0C5C15D40E2B5B3B776D68166DC" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Deleted line %0 x %1">Eliminada línea %0 x %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2A1FA6773E024AF793AC796E0B8E83FE" trl="N">
+    <value column="MsgText" isTrl="Y" original="There is no line selected">No hay ninguna línea seleccionada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2A77C05EB0194A0A8AA04DDAFA6660CA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipt Properties">Propiedades del pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2AFCDEF608BD4956BA3F083811CD8650" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Are you sure you want to exit?">¿Esta seguro de que desea salir?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2B9EC1DC8B4E4C6FA08065F31A99A322" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Added %0 x %1">Añadido %0 x %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2C5EBB1CC3684EB88BAC8E226AE1F73F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Expected amount">Cantidad esperada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2E3E15E2FA62426CA7554B8715B7290E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Layaway no: %0 has been closed successfully.">Artículo reservad no: %0 ha sido cerrado con éxito.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2EAB1230C355483298D699755DBE3E6C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Tax ID">ID de impuesto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="2F0F4DAA2095408DB1F8B94F916F50B6" trl="N">
+    <value column="MsgText" isTrl="N" original="TOTAL">TOTAL</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="312E99ED2F1C47C5B7159352352B03E7" trl="N">
+    <value column="MsgText" isTrl="Y" original="%0 sales">Ventas %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="328A03FF723548E98809914F98831E60" trl="N">
+    <value column="MsgText" isTrl="N" original="The payment - %0 (%1 %2) - is not processed. Save this layaway or remove not processed payments and try again to void it.">El pago - %0 (%1 %2) - no ha sido procesado. Guarde este pedido los pagos no procesados y vuelva a intentar anularlo.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3294C672065C43579DB5C1BE026859EF" trl="N">
+    <value column="MsgText" isTrl="Y" original="A sales order has been created from the quotation successfully.">Se ha creado un pedido de ventas obtenido del presupuesto.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="32D8FA0EB5B941BFB3DCEFCF78436063" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 has been updated.">El cliente %0 ha sido actualizado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="33EB3C24BDFF4ED5B6CE71744DAD1B98" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total to Keep">Total a mantener</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="341FD775942F423297A4ECB193B0FAD1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Withdraw or deposit cash using the keypad. Tap the Done button on the left pane when you are done.">Ingrese o retire efectivo usando el teclado numérico y pulsando en Hecho una vez terminado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="346E58F151654072A7EECEF402EEFFA1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Promotion %0 (buy X, gift Y) doesn't define gift qty for gift product %1">Promoción %0 (compra X, regalo Y) no define la cantidad a regalar para el producto regalo %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="34975A2EB45A4F2C92CE4187323F7A4A" trl="N">
+    <value column="MsgText" isTrl="Y" original="The user doesn't have permission to access this terminal.">El usuario no tiene permisos para acceder a este terminal.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="352375F197A24CFE9DA89EF1E58E42D0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Payment Method">Método de pago</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="35275E8E5F1E4EC890AB3C2DA1127914" trl="N">
+    <value column="MsgText" isTrl="Y" original="Confirm Deletion">Confirmar borrado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="373D80E182E7433A841EFF4EA8E22394" trl="N">
+    <value column="MsgText" isTrl="Y" original="Use Credit">Usar crédito</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3798B4E0FE9549AA8B23973F32407216" trl="N">
+    <value column="MsgText" isTrl="Y" original="Back Office">Backoffice</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="37A463B3AEDE4B9A9C4089DBB30EF2A0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 cannot be updated locally">El cliente %0 no se ha podido actualizar localmente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="386D0199A67D465BA11FFD194339532D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Process return: %0">Retorno del proceso: %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="38A75EE4093B45228AEB861FC1B301DE" trl="N">
+    <value column="MsgText" isTrl="Y" original="3) Select cash to keep">3) Seleccionar cantidad a mantener en caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="38B3129762FD4500B3010F0B2B5AE6D5" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Taxes">Impuestos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3978F94CDC7D4DAF9BC2A569C3EA8B01" trl="N">
+    <value column="MsgText" isTrl="Y" original="Difference amount">Diferencia</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="39B54759A3164FB49D19AEAE2BAA1C49" trl="N">
+    <value column="MsgText" isTrl="N" original="You can't create an Invoice of a Layaway">No puede crear una factura de un artículo reservado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="39EABA22733043DC88329BEA3A659AC1" trl="N">
+    <value column="MsgText" isTrl="N" original="The POS version has changed, and the local database needs to be reset, but there are still pending receipts. It is very important that you now log in the application, and complete all pending receipts, because the next time the page is reloaded, all the information related to pending receipts will be lost.">The POS version has changed, and the local database needs to be reset, but there are still pending receipts. It is very important that you now log in the application, and complete all pending receipts, because the next time the page is reloaded, all the information related to pending receipts will be lost.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3AEE277A5F2543558720992E1CED2C2C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Web POS terminal (%0) does not exist">TPV Web (%0) no existe</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3BA1AE73D79B48AD8EFC4CC4F1E66978" trl="N">
+    <value column="MsgText" isTrl="Y" original="Yes, use credit">Si, usar crédito</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3BCA33D416164025B06CFC2FB62EECD8" trl="N">
+    <value column="MsgText" isTrl="Y" original="Yes, delete">Sí, borrar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3C55FD361FFF4014B0FD1D8949D3C0AF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Name">Nombre</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3CB14CC53C24400992BF1DF967F746E1" trl="N">
+    <value column="MsgText" isTrl="Y" original="The deposit or withdrawal has been done but printer is not ready">La transacción se ha realizado correctamente pero la impresora no está disponible.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3D768CE6E88E4A83B6B0C5004881B370" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Amount:">Cantidad:</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="3FCD0551F9994211816EBB673E3BD70B" trl="N">
+    <value column="MsgText" isTrl="Y" original="This functionality requires online operation. You appear to be online now, but the connection was lost at some point. You need to logout and login again in the application to be able to use this functionality.">Esta funcionalidad requiere estar en linea. Parece que está en línea, pero la conexión se perdió en algún momento. Necesita cerrar sesión y volver a iniciarla para poder usar esta funcionalidad.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="424B2EFCF94D43B89A82C80ECD04F3DA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Not editable line">Línea no editable</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="42754813806C4EB09B31B832D343810C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Change">Cambio</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="444684D840414376BBA910C0C7FA9FCF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Quotations">Presupuestos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="44515E99651A414A8E167B69BBD6429D" trl="N">
+    <value column="MsgText" isTrl="Y" original=" change. "> cambio. </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4536006258DB491F99CAF577FE5FE721" trl="N">
+    <value column="MsgText" isTrl="Y" original=" overpayment. "> pago en exceso. </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="466B4A3221B6417DA306F04D8C27F647" trl="N">
+    <value column="MsgText" isTrl="Y" original="End Date:">Fecha Fin:</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="46735B581AC44291A22EE767B724E93E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total cash tendered today">Total vendido hoy</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="469D03443D534270B2EDC74F815262C2" trl="N">
+    <value column="MsgText" isTrl="Y" original="In order to create customers from Web POS, default data for business partners should be provided. To configure this functionality go to Organization window located in the backoffice.">Para poder crear clientes en TPV Web, se debería facilitar los datos de terceros por defecto. Para configurar esta funcionalidad ve a la ventana de Organización en Openbravo.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="46BD5B16B2074635AF900A9E9A9B303D" trl="N">
+    <value column="MsgText" isTrl="Y" original="2) Count cash">2) Contar caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="472FB03A2B8E4208B0AC67ACF0C459D6" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customers">Clientes</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="47F90A898EE044EE811B8B6404B40F2A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Phone">Teléfono</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4821D0FB009E409F96A2848C076C0CA7" trl="N">
+    <value column="MsgText" isTrl="Y" original="Check stock">Comprobar el stock</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4928550DFEAF4CFA88F7083A582F48EB" trl="N">
+    <value column="MsgText" isTrl="Y" original="No action has been defined.">No se ha definido acción.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="493F9C235CBE4247A8F375CE4E350DBF" trl="N">
+    <value column="MsgText" isTrl="Y" original="** Cash Management Confirmation Receipt **">** Ticket de confirmación de Gestión de Caja **</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="49DFE34B815147249F8716E4F0EA7768" trl="N">
+    <value column="MsgText" isTrl="Y" original="The cash management has been successful.">La gestión de caja se ha efectuado satisfactoriamente.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4A5D4828F15C4490B1CBE3D58CC65A5D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Name">Nombre</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4A6BE1FE8E2249BB8DAD37144202C7F6" trl="N">
+    <value column="MsgText" isTrl="Y" original="POS Version Change">Cambio de versión TPV</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4A6C23368CBF448AB7B062B60171E1AC" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Date &amp; time">Fecha y hora</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4AF1290E136F4C9DA6E46BCE8D78AD28" trl="N">
+    <value column="MsgText" isTrl="Y" original="It has been reached the maximum data to display.">Se ha alcanzado la cantidad máxima de información a mostrar.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4B4C99625D924799BA7EE87150F4E3EE" trl="N">
+    <value column="MsgText" isTrl="N" original="Total TAX">Total TAX</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4CD60606E73146F5B1C1DF40505F7C86" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipt discounts">Descuentos pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4EA6F719DC394155806F88823742860E" trl="N">
+    <value column="MsgText" isTrl="Y" original="The cash up process failed to execute successfully.&#10;Please contact your system administrator.">El proceso de cierre de caja ha fallado.
+Por favor, contacte con el administrador del sistema.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4EFF7178DFE94BD59F4DA2C1F333DD7D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Assign a customer to this receipt">Asignar un cliente a este ticket</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="4F16E073FE944635967030229DCAFE45" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total tendered">Total vendido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="50467FDE41174594B12E2E0B0FDB0E4C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Starting">Inicial</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="526F0B212B18417E809E65F8B87A6C36" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error loading the Pos Terminal. Make sure the store is associated with a Price List.">Ha habido un error cargando el terminal TPV. Asegurese de que la tienda está asociada a una lista de precios.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="52A1591191034ECFAAC42FA7F5D68FF2" trl="N">
+    <value column="MsgText" isTrl="Y" original="Expire">Expirar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5369F1EA0F854D1DBF6F4F525D38889F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Search">Buscar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="53F50FBC164D40748A72C02B496888A3" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Invoice this Receipt">Facturar este pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="53F841CFA75F4E1F8B279062081B9840" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was a problem processing orders">Hubo un problema al procesar los pedidos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5434E66E139D4F4FB3738B4EB48D7644" trl="N">
+    <value column="MsgText" isTrl="Y" original="Cash Deposits and Withdrawals">Depositos y reintegros de efectivo</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="543AF3AFD33D4CE2AD400E0E21B7DBAD" trl="Y">
+    <value column="MsgText" isTrl="Y" original="To be Returned">A devolver</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5617CB1E0DBC4C2185427EB9B9606807" trl="Y">
+    <value column="MsgText" isTrl="N" original="MENU">MENU</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="56DD4549BB634A7B8BB7590681F72B93" trl="N">
+    <value column="MsgText" isTrl="Y" original="End Session">Cerrar sesión</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="57870DFDE61D4E2F8AEF51B931B13DEA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Pending Receipts">Pedidos pendientes</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="582715E35F2B449584BEB484566A3381" trl="N">
+    <value column="MsgText" isTrl="Y" original="Client changes have been processed successfully.">Los cambios del cliente han sido procesados con éxito.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="58EE8DBE5A09427CAF0DCBA914E85B2B" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Welcome to Openbravo POS">Bienvenido a Openbravo TPV</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="592E3BBC38424554B0ED804C4FF322D8" trl="N">
+    <value column="MsgText" isTrl="Y" original="More payment methods">Más tipos de pago</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="596204F1BDA34161A1126A2D67AA8BEA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total Amount of">Cantidad total de</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5C1AB8A975BC4F38AC02A0EBBBE1E738" trl="N">
+    <value column="MsgText" isTrl="Y" original="This receipt is closed">Este pedido está cerrado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5C2CF0F9537742EAA6ABD87F632F3CAD" trl="N">
+    <value column="MsgText" isTrl="Y" original="Line-item Properties">Propiedades del elemento de la linea</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5CED08E2D26C433DB75D0F4D1FF1CA4C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Select deposit origin">Seleccione origen del ingreso</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5DA9C72952AA4712A2C2BB3E8F654B58" trl="N">
+    <value column="MsgText" isTrl="Y" original="Step 3 of 4: Select %0 to keep">Paso 3 de 4: Seleccionar cantidad a mantener en %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5E7BE9600B6844FF8CF66009CF0CC415" trl="N">
+    <value column="MsgText" isTrl="Y" original="Set %0 x %1">Cambiado a %0 x %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5F7669C094CC4F4CA7A3E129900410AE" trl="N">
+    <value column="MsgText" isTrl="Y" original="You should not close this window in offline mode.">No debería cerrar esta ventana sin conexión.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="5FD46D4C6B6F445986F3EDDEEAEEFA33" trl="N">
+    <value column="MsgText" isTrl="Y" original="Removed customer">Cliente eliminado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="60C8766430CA42C1BF4E1769925F120B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Order ">Pedido </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6252D3B7A96F41FB86BE6AE9C5F00C6C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Stock cannot be retrieved.">No se ha podido obtener el stock.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6421ACF197DD4404852E2DBBC40C1F1D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Store">Tienda</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6508F5F88E354F7C8363B4FD3DA19961" trl="N">
+    <value column="MsgText" isTrl="Y" original="Tax breakdown">Desglose de impuestos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="658B66EB6352435F822C9EF993481257" trl="N">
+    <value column="MsgText" isTrl="Y" original="You've logged in the application in offline mode, as the connection was not available. You will be able to complete transactions, but a connection is required in order to use all the features in the application.">Ha iniciado sessión en modo fuera de linea, porque la conexión no estaba disponible. Puede completar las transacciones, pero necesita conexión para usar todas las funcionalidades.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="659CB55ACC8C4E6BA6A7EA51C0ED6B89" trl="N">
+    <value column="MsgText" isTrl="Y" original=" remaining to return.">pendiente de devolución.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="662F17B4C39D4EB68B7244F3ED81BCEC" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 has been inserted.">El cliente %0 ha sido añadido.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="66E76C20542B4E11BD4D737D8EA0543A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Thank you.">Gracias.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6779181BCE2745E69524A7581586CD4C" trl="Y">
+    <value column="MsgText" isTrl="N" original="€,€,€,..">€,€,€,..</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="67E251B8DE5C4AB39595611C848F1EB0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Print this Receipt">Imprimir este pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6853A26B4FEB43118CDB2BFB683B0F16" trl="N">
+    <value column="MsgText" isTrl="Y" original="Layaway">Articulo reservado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="68F08CC1346F4ADEBD723C1FD92C824E" trl="N">
+    <value column="MsgText" isTrl="Y" original="* New Customer">* Nuevo cliente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6B1CD5C303EE4516B6B77ADB142024B6" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Cash Up">Cierre de caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6BB00E3707CC4732B79D33396E607D3C" trl="N">
+    <value column="MsgText" isTrl="Y" original="to refund.">a devolver.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6C37D366874F441398E8EEB25725C176" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipt no: %0 cannot be closed.">El pedido núm: %0 no puede ser cerrado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6CC79C560BF24577BC250FBE5E03B8E3" trl="N">
+    <value column="MsgText" isTrl="N" original="G-I">G-I</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6D4A08A85E4F4C90B5DD8A029D560D94" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipt">Pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6DC6D2AB02A3430C83D2BE4D958F0875" trl="N">
+    <value column="MsgText" isTrl="Y" original="An error happened while BP categories was being retrieved from local DB">Ha habido un error obteniendo las categorías de terceros de la base de datos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6E0FDD7BD9F24FBCBF0B453E8F2F70AF" trl="N">
+    <value column="MsgText" isTrl="N" original="Base">Base</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6E7851DD77824C198A76CD0A4A56A6DF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipt Properties">Propiedades del pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="6E965A45587A45E2B1EE968BE7B2338E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Layaway this Receipt">Reservar este pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="70E6962C93F845B196E1F66B15CB68B9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Invoice">Factura</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7231A46D1AB7475E9B7C6C8624160EA7" trl="N">
+    <value column="MsgText" isTrl="Y" original="You may insert an Amount if Keep Fixed Amount is selected.">Si la opción Mantener cantidad fija está seleccionada, debe indicar una Cantidad fija.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="735970E9F0F54C678CAB6572A68A47F8" trl="N">
+    <value column="MsgText" isTrl="Y" original="You have paid">Ha pagado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="736F0E54D7724692A07EDBC895F27C73" trl="N">
+    <value column="MsgText" isTrl="Y" original="City">Ciudad</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="73B311C8B62541EAA4F4AE63CB95D9F3" trl="N">
+    <value column="MsgText" isTrl="N" original="An error happened while Sales Representatives were being retrieved from local DB">Ha ocurrido un error mientras se obtenían los Representantes de Ventas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7459EA4D570140B38C67A35F1EC3FA49" trl="N">
+    <value column="MsgText" isTrl="Y" original="User">Usuario</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="74EE30A6C6B94EBD9E354D274A6BB87B" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error with the closing cash. Please try again.">Hubo un problema al cerrar la caja. Por favor inténtelo de nuevo.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="752FD166386246E99A3165D54A9FCD31" trl="N">
+    <value column="MsgText" isTrl="Y" original="Store stock: ">Stock de la tienda: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="755AFC7C00F34DE69B8FF250DE1049C9" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Expected">Esperado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="757726FB63704833BD5F18B93F0E445D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Post, Print &amp; Close">Completar, Imprimir y Cerrar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="79034AE8E220493284D1136EB7615825" trl="N">
+    <value column="MsgText" isTrl="Y" original="Do you really want to delete the current receipt?">¿Dese eliminar este ticket?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="79316EFE854F48308082C2725E8F1FB9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Step 1 of 4: Review pending receipts">Paso 1 de 4: Revisar tickets pendientes</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7CA644AD4ACE4914B248ED338FFC0000" trl="N">
+    <value column="MsgText" isTrl="Y" original="yes, close paid receipt">si, cerrar el pedido pagado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7CF0092F3829499D80D9A1A394B45097" trl="N">
+    <value column="MsgText" isTrl="Y" original="Loading...">Cargando...</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7D33285B2B9F4445AFB6571ACAC82984" trl="N">
+    <value column="MsgText" isTrl="Y" original="BP Category">Cat. terceros</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7D498E1BAC8847DD9CAD46F360D1F5F9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Add to receipt">Añadir al pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7EC813AE2A094FE18CEA6ADD6071BA5C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Are you sure you want to use %0 of %1 's credit to complete this receipt?">¿Está seguro de que quiere usar %0 de %1 de crédito para completar este pedido?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7EF243C4B75B402D9C48D4F1ED7FE919" trl="N">
+    <value column="MsgText" isTrl="N" original="Info">Info</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="7FAA85A030C545F58D1393A584DACA39" trl="N">
+    <value column="MsgText" isTrl="Y" original=" remaining to pay. "> pendiente de pagar. </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8109E36E97274C50945566BFA7B38B9F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Credit Limit exceeded">Límite del crédito excedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8296E08D474747FD9D7E9E423668112E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Edit / New Customer">Editar / Nuevo Cliente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="82A45223C6AF473E9B8502C3A1D50388" trl="N">
+    <value column="MsgText" isTrl="Y" original="Lock screen">Bloquear Pantalla</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="82C64F12D8AA4B3C95F848C464C8E8C0" trl="N">
+    <value column="MsgText" isTrl="N" original="Total">Total</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="849E52825027454DA2FFA882AA093614" trl="N">
+    <value column="MsgText" isTrl="Y" original="This order cannot be edited">Este pedido no puede ser editado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="85A3A8AD7DBA44809CF9A7386D0D7F44" trl="N">
+    <value column="MsgText" isTrl="Y" original="Count Cash">Conteo de caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="867373F9B809480CADD6E1645ECAC344" trl="N">
+    <value column="MsgText" isTrl="Y" original="Delete">Borrar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8845100B291040FE902088BB4DBA4BDB" trl="N">
+    <value column="MsgText" isTrl="Y" original="Postal Code">Código postal</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="88FB2E827D25429E864F2E1A32B3BE36" trl="N">
+    <value column="MsgText" isTrl="Y" original="Quotation">Presupuesto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="896AD71B35084D44AD7FBA30A3B633FE" trl="N">
+    <value column="MsgText" isTrl="Y" original="This functionality requires online operation. Check your Internet connection and if it is working, please contact your system administrator.">Esta funcionalidad requiere estar en linea. Compruebe su conexión a internet y si funciona, por favor, contacte con el administrador del sistema.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8B86D58F5A224ADABDF2FFE4F4B5FDA4" trl="N">
+    <value column="MsgText" isTrl="Y" original=" loaded."> cargado.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8D10522CAC9E43BBA4BAD03988317A27" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Net Sales">Ventas netas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8ED043111EAE45CFBF18940C609F85E2" trl="N">
+    <value column="MsgText" isTrl="Y" original="NOTHING TO RETURN">NADA A DEVOLVER</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="8F3F155DC40346769C8A21C1EFA264CD" trl="N">
+    <value column="MsgText" isTrl="N" original="Cross store utility requieres a correct configuration of the organization warehouses. You can configure it in the organization window off Openbravo ERP.">Cross store utility requieres a correct configuration of the organization warehouses. You can configure it in the organization window off Openbravo ERP.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9050B441B65446E7A854AB536A242F4D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Step 2 of 4: Count Cash">Paso 2 de 4: Contar caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="92273096029B4EE183E91F69740060EA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Override existing promotions">Sobreescribir</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="922A521CD2C54CF6B9A1AE019BAE0203" trl="Y">
+    <value column="MsgText" isTrl="Y" original="NEW">NUEVO</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="925AC95A88EB45359B92135E3291522D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Credit will be used">Se va usar crédito</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="92631FBAAD5E44398E6D6E7767AC2CB0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Save">Guardar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="936B5DF358C64133A87AB79D03EB237D" trl="N">
+    <value column="MsgText" isTrl="Y" original="SEARCH">BUSCAR</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="945BDF55B799439E940546A61304D2FB" trl="N">
+    <value column="MsgText" isTrl="Y" original="New Receipt">Nuevo pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9517FA4D4D2A4CEAB5370CDDDEDD76FE" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 has been saved locally.">El cliente %0 ha sido guardado en local.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="954BCD162B234A93926E8BB0AA8DF06F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Price">Precio</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="95CA9F8F3A8249668FDCDB6909D90CC1" trl="N">
+    <value column="MsgText" isTrl="Y" original="User">Usuario</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="95CF4A6B18CB4CA298FB3C55054204CD" trl="N">
+    <value column="MsgText" isTrl="Y" original="If you change an existing quotation, new lines will be added using the current product pricing, and promotions and discounts will be recalculated according to the current list. Do you want to proceed?">Si cambia un presupuesto existente, se añadirán nuevas lineas usando el precio para productos actual, y las promociones y descuentos se recalcularan de acuerdo a la lista actual. ¿Quiere continuar?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9610384F4BF74978A3F8379C9EF52F88" trl="N">
+    <value column="MsgText" isTrl="Y" original="This functionality is not available in offline mode.">Está funcionalidad no está disponible fuera de linea.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9638D08391744EC7ABCC92AAB44DB59F" trl="N">
+    <value column="MsgText" isTrl="N" original="P-R">P-R</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="963D15A9B27F4272A28E03A170A15263" trl="N">
+    <value column="MsgText" isTrl="Y" original="Changes for customer %0 has been saved locally.">Los cambios para el cliente %0 ha sido guardado en local.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="97C05A94D23A49D5AC40AF33A0A5366F" trl="N">
+    <value column="MsgText" isTrl="Y" original="This line cannot be edited">Esta linea no puede ser editada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="97CB5B8566F44416986B7FB607640E13" trl="N">
+    <value column="MsgText" isTrl="Y" original="An error happened when customers are being processed. Customer changes are saved locally and will be synchronized again later.">Ha ocurrido un error procesando los clientes. Los cambios de los clientes han sido guardado en local y se sincronizarán de nuevo más tarde.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="98E7D2EA359F4577BABBF4264D0D1078" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer details">Detalles del cliente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="996922A606A84B058A03A651F12317BF" trl="N">
+    <value column="MsgText" isTrl="Y" original="The cash management process failed to execute successfully.&#10;Please contact your system administrator.">El proceso de gestión de caja ha fallado.
+Por favor, contacte con el administrador de sistema.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9AAC477E73BD4EF78C1DBA133F2E04D9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Other stores stock:  ">Stock en otras tiendas:  </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9ADC48AFE274433C82DE67C1CBCA18EF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Return this Receipt">Devolver este pedido</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9B4CF9EC9E894A4594E5376966FFC1CF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Quotation no: %0 has been created successfully.">El presupuesto número: %0 se ha creado correctamente.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9C0F260726BD4504A08C916B011350C2" trl="N">
+    <value column="MsgText" isTrl="Y" original="Cash Management Error">Error de gestión de caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9D4F46EF55AD45A48CEA05572AD31072" trl="N">
+    <value column="MsgText" isTrl="Y" original="It has been an error with cash management">Hubo un error con la gestión de caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9E7F86846E1F49809D34D464346124E9" trl="Y">
+    <value column="MsgText" isTrl="Y" original="The Cash Up process was completed successfully.">El poceso de cierre de caja se completó satisfactoriamente.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9EC1B50E02484A5ABE24E4634E2840EF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Payment type:">Tipo de pago:</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9F8239B4DD2F415B87B6285F02C8B79C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 cannot be inserted locally">El cliente %0 no se ha podido añadir en local.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="9FE90426ACB14B49943D63CD3EE8FD19" trl="N">
+    <value column="MsgText" isTrl="Y" original="LineValue">Valor de la linea</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A20C6C8A724F4576A9B79B5E1DF4BBC8" trl="N">
+    <value column="MsgText" isTrl="Y" original="Quotation - Under Evaluation">Presupuesto - Bajo supervisión</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A4D36CD407EE42EC9DB97A7A1BBE48F7" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customers has been processed correctly by the server but pending changes cannot be removed locally.">Los clientes se han procesado correctamente en el servidor pero los cambios locales no se pueden borrar.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A6383AF9303D4E9F9E69A35B20477022" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer saved successfully">Cliente guardado con éxito</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A6A48A4C9EF4421AA5F9BE2D09760426" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Difference">Diferencia</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A6A658E82C0349639B3D5E9673418FED" trl="Y">
+    <value column="MsgText" isTrl="Y" original="You have started the Cash Up process.">Ha comenzado el proceso de cierre de caja.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A6E4FC86A43C4F7297739296743AF52C" trl="N">
+    <value column="MsgText" isTrl="Y" original="PAID">PAGADO</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A751DEDAF8FC45A2AF7D792FED1101F6" trl="N">
+    <value column="MsgText" isTrl="N" original="The value to be discounted is not valid.">El valor a descontar no es válido.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A7CBAF28EE6C42A791DF740B61D77D4C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Loading stock from %0">Cargando stock de %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="A9607216E5CC4A1C9EB6880216858162" trl="N">
+    <value column="MsgText" isTrl="Y" original="Advanced Search">Búsq. avanzada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AA8DDF05D0F147018F60AE22287F556E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Profile">Perfil</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AAE3912672DE465BA8F1EF4063EE7220" trl="N">
+    <value column="MsgText" isTrl="Y" original="Available in cash">Disponible en caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AB11EF9435F242A1AD7A127B3208221C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Access is not allowed to window: '%0'.">No tiene acceso a la ventana: '%0'.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AB752B5561AC4C07B234AEF5CD77CF3F" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error while saving the order.">Hubo un error al salvar el pedido.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ABE022B9C1A74FC2B1B7C4AF128C8D46" trl="N">
+    <value column="MsgText" isTrl="Y" original="To be laid away">Reservar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ABE6EB8C4DD44242B98DC6A30A6F18A1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Nothing">Nada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AD6E0B98AFB148759F7AF8ADB070BE7C" trl="Y">
+    <value column="MsgText" isTrl="Y" original="UPC/EAN code not found: %0">Código UPC/EAN no encontrado: %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AE1361A2408741D1BEB4833069A0E267" trl="Y">
+    <value column="MsgText" isTrl="N" original="Total.">Total.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AE8F8CE0C52148758349317BBE9633D1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Printer and display are not available.">Impresora y pantalla de cliente no disponibles.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AED51E5FA09345F8B91DE272DFC32AE0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Exact amount returned.">Cantidad exacta devuelta.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AEE29A7482A8454F87363F13C34000E9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Counted amount">Cantidad contada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AF47E4AF752A40C0A8306400F366022A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Apply to all lines">Aplicar a todas las lineas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AF5AC131F2204C6FAFD4B8B58587310F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Discount">Descuento</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AF8E7D3926104C69AE6C4A83E3354F3F" trl="N">
+    <value column="MsgText" isTrl="Y" original="Firm quotation">Presupuesto en firme</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="AF919CDF33E7425FA057DF940B7D776C" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Quantity">Cantidad</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B0187AC69167447191A8820FC5E1E05F" trl="N">
+    <value column="MsgText" isTrl="Y" original="You have been served by">Ha sido atendido por</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B0C69E97710F4F1FB573195F715ADACA" trl="Y">
+    <value column="MsgText" isTrl="Y" original="EDIT">EDITAR</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B115B2E716AF4D0F89F95AC821C351CD" trl="N">
+    <value column="MsgText" isTrl="Y" original="The customer %0 has been processed  by the server, but an error happens trying to get this customer from local database.">El cliente %0 ha sido porcesado en el servidor, pero ha habido un error intentando obtener este cliente de la base de datos local.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B7A27DBC12A24CFDB6B6B2F1817C5A14" trl="N">
+    <value column="MsgText" isTrl="Y" original="Logging out...">Cerrando sesión...</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B7B58301341F45928F4876232839FC70" trl="N">
+    <value column="MsgText" isTrl="Y" original="Print">Imprimir</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B7B624609252451F81020B3C0B05B2E0" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Net Returns">Devoluciones netas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="B8668152E186441C9983E19E6E9BF30B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Web POS Terminal %0 is not present in DB. Ask your System Administrator.">El TPV web %0 no está en la BD. Consulte a su administrador de sistemas. </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BC28856DE5814F96A9CDE083FF43C79B" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error while saving the customer.">Ha habido un error guardando el cliente.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BCAD361FF8FB4D3B999131497E12183A" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer %0 cannot be saved.">No se ha podido guardar el cliente %0.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BD69DF387F464892A3760994F90CE949" trl="N">
+    <value column="MsgText" isTrl="N" original="J-L">J-L</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BDEC8D2D10C045B2984AD5FF081FE93B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Best sellers">Más vendidos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BE1239CC3BDE4F048E9AEE54ABF3D7F8" trl="N">
+    <value column="MsgText" isTrl="Y" original="Customer Advanced Search">Búsqueda avanzada de clientes</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BEC3E4823B2847F4A93CE1A073E21021" trl="N">
+    <value column="MsgText" isTrl="Y" original="Payment has been confirmed. Do you really want to remove it?">El pago ha sido confirmado. ¿Seguro que quiere borrarlo?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="BF7B190EFE0444AAB46D55300EE9F043" trl="N">
+    <value column="MsgText" isTrl="N" original="S-V">S-V</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C06E7B99FB2844B086C8273DE5C842D2" trl="N">
+    <value column="MsgText" isTrl="Y" original="Card">Tarjeta</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C1C560FED61B4ED19F7AAA6BA0BB08B1" trl="N">
+    <value column="MsgText" isTrl="Y" original="yyyy-mm-dd">aaaa-mm-dd</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C332CC2C8E504225B5E745AD811185F5" trl="N">
+    <value column="MsgText" isTrl="Y" original="Payment breakdown">Desglose de pagos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C367D5133E4D447C936535F3DA6BFF7A" trl="N">
+    <value column="MsgText" isTrl="N" original="A-C">A-C</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C42465D6845B4803A5FF94897FC7A8AD" trl="N">
+    <value column="MsgText" isTrl="N" original="W-Z">W-Z</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C48E411B140F43E88A799FA684499656" trl="N">
+    <value column="MsgText" isTrl="Y" original="Start Date:">Fecha Inicio:</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C4A1F5074A4D4AECA9AB06F6F8D5A5AE" trl="N">
+    <value column="MsgText" isTrl="Y" original="PAY">PAGAR</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C4DB845A23FD4A00A42ACFD8B361F602" trl="N">
+    <value column="MsgText" isTrl="Y" original="Cashier &amp; POS">Cajero &amp; TPV</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C555AC3010E14E3990575FA952AA62AC" trl="N">
+    <value column="MsgText" isTrl="Y" original="Step 4 of 4: Post, print and close">Paso 4 de 4: Completar, Imprimir y Cerrar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C6CA2D9CA2734911BB4045FCDE051316" trl="N">
+    <value column="MsgText" isTrl="Y" original="TAX">Imp.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C7D3CFC2CDC04F4485457CF9FCCE4FD5" trl="N">
+    <value column="MsgText" isTrl="Y" original="Amount/percentage is required">Se requiere un importe/porcentaje</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C8A6CFD1E17841B2BFDB7F1B3197CB4A" trl="Y">
+    <value column="MsgText" isTrl="Y" original="DELETE">ELIMINAR</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C9C5D482C67A46DA88EAC2CD0318F260" trl="N">
+    <value column="MsgText" isTrl="Y" original="%0 returns">Devoluciones %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="C9E002506C6145EAB66C35E50A50FF64" trl="N">
+    <value column="MsgText" isTrl="Y" original="%0 participates in discount %1.">%0 participa en el descuento %1.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CA4E1AE4698C474BB06DC553CA4944AB" trl="N">
+    <value column="MsgText" isTrl="Y" original="Openbravo Web POS">Openbravo TPV</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CA9FF99FD1E04A479900A51BD8FA4FE2" trl="N">
+    <value column="MsgText" isTrl="N" original="Reject Quotation">Reject Quotation</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CAA15150B5DC415E97D25703D9A264BE" trl="N">
+    <value column="MsgText" isTrl="N" original="Payments not processed">Pago no procesado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CB4D0479B4504049A2DBAA8C949EB813" trl="N">
+    <value column="MsgText" isTrl="Y" original="Template is not available.">Plantilla no disponible.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CD1A7A2937904D26A659D4CFDA42F6A1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Loading stock...">Cargando stock...</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CD3E7669FB91445D9C745D22CAC298E7" trl="N">
+    <value column="MsgText" isTrl="Y" original="Order saved successfully">Pedido guardado satisfactoriamente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CD781080F910403CB5A23BB52CB2E3AF" trl="N">
+    <value column="MsgText" isTrl="Y" original="Invoice">Factura</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CE13D04CD2164F08A99D6BE137BB0850" trl="N">
+    <value column="MsgText" isTrl="Y" original="You can not close this window in offline mode.">No puede cerrar esta ventana estando sin conexión.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CE37578EEA7042469F7A640362288D32" trl="N">
+    <value column="MsgText" isTrl="Y" original="Closing paid receipt">Cerrando el pedido pagado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CEC3CBDBA61A4991B1226A86D0FE8AB9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Previous">Anterior</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="CF9A140234FC40A9B5438D6477F564CD" trl="N">
+    <value column="MsgText" isTrl="N" original="Customer %0 has been saved successfully.">Customer %0 has been saved successfully.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D0110566F12E4981A46E58A2458CED26" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Delete">Eliminar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D06BACE651704E4BA8A5E210DF833EB9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total Withdrawals">Total Retirado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D135F503B3664D25A72A21D770422FA6" trl="N">
+    <value column="MsgText" isTrl="Y" original="Assigned customer %0">Asignado cliente %0</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D2031367DCB64B4CA3B9EF8D9621FD09" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Gross Returns">Devoluciones brutas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D2655990E22F4310A24C9F8F99F4C041" trl="N">
+    <value column="MsgText" isTrl="Y" original="Counted">Contado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D2731465445E4EAEBFE44C5955279BEB" trl="N">
+    <value column="MsgText" isTrl="Y" original="Card number">Número de tarjeta</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D40123F156774049A15241FF4EE56C51" trl="N">
+    <value column="MsgText" isTrl="Y" original="TOTAL RETAIL TRANSACTIONS">TOTAL DE TRANSACCIONES</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D4AB908469A2466A9776E14537A371A1" trl="N">
+    <value column="MsgText" isTrl="Y" original="VOIDED LAYAWAY">ARTÍCULO RESERVADO ANULADO</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D57AE7B3CC8A421BA79186DD90607BFC" trl="N">
+    <value column="MsgText" isTrl="Y" original="4) Post, print, close">4) Completar, Imprimir y Cerrar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D64321A307F048D3A28F220203BA2FB0" trl="N">
+    <value column="MsgText" isTrl="N" original="Return (Draft)">Devolución (Borrador)</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D6D23E75B9EC46988D27668DC9915D55" trl="N">
+    <value column="MsgText" isTrl="Y" original="New Available in">Disponible nuevo en</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D8364927BAAC4279A9967AFDDA8DC239" trl="N">
+    <value column="MsgText" isTrl="Y" original="You may select a G/L Item in Cash drop/deposit if Automate Movement to Other is selected.">Si la opción Automatizar Movimientos a otra cuenta está activa, debe seleccionar un concepto contable para movimientos de caja.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D8E4D82AE83D4E2DBC0958C22E761B92" trl="N">
+    <value column="MsgText" isTrl="Y" original="Return">Devolución</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D9834E4E492E44DBAD565CB128F9DF9E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Approval code">Código de aprobación</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="D9FD175E49C4453A8FD6AF2B82CA5D70" trl="N">
+    <value column="MsgText" isTrl="Y" original="There are receipts pending to be processed. Processing them may take a while. Do you want to continue?">Hay pedidos pendientes de ser procesados. Procesarlos puede llevar un rato. ¿Desea continuar?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DAE9F4A021AD48EC9A2EC548F4043DC6" trl="N">
+    <value column="MsgText" isTrl="Y" original="The stock data of %0 cannot be retrieved.">No se puede obtener los datos de stock de %0.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DB450F0516954FE6B35642CEAF57B86B" trl="N">
+    <value column="MsgText" isTrl="Y" original="There is no document type for quotations defined in the POS terminal. You need to define one in the &quot;POS terminal type&quot; window in the backoffice to be able to create quotations.">No hay definido un tipo de documento para los presupuesto en el terminal TPV. Necesita configurar uno en la ventana "Tipo de terminal TPV" en Openbravo para poder crear presupuestos.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DBA24B22FA9E44A1A90985773F7092E6" trl="N">
+    <value column="MsgText" isTrl="Y" original="Could not load business partners Credit">No se ha podido obtener el crédito de los terceros</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DBC8CB72DFD245F7AA5511D645523383" trl="N">
+    <value column="MsgText" isTrl="Y" original="Hardware server URL is not defined.">La URL de Hardware no está definida</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DD0972C1D5BE457E9F30D62F2D4E1659" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipts">Pedidos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DDE6F8B9280C443CAEC91E41F3BA705B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Layaways">Artículos reservados</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DE897F28B4324A80994D08DCE24290CE" trl="N">
+    <value column="MsgText" isTrl="Y" original="No default action has been defined.">No se ha definido acción por defecto.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DEF1813D01D049709AB24DBD41C0B3C9" trl="N">
+    <value column="MsgText" isTrl="Y" original="Related to receipt: ">Relacionado con el pedido: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DF0B0C41CE7D490AAE15F6408CE0AF72" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total Starting">dinero total de partida</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="DFE86ADABCC443AD990A32603747EBBD" trl="N">
+    <value column="MsgText" isTrl="Y" original="Transaction ID">ID de la transacción</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E04D2B7E841547659E74AC461F3869CA" trl="N">
+    <value column="MsgText" isTrl="Y" original="Void this Layaway">Anular artículo reservado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E07821D2206347338138EA0881F23A90" trl="N">
+    <value column="MsgText" isTrl="Y" original="Withdrawal">Reintegro</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E0D6521E2E6143E982CC054159573903" trl="N">
+    <value column="MsgText" isTrl="Y" original="As this is a return, the customer used credit will be decreased by  %0. Do you want to proceed?">Como esto es una devolución, el credito usado por el cliente disminuirá %0. ¿Quiere continuar?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E1D2A17B3FED4DDEBFD93BBD758B6EAD" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total to Deposit">Total a depositar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E3A513EA4850464C8B373BB4989F479E" trl="N">
+    <value column="MsgText" isTrl="Y" original="Additional configuration is required.">Se necesita configuración adicional.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E4688B3A4D6C4120B6FAD5F181C41A04" trl="N">
+    <value column="MsgText" isTrl="Y" original="Are you sure you want to exit this process?">¿Está seguro de que desea abandonar este proceso?</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E4EC8BA5E2B54938B35CA0B689199B8B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Removed %0 x %1">Eliminado %0 x %1</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E5B26F63CD6A4F8CB5D66B30C6429D04" trl="N">
+    <value column="MsgText" isTrl="Y" original="Quotation - Draft">Presupuesto - Borrador</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E624271F1AAB479E85057455E8507345" trl="N">
+    <value column="MsgText" isTrl="Y" original="User has no access to Web POS. Ask system administrator.">El usuario no pude acceder al TPV Web. Pregunte al administrador del sistema.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E67EEC8A4E964C61A676D4D8EDDD7ED2" trl="N">
+    <value column="MsgText" isTrl="Y" original="Price: ">Precio: </value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E722B5B8370E4044BB032886B723BCB1" trl="N">
+    <value column="MsgText" isTrl="Y" original="All orders have been processed">Se han procesado todos los pedidos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E72F66EDE774438EB15C41C4129DDD6D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Breakdown">Desglose</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E7FEC61ACAB24F73AF1FFC3FB6EB21A6" trl="N">
+    <value column="MsgText" isTrl="Y" original="Application server is not available.">El servidor de aplicaciones no está disponible.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E89F8B2B103743498772724EC50CB7FC" trl="N">
+    <value column="MsgText" isTrl="Y" original="Create Quotation">Crear presupuesto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E904BB87C101415F8474551CC2B51D64" trl="N">
+    <value column="MsgText" isTrl="Y" original="Error - No discounts found.">Error - No se han encontrado descuentos.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E9A56CCA808646CDB32B547A0B74335C" trl="N">
+    <value column="MsgText" isTrl="Y" original="New Quotation">Nuevo presupuesto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="E9A6579D0E294856A7D4218D00101764" trl="N">
+    <value column="MsgText" isTrl="Y" original="Receipts to Process">Pedidos a procesar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EA95FB3A201141C8A5FE12041D89FF59" trl="N">
+    <value column="MsgText" isTrl="Y" original="No payments">No hay pagos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EB3723228D9D4EE6A6F7A5BB6B8A9E6C" trl="N">
+    <value column="MsgText" isTrl="Y" original="Scale is not available.">Balanza no disponible.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="EB96196AC47A429C9C0A526A392B1E8F" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Receipts">Pedidos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ECA4DABE8F34423D9DFA59F498AB2C8D" trl="N">
+    <value column="MsgText" isTrl="Y" original="Window '%0' not found.">Ventana '%0%' no encontrada.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="ECA7A0CCD401408781882E309BA70DD1" trl="N">
+    <value column="MsgText" isTrl="Y" original="Address">Dirección</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F0B74BD04045426B99D8A9ED5F71A4E7" trl="N">
+    <value column="MsgText" isTrl="Y" original="Other">Otro</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F1366DBECBB1478585C0D6D56007C145" trl="N">
+    <value column="MsgText" isTrl="N" original="%0 (&lt;b&gt;%1&lt;/b&gt;)">%0 (&lt;b&gt;%1&lt;/b&gt;)</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F1AA30A93DCF4152AAC0D5F8E20031EC" trl="N">
+    <value column="MsgText" isTrl="Y" original="There was an error loading the Pos Terminal.">Ha habido un error cargando el terminal TPV.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F1B357DE429B46D4B785E34E76019C73" trl="N">
+    <value column="MsgText" isTrl="Y" original="Open">Abrir</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F1BD76AC5A194951809E6C22614C7EF6" trl="N">
+    <value column="MsgText" isTrl="Y" original="Cash Up Error">Error del cierre de caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F26B410C246F40559FD872439D263C30" trl="N">
+    <value column="MsgText" isTrl="N" original="Email">Email</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F35BECB90E7440858A770C136EE39496" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Good job!">¡Buen trabajo!</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F3B0FBEFE0D64D8BA26A338E9E9F6DFC" trl="N">
+    <value column="MsgText" isTrl="Y" original="Users can be granted access to terminals in the User window, in the POS Terminal Access tab.">En la ventana de usuario se puede dar a los usuarios acceso a los terminales, en la pestaña Acceso a TPV.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F4654797965540B8A5D3A5BE5D848961" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Done">Hecho</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F4B2BA04045241A585AE3910D05CCB02" trl="N">
+    <value column="MsgText" isTrl="Y" original="Total Deposits">Total depósitos</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F5161C5EB5384CDDB7D9B98DCAC594E7" trl="N">
+    <value column="MsgText" isTrl="N" original="M-O">M-O</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F591FBE4497948BE86EA9C7596C818EF" trl="N">
+    <value column="MsgText" isTrl="N" original="Terminal">Terminal</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F5BBBB3B430B417380FA145AA1A8DB4B" trl="N">
+    <value column="MsgText" isTrl="N" original="Returned">Devuelto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F6372FCDDAC14C6493EA461B340F7698" trl="N">
+    <value column="MsgText" isTrl="Y" original="LAYAWAY">ARTÍCULO RESERVADO</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F6922569BC2D44C28B74157814476DA0" trl="N">
+    <value column="MsgText" isTrl="Y" original="Time">Hora</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F7138E5EBDAE4BA2BE3AACA5386BC0C4" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Are you sure you want to clear the selected error? After clearing it, you will be unable to review it again.">¿Está seguro de que quiere eliminar el error seleccionado? Una vez eliminado, no será posible verlo de nuevo.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F7AEF80053C844FEAFB000E21F6D2FAF" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Deposit">Ingresar</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F7FC310F6D1D45D3BC5D0C1F9272D7AE" trl="N">
+    <value column="MsgText" isTrl="Y" original="Not editable order">Pedido no editable</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F9062804349D4364A4162BBE9505FF85" trl="N">
+    <value column="MsgText" isTrl="N" original="Sales Representative">Representante de ventas</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F92A739501F543A6BC7F3449B640310B" trl="N">
+    <value column="MsgText" isTrl="Y" original="Cash Management">Gestión de caja</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="F9C00E57A2F54B3D8F8319315E9D6631" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Thanks for your visit">Gracias por su visita</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FA2AAFADD29C4AE2AF457CCB55CB9128" trl="Y">
+    <value column="MsgText" isTrl="Y" original="Next">Siguiente</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FBEF98BABC7A4B85B3A898B5EB0F64EE" trl="N">
+    <value column="MsgText" isTrl="Y" original="Item">Producto</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FE8F81DEAAE24F00A7AE9C70B4C5A6D8" trl="N">
+    <value column="MsgText" isTrl="Y" original="You cannot keep more in cash than what was counted">No puede dejar en caja una cantidad mayor que la contada</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF382238628B42BD99B77DE3FA9AC604" trl="N">
+    <value column="MsgText" isTrl="Y" original="The quotation has already been completed, and cannot be modified">El pedido se ha completado y no puede ser modificado</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+  <row id="FF6C7F40628A4F11A94CC042E4D3E507" trl="Y">
+    <value column="MsgText" isTrl="Y" original="This action cannot be undone.">Esta acción no puede ser deshecha.</value>
+    <value column="MsgTip" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

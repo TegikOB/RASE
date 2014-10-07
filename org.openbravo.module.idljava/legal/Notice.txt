@@ -1,0 +1,7 @@
+# opencsv2.2.jar
+Copyright 2005 Bytecode Pty Ltd. 
+http://opencsv.sourceforge.net/
+Files under Apache Software License 2.0, available at
+http://www.apache.org/licenses/LICENSE-2.0
+
+

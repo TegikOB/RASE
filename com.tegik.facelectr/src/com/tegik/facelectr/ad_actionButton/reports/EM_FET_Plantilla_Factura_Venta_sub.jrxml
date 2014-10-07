@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EM_FET_Impresion_Orden_Venta_sub" pageWidth="555" pageHeight="802" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.9487171000000039"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CBCBCB"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String"/>
+	<parameter name="usar_descripcion" class="java.lang.String">
+		<defaultValueExpression><![CDATA["N"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[ SELECT pro.value clave,
+       il.Qtyinvoiced Cantidad,
+       uom.name medida,
+       COALESCE(pro.Name,g.name) AS Nombre,
+       COALESCE(pro.description,'Sin descripción') as pdescripcion,
+       COALESCE(il.PriceActual,0.00) Precio,
+       COALESCE(il.LineNetAmt,0.00) Importe,
+       COALESCE(il.description,'') Descripcion
+FROM C_invoiceLine il
+  INNER JOIN C_invoice i ON i.C_invoice_ID = il.C_invoice_ID
+  INNER join c_uom uom on il.c_uom_id = uom.c_uom_id
+  LEFT JOIN M_Product pro ON pro.M_Product_ID = il.M_Product_ID
+  LEFT JOIN c_glitem g ON il.account_id = g.c_glitem_id
+WHERE il.C_invoice_ID = $P{DOCUMENT_ID}
+ORDER BY il.line]]>
+	</queryString>
+	<field name="clave" class="java.lang.String"/>
+	<field name="cantidad" class="java.math.BigDecimal"/>
+	<field name="medida" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="pdescripcion" class="java.lang.String"/>
+	<field name="precio" class="java.math.BigDecimal"/>
+	<field name="importe" class="java.math.BigDecimal"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<variable name="subTotal" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{importe}]]></variableExpression>
+	</variable>
+	<variable name="producto" class="java.lang.String">
+		<variableExpression><![CDATA[($P{usar_descripcion}.equals("Y") ? $F{pdescripcion} : $F{nombre}) +($F{descripcion}.toUpperCase().equals("CARGO POR USADO") ||$F{descripcion}.toUpperCase().equals("") ? "" : " - "+$F{descripcion})]]></variableExpression>
+	</variable>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="2" width="551" height="11" forecolor="#D16232" backcolor="#D16232"/>
+				<frame>
+					<reportElement mode="Opaque" x="139" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="476" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="409" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="549" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="0" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="90" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement mode="Opaque" x="355" y="0" width="2" height="11" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="93" y="2" width="46" height="11" forecolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cant.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="141" y="2" width="214" height="11" forecolor="#FEFEFE"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="479" y="2" width="65" height="11" forecolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="357" y="2" width="52" height="11" forecolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="411" y="2" width="65" height="11" forecolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="2" y="2" width="88" height="11" forecolor="#FEFEFE"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clave]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="551" height="2" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="551" height="10" forecolor="#000000"/>
+				<textField isStretchWithOverflow="true" pattern="###0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" stretchType="RelativeToTallestObject" x="93" y="0" width="46" height="10"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{cantidad}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" stretchType="RelativeToTallestObject" x="141" y="0" width="214" height="10"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$V{producto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" stretchType="RelativeToTallestObject" x="411" y="0" width="58" height="10"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{precio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$ #,##0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" stretchType="RelativeToTallestObject" x="478" y="0" width="65" height="10"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{importe}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="549" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="476" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="409" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="139" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<textField isStretchWithOverflow="true" pattern="###0.00" isBlankWhenNull="true">
+					<reportElement style="Detail" stretchType="RelativeToTallestObject" x="2" y="0" width="88" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{clave}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="90" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement style="Detail" stretchType="RelativeToTallestObject" x="357" y="0" width="52" height="10"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{medida}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="355" y="0" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+				</frame>
+			</frame>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="12">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="551" height="2" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+				<reportElement style="Detail" positionType="Float" x="469" y="2" width="75" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{subTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="404" y="2" width="65" height="10" forecolor="#010101"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Subtotal:]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<noData>
+		<band height="14">
+			<staticText>
+				<reportElement style="Column header" x="141" y="2" width="270" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No se encontraron lineas]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="12" width="551" height="2" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="549" y="2" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="551" height="2" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="2" width="2" height="10" forecolor="#5D5D5D" backcolor="#5D5D5D"/>
+			</frame>
+		</band>
+	</noData>
+</jasperReport>

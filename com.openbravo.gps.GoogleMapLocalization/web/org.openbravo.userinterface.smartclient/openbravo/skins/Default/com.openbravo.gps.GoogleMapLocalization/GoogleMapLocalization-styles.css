@@ -1,0 +1,11 @@
+.OBToolbarIconButton_icon_obgmpsl_pointer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(./images/pointer.png);
+}
+
+.OBToolbarIconButton_icon_obgmpsl_earth {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(./images/earth.png);
+}

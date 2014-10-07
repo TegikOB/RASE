@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_EXITEFORANEA">
+    <function name="TEGIDL_EXITEFORANEA" type="VARCHAR">
+      <parameter name="columna" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="tabla" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="columnafk" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="tablafk" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="product_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="client_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="client_origen" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[v_foraneaId VARCHAR;
+v_value VARCHAR;
+v_existevalue VARCHAR;
+v_existename VARCHAR;
+v_existenombre VARCHAR;
+v_existeisocode VARCHAR;
+v_query VARCHAR;
+v_buscar VARCHAR;
+v_valueid VARCHAR;
+v_nameid VARCHAR;
+v_nombreid VARCHAR;
+v_isocodeid VARCHAR;
+v_contarQuery VARCHAR;
+v_contar NUMBER;
+BEGIN
+--obtener el id de la columna de la tabla
+RAISE NOTICE '%', 'SELECT ' || columna || 
+		' FROM ' || tabla || 
+			' WHERE '|| tabla || '_ID='''|| product_id ||''';' 
+			;
+EXECUTE 'SELECT ' || columna || 
+		' FROM ' || tabla || 
+			' WHERE '|| tabla || '_ID='''|| product_id ||''';' 
+	INTO v_foraneaId ;
+
+IF(v_foraneaId IS NULL)THEN 
+RETURN '1';
+END IF;
+
+--obtener el value o name o nombre del id de la tabla forenea 
+IF((SELECT UPPER(c.columnname) FROM ad_table AS t 
+	INNER JOIN ad_column AS c ON c.ad_table_id=t.ad_table_id
+	WHERE UPPER(t.tablename)=tablafk AND c.columnname='Value' ) IS NOT NULL)THEN
+ 
+v_buscar= tegidl_buscarId('value',columnafk, tablafk, client_origen,client_id, v_foraneaId );
+raise notice '%', v_buscar;
+EXECUTE v_buscar INTO v_value, v_contar,v_existevalue, v_valueid  ;
+
+IF(v_value IS NULL)THEN 
+RAISE EXCEPTION '%' , 'valor de la tabla foranea ' || tablafk || '  con el id ' || v_foraneaId ||' del cliente origen  es null'; --OBTG:-20000--
+END IF;
+
+
+IF(v_contar > 1)THEN 
+RAISE EXCEPTION '%', 'Existen mas de un VALUE '''|| v_value ||''' en la tabla '||tablafk || '. La recomendacion sera borrar las lineas de la tabla'
+|| tablafk ||', cambiarle el name y correr el proceso con el misma entidad origen y destino pero cambiando a la tabla foranea'; --OBTG:-20000--
+
+END IF;
+
+--RAISE NOTICE '%','----------Encontro Value';
+
+
+ELSIF((SELECT UPPER(c.columnname) FROM ad_table AS t 
+	INNER JOIN ad_column AS c ON c.ad_table_id=t.ad_table_id
+			WHERE UPPER(t.tablename)=tablafk AND c.columnname='Name' ) IS NOT NULL)THEN 
+			
+	v_buscar= tegidl_buscarId('name',columnafk, tablafk, client_origen, client_id, v_foraneaId );
+	EXECUTE IMMEDIATE v_buscar INTO v_value, v_contar,v_existevalue, v_valueid  ;
+
+	IF(v_value IS NULL)THEN
+	RAISE_APPLICATION_ERROR(-20000, 'El name de la tabla foranea ' || tablafk || ' con el id '||v_foraneaId||' del cliente origen es null');
+	END IF;
+
+	
+	IF(v_contar > 1)THEN 
+	RAISE EXCEPTION '%', 'Existen mas de un NAME '''|| v_value ||''' en la tabla '||tablafk || '. La recomendacion sera borrar las lineas de la tabla'
+	|| tablafk ||', cambiarle el name y correr el proceso con el misma entidad origen y destino pero cambiando a la tabla foranea'; --OBTG:-20000--
+	END IF;
+
+	--RAISE NOTICE '%','----------Encontro Name';
+
+	
+
+	ELSIF((SELECT UPPER(c.columnname) FROM ad_table AS t 
+			INNER JOIN ad_column AS c ON c.ad_table_id=t.ad_table_id
+				WHERE UPPER(t.tablename)=tablafk AND c.columnname='Nombre' ) IS NOT NULL)THEN 
+ 
+		v_buscar= tegidl_buscarId('nombre',columnafk, tablafk, client_origen, client_id ,v_foraneaId );
+		EXECUTE IMMEDIATE v_buscar INTO v_value, v_contar,v_existevalue, v_valueid  ;
+
+		IF(v_value IS NULL)THEN 
+		RAISE_APPLICATION_ERROR(-20000, 'El nombre de la tabla foranea ' || tablafk || ' con el id ' || foraneaid || ' del cliente origen es null');
+		END IF;
+
+
+		IF(v_contar > 1)THEN 
+		RAISE EXCEPTION '%', 'Existen mas de un NOMBRE '''|| v_value ||''' en la tabla '||tablafk || '. La recomendacion sera borrar las lineas de la tabla'
+		|| tablafk ||', cambiarle el name y correr el proceso con el misma entidad origen y destino pero cambiando a la tabla foranea'; --OBTG:-20000--
+		END IF;
+
+		--RAISE NOTICE '%','----------Encontro Nombre';
+		
+
+		ELSIF((SELECT UPPER(c.columnname) FROM ad_table AS t 
+			INNER JOIN ad_column AS c ON c.ad_table_id=t.ad_table_id
+				WHERE UPPER(t.tablename)=tablafk AND UPPER(c.columnname)=UPPER('iso_code' )) IS NOT NULL)THEN 
+ 
+			v_buscar= tegidl_buscarId('iso_code',columnafk, tablafk, client_origen, client_id ,v_foraneaId );
+			EXECUTE IMMEDIATE v_buscar INTO v_value, v_contar,v_existevalue, v_valueid  ;
+			--RAISE NOTICE '%','----------Encontro iso_code';
+
+			IF(v_value IS NULL)THEN 
+			RAISE_APPLICATION_ERROR(-20000, 'El iso_code de la tabla foranea ' || tablafk || ' con el id ' ||foraneaid||' del cliente origen  es null');
+			END IF;
+
+
+			ELSE 
+				RAISE_APPLICATION_ERROR(-20000,'ERROR: '||columna||'No existe ni una columna nombrada value, name o nombre en el cliente origen');
+
+END IF;
+
+-- si la organizacion es con ID igual a cero
+IF(columna ='AD_ORG_ID' AND v_foraneaId='0' )THEN 
+RETURN '0';
+END IF;
+
+
+--Comprobar si existe con la entidad destino 
+IF(v_existevalue  IS NOT NULL)THEN 
+RETURN v_valueid;
+				ELSE 
+				RAISE_APPLICATION_ERROR(-20000, 'ERROR: ' || columna  ||' No existe en el cliente destino ninguna columna  value, name o nombre con el valor '||v_value ||'  de la tabla foranea "'||tablafk||'" REVISA EL QUERY: ' || v_query);
+				
+END IF;
+END TEGIDL_EXITEFORANEA
+]]></body>
+    </function>
+  </database>

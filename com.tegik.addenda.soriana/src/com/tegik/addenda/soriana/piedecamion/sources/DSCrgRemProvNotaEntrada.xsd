@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSCargaRemisionProv" targetNamespace="http://tempuri.org/DSCargaRemisionProv.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DSCargaRemisionProv.xsd"
+	xmlns:mstns="http://tempuri.org/DSCargaRemisionProv.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DSCargaRemisionProv" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Remision">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Proveedor" type="xs:int" />
+							<xs:element name="Remision" type="xs:string" />
+							<xs:element name="Consecutivo" type="xs:short" />
+							<xs:element name="FechaRemision" type="xs:dateTime" />
+							<xs:element name="Tienda" type="xs:short" />
+							<xs:element name="TipoMoneda" type="xs:short" />
+							<xs:element name="TipoBulto" type="xs:short" />
+							<xs:element name="EntregaMercancia" type="xs:short" />
+							<xs:element name="CumpleReqFiscales" type="xs:boolean" />
+							<xs:element name="CantidadBultos" type="xs:decimal" />
+							<xs:element name="Subtotal" type="xs:decimal" />
+							<xs:element name="IEPS" type="xs:decimal" />
+							<xs:element name="IVA" type="xs:decimal" />
+							<xs:element name="OtrosImpuestos" type="xs:decimal" />
+							<xs:element name="Total" type="xs:decimal" />
+							<xs:element name="CantidadPedidos" type="xs:int" />
+							<xs:element name="FechaEntregaMercancia" type="xs:dateTime" />
+							<xs:element name="Cita" type="xs:int" minOccurs="0" />
+							<xs:element name="FolioNotaEntrada" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Pedimento">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Proveedor" type="xs:int" />
+							<xs:element name="Remision" type="xs:string" />
+							<xs:element name="Pedimento" type="xs:int" />
+							<xs:element name="Aduana" type="xs:short" />
+							<xs:element name="AgenteAduanal" type="xs:short" />
+							<xs:element name="TipoPedimento" type="xs:string" />
+							<xs:element name="FechaPedimento" type="xs:dateTime" />
+							<xs:element name="FechaReciboLaredo" type="xs:dateTime" />
+							<xs:element name="FechaBillOfLading" type="xs:dateTime" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Pedidos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Proveedor" type="xs:int" />
+							<xs:element name="Remision" type="xs:string" />
+							<xs:element name="FolioPedido" type="xs:int" />
+							<xs:element name="Tienda" type="xs:short" />
+							<xs:element name="CantidadArticulos" type="xs:int" />
+							<xs:element name="PedidoEmitidoProveedor" minOccurs="0" >
+								<xs:simpleType>
+									<xs:restriction base="xs:NMTOKEN">
+										<xs:minLength value="1" />
+										<xs:maxLength value="2" />
+										<xs:enumeration value="SI" />
+										<xs:enumeration value="NO" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Articulos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Proveedor" type="xs:int" />
+							<xs:element name="Remision" type="xs:string" />
+							<xs:element name="FolioPedido" type="xs:int" />
+							<xs:element name="Tienda" type="xs:short" />
+							<xs:element name="Codigo" type="xs:decimal" />
+							<xs:element name="CantidadUnidadCompra" type="xs:decimal" />
+							<xs:element name="CostoNetoUnidadCompra" type="xs:decimal" />
+							<xs:element name="PorcentajeIEPS" type="xs:decimal" />
+							<xs:element name="PorcentajeIVA" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="DSCargaRemisionProvKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//Remision" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+		</xs:key>
+		<xs:key name="DSCargaRemisionProvKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Pedimento" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+		</xs:key>
+		<xs:key name="DSCargaRemisionProvKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Pedidos" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+			<xs:field xpath="mstns:FolioPedido" />
+		</xs:key>
+		<xs:key name="DSCargaRemisionProvKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//Articulos" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="mstns:Remision" />
+			<xs:field xpath="mstns:FolioPedido" />
+			<xs:field xpath="mstns:Tienda" />
+			<xs:field xpath="mstns:Codigo" />
+		</xs:key>
+		<xs:keyref name="RemisionPedimento" refer="DSCargaRemisionProvKey1">
+			<xs:selector xpath=".//mstns:Pedimento" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+		</xs:keyref>
+		<xs:keyref name="RemisionPedidos" refer="DSCargaRemisionProvKey1">
+			<xs:selector xpath=".//mstns:Pedidos" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+		</xs:keyref>
+		<xs:keyref name="PedidosArticulos" refer="DSCargaRemisionProvKey4">
+			<xs:selector xpath=".//mstns:Articulos" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+			<xs:field xpath="mstns:FolioPedido" />
+		</xs:keyref>
+		<xs:key name="DSCargaRemisionProvKey6" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Articulos" />
+			<xs:field xpath="mstns:Proveedor" />
+			<xs:field xpath="Remision" />
+			<xs:field xpath="mstns:FolioPedido" />
+			<xs:field xpath="mstns:Tienda" />
+			<xs:field xpath="mstns:Codigo" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

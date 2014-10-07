@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="0FCD269097054C5790CFDC3E9CBEFD21" trl="Y">
+    <value column="Name" original="Query/List Include in">Incluir en la Consulta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B36DF126DF5F4077A37F1E5B963AA636" trl="Y">
+    <value column="Name" original="Grid Properties Reference">Referencia de Propiedades de Grid</value>
+    <value column="Description" original="Reference used to identify grid properties.">Referencia usada para identificar propiedades de grid.</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B5730B21173B4AA9BB44ADAE2660A853" trl="Y">
+    <value column="Name" original="Query/List Summarize type">Tipo de Sumarización de la Consulta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

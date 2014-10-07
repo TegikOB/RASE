@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_FIELDGROUP" version="">
+  <row id="DA6785B66E1A41D98B03B2BFE5AAAB75" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Management">Gestión de caja</value>
+  </row>
+  <row id="F1A8FF12D50241979A7882FA69F7066B" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Up">Cierre de caja</value>
+  </row>
+  <row id="FF8081813321B791013321CF8357005D" trl="N">
+    <value column="Name" isTrl="Y" original="POS Properties">Propiedades del TPV</value>
+  </row>
+</compiereTrl>

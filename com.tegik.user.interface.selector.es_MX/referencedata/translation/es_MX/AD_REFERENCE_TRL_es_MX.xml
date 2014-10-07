@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="08500AA6E7F5411EA0B03DD1CB645DF6" trl="Y">
+    <value column="Name" original="Multi Business Partner Selector">Selector múltiple de tercero</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="37BA0878B5494179AB05545C9B9805B7" trl="Y">
+    <value column="Name" original="OBUISEL_Selector Display/Value Field">OBUISEL_Selector Display/Value Field</value>
+    <value column="Description" original="Selector Display/Value Field">Campo Mostrado/Valor del Selector</value>
+    <value column="Help" original="Selector Display/Value Field">Selector Mostrar / Campo Valor</value>
+  </row>
+  <row id="45B39681AFBC4808A64C9B776A290BA4" trl="Y">
+    <value column="Name" original="OBUISEL_SelectorFieldPropertySelector">OBUISEL_SelectorFieldPropertySelector</value>
+    <value column="Description" original="Selector used for the selector field definition">Selector usado para la definición de campos del selector</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="61F24136C58741C182F784020E2B2C25" trl="Y">
+    <value column="Name" original="OBUISEL_TextMatchStyleType">OBUISEL_TextMatchStyleType</value>
+    <value column="Description" original="Text match logic used when filtering data in the database">Lógica de emparejamiento de texto usada al filtrar datos en la base de datos</value>
+    <value column="Help" original="The text match logic used when filtering data in the database">La lógica de coincidencia de texto utilizado al filtrar los datos en la base 
+de datos</value>
+  </row>
+  <row id="80B1630792EA46F298A3FBF81E77EF9C" trl="Y">
+    <value column="Name" original="OBUISEL_SelectorAsLink Reference">OBUISEL_SelectorAsLink Reference</value>
+    <value column="Description" original="The base selector reference">La referencia de selector base</value>
+    <value column="Help" original="Defines the selector reference types. Reuses must of the logic, but it renders a Link instead of a input/suggestion box">Define los tipos de referencia de selección. Reutiliza necesidad de la 
+lógica, sino que representa un vínculo en lugar de un cuadro de entrada / 
+sugerencia</value>
+  </row>
+  <row id="87E6CFF8F71548AFA33F181C317970B5" trl="Y">
+    <value column="Name" original="OBUISEL_Multi Selector Reference">OBUISEL_Multi Selector Reference</value>
+    <value column="Description" original="The base multi selector reference">La referencia base de selector múltiple</value>
+    <value column="Help" original="Defines the multi selector reference types.">Define los tipos de referencia multi-selector.</value>
+  </row>
+  <row id="95A596F08D1D45E1A36C84832920A6B3" trl="Y">
+    <value column="Name" original="OBUISEL_Model Selector ">OBUISEL_Model Selector </value>
+    <value column="Description" original="Model Selector">Selector de Modelo</value>
+    <value column="Help" original=""/>
+  </row>
+  <row id="95E2A8B50A254B2AAE6774B8C2F28120" trl="Y">
+    <value column="Name" original="OBUISEL_Selector Reference">OBUISEL_Selector Reference</value>
+    <value column="Description" original="The base selector reference">La referencia de selector base</value>
+    <value column="Help" original="Defines the selector reference types.">Define los tipos de referencia de selección.</value>
+  </row>
+  <row id="D30C26E6452843B4BA4F8D71A651EB80" trl="Y">
+    <value column="Name" original=""/>
+    <value column="Description" original="Selector Out Field">Campo de salida de selector</value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

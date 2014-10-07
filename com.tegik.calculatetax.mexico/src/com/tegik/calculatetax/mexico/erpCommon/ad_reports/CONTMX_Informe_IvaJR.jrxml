@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CONTMX_Informe_Iva" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#ACC5D7"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="BASE_WEB" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/web"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/opt/OpenbravoERP-3.0/openbravo-erp/modules/com.tegik.contmx.modulo/src/com/tegik/contmx/modulo/erpCommon/ad_reports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENT_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT cr.ad_org_id org,
+       cr.contmx_reporteiva_id,
+       cr.fecha_conversion,
+       cr.datei dia_inicio,
+       cr.datef dia_final,
+       cr.ivaxpagar iva_pag_aterior,
+       cr.ivapagado iva_xacreditar,
+       cr.ivacobrado iva_xpagar
+FROM contmx_reporteiva cr
+WHERE contmx_reporteiva_id = $P{DOCUMENT_ID}]]>
+	</queryString>
+	<field name="org" class="java.lang.String"/>
+	<field name="contmx_reporteiva_id" class="java.lang.String"/>
+	<field name="fecha_conversion" class="java.sql.Timestamp"/>
+	<field name="dia_inicio" class="java.sql.Timestamp"/>
+	<field name="dia_final" class="java.sql.Timestamp"/>
+	<field name="iva_pag_aterior" class="java.math.BigDecimal"/>
+	<field name="iva_xacreditar" class="java.math.BigDecimal"/>
+	<field name="iva_xpagar" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="230" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="196" height="30" forecolor="#00447B"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Infomre de IVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="109" width="111" height="22" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IVA x Pagar]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+				<reportElement style="Detail" positionType="Float" x="111" y="109" width="110" height="22"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{iva_xpagar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="0" y="131" width="111" height="22" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IVA x Acreditar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="153" width="111" height="29" forecolor="#000000"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IVA pagado con atenrioridad]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+				<reportElement style="Detail" positionType="Float" x="111" y="131" width="110" height="22"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{iva_xacreditar}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="$ #,##0.00">
+				<reportElement style="Detail" positionType="Float" x="111" y="153" width="110" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{iva_pag_aterior}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="225" y="30" width="104" height="22" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rango de fechas]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+				<reportElement style="Detail" positionType="Float" x="180" y="52" width="91" height="22"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dia_inicio}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+				<reportElement style="Detail" positionType="Float" x="285" y="52" width="91" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dia_final}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="271" y="52" width="13" height="22" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="239" y="86" width="316" height="133"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Por Pagar"]]></seriesExpression>
+						<categoryExpression><![CDATA["Por Pagar"]]></categoryExpression>
+						<valueExpression><![CDATA[$F{iva_xpagar}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Por Acreditar"]]></seriesExpression>
+						<categoryExpression><![CDATA["Por Acreditar"]]></categoryExpression>
+						<valueExpression><![CDATA[$F{iva_xacreditar}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["Pagado con anterioridad"]]></seriesExpression>
+						<categoryExpression><![CDATA["Pagado con anterioridad"]]></categoryExpression>
+						<valueExpression><![CDATA[$F{iva_pag_aterior}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel color="#000000" backgroundColor="#FFFFFF"/>
+					<categoryAxisFormat>
+						<axisFormat>
+							<labelFont/>
+							<tickLabelFont/>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat>
+							<labelFont/>
+							<tickLabelFont/>
+						</axisFormat>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<image hAlign="Right" isUsingCache="true">
+				<reportElement x="0" y="0" width="170" height="91" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.awt.Image"><![CDATA[org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc",$F{org})]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="1" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="551" height="0" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DOCUMENT_ID">
+					<subreportParameterExpression><![CDATA[$P{DOCUMENT_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BASE_WEB">
+					<subreportParameterExpression><![CDATA[$P{BASE_WEB}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CONTMX_Informe_Iva_Sub_Cobrado.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1">
+			<subreport>
+				<reportElement x="0" y="0" width="551" height="0" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DOCUMENT_ID">
+					<subreportParameterExpression><![CDATA[$P{DOCUMENT_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BASE_WEB">
+					<subreportParameterExpression><![CDATA[$P{BASE_WEB}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CONTMX_Informe_Iva_Sub_Pagado.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="1">
+			<subreport>
+				<reportElement x="0" y="0" width="551" height="0" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DOCUMENT_ID">
+					<subreportParameterExpression><![CDATA[$P{DOCUMENT_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BASE_WEB">
+					<subreportParameterExpression><![CDATA[$P{BASE_WEB}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CONTMX_Informe_Iva_Sub_Ivapagado.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="170" height="37" forecolor="#00447B" backcolor="#00447B"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="74" y="7" width="62" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<elementGroup/>
+				<textField>
+					<reportElement style="Column header" x="0" y="7" width="74" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Monospaced" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Página "+$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

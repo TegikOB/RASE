@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGSAAS_REGISTER_ATTRIBUTE">
+    <function name="TEGSAAS_REGISTER_ATTRIBUTE" type="NULL">
+      <parameter name="p_ep_instance" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[p_record_id VARCHAR(60);
+p_message VARCHAR(2000);
+p_docAction VARCHAR(60);
+p_user VARCHAR(60);
+p_result NUMBER;
+
+TYPE RECORD IS REF CURSOR;
+Cur_Params RECORD;
+ 
+v_issotrx CHARACTER;
+v_porLinea RECORD;
+
+BEGIN
+ 
+  FOR Cur_Params IN (
+    SELECT *
+    FROM ad_ep_instance_para
+    WHERE ad_ep_instance_id = p_ep_instance
+    ) LOOP
+    IF (cur_params.parametername LIKE 'DocAction') THEN
+      p_docaction := Cur_Params.p_string;
+    ELSIF (cur_params.parametername LIKE 'Record_ID') THEN
+      p_record_id := cur_params.p_string;
+    ELSIF (cur_params.parametername LIKE 'User') THEN
+      p_user := cur_params.p_string;
+    ELSIF (cur_params.parametername LIKE 'Message') THEN
+      p_message := cur_params.p_text;
+    ELSIF (cur_params.parametername LIKE 'Result') THEN
+      p_result := cur_params.p_number;
+    END IF;
+  END LOOP;
+
+--Verficar que sea un remision(Proveedor)
+ SELECT issotrx
+  FROM M_INOUT 
+   WHERE M_Inout_ID=p_record_id
+    INTO v_issotrx;
+
+--actualizar todos los campos
+ IF(v_issotrx = 'N')THEN
+   FOR v_porLinea IN (SELECT m_attributesetinstance_id, 
+em_tegsaas_longitud, 
+em_tegsaas_espesor,
+em_tegsaas_peso
+FROM M_INOUTLINE WHERE M_Inout_ID=p_record_id)
+   LOOP
+   
+--actualizar la ventana de lotes por cada linea de la remision
+UPDATE  M_ATTRIBUTESETINSTANCE 
+SET em_tegsaas_longitud = v_porLinea.em_tegsaas_longitud, 
+em_tegsaas_espesor=v_porLinea.em_tegsaas_espesor,
+em_tegsaas_peso =v_porLinea.em_tegsaas_peso
+WHERE m_attributesetinstance_id=v_porLinea.m_attributesetinstance_id;
+
+  
+   END LOOP;
+
+ END IF;
+END TEGSAAS_REGISTER_ATTRIBUTE
+]]></body>
+    </function>
+  </database>

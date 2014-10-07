@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_TAB" version="">
+  <row id="027E3BB9B7114CA68F976D0C0133E682" trl="N">
+    <value column="Name" isTrl="Y" original="Payment Type">Tipo de pago</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="2628B44F02DF452A95BEDAF2050CC617" trl="N">
+    <value column="Name" isTrl="Y" original="Coins and Bank notes">Monedas y billetes</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="Coins and bank notes panel for the Web POS window.">Panel de monedas y billetes para la ventana Web POS</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="33BF870C0F014B08AB1A7A580CD23B56" trl="N">
+    <value column="Name" isTrl="Y" original="Reconciliation">Reconciliación</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="4D9F5E9CC0014A96861CEFB64BBF013B" trl="N">
+    <value column="Name" isTrl="Y" original="Payment Method">Método de pago</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="Payment Method">Método de pago</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Defines each of the payment methods the terminal type can use. When creating the POS terminal based on this type, all payment methods defined here will be available to create different payment types. Note that even they are available, it is not mandatory to create all of them, so it would be possible to have different terminals based on same type but each of them with different payment types.&#10;&#10;Here it is defined the payment method (cash, card, etc...) and also which actions are allowed for Cash Management and Cash Up processes.&#10;">Define cada uno de los métodos de pao que puede usar el tipo de terminal. Cuando se crea un TPV basado en este tipo, todos los pagos definidos aquí estarán disponibls para crear en él tipos de pago.
+    
+Aquí se define el método de pago (al contado, tarjeta, etc...) y also qué acciones están permitidas en los proceses de gestión y cierre de caja.
+</value>
+  </row>
+  <row id="B6F711C7D81A4DF492C9C874564152C3" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal Access">Acceso a TPV</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="This tab contains the POS terminals the user has access to. If there are no terminals defined in this tab, the user has access to all terminals in the system.">Esta pestaña contiene los TPVs a los que el usuario tiene acceso. Si no hay terminales definidos en la pestaña, el usuario tiene acceso a todos los terminales del sistema.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="This tab contains the POS terminals the user has access to. If there are no terminals defined in this tab, the user has access to all terminals in the system.">Esta pestaña contiene los TPVs a los que el usuario tiene acceso. Si no hay terminales definidos en la pestaña, el usuario tiene acceso a todos los terminales del sistema.</value>
+  </row>
+  <row id="D01039797B054BE69CA5770B8CFB933C" trl="N">
+    <value column="Name" isTrl="Y" original="Terminal Type">Tipo de terminal</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="Header of terminal type">Cabecera del tipo de terminal</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="Terminal type groups a set of allowed payment methods and defines which are the document types for each of the different documents that are generated in back end from POS transactions.">El tipo de terminal agrupa una serie de métodos de pago permitidos y define qué tipos de documento se usan para cada uno de los diferente docuemtos generados en el backoffice a partir de las transacciones en el TPV.</value>
+  </row>
+  <row id="EA65410E0F7C439A97C1301C2B882150" trl="N">
+    <value column="Name" isTrl="Y" original="Cash Up History">Histórico de cierre de caja</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="EC4D45180BCB4EB5A78FA8E8F319FD1C" trl="N">
+    <value column="Name" isTrl="Y" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="Errors while importing POS data">Errores al importar pedidos desde el TPV</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="This tab shows the list of errors occurred when synchronizing from POS terminal.">Esta solapa muestra los errores ocurridos al sincronizar pedidos desde el TVP.</value>
+  </row>
+  <row id="FF80818132F311740132F3233778004B" trl="N">
+    <value column="Name" isTrl="Y" original="POS Terminal">Terminal Punto de Venta</value>
+    <value column="CommitWarning" isTrl="N" original=""/>
+    <value column="Description" isTrl="Y" original="A POS terminal is each one of the physical terminals in a store.">Un TPV es cada uno de los terminales físicos en una tienda.</value>
+    <value column="Filtername" isTrl="N" original=""/>
+    <value column="Help" isTrl="Y" original="A POS terminal is each one of the physical terminals in a store.">Un TPV es cada uno de los terminales físicos en una tienda.</value>
+  </row>
+</compiereTrl>

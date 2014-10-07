@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="0DCA6AF8BA8C48B0A499211B5F58E9B5" trl="Y">
+    <value column="Title" original="Best Selling Category by Store">Categoria mejor vendida por Tienda</value>
+    <value column="Description" original="Best selling product category in terms of  sales, cost and gross margin during a filtered period.">Los más vendidos categoría de producto en términos de ventas, el costo y el 
+margen bruto durante un período filtrada.</value>
+  </row>
+  <row id="134CADAC10DD41039D33FDB1F9512CBB" trl="Y">
+    <value column="Title" original="Best Selling Product by Store">Producto mejor vendido por Tienda</value>
+    <value column="Description" original="Best selling product in terms of  sales, cost and gross margin during a filtered period.">Mejor producto más vendido en términos de ventas, el costo y el margen bruto 
+durante un período filtrada.</value>
+  </row>
+  <row id="31E93D579AAF479E9F364D7AD701599E" trl="Y">
+    <value column="Title" original="Best Selling Customer by Store">Cliente con mas ventas por Tienda</value>
+    <value column="Description" original="Best selling customer in terms of  sales, cost and gross margin during a filtered period.">Los más vendidos del cliente en términos de ventas, el costo y el margen 
+bruto durante un período filtrada.</value>
+  </row>
+  <row id="424AA912CE69414091B776C7628DEB4B" trl="Y">
+    <value column="Title" original="Customer Contacts">Contractos del Cliente</value>
+    <value column="Description" original="A list of customer contacts showing name, identifier, mail, main phone, alternative phone, fax, first name and last name">Una lista de contactos con los clientes, mostrando el nombre, identificador, 
+correo, teléfono principal, teléfono alternativo, fax, nombre y apellido</value>
+  </row>
+  <row id="927E935EAD54494E808C9D6AED12DAF6" trl="Y">
+    <value column="Title" original="Best Selling Salesman by Store">Vendedor con mas ventas por Tienda</value>
+    <value column="Description" original="Best selling salesman in terms of  sales, cost and gross margin during a filtered period.">Mejor vendedor de venta en términos de ventas, el costo y el margen bruto 
+durante un período filtrada.</value>
+  </row>
+  <row id="B8EBD50E091E4697AFD2900831A634CE" trl="Y">
+    <value column="Title" original="Best Selling Store">Tienda con mas Ventas</value>
+    <value column="Description" original="Best selling store in terms of  sales, cost and gross margin during a filtered period.">Mejor tienda de venta en términos de ventas, el costo y el margen bruto 
+durante un período filtrada.</value>
+  </row>
+  <row id="DB506A35BCF24980AED43596A9435BEA" trl="Y">
+    <value column="Title" original="Product Contribution">Contribucion de Producto</value>
+    <value column="Description" original="Total quantity, sales, cost and gross margin information about sold products, during a filtered period.">Cantidad total, las ventas, el costo y la información de margen bruto sobre 
+los productos vendidos, durante un período filtrada.</value>
+  </row>
+</compiereTrl>

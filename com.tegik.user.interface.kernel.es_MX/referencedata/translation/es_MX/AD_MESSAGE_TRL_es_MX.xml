@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MESSAGE" version="">
+  <row id="57804162B287454F9EDF7909F15D4512" trl="Y">
+    <value column="MsgText" original="The template or the template class path location must be set.">La plantilla o la localización de la plantilla deben ser definidos</value>
+    <value column="MsgTip" original=""/>
+  </row>
+</compiereTrl>

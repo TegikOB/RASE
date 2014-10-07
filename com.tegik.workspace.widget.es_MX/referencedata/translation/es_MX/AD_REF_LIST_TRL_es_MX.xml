@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="8D27EB2B300D4E8987190E1ECCF84742" trl="Y">
+    <value column="Name" original="Datasource">Fuente de datos</value>
+    <value column="Description" original=""/>
+  </row>
+</compiereTrl>

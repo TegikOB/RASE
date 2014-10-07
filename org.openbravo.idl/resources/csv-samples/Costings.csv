@@ -1,0 +1,3 @@
+"Organization","Product","CostType","Cost","StartingDate","EndingDate","Quantity","TotalMovementQuantity","Price","Warehouse","Currency"
+"Main","fga","Average","4","2013-02-20","2013-03-31","100.00","120.00","2.20","F&B US East Coast","USD"
+"Main","fga","Average","4.25","2013-02-20","9999-12-31","100.00","120.00","2.20","F&B US East Coast","USD"

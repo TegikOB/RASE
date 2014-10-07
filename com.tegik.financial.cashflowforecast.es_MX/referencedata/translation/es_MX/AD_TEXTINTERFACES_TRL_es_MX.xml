@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TEXTINTERFACES" version="">
+  <row id="025C15B4EF43447EAFE0DEC4BF6F470C" trl="Y">
+    <value column="Text" original="Financial Account">Banco / Caja</value>
+  </row>
+  <row id="05BE98CA63D742D490356E5783E80399" trl="Y">
+    <value column="Text" original="Financial Account No.">Número de Banco / Caja</value>
+  </row>
+  <row id="0C0EE4E9C087435A8B58F38B503BCEDF" trl="Y">
+    <value column="Text" original="Current Balance">Saldo corriente</value>
+  </row>
+  <row id="0D7C8A016FCF4F939667E70FE0861311" trl="Y">
+    <value column="Text" original="Date Planned">Fecha Planeada</value>
+  </row>
+  <row id="1B25956DF5A4472AB50D5B8CDA712AD5" trl="Y">
+    <value column="Text" original="PAYMENT">Pago</value>
+  </row>
+  <row id="1C08377D3F524FB6B2717B9BC6A65552" trl="Y">
+    <value column="Text" original="Cashflow Forecast Report">Reporte de Flujo de Efectivo</value>
+  </row>
+  <row id="2CC92CC6BB9E4A0C9F25E6D9E63E796C" trl="Y">
+    <value column="Text" original="INCOME">Ingresos</value>
+  </row>
+  <row id="30E0F1CCF4314BCC9FAD7F9A642D4E27" trl="Y">
+    <value column="Text" original="Financial Account">Banco / Caja</value>
+  </row>
+  <row id="31D5D1A5152E493B9C7B9BB1D70139DF" trl="Y">
+    <value column="Text" original="INCOME">Ingresos</value>
+  </row>
+  <row id="397E27C9DD85451E8116D51D18F4E6BA" trl="N">
+    <value column="Text" original="Tot inc-paym:"/>
+  </row>
+  <row id="447931E0F2B948DA9099C177DE0F5B51" trl="Y">
+    <value column="Text" original="Total Amount Incoming">Monto Total Entrante</value>
+  </row>
+  <row id="471CDBC6AD8245FA81F871C529FBAF6C" trl="Y">
+    <value column="Text" original="Current Balance (">Saldo corriente (</value>
+  </row>
+  <row id="5F53D3CC15844FFCAA150425CDFE4CC4" trl="Y">
+    <value column="Text" original="Break by date">Corte por Fecha</value>
+  </row>
+  <row id="6045C9EB12C84DDEA220EF7C617F7809" trl="Y">
+    <value column="Text" original="Forecast">Pronostico</value>
+  </row>
+  <row id="93EFEB91639B4FFE81E982BEF630C708" trl="Y">
+    <value column="Text" original="Total Amount Incoming">Monto Total Entrante</value>
+  </row>
+  <row id="A46D0452E1A44F04B474C71D8A75BFF8" trl="Y">
+    <value column="Text" original="Date Planned">Fecha Planeada</value>
+  </row>
+  <row id="AD6EE63364DC27E3E040A8C09166265A" trl="Y">
+    <value column="Text" original="Final Balance">Saldo total</value>
+  </row>
+  <row id="AD6EE63364DE27E3E040A8C09166265A" trl="Y">
+    <value column="Text" original="Final Balance:  ">Saldo total:</value>
+  </row>
+  <row id="AD6EE7373CECD4EBE040A8C0916626C8" trl="Y">
+    <value column="Text" original="Orig.Amount">Monto Original</value>
+  </row>
+  <row id="AD6EE7373CEED4EBE040A8C0916626C8" trl="Y">
+    <value column="Text" original="Orig.Currency">Moneda Original</value>
+  </row>
+  <row id="AD6EE7373CF0D4EBE040A8C0916626C8" trl="Y">
+    <value column="Text" original="Amount (">Monto (</value>
+  </row>
+  <row id="AD6EE7373CF2D4EBE040A8C0916626C8" trl="Y">
+    <value column="Text" original="Orig.Amount">Monto Original</value>
+  </row>
+  <row id="AD6EE7373CF4D4EBE040A8C0916626C8" trl="Y">
+    <value column="Text" original="Orig.Currency">Moneda Original</value>
+  </row>
+  <row id="AD6EE7373CF6D4EBE040A8C0916626C8" trl="Y">
+    <value column="Text" original="Amount (">Monto (</value>
+  </row>
+  <row id="AD6EE7B3F8130F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Invoiced">Facturado</value>
+  </row>
+  <row id="AD6EE7B3F8150F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Orig. Amount">Monto Original</value>
+  </row>
+  <row id="AD6EE7B3F8170F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Invoiced">Facturado</value>
+  </row>
+  <row id="AD6EE7B3F8190F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Orig. Amount">Monto Original</value>
+  </row>
+  <row id="AD6EE7B3F81B0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Date Planned">Fecha Planeada</value>
+  </row>
+  <row id="AD6EE7B3F81D0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Total Amount Incoming - Payments (">Monto Total Entrante - Pagos(</value>
+  </row>
+  <row id="AD6EE7B3F81F0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="INCOME">Ingresos</value>
+  </row>
+  <row id="AD6EE7B3F8210F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="PAYMENT">Pago</value>
+  </row>
+  <row id="AD6EE7B3F8230F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Planned Date:">Fecha Planeada:</value>
+  </row>
+  <row id="AD6EE7B3F8270F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Final Balance">Saldo total</value>
+  </row>
+  <row id="AD6EE7B3F8290F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Date Planned:">Fecha Planeada</value>
+  </row>
+  <row id="AD6EE7B3F82B0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Financial Account">Banco / Caja</value>
+  </row>
+  <row id="AD6EE7B3F82D0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Date Planned">Fecha Planeada</value>
+  </row>
+  <row id="AD6EE7B3F82F0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Orig. Amount">Monto Original</value>
+  </row>
+  <row id="AD6EE7B3F8310F0AE040A8C0916626FB" trl="N">
+    <value column="Text" original="Cur."/>
+  </row>
+  <row id="AD6EE7B3F8330F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Invoiced">Facturado</value>
+  </row>
+  <row id="AD6EE7B3F8350F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Planned">Planificada</value>
+  </row>
+  <row id="AD6EE7B3F8370F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Orig. Amount">Monto Original</value>
+  </row>
+  <row id="AD6EE7B3F8390F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="INCOME">Ingresos</value>
+  </row>
+  <row id="AD6EE7B3F83B0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="PAYMENT">Pago</value>
+  </row>
+  <row id="AD6EE7B3F83D0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Total Amount Incoming">Monto Total Entrante</value>
+  </row>
+  <row id="AD6EE7B3F83F0F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Total Amount Payments">Total Neto de Pagos</value>
+  </row>
+  <row id="AD6EE7B3F8410F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Invoiced">Facturado</value>
+  </row>
+  <row id="AD6EE7B3F8430F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Planned">Planificada</value>
+  </row>
+  <row id="AD6EE7B3F8450F0AE040A8C0916626FB" trl="Y">
+    <value column="Text" original="Orig. Amount">Monto Original</value>
+  </row>
+  <row id="ADB1BF4F35E14737A0BBB6F05D8B6B03" trl="Y">
+    <value column="Text" original="Date planned:">Fecha Planeada:</value>
+  </row>
+  <row id="AE1442B017DD0EF1E040A8C091665560" trl="Y">
+    <value column="Text" original="Transaction">Transacción</value>
+  </row>
+  <row id="AE1442B017DF0EF1E040A8C091665560" trl="Y">
+    <value column="Text" original="Transaction">Transacción</value>
+  </row>
+  <row id="AE14435393006F26E040A8C091665595" trl="Y">
+    <value column="Text" original="Current Balance">Saldo corriente</value>
+  </row>
+  <row id="AE14435393026F26E040A8C091665595" trl="Y">
+    <value column="Text" original="Current Balance">Saldo corriente</value>
+  </row>
+  <row id="AEA3E8D0C4C12618E040A8C028017E0B" trl="Y">
+    <value column="Text" original="Transaction">Transacción</value>
+  </row>
+  <row id="B40BC5558F3942FBB20F608070EB078B" trl="Y">
+    <value column="Text" original="Final Balance">Saldo total</value>
+  </row>
+  <row id="CE09C2791C234E2CB95DADCBAD5F8100" trl="Y">
+    <value column="Text" original="Total amount incoming-payments">Monto Total Entrante - Pagos(</value>
+  </row>
+  <row id="D569FFA729864EE89742DD2895CA32E7" trl="Y">
+    <value column="Text" original="PAYMENT">Pago</value>
+  </row>
+  <row id="D875D3CFA6874BCEB73E288A6139ABE0" trl="Y">
+    <value column="Text" original="Total Amount Payments">Total Neto de Pagos</value>
+  </row>
+  <row id="E4B4192936034FE6A0A5B33F1D841C8A" trl="Y">
+    <value column="Text" original="Total Amount Payments">Total Neto de Pagos</value>
+  </row>
+</compiereTrl>

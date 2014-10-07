@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="0B00ADD7EC2A4EA79E4C952DB36FD980" trl="Y">
+    <value column="Name" original="POS Terminal Type">Tipo de TPV</value>
+    <value column="Description" original="Defines Terminal Properties">Define las propiedades del terminal</value>
+  </row>
+  <row id="42CEE92A82C8437CBDBCF5EDF2F416EF" trl="Y">
+    <value column="Name" original="Generate Product Images">Generar imágenes de producto</value>
+    <value column="Description" original="Generate Product Images">Generar imágenes de producto</value>
+  </row>
+  <row id="896AC285FD8F4C25A869689D4A98DD8E" trl="Y">
+    <value column="Name" original="Point of Sale">Punto de Venta</value>
+    <value column="Description" original="Point of Sale configuration settings">Configuracion de punto de venta</value>
+  </row>
+  <row id="97603A8F68CA4AFFB33A1DEF9AF0D88E" trl="Y">
+    <value column="Name" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+    <value column="Description" original="Errors While Importing POS Data">Errores al importar pedidos desde el TPV</value>
+  </row>
+  <row id="D2FA389651F34386A37419F305EA5D5C" trl="Y">
+    <value column="Name" original="POS Print Templates">Plantilla de Impresio del POS</value>
+    <value column="Description" original="Defines print templates to be used from Web POS">Definir las platillas de impresion que seran utilizadas del WebPos</value>
+  </row>
+</compiereTrl>

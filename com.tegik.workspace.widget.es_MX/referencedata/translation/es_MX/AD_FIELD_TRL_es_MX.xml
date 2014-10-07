@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_FIELD" version="">
+  <row id="9439856AE391AF17E040007F0100403D" trl="Y">
+    <value column="Name" original="Relative Priority">Prioridad relativa</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Defines the priority of the widgets if more than one instance have the same column and row. Lowest priority appears upper on the dashboard.">Define la prioridad de los widgets, si más de una instancia, tienen la misma 
+columna y fila. La prioridad más baja aparece en la parte superior del 
+salpicadero.</value>
+  </row>
+  <row id="94BFCEEC820140C397FA557C7E88BED6" trl="Y">
+    <value column="Name" original="Title">Título</value>
+    <value column="Description" original="Title for the menu option">Título de la opción de menú</value>
+    <value column="Help" original="The label to show in the menu option">La etiqueta para mostrar en la opción de menú</value>
+  </row>
+  <row id="978A538A886E0294E040007F01002F2B" trl="Y">
+    <value column="Name" original="Title">Título</value>
+    <value column="Description" original="The label to show in the menu option">La etiqueta que se mostrará en la opción de menú</value>
+    <value column="Help" original="The label to show in the menu option">La etiqueta para mostrar en la opción de menú</value>
+  </row>
+  <row id="E98898257CEA414CAEB5A4049CC8DB19" trl="Y">
+    <value column="Name" original="Action">Acción</value>
+    <value column="Description" original="Name of the method defined in the widget ">Nombre del método definido en el widget </value>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

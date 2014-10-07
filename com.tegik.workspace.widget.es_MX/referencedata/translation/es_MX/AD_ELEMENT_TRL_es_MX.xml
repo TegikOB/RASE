@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="02E4C42C679940D492635804FDF4A86F" trl="Y">
+    <value column="Name" original="Widget Class Menu Item">Item de Menú de Clase de Widget</value>
+    <value column="PrintName" original="Widget Class Menu Item">Item de Menú de Clase de Widget</value>
+    <value column="Description" original="Unique identifier for the menu option">Identificador único para la opción de menú</value>
+    <value column="Help" original="Unique identifier for the menu option">Identificador único para la opción de menú</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="04E1B3E277464DA2922E96E99703A2D5" trl="N">
+    <value column="Name" original="Obkmo_Widget_Class_Menu_Trl_ID"/>
+    <value column="PrintName" original="Obkmo_Widget_Class_Menu_Trl_ID">Obkmo_Widget_Class_Menu_Trl_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="28DA35447E82453D94A81C25540EFAB3" trl="Y">
+    <value column="Name" original="Is Separator">Es Separador</value>
+    <value column="PrintName" original="Is Separator">Es Separador</value>
+    <value column="Description" original="Defines if a menu item is separator in the menu">Define si un item de menú es separador en el menú</value>
+    <value column="Help" original="Renders the menu option as separator, there no need for title nor action">Se representa el item de menú como un separador. No es necesario especificar título ni acción</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="3153A04AAFDD4E4D92ED3F2A84E82EDC" trl="Y">
+    <value column="Name" original="Can Maximize">Puede ser Maximizado</value>
+    <value column="PrintName" original="Can Maximize">Puede ser Maximizado</value>
+    <value column="Description" original="If the widget has the hability to maximize">Especifica si el widget puede ser maximizado</value>
+    <value column="Help" original="When is true, the maximize button appears in the widget's header toolbar, next to the menu options">Cuando está seleccionada, el btón de maximizar aparece en la cabecera del widget, en una posición contigua a las opciones de menú</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="3D9BA8FD0DEC4BC8BDE7862EFD0AECC5" trl="Y">
+    <value column="Name" original="Widget Title">Título del Widget</value>
+    <value column="PrintName" original="Widget Title">Título del Widget</value>
+    <value column="Description" original="Widget Title">Título del Widget</value>
+    <value column="Help" original="Widget Title is the text that is shown in the widget bar at Workspace tab.">El título del widget es el texto que se muestra en la barra superior del widget en la pestaña de Espacio de Trabajo</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="57DD9A05462444B1A7977E7F9A94DF8A" trl="Y">
+    <value column="Name" original="Show Field Title">Mostrar Título de Campo</value>
+    <value column="PrintName" original="Show Field Title">Mostrar Título de Campo</value>
+    <value column="Description" original="Defines if the field label should be shown on top of the widget">Define si el título del campo se debería mostrar en la parte superior del widget</value>
+    <value column="Help" original="This column defines if the a label with the field name should be shown on top of the widget like it is for other fields or if this label should be hidden and the extra space be used for the widget itself. Default is to show the title as for other fields.">Esta columna define si el nombre del campo se debería mostrar en la parte superior del widget de la forma que se hace con otros campos o si el nombre debería estar oculto y el espacio sobrante debería usarse para el widget. El comportamiento por defecto es mostrar el título como el resto de campos.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B8EEF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Java Class">Clase Java</value>
+    <value column="PrintName" original="Java Class">Clase Java</value>
+    <value column="Description" original="Java Class implementing the widget">Clase Java que implementa el Widget</value>
+    <value column="Help" original="Java Class implementing the widget">Clase Java que implementa el Widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B90EF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Widget Class">Clase del Widget</value>
+    <value column="PrintName" original="Widget Class">Clase del Widget</value>
+    <value column="Description" original="Identifies a widget class definition">Identifica una definición de clase de widget</value>
+    <value column="Help" original="Identifies a widget class definition">Identifica una definición de clase de widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B92EF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Height">Altura</value>
+    <value column="PrintName" original="Height">Altura</value>
+    <value column="Description" original="Height in pixels the widget will be represented with.">Altura del widget en pixeles</value>
+    <value column="Help" original="Height in pixels the widget will be represented with.">Altura del widget en píxeles</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B99EF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Column Position">Posición de la columna</value>
+    <value column="PrintName" original="Column Position">Posición de la columna</value>
+    <value column="Description" original="Column number where the widget is shown in Workspace tab">Número que indica en qué columna del Espacio de Trabajo se mostrará el widget</value>
+    <value column="Help" original="Column number where the widget is shown in Workspace tab">Número que indica en qué columna del Espacio de Trabajo se mostrará el widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B9BEF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Visible at User">Visible en Usuario</value>
+    <value column="PrintName" original="Visible at User">Visible en Usuario</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Defines which is the preference's visibility at User level.">Define cuál es la preferencia de visualización a nivel de usuario.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B9DEF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Sequence in Column">Secuencia en la columna</value>
+    <value column="PrintName" original="Sequence in Column">Secuencia en la columna</value>
+    <value column="Description" original="Position in the column where the widget is shown">Posición dentro de la columna en la que se muestra el widget</value>
+    <value column="Help" original="Position in the column where the widget is shown">Posición en la columna en la que se muestra el widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118B9FEF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Widget Instance">Instancia de Widget</value>
+    <value column="PrintName" original="Widget Instance">Instancia de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies an instance of a Widget Class">Identifica una instancia de clase de widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D0D118BA1EF36E040A8C0CF071CF5" trl="Y">
+    <value column="Name" original="Copied From">Copiado de</value>
+    <value column="PrintName" original="Copied From">Copiado de</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Original Widget Instance that this instance was copied from.">Instancia de widget original de la que se copió esta instancia de widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D156048266E92E040A8C0CF071D3D" trl="Y">
+    <value column="Name" original="Widget Class Translation">Obkmo_Widget_Class_Trl_ID</value>
+    <value column="PrintName" original="Widget Class Translation">Obkmo_Widget_Class_Trl_ID</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies a translation of a Widget Class">Identifica una traducción de una clase de widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927D156048286E92E040A8C0CF071D3D" trl="Y">
+    <value column="Name" original="Widget Class Access">Permiso de Clase del Widget</value>
+    <value column="PrintName" original="Widget Class Access">Permiso de Clase del Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies a role access to a widget class.">Identifica los permisos de acceso de un rol a una clase de widget.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927DA01A83623AFAE040A8C0CF072B85" trl="Y">
+    <value column="Name" original="Widget List">Lista de Widgets</value>
+    <value column="PrintName" original="Widget List">Lista de Widgets</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies the definition of a List type widget class.">Identifica la definición de una clase de widget de tipo lista.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927DA01A83643AFAE040A8C0CF072B85" trl="Y">
+    <value column="Name" original="Widget URL">URL del Widget</value>
+    <value column="PrintName" original="Widget URL">URL del Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies the definition of a URL type widget class.">Identifica la definición de una clase de widget de tipo URL.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927DA01A83663AFAE040A8C0CF072B85" trl="Y">
+    <value column="Name" original="HQL"/>
+    <value column="PrintName" original="HQL">HQL</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="A query HQL code.">Una consulta descrita en código HQL.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927FD512FF05BBA9E040A8C0CF073D3C" trl="Y">
+    <value column="Name" original="Widget Instance">Instancia de Widget</value>
+    <value column="PrintName" original="Widget Instance">Instancia de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Defines an instance of a widget class.">Define una instancia de una clase de widget.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="927FD512FF07BBA9E040A8C0CF073D3C" trl="Y">
+    <value column="Name" original="Widget Class">Clase de Widget</value>
+    <value column="PrintName" original="Widget Class">Clase de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies a Widget Class definition">Identifica la definición de una clase de widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="941701CF5ADA6387E040007F010064BB" trl="Y">
+    <value column="Name" original="Enable for all Users">Disponible para todos los usuarios</value>
+    <value column="PrintName" original="Enable for all Users">Disponible para todos los usuarios</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Determines that the widget class will be available to all users regardless of the roles with access to this class.">Especifica que la clase de widget estará disponible para todos los usuarios, independientemente de los roles con acceso a esta clase</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95DE3D7A81FB2B50E040007F01004189" trl="Y">
+    <value column="Name" original="Superclass">Superclase</value>
+    <value column="PrintName" original="Superclass">Superclase</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="A Superclass widget is an implementation that can be used by other widget classes so it is not necessary to develop the java class.">Un widget de tipo superclase es una implementación de clase de widget que puede utilizarse por otras clases de widget para no tener que desarrollar la clase Java</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95DE3D7A81FD2B50E040007F01004189" trl="Y">
+    <value column="Name" original="Widget Superclass">Superclase de Widget</value>
+    <value column="PrintName" original="Widget Superclass">Superclase de Widget</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Identifies the Superclass widget used by this widget class.">Identifica la superclase de widget usada por esta clase de widget</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="BA20F0A674D64EC2A477EB4CF0F22DE4" trl="Y">
+    <value column="Name" original="Author URL">URL del Autor</value>
+    <value column="PrintName" original="Author URL">URL del Autor</value>
+    <value column="Description" original="Widget Author URL">URL del Autor del Widget</value>
+    <value column="Help" original="It is the widget author URL which will be shown in the widget about information box.">La URL del autor del widget que se mostrará en la ventana de Acerca de...</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="D64281ABFB7C4D79BF8BE0F0735677D4" trl="Y">
+    <value column="Name" original="Author Message">Mensaje de Autor</value>
+    <value column="PrintName" original="Author Message">Mensaje de Autor</value>
+    <value column="Description" original="Widget Author Message">Mensaje de Autor del Widget</value>
+    <value column="Help" original="It is a message the widget author can define. It will be shown in the widget about information.">Un mensaje qu eel autor del widget puede definir. Se mostrará en la ventana de Acerca de...</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="FD98C41ED85042668F523CA0C68C5805" trl="Y">
+    <value column="Name" original="Sequence">Secuencia</value>
+    <value column="PrintName" original=""/>
+    <value column="Description" original="Defines the order on which the menu option needs to be shown">Define el orden en el que se mostrarán las opciones de menú</value>
+    <value column="Help" original="A number number used to sort the menu options">Un número usado para ordenar las opciones de menú</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

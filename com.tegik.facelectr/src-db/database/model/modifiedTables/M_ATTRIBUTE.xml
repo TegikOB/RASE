@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_ATTRIBUTE">
+    <table name="M_ATTRIBUTE" primaryKey="M_ATTRIBUTE_KEY">
+      <column name="EM_FET_ATRIBUTOPEDIMENTO" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_FET_FORMATOFECHA" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

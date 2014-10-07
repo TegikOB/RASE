@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_ELEMENT" version="">
+  <row id="95CC5757ECBCE5B8E040007F010076A5" trl="Y">
+    <value column="Name" original="Width">Anchura</value>
+    <value column="PrintName" original="Width">Anchura</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Width of the column in percentage. If the sum of the widths is higher than 100 the grid will adapt the values. For example, 3 columns with 100 width will take 33% of the grid width each.">Anchura de la columna medido en porcentaje. Si la suma de las anchuras es superior a 100, el grid adaptará los valores. Por ejemplo, 3 columnas con anchura 100 ocuparán el 33% del grid cada una.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95CC5757ECBEE5B8E040007F010076A5" trl="Y">
+    <value column="Name" original="Query Column">Columna de Consulta</value>
+    <value column="PrintName" original="Query Column">Columna de Consulta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Column of the defined query that it is desired to be shown or exported">Columna de la consulta definida que se quiere mostrar o exportar</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95CC5757ECC0E5B8E040007F010076A5" trl="Y">
+    <value column="Name" original="Summarize Type">Tipo de Sumarización</value>
+    <value column="PrintName" original="Summarize Type">Tipo de Sumarización</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Select the desired summarize option in case the column is numeric and it is desired to have the sum, average,..">Selecciona el tipo de sumarización en el caso de que la columna sea numérica y que se desea calcular la suma, media,..</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95CC5757ECC2E5B8E040007F010076A5" trl="Y">
+    <value column="Name" original="Link Column Alias">Alias de la Columna de Enlace</value>
+    <value column="PrintName" original="Link Column Alias">Alias de la Columna de Enlace</value>
+    <value column="Description" original="Alias of the HQL Query column with the id required to built the link">Alias de la columna de la consulta HQL con el id requerida para construir el enlace</value>
+    <value column="Help" original="Alias of the HQL Query column with the id required to built the link">Alias de la columna de la consulta HQL con el id requerida para construir el enlace</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95CC5757ECC6E5B8E040007F010076A5" trl="Y">
+    <value column="Name" original="Display Column Alias">Alias Mostrado de la Columna</value>
+    <value column="PrintName" original="Display Column Alias">Alias Mostrado de la Columna</value>
+    <value column="Description" original="Alias of HQL query column to be shown">Alias de la Columna que será mostrado</value>
+    <value column="Help" original="Alias of HQL query column to be shown">Alias de la Columna que será mostrado</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="95CC63FD04B421F2E040007F010075C1" trl="Y">
+    <value column="Name" original="Widget Query">Consulta del Widget</value>
+    <value column="PrintName" original="Widget Query">Consulta del Widget</value>
+    <value column="Description" original="Identifier of a HQL Query definition of a widget class implementing the Query/List Superclass">Identificador de una definición de consulta HQL de una clase de widget que implementa la superclase Query/List</value>
+    <value column="Help" original="Identifies the HQL Query definitino of a widget class that implements the Query/List Superclass widget">Identificador de una definición de consulta HQL de una clase de widget que implementa la superclase Query/List</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="966C6C809EF15FAAE040007F0100089F" trl="Y">
+    <value column="Name" original="Include In">Incluír en</value>
+    <value column="PrintName" original="Include In">Incluír en</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Sets the visibility of the column:&#10;- Widget view, column is shown on all cases.&#10;- Maximized view, column is shown only in maximized view and included in the exported file.&#10;- Exported file, column is only included in the exported file.">Especifica la visibilidad de una columna:
+- Vista de Widget, la columna se muestra siempre.
+- Vista Maximizada, la columna se muestra solo en vista maximizada, y se incluye también en el fichero exportado
+- Fichero Exportado, la columna solo se incluye en el fichero exportado.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="96FCF80A354DB74FE040007F01002B7F" trl="Y">
+    <value column="Name" original="Query Column Translation">Traducción de Columna de Consulta</value>
+    <value column="PrintName" original="Query Column Translation">Traducción de Columna de Consulta</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="977365E5A94B3B33E040007F010031AE" trl="Y">
+    <value column="Name" original="Has Link">Tiene enlace</value>
+    <value column="PrintName" original="Has Link">Tiene enlace</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Flag to set that the field of the grid will have a link">Señala si el campo del grid tiene un enlace</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="998FF6ADFBCD705DE040007F01006349" trl="Y">
+    <value column="Name" original="Can be filtered">Puede ser filtrado</value>
+    <value column="PrintName" original="Can be filtered">Puede ser filtrado</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="This flag sets whether it is possible to filter the grid by this column or not on maximized view. To be able to filter it is also needed to set on the HQL Code where clause the display expression between @ symbols that will be replaced on execution by the filter clause in case it is being filtered or &quot;1=1&quot; when it is not.&#10;For example: having the following HQL &quot;select product.name as prodcutName from product&quot;. To be able to filter by product name it is needed to include a  &quot;where @productName@&quot; in the where clause: &quot;select product.name as prodcutName from product where @productName@&quot;">Señala si se puede filtrar el grid por esta columna o no en vista maximizada. Para poder filtrar es necesario también especificar en la cláusula where del código HQL la expresión entre símbolos @, que serán reemplazados durante la ejecución por la cláusula de filtrado en caso de que se esté filtrando, o por 1=1 en caso contrario.
+Por ejemplo: si tenemos la siguiente consulta HQL: "select product.name as prodcutName from product". Para poder filtrar por nombre del producto es necesario incluír "where @productName@" en la cláusula where: "select product.name as prodcutName from product where @productName@"</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="998FF6ADFBCF705DE040007F01006349" trl="Y">
+    <value column="Name" original="Where Clause Left Part">Parte Izquierda de la Cláusula Where</value>
+    <value column="PrintName" original="Where Clause Left Part">Parte Izquierda de la Cláusula Where</value>
+    <value column="Description" original=""/>
+    <value column="Help" original="Left part of the where clause needed to filter by a value of this column on the maximized view.">Parte izquierda de la cláusula where necesaria para filtrar por el valor de esta columna en vista maximizada.</value>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE07AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Business Partner">Terero</value>
+    <value column="PrintName" original="Business Partner">Tercero</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE17AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Client">Entidad</value>
+    <value column="PrintName" original="Client">Entidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE27AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Show all data">Mostrar todos los registros</value>
+    <value column="PrintName" original="Show all data">Mostrar todos los registros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE37AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Number of Rows">Número de Filas</value>
+    <value column="PrintName" original="Number of Rows">Número de Filas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE47AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Show all data">Mostrar todos los registros</value>
+    <value column="PrintName" original="Show all data">Mostrar todos los registros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE57AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Number of Rows">Número de Filas</value>
+    <value column="PrintName" original="Number of Rows">Número de Filas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE67AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Client">Entidad</value>
+    <value column="PrintName" original="Client">Entidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE77AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Supplier">Distribuidor</value>
+    <value column="PrintName" original="Supplier">Distribuidor</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE87AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Show all data">Mostrar todos los registros</value>
+    <value column="PrintName" original="Show all data">Mostrar todos los registros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CE97AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Number of Rows">Número de Filas</value>
+    <value column="PrintName" original="Number of Rows">Número de Filas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CEA7AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Show all data">Mostrar todos los registros</value>
+    <value column="PrintName" original="Show all data">Mostrar todos los registros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CEB7AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Client">Entidad</value>
+    <value column="PrintName" original="Client">Entidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CEC7AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Client">Entidad</value>
+    <value column="PrintName" original="Client">Entidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CED7AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Show all data">Mostrar todos los registros</value>
+    <value column="PrintName" original="Show all data">Mostrar todos los registros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CEE7AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Show all data">Mostrar todos los registros</value>
+    <value column="PrintName" original="Show all data">Mostrar todos los registros</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CEF7AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Number of Rows">Número de Filas</value>
+    <value column="PrintName" original="Number of Rows">Número de Filas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF07AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Number of Rows">Número de Filas</value>
+    <value column="PrintName" original="Number of Rows">Número de Filas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF17AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Number of Rows">Número de Filas</value>
+    <value column="PrintName" original="Number of Rows">Número de Filas</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF27AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+    <value column="PrintName" original="Business Partner">Tercero</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF37AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Product">Producto</value>
+    <value column="PrintName" original="Product">Producto</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF47AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+    <value column="PrintName" original="Business Partner">Tercero</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF57AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Client">Entidad</value>
+    <value column="PrintName" original="Client">Entidad</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+  <row id="9A0C92898CF67AC8E040007F01003160" trl="Y">
+    <value column="Name" original="Business Partner">Tercero</value>
+    <value column="PrintName" original="Business Partner">Tercero</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+    <value column="PO_Description" original=""/>
+    <value column="PO_Help" original=""/>
+    <value column="PO_Name" original=""/>
+    <value column="PO_PrintName" original=""/>
+  </row>
+</compiereTrl>

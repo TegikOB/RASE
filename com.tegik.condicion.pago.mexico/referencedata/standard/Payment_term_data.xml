@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FinancialMgmtPaymentTermTrl id="01D402BC8D614950A97956D1F31AF0BF" identifier="90 DIAS">
+    <id>01D402BC8D614950A97956D1F31AF0BF</id>
+    <paymentTerms id="B662C2CBDF684E68BD5DC69C1E1DC188" entity-name="FinancialMgmtPaymentTerm" identifier="90 DIAS"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.311Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.311Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>90 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="06C6A1D82BB14F9490D061434310A721" identifier="CONTADO">
+    <id>06C6A1D82BB14F9490D061434310A721</id>
+    <paymentTerms id="51F2A391328DA9AD01328DC97A5B0246" entity-name="FinancialMgmtPaymentTerm" identifier="CONTADO"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.310Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.310Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>CONTADO</name>
+    <description>CONTADO</description>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="29ED307A092942B3B16D6066AE35141F" identifier="30 DIAS">
+    <id>29ED307A092942B3B16D6066AE35141F</id>
+    <paymentTerms id="51F2A3913345ECC80133466605B3001C" entity-name="FinancialMgmtPaymentTerm" identifier="30 DIAS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.309Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.309Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>30 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="2B58C53DF0C14572A4644C16F519784F" identifier="60 DIAS">
+    <id>2B58C53DF0C14572A4644C16F519784F</id>
+    <paymentTerms id="43D67BACB30746B3A90BFB3BEBF06058" entity-name="FinancialMgmtPaymentTerm" identifier="60 DIAS"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.309Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.309Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>60 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="2BE68372642C4D5695DB395FC04197B5" identifier="5 DIAS">
+    <id>2BE68372642C4D5695DB395FC04197B5</id>
+    <paymentTerms id="51F2A391328DA9AD01328DCA2C860248" entity-name="FinancialMgmtPaymentTerm" identifier="5 DIAS"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.309Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.309Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>5 DIAS</name>
+    <description>5 DIAS</description>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="5F61158C4ACB4CD3ABD5CA734D4397C5" identifier="15 DIAS">
+    <id>5F61158C4ACB4CD3ABD5CA734D4397C5</id>
+    <paymentTerms id="2CF158A0644A4FE7A524CFC902BEEB40" entity-name="FinancialMgmtPaymentTerm" identifier="15 DIAS"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.308Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.308Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>15 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="6952CA0EC93C472294115E3E27F2040A" identifier="60 DIAS">
+    <id>6952CA0EC93C472294115E3E27F2040A</id>
+    <paymentTerms id="43D67BACB30746B3A90BFB3BEBF06058" entity-name="FinancialMgmtPaymentTerm" identifier="60 DIAS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.307Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.307Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>60 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="7455B0AAC7D04AECA5D5F4E3BA0F1370" identifier="5 DIAS">
+    <id>7455B0AAC7D04AECA5D5F4E3BA0F1370</id>
+    <paymentTerms id="51F2A391328DA9AD01328DCA2C860248" entity-name="FinancialMgmtPaymentTerm" identifier="5 DIAS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.306Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.306Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>5 DIAS</name>
+    <description>5 DIAS</description>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="77F696EAF0F844E8B3434AAFAA9A66DD" identifier="15 DIAS">
+    <id>77F696EAF0F844E8B3434AAFAA9A66DD</id>
+    <paymentTerms id="2CF158A0644A4FE7A524CFC902BEEB40" entity-name="FinancialMgmtPaymentTerm" identifier="15 DIAS"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.306Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.306Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>15 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="82325CFE6FEF4536AF7683D5A9CCEB08" identifier="15 DIAS">
+    <id>82325CFE6FEF4536AF7683D5A9CCEB08</id>
+    <paymentTerms id="2CF158A0644A4FE7A524CFC902BEEB40" entity-name="FinancialMgmtPaymentTerm" identifier="15 DIAS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.305Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.305Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>15 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="8582EA9DF0394E78B4B91316088D4FC6" identifier="60 DIAS">
+    <id>8582EA9DF0394E78B4B91316088D4FC6</id>
+    <paymentTerms id="43D67BACB30746B3A90BFB3BEBF06058" entity-name="FinancialMgmtPaymentTerm" identifier="60 DIAS"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.305Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.305Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>60 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="9A0D6BFB2297444F8A6F87F6207FB97C" identifier="CONTADO">
+    <id>9A0D6BFB2297444F8A6F87F6207FB97C</id>
+    <paymentTerms id="51F2A391328DA9AD01328DC97A5B0246" entity-name="FinancialMgmtPaymentTerm" identifier="CONTADO"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.304Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.304Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>CONTADO</name>
+    <description>CONTADO</description>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="9DAA0BB88589462F9C2A8D2B60B943CF" identifier="30 DIAS">
+    <id>9DAA0BB88589462F9C2A8D2B60B943CF</id>
+    <paymentTerms id="51F2A3913345ECC80133466605B3001C" entity-name="FinancialMgmtPaymentTerm" identifier="30 DIAS"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.304Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.304Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>30 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="A1B63AD812844DBC9F45B0CE0CBF5C60" identifier="CONTADO">
+    <id>A1B63AD812844DBC9F45B0CE0CBF5C60</id>
+    <paymentTerms id="51F2A391328DA9AD01328DC97A5B0246" entity-name="FinancialMgmtPaymentTerm" identifier="CONTADO"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.304Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.304Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>CONTADO</name>
+    <description>CONTADO</description>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="A1CD660EE72546FB9FFE89729D49E55D" identifier="5 DIAS">
+    <id>A1CD660EE72546FB9FFE89729D49E55D</id>
+    <paymentTerms id="51F2A391328DA9AD01328DCA2C860248" entity-name="FinancialMgmtPaymentTerm" identifier="5 DIAS"/>
+    <language id="140" entity-name="ADLanguage" identifier="Spanish (Spain)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.303Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.303Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>5 DIAS</name>
+    <description>5 DIAS</description>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="B1D3BCCA65BB4CF985DB574F00FF7075" identifier="90 DIAS">
+    <id>B1D3BCCA65BB4CF985DB574F00FF7075</id>
+    <paymentTerms id="B662C2CBDF684E68BD5DC69C1E1DC188" entity-name="FinancialMgmtPaymentTerm" identifier="90 DIAS"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.303Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.303Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>90 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="B82DBC8124EC4DF7AEFAE35253FAA935" identifier="30 DIAS">
+    <id>B82DBC8124EC4DF7AEFAE35253FAA935</id>
+    <paymentTerms id="51F2A3913345ECC80133466605B3001C" entity-name="FinancialMgmtPaymentTerm" identifier="30 DIAS"/>
+    <language id="143" entity-name="ADLanguage" identifier="Spanish (Mexico)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.302Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.302Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>30 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTermTrl id="C21A06375F66422CAB4EA3FD4105188A" identifier="90 DIAS">
+    <id>C21A06375F66422CAB4EA3FD4105188A</id>
+    <paymentTerms id="B662C2CBDF684E68BD5DC69C1E1DC188" entity-name="FinancialMgmtPaymentTerm" identifier="90 DIAS"/>
+    <language id="192" entity-name="ADLanguage" identifier="English (USA)"/>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.302Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.302Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>90 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <translation>false</translation>
+  </FinancialMgmtPaymentTermTrl>
+  <FinancialMgmtPaymentTerm id="2CF158A0644A4FE7A524CFC902BEEB40" identifier="15 DIAS">
+    <id>2CF158A0644A4FE7A524CFC902BEEB40</id>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.301Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.301Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>15 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <fixedDueDate>false</fixedDueDate>
+    <overduePaymentDaysRule>15</overduePaymentDaysRule>
+    <maturityDate1 xsi:nil="true"/>
+    <offsetMonthDue>0</offsetMonthDue>
+    <nextBusinessDay>false</nextBusinessDay>
+    <default>false</default>
+    <searchKey>15 DIAS</searchKey>
+    <overduePaymentDayRule xsi:nil="true"/>
+    <valid>false</valid>
+    <maturityDate2 xsi:nil="true"/>
+    <maturityDate3>0</maturityDate3>
+  </FinancialMgmtPaymentTerm>
+  <FinancialMgmtPaymentTerm id="43D67BACB30746B3A90BFB3BEBF06058" identifier="60 DIAS">
+    <id>43D67BACB30746B3A90BFB3BEBF06058</id>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.301Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.301Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>60 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <fixedDueDate>false</fixedDueDate>
+    <overduePaymentDaysRule>60</overduePaymentDaysRule>
+    <maturityDate1 xsi:nil="true"/>
+    <offsetMonthDue>0</offsetMonthDue>
+    <nextBusinessDay>false</nextBusinessDay>
+    <default>false</default>
+    <searchKey>60 DIAS</searchKey>
+    <overduePaymentDayRule xsi:nil="true"/>
+    <valid>false</valid>
+    <maturityDate2 xsi:nil="true"/>
+    <maturityDate3>0</maturityDate3>
+  </FinancialMgmtPaymentTerm>
+  <FinancialMgmtPaymentTerm id="51F2A391328DA9AD01328DC97A5B0246" identifier="CONTADO">
+    <id>51F2A391328DA9AD01328DC97A5B0246</id>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.300Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.300Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>CONTADO</name>
+    <description>CONTADO</description>
+    <comments xsi:nil="true"/>
+    <fixedDueDate>false</fixedDueDate>
+    <overduePaymentDaysRule>0</overduePaymentDaysRule>
+    <maturityDate1 xsi:nil="true"/>
+    <offsetMonthDue>0</offsetMonthDue>
+    <nextBusinessDay>false</nextBusinessDay>
+    <default>true</default>
+    <searchKey>CONTADO</searchKey>
+    <overduePaymentDayRule xsi:nil="true"/>
+    <valid>false</valid>
+    <maturityDate2 xsi:nil="true"/>
+    <maturityDate3>0</maturityDate3>
+  </FinancialMgmtPaymentTerm>
+  <FinancialMgmtPaymentTerm id="51F2A391328DA9AD01328DCA2C860248" identifier="5 DIAS">
+    <id>51F2A391328DA9AD01328DCA2C860248</id>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.300Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.300Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>5 DIAS</name>
+    <description>5 DIAS</description>
+    <comments xsi:nil="true"/>
+    <fixedDueDate>false</fixedDueDate>
+    <overduePaymentDaysRule>5</overduePaymentDaysRule>
+    <maturityDate1 xsi:nil="true"/>
+    <offsetMonthDue>0</offsetMonthDue>
+    <nextBusinessDay>false</nextBusinessDay>
+    <default>false</default>
+    <searchKey>5 DIAS</searchKey>
+    <overduePaymentDayRule xsi:nil="true"/>
+    <valid>false</valid>
+    <maturityDate2 xsi:nil="true"/>
+    <maturityDate3>0</maturityDate3>
+  </FinancialMgmtPaymentTerm>
+  <FinancialMgmtPaymentTerm id="51F2A3913345ECC80133466605B3001C" identifier="30 DIAS">
+    <id>51F2A3913345ECC80133466605B3001C</id>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.300Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.300Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>30 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <fixedDueDate>false</fixedDueDate>
+    <overduePaymentDaysRule>30</overduePaymentDaysRule>
+    <maturityDate1 xsi:nil="true"/>
+    <offsetMonthDue>0</offsetMonthDue>
+    <nextBusinessDay>false</nextBusinessDay>
+    <default>false</default>
+    <searchKey>30 DIAS</searchKey>
+    <overduePaymentDayRule xsi:nil="true"/>
+    <valid>false</valid>
+    <maturityDate2 xsi:nil="true"/>
+    <maturityDate3>0</maturityDate3>
+  </FinancialMgmtPaymentTerm>
+  <FinancialMgmtPaymentTerm id="B662C2CBDF684E68BD5DC69C1E1DC188" identifier="90 DIAS">
+    <id>B662C2CBDF684E68BD5DC69C1E1DC188</id>
+    <active>true</active>
+    <creationDate transient="true">2014-02-11T15:20:12.299Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2014-02-11T15:20:12.299Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>90 DIAS</name>
+    <description xsi:nil="true"/>
+    <comments xsi:nil="true"/>
+    <fixedDueDate>false</fixedDueDate>
+    <overduePaymentDaysRule>90</overduePaymentDaysRule>
+    <maturityDate1 xsi:nil="true"/>
+    <offsetMonthDue>0</offsetMonthDue>
+    <nextBusinessDay>false</nextBusinessDay>
+    <default>false</default>
+    <searchKey>90 DIAS</searchKey>
+    <overduePaymentDayRule xsi:nil="true"/>
+    <valid>false</valid>
+    <maturityDate2 xsi:nil="true"/>
+    <maturityDate3>0</maturityDate3>
+  </FinancialMgmtPaymentTerm>
+</ob:Openbravo>

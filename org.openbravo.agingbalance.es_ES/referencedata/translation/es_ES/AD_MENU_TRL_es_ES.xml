@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_ES" table="AD_MENU" version="">
+  <row id="102881D8FFA84A98924038B3C9897403" trl="Y">
+    <value column="Name" original="Receivables Aging Inquiry">Informe de saldos a cobrar por antigüedad</value>
+    <value column="Description" original="Receivables Aging Inquiry">Informe de saldos a cobrar por antigüedad</value>
+  </row>
+  <row id="7DECBF142C854281AE786218B60C7D48" trl="Y">
+    <value column="Name" original="Payables Aging Inquiry">Informe de saldos a pagar por antigüedad</value>
+    <value column="Description" original="Payables Aging Inquiry">Informe de saldos a pagar por antigüedad</value>
+  </row>
+</compiereTrl>

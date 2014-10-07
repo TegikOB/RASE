@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="10153E4B83EC4A5E8C558FCE74071FB0" trl="Y">
+    <value column="Name" original="Defined Selector">Selector Definido</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Define and maintain selectors with a suggestion box and popup window">Definición y mantenimiento de selectores con un cuadro de sugerencias y ventana de popup</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Define and maintain selectors which make it possible to search through a suggestion box, a drop-down or a popup window with multiple search columns. The selector consists of selector fields which define which properties to show in the suggestion box and popup and on which properties to search.">Define and maintain selectors which make it possible to search through a suggestion box, a drop-down or a popup window with multiple search columns. The selector consists of selector fields which define which properties to show in the suggestion box and popup and on which properties to search.</value>
+  </row>
+  <row id="308C5577EA73404DAF44CBA9A467E34F" trl="Y">
+    <value column="Name" original="Selector Field Translation">Traducción del Campo de Selector</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Selector Field Translation">Traducción del Campo de Selector</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Selector Field Translation">Selector Field Translation</value>
+  </row>
+  <row id="75FEAE3FF26F49E394BDF833B1B97647" trl="Y">
+    <value column="Name" original="Defined Selector Field">Campo de Selector Definido</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Selector Field">Campo de Selector</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="The selector field defines a column/property which is shown in the suggestion box or popup window.">The selector field defines a column/property which is shown in the suggestion box or popup window.</value>
+  </row>
+  <row id="BE8CCBD813044537A6B02CA5E7FBA413" trl="Y">
+    <value column="Name" original="Defined Selector Translation">Traducción del Selector Definido</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Translation of the selector">Traducción del Selector</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="Translation of the selector header information.">Translation of the selector header information.</value>
+  </row>
+</compiereTrl>

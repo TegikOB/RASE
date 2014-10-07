@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ADSequence id="D3798BF012EE41C19D5F0AFABD4E2CB1" identifier="Picking List">
+    <id>D3798BF012EE41C19D5F0AFABD4E2CB1</id>
+    <active>true</active>
+    <creationDate transient="true">2012-11-27T13:59:09.0Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-12-12T12:56:22.0Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Picking List</name>
+    <description xsi:nil="true"/>
+    <valueFormat xsi:nil="true"/>
+    <autoNumbering>true</autoNumbering>
+    <incrementBy>1</incrementBy>
+    <startingNo>1000000</startingNo>
+    <nextAssignedNumber>300</nextAssignedNumber>
+    <currentNextSystem>100</currentNextSystem>
+    <usedForRecordID>false</usedForRecordID>
+    <prefix>PL</prefix>
+    <suffix xsi:nil="true"/>
+    <restartSequenceEveryYear>false</restartSequenceEveryYear>
+  </ADSequence>
+  <DocumentType id="D17B6F88E50C44EAB3D2C3C0E91B2665" identifier="Picking List">
+    <id>D17B6F88E50C44EAB3D2C3C0E91B2665</id>
+    <active>true</active>
+    <creationDate transient="true">2012-11-27T13:58:49.0Z</creationDate>
+    <createdBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <updated transient="true">2012-11-27T13:59:26.0Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <name>Picking List</name>
+    <printText>Picking List</printText>
+    <description xsi:nil="true"/>
+    <documentCategory>OBWPL_doctype</documentCategory>
+    <salesTransaction>false</salesTransaction>
+    <sOSubType xsi:nil="true"/>
+    <documentTypeForShipment xsi:nil="true"/>
+    <documentTypeForInvoice xsi:nil="true"/>
+    <sequencedDocument>true</sequencedDocument>
+    <documentSequence id="D3798BF012EE41C19D5F0AFABD4E2CB1" entity-name="ADSequence" identifier="Picking List"/>
+    <gLCategory id="0" entity-name="FinancialMgmtGLCategory" identifier="None of System"/>
+    <comments xsi:nil="true"/>
+    <default>false</default>
+    <numberOfCopies>1</numberOfCopies>
+    <table xsi:nil="true"/>
+    <filterByOrganization>false</filterByOrganization>
+    <documentCancelled xsi:nil="true"/>
+    <expense>false</expense>
+    <reversal>false</reversal>
+    <return>false</return>
+    <documentTypeForOrder xsi:nil="true"/>
+  </DocumentType>
+</ob:Openbravo>

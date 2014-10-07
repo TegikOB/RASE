@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ob:Openbravo xmlns:ob="http://www.openbravo.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FIN_PaymentMethod id="51F2A391328DA9AD01328DCE42F6024B" identifier="CHEQUE">
+    <id>51F2A391328DA9AD01328DCE42F6024B</id>
+    <creationDate transient="true">2011-09-21T21:04:57.590Z</creationDate>
+    <createdBy transient="true" id="51F2A391328DA9AD01328DAD2E900014" entity-name="ADUser" identifier="gwilliams"/>
+    <updated transient="true">2013-09-05T16:38:01.596Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <active>true</active>
+    <name>CHEQUE</name>
+    <description xsi:nil="true"/>
+    <automaticReceipt>false</automaticReceipt>
+    <automaticPayment>false</automaticPayment>
+    <automaticDeposit>false</automaticDeposit>
+    <automaticWithdrawn>false</automaticWithdrawn>
+    <payinAllow>true</payinAllow>
+    <payoutAllow>true</payoutAllow>
+    <payinExecutionType>M</payinExecutionType>
+    <payoutExecutionType>M</payoutExecutionType>
+    <payinExecutionProcess xsi:nil="true"/>
+    <payoutExecutionProcess xsi:nil="true"/>
+    <payinDeferred>false</payinDeferred>
+    <payoutDeferred>false</payoutDeferred>
+    <uponReceiptUse>INT</uponReceiptUse>
+    <uponDepositUse>DEP</uponDepositUse>
+    <iNUponClearingUse>CLE</iNUponClearingUse>
+    <uponPaymentUse>INT</uponPaymentUse>
+    <uponWithdrawalUse>WIT</uponWithdrawalUse>
+    <oUTUponClearingUse>CLE</oUTUponClearingUse>
+    <payinIsMulticurrency>false</payinIsMulticurrency>
+    <payoutIsMulticurrency>false</payoutIsMulticurrency>
+  </FIN_PaymentMethod>
+  <FIN_PaymentMethod id="51F2A391328DA9AD01328DCE7898024D" identifier="TRANSFERENCIA">
+    <id>51F2A391328DA9AD01328DCE7898024D</id>
+    <creationDate transient="true">2011-09-21T21:05:11.321Z</creationDate>
+    <createdBy transient="true" id="51F2A391328DA9AD01328DAD2E900014" entity-name="ADUser" identifier="gwilliams"/>
+    <updated transient="true">2013-09-05T16:38:55.287Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <active>true</active>
+    <name>TRANSFERENCIA</name>
+    <description xsi:nil="true"/>
+    <automaticReceipt>false</automaticReceipt>
+    <automaticPayment>false</automaticPayment>
+    <automaticDeposit>false</automaticDeposit>
+    <automaticWithdrawn>false</automaticWithdrawn>
+    <payinAllow>true</payinAllow>
+    <payoutAllow>true</payoutAllow>
+    <payinExecutionType>M</payinExecutionType>
+    <payoutExecutionType>M</payoutExecutionType>
+    <payinExecutionProcess xsi:nil="true"/>
+    <payoutExecutionProcess xsi:nil="true"/>
+    <payinDeferred>false</payinDeferred>
+    <payoutDeferred>false</payoutDeferred>
+    <uponReceiptUse>INT</uponReceiptUse>
+    <uponDepositUse>DEP</uponDepositUse>
+    <iNUponClearingUse>CLE</iNUponClearingUse>
+    <uponPaymentUse>INT</uponPaymentUse>
+    <uponWithdrawalUse>WIT</uponWithdrawalUse>
+    <oUTUponClearingUse>CLE</oUTUponClearingUse>
+    <payinIsMulticurrency>true</payinIsMulticurrency>
+    <payoutIsMulticurrency>true</payoutIsMulticurrency>
+  </FIN_PaymentMethod>
+  <FIN_PaymentMethod id="51F2A391329633AF0132981596EC00B6" identifier="TARJETA DE CREDITO">
+    <id>51F2A391329633AF0132981596EC00B6</id>
+    <creationDate transient="true">2011-09-23T20:59:04.300Z</creationDate>
+    <createdBy transient="true" id="51F2A391329633AF013297FE0F570026" entity-name="ADUser" identifier="ewilliams"/>
+    <updated transient="true">2013-09-05T16:37:40.406Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <active>true</active>
+    <name>TARJETA DE CREDITO</name>
+    <description xsi:nil="true"/>
+    <automaticReceipt>false</automaticReceipt>
+    <automaticPayment>false</automaticPayment>
+    <automaticDeposit>false</automaticDeposit>
+    <automaticWithdrawn>false</automaticWithdrawn>
+    <payinAllow>true</payinAllow>
+    <payoutAllow>true</payoutAllow>
+    <payinExecutionType>M</payinExecutionType>
+    <payoutExecutionType>M</payoutExecutionType>
+    <payinExecutionProcess xsi:nil="true"/>
+    <payoutExecutionProcess xsi:nil="true"/>
+    <payinDeferred>false</payinDeferred>
+    <payoutDeferred>false</payoutDeferred>
+    <uponReceiptUse>INT</uponReceiptUse>
+    <uponDepositUse>DEP</uponDepositUse>
+    <iNUponClearingUse>CLE</iNUponClearingUse>
+    <uponPaymentUse>INT</uponPaymentUse>
+    <uponWithdrawalUse>WIT</uponWithdrawalUse>
+    <oUTUponClearingUse>CLE</oUTUponClearingUse>
+    <payinIsMulticurrency>true</payinIsMulticurrency>
+    <payoutIsMulticurrency>true</payoutIsMulticurrency>
+  </FIN_PaymentMethod>
+  <FIN_PaymentMethod id="51F2A391329633AF0132981BD06F00BF" identifier="EFECTIVO">
+    <id>51F2A391329633AF0132981BD06F00BF</id>
+    <creationDate transient="true">2011-09-23T21:05:52.239Z</creationDate>
+    <createdBy transient="true" id="51F2A391329633AF013297FE0F570026" entity-name="ADUser" identifier="ewilliams"/>
+    <updated transient="true">2013-09-05T16:38:30.360Z</updated>
+    <updatedBy transient="true" id="100" entity-name="ADUser" identifier="Openbravo"/>
+    <active>true</active>
+    <name>EFECTIVO</name>
+    <description xsi:nil="true"/>
+    <automaticReceipt>false</automaticReceipt>
+    <automaticPayment>false</automaticPayment>
+    <automaticDeposit>false</automaticDeposit>
+    <automaticWithdrawn>false</automaticWithdrawn>
+    <payinAllow>true</payinAllow>
+    <payoutAllow>true</payoutAllow>
+    <payinExecutionType>M</payinExecutionType>
+    <payoutExecutionType>M</payoutExecutionType>
+    <payinExecutionProcess xsi:nil="true"/>
+    <payoutExecutionProcess xsi:nil="true"/>
+    <payinDeferred>false</payinDeferred>
+    <payoutDeferred>false</payoutDeferred>
+    <uponReceiptUse>INT</uponReceiptUse>
+    <uponDepositUse>DEP</uponDepositUse>
+    <iNUponClearingUse>CLE</iNUponClearingUse>
+    <uponPaymentUse>INT</uponPaymentUse>
+    <uponWithdrawalUse>WIT</uponWithdrawalUse>
+    <oUTUponClearingUse>CLE</oUTUponClearingUse>
+    <payinIsMulticurrency>false</payinIsMulticurrency>
+    <payoutIsMulticurrency>false</payoutIsMulticurrency>
+  </FIN_PaymentMethod>
+</ob:Openbravo>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_TAX">
+    <table name="C_TAX" primaryKey="C_TAX_KEY">
+      <column name="EM_FET_NOMBREFACTURACION" primaryKey="false" required="false" type="VARCHAR" size="60" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

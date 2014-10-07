@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION OBDISC_XY_SAME_PRODUCT">
+    <function name="OBDISC_XY_SAME_PRODUCT" type="VARCHAR">
+      <parameter name="p_type" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_rule_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_line_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_priceprecision" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_stdprecision" type="NUMERIC" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_user_id" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_taxincluded" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[/************************************************************************************
+ * Copyright (C) 2012 Openbravo S.L.U.
+ * Licensed under the Openbravo Commercial License version 1.0
+ * You may obtain a copy of the License at http://www.openbravo.com/legal/obcl.html
+ * or in the legal folder of this module distribution.
+ ************************************************************************************/
+  v_x NUMBER;
+  v_y NUMBER;
+  v_apply_next VARCHAR(1);
+  v_mod NUMBER;
+  v_chunks NUMBER;
+  v_tax VARCHAR(32);
+  v_qty NUMBER;
+  v_unitPrice NUMBER;
+  v_newUnitPrice NUMBER;
+  v_newGrossAmt NUMBER;
+  v_newNetAmt NUMBER;
+  v_newNetLine NUMBER;
+  v_priceactual NUMBER;
+  v_basePrice NUMBER;
+  v_origGrossAmt NUMBER;
+  v_origLineNetAmt NUMBER;
+  v_totalPromotion NUMBER;
+BEGIN
+  select em_obdisc_x, em_obdisc_y, apply_next
+    into v_x, v_y, v_apply_next
+    from m_offer
+   where m_offer_id = p_rule_id;
+
+  if (p_type ='O') then
+		select gross_unit_price, c_tax_id, qtyordered, priceactual,
+		       line_gross_amount, linenetamt
+			into v_unitprice, v_tax, v_qty, v_priceactual,
+			     v_origGrossAmt, v_origLineNetAmt
+			from c_orderline
+		 where c_orderline_id = p_line_id;
+  else 
+	 select gross_unit_price, c_tax_id, qtyinvoiced, priceactual,
+	        line_gross_amount, linenetamt
+		 into v_unitprice, v_tax, v_qty, v_priceactual,
+		      v_origGrossAmt, v_origLineNetAmt
+		 from c_invoiceline
+		where c_invoiceline_id = p_line_id;
+  end if;
+
+   if (v_qty < v_x) then
+     return 'Y'; -- rule not applied, apply next one if present
+   end if;
+
+   v_mod := mod (v_qty, v_x);
+   v_chunks := floor(v_qty / v_x);
+   
+   if (p_taxIncluded = 'Y') then
+     v_newGrossAmt := round(v_chunks * v_y * v_unitprice + v_unitprice * v_mod, p_stdprecision);
+     v_newUnitPrice := round(v_newGrossAmt / v_qty, p_priceprecision);
+
+     v_newNetLine := c_get_net_price_from_gross(v_tax, v_newGrossAmt, v_newGrossAmt, p_priceprecision, v_qty);
+     v_newNetAmt := round(v_newNetLine * v_qty, p_stdprecision);
+     v_basePrice := v_unitprice;
+     v_totalPromotion := v_origGrossAmt - v_newGrossAmt;
+   else
+     v_newNetAmt := round(v_chunks * v_y * v_priceactual + v_priceactual * v_mod, p_stdprecision);
+     v_newNetLine := round(v_newNetAmt / v_qty, p_priceprecision);
+     v_basePrice := v_priceactual;
+     v_totalPromotion := v_origLineNetAmt - v_newGrossAmt;
+   end if;
+
+   M_PROMOTION_ADD(p_type, p_line_id, p_rule_id, p_taxIncluded, v_newUnitPrice, v_newGrossAmt, v_newNetLine, v_newNetAmt, v_totalPromotion, v_totalPromotion, v_basePrice, p_user_id);
+
+   return v_apply_next;
+END OBDISC_XY_SAME_PRODUCT
+]]></body>
+    </function>
+  </database>

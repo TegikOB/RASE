@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REF_LIST" version="">
+  <row id="11116BEF61CB4A3FBA8D50CE5A1FE332" trl="N">
+    <value column="Name" isTrl="Y" original="In">Entrada</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="2047BA216D4D46D9BD97D914ED6567DA" trl="N">
+    <value column="Name" isTrl="Y" original="Store">Tienda</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="3A151748C2C74D0F85B6A0C17342CA11" trl="N">
+    <value column="Name" isTrl="Y" original="Group">Grupo</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="48FA55D0472B45128326E85D1C104917" trl="N">
+    <value column="Name" isTrl="Y" original="Out">Retirada</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+  <row id="B61F454F62954483AFF62F86300E9035" trl="N">
+    <value column="Name" isTrl="Y" original="Close">Cierre</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

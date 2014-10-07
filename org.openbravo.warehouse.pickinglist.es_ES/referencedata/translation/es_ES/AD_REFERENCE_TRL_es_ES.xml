@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_REFERENCE" version="">
+  <row id="3DB3CA66D48E41FC849391AA9176C5D1" trl="N">
+    <value column="Name" isTrl="N" original="Obwpl_Pickinglist">Obwpl_Pickinglist</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="3F698D2435774CFAB5B850C7686E47F4" trl="N">
+    <value column="Name" isTrl="N" original="OBWPL_PickingList">OBWPL_PickingList</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+  <row id="C13AD141699C45168090496CF88FEED9" trl="N">
+    <value column="Name" isTrl="Y" original="Picking options">Opciones preparación pedido</value>
+    <value column="Description" isTrl="N" original=""/>
+    <value column="Help" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

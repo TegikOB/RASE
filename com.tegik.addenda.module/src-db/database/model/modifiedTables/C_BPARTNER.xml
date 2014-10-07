@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE C_BPARTNER">
+    <table name="C_BPARTNER" primaryKey="C_BPARTNER_KEY">
+      <column name="EM_ADN_ADDENDA_ID" primaryKey="false" required="false" type="VARCHAR" size="32" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <foreign-key foreignTable="ADN_ADDENDA" name="EM_ADN_ADDENDA_BP_FK">
+        <reference local="EM_ADN_ADDENDA_ID" foreign="ADN_ADDENDA_ID"/>
+      </foreign-key>
+    </table>
+  </database>

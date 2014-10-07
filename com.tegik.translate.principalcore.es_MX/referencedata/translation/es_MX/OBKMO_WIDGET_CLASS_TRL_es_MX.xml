@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_MX" table="OBKMO_WIDGET_CLASS" version="">
+  <row id="7EE694CFF8B94B4C9B9CE69C9D292CC4" trl="Y">
+    <value column="Title" isTrl="Y" original="Quotations">Presupuestos</value>
+    <value column="Description" isTrl="N" original=""/>
+  </row>
+</compiereTrl>

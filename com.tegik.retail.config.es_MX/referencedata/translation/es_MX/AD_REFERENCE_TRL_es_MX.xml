@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REFERENCE" version="">
+  <row id="96C5DDD6CD54434BAD17D416CD239346" trl="Y">
+    <value column="Name" original="Event type">Tipo de Evento</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="9A08EFAF91EE4BA3BD3E1D7544CEA56B" trl="N">
+    <value column="Name" original="RetailOrgType">RetailOrgType</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B0EAEFDB4D5046C3BAB792160CB0D127" trl="Y">
+    <value column="Name" original="Sale Product Complete">Venta de productos completa</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B33F311E9A7647D48CFF1C1E3848C2F0" trl="Y">
+    <value column="Name" original="All Products Simple Selector Assortment">Todos los productos simples surtido selector</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+  <row id="B6C0F97E6722441187E79E94C9A2F00F" trl="N">
+    <value column="Name" original="c_bp group">c_bp group</value>
+    <value column="Description" original=""/>
+    <value column="Help" original=""/>
+  </row>
+</compiereTrl>

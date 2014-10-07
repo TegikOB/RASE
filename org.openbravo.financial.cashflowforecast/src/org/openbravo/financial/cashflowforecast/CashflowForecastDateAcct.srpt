@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ *************************************************************************
+ * The contents of this file are subject to the Openbravo  Public  License
+ * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+ * Version 1.1  with a permitted attribution clause; you may not  use this
+ * file except in compliance with the License. You  may  obtain  a copy of
+ * the License at http://www.openbravo.com/legal/license.html 
+ * Software distributed under the License  is  distributed  on  an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific  language  governing  rights  and  limitations
+ * under the License. 
+ * The Original Code is Openbravo ERP. 
+ * The Initial Developer of the Original Code is Openbravo SLU 
+ * All portions are Copyright (C) 2011 Openbravo SLU 
+ * All Rights Reserved. 
+ * Contributor(s):  ______________________________________.
+ ************************************************************************
+-->
+<div id="sectionTotal">
+<input type="hidden" id="fieldSumAmount" value=""/>
+  <div id="sectionDatePlanned">
+    <div> 
+      <table cellspacing="0" cellpadding="0" width="100%" class="DataGrid_Header_Table DataGrid_Body_Table" style="table-layout: auto;border-top: 0px none;border-bottom: 0px none;" >
+        <tr class="DataGrid_Body_Row"> 
+        <th class="DataGrid_Header_Cell">
+          <span>Date planned: </span><span id="fieldDatePlanned">xx23/10/1900</span>
+          <span>Tot inc-paym: </span><span id="fieldAmtDatePlanned">xx12345</span>
+          <span >Balance:</span><span id="fieldBalanceDatePlanned">xx12345</span>
+          <input type="hidden" id="fieldInitialBalanceHidden" value=""/>
+        </th>
+        </tr>
+      </table>
+
+      <table cellspacing="0" cellpadding="0" width="100%" class="DataGrid_Header_Table DataGrid_Body_Table" style="table-layout: auto;border-top: 0px none;border-bottom: 0px none;">
+        <tr class="DataGrid_Body_Row"> 
+          <th class="DataGrid_Header_Cell" width="5%">Date Invoiced</th>
+          <th class="DataGrid_Header_Cell" width="5%">Invoice No.</th>
+          <th class="DataGrid_Header_Cell" width="25%">Business Partner</th>
+          <th class="DataGrid_Header_Cell" width="24%">Payment</th>
+          <th class="DataGrid_Header_Cell" width="24%">Transaction</th>
+          <th class="DataGrid_Header_Cell" width="7%">Orig.Amount</th>
+          <th class="DataGrid_Header_Cell" width="3%">Orig.Currency</th>
+          <th class="DataGrid_Header_Cell" width="7%">Amount (<span id="labelAmountCurrency">xxEUR</span>)</th>
+        </tr>   
+        <div id="sectionTypePayment">
+        <tr class="DataGrid_Body_Row">
+          <th class="DataGrid_Header_Cell" colspan="7"  id="fieldClassType"><span  id="fieldTypePayment">xxINGRESOS</span></th>
+        </tr>
+        <div id="sectionDetail">
+          <tr class="DataGrid_Body_Row DataGrid_Body_Row_yy" id="funcEvenOddRow1xx"> 
+            <td class="DataGrid_Body_Cell" id="fieldDateInvoiced">xx23/10/1900</td>
+            <td width="10%" class="DataGrid_Body_Cell">
+              <a href="#" onclick="validate(); openInvoiceTab('yy', 'zz');" class="LabelLink" id="fieldInvLink" style="xx">
+                <span id="fieldInvoiceNo">xx5555</span>
+              </a>
+            </td>
+            <td class="DataGrid_Body_Cell" ><span  id="fieldBP">xxCONSTRUCCIONES GANCEDO-GONZALEZ, S.A </span></td>
+            <td class="DataGrid_Body_Cell">
+              <a href="#" onclick="validate(); openPaymentTab('yy', 'zz');" class="LabelLink" id="fieldPaymLink" style="xx">
+                <span id="fieldDescription">xxPAYMENT</span>
+              </a>
+            </td>
+          <td class="DataGrid_Body_Cell">
+            <a href="#" onclick="validate(); openSuitableTab('TransactionLine', 'N', 'zz');" class="LabelLink" id="fieldTrxLink" style="xx">
+              <span id="fieldTrxDescription">xxTRANSACTION</span>
+            </a>
+          </td>
+            <td class="DataGrid_Body_Cell_Amount" id="fieldOriginalAmount">xx1234</td>
+            <td class="DataGrid_Body_Cell" id="fieldOriginalCurrency">xxEUR</td>
+            <td class="DataGrid_Body_Cell_Amount">
+              <a href="#" onclick="validate(); openSuitableTab('xx', 'yy', 'zz');" class="LabelLink" id="fieldInvPlanLink">
+                <span id="fieldAmountLine">xx3456</span>
+              </a>
+            </td>
+          </tr>
+        </div> <!--sectionDetail/-->
+       </div> <!--sectionTypePayment/-->      
+     </table>
+   </div>
+ </div>  <!--sectionDatePlanned/-->
+ </div>

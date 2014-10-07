@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+  <database name="MODIFIED TABLE M_INOUTLINE">
+    <table name="M_INOUTLINE" primaryKey="M_INOUTLINE_KEY">
+      <column name="EM_TEGSAAS_PIEZAS" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_TEGSAAS_CONDICIONES" primaryKey="false" required="false" type="VARCHAR" size="255" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_TEGSAAS_LONGITUD" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_TEGSAAS_ESPESOR" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+      <column name="EM_TEGSAAS_PESO" primaryKey="false" required="false" type="DECIMAL" autoIncrement="false">
+        <default/>
+        <onCreateDefault/>
+      </column>
+    </table>
+  </database>

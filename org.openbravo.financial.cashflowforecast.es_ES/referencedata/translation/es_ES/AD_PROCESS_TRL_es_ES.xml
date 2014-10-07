@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl baseLanguage="en_US" language="es_ES" table="AD_PROCESS" version="">
+  <row id="FF80808131F60B750131F61B7B38000E" trl="N">
+    <value column="Name" isTrl="N" original="Cashflow Forecast Report">Informe de previsión de tesorería</value>
+    <value column="Description" isTrl="N" original="Cashflow Forecast Report">Informe de previsión de tesorería</value>
+    <value column="Help" isTrl="N" original="Report to display position of a financial account in a future date taking into account items we plan to collect or pay in the given financial account.">Informe que prevé el estado de una cuenta financiera en el futuro basándose en los pagos y cobros previstos.</value>
+  </row>
+</compiereTrl>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION TEGIDL_COPIACAMPOS">
+    <function name="TEGIDL_COPIACAMPOS" type="NULL">
+      <parameter name="p_taborigen" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_tabdestino" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="p_modulo" type="VARCHAR" mode="in">
+        <default/>
+      </parameter>
+      <parameter name="regreso" type="VARCHAR" mode="out">
+        <default/>
+      </parameter>
+      <body><![CDATA[-- Logistice
+  v_ResultStr VARCHAR2(2000):='';
+  v_Message VARCHAR2(2000):='';
+  v_Record_ID VARCHAR2(32);
+  -- Parameter
+  TYPE RECORD IS REF CURSOR;
+   Cur_Parameter RECORD;
+  v_existegl VARCHAR2(32);
+  v_seqno NUMBER;
+  v_gridseqno NUMBER;
+  BEGIN
+    --  Update AD_PInstance
+   
+  BEGIN --BODY
+    -- Get Parameters
+  FOR Cur_Parameter IN
+      (select * from ad_field where ad_tab_id = p_taborigen and ad_module_id = p_modulo)
+    LOOP
+
+	select max(seqno) + 10 into v_seqno from ad_field where ad_tab_id = p_tabdestino and seqno is not null;
+	select max(grid_seqno) + 10 into v_gridseqno from ad_field where ad_tab_id = p_tabdestino and grid_seqno is not null;
+
+	INSERT INTO ad_field(
+		ad_field_id, ad_client_id, ad_org_id, isactive, created, createdby, 
+		updated, updatedby, "name", description, help, iscentrallymaintained, 
+		ad_tab_id, ad_column_id, ad_fieldgroup_id, isdisplayed, displaylogic, 
+		displaylength, isreadonly, seqno, sortno, issameline, isfieldonly, 
+		isencrypted, showinrelation, isfirstfocusedfield, ad_module_id, 
+		grid_seqno, startinoddcolumn, startnewline, isshowninstatusbar, 
+		onchangefunction, clientclass, em_obuiapp_colspan, em_obuiapp_rowspan, 
+		em_obuiapp_validator, em_obuiapp_showsummary, em_obuiapp_summaryfn, 
+		em_obuisel_outfield_id)
+	VALUES 
+		(GET_UUID(), Cur_Parameter.ad_client_id, Cur_Parameter.ad_org_id, Cur_Parameter.isactive, now(), Cur_Parameter.createdby, 
+		now(), Cur_Parameter.updatedby, Cur_Parameter."name", Cur_Parameter.description, Cur_Parameter.help, Cur_Parameter.iscentrallymaintained, 
+		p_tabdestino, Cur_Parameter.ad_column_id, Cur_Parameter.ad_fieldgroup_id, Cur_Parameter.isdisplayed, Cur_Parameter.displaylogic, 
+		Cur_Parameter.displaylength, Cur_Parameter.isreadonly, v_seqno, Cur_Parameter.sortno, Cur_Parameter.issameline, Cur_Parameter.isfieldonly, 
+		Cur_Parameter.isencrypted, Cur_Parameter.showinrelation, Cur_Parameter.isfirstfocusedfield, Cur_Parameter.ad_module_id, 
+		v_gridseqno, Cur_Parameter.startinoddcolumn, Cur_Parameter.startnewline, Cur_Parameter.isshowninstatusbar, 
+		Cur_Parameter.onchangefunction, Cur_Parameter.clientclass, Cur_Parameter.em_obuiapp_colspan, Cur_Parameter.em_obuiapp_rowspan, 
+		Cur_Parameter.em_obuiapp_validator, Cur_Parameter.em_obuiapp_showsummary, Cur_Parameter.em_obuiapp_summaryfn, 
+		Cur_Parameter.em_obuisel_outfield_id);
+
+	v_seqno = v_seqno + 10;
+	v_gridseqno = v_gridseqno + 10;
+
+    END LOOP; 
+
+     
+    RETURN;
+  END; --BODY
+EXCEPTION
+WHEN OTHERS THEN
+  v_ResultStr:= 'Error: ' || SQLERRM;
+  DBMS_OUTPUT.PUT_LINE(v_ResultStr) ;
+  ROLLBACK;
+ regreso:=v_ResultStr;
+  RETURN;
+END TEGIDL_COPIACAMPOS
+]]></body>
+    </function>
+  </database>

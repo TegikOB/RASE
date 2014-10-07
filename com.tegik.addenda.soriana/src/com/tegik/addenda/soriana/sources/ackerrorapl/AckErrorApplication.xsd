@@ -1,0 +1,63 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AckErrorApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ackErrorApplicationIdentification">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="entityType"/>
+              <xs:element type="xs:byte" name="uniqueCreatorIdentification"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ApplicationInformation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:date" name="deliveryDatePresent"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReferenceNumber">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:int" name="referenceIdentification"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Buyer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nameAndAddress"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Seller">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nameAndAddress"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="messageError">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="errorCode"/>
+              <xs:element name="errorDescription">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="text"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="sequence"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:float" name="contentVersion"/>
+      <xs:attribute type="xs:string" name="documentStructureVersion"/>
+      <xs:attribute type="xs:int" name="creationDate"/>
+      <xs:attribute type="xs:string" name="documentStatus"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

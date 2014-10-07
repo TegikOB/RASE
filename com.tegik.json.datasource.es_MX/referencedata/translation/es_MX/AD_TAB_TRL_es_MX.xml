@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_TAB" version="">
+  <row id="D7508D810A3B438D8D6B6760E2855334" trl="Y">
+    <value column="Name" original="Datasource field">Campo de fuente de datos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="To maintain datasource fields">Mantenimiento de los campos de fuente de datos</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="A datasource provides data from the database. Each data instance (record) in the data source has one or more fields. The technical property name and type are defined in the Openbravo Datasource Field tab.">A datasource provides data from the database. Each data instance (record) in the data source has one or more fields. The technical property name and type are defined in the Openbravo Datasource Field tab.</value>
+  </row>
+  <row id="EFA7EFCFC6E14827B109D88F236A0B6C" trl="Y">
+    <value column="Name" original="Datasources">Fuentes de datos</value>
+    <value column="CommitWarning" original=""/>
+    <value column="Description" original="Maintain datasources">Mantenimiento de fuentes de datos</value>
+    <value column="Filtername" original=""/>
+    <value column="Help" original="A datasource provides data to a client side user interface component (like a form or grid). The datasource reads for example data from a database table but can also provide data which is computed in real time at runtime. A datasource typically supports the 4 crud operations: create, fetch, update and delete. The fields of the records returned by the datasource are defined as the datasource field.">A datasource provides data to a client side user interface component (like a form or grid). The datasource reads for example data from a database table but can also provide data which is computed in real time at runtime. A datasource typically supports the 4 crud operations: create, fetch, update and delete. The fields of the records returned by the datasource are defined as the datasource field.</value>
+  </row>
+</compiereTrl>

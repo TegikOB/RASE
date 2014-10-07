@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_MENU" version="">
+  <row id="FF8080813151AEE1013151B119D10005" trl="Y">
+    <value column="Name" original="Google Account Association">Asociar Cuenta Google</value>
+    <value column="Description" original="Process to associate a Openbravo user with a Google Account">Proceso para asociar una cuenta Google a un usuario Openbravo</value>
+  </row>
+  <row id="FF8080813161A3D3013162164AB10038" trl="Y">
+    <value column="Name" original="Google Integration Preferences">Preferencias de Integración con Google</value>
+    <value column="Description" original="Setup preferences for integration with Google APIs">Configuración de las Preferencias de la Integración con las APIs de Google</value>
+  </row>
+</compiereTrl>

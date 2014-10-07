@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<compiereTrl language="es_MX" table="AD_REF_LIST" version="">
+  <row id="298F4C20A76B4B30860330F188BD7AEA" trl="Y">
+    <value column="Name" original="Fee">Gastos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="2C29C3C687FC403A802A15DEAF9E0D26" trl="Y">
+    <value column="Name" original="Process Received Payment(s)">Procesar Cobro(s)</value>
+    <value column="Description" original="Process Received Payment(s)">Procesar Cobro(s)</value>
+  </row>
+  <row id="3F087596A0A14DE5BAECAD211AB393BA" trl="Y">
+    <value column="Name" original="Group all orders/invoices into one payment">Agrupar todos los pedidos / facturas en un solo pago.</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="432DB5DD63B449ACB9DEFF26D21B219F" trl="Y">
+    <value column="Name" original="Generate Payments">Generar Pagos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="4A633A692495425FA27BEF840905D29E" trl="Y">
+    <value column="Name" original="Reactivate">Reactivar</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="4A647396E4CE4E8B90D58E9FE4C12BBA" trl="Y">
+    <value column="Name" original="Process">Procesar</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="5A9398A729924B7EAB9494E722992B55" trl="Y">
+    <value column="Name" original="Process Made Payment(s) and Withdrawal">Procesar Pago(s) y Reintegro</value>
+    <value column="Description" original="Process Made Payment(s) and Withdrawal">Procesar Pago(s) y Reintegro</value>
+  </row>
+  <row id="5B87C97B045D4CC8B09F6578A305D826" trl="Y">
+    <value column="Name" original="Reactivate">Reactivar</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="5E71718700A245BB838783695843D2F3" trl="Y">
+    <value column="Name" original="Process">Procesar</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="668B8E7BEFE24B7FB044D267A8B5E7E1" trl="Y">
+    <value column="Name" original="Process Made Payment(s)">Procesar Pago(s)</value>
+    <value column="Description" original="Process Made Payment(s)">Procesar Pago(s)</value>
+  </row>
+  <row id="6746D09AE633453EBD21A8B36B16C088" trl="Y">
+    <value column="Name" original="Submit">Enviar (crear nueva versión del plan)</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="6AA9B332DAE04D7ABEC8A9BE66866A70" trl="Y">
+    <value column="Name" original="Payments">Pagos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="7178525D7629435B98DFDF97EF4A3631" trl="Y">
+    <value column="Name" original="Deposits and payments">Ingresos y Pagos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="72DCA5FC143E44DE818116701D529F28" trl="Y">
+    <value column="Name" original="Submit">Enviar</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="A29540336120479B825D190E5B51C79E" trl="Y">
+    <value column="Name" original="Reactivate">Reactivar</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="AA18A706616845D183B63BE88C967C89" trl="Y">
+    <value column="Name" original="Process Received Payment(s) and Deposit">Procesar Cobro(s) y Depósito</value>
+    <value column="Description" original="Process Received Payment(s) and Deposit">Procesar Cobro(s) y Depósito</value>
+  </row>
+  <row id="B481A754BB024A1BA57D3DF852386B87" trl="Y">
+    <value column="Name" original="Deposits">Ingresos</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="BABE6BF881DD471BB18BF1AD764A3B78" trl="Y">
+    <value column="Name" original="GL Item">Concepto contable</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="C5D1596D065545B49156C1F9426C9E14" trl="Y">
+    <value column="Name" original="Group separate payments for the same vendor into one payment">Agrupar pagos por tercero</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="E047F81FACD0440EACB0EE63EB18A4EE" trl="Y">
+    <value column="Name" original="Payment In/Out">Cobro/Pago</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="FF8080812E443491012E443C4ED60020" trl="Y">
+    <value column="Name" original="Reactivate">Reactivar</value>
+    <value column="Description" original="Reconciliation process actions">Acciones del proceso de reconciliación</value>
+  </row>
+  <row id="FF8080812E443491012E443CA7460027" trl="Y">
+    <value column="Name" original="Process Reconciliation">Reconciliación de Proceso</value>
+    <value column="Description" original=""/>
+  </row>
+  <row id="FF808181312414380131241DC25C0025" trl="Y">
+    <value column="Name" original="Invoice Document Number">Número de Documento de Factura</value>
+    <value column="Description" original="Use Invoice Document Number">Usar Número de Documento de Factura</value>
+  </row>
+  <row id="FF808181312414380131241E6B370029" trl="Y">
+    <value column="Name" original=""/>
+    <value column="Description" original="Use invoice's supplier reference. If empty, it uses the invoice's document number">Usar Referencia del proveedor. Si está vacío se usa el número de documento de factura</value>
+  </row>
+</compiereTrl>

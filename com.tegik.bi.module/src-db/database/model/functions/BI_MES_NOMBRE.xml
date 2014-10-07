@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+  <database name="FUNCTION BI_MES_NOMBRE">
+    <function name="BI_MES_NOMBRE" type="NULL">
+      <parameter name="mesnom" type="CLOB" mode="out">
+        <default/>
+      </parameter>
+      <parameter name="fecha" type="TIMESTAMP" mode="in">
+        <default/>
+      </parameter>
+      <body><![CDATA[BEGIN
+BEGIN --BODY
+
+SELECT mes_nom INTO mesnom FROM (SELECT 
+
+  CASE
+           WHEN date_part('MONTH', fecha) = 1  THEN 'ENE'
+           WHEN date_part('MONTH', fecha) = 2  THEN 'FEB'
+           WHEN date_part('MONTH', fecha) = 3  THEN 'MAR'
+           WHEN date_part('MONTH', fecha) = 4  THEN 'ABR'
+           WHEN date_part('MONTH', fecha) = 5  THEN 'MAY'
+           WHEN date_part('MONTH', fecha) = 6  THEN 'JUN'
+           WHEN date_part('MONTH', fecha) = 7  THEN 'JUL'
+           WHEN date_part('MONTH', fecha) = 8  THEN 'AGO'
+           WHEN date_part('MONTH', fecha) = 9  THEN 'SEP'
+           WHEN date_part('MONTH', fecha) = 10  THEN 'OCT'
+           WHEN date_part('MONTH', fecha) = 11  THEN 'NOV'
+           WHEN date_part('MONTH', fecha) = 12  THEN 'DIC'
+           ELSE 'ND'
+       END AS mes_nom ) A;
+
+
+RETURN;
+END;
+
+EXCEPTION
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('@Error=' || SQLERRM);
+RETURN;
+END BI_MES_NOMBRE
+]]></body>
+    </function>
+  </database>
