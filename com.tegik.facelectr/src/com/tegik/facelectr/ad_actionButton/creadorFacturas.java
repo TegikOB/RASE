@@ -185,7 +185,7 @@ public final class creadorFacturas {
 
     OBContext.restorePreviousMode();
 
-    // log.info("ENCABEZADO7");
+    log.info("ENCABEZADO7");
 
     // return comp;
 
