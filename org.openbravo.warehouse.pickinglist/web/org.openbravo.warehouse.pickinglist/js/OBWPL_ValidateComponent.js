@@ -281,6 +281,10 @@ isc.OBPickValidateProcessGrid.addProperties({
       title: OB.I18N.getLabel('OBWPL_Product'),
       width: OB.Styles.OBWPL.PickValidateProcessGrid.productColumnWidth
     }, {
+      name: 'attributeSetInstance',
+      title: OB.I18N.getLabel('OBWPL_Asi'),
+      width: OB.Styles.OBWPL.PickValidateProcessGrid.attributeSetInstanceColumnWidth
+    }, {
       name: 'quantity',
       title: OB.I18N.getLabel('OBWPL_Quantity'),
       width: OB.Styles.OBWPL.PickValidateProcessGrid.quantityColumnWidth
@@ -292,6 +296,10 @@ isc.OBPickValidateProcessGrid.addProperties({
       name: 'qtyPending',
       title: OB.I18N.getLabel('OBWPL_QtyPending'),
       width: OB.Styles.OBWPL.PickValidateProcessGrid.qtyPendingColumnWidth
+    }, {
+      name: 'editAsi',
+      title: OB.I18N.getLabel('OBWPL_editAsi'),
+      width: OB.Styles.OBWPL.PickValidateProcessGrid.iconStatusColumnWidth
     }, {
       name: 'iconStatus',
       showTitle: false,

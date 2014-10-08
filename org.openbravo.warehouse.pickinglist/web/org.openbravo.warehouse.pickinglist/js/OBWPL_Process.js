@@ -57,7 +57,7 @@ OB.OBWPL.Process = {
         view.activeView.messageBar.setMessage(isc.OBMessageBar[data.message.severity], null, data.message.text);
         return;
       }
-      popupTitle = OB.I18N.getLabel('OBWPL_PickingList') + ' - ' + params.button.contextView.viewGrid.getSelectedRecords()[0]._identifier;
+      popupTitle = OB.I18N.getLabel('OBWPL_PickingList') + ' - PRUEBA CARLOS - ' + params.button.contextView.viewGrid.getSelectedRecords()[0]._identifier;
       processLayout = isc.OBPickValidateProcess.create({
         parentWindow: view,
         sourceView: view.activeView,

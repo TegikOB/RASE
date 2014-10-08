@@ -74,13 +74,14 @@ public class ValidateActionHandler extends BaseActionHandler {
     JSONObject item = null;
     OBContext.setAdminMode();
     try {
-      final String hqlGridData = "SELECT Product.uPCEAN, Product.name, Product.id, sum(MaterialMgmtShipmentInOutLine.movementQuantity), min(MaterialMgmtShipmentInOutLine.lineNo) as newLineNo "
+      //Cambiado por Carlos Salinas para agregar el AttributeSetInstance
+       final String hqlGridData = "SELECT Product.uPCEAN, Product.name, Product.id, sum(MaterialMgmtShipmentInOutLine.movementQuantity), min(MaterialMgmtShipmentInOutLine.lineNo) as newLineNo, MaterialMgmtShipmentInOutLine.attributeSetValue.description, MaterialMgmtShipmentInOutLine.attributeSetValue.id  "
           + "FROM MaterialMgmtShipmentInOutLine MaterialMgmtShipmentInOutLine, Product Product "
           + "WHERE MaterialMgmtShipmentInOutLine.obwplPickinglist.id = :theRecordId "
           + "AND MaterialMgmtShipmentInOutLine.product.id = Product.id "
           + "AND MaterialMgmtShipmentInOutLine.product.productType = 'I' "
           + "AND MaterialMgmtShipmentInOutLine.product.stocked = 'Y' "
-          + "GROUP BY Product.name, Product.id, Product.uPCEAN " + "ORDER BY newLineNo";
+          + "GROUP BY Product.name, Product.id, Product.uPCEAN, MaterialMgmtShipmentInOutLine.attributeSetValue.description, MaterialMgmtShipmentInOutLine.attributeSetValue.id " + "ORDER BY newLineNo";
 
       Query qryGridData = OBDal.getInstance().getSession().createQuery(hqlGridData);
       qryGridData.setParameter("theRecordId", recordId);
@@ -95,9 +96,14 @@ public class ValidateActionHandler extends BaseActionHandler {
         } else {
           item.put("barcode", "");
         }
+        
+        
         item.put("product", qryGridDataObjectItem[1]);
         item.put("productId", qryGridDataObjectItem[2]);
         item.put("quantity", qryGridDataObjectItem[3]);
+        item.put("attributeSetInstance", qryGridDataObjectItem[5]);
+        item.put("asiId", qryGridDataObjectItem[6]);
+        
         data.put(item);
       }
       response.put("startRow", 0);
